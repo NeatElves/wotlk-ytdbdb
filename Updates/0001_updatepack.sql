@@ -603,3 +603,5 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 
 INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `comments`) VALUES ('3096', '9', '11464', '0', '');
 UPDATE `gossip_menu_option` SET `condition_id` = '3096' WHERE `menu_id` =9010 AND `id` =0;
+
+UPDATE `quest_template` SET `SpecialFlags` = '2', `ReqCreatureOrGOId1` = '0', `ReqCreatureOrGOCount1` = '0', `RewMoneyMaxLevel` = '114000' WHERE `entry` =10946;
