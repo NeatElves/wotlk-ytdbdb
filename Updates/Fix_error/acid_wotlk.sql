@@ -119,24 +119,24 @@ REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_in
 (3322401, 33224, 22, 0, 100, 1, 58, 2878, 0, 0, 0, 0, 41, 0, 0, 0, 12, 33220, 0, 30000, 28, 6, 62574, 0, 'YTDB - Q. A Blade Fit For A Champion'),
 (3322402, 33224, 22, 0, 100, 1, 58, 2879, 0, 0, 0, 0, 11, 62581, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Q. A Blade Fit For A Champion');
 
-REPLACE INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
-(-10042, 'You''ve sealed your fate, Akama. The Master will learn of your betrayal!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'YTDB(TBCDB) - Vagath'),
-(-11198, 'And wheresoever did you find the module to activate that controller?  No matter, you won''t be doing that again.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'YTDB(TBCDB) - 23390'),
-(-11199, 'Bash''ir sends his regrets that he could not make it, but he sent me along to salve your disappointment.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'YTDB(TBCDB) - 23390'),
-(-11200, 'Did you really think that you could fool my master into falling for your sad, little trap, $n?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'YTDB(TBCDB) - 23390'),
-(-11201, 'Do you know what you''re playing with, $n?  Here, allow me to educate you and your friends.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'YTDB(TBCDB) - 23390'),
-(-11202, 'The master is busy, but I have time to come out and play!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'YTDB(TBCDB) - 23390'),
-(-11203, 'You activated the accelerator with only this motley assemblage to back you up?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'YTDB(TBCDB) - 23390'),
-(-11204, 'Don''t cry, $n.  It will all soon be over.  I promise not to spit upon your corpse.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'YTDB(TBCDB) - 23391'),
-(-11205, 'You were expecting one of my harbingers?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'YTDB(TBCDB) - 23391'),
-(-11206, 'What''s this?!  $n and $g his : her; friends come to play?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7274, 1, 0, 0, 'YTDB(TBCDB) - 23282/23281/23261/23281'),
-(-11207, 'The Skyguard shall pay for your temerity, $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7274, 1, 0, 0, 'YTDB(TBCDB) - 23282/23281/23261/23281'),
-(-11208, 'Little $r, you will now come to appreciate my wrath!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7274, 1, 0, 0, 'YTDB(TBCDB) - 23282/23281/23261/23281'),
-(-11209, 'You have dared to defile my perch and must now be cleansed in fire!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7274, 1, 0, 0, 'YTDB(TBCDB) - 23282/23281/23261/23281'),
-(-11210, 'Get away from my clutch!!!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7274, 1, 0, 0, 'YTDB(TBCDB) - 23282/23281/23261/23281'),
-(-11211, 'I tire of interruptions from the insignificant.  Your time has come, $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7274, 1, 0, 0, 'YTDB(TBCDB) - 23282/23281/23261/23281'),
-(-11212, 'I know you by your stench, little $n.  Here, in my perch, is where your bones shall finally rest.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7274, 1, 0, 0, 'YTDB(TBCDB) - 23282/23281/23261/23281'),
-(-11213, 'I believe that I shall feast upon both $r and ogre flesh tonight.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7274, 1, 0, 0, 'YTDB(TBCDB) - 23282/23281/23261/23281');
+INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`language`,`emote`,`broadcast_text_id`,`comment`) VALUES
+(-10042,'You''ve sealed your fate, Akama. The Master will learn of your betrayal!','0','1','0','0','0','YTDB(TBCDB) - Vagath'),
+(-11198,'And wheresoever did you find the module to activate that controller?  No matter, you won''t be doing that again.','0','0','0','0','0','YTDB(TBCDB) - 23390'),
+(-11199,'Bash''ir sends his regrets that he could not make it, but he sent me along to salve your disappointment.','0','0','0','0','0','YTDB(TBCDB) - 23390'),
+(-11200,'Did you really think that you could fool my master into falling for your sad, little trap, $n?','0','0','0','0','0','YTDB(TBCDB) - 23390'),
+(-11201,'Do you know what you''re playing with, $n?  Here, allow me to educate you and your friends.','0','0','0','0','0','YTDB(TBCDB) - 23390'),
+(-11202,'The master is busy, but I have time to come out and play!','0','0','0','0','0','YTDB(TBCDB) - 23390'),
+(-11203,'You activated the accelerator with only this motley assemblage to back you up?','0','0','0','0','0','YTDB(TBCDB) - 23390'),
+(-11204,'Don''t cry, $n.  It will all soon be over.  I promise not to spit upon your corpse.','0','0','0','0','0','YTDB(TBCDB) - 23391'),
+(-11205,'You were expecting one of my harbingers?','0','0','0','0','0','23391'),
+(-11206,'What''s this?!  $n and $g his : her; friends come to play?','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281'),
+(-11207,'The Skyguard shall pay for your temerity, $n!','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281'),
+(-11208,'Little $r, you will now come to appreciate my wrath!','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281'),
+(-11209,'You have dared to defile my perch and must now be cleansed in fire!','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281'),
+(-11210,'Get away from my clutch!!!','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281'),
+(-11211,'I tire of interruptions from the insignificant.  Your time has come, $n!','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281'),
+(-11212,'I know you by your stench, little $n.  Here, in my perch, is where your bones shall finally rest.','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281'),
+(-11213,'I believe that I shall feast upon both $r and ogre flesh tonight.','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281');
 
 INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 (10083, 0, -11213, 0, '23282/23281/23261/23281 - Random Texts'),

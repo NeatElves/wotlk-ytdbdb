@@ -26,6 +26,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Как здесь шторми�
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Однажды я уже видел морского великана. Нет ни малейшего желания смотреть на него еще раз. Ик!' WHERE `entry` = -24;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я бы сам разогнал этих гноллов, но моя нога сейчас не в лучшем состоянии. Боюсь я, что так ее и доконать недолго.' WHERE `entry` = -25;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Главное, смотри под ноги. Многие искатели приключений так и не вернулись из болот... Ик!' WHERE `entry` = -26;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Тревога! Тревога! Ребята, на нас напали! Взять их!' WHERE `entry` = -27;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Вам здесь не место! Древа, восстаньте против этих чужаков!' WHERE `entry` = -28;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Заморыши! Вы мне не соперники! Я теперь король и останусь им НАВЕКИ!!!' WHERE `entry` = -29;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s истекает кровью!' WHERE `entry` = -30;
@@ -55,6 +56,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Хлеб, батоны, бул�
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Братство Справедливости победит! Жалким искателям приключений не остановить нас!' WHERE `entry` = -143;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Оберегайте Ботанику любой ценой!' WHERE `entry` = -144;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Оберегайте Механар любой ценой!' WHERE `entry` = -145;
+UPDATE `creature_ai_texts` SET `content_loc8` = '%s убегает в ужасе!' WHERE `entry` = -146;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s громко зовет на помощь!' WHERE `entry` = -154;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s хватает отравленный кинжал!' WHERE `entry` = -155;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s начинает создавать двойника!' WHERE `entry` = -156;
