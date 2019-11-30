@@ -84,7 +84,7 @@ UPDATE `gossip_texts` SET `content_loc8` = 'И что же здесь дворф
 UPDATE `gossip_texts` SET `content_loc8` = 'Налоракк мертв, можете идти.' WHERE `entry` = -3568003;
 UPDATE `gossip_texts` SET `content_loc8` = NULL WHERE `entry` = -3568004;
 UPDATE `gossip_texts` SET `content_loc8` = 'Что ты можешь рассказать нам про Бадда?' WHERE `entry` = -3568005;
-UPDATE `gossip_texts` SET `content_loc8` = NULL WHERE `entry` = -3568006;
+UPDATE `gossip_texts` SET `content_loc8` = 'Мы убили твоих тюремщиков. Можешь выходить.' WHERE `entry` = -3568006;
 UPDATE `gossip_texts` SET `content_loc8` = 'Что с тобой?' WHERE `entry` = -3568007;
 UPDATE `gossip_texts` SET `content_loc8` = 'Все хорошо, маленький гном. Выходи, не бойся.' WHERE `entry` = -3568008;
 UPDATE `gossip_texts` SET `content_loc8` = 'И как такой бойкий гном влез в подобные неприятности?' WHERE `entry` = -3568009;
@@ -98,7 +98,7 @@ UPDATE `gossip_texts` SET `content_loc8` = 'Хроми, вы и я, мы оба 
 UPDATE `gossip_texts` SET `content_loc8` = 'Да, пожалуйста!' WHERE `entry` = -3595007;
 UPDATE `gossip_texts` SET `content_loc8` = 'Да, мой принц. Мы готовы.' WHERE `entry` = -3595008;
 UPDATE `gossip_texts` SET `content_loc8` = 'Мы делаем лишь то, что будет лучше для Лордерона, ваше Высочество.' WHERE `entry` = -3595009;
-UPDATE `gossip_texts` SET `content_loc8` = NULL WHERE `entry` = -3595010;
+UPDATE `gossip_texts` SET `content_loc8` = 'Ведите нас, принц Артас.' WHERE `entry` = -3595010;
 UPDATE `gossip_texts` SET `content_loc8` = 'Я готов.' WHERE `entry` = -3595011;
 UPDATE `gossip_texts` SET `content_loc8` = 'За Лордерон!' WHERE `entry` = -3595012;
 UPDATE `gossip_texts` SET `content_loc8` = 'Я готов сразиться с Повелителем ужаса, сир.' WHERE `entry` = -3595013;

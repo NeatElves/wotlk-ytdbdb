@@ -687,3 +687,35 @@ REPLACE INTO `gossip_menu` VALUES (4148, 5158, 0, 1762);
 REPLACE INTO `gossip_menu` VALUES (4151, 5175, 0, 148);
 REPLACE INTO `gossip_menu` VALUES (4151, 5176, 0, 1762);
 REPLACE INTO `gossip_menu` VALUES (4151, 5173, 0, 1917);
+
+UPDATE creature_template SET UnitFlags=33554432,ExtraFlags=4718848,SpeedWalk=8/2.5,MechanicImmuneMask=42090322 WHERE entry IN(17096,19781,19782,19783);
+
+DELETE FROM `dbscripts_on_event` WHERE `id` = 13489;
+INSERT INTO `dbscripts_on_event` (`id`,`delay`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(13489,0,8,21142,0,0,0,0,0,0,0,0,0,'Thunderlord Dire Wolf - Give Quest Credit',0,0,0,0);
+
+UPDATE `dbscript_string` SET `content_default` = 'My mind... my flesh... I''m... rotting...!' WHERE `entry` =2000000246;
+UPDATE `dbscript_string` SET `content_default` = 'I... I... don''t... feel... right...' WHERE `entry` =2000000245;
+UPDATE `dbscript_string` SET `content_default` = 'Speak to the commander at your post, $g lad:lass;, and persuade him to abandon Vor''takh''s foolish plan.' WHERE `entry` =2000000320;
+UPDATE `dbscript_string` SET `content_default` = 'This is the last time that I buy second-hand equipment from ethereal!' WHERE `entry` =2000000691;
+UPDATE `dbscript_string` SET `content_default` = '%s smiles.' WHERE `entry` =2000000545;
+UPDATE `dbscript_string` SET `content_default` = 'Pentarus, you heard the $gman:woman;. Have your mages release the shield and let these brave souls through!' WHERE `entry` =2000001105;
+
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `comments`) VALUES ('3097', '22', '8330', '0', '');
+UPDATE `quest_template` SET `RequiredCondition` = '3097', `NextQuestId` = '0' WHERE `entry` IN (10068,10069,10070,10071,10072,10073);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `comments`) VALUES ('3098', '22', '8889', '0', '');
+UPDATE `quest_template` SET `RequiredCondition` = '3098' WHERE `entry` =8888;
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `comments`) VALUES ('3099', '22', '8490', '0', '');
+UPDATE `quest_template` SET `RequiredCondition` = '3099' WHERE `entry` =9253;
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `comments`) VALUES ('3100', '22', '9280', '0', '');
+UPDATE `quest_template` SET `RequiredCondition` = '3100' WHERE `entry` =9279;
+UPDATE `quest_template` SET `ExclusiveGroup` = '9280' WHERE `entry` =9369;
+UPDATE `quest_template` SET `PrevQuestId` = '0', `ExclusiveGroup` = '9280' WHERE `entry` =9280;
+UPDATE `quest_template` SET `PrevQuestId` = '1848' WHERE `entry` IN (1842,1844,1846);
+UPDATE `quest_template` SET `PrevQuestId` = '1782' WHERE `entry` IN (1700,1703,1704,1705,1708,1710);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `comments`) VALUES ('3101', '22', '1705', '0', '');
+UPDATE `quest_template` SET `RequiredCondition` = '3101' WHERE `entry` =1700;
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `comments`) VALUES ('3102', '22', '1710', '0', '');
+UPDATE `quest_template` SET `RequiredCondition` = '3102' WHERE `entry` =1703;
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `comments`) VALUES ('3103', '22', '1708', '0', '');
+UPDATE `quest_template` SET `RequiredCondition` = '3103' WHERE `entry` =1704;
