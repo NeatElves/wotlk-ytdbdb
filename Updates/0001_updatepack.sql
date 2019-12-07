@@ -4753,3 +4753,30 @@ INSERT INTO `gossip_menu` VALUES (4202, 5318, 0, 3109);
 UPDATE `creature_template` SET `RegenerateStats` = '1' WHERE `entry` IN (18130,18131);
 
 UPDATE `dbscript_string` SET `content_default` = 'How dare you trifle with my playthings, $n!' WHERE `entry` =2000000968;
+
+UPDATE `creature_template` SET `RegenerateStats` = '1' WHERE `entry` = 18285;
+
+DELETE FROM `dbscript_string` WHERE `entry` = 2000000241;
+DELETE FROM `dbscript_string` WHERE `entry` = 2000000242;
+DELETE FROM `dbscript_string` WHERE `entry` = 2000000243;
+DELETE FROM `dbscripts_on_quest_start` WHERE `id` = 12621;
+UPDATE `quest_template` SET `StartScript` = '0' WHERE `entry` =12621;
+
+DELETE FROM creature_linking WHERE guid IN (112825, 112826, 91749, 52324);
+INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES (112825, 91749, 1157), (112826, 52324, 1157);
+DELETE FROM creature_addon WHERE guid IN (112825, 112826);
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
+(112825, 0, 0, 1, 16, 0, 0, '28097'), (112826, 0, 0, 1, 16, 0, 0, '28109');
+UPDATE creature_template SET SpeedWalk=(2/2.5), MovementType=0 WHERE Entry=16218;
+UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry=730;
+DELETE FROM spell_script_target WHERE entry IN (28338, 28339);
+INSERT INTO spell_script_target (entry, type, targetEntry, inverseEffectMask) VALUES (28338, 1, 15929, 0), (28339, 1, 15930, 0);
+DELETE FROM spell_script_target WHERE entry IN (28359);
+INSERT INTO spell_script_target (entry, type, targetEntry, inverseEffectMask) VALUES (28359, 1, 16218, 0);
+DELETE FROM spell_script_target WHERE entry IN (28098, 28110);
+INSERT INTO spell_script_target (entry, type, targetEntry, inverseEffectMask) VALUES (28098, 1, 15929, 0), (28110, 1, 15930, 0);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(91749, 15929, 533, 3, 0, 0, 3449.03, -2934.74, 312.18, 5.41, 604800, 604800, 0, 0, 836700, 0, 0, 0),
+(52324, 15930, 533, 3, 0, 0, 3508.85, -2994.08, 312.18, 2.33, 604800, 604800, 0, 0, 836700, 0, 0, 0);
+
+UPDATE `dbscript_string` SET `content_default` = 'Feralas: A History... Hmmmm... Let me examine this for a moment.' WHERE `entry` =2000001494;
