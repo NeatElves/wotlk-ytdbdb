@@ -4780,3 +4780,42 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment
 (52324, 15930, 533, 3, 0, 0, 3508.85, -2994.08, 312.18, 2.33, 604800, 604800, 0, 0, 836700, 0, 0, 0);
 
 UPDATE `dbscript_string` SET `content_default` = 'Feralas: A History... Hmmmm... Let me examine this for a moment.' WHERE `entry` =2000001494;
+
+UPDATE `quest_template` SET `StartScript` = '790' WHERE `entry` =790;
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
+(2000000241, 'Go swiftly, $N. My fate is in your hands.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL);
+DELETE FROM `dbscripts_on_quest_start` WHERE `id` = 790;
+INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(790, 1, 0, 0, 0, 0, 0, 0, 0, 2000000241, 0, 0, 0, 0, 0, 0, 0, '');
+UPDATE `quest_template` SET `StartScript` = '5821' WHERE `entry` =5821;
+DELETE FROM `dbscripts_on_quest_start` WHERE `id` = 5821;
+INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(5821, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork - run off'),
+(5821, 1, 25, 0, 0, 0, 11626, 100, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger - run off'),
+(5821, 2, 25, 0, 0, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - run off'),
+(5821, 3, 25, 0, 0, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - run off'),
+(5821, 1, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remove quest and Gossip Flag'),
+(5821, 4, 22, 113, 59, 0, 11626, 60, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger - faction update'),
+(5821, 5, 22, 113, 59, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - faction update'),
+(5821, 6, 22, 113, 59, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - faction update'),
+(5821, 6, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'unpause WP movement');
+UPDATE `quest_template` SET `StartScript` = '5943' WHERE `entry` =5943;
+DELETE FROM `dbscripts_on_quest_start` WHERE `id` = 5943;
+INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(5943, 0, 25, 0, 0, 0, 11625, 100, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork - run off'),
+(5943, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger - run off'),
+(5943, 0, 25, 0, 0, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - run off'),
+(5943, 0, 25, 0, 0, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - run off'),
+(5943, 1, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remove quest and Gossip Flag'),
+(5943, 0, 22, 113, 59, 0, 11625, 60, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork - faction update'),
+(5943, 0, 22, 113, 59, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - faction update'),
+(5943, 0, 22, 113, 59, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - faction update'),
+(5943, 2, 32, 0, 0, 0, 11625, 40, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork - unpause WP movement');
+UPDATE `quest_template` SET `StartScript` = '9991' WHERE `entry` =9991;
+DELETE FROM `dbscripts_on_quest_start` WHERE `id` = 9991;
+INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(9991, 2, 30, 532, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'taxi patch');
+
+UPDATE `quest_template` SET `SpecialFlags` = `SpecialFlags`|2 WHERE `entry` in (9611,9713,9926);
+
+DELETE FROM `creature` WHERE `id` in (12976,12977);

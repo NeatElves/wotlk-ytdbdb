@@ -246,7 +246,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Подходите ко мне в
 UPDATE `dbscript_string` SET `content_loc8` = 'Ничего ты не получишь, пока не заговоришь, мразь!' WHERE `entry` = 2000000238;
 UPDATE `dbscript_string` SET `content_loc8` = 'НИКТО НЕ ПРОЙДЕТ ЧЕРЕЗ МЕНЯ' WHERE `entry` = 2000000239;
 UPDATE `dbscript_string` SET `content_loc8` = 'Чем дольше вы тянете, тем короче будущее, которое я могу предсказать!' WHERE `entry` = 2000000240;
-UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000000241;
+UPDATE `dbscript_string` SET `content_loc8` = 'Поспеши, $n. Моя судьба в твоих руках.' WHERE `entry` = 2000000241;
 UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000000242;
 UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000000243;
 UPDATE `dbscript_string` SET `content_loc8` = 'Возьми манящую свечу из этого ящика, $n.' WHERE `entry` = 2000000244;
