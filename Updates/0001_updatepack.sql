@@ -4819,3 +4819,27 @@ INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `d
 UPDATE `quest_template` SET `SpecialFlags` = `SpecialFlags`|2 WHERE `entry` in (9611,9713,9926);
 
 DELETE FROM `creature` WHERE `id` in (12976,12977);
+
+UPDATE `creature` SET `position_x` = '8548.11', `position_y` = '933.363', `position_z` = '547.377', `orientation` = '5.86431', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =127493;
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`) VALUES
+(85984, 27175, 571, 1, 1, 0, 0, 3599.8713, 6687.595, 194.964, 4.113135, 180, 180, 0, 0, 75600, 19970, 0);
+UPDATE creature SET position_x = '1331.854492', position_y = '-4654.602051', position_z = '53.528210', orientation = '6.266521' WHERE guid = 54928;
+UPDATE `creature` SET `position_x` = '8476.45', `position_y` = '1395.92', `position_z` = '641.074', `orientation` = '4.13643' WHERE `guid` =131166;
+
+UPDATE `gossip_menu_option` SET `action_script_id` = '1064900' WHERE `menu_id` =10649 AND `id` =0;
+DELETE FROM `dbscripts_on_gossip` WHERE `id` = 1064900;
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+('1064900', '0', '15', '67554', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'cast Cascade of Petals');
+UPDATE `creature` SET `spawndist` = '0', `MovementType` = '0' WHERE `guid` =126573;
+INSERT INTO `game_event_creature` (`guid`, `event`) VALUES ('115967', '8');
+
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '-50' WHERE `item` =3236;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` =3317;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '100', `groupid` = '0' WHERE `entry` =17962 AND `item` =12361;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '100', `groupid` = '0' WHERE `entry` =17964 AND `item` =12800;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '100', `groupid` = '0' WHERE `entry` =17965 AND `item` =12363;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '100', `groupid` = '0' WHERE `entry` =17969 AND `item` =12799;
+
+UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry=8204;
+UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry=2598;
+UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry=10825;
