@@ -4843,3 +4843,38 @@ UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '100', `groupid` = '0' W
 UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry=8204;
 UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry=2598;
 UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry=10825;
+
+UPDATE creature_movement_template SET waittime=1000 WHERE entry IN(11583) AND point = 9;
+
+UPDATE `dbscript_string` SET `content_default` = 'Klaven doesn''t pay me enough to deal with those zombies, drones or whatever he calls ''em.' WHERE `entry` =2000001768;
+UPDATE `dbscript_string` SET `content_default` = '%s gestures to the pitcher of water sitting on the edge of the well.' WHERE `entry` =2000000254;
+UPDATE `dbscript_string` SET `content_default` = 'We have heard your requests, and we agree... it is noble in intent. We will purify your waters. Go with our blessing, shaman.', `language` = '12' WHERE `entry` =2000000354;
+
+DELETE FROM `creature` WHERE `guid` = 126725;
+DELETE FROM `creature` WHERE `id` IN (4068,4509,5726,5727,5728,5729,5730,11713,11714,11886,11887,12385,12921,13301,14511,14512,14513,14514,14518,14519,14520,14521,14688,25260,25451,30992,31235,32871,37226);
+UPDATE `creature_template` SET `Faction` = '35' WHERE `Entry` =31235;
+UPDATE `creature_template` SET `MovementType` = '0' WHERE `Entry` IN (5726,5727,5728,5730);
+UPDATE dbscripts_on_creature_movement SET search_radius=50 WHERE id=590101 AND search_radius=10;
+
+INSERT INTO `npc_vendor` (`entry`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `condition_id`, `comments`) VALUES (8363, 6529, 0, 0, 0, 0, 'Shiny Bauble');
+DELETE FROM `npc_vendor` WHERE `item` = 2928;
+
+UPDATE creature_template SET UnitFlags=33587200 WHERE entry IN(15428);
+UPDATE `gameobject` SET `spawntimesecsmin` = '-604800', `spawntimesecsmax` = '-604800' WHERE `guid` IN (4804,4805);
+INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
+(15369,1,1,-9689.981,1548.296,33.27733,0,0,100),
+(15369,1,2,-9682.716,1554.252,31.41621,0,0,100),
+(15369,1,3,-9677.917,1558.839,27.24953,1000,0,100);
+DELETE FROM `gameobject` WHERE `guid` = 49746;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(85985, 15590, 509, 1, 0, 0, -9188.44, 1940.21, 85.6391, 3.1765, 300, 300, 0, 0, 1, 0, 0, 0),
+(85992, 15590, 509, 1, 0, 0, -9506.19, 1865.57, 85.6391, 4.27606, 300, 300, 0, 0, 1, 0, 0, 0),
+(85993, 15590, 509, 1, 0, 0, -9282.08, 1887.34, 85.6391, 2.00713, 300, 300, 0, 0, 1, 0, 0, 0),
+(85994, 15590, 509, 1, 0, 0, -9357.86, 1929.08, 85.6391, 1.06465, 300, 300, 0, 0, 1, 0, 0, 0),
+(85995, 15590, 509, 1, 0, 0, -9299.73, 1748.45, 85.6391, 1.44862, 300, 300, 0, 0, 1, 0, 0, 0),
+(85996, 15590, 509, 1, 0, 0, -9248.41, 1974.83, 85.6391, 5.89921, 300, 300, 0, 0, 1, 0, 0, 0),
+(86083, 15590, 509, 1, 0, 0, -9244.41, 1808.98, 85.6391, 5.63741, 300, 300, 0, 0, 1, 0, 0, 0),
+(86084, 15590, 509, 1, 0, 0, -9367.17, 1780.89, 85.6391, 1.90241, 300, 300, 0, 0, 1, 0, 0, 0),
+(86085, 15590, 509, 1, 0, 0, -9432.4, 1782.53, 85.6391, 5.86431, 300, 300, 0, 0, 1, 0, 0, 0),
+(86086, 15590, 509, 1, 0, 0, -9383.29, 2012.68, 85.6391, 1.11701, 300, 300, 0, 0, 1, 0, 0, 0),
+(77233, 15590, 509, 1, 0, 0, -9407.72, 1960.2, 85.6391, 1.11701, 300, 300, 0, 0, 1, 0, 0, 0);
