@@ -394,7 +394,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'ОБЕЩАЮ, ЧТО В ЭТО�
 UPDATE `creature_ai_texts` SET `content_loc8` = 'У ТЕБЯ ЧТО, КОРАБЛИ ЗАКОНЧИЛИСЬ? ГДЕ ЖЕ ТВОЯ СМЕЛОСТЬ?' WHERE `entry` = -1211;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'В ТОТ РАЗ МЫ ТАК СЛАВНО ПОВЕСЕЛИЛИСЬ... ВЫХОДИ ЖЕ!' WHERE `entry` = -1212;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Жить вам осталось около пяти секунд.' WHERE `entry` = -1213;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Точно рассчитав угол и скорость...' WHERE `entry` = -1214;
+UPDATE `creature_ai_texts` SET `content_loc8` = '%s отвечает грубым жестом |3-2($n).' WHERE `entry` = -1214;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Привет, $n! Что тебе подать сегодня?' WHERE `entry` = -1215;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Был тяжелый денек? Хороший эль разгонит все печали.' WHERE `entry` = -1216;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Думаете, мне стоит обзавестись еще несколькими работами Флер?' WHERE `entry` = -1217;

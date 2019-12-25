@@ -82,7 +82,7 @@ UPDATE `gossip_texts` SET `content_loc8` = 'Спасибо за беспокой
 UPDATE `gossip_texts` SET `content_loc8` = 'Путь чист! Ты на свободе!' WHERE `entry` = -3568001;
 UPDATE `gossip_texts` SET `content_loc8` = 'И что же здесь дворф забыл, интересно?' WHERE `entry` = -3568002;
 UPDATE `gossip_texts` SET `content_loc8` = 'Налоракк мертв, можете идти.' WHERE `entry` = -3568003;
-UPDATE `gossip_texts` SET `content_loc8` = NULL WHERE `entry` = -3568004;
+UPDATE `gossip_texts` SET `content_loc8` = 'Не за что... А теперь расскажите нам, что тут происходит?' WHERE `entry` = -3568004;
 UPDATE `gossip_texts` SET `content_loc8` = 'Что ты можешь рассказать нам про Бадда?' WHERE `entry` = -3568005;
 UPDATE `gossip_texts` SET `content_loc8` = 'Мы убили твоих тюремщиков. Можешь выходить.' WHERE `entry` = -3568006;
 UPDATE `gossip_texts` SET `content_loc8` = 'Что с тобой?' WHERE `entry` = -3568007;
@@ -124,12 +124,12 @@ UPDATE `gossip_texts` SET `content_loc8` = 'Помогите своим людя
 UPDATE `gossip_texts` SET `content_loc8` = 'Я не сражаюсь, так что отправляй меня сейчас же!' WHERE `entry` = -3608002;
 UPDATE `gossip_texts` SET `content_loc8` = 'Я вызываю тебя на бой, рыцарь смерти!' WHERE `entry` = -3609000;
 UPDATE `gossip_texts` SET `content_loc8` = 'Я готов, верховный лорд. Да начнется осада часовни Последней Надежды!' WHERE `entry` = -3609001;
-UPDATE `gossip_texts` SET `content_loc8` = NULL WHERE `entry` = -3631000;
+UPDATE `gossip_texts` SET `content_loc8` = 'Перенестись в Молот Света.' WHERE `entry` = -3631000;
 UPDATE `gossip_texts` SET `content_loc8` = 'Перенестись в молельню Проклятых.' WHERE `entry` = -3631001;
 UPDATE `gossip_texts` SET `content_loc8` = 'Перенестись на Черепной вал.' WHERE `entry` = -3631002;
 UPDATE `gossip_texts` SET `content_loc8` = 'Перенестись на Подъем Смертоносного.' WHERE `entry` = -3631003;
 UPDATE `gossip_texts` SET `content_loc8` = 'Перенестись на верхний ярус.' WHERE `entry` = -3631004;
-UPDATE `gossip_texts` SET `content_loc8` = NULL WHERE `entry` = -3631005;
+UPDATE `gossip_texts` SET `content_loc8` = 'Перенестись в логово Синдрагосы.' WHERE `entry` = -3631005;
 UPDATE `gossip_texts` SET `content_loc8` = 'Да. Мы готовы к предстоящим соревнованиям.' WHERE `entry` = -3649000;
 UPDATE `gossip_texts` SET `content_loc8` = 'Сделать первый вызов!' WHERE `entry` = -3649001;
 UPDATE `gossip_texts` SET `content_loc8` = 'Мы хотим еще раз выстрелить в тех зверей!' WHERE `entry` = -3649002;
@@ -146,7 +146,7 @@ UPDATE `gossip_texts` SET `content_loc8` = 'Ты будешь еще более 
 UPDATE `gossip_texts` SET `content_loc8` = 'Мы готовы ко всему!' WHERE `entry` = -3649013;
 UPDATE `gossip_texts` SET `content_loc8` = 'Мы готовы! На этот раз все будет иначе.' WHERE `entry` = -3649014;
 UPDATE `gossip_texts` SET `content_loc8` = 'Марш!' WHERE `entry` = -3649015;
-UPDATE `gossip_texts` SET `content_loc8` = NULL WHERE `entry` = -3649016;
+UPDATE `gossip_texts` SET `content_loc8` = 'Мы должны сплотиться, если хотим одолеть пару этих существ.' WHERE `entry` = -3649016;
 UPDATE `gossip_texts` SET `content_loc8` = 'Выпускай их – на это раз все будет иначе!' WHERE `entry` = -3649017;
 UPDATE `gossip_texts` SET `content_loc8` = 'Начинаем.' WHERE `entry` = -3650000;
 UPDATE `gossip_texts` SET `content_loc8` = 'Я готов. Только давай обойдемся без показухи.' WHERE `entry` = -3650001;

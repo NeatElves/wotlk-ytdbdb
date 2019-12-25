@@ -4878,3 +4878,17 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment
 (86085, 15590, 509, 1, 0, 0, -9432.4, 1782.53, 85.6391, 5.86431, 300, 300, 0, 0, 1, 0, 0, 0),
 (86086, 15590, 509, 1, 0, 0, -9383.29, 2012.68, 85.6391, 1.11701, 300, 300, 0, 0, 1, 0, 0, 0),
 (77233, 15590, 509, 1, 0, 0, -9407.72, 1960.2, 85.6391, 1.11701, 300, 300, 0, 0, 1, 0, 0, 0);
+
+UPDATE creature_template SET Detection=80 WHERE entry IN(15509);
+UPDATE creature_template SET Detection=80 WHERE entry IN(15510);
+UPDATE creature_model_info SET bounding_radius=3,combat_reach=3 WHERE modelid IN(15582);
+UPDATE creature_model_info SET bounding_radius=1.6,combat_reach=3.024 WHERE modelid IN(15658);
+UPDATE creature_template SET Leash=130 WHERE entry IN(15299);
+UPDATE creature_template SET SpeedWalk=12/2.5,SpeedRun=12/7 WHERE entry IN(15712);
+UPDATE creature_template SET SpeedWalk=2.5/2.5,SpeedRun=15/7 WHERE entry IN(15718);
+UPDATE creature_template SET UnitFlags=UnitFlags|64 WHERE entry IN(15263,15275,15276,15511,15543,15544);
+
+UPDATE `gossip_menu_option` SET `option_text` = 'Sprinkle some of the reindeer dust onto Metzen.' WHERE `menu_id` =6763 AND `id` =0;
+UPDATE `creature` SET `spawntimesecsmin`=60, `spawntimesecsmax`=60 WHERE `id`=15664;
+
+UPDATE `script_texts` SET `content_default` = 'You have my word that I shall find a use for your body after I''ve killed you, $r.' WHERE `entry` = -1000951;
