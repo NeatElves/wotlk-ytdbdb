@@ -157,3 +157,6 @@ INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `c
 (10164, 0, -11204, 0, '23391 - Random Say');
 
 UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,1368,16231,20666,21025,22990,23059,23061,23118,23261,23281,23282,30366,32838,33211,33224);
+
+REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
+('1882908','18829','34','0','100','1','34436','-1','0','0','0','0','13','-100','1','0','0','0','0','0','0','0','0','0','Hellfire Warder - Reset Threat on target hit by Shadow Burst');

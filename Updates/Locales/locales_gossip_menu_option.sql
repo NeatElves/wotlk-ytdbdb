@@ -355,7 +355,7 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (1842, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'У меня нет никаких доказательств, Цирус.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1842, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Вот доказательства моих деяний, Цирус.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1843, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я готов.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(1882, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Где полководец Кром''зар?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+#(1882, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Где полководец Кром''зар?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1922, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я бы хотел закупить побольше семян Тарлендриса.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1942, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Алхимия', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1942, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Кузнечное дело', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
