@@ -5678,3 +5678,99 @@ INSERT INTO`dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong
 ('20013','8','0','0','0','0','24547','100','7','2000002632','0','0','0','0','0','0','0',''),
 ('20013','9','15','5','0','0','0','0','4','0','0','0','0','0','0','0','0',''),
 ('20158','0','21','0','0','0','0','0','4','0','0','0','0','0','0','0','0','unactive');
+
+UPDATE creature SET spawndist = 7, MovementType = 1 WHERE id = 25316;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '-10' WHERE `item` =9322;
+
+UPDATE creature_model_info SET bounding_radius=13.38056,combat_reach=12 WHERE modelid IN(21322);
+UPDATE dbscripts_on_gossip SET data_flags=0 WHERE id IN(878200) AND command=15;
+
+UPDATE creature SET position_x=9026.355, position_y=-7458.026, position_z=103.3589, orientation=5.148721 WHERE id=15951;
+DELETE FROM gameobject WHERE id=181012;
+INSERT INTO `gameobject` (`guid`,`id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES 
+(31660, 181012, 530, 1, 9049.713, -7434.266, 84.65627, 2.094393, 0, 0, 0.866025, 0.5000008, -15, -15, 100, 1);
+DELETE FROM gameobject WHERE id=181013;
+INSERT INTO `gameobject` (`guid`,`id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES 
+(31661, 181013, 530, 1, 9049.428, -7434.175, 85.13704, 1.256636, 0, 0, 0.5877848, 0.8090174, -11, -11, 100, 1);
+DELETE FROM spell_target_position WHERE id=26660;
+INSERT INTO spell_target_position(id, target_map, target_position_x, target_position_y, target_position_z, target_orientation) VALUES
+(26660,530,9050,-7434,85,0);
+DELETE FROM `dbscripts_on_event` WHERE `id` IN(9813);
+INSERT INTO `dbscripts_on_event` (`id`,`delay`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(9813,0,9,0,11,0,0,0,0,0,181013,40,71,'Magister Duskwither - Respawn Fire',0,0,0,0);
+DELETE FROM `dbscript_string` WHERE `entry`=2000003298;
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES 
+(2000003298, 'Good riddance... now none shall be able to repeat my mistakes!', 0, 0, 0, 0, 'Magister Duskwither (Entry: 15951)');
+UPDATE quest_template SET CompleteScript=8891 WHERE entry=8891;
+DELETE FROM `dbscripts_on_quest_end` WHERE `id` IN(8891);
+INSERT INTO `dbscripts_on_quest_end` (`id`,`delay`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(8891,0,29,3,2,0,0,0,0,0,0,0,0,'Magister Duskwither - Remove NPCFlags 1|2',0,0,0,0),
+(8891,1,42,0,0,0,12751,0,0,0,0,0,0,'Magister Duskwither - Set Virtual Item Slot',0,0,0,0),
+(8891,2,3,0,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Set Facing',0,0,0,0.6108652),
+(8891,11,1,61,0,0,0,0,0,0,0,0,0,'Magister Duskwither - OneShotAttackThrown',0,0,0,0),
+(8891,11,42,0,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Set Virtual Item Slots',0,0,0,0),
+(8891,11,9,0,15,0,0,0,0,0,181012,40,71,'Magister Duskwither - Respawn Magister Duskwither''s Journal',0,0,0,0),
+(8891,17,15,26660,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Cast Duskwither''s Fireball',0,0,0,0),
+(8891,23,42,1,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Reset Virtual Item Slots',0,0,0,0),
+(8891,23,0,0,0,0,2000003298,0,0,0,0,0,0,'Magister Duskwither - Good riddance... now none shall be able to repeat my mistakes!',0,0,0,0),
+(8891,29,36,1,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Reset Facing',0,0,0,0.6108652),
+(8891,30,29,3,1,0,0,0,0,0,0,0,0,'Magister Duskwither - Readd NPCFlags 1|2',0,0,0,0);
+
+DELETE FROM creature WHERE id IN (14890,14887,14889,14888);
+DELETE FROM creature_addon WHERE guid IN (364, 14575, 28982, 41509);
+DELETE FROM creature_movement_template WHERE entry=14887;
+INSERT INTO creature_movement_template VALUES (14887, 1, 1, -10432, -397.764, 44.0564, 3.74772, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 2, -10446.3, -408.543, 43.0474, 3.78699, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 3, -10467.4, -402.571, 42.3895, 3.17831, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 4, -10501.2, -405.028, 51.5425, 4.16398, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 5, -10504, -414.706, 49.6396, 4.56454, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 6, -10505.4, -424.041, 49.1419, 4.53705, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 7, -10506.5, -429.939, 47.9837, 4.95723, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 8, -10506.9, -447.296, 48.5073, 4.59202, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 9, -10510, -460.381, 47.8511, 4.70983, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 10, -10507.3, -489.449, 53.4729, 5.93898, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 11, -10495.8, -496.354, 52.7622, 6.00574, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 12, -10474.3, -497.657, 51.3791, 0.488316, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 13, -10458.5, -491.837, 52.7595, 0.720009, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 14, -10444.1, -472.517, 50.125, 1.2423, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 15, -10439, -457.246, 47.2037, 1.2423, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 16, -10435.4, -426.287, 43.7389, 1.58002, 0, 0, 'Ysondre in Duskwood');
+INSERT INTO creature_movement_template VALUES (14887, 1, 17, -10436.2, -405.776, 43.8583, 1.60751, 0, 0, 'Ysondre in Duskwood');
+DELETE FROM creature_movement_template WHERE entry=14889;
+INSERT INTO creature_movement_template VALUES (14889, 1, 1, -10432, -397.764, 44.0564, 3.74772, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 2, -10446.3, -408.543, 43.0474, 3.78699, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 3, -10467.4, -402.571, 42.3895, 3.17831, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 4, -10501.2, -405.028, 51.5425, 4.16398, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 5, -10504, -414.706, 49.6396, 4.56454, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 6, -10505.4, -424.041, 49.1419, 4.53705, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 7, -10506.5, -429.939, 47.9837, 4.95723, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 8, -10506.9, -447.296, 48.5073, 4.59202, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 9, -10510, -460.381, 47.8511, 4.70983, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 10, -10507.3, -489.449, 53.4729, 5.93898, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 11, -10495.8, -496.354, 52.7622, 6.00574, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 12, -10474.3, -497.657, 51.3791, 0.488316, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 13, -10458.5, -491.837, 52.7595, 0.720009, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 14, -10444.1, -472.517, 50.125, 1.2423, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 15, -10439, -457.246, 47.2037, 1.2423, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 16, -10435.4, -426.287, 43.7389, 1.58002, 0, 0, 'Emeriss in Duskwood');
+INSERT INTO creature_movement_template VALUES (14889, 1, 17, -10436.2, -405.776, 43.8583, 1.60751, 0, 0, 'Emeriss in Duskwood');
+DELETE FROM creature_movement_template WHERE entry=14890;
+INSERT INTO creature_movement_template VALUES (14890, 1, 1, -10432, -397.764, 44.0564, 3.74772, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 2, -10446.3, -408.543, 43.0474, 3.78699, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 3, -10467.4, -402.571, 42.3895, 3.17831, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 4, -10501.2, -405.028, 51.5425, 4.16398, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 5, -10504, -414.706, 49.6396, 4.56454, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 6, -10505.4, -424.041, 49.1419, 4.53705, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 7, -10506.5, -429.939, 47.9837, 4.95723, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 8, -10506.9, -447.296, 48.5073, 4.59202, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 9, -10510, -460.381, 47.8511, 4.70983, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 10, -10507.3, -489.449, 53.4729, 5.93898, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 11, -10495.8, -496.354, 52.7622, 6.00574, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 12, -10474.3, -497.657, 51.3791, 0.488316, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 13, -10458.5, -491.837, 52.7595, 0.720009, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 14, -10444.1, -472.517, 50.125, 1.2423, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 15, -10439, -457.246, 47.2037, 1.2423, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 16, -10435.4, -426.287, 43.7389, 1.58002, 0, 0, 'Taerar in Duskwood');
+INSERT INTO creature_movement_template VALUES (14890, 1, 17, -10436.2, -405.776, 43.8583, 1.60751, 0, 0, 'Taerar in Duskwood');
+
+DELETE FROM dbscripts_on_creature_movement WHERE id IN(1051);

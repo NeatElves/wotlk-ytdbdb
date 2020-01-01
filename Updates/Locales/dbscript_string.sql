@@ -2597,7 +2597,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Мои комплименты ш�
 UPDATE `dbscript_string` SET `content_loc8` = 'Это манго? Потрясающе!' WHERE `entry` = 2000002590;
 UPDATE `dbscript_string` SET `content_loc8` = 'Спасибо, Джессика.' WHERE `entry` = 2000002591;
 UPDATE `dbscript_string` SET `content_loc8` = 'Дай мне знать, если тебе понадобится что-нибудь еще!' WHERE `entry` = 2000002592;
-UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000002593;
+UPDATE `dbscript_string` SET `content_loc8` = 'И знаешь что? Это просто прелестное платье! Непременно расскажи мне, откуда оно.' WHERE `entry` = 2000002593;
 UPDATE `dbscript_string` SET `content_loc8` = 'И вправду... чудесное платье, Джессика.' WHERE `entry` = 2000002594;
 UPDATE `dbscript_string` SET `content_loc8` = 'Это зло, что я впустила... В чьих руках находится теперь сила, что моя богиня подарила мне? Чья рука ее направляет?' WHERE `entry` = 2000002595;
 UPDATE `dbscript_string` SET `content_loc8` = 'А тута рецепт лучшайшей похлебки Сломленных!' WHERE `entry` = 2000002596;
@@ -3302,6 +3302,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Думать так очень о
 UPDATE `dbscript_string` SET `content_loc8` = '%s начинает творить мощное заклятие телепортации.' WHERE `entry` = 2000003295;
 UPDATE `dbscript_string` SET `content_loc8` = 'Что вы задумали, сэр?' WHERE `entry` = 2000003296;
 UPDATE `dbscript_string` SET `content_loc8` = 'Как надоела эта рутина...' WHERE `entry` = 2000003297;
+UPDATE `dbscript_string` SET `content_loc8` = 'Тем лучше... теперь никто не сможет повторить моих ошибок!' WHERE `entry` = 2000003298;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;
