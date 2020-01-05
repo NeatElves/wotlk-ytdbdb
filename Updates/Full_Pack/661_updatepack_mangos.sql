@@ -13695,7 +13695,7 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 DELETE FROM `creature` WHERE `guid` IN (45264,45266,45272,45278,45282,45288);
 REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
 (45209, 2337, 1, 1, 0, 0, 7196.7, -732.406, 59.6499, 2.93528, 300, 300, 0, 0, 702, 1977, 0, 0),
-(37004, 2337, 1, 1, 0, 0, 7205.86, -741.336, 64.3165, 0.496014, 300, 300, 0, 0, 702, 1977, 0, 2),
+(45249, 2337, 1, 1, 0, 0, 7205.86, -741.336, 64.3165, 0.496014, 300, 300, 0, 0, 702, 1977, 0, 2),
 (45243, 2337, 1, 1, 0, 0, 7196.82, -755.613, 94.1232, 3.06074, 300, 300, 5, 0, 702, 1977, 0, 1),
 (45251, 2337, 1, 1, 0, 0, 7201.61, -743.839, 93.5739, 1.24458, 300, 300, 0, 0, 702, 1977, 0, 2),
 (45245, 2337, 1, 1, 0, 0, 7181.96, -740.085, 94.0926, 3.76177, 300, 300, 3, 0, 702, 1977, 0, 1),
