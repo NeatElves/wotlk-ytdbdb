@@ -6146,3 +6146,15 @@ UPDATE `creature_movement` SET `id` = '25327' WHERE `id` =138766;
 UPDATE `creature` SET `position_x` = '-665.297', `position_y` = '2662.18', `position_z` = '88.9793', `orientation` = '4.39823', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300', `MovementType` = '2' WHERE `guid` =59135;
 UPDATE `creature_movement` SET `id` = '59135' WHERE `id` =57252;
 DELETE FROM `creature` WHERE `guid` = 57252;
+
+UPDATE `creature_model_info` SET `bounding_radius` = '5' WHERE `modelid` =25870;
+
+UPDATE `creature_template` SET `GossipMenuId` = '10963' WHERE `Entry` =37523;
+DELETE FROM `gossip_menu` WHERE `entry` IN (10963,37523);
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES ('10963', '15240', '0', '2870'), ('10963', '15239', '0', '0');
+DELETE FROM `gossip_menu_option` WHERE `menu_id` IN (10963,37523);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `condition_id`) VALUES
+(10963, 0, 0, 'I''m ready to enter the Sunwell.', 1, 1, -1, 0, 1096300, 0, 0, NULL, 2870);
+DELETE FROM `dbscripts_on_gossip` WHERE `id` IN (1096300,37523);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(1096300, 0, 15, 70746, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, '');
