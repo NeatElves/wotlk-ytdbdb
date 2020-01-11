@@ -57,6 +57,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Братство Справед
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Оберегайте Ботанику любой ценой!' WHERE `entry` = -144;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Оберегайте Механар любой ценой!' WHERE `entry` = -145;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s убегает в ужасе!' WHERE `entry` = -146;
+UPDATE `creature_ai_texts` SET `content_loc8` = '%s издает оглушительный рев и зовет подмогу!' WHERE `entry` = -153;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s громко зовет на помощь!' WHERE `entry` = -154;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s хватает отравленный кинжал!' WHERE `entry` = -155;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s начинает создавать двойника!' WHERE `entry` = -156;
@@ -127,7 +128,6 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Тебе конец!' WHERE `en
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Братство не отступит перед насекомыми.' WHERE `entry` = -232;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Столько дел, столько нужно сделать! Куда девается время?' WHERE `entry` = -233;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Цель нашей жизни – служение Древнему. УМРИ, ЧУЖАК!' WHERE `entry` = -234;
-UPDATE `creature_ai_texts` SET `content_loc8` = '%s выглядит слабым и его можно взять в плен.' WHERE `entry` = -274;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Это чуть-чуть лучше предыдущего. Однако у него такой же непрочный костяк, как и у других. Но, вызывая их, вы находитесь на верном пути.' WHERE `entry` = -311;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я занимаюсь ворами марихуаны у первого колдуна в этом крыле' WHERE `entry` = -321;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Тебе нужны только мои растения, |3-6($r).' WHERE `entry` = -322;
@@ -264,7 +264,6 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Слушай вниматель
 UPDATE `creature_ai_texts` SET `content_loc8` = 'ЧИРИК!' WHERE `entry` = -668;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Что за скрип??? Скрип, скрип, скрип? СКРИП!' WHERE `entry` = -669;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s разбивается вдребезги!' WHERE `entry` = -694;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Настырная тварь! Я сам тебя убью!' WHERE `entry` = -701;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Воины и капитаны! Продолжайте битву!' WHERE `entry` = -702;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я не стану тратить на вас время, $n.' WHERE `entry` = -703;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s молит о прекращении своих мучений.' WHERE `entry` = -704;
@@ -1472,7 +1471,6 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Ближе... еще ближе
 UPDATE `creature_ai_texts` SET `content_loc8` = 'На кусочки я разорву этого противника... НА МЕЛКИЕ КУСОЧКИ!' WHERE `entry` = -10986;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Больше никаких добрых огров! Ты обидел Могор!' WHERE `entry` = -10987;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Кто смеет осквернять статую нашей возлюбленной?' WHERE `entry` = -10988;
-UPDATE `creature_ai_texts` SET `content_loc8` = '%s издает оглушительный рев и зовет подмогу!' WHERE `entry` = -10989;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Нахальные дети, молитесь своим богам – потому что вы вот-вот встретитесь с ними!' WHERE `entry` = -10990;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Готовься к вечным мукам, смертная букашка!' WHERE `entry` = -10991;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Что?! Кто смеет досаждать Пылающему Легиону?' WHERE `entry` = -10992;
@@ -1638,6 +1636,9 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Что это за жульни
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Холодные объятья ждут...' WHERE `entry` = -11216;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Спасибо...' WHERE `entry` = -11217;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Оно идет за тобой...' WHERE `entry` = -11218;
+UPDATE `creature_ai_texts` SET `content_loc8` = '%s разбивает склянку с зеленым газом.' WHERE `entry` = -11219;
+UPDATE `creature_ai_texts` SET `content_loc8` = '%s чувствует опасность и спасается бегством.' WHERE `entry` = -11220;
+UPDATE `creature_ai_texts` SET `content_loc8` = '%s выглядит слабым и его можно взять в плен.' WHERE `entry` = -11221;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Да благословит тебя Свет.' WHERE `entry` = -19997;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Твои раны серьезны, но ты будешь жить.' WHERE `entry` = -19998;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Отдыхай. Ты сегодня хорошо сражался.' WHERE `entry` = -19999;
