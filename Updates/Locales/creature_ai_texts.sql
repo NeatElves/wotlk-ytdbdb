@@ -2411,6 +2411,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Я пойду с тобой. Т
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Глаза |3-1(%s) на миг вспыхивают красным.' WHERE `entry` = -20776;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Это лучшее, на что ты $gспособен:способна;?' WHERE `entry` = -20777;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Ты $gосмелился:осмелилась; бросить вызов Недару, повелителю тундры?!' WHERE `entry` = -20778;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Как смеешь ты вызывать меня без подношения!' WHERE `entry` = -20779;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
