@@ -1165,7 +1165,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Ну вот, теперь я ли
 UPDATE `dbscript_string` SET `content_loc8` = 'Я сегодня и не предполагал тут оказаться!' WHERE `entry` = 2000001158;
 UPDATE `dbscript_string` SET `content_loc8` = 'Ну, наверное, мне нужно сложить все обратно в телегу.' WHERE `entry` = 2000001159;
 UPDATE `dbscript_string` SET `content_loc8` = 'О, черт! Моя телега сломалась, моя лошадь потеряла подкову, а теперь еще и с грузом проблемы!' WHERE `entry` = 2000001160;
-UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000001161;
+UPDATE `dbscript_string` SET `content_loc8` = 'Похоже, мне придется идти искать представителей закона. Если мне повезет, они скажут, что это чума и что скоро мы все умрем!' WHERE `entry` = 2000001161;
 UPDATE `dbscript_string` SET `content_loc8` = 'Мой меч Принцип хорошо служил мне при жизни. Но, поскольку дух мой может теперь покинуть юдоль скорби, Принцип мне больше не нужен.' WHERE `entry` = 2000001162;
 UPDATE `dbscript_string` SET `content_loc8` = 'Я не предам любовь моей дочери и буду надеяться, что Свет простит мне мои грехи.' WHERE `entry` = 2000001163;
 UPDATE `dbscript_string` SET `content_loc8` = 'Ха! Громовая пика моя! Умрите!' WHERE `entry` = 2000001164;
@@ -3327,6 +3327,8 @@ UPDATE `dbscript_string` SET `content_loc8` = '%s не может сдержат
 UPDATE `dbscript_string` SET `content_loc8` = '...и он бросил картошку, хотя я говорил, чтобы он этого не делал.' WHERE `entry` = 2000003320;
 UPDATE `dbscript_string` SET `content_loc8` = 'Ох уж этот Джонс...' WHERE `entry` = 2000003321;
 UPDATE `dbscript_string` SET `content_loc8` = 'Он не чокнутый – он полный псих! Все время куда-то стремится в поисках богатства и славы...' WHERE `entry` = 2000003322;
+UPDATE `dbscript_string` SET `content_loc8` = 'Давай перенесем нашу дискуссию в более...уединенное место. Иди за мной, $n.' WHERE `entry` = 2000003323;
+UPDATE `dbscript_string` SET `content_loc8` = 'Нет, я с тобой больше связываться не буду – я еще в своем уме! Знаешь, иногда лучший способ заработать деньги – не тратить их!' WHERE `entry` = 2000003324;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;

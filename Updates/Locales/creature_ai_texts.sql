@@ -2133,7 +2133,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Здравствуйте. Го�
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Как ты смеешь мешать нашей работе!' WHERE `entry` = -20498;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Мое время... истекло...' WHERE `entry` = -20499;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s начинает вызывать Пробуждающий Кошмар!' WHERE `entry` = -20500;
-UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -20501;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Король Дред угрожающе поднимает когти!' WHERE `entry` = -20501;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -20502;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Вы недостойны предстать перед Королем-личом!' WHERE `entry` = -20503;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Господин, я подвел вас...' WHERE `entry` = -20504;

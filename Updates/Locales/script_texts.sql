@@ -4256,7 +4256,7 @@ UPDATE `script_texts` SET `content_loc8` = 'Глупый Крок. Ты сам �
 UPDATE `script_texts` SET `content_loc8` = 'Нападай, Гроза Плети. Сейчас я покажу господину, кто из нас может называться чемпионом!' WHERE `entry` = -1631136;
 UPDATE `script_texts` SET `content_loc8` = 'Они очень быстро умерли... Ну да ладно.' WHERE `entry` = -1631137;
 UPDATE `script_texts` SET `content_loc8` = 'Ну и союзника ты выбрал, Крок!' WHERE `entry` = -1631138;
-UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1631139;
+UPDATE `script_texts` SET `content_loc8` = 'Может быть... ты и прав, Крок.' WHERE `entry` = -1631139;
 UPDATE `script_texts` SET `content_loc8` = 'Герои, вы должны мне помочь. Мои силы... на исходе. Залечите мои раны!' WHERE `entry` = -1631140;
 UPDATE `script_texts` SET `content_loc8` = 'Я открыла портал в Изумрудный Сон. Там вы найдете спасение, герои...' WHERE `entry` = -1631141;
 UPDATE `script_texts` SET `content_loc8` = 'Силы возвращаются ко мне. Герои, еще немного!' WHERE `entry` = -1631142;
@@ -4264,8 +4264,8 @@ UPDATE `script_texts` SET `content_loc8` = 'Я долго не продержу�
 UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1631144;
 UPDATE `script_texts` SET `content_loc8` = 'Мы назвали его Дранош – на орочьем это значит "Сердце Дренора". Я бы не позволил чернокнижникам забрать его. Он был бы в безопасности в Гарадаре под защитой старейшин.' WHERE `entry` = -1631145;
 UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1631146;
-UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1631147;
-UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1631148;
+UPDATE `script_texts` SET `content_loc8` = 'Я ИЗЛЕЧИЛАСЬ! Изера, даруй мне силу покончить с этими нечестивыми тварями.' WHERE `entry` = -1631147;
+UPDATE `script_texts` SET `content_loc8` = 'Глупцы, зачем вы сюда явились! Ледяные ветра Нордскола унесут ваши души!' WHERE `entry` = -1631148;
 UPDATE `script_texts` SET `content_loc8` = 'Трепещите, смертные, ибо ваша жалкая магия теперь бессильна!' WHERE `entry` = -1631149;
 UPDATE `script_texts` SET `content_loc8` = 'Вы чувствуете, как ледяная ладонь смерти сжимает сердце?' WHERE `entry` = -1631150;
 UPDATE `script_texts` SET `content_loc8` = 'А-а-а! Жжется! Что это за колдовство?!' WHERE `entry` = -1631151;
@@ -4274,7 +4274,7 @@ UPDATE `script_texts` SET `content_loc8` = 'А теперь почувствуй
 UPDATE `script_texts` SET `content_loc8` = 'Умри!' WHERE `entry` = -1631154;
 UPDATE `script_texts` SET `content_loc8` = 'Удел смертных...' WHERE `entry` = -1631155;
 UPDATE `script_texts` SET `content_loc8` = 'Хватит! Эти игры меня утомляют!' WHERE `entry` = -1631156;
-UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1631157;
+UPDATE `script_texts` SET `content_loc8` = 'Наконец-то... свободна...' WHERE `entry` = -1631157;
 UPDATE `script_texts` SET `content_loc8` = 'Неужели прибыли наконец хваленые силы Света? Мне бросить Ледяную Скорбь и сдаться на твою милость, Фордринг?' WHERE `entry` = -1631158;
 UPDATE `script_texts` SET `content_loc8` = 'Мы даруем тебе быструю смерть, Артас. Более быструю, чем ты заслуживаешь за то, что замучил и погубил десятки тысяч душ.' WHERE `entry` = -1631159;
 UPDATE `script_texts` SET `content_loc8` = 'Ты пройдешь через эти мучения сам. И будешь МОЛИТЬ о пощаде, но я не буду слушать. Твои отчаянные крики послужат доказательством моей безграничной мощи.' WHERE `entry` = -1631160;
@@ -4309,7 +4309,7 @@ UPDATE `script_texts` SET `content_loc8` = 'Поднимитесь, воины �
 UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1631189;
 UPDATE `script_texts` SET `content_loc8` = 'И вот я стою, как лев пред агнцами, и не дрожат они.' WHERE `entry` = -1631190;
 UPDATE `script_texts` SET `content_loc8` = 'Им неведом страх.' WHERE `entry` = -1631191;
-UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1631192;
+UPDATE `script_texts` SET `content_loc8` = '%s умирает.' WHERE `entry` = -1631192;
 UPDATE `script_texts` SET `content_loc8` = '%s впадает в бешенство!' WHERE `entry` = -1631193;
 UPDATE `script_texts` SET `content_loc8` = 'Кровавые чудовища |3-1(%s) почуяли запах крови!' WHERE `entry` = -1631194;
 UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1631195;
