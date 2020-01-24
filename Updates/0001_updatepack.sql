@@ -7288,3 +7288,51 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `dat
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 ('590102', '0', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '4.34587', ''),
 ('590102', '1', '5', '59', '33554432', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '');
+
+DELETE FROM dbscripts_on_quest_start WHERE id IN (11390,11391);
+INSERT INTO dbscripts_on_quest_start (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(11390,1,15,45973,0,0,0,0,6,0,0,0,0,0,0,0,0,''),
+(11391,1,15,45973,0,0,0,0,6,0,0,0,0,0,0,0,0,''),
+(11391,2,10,15214,15000,0,0,0,0x08,0,0,0,0,2046.149,-3221.081,60.13985,6.230825,'Summon Invisible Stalker');
+DELETE FROM dbscripts_on_gossip WHERE id = 895400;
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(895400,0,15,45973,0,0,0,0,6,0,0,0,0,0,0,0,0,'');
+DELETE FROM creature_template_spells WHERE entry = 24418;
+INSERT INTO creature_template_spells (entry, spell1, spell2, spell3, spell4, spell5) VALUES (24418,43770,0,43799,43769,44009);
+UPDATE creature SET position_x = 1965.408, position_y = -3260.609, position_z = 134.7109, orientation = 3.473205 WHERE guid = 117314;
+DELETE FROM `creature` WHERE `guid` = 81345;
+UPDATE creature SET position_x = 1980.004, position_y = -3264.764, position_z = 134.8941, orientation = 6.143559, spawndist = 0, MovementType = 0 WHERE guid = 105962;
+UPDATE creature SET position_x = 1970.854, position_y = -3265.108, position_z = 134.7769, orientation = 6.143559, spawndist = 0, MovementType = 0 WHERE guid = 105961;
+DELETE FROM creature_addon WHERE guid IN (105962,105961);
+
+UPDATE creature_template SET UnitFlags = 32768 WHERE entry IN (26447,26425);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(94346, 26447, 571, 1, 1, 0, 0, 3246.88, -2275.95, 108.704, 4.7822, 300, 300, 0, 0, 7952, 7654, 0, 2),
+(118858, 26447, 571, 1, 1, 0, 0, 3349.38, -1750.44, 89.8928, 4.6465, 300, 300, 5, 0, 7952, 7654, 0, 1),
+(118859, 26447, 571, 1, 1, 0, 0, 3456.25, -1787.52, 107.58, 1.81579, 300, 300, 5, 0, 7952, 7654, 0, 1),
+(118860, 26447, 571, 1, 1, 0, 0, 3339.87, -1762.02, 87.4123, 3.40294, 300, 300, 5, 0, 7952, 7654, 0, 1),
+(118861, 26447, 571, 1, 1, 0, 0, 3310.96, -1755.9, 86.9527, 1.04862, 300, 300, 5, 0, 7952, 7654, 0, 1),
+(118862, 26447, 571, 1, 1, 0, 0, 3332.6, -1772.12, 88.4946, 1.68276, 300, 300, 5, 0, 7952, 7654, 0, 1),
+(94339, 26447, 571, 1, 1, 0, 0, 3335.63, -1835.53, 98.2037, 2.32858, 300, 300, 5, 0, 7952, 7654, 0, 1),
+(94340, 26447, 571, 1, 1, 0, 0, 3410.08, -1864.63, 109.383, 3.71037, 300, 300, 5, 0, 7952, 7654, 0, 1),
+(94341, 26447, 571, 1, 1, 0, 0, 3464.06, -1811.98, 112.077, 5.25998, 300, 300, 5, 0, 7952, 7654, 0, 1),
+(94342, 26447, 571, 1, 1, 0, 0, 3382.36, -1774.5, 95.5616, 2.95702, 300, 300, 5, 0, 7952, 7654, 0, 1),
+(94343, 26447, 571, 1, 1, 0, 0, 3401.57, -1786.37, 101.289, 0.270543, 300, 300, 5, 0, 7952, 7654, 0, 1),
+(94344, 26447, 571, 1, 1, 0, 0, 3437.82, -1845.82, 109.795, 5.50055, 300, 300, 5, 0, 7952, 7654, 0, 1);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(94347, 26425, 571, 1, 1, 0, 0, 3254.28, -2275.65, 108.744, 4.67748, 300, 300, 0, 0, 9940, 0, 0, 2),
+(94348, 26425, 571, 1, 1, 0, 0, 3258.14, -2275.75, 108.703, 4.76475, 300, 300, 0, 0, 9940, 0, 0, 2),
+(118863, 26425, 571, 1, 1, 0, 0, 3359.13, -1780.9, 94.1738, 5.18345, 300, 300, 5, 0, 9940, 0, 0, 1),
+(118864, 26425, 571, 1, 1, 0, 0, 3428.63, -1759.98, 94.8829, 1.61257, 300, 300, 5, 0, 9940, 0, 0, 1),
+(118865, 26425, 571, 1, 1, 0, 0, 3370.5, -1736.32, 90.4234, 2.09349, 300, 300, 5, 0, 9940, 0, 0, 1),
+(118866, 26425, 571, 1, 1, 0, 0, 3367.26, -1847.16, 104.057, 5.5446, 300, 300, 5, 0, 9940, 0, 0, 1),
+(118867, 26425, 571, 1, 1, 0, 0, 3428.76, -1806.71, 102.823, 5.51988, 300, 300, 5, 0, 9940, 0, 0, 1),
+(94345, 26425, 571, 1, 1, 0, 0, 3372.92, -1887.65, 118.46, 3.3501, 300, 300, 0, 0, 9940, 0, 0, 0);
+DELETE FROM creature_movement WHERE id IN (94346,94347,94348);
+INSERT INTO creature_movement (id, point, position_x, position_y, position_z, waittime, script_id, orientation) VALUES
+(94346,1,3246.88,-2275.95,108.704,1000,11,4.7822),
+(94346,2,3246.88,-2275.95,108.704,2000,3,4.7822),
+(94347,1,3254.28,-2275.65,108.744,1000,11,4.67748),
+(94347,2,3254.28,-2275.65,108.744,2000,3,4.67748),
+(94348,1,3258.14,-2275.75,108.703,1000,11,4.76475),
+(94348,2,3258.14,-2275.75,108.703,2000,3,4.76475);

@@ -2838,6 +2838,10 @@ UPDATE `script_texts` SET `content_loc8` = 'Предатель больше не
 UPDATE `script_texts` SET `content_loc8` = 'Спасибо за помощь, братья. Наш народ будет освобожден' WHERE `entry` = -1564136;
 UPDATE `script_texts` SET `content_loc8` = 'Вы слышите громкий звук от удара металла по камню...' WHERE `entry` = -1564137;
 UPDATE `script_texts` SET `content_loc8` = 'Мое терпение иссякло! Смерть вам!' WHERE `entry` = -1564138;
+UPDATE `script_texts` SET `content_loc8` = 'Дверь в Приют Земных Наслаждений открылась.' WHERE `entry` = -1564139;
+UPDATE `script_texts` SET `content_loc8` = 'Давайте закончим начатое. Я поведу тебя к месту обитания Иллидана, как только ты поправишься.' WHERE `entry` = -1564140;
+UPDATE `script_texts` SET `content_loc8` = '%s падает на пол.' WHERE `entry` = -1564141;
+UPDATE `script_texts` SET `content_loc8` = '%s кипит от злости!' WHERE `entry` = -1564142;
 UPDATE `script_texts` SET `content_loc8` = 'Единственная настоящая сила в Запределье – это Гронн!' WHERE `entry` = -1565000;
 UPDATE `script_texts` SET `content_loc8` = 'Вы не сможете противостоять воинам Груула!' WHERE `entry` = -1565001;
 UPDATE `script_texts` SET `content_loc8` = 'Следующего вам так легко не убить.' WHERE `entry` = -1565002;
