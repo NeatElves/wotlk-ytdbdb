@@ -7336,3 +7336,37 @@ INSERT INTO creature_movement (id, point, position_x, position_y, position_z, wa
 (94347,2,3254.28,-2275.65,108.744,2000,3,4.67748),
 (94348,1,3258.14,-2275.75,108.703,1000,11,4.76475),
 (94348,2,3258.14,-2275.75,108.703,2000,3,4.76475);
+
+DELETE FROM spell_script_target WHERE entry IN (44885,46350,44687,44737,44626,55197);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(126518, 23745, 571, 1, 1, 0, 0, 3858.8, -1946.71, 208.33, 1.8675, 300, 300, 0, 0, 4890, 0, 0, 0),
+(81345, 23565, 571, 1, 1, 0, 0, 3826.67, -1955.96, 208.749, 5.75959, 300, 300, 0, 0, 210, 0, 0, 0);
+DELETE FROM dbscripts_on_gossip WHERE id IN (930100);
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(930100,0,15,61545,0,0,0,0,0,0,0,0,0,0,0,0,0,'Summon Budd'),
+(930100,1,18,0,0,0,0,0,4,0,0,0,0,0,0,0,0,'despawn Budd');
+UPDATE `creature` SET `position_x` = '3827.66', `position_y` = '-1969.91', `position_z` = '208.36', `orientation` = '0.523599', `spawntimesecsmin` = '30', `spawntimesecsmax` = '30' WHERE `guid` =96083;
+DELETE FROM dbscripts_on_relay WHERE id = 20166;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES 
+(20166,0,31,23033,100,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Garg EAI 23745: search for 23033'),
+(20166,1,15,53824,0,0,23033,101,1,0,0,0,0,0,0,0,0,'Part of Garg EAI 23745: cast Throw');
+UPDATE creature_template SET EquipmentTemplateId = 2522 WHERE Entry = 32663;
+DELETE FROM creature_equip_template WHERE entry = 2522;
+INSERT INTO creature_equip_template (entry, equipentry1, equipentry2, equipentry3) VALUES (2522, 17040, 0, 0);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(20557, 23747, 571, 1, 1, 0, 0, 3809.55, -1957.89, 209.066, 3.96958, 300, 300, 5, 0, 173, 0, 0, 1),
+(20564, 23747, 571, 1, 1, 0, 0, 3856.56, -1960.57, 208.299, 1.02974, 300, 300, 0, 0, 173, 0, 0, 0),
+(20540, 23747, 571, 1, 1, 0, 0, 3808.07, -1940.34, 211.066, 3.32216, 300, 300, 5, 0, 173, 0, 0, 1),
+(126516, 23762, 530, 1, 1, 0, 0, 6735.54, -7559.46, 127.102, 1.57651, 900, 900, 0, 0, 4890, 0, 0, 0),
+(20567, 23762, 571, 1, 1, 0, 0, 3842.41, -1956.08, 208.601, 4.31096, 300, 300, 0, 0, 4890, 0, 0, 0),
+(126515, 23764, 530, 1, 1, 0, 0, 6739.72, -7559.07, 126.472, 2.10952, 900, 900, 0, 0, 4890, 0, 0, 0),
+(126562, 23764, 571, 1, 1, 0, 0, 3842.48, -1961.63, 208.604, 2.23402, 300, 300, 0, 0, 4890, 0, 0, 0),
+(126514, 23766, 571, 1, 1, 0, 0, 3837.77, -1958.68, 208.503, 5.98648, 300, 300, 0, 0, 4890, 0, 0, 0),
+(119623, 26423, 571, 1, 1, 0, 0, 3844.59, -1973.08, 208.515, 2.89725, 300, 300, 0, 0, 6986, 0, 0, 0),
+(117211, 26424, 571, 1, 1, 0, 0, 3850.49, -1960.48, 208.511, 2.14675, 300, 300, 0, 0, 4890, 0, 0, 0),
+(120608, 26474, 571, 1, 1, 0, 0, 3844.04, -1948.21, 208.875, 4.76475, 300, 300, 0, 0, 4890, 0, 0, 0),
+(119625, 26519, 571, 1, 1, 0, 0, 3882.44, -1936.45, 209.169, 2.09439, 300, 300, 0, 0, 6986, 0, 0, 0),
+(96084, 26604, 571, 1, 1, 0, 0, 3826.5, -1985.58, 208.376, 4.27606, 300, 300, 0, 0, 6986, 0, 0, 0);
+UPDATE `gossip_menu_option` SET `option_text` = 'Shake Drakuru''s outstretched hand.' WHERE `menu_id` =9615 AND `id` =1;
+UPDATE `conditions` SET `value1` = '11990' WHERE `condition_entry` =1069;
+UPDATE creature SET position_x = 3854.196, position_y = -1934.423, position_z = 208.4934, orientation = 4.485496, spawndist = 0, MovementType = 0 WHERE guid = 142898;

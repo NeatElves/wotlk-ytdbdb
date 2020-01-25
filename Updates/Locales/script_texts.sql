@@ -3034,6 +3034,8 @@ UPDATE `script_texts` SET `content_loc8` = 'Ты себе не представ�
 UPDATE `script_texts` SET `content_loc8` = 'Как же здорово, что ты меня от этого $gизбавил:избавила;! Вот тебе на память одна вещица – я ее у троллей утащила.' WHERE `entry` = -1568168;
 UPDATE `script_texts` SET `content_loc8` = 'Глаза бы мои не видели этот мерзкий пруд! Спасибо, $n. Я никогда тебя не забуду!' WHERE `entry` = -1568169;
 UPDATE `script_texts` SET `content_loc8` = 'В карман |3-1($n) запрыгивает лягушка!' WHERE `entry` = -1568170;
+UPDATE `script_texts` SET `content_loc8` = 'Муа-ха-ха!' WHERE `entry` = -1568171;
+UPDATE `script_texts` SET `content_loc8` = '%s превращается в медведя!' WHERE `entry` = -1568172;
 UPDATE `script_texts` SET `content_loc8` = 'Ваша кровь принадлежит мне!' WHERE `entry` = -1574000;
 UPDATE `script_texts` SET `content_loc8` = 'Не так быстро.' WHERE `entry` = -1574001;
 UPDATE `script_texts` SET `content_loc8` = 'Аранал, Лидел! Их судьба должна быть подобна вашей!' WHERE `entry` = -1574002;
