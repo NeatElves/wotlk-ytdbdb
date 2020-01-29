@@ -1234,6 +1234,11 @@ UPDATE `script_texts` SET `content_loc8` = 'Зверь возвращается 
 UPDATE `script_texts` SET `content_loc8` = 'Смотрите, $n! На западе!' WHERE `entry` = -1010001;
 UPDATE `script_texts` SET `content_loc8` = 'Защитник пал!' WHERE `entry` = -1010002;
 UPDATE `script_texts` SET `content_loc8` = 'Захватчики из племени Колкар отступают!' WHERE `entry` = -1010003;
+UPDATE `script_texts` SET `content_loc8` = '%s разрывается на части, покидая этот мир.' WHERE `entry` = -1010004;
+UPDATE `script_texts` SET `content_loc8` = 'У кого это хватило глупости забраться в башню Старшего мастера?' WHERE `entry` = -1010005;
+UPDATE `script_texts` SET `content_loc8` = '<кашляет> Кто здесь? <кашляет>' WHERE `entry` = -1010006;
+UPDATE `script_texts` SET `content_loc8` = 'Вы слышали?' WHERE `entry` = -1010007;
+UPDATE `script_texts` SET `content_loc8` = 'Чую разбойника.' WHERE `entry` = -1010008;
 UPDATE `script_texts` SET `content_loc8` = '%s издает низкое горловое рычание.' WHERE `entry` = -1015001;
 UPDATE `script_texts` SET `content_loc8` = 'Ты никогда не получишь Сердце Ярости! Его сила принадлежит Иллидану!' WHERE `entry` = -1015002;
 UPDATE `script_texts` SET `content_loc8` = '%s достает Сердце Ярости.' WHERE `entry` = -1015003;
