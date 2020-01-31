@@ -291,15 +291,19 @@ echo "  DBC changes successfully applied"
 echo
 echo
 
-# Apply scriptdev2.sql
-echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/scriptdev2/scriptdev2.sql ..."
-$MYSQL_COMMAND < ${ADDITIONAL_PATH}Updates/mangos/scriptdev2/scriptdev2.sql
-if [[ $? != 0 ]]
-then
-  echo "ERROR: cannot apply ${ADDITIONAL_PATH}Updates/mangos/scriptdev2/scriptdev2.sql"
-  exit 1
-fi
-echo "  ScriptDev2 successfully applied"
+# Apply ScriptDev2 data
+echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/scriptdev2 ..."
+for f in "${ADDITIONAL_PATH}Updates/mangos/scriptdev2/"*.sql
+do
+  echo "    Appending SD2 file update `basename $f` to database $DATABASE"
+  $MYSQL_COMMAND < $f
+  if [[ $? != 0 ]]
+  then
+    echo "ERROR: cannot apply $f"
+    exit 1
+  fi
+done
+echo "  ScriptDev2 data successfully applied"
 echo
 echo
 

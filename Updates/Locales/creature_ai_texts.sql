@@ -2412,6 +2412,9 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Глаза |3-1(%s) на миг
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Это лучшее, на что ты $gспособен:способна;?' WHERE `entry` = -20777;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Ты $gосмелился:осмелилась; бросить вызов Недару, повелителю тундры?!' WHERE `entry` = -20778;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Как смеешь ты вызывать меня без подношения!' WHERE `entry` = -20779;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Что здесь происходит, сержант?' WHERE `entry` = -20780;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Я не знаю. Для собственного спокойствия лучше убить обоих!' WHERE `entry` = -20781;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'НА ПОМОЩЬ! НА ПОМОЩЬ! $gОН УКРАЛ:ОНА ПОХИТИЛА; МОЙ ОБРАЗ!' WHERE `entry` = -20782;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -425,7 +425,8 @@ UPDATE gameobject_template SET ScriptName='go_father_flame' WHERE entry=175245;
 UPDATE instance_template SET ScriptName='instance_blackwing_lair' WHERE map=469;
 UPDATE creature_template SET ScriptName='boss_razorgore' WHERE entry=12435;
 UPDATE creature_template SET ScriptName='npc_blackwing_orb' WHERE entry=14449;
-UPDATE gameobject_template SET ScriptName='go_black_dragon_egg' WHERE entry=177807;
+INSERT INTO scripted_event_id VALUES
+(8302,'event_razorgore_possess');
 UPDATE creature_template SET ScriptName='boss_vaelastrasz' WHERE entry=13020;
 UPDATE gameobject_template SET ScriptName='go_suppression' WHERE entry=179784;
 UPDATE creature_template SET ScriptName='boss_broodlord' WHERE entry=12017;
@@ -1492,12 +1493,14 @@ UPDATE creature_template SET ScriptName='boss_kri' WHERE entry=15511;
 UPDATE creature_template SET ScriptName='boss_sartura' WHERE entry=15516;
 UPDATE creature_template SET ScriptName='boss_fankriss' WHERE entry=15510;
 UPDATE creature_template SET ScriptName='boss_viscidus' WHERE entry=15299;
-UPDATE creature_template SET ScriptName='npc_glob_of_viscidus' WHERE entry=15667;
 UPDATE creature_template SET ScriptName='boss_huhuran' WHERE entry=15509;
 UPDATE creature_template SET ScriptName='boss_veklor' WHERE entry=15276;
 UPDATE creature_template SET ScriptName='boss_veknilash' WHERE entry=15275;
 UPDATE creature_template SET ScriptName='boss_ouro' WHERE entry=15517;
 UPDATE creature_template SET ScriptName='npc_ouro_spawner' WHERE entry=15957;
+UPDATE creature_template SET ScriptName='npc_ouro_mound' WHERE entry=15712;
+UPDATE creature_template SET ScriptName='npc_ouro_trigger' WHERE entry=15717;
+UPDATE creature_template SET ScriptName='npc_ouro_scarab' WHERE entry=15718;
 UPDATE creature_template SET ScriptName='boss_eye_of_cthun' WHERE entry=15589;
 UPDATE creature_template SET ScriptName='mob_giant_claw_tentacle' WHERE entry=15728;
 UPDATE creature_template SET ScriptName='mob_anubisath_sentinel' WHERE entry=15264;
@@ -3963,13 +3966,14 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 -- 28 (above) = EMOTE_ENERGIZING
 ('-1509029','Come get some!','0','0','0','0','0','andorov SAY_ANDOROV_INTRO_4'),
 ('-1509030','Kill first, ask questions later... Incoming!','0','1','0','0','0','andorov SAY_ANDOROV_ATTACK_START'),
-('-1509031','I lied...','0','1','0','0','0','andorov SAY_ANDOROV_INTRO_2');
+('-1509031','I lied...','0','1','0','0','0','andorov SAY_ANDOROV_INTRO_2'),
+('-1509032','My work here is done. I\'ll be sure to let Mar\'alith and the others at Cenarion Hold know that you helped me out a little. Be careful in here, you don\'t have me holdin\' your hand past this point.','0','0','0','0','11560','andorov SAY_ANDOROV_DESPAWN');
 
 -- -1 531 000 TEMPLE OF AHN'QIRAJ
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1531000','Are you so eager to die? I would be happy to accomodate you.','8615','1','0','0','0','skeram SAY_AGGRO'),
+('-1531000','Are you so eager to die? I will be happy to accommodate you...','8615','1','0','0','0','skeram SAY_AGGRO'),
 ('-1531001','Let your death serve as an example!','8617','1','0','0','0','skeram SAY_SLAY'),
-('-1531002','You only delay... the inevitable.','8622','1','0','0','0','skeram SAY_DEATH'),
+('-1531002','You only delay the inevitable!','8622','1','0','0','0','skeram SAY_DEATH'),
 
 ('-1531003','REUSE_ME','0','0','0','0','0','REUSE'),
 ('-1531004','REUSE_ME','0','0','0','0','0','REUSE'),
@@ -3977,7 +3981,7 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1531006','REUSE_ME','0','0','0','0','0','REUSE'),
 ('-1531007','REUSE_ME','0','0','0','0','0','REUSE'),
 
-('-1531008','You will be judged for defiling these sacred grounds! The laws of the Ancients will not be challenged! Trespassers will be annihilated!','8646','1','0','0','0','sartura SAY_AGGRO'),
+('-1531008','You will be judged for defiling these sacred grounds!  The laws of the Ancients will not be challenged!  Trespassers will be annihilated!','8646','1','0','0','0','sartura SAY_AGGRO'),
 ('-1531009','I sentence you to death!','8647','1','0','0','0','sartura SAY_SLAY'),
 ('-1531010','I serve to the last!','8648','1','0','0','0','sartura SAY_DEATH'),
 
@@ -9378,38 +9382,17 @@ INSERT INTO script_waypoint VALUES
 (17077,0,48,527.722,3890.69,189.24,0,0,0,''),
 (17077,0,49,524.637,3891.77,189.149,0,0,0,''),
 (17077,0,50,519.146,3886.7,190.128,0,60000,0,'SAY_WOLF_WELCOME'),
-(17225,0,0,-11033.5,-1784.65,182.284,0,3000,0,''),
-(17225,0,1,-11107.6,-1873.36,136.878,0,0,0,''),
-(17225,0,2,-11118.7,-1883.65,132.441,0,0,0,''),
-(17225,0,3,-11132.9,-1888.12,128.969,0,0,0,''),
-(17225,0,4,-11150.3,-1890.54,126.557,0,0,0,''),
-(17225,0,5,-11160.6,-1891.63,124.793,0,0,0,''),
-(17225,0,6,-11171.5,-1889.45,123.417,0,0,0,''),
-(17225,0,7,-11183.5,-1884.09,119.754,0,0,0,''),
-(17225,0,8,-11196.2,-1874.01,115.227,0,0,0,''),
-(17225,0,9,-11205.6,-1859.66,110.216,0,0,0,''),
-(17225,0,10,-11236.5,-1818.03,97.3972,0,0,0,''),
-(17225,0,11,-11253.1,-1794.48,93.3101,0,0,0,''),
-(17225,0,12,-11254.9,-1787.13,92.5174,0,0,0,''),
-(17225,0,13,-11253.3,-1777.08,91.7739,0,0,0,''),
-(17225,0,14,-11247.5,-1770.27,92.4183,0,0,0,''),
-(17225,0,15,-11238.6,-1766.51,94.6417,0,0,0,''),
-(17225,0,16,-11227.6,-1767.22,100.256,0,0,0,''),
-(17225,0,17,-11218.4,-1770.55,107.859,0,0,0,''),
-(17225,0,18,-11204.8,-1781.77,110.383,0,0,0,''),
-(17225,0,19,-11195.8,-1801.07,110.833,0,0,0,''),
-(17225,0,20,-11195.8,-1824.66,113.936,0,0,0,''),
-(17225,0,21,-11197.1,-1860.01,117.945,0,0,0,''),
-(17225,0,22,-11194.6,-1884.23,121.401,0,0,0,''),
-(17225,0,23,-11184.2,-1894.78,120.326,0,0,0,''),
-(17225,0,24,-11176.9,-1899.84,119.844,0,0,0,''),
-(17225,0,25,-11168.1,-1901.77,118.958,0,0,0,''),
-(17225,0,26,-11154.9,-1901.66,117.218,0,0,0,''),
-(17225,0,27,-11143.2,-1901.22,115.885,0,0,0,''),
-(17225,0,28,-11131.2,-1897.59,113.722,0,0,0,''),
-(17225,0,29,-11121.3,-1890.25,111.643,0,0,0,''),
-(17225,0,30,-11118.2,-1883.83,110.595,0,3000,0,''),
-(17225,0,31,-11118.5,-1883.68,91.473,0,0,0,'start combat'),
+(17225,0,0,-11018.86,-1797.269,172.8525,0,3000,0,''),
+(17225,0,1,-11105.76,-1875.9,158.978,0,0,0,''),
+(17225,0,2,-11175.1,-1857.224,101.0059,0,0,0,''),
+(17225,0,3,-11296.93,-1764.531,101.0059,0,0,0,''),
+(17225,0,4,-11258.9,-1722.372,101.0059,0,0,0,''),
+(17225,0,5,-11176.76,-1809.599,101.0059,0,0,0,''),
+(17225,0,6,-11191.11,-1889.396,107.8948,0,0,0,''),
+(17225,0,7,-11152.18,-1863.318,101.0059,0,0,0,''),
+(17225,0,8,-11130.68,-1891.423,107.8963,0,0,0,''),
+(17225,0,9,-11110.67,-1878.771,107.8969,0,3000,0,''),
+(17225,0,10,-11142.71,-1891.193,92.25038,0,0,0,'start combat'),
 (17238,0,0,954.21,-1433.72,63,0,0,0,''),
 (17238,0,1,972.7,-1438.85,65.56,0,0,0,''),
 (17238,0,2,984.79,-1444.15,64.13,0,0,0,''),

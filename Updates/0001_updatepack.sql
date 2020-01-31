@@ -8120,3 +8120,39 @@ INSERT INTO `world_safe_locs` (`id`, `map`, `x`, `y`, `z`, `o`, `name`) VALUES
 (1683, 580, 1620.95, 624.701, 32.8968, 3.14159, 'Sunwell - Quel\'Delar Entrance'),
 (1691, 0, -13205.6, 272.703, 21.8571, 1.5708, 'AAA - Arena (Dev Test)'),
 (1720, 571, 2585.82, -5808.93, 296.197, 0.698132, 'Howling Fjord, Frostblade GY');
+
+UPDATE creature_template SET equipmentTemplateid = 310 WHERE Entry = 10506;
+UPDATE creature_template SET Faction = 2033, equipmentTemplateid = 667 WHERE entry IN (27405,27406);
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 27202);
+DELETE FROM creature_template_addon WHERE entry = 27202;
+INSERT INTO creature_template_addon (entry, mount, bytes1, b2_0_sheath, b2_1_pvp_state, emote, moveflags, auras) VALUES 
+(27202,0,0,1,1,0,0,48154);
+DELETE FROM dbscripts_on_relay WHERE id IN (20167,20168,20169);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20167,0,34,3128,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of 27443 EAI: check if source is male'),
+(20167,1,15,48763,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 27443 EAI: cast 48763'),
+(20167,2,15,48655,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 27202 EAI: Player - Force Cast "The Perfect Dissemblance: Summon Player\'s Footman & Credit Credit"'),
+(20167,3,15,48654,1,0,0,0,0,0,0,0,0,0,0,0,0,'Part of 27202 EAI: source - Force Cast: "The Perfect Dissemblance: Summon Priest\'s Footman"'),
+(20168,0,34,3127,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of 27443 EAI: check if source is female'),
+(20168,1,15,48761,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 27443 EAI: cast 48761'),
+(20168,2,15,48655,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 27202 EAI: Player - Force Cast: "The Perfect Dissemblance: Summon Player\'s Footman & Credit Credit"'),
+(20168,3,15,48654,1,0,0,0,0,0,0,0,0,0,0,0,0,'Part of 27202 EAI: source - Force Cast: "The Perfect Dissemblance: Summon Priest\'s Footman"'),
+(20169,0,31,27202,20,0,0,0,0,0,0,0,0,0,0,0,0,'Part of 27405 EAI: search for 27202'),
+(20169,1,26,0,0,0,27202,21,1,0,0,0,0,0,0,0,0,'Part of 27405 EAI: attack start');
+DELETE FROM conditions WHERE condition_entry IN (3127,3128);
+INSERT INTO conditions (condition_entry, type, value1, value2) VALUES (3127, 41, 0, 0), (3128, 41, 1, 0);
+DELETE FROM dbscripts_on_quest_end WHERE id = 12260;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(12260,0,14,48763,0,0,0,0,2,0,0,0,0,0,0,0,0,'Remove aura from Player'),
+(12260,0,14,48761,0,0,0,0,2,0,0,0,0,0,0,0,0,'Remove aura from Player');
+UPDATE quest_template SET CompleteScript = 12260 WHERE entry = 12260;
+DELETE FROM spell_area WHERE spell IN (48763,48761);
+INSERT INTO spell_area (spell, area, quest_start, quest_start_active, quest_end, condition_id, aura_spell, racemask, gender, autocast) VALUES
+(48761,4180,0,0,0,0,0,0,2,0), (48763,4180,0,0,0,0,0,0,2,0);
+
+UPDATE `creature` SET `MovementType`='1', spawndist = 7 WHERE `guid` IN (22568, 22634, 94818, 94819, 94927);
+DELETE FROM `creature_movement` WHERE `id` IN (22568, 22634, 94818, 94819, 94927);
+
+INSERT INTO conditions (condition_entry, type, value1, value2) VALUES
+(3129,-3,3063,0), (3130,-1,3129,2099);
+UPDATE gossip_menu_option SET condition_id = 3130 WHERE menu_id = 941 AND id = 1;

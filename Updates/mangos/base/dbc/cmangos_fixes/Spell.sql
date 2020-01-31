@@ -1783,3 +1783,13 @@ INSERT INTO `spell_template` (`Id`, `Attributes`, `CastingTimeIndex`, `ProcChanc
 (15185, 64, 1, 101, 1, 21, -1, 6, 49, 0, 'Custom QA Mod Dodge Chance'),
 (15186, 64, 1, 101, 1, 21, -1, 6, 51, 0, 'Custom QA Mod Block Chance');
 
+-- Classic section
+
+-- TBC section
+-- Freezing circle should not be removed by damage
+UPDATE spell_template SET ProcFlags=0 WHERE Id IN(34779);
+
+-- WOTLK section
+-- Removes aura interrupt flag 0x00001000-AURA_INTERRUPT_FLAG_MELEE_ATTACK - Player should be able to use male during fight with 3 mobs
+UPDATE `spell_template` SET `AuraInterruptFlags`=AuraInterruptFlags&~0x00001000 WHERE `Id` IN (48761,48763);
+
