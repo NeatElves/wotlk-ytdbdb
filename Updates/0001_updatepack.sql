@@ -14,9 +14,9 @@ UPDATE creature_template SET UnitFlags=33600 WHERE entry IN(11502);
 DELETE FROM dbscripts_on_gossip WHERE id IN(140500);
 INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (140500, 0, 8, 8612, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'give killcredit - Screecher Spirit'),
-(140500, 1, 36, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Screecher Spirit - turn to player'),
-(140500, 1, 4, 59, 33554432, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Screecher Spirit - add non_selectable'),
-(140500, 2, 18, 6000, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Screecher Spirit - despawn');
+(140500, 1000, 36, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Screecher Spirit - turn to player'),
+(140500, 1000, 4, 59, 33554432, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Screecher Spirit - add non_selectable'),
+(140500, 2000, 18, 6000, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Screecher Spirit - despawn');
 
 UPDATE `quest_template` SET `NextQuestId` = 0 WHERE `entry` =10715;
 
@@ -98,8 +98,8 @@ REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `posit
 UPDATE gameobject_template SET data3=65536, data5=1 WHERE entry=3524;
 DELETE FROM dbscripts_on_event WHERE id=510;
 INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(510, 1, 13, 0, 0, 0, 3524, 30, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Activate Demon Seed'),
-(510, 2, 40, 0, 0, 0, 3523, 30, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Despawn Circle of Flame');
+(510, 1000, 13, 0, 0, 0, 3524, 30, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Activate Demon Seed'),
+(510, 2000, 40, 0, 0, 0, 3523, 30, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Despawn Circle of Flame');
 
 UPDATE creature_model_info SET bounding_radius=0.8,combat_reach=3 WHERE modelid IN(15738);
 UPDATE creature_model_info SET bounding_radius=1.05,combat_reach=7.5 WHERE modelid IN(15547);
@@ -153,24 +153,24 @@ INSERT INTO `dbscript_string` (`entry`, `content_default`, `content_loc1`, `cont
 ('2000003292', 'Oh dear, Lieutenant General, how ghastly! I would most certainly never. I shall return to my charges now.', null, null, null, null, null, null, null, null, '0', '0', '0', '1', 'Dark Clearic Malod Text 3');
 DELETE FROM dbscripts_on_creature_movement WHERE id BETWEEN 1943501 AND 1943503;
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-('1943502', '2', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod Emote Talk'),
-('1943502', '5', '15', '33963', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod Cast CANNIBALIZE'),
-('1943502', '8', '31', '19432', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod search for buddy - 19432'),
-('1943502', '8', '21', '1', '0', '0', '19432', '5', '7', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod buddy active'),
-('1943502', '8', '28', '0', '0', '0', '19432', '5', '7', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod force buddy to stand up'),
-('1943502', '10', '0', '0', '0', '0', '19432', '5', '7', '2000003288', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod force buddy to say text'),
-('1943502', '19', '0', '0', '0', '0', '0', '0', '0', '2000003289', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod talk'),
-('1943502', '27', '31', '19432', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod search for buddy - 19432'),
-('1943502', '27', '21', '1', '0', '0', '19432', '5', '7', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod buddy active'),
-('1943502', '27', '28', '3', '0', '0', '19432', '5', '7', '3', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod force buddy to sit '),
-('1943501', '1', '1', '16', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod Emote Kneel'),
-('1943503', '3', '1', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod Emote bow'),
-('1943503', '5', '0', '0', '0', '0', '0', '0', '0', '2000003290', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod say text'),
-('1943503', '18', '31', '19253', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod search for buddy - 19253'),
-('1943503', '18', '21', '1', '0', '0', '19253', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod buddy active'),
-('1943503', '18', '0', '0', '0', '0', '19253', '5', '7', '2000003291', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod force buddy to say text'),
-('1943503', '29', '0', '0', '0', '0', '0', '0', '0', '2000003292', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod say text'),
-('1943503', '40', '1', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod Emote bow');
+('1943502', '2000', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod Emote Talk'),
+('1943502', '5000', '15', '33963', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod Cast CANNIBALIZE'),
+('1943502', '8000', '31', '19432', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod search for buddy - 19432'),
+('1943502', '8000', '21', '1', '0', '0', '19432', '5', '7', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod buddy active'),
+('1943502', '8000', '28', '0', '0', '0', '19432', '5', '7', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod force buddy to stand up'),
+('1943502', '10000', '0', '0', '0', '0', '19432', '5', '7', '2000003288', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod force buddy to say text'),
+('1943502', '19000', '0', '0', '0', '0', '0', '0', '0', '2000003289', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod talk'),
+('1943502', '27000', '31', '19432', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod search for buddy - 19432'),
+('1943502', '27000', '21', '1', '0', '0', '19432', '5', '7', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod buddy active'),
+('1943502', '27000', '28', '3', '0', '0', '19432', '5', '7', '3', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod force buddy to sit '),
+('1943501', '1000', '1', '16', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod Emote Kneel'),
+('1943503', '3000', '1', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod Emote bow'),
+('1943503', '5000', '0', '0', '0', '0', '0', '0', '0', '2000003290', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod say text'),
+('1943503', '18000', '31', '19253', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod search for buddy - 19253'),
+('1943503', '18000', '21', '1', '0', '0', '19253', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod buddy active'),
+('1943503', '18000', '0', '0', '0', '0', '19253', '5', '7', '2000003291', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod force buddy to say text'),
+('1943503', '29000', '0', '0', '0', '0', '0', '0', '0', '2000003292', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod say text'),
+('1943503', '40000', '1', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Dark Clearic Malod Emote bow');
 UPDATE `creature` SET `MovementType` = 2 WHERE `guid` =58336;
 UPDATE creature_movement_template SET waittime=1800000 WHERE entry IN(19436) AND point=1;
 UPDATE creature_movement_template SET pathId=1 WHERE pathId=0 AND entry=19436;
@@ -1678,7 +1678,7 @@ INSERT INTO `dbscripts_on_relay` (`id`,`delay`,`command`,`datalong`,`datalong2`,
 (10077,0,20,2,5,0,0,0,0,0,0,0,0,'Hyjal Summit Alliance Wave - Load Path ID 5',0,0,0,0),
 (10078,0,20,2,6,0,0,0,0,0,0,0,0,'Hyjal Summit Alliance Wave - Load Path ID 6',0,0,0,0),
 (10079,0,25,1,0,0,0,0,0,0,0,0,6,'Hyjal Summit Overrun - Run On',0,0,0,0),
-(10079,1,37,0,0,10,0,0,0,0,0,0,2,'Hyjal Summit Overrun - Move towards Jaina',0,0,0,0);
+(10079,1000,37,0,0,10,0,0,0,0,0,0,2,'Hyjal Summit Overrun - Move towards Jaina',0,0,0,0);
 DELETE FROM `dbscript_random_templates` WHERE `id` IN (10056);
 INSERT INTO dbscript_random_templates (id,type,target_id,chance,comments) VALUES
 (10056,1,10076,0,'Hyjal Summit Alliance Wave - Random Path ID 4-6'),
@@ -3800,8 +3800,8 @@ INSERT INTO `creature_movement_template` (`entry`,`point`,`position_x`,`position
 (23381,14,4207.249,-4170.948,870.301,140000,2338101,100);
 DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN(2338101);
 INSERT INTO `dbscripts_on_creature_movement` (`id`,`delay`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
-(2338101,110,0,0,0,0,2000003293,0,0,0,23437,5,3,'Indormi - Do you think the rumors about the Infinite Dragonflight are true?  I''ve sensed it... the familiarity.',0,0,0,0),
-(2338101,119,0,0,0,0,2000003294,0,0,0,0,0,0,'Tydormu - That is a dangerous train of thought.  If something was truly amiss, Soridormi would be the first to know.',0,0,0,0);
+(2338101,110000,0,0,0,0,2000003293,0,0,0,23437,5,3,'Indormi - Do you think the rumors about the Infinite Dragonflight are true?  I''ve sensed it... the familiarity.',0,0,0,0),
+(2338101,119000,0,0,0,0,2000003294,0,0,0,0,0,0,'Tydormu - That is a dangerous train of thought.  If something was truly amiss, Soridormi would be the first to know.',0,0,0,0);
 SET @CSGUID := 86052;
 INSERT INTO creature (guid, id, map, spawnMask, modelid, equipment_id, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, currentwaypoint, curhealth, curmana, DeathState, MovementType) VALUES
 (@CSGUID+1,17899,534,1,0,0,5059.646,-1498.705,1339.723,2.443461,180,180,0,0,86071,31550,0,0),
@@ -4019,8 +4019,8 @@ DELETE FROM `dbscripts_on_creature_movement` WHERE `id` BETWEEN 1793101 AND 1793
 INSERT INTO `dbscripts_on_creature_movement` (`id`,`delay`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
 (1793101,0,25,1,0,0,0,0,0,0,0,0,0,'Alliance Peasant - Run On',0,0,0,0),
 (1793101,0,1,234,0,0,0,0,0,0,0,0,0,'Alliance Peasant - STATE_WORK_CHOPWOOD',0,0,0,0),
-(1793101,20,1,0,0,0,0,0,0,0,0,0,0,'Alliance Peasant - ONESHOT_NONE',0,0,0,0),
-(1793101,20,15,34450,0,0,0,0,0,0,0,0,0,'Alliance Peasant - Cast Transform: Peasant w/ wood 1.5 scale',0,0,0,0),
+(1793101,20000,1,0,0,0,0,0,0,0,0,0,0,'Alliance Peasant - ONESHOT_NONE',0,0,0,0),
+(1793101,20000,15,34450,0,0,0,0,0,0,0,0,0,'Alliance Peasant - Cast Transform: Peasant w/ wood 1.5 scale',0,0,0,0),
 (1793102,0,14,34450,0,0,0,0,0,0,0,0,0,'Alliance Peasant - Remove Aura 34450',0,0,0,0);
 INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
 (17772,1,1,5056.232,-1791.017,1321.481,0,0,100),
@@ -4030,9 +4030,9 @@ DELETE FROM `dbscripts_on_creature_movement` WHERE `id`=1777201;
 INSERT INTO `dbscripts_on_creature_movement` (`id`,`delay`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
 (1777201,0,32,1,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Pause Waypoints',0,0,0,0),
 (1777201,0,35,5,65,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Throw AI Event 5',0,0,0,0),
-(1777201,1,15,16807,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Cast Mass Teleport',0,0,0,0),
-(1777201,1,0,0,0,0,2000003295,0,0,0,0,0,0,'Lady Jaina Proudmoore - %s begins channelling a massive teleport spell.',0,0,0,0),
-(1777201,22,35,6,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Throw AI Event 6 on Self',0,0,0,0);
+(1777201,1000,15,16807,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Cast Mass Teleport',0,0,0,0),
+(1777201,1000,0,0,0,0,2000003295,0,0,0,0,0,0,'Lady Jaina Proudmoore - %s begins channelling a massive teleport spell.',0,0,0,0),
+(1777201,22000,35,6,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Throw AI Event 6 on Self',0,0,0,0);
 DELETE FROM `dbscript_string` WHERE `entry` IN (2000003293, 2000003294, 2000003295);
 INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
 (2000003293, 'Do you think the rumors about the Infinite Dragonflight are true?  I''ve sensed it... the familiarity.', 0, 0, 0, 1, 'Indormi (Entry: 23437)'),
@@ -4286,10 +4286,10 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`,`delay`,`command`,`datalong`,
 (1777202,0,32,1,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Pause Waypoints',0,0,0,0),
 (1777202,0,15,12980,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Cast Simple Teleport',0,0,0,0),
 (1777202,0,1,16,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - OneShotKneel',0,0,0,0),
-(1777202,2,35,8,150,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Throw AI Event 8',0,0,0,0),
-(1777202,3,15,16807,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Cast Mass Teleport',0,0,0,0),
-(1777202,3,0,0,0,0,2000003295,0,0,0,0,0,0,'Lady Jaina Proudmoore - %s begins channelling a massive teleport spell.',0,0,0,0),
-(1777202,24,35,6,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Throw AI Event 6 on Self',0,0,0,0);
+(1777202,2000,35,8,150,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Throw AI Event 8',0,0,0,0),
+(1777202,3000,15,16807,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Cast Mass Teleport',0,0,0,0),
+(1777202,3000,0,0,0,0,2000003295,0,0,0,0,0,0,'Lady Jaina Proudmoore - %s begins channelling a massive teleport spell.',0,0,0,0),
+(1777202,24000,35,6,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Throw AI Event 6 on Self',0,0,0,0);
 INSERT INTO creature_linking (guid, master_guid, flag) VALUES
 (@CHGUID+10,@CHGUID+7,3), (@CHGUID+11,@CHGUID+7,3), (@CHGUID+12,@CHGUID+7,3), (@CHGUID+26,@CHGUID+7,3),
 (@CHGUID+5,@CHGUID+1,1), (@CHGUID+6,@CHGUID+1,1), (@CHGUID1+41,@CHGUID+5,3), (@CHGUID1+42,@CHGUID+6,3),
@@ -4786,19 +4786,19 @@ INSERT INTO `dbscript_string` (`entry`, `content_default`, `content_loc1`, `cont
 (2000000241, 'Go swiftly, $N. My fate is in your hands.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL);
 DELETE FROM `dbscripts_on_quest_start` WHERE `id` = 790;
 INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(790, 1, 0, 0, 0, 0, 0, 0, 0, 2000000241, 0, 0, 0, 0, 0, 0, 0, '');
+(790, 1000, 0, 0, 0, 0, 0, 0, 0, 2000000241, 0, 0, 0, 0, 0, 0, 0, '');
 UPDATE `quest_template` SET `StartScript` = '5821' WHERE `entry` =5821;
 DELETE FROM `dbscripts_on_quest_start` WHERE `id` = 5821;
 INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (5821, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork - run off'),
-(5821, 1, 25, 0, 0, 0, 11626, 100, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger - run off'),
-(5821, 2, 25, 0, 0, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - run off'),
-(5821, 3, 25, 0, 0, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - run off'),
-(5821, 1, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remove quest and Gossip Flag'),
-(5821, 4, 22, 113, 59, 0, 11626, 60, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger - faction update'),
-(5821, 5, 22, 113, 59, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - faction update'),
-(5821, 6, 22, 113, 59, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - faction update'),
-(5821, 6, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'unpause WP movement');
+(5821, 1000, 25, 0, 0, 0, 11626, 100, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger - run off'),
+(5821, 2000, 25, 0, 0, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - run off'),
+(5821, 3000, 25, 0, 0, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - run off'),
+(5821, 1000, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remove quest and Gossip Flag'),
+(5821, 4000, 22, 113, 59, 0, 11626, 60, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger - faction update'),
+(5821, 5000, 22, 113, 59, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - faction update'),
+(5821, 6000, 22, 113, 59, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - faction update'),
+(5821, 6000, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'unpause WP movement');
 UPDATE `quest_template` SET `StartScript` = '5943' WHERE `entry` =5943;
 DELETE FROM `dbscripts_on_quest_start` WHERE `id` = 5943;
 INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
@@ -4806,15 +4806,15 @@ INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `d
 (5943, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger - run off'),
 (5943, 0, 25, 0, 0, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - run off'),
 (5943, 0, 25, 0, 0, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - run off'),
-(5943, 1, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remove quest and Gossip Flag'),
+(5943, 1000, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remove quest and Gossip Flag'),
 (5943, 0, 22, 113, 59, 0, 11625, 60, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork - faction update'),
 (5943, 0, 22, 113, 59, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - faction update'),
 (5943, 0, 22, 113, 59, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - faction update'),
-(5943, 2, 32, 0, 0, 0, 11625, 40, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork - unpause WP movement');
+(5943, 2000, 32, 0, 0, 0, 11625, 40, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork - unpause WP movement');
 UPDATE `quest_template` SET `StartScript` = '9991' WHERE `entry` =9991;
 DELETE FROM `dbscripts_on_quest_start` WHERE `id` = 9991;
 INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(9991, 2, 30, 532, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'taxi patch');
+(9991, 2000, 30, 532, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'taxi patch');
 
 UPDATE `quest_template` SET `SpecialFlags` = `SpecialFlags`|2 WHERE `entry` in (9611,9713,9926);
 
@@ -4900,28 +4900,28 @@ UPDATE creature_template SET UnitFlags=2304 WHERE entry = 17578;
 DELETE FROM dbscripts_on_event WHERE id = 16889;
 INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (16889,0,31,27939,100,0,0,0,0x08,0,0,0,0,0,0,0,0,'search for buddy - terminate if alive'),
-(16889,1,10,27939,300000,0,0,0,0x08,1,0,0,0,2839.5,7150.95,-0.419952,5.95703,'summon ship');
+(16889,1000,10,27939,300000,0,0,0,0x08,1,0,0,0,2839.5,7150.95,-0.419952,5.95703,'summon ship');
 UPDATE creature_template SET MovementType = 0 WHERE entry IN (32577,32578,32579,32580,32576);
 DELETE FROM dbscripts_on_creature_movement WHERE id IN (2793902);
 INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (2793902,0,0,0,0,32576,100,7,2000002661,2000002662,2000002663,0,0,0,0,0,'captain yell'),
-(2793902,3,0,0,0,32577,100,7,2000002664,0,0,0,0,0,0,0,'crew yell'),
-(2793902,5,14,46598,0,32577,100,0x01 | 0x08,0,0,0,0,0,0,0,0,'unboard first crewman'),
-(2793902,6,20,2,0,32577,100,7,0,0,0,0,0,0,0,0,'buddy - movement chenged to 2:wps');
+(2793902,3000,0,0,0,32577,100,7,2000002664,0,0,0,0,0,0,0,'crew yell'),
+(2793902,5000,14,46598,0,32577,100,0x01 | 0x08,0,0,0,0,0,0,0,0,'unboard first crewman'),
+(2793902,6000,20,2,0,32577,100,7,0,0,0,0,0,0,0,0,'buddy - movement chenged to 2:wps');
 DELETE FROM dbscripts_on_relay WHERE id BETWEEN 20014 AND 20017;
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(20014,2,0,0,0,32578,100,7,2000002664,0,0,0,0,0,0,0,'crew yell'),
-(20014,3,14,46598,0,32578,100,0x01 | 0x08,0,0,0,0,0,0,0,0,'unboard next crewman'),
-(20014,4,20,2,0,32578,100,7,0,0,0,0,0,0,0,0,'buddy - movement chenged to 2:wps'),
-(20015,2,0,0,0,32579,100,7,2000002664,0,0,0,0,0,0,0,'crew yell'),
-(20015,3,14,46598,0,32579,100,0x01 | 0x08,0,0,0,0,0,0,0,0,'unboard next crewman'),
-(20015,4,20,2,0,32579,100,7,0,0,0,0,0,0,0,0,'buddy - movement chenged to 2:wps'),
-(20016,2,0,0,0,32580,100,7,2000002664,0,0,0,0,0,0,0,'crew yell'),
-(20016,3,14,46598,0,32580,100,0x01 | 0x08,0,0,0,0,0,0,0,0,'unboard next crewman'),
-(20016,4,20,2,0,32580,100,7,0,0,0,0,0,0,0,0,'buddy - movement chenged to 2:wps'),
-(20017,2,0,0,0,32576,100,7,2000002660,0,0,0,0,0,0,0,'boss yell'),
-(20017,3,14,46598,0,32576,100,0x01 | 0x08,0,0,0,0,0,0,0,0,'unboard boss'),
-(20017,4,20,2,0,32576,100,7,0,0,0,0,0,0,0,0,'buddy - movement chenged to 2:wps');
+(20014,2000,0,0,0,32578,100,7,2000002664,0,0,0,0,0,0,0,'crew yell'),
+(20014,3000,14,46598,0,32578,100,0x01 | 0x08,0,0,0,0,0,0,0,0,'unboard next crewman'),
+(20014,4000,20,2,0,32578,100,7,0,0,0,0,0,0,0,0,'buddy - movement chenged to 2:wps'),
+(20015,2000,0,0,0,32579,100,7,2000002664,0,0,0,0,0,0,0,'crew yell'),
+(20015,3000,14,46598,0,32579,100,0x01 | 0x08,0,0,0,0,0,0,0,0,'unboard next crewman'),
+(20015,4000,20,2,0,32579,100,7,0,0,0,0,0,0,0,0,'buddy - movement chenged to 2:wps'),
+(20016,2000,0,0,0,32580,100,7,2000002664,0,0,0,0,0,0,0,'crew yell'),
+(20016,3000,14,46598,0,32580,100,0x01 | 0x08,0,0,0,0,0,0,0,0,'unboard next crewman'),
+(20016,4000,20,2,0,32580,100,7,0,0,0,0,0,0,0,0,'buddy - movement chenged to 2:wps'),
+(20017,2000,0,0,0,32576,100,7,2000002660,0,0,0,0,0,0,0,'boss yell'),
+(20017,3000,14,46598,0,32576,100,0x01 | 0x08,0,0,0,0,0,0,0,0,'unboard boss'),
+(20017,4000,20,2,0,32576,100,7,0,0,0,0,0,0,0,0,'buddy - movement chenged to 2:wps');
 
 UPDATE creature_template SET UnitFlags=33587968 WHERE entry IN(23512);
 UPDATE creature_template SET UnitFlags=33587456 WHERE entry IN(23445);
@@ -5033,61 +5033,61 @@ INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalo
 (2576201,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2579.441,4824.478,1,0,'Summon Kvaldir Raider'),
 (2576201,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2579.441,4824.478,1,0,'Summon Kvaldir Raider'),
 (2576201,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2579.441,4824.478,1,0,'Summon Kvaldir Raider'),
-(2576201,1,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
+(2576201,1000,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
 (2576202,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2477.63,4746.241,1.036329,0,'Summon Kvaldir Raider'),
 (2576202,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2477.63,4746.241,1.036329,0,'Summon Kvaldir Raider'),
 (2576202,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2477.63,4746.241,1.036329,0,'Summon Kvaldir Raider'),
 (2576202,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2477.63,4746.241,1.036329,0,'Summon Kvaldir Raider'),
-(2576202,1,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
+(2576202,1000,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
 (2576203,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2571.87,4795.71,1,0,'Summon Kvaldir Raider'),
 (2576203,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2571.87,4795.71,1,0,'Summon Kvaldir Raider'),
 (2576203,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2571.87,4795.71,1,0,'Summon Kvaldir Raider'),
 (2576203,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2571.87,4795.71,1,0,'Summon Kvaldir Raider'),
-(2576203,1,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
+(2576203,1000,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
 (2576204,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2444.37,4661.88,1,0,'Summon Kvaldir Raider'),
 (2576204,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2444.37,4661.88,1,0,'Summon Kvaldir Raider'),
 (2576204,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2444.37,4661.88,1,0,'Summon Kvaldir Raider'),
 (2576204,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2444.37,4661.88,1,0,'Summon Kvaldir Raider'),
-(2576204,1,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
+(2576204,1000,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
 (2576205,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2516.464111,4530.333984,1,0,'Summon Kvaldir Raider'),
 (2576205,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2516.464111,4530.333984,1,0,'Summon Kvaldir Raider'),
 (2576205,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2516.464111,4530.333984,1,0,'Summon Kvaldir Raider'),
 (2576205,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2516.464111,4530.333984,1,0,'Summon Kvaldir Raider'),
-(2576205,1,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
+(2576205,1000,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
 (2576206,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2444.841,4663.237,1,0,'Summon Kvaldir Raider'),
 (2576206,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2444.841,4663.237,1,0,'Summon Kvaldir Raider'),
 (2576206,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2444.841,4663.237,1,0,'Summon Kvaldir Raider'),
 (2576206,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2444.841,4663.237,1,0,'Summon Kvaldir Raider'),
-(2576206,1,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
+(2576206,1000,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
 (2576207,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2597.12,4475.18,1,0,'Summon Kvaldir Raider'),
 (2576207,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2597.12,4475.18,1,0,'Summon Kvaldir Raider'),
 (2576207,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2597.12,4475.18,1,0,'Summon Kvaldir Raider'),
 (2576207,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2597.12,4475.18,1,0,'Summon Kvaldir Raider'),
 (2576207,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2597.12,4475.18,1,0,'Summon Kvaldir Raider'),
-(2576207,1,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
+(2576207,1000,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
 (2576208,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2455.478,4596.481,1,0,'Summon Kvaldir Raider'),
 (2576208,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2455.478,4596.481,1,0,'Summon Kvaldir Raider'),
 (2576208,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2455.478,4596.481,1,0,'Summon Kvaldir Raider'),
-(2576208,1,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
+(2576208,1000,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
 (2576209,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2514.985,4529.526,1,0,'Summon Kvaldir Raider'),
 (2576209,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2514.985,4529.526,1,0,'Summon Kvaldir Raider'),
 (2576209,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2514.985,4529.526,1,0,'Summon Kvaldir Raider'),
-(2576209,1,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
+(2576209,1000,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
 (2576210,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2680.115,4381.919,1,0,'Summon Kvaldir Raider'),
 (2576210,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2680.115,4381.919,1,0,'Summon Kvaldir Raider'),
 (2576210,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2680.115,4381.919,1,0,'Summon Kvaldir Raider'),
 (2576210,0,10,25760,600000,0,0,0,0x08,1,0,0,0,2680.115,4381.919,1,0,'Summon Kvaldir Raider'),
-(2576210,1,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
-(2576211,1,35,6,20,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT B'),
-(2576211,2,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle'),
-(2576212,1,35,8,20,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT C'),
-(2576212,2,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle'),
-(2576213,1,35,9,20,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT D'),
-(2576213,2,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle'),
-(2576214,1,35,10,20,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT E'),
-(2576214,2,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle'),
-(2576215,1,35,11,20,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT F'),
-(2576215,2,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle');
+(2576210,1000,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT A'),
+(2576211,1000,35,6,20,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT B'),
+(2576211,2000,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle'),
+(2576212,1000,35,8,20,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT C'),
+(2576212,2000,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle'),
+(2576213,1000,35,9,20,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT D'),
+(2576213,2000,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle'),
+(2576214,1000,35,10,20,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT E'),
+(2576214,2000,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle'),
+(2576215,1000,35,11,20,0,0,0,0,0,0,0,0,0,0,0,0,'Send EVENT F'),
+(2576215,2000,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle');
 DELETE FROM creature_movement_template WHERE entry = 25760;
 INSERT INTO creature_movement_template (entry, pathId, point, position_x, position_y, position_z, orientation, waittime, script_id) VALUES
 (25760,1,1,2832.41,4902.68,1.88269,0.824211,1000,0),
@@ -5116,59 +5116,59 @@ DELETE FROM dbscripts_on_creature_movement WHERE id IN (1555102,1555103,1555104,
 DELETE FROM dbscripts_on_creature_movement WHERE id IN (1568701,1568702,1568703,1568704,1568705,1568706,1641501,1641502,1642601,1642607,1642611,1646801,1647001,1640701,1555101);
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (1568701, 0, 31, 17007, 30, 0, 0, 0, 0, -25000, 0, 0, 0, 0, 0, 0, 0, 'Terminate Script If Lady Keira Berrybuck Is Not Found in Range'),
-(1568701, 1, 0, 0, 0, 0, 17007, 30, 3, 2000002123, 2000002124, 0, 0, 0, 0, 0, 0, 'Lady Keira Berrybuck Random Say'),
-(1568701, 6, 0, 0, 0, 0, 17007, 30, 1, 2000002125, 2000002126, 2000002127, 0, 0, 0, 0, 0, 'Moroes Random Say'),
+(1568701, 1000, 0, 0, 0, 0, 17007, 30, 3, 2000002123, 2000002124, 0, 0, 0, 0, 0, 0, 'Lady Keira Berrybuck Random Say'),
+(1568701, 6000, 0, 0, 0, 0, 17007, 30, 1, 2000002125, 2000002126, 2000002127, 0, 0, 0, 0, 0, 'Moroes Random Say'),
 (1568702, 0, 31, 19872, 30, 0, 0, 0, 0, -25000, 0, 0, 0, 0, 0, 0, 0, 'Terminate Script If Lady Catriona Von''Indi Is Not Found in Range'),
-(1568702, 1, 0, 0, 0, 0, 19872, 30, 3, 2000002123, 2000002124, 0, 0, 0, 0, 0, 0, 'Lady Catriona Von''Indi Random Say'),
-(1568702, 6, 0, 0, 0, 0, 19872, 30, 1, 2000002125, 2000002126, 2000002127, 0, 0, 0, 0, 0, 'Moroes Random Say'),
+(1568702, 1000, 0, 0, 0, 0, 19872, 30, 3, 2000002123, 2000002124, 0, 0, 0, 0, 0, 0, 'Lady Catriona Von''Indi Random Say'),
+(1568702, 6000, 0, 0, 0, 0, 19872, 30, 1, 2000002125, 2000002126, 2000002127, 0, 0, 0, 0, 0, 'Moroes Random Say'),
 (1568703, 0, 31, 19873, 30, 0, 0, 0, 0, -25000, 0, 0, 0, 0, 0, 0, 0, 'Terminate Script If Lord Crispin Ference Is Not Found in Range'),
-(1568703, 1, 0, 0, 0, 0, 19873, 30, 3, 2000002123, 2000002124, 0, 0, 0, 0, 0, 0, 'Lord Crispin Ference Random Say'),
-(1568703, 6, 0, 0, 0, 0, 19873, 30, 1, 2000002125, 2000002126, 2000002127, 0, 0, 0, 0, 0, 'Moroes Random Say'),
+(1568703, 1000, 0, 0, 0, 0, 19873, 30, 3, 2000002123, 2000002124, 0, 0, 0, 0, 0, 0, 'Lord Crispin Ference Random Say'),
+(1568703, 6000, 0, 0, 0, 0, 19873, 30, 1, 2000002125, 2000002126, 2000002127, 0, 0, 0, 0, 0, 'Moroes Random Say'),
 (1568704, 0, 31, 19874, 30, 0, 0, 0, 0, -25000, 0, 0, 0, 0, 0, 0, 0, 'Terminate Script If Baron Rafe Dreuger Is Not Found in Range'),
-(1568704, 1, 0, 0, 0, 0, 19874, 30, 3, 2000002123, 2000002124, 0, 0, 0, 0, 0, 0, 'Baron Rafe Dreuger Random Say'),
-(1568704, 6, 0, 0, 0, 0, 19874, 30, 1, 2000002125, 2000002126, 2000002127, 0, 0, 0, 0, 0, 'Moroes Random Say'),
+(1568704, 1000, 0, 0, 0, 0, 19874, 30, 3, 2000002123, 2000002124, 0, 0, 0, 0, 0, 0, 'Baron Rafe Dreuger Random Say'),
+(1568704, 6000, 0, 0, 0, 0, 19874, 30, 1, 2000002125, 2000002126, 2000002127, 0, 0, 0, 0, 0, 'Moroes Random Say'),
 (1568705, 0, 31, 19875, 30, 0, 0, 0, 0, -25000, 0, 0, 0, 0, 0, 0, 0, 'Terminate Script If Baroness Dorothea Millstipe Is Not Found in Range'),
-(1568705, 1, 0, 0, 0, 0, 19875, 30, 3, 2000002123, 2000002124, 0, 0, 0, 0, 0, 0, 'Baroness Dorothea Millstipe Random Say'),
-(1568705, 6, 0, 0, 0, 0, 19875, 30, 1, 2000002125, 2000002126, 2000002127, 0, 0, 0, 0, 0, 'Moroes Random Say'),
+(1568705, 1000, 0, 0, 0, 0, 19875, 30, 3, 2000002123, 2000002124, 0, 0, 0, 0, 0, 0, 'Baroness Dorothea Millstipe Random Say'),
+(1568705, 6000, 0, 0, 0, 0, 19875, 30, 1, 2000002125, 2000002126, 2000002127, 0, 0, 0, 0, 0, 'Moroes Random Say'),
 (1568706, 0, 31, 19876, 30, 0, 0, 0, 0, -25000, 0, 0, 0, 0, 0, 0, 0, 'Terminate Script If Lord Robin Daris Is Not Found in Range'),
-(1568706, 1, 0, 0, 0, 0, 19876, 30, 3, 2000002123, 2000002124, 0, 0, 0, 0, 0, 0, 'Lord Robin Daris Random Say'),
-(1568706, 6, 0, 0, 0, 0, 19876, 30, 1, 2000002125, 2000002126, 2000002127, 0, 0, 0, 0, 0, 'Moroes Random Say'),
+(1568706, 1000, 0, 0, 0, 0, 19876, 30, 3, 2000002123, 2000002124, 0, 0, 0, 0, 0, 0, 'Lord Robin Daris Random Say'),
+(1568706, 6000, 0, 0, 0, 0, 19876, 30, 1, 2000002125, 2000002126, 2000002127, 0, 0, 0, 0, 0, 'Moroes Random Say'),
 (1641501, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Skeletal Waiter - EMOTE_ONESHOT_TALK'),
-(1641502, 2, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Skeletal Waiter - EMOTE_STATE_USESTANDING'),
-(1641502, 6, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Skeletal Waiter - EMOTE_ONESHOT_NONE'),
+(1641502, 2000, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Skeletal Waiter - EMOTE_STATE_USESTANDING'),
+(1641502, 6000, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Skeletal Waiter - EMOTE_ONESHOT_NONE'),
 (1642601, 0, 31, 16424, 50, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Terminate Script If Spectral Sentry Found in Range'),
-(1642601, 1, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Set Movement To Idle'),
+(1642601, 1000, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Set Movement To Idle'),
 (1642607, 0, 31, 16424, 6, 0, 0, 0, 0, -15000, 0, 0, 0, 0, 0, 0, 0, 'Terminate Script If No Spectral Sentry Found in Range'),
-(1642607, 1, 0, 0, 0, 0, 0, 0, 0, 2000002132, 0, 0, 0, 0, 0, 0, 0, 'Bennett Say'),
-(1642607, 1, 32, 0, 0, 0, 16424, 6, 7, 1, 0, 0, 0, 0, 0, 0, 0, 'Spectral Sentry - Pause Waypoints'),
-(1642607, 1, 32, 0, 0, 0, 16425, 6, 7, 1, 0, 0, 0, 0, 0, 0, 0, 'Phantom Guardsman - Pause Waypoints'),
-(1642607, 3, 3, 0, 0, 0, 16424, 6, 3, 0, 0, 0, 0, 0, 0, 0, 2.21167, 'Spectral Sentry - Face Bennett'),
-(1642607, 3, 3, 0, 0, 0, 16425, 6, 3, 0, 0, 0, 0, 0, 0, 0, 2.21167, 'Phantom Guardsman - Face Bennett'),
-(1642607, 4, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 'Bennett Emote'),
-(1642607, 8, 0, 0, 0, 0, 16424, 6, 3, 2000002133, 0, 0, 0, 0, 0, 0, 0, 'Spectral Sentry Say'),
-(1642607, 8, 0, 0, 0, 0, 16425, 6, 3, 2000002133, 0, 0, 0, 0, 0, 0, 0, 'Phantom Guardsman Say'),
-(1642607, 10, 32, 0, 0, 0, 16425, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Phantom Guardsman - Resume Waypoints'),
-(1642607, 10, 32, 0, 0, 0, 16424, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Spectral Sentry - Resume Waypoints'),
+(1642607, 1000, 0, 0, 0, 0, 0, 0, 0, 2000002132, 0, 0, 0, 0, 0, 0, 0, 'Bennett Say'),
+(1642607, 1000, 32, 0, 0, 0, 16424, 6, 7, 1, 0, 0, 0, 0, 0, 0, 0, 'Spectral Sentry - Pause Waypoints'),
+(1642607, 1000, 32, 0, 0, 0, 16425, 6, 7, 1, 0, 0, 0, 0, 0, 0, 0, 'Phantom Guardsman - Pause Waypoints'),
+(1642607, 3000, 3, 0, 0, 0, 16424, 6, 3, 0, 0, 0, 0, 0, 0, 0, 2.21167, 'Spectral Sentry - Face Bennett'),
+(1642607, 3000, 3, 0, 0, 0, 16425, 6, 3, 0, 0, 0, 0, 0, 0, 0, 2.21167, 'Phantom Guardsman - Face Bennett'),
+(1642607, 4000, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 'Bennett Emote'),
+(1642607, 8000, 0, 0, 0, 0, 16424, 6, 3, 2000002133, 0, 0, 0, 0, 0, 0, 0, 'Spectral Sentry Say'),
+(1642607, 8000, 0, 0, 0, 0, 16425, 6, 3, 2000002133, 0, 0, 0, 0, 0, 0, 0, 'Phantom Guardsman Say'),
+(1642607, 10000, 32, 0, 0, 0, 16425, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Phantom Guardsman - Resume Waypoints'),
+(1642607, 10000, 32, 0, 0, 0, 16424, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Spectral Sentry - Resume Waypoints'),
 (1642611, 0, 31, 16424, 6, 0, 0, 0, 0, -15000, 0, 0, 0, 0, 0, 0, 0, 'Terminate Script If No Spectral Sentry Found in Range'),
-(1642611, 1, 0, 0, 0, 0, 0, 0, 0, 2000002132, 0, 0, 0, 0, 0, 0, 0, 'Bennett Say'),
-(1642611, 1, 32, 0, 0, 0, 16424, 6, 7, 1, 0, 0, 0, 0, 0, 0, 0, 'Spectral Sentry - Pause Waypoints'),
-(1642611, 1, 32, 0, 0, 0, 16425, 6, 7, 1, 0, 0, 0, 0, 0, 0, 0, 'Phantom Guardsman - Pause Waypoints'),
-(1642611, 3, 3, 0, 0, 0, 16424, 6, 3, 0, 0, 0, 0, 0, 0, 0, 1.28804, 'Spectral Sentry - Face Bennett'),
-(1642611, 3, 3, 0, 0, 0, 16425, 6, 3, 0, 0, 0, 0, 0, 0, 0, 1.28804, 'Phantom Guardsman - Face Bennett'),
-(1642611, 4, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 'Bennett Emote'),
-(1642611, 8, 0, 0, 0, 0, 16424, 6, 3, 2000002133, 0, 0, 0, 0, 0, 0, 0, 'Spectral Sentry Say'),
-(1642611, 8, 0, 0, 0, 0, 16425, 6, 3, 2000002133, 0, 0, 0, 0, 0, 0, 0, 'Phantom Guardsman Say'),
-(1642611, 10, 32, 0, 0, 0, 16424, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Spectral Sentry - Resume Waypoints'),
-(1642611, 10, 32, 0, 0, 0, 16425, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Phantom Guardsman - Resume Waypoints'),
-(1646801, 1, 1, 1, 0, 0, 0, 0, 0, 6, 273, 274, 11, 0, 0, 0, 0, 'Spectral Patron - EMOTE_ONESHOT_TALK'),
-(1647001, 1, 1, 274, 0, 0, 0, 0, 0, 1, 11, 6, 273, 0, 0, 0, 0, 'Ghostly Philanthropist - EMOTE_ONESHOT_NO'),
+(1642611, 1000, 0, 0, 0, 0, 0, 0, 0, 2000002132, 0, 0, 0, 0, 0, 0, 0, 'Bennett Say'),
+(1642611, 1000, 32, 0, 0, 0, 16424, 6, 7, 1, 0, 0, 0, 0, 0, 0, 0, 'Spectral Sentry - Pause Waypoints'),
+(1642611, 1000, 32, 0, 0, 0, 16425, 6, 7, 1, 0, 0, 0, 0, 0, 0, 0, 'Phantom Guardsman - Pause Waypoints'),
+(1642611, 3000, 3, 0, 0, 0, 16424, 6, 3, 0, 0, 0, 0, 0, 0, 0, 1.28804, 'Spectral Sentry - Face Bennett'),
+(1642611, 3000, 3, 0, 0, 0, 16425, 6, 3, 0, 0, 0, 0, 0, 0, 0, 1.28804, 'Phantom Guardsman - Face Bennett'),
+(1642611, 4000, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 'Bennett Emote'),
+(1642611, 8000, 0, 0, 0, 0, 16424, 6, 3, 2000002133, 0, 0, 0, 0, 0, 0, 0, 'Spectral Sentry Say'),
+(1642611, 8000, 0, 0, 0, 0, 16425, 6, 3, 2000002133, 0, 0, 0, 0, 0, 0, 0, 'Phantom Guardsman Say'),
+(1642611, 10000, 32, 0, 0, 0, 16424, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Spectral Sentry - Resume Waypoints'),
+(1642611, 10000, 32, 0, 0, 0, 16425, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Phantom Guardsman - Resume Waypoints'),
+(1646801, 1000, 1, 1, 0, 0, 0, 0, 0, 6, 273, 274, 11, 0, 0, 0, 0, 'Spectral Patron - EMOTE_ONESHOT_TALK'),
+(1647001, 1000, 1, 274, 0, 0, 0, 0, 0, 1, 11, 6, 273, 0, 0, 0, 0, 'Ghostly Philanthropist - EMOTE_ONESHOT_NO'),
 (1640701, 0, 0, 0, 0, 0, 0, 0, 0, 2000002120, 2000002121, 2000002122, 0, 0, 0, 0, 0, 'Spectral Servant - Random Say'),
-(1640701, 5, 31, 16159, 55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Spectral Servant - Search for 16159'),
-(1640701, 6, 0, 0, 0, 0, 16159, 60, 3, 2000002130, 2000002131, 0, 0, 0, 0, 0, 0, 'Force Calliard - Random Say'),
+(1640701, 5000, 31, 16159, 55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Spectral Servant - Search for 16159'),
+(1640701, 6000, 0, 0, 0, 0, 16159, 60, 3, 2000002130, 2000002131, 0, 0, 0, 0, 0, 0, 'Force Calliard - Random Say'),
 (1555101, 0, 0, 0, 0, 0, 0, 0, 0, 2000002128, 2000002129, 2000003297, 0, 0, 0, 0, 0, 'Spectral Stable Hand - Random Say'),
 (1555101, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Spectral Stable Hand - STATE_USESTANDING'),
-(1555101, 5, 31, 16159, 55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Spectral Stable Hand - Search for 16159'),
-(1555101, 6, 0, 0, 0, 0, 16159, 60, 3, 2000002130, 2000002131, 0, 0, 0, 0, 0, 0, 'Force Calliard - Random Say');
+(1555101, 5000, 31, 16159, 55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Spectral Stable Hand - Search for 16159'),
+(1555101, 6000, 0, 0, 0, 0, 16159, 60, 3, 2000002130, 2000002131, 0, 0, 0, 0, 0, 0, 'Force Calliard - Random Say');
 DELETE FROM creature_movement_template WHERE entry IN (15687,15689,15690,15691,16159,16426,17161,18412);
 INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 (15687, 0, 1, -10982.7, -1877.93, 81.8119, 4.62512, 30000, 1568701),
@@ -5664,19 +5664,19 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 ('2454702','0','28','3','0','0','0','0','0','0','0','0','0','0','0','0','0','STATE_SLEEP'),
 ('2454702','0','4','59','256','0','0','0','0','0','0','0','0','0','0','0','0','unitflag added'),
 ('2454702','0','20','0','0','0','0','0','0','0','0','0','0','0','0','0','0','movement chenged to 0:idle'),
-('2454702','1','21','0','0','0','0','0','0','0','0','0','0','0','0','0','0','unactive');
+('2454702','1000','21','0','0','0','0','0','0','0','0','0','0','0','0','0','0','unactive');
 DELETE FROM dbscripts_on_relay WHERE id IN (20013,20158);
 INSERT INTO`dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) values
 ('20013','0','21','1','0','0','0','0','4','0','0','0','0','0','0','0','0','active'),
 ('20013','0','25','1','0','0','0','0','4','0','0','0','0','0','0','0','0',''),
 ('20013','0','20','0','0','0','0','0','4','0','0','0','0','0','0','0','0',''),
-('20013','1','3','0','700','0','0','0','0','0','0','0','0','-32.7382','-3434.87','6.05618','100','force to move'),
-('20013','2','3','0','700','0','0','0','0','0','0','0','0','-36.0278','-3425.38','4.89694','1.78459','force to move'),
-('20013','4','20','2','0','0','24547','100','7','0','0','0','0','0','0','0','0','buddy - movement chenged to 2:waypoints'),
-('20013','5','3','0','0','0','0','0','8','0','0','0','0','-39.8345','-3415.08','-15.221','100','force to move'),
-('20013','7','0','0','0','0','0','0','0','2000002631','0','0','0','0','0','0','0',''),
-('20013','8','0','0','0','0','24547','100','7','2000002632','0','0','0','0','0','0','0',''),
-('20013','9','15','5','0','0','0','0','4','0','0','0','0','0','0','0','0',''),
+('20013','1000','3','0','700','0','0','0','0','0','0','0','0','-32.7382','-3434.87','6.05618','100','force to move'),
+('20013','2000','3','0','700','0','0','0','0','0','0','0','0','-36.0278','-3425.38','4.89694','1.78459','force to move'),
+('20013','4000','20','2','0','0','24547','100','7','0','0','0','0','0','0','0','0','buddy - movement chenged to 2:waypoints'),
+('20013','5000','3','0','0','0','0','0','8','0','0','0','0','-39.8345','-3415.08','-15.221','100','force to move'),
+('20013','7000','0','0','0','0','0','0','0','2000002631','0','0','0','0','0','0','0',''),
+('20013','8000','0','0','0','0','24547','100','7','2000002632','0','0','0','0','0','0','0',''),
+('20013','9000','15','5','0','0','0','0','4','0','0','0','0','0','0','0','0',''),
 ('20158','0','21','0','0','0','0','0','4','0','0','0','0','0','0','0','0','unactive');
 
 UPDATE creature SET spawndist = 7, MovementType = 1 WHERE id = 25316;
@@ -5705,16 +5705,16 @@ UPDATE quest_template SET CompleteScript=8891 WHERE entry=8891;
 DELETE FROM `dbscripts_on_quest_end` WHERE `id` IN(8891);
 INSERT INTO `dbscripts_on_quest_end` (`id`,`delay`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
 (8891,0,29,3,2,0,0,0,0,0,0,0,0,'Magister Duskwither - Remove NPCFlags 1|2',0,0,0,0),
-(8891,1,42,0,0,0,12751,0,0,0,0,0,0,'Magister Duskwither - Set Virtual Item Slot',0,0,0,0),
-(8891,2,3,0,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Set Facing',0,0,0,0.6108652),
-(8891,11,1,61,0,0,0,0,0,0,0,0,0,'Magister Duskwither - OneShotAttackThrown',0,0,0,0),
-(8891,11,42,0,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Set Virtual Item Slots',0,0,0,0),
-(8891,11,9,0,15,0,0,0,0,0,181012,40,71,'Magister Duskwither - Respawn Magister Duskwither''s Journal',0,0,0,0),
-(8891,17,15,26660,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Cast Duskwither''s Fireball',0,0,0,0),
-(8891,23,42,1,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Reset Virtual Item Slots',0,0,0,0),
-(8891,23,0,0,0,0,2000003298,0,0,0,0,0,0,'Magister Duskwither - Good riddance... now none shall be able to repeat my mistakes!',0,0,0,0),
-(8891,29,36,1,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Reset Facing',0,0,0,0.6108652),
-(8891,30,29,3,1,0,0,0,0,0,0,0,0,'Magister Duskwither - Readd NPCFlags 1|2',0,0,0,0);
+(8891,1000,42,0,0,0,12751,0,0,0,0,0,0,'Magister Duskwither - Set Virtual Item Slot',0,0,0,0),
+(8891,2000,3,0,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Set Facing',0,0,0,0.6108652),
+(8891,11000,1,61,0,0,0,0,0,0,0,0,0,'Magister Duskwither - OneShotAttackThrown',0,0,0,0),
+(8891,11000,42,0,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Set Virtual Item Slots',0,0,0,0),
+(8891,11000,9,0,15,0,0,0,0,0,181012,40,71,'Magister Duskwither - Respawn Magister Duskwither''s Journal',0,0,0,0),
+(8891,17000,15,26660,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Cast Duskwither''s Fireball',0,0,0,0),
+(8891,23000,42,1,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Reset Virtual Item Slots',0,0,0,0),
+(8891,23000,0,0,0,0,2000003298,0,0,0,0,0,0,'Magister Duskwither - Good riddance... now none shall be able to repeat my mistakes!',0,0,0,0),
+(8891,29000,36,1,0,0,0,0,0,0,0,0,0,'Magister Duskwither - Reset Facing',0,0,0,0.6108652),
+(8891,30000,29,3,1,0,0,0,0,0,0,0,0,'Magister Duskwither - Readd NPCFlags 1|2',0,0,0,0);
 
 DELETE FROM creature WHERE id IN (14890,14887,14889,14888);
 DELETE FROM creature_addon WHERE guid IN (364, 14575, 28982, 41509);
@@ -5873,12 +5873,12 @@ DELETE FROM `pool_template` WHERE `entry` IN (15417,15418,15419,15420);
 
 DELETE FROM dbscripts_on_creature_movement WHERE id BETWEEN 1126001 AND 1126005;
 INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(1126001, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1126002, 1, 1, 234, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1126003, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1126003, 1, 23, 89, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1126004, 1, 23, 89, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1126005, 1, 23, 308, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, '');
+(1126001, 1000, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1126002, 1000, 1, 234, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1126003, 1000, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1126003, 1000, 23, 89, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1126004, 1000, 23, 89, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1126005, 1000, 23, 308, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, '');
 UPDATE creature_movement SET script_id=1126003 WHERE id=6028 AND point=1;
 UPDATE creature_movement SET script_id=1126005 WHERE id=6028 AND point=4;
 UPDATE creature_movement SET script_id=1126002 WHERE id=6028 AND point=7;
@@ -6172,17 +6172,17 @@ DELETE FROM `dbscripts_on_quest_start` WHERE `id` IN (1713);
 INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (1713, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Resume Waypoints'),
 (1713, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Set Run On'),
-(1713, 1, 0, 0, 0, 0, 0, 0, 0, 2000000062, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Follow, $N. I will soon begin the summoning...'),
-(1713, 1, 29, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Remove NPCFlags');
+(1713, 1000, 0, 0, 0, 0, 0, 0, 0, 2000000062, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Follow, $N. I will soon begin the summoning...'),
+(1713, 1000, 29, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Remove NPCFlags');
 DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN (617601,617602,617608);
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (617601, 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Pause Waypoints'),
-(617601, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.39626, 'Bath\'rah the Windwatcher - Set orientation'),
-(617601, 1, 29, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Add NPCFlags'),
-(617602, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.85259, 'Bath\'rah the Windwatcher - Set orientation'),
-(617602, 2, 0, 0, 0, 0, 0, 0, 0, 2000000071, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - %s begins a spell of summoning...'),
-(617602, 2, 15, 8606, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Cast Summon Cyclonian'),
-(617602, 10, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Set Run On');
+(617601, 1000, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.39626, 'Bath\'rah the Windwatcher - Set orientation'),
+(617601, 1000, 29, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Add NPCFlags'),
+(617602, 1000, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.85259, 'Bath\'rah the Windwatcher - Set orientation'),
+(617602, 2000, 0, 0, 0, 0, 0, 0, 0, 2000000071, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - %s begins a spell of summoning...'),
+(617602, 2000, 15, 8606, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Cast Summon Cyclonian'),
+(617602, 10000, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bath\'rah the Windwatcher - Set Run On');
 DELETE FROM `creature_movement_template` WHERE `entry` IN (6176);
 INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
 (6176, 0, 1, 250.84, -1470.58, 55.4491, 100, 1000, 617601, NULL),
@@ -6208,7 +6208,7 @@ UPDATE `creature_template` SET `ModelId2` = 11686 WHERE `entry` = 20479;
 
 UPDATE `creature_template` SET `InhabitType` = 4 WHERE `entry` = 21075;
 
-UPDATE dbscripts_on_creature_movement SET search_radius = 15 WHERE id IN (1658002) AND delay IN (23);
+UPDATE dbscripts_on_creature_movement SET search_radius = 15 WHERE id IN (1658002) AND delay IN (23000);
 UPDATE creature_template SET EquipmentTemplateId = 0 WHERE Entry = 32742;
 DELETE FROM dbscripts_on_spell WHERE id = 51718;
 INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
@@ -6223,7 +6223,7 @@ INSERT INTO creature_movement (id, point, position_x, position_y, position_z, wa
 (108319,2,4657.31,-4859.34,40.7129,1000,3,4.92183);
 DELETE FROM dbscripts_on_quest_end WHERE id = 12121;
 INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(12121,1,17,36834,1,0,0,0,0x08,0,0,0,0,0,0,0,0,'remove source item');
+(12121,1000,17,36834,1,0,0,0,0x08,0,0,0,0,0,0,0,0,'remove source item');
 UPDATE quest_template SET  CompleteScript = 12121 WHERE entry = 12121;
 UPDATE gameobject_template SET data2 = 0 WHERE entry = 188499;
 UPDATE gameobject SET spawntimesecsmin = 30, spawntimesecsmax = 30 WHERE id = 188499;
@@ -6231,8 +6231,8 @@ UPDATE `pool_template` SET `max_limit` = '10', `description` = 'Grizzly Hills - 
 UPDATE `pool_gameobject_template` SET `description` = 'Grizzly Hills - Drakkari Canopic Jar' WHERE `id` =188499;
 DELETE FROM dbscripts_on_spell WHERE id IN (47681);
 INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(47681,1,0,0,0,0,0,0,2,2000003299,2000003300,2000003301,2000003302,0,0,0,0,'text'),
-(47681,1,26,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'attack start');
+(47681,1000,0,0,0,0,0,0,2,2000003299,2000003300,2000003301,2000003302,0,0,0,0,'text'),
+(47681,1000,26,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'attack start');
 DELETE FROM dbscript_string WHERE entry BETWEEN 2000003299 AND 2000003302;
 INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
 (2000003299,'You take my heart, now I take yours!', 0, 0, 0, 0, NULL),
@@ -6241,14 +6241,14 @@ INSERT INTO dbscript_string (entry, content_default, sound, type, language, emot
 (2000003302,'Come back here with me guts, $r!', 0, 0, 0, 0, NULL);
 DELETE FROM dbscripts_on_relay WHERE id IN (20159,20160);
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(20159,1,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: idle'),
-(20159,5,31,26591,50,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: search for buddy - 19446'),
-(20159,6,37,0,0,0,26591,51,1,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: move towards target'),
-(20159,7,0,0,0,0,0,0,0x04,2000003303,2000003304,2000003305,2000003306,0,0,0,0,'Part of Ancient Drakkari: text'),
-(20160,1,28,3,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: buddy - SLEEP_STAND'),
-(20160,5,40,0,0,0,188464,10,7,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: desp object'),
-(20160,6,15,47798,0,0,0,0,0x02,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: cast 47798'),
-(20160,7,18,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: desp');
+(20159,1000,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: idle'),
+(20159,5000,31,26591,50,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: search for buddy - 19446'),
+(20159,6000,37,0,0,0,26591,51,1,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: move towards target'),
+(20159,7000,0,0,0,0,0,0,0x04,2000003303,2000003304,2000003305,2000003306,0,0,0,0,'Part of Ancient Drakkari: text'),
+(20160,1000,28,3,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: buddy - SLEEP_STAND'),
+(20160,5000,40,0,0,0,188464,10,7,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: desp object'),
+(20160,6000,15,47798,0,0,0,0,0x02,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: cast 47798'),
+(20160,7000,18,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Ancient Drakkari: desp');
 DELETE FROM dbscript_string WHERE entry BETWEEN 2000003303 AND 2000003306;
 INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
 (2000003303,'Free at last, mon.', 0, 0, 0, 0, NULL),
@@ -6257,8 +6257,8 @@ INSERT INTO dbscript_string (entry, content_default, sound, type, language, emot
 (2000003306,'Finally, I can be restin\'...', 0, 0, 0, 0, NULL);
 DELETE FROM dbscripts_on_gossip WHERE id IN (1022000);
 INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(1022000,1,15,61613,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
-(1022000,5,14,61611,0,0,0,0,6,0,0,0,0,0,0,0,0,'');
+(1022000,1000,15,61613,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(1022000,5000,14,61611,0,0,0,0,6,0,0,0,0,0,0,0,0,'');
 UPDATE gameobject_template SET data2 = 0 WHERE entry = 188525;
 REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) values
 (51869,188464,571,1,1,4810.38,-4870.22,25.9595,2.40855,0,0,0.93358,0.35837,120,120,100,1),
@@ -6292,27 +6292,27 @@ INSERT INTO dbscript_random_templates (id, type, target_id, chance, comments) VA
 (20106,1,20165,0,'29277 - Random OOC Scripts');
 DELETE FROM dbscripts_on_relay WHERE id BETWEEN 20161 AND 20166;
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(20161,1,0,0,0,0,0,0,0,2000003309,0,0,0,0,0,0,0,''),
-(20161,5,0,0,0,0,0,0,0,2000003310,0,0,0,0,0,0,0,''),
-(20161,9,0,0,0,0,0,0,0,2000003311,0,0,0,0,0,0,0,''),
-(20161,15,0,0,0,0,0,0,0,2000003312,0,0,0,0,0,0,0,''),
-(20161,17,0,0,0,0,0,0,0,2000003313,0,0,0,0,0,0,0,''),
-(20162,1,0,0,0,0,0,0,0,2000003314,0,0,0,0,0,0,0,''),
-(20162,3,31,26886,50,0,0,0,0,0,0,0,0,0,0,0,0,'search for 26886'),
-(20162,4,0,0,0,0,26886,55,0,2000002419,0,0,0,0,0,0,0,''),
-(20162,5,31,26884,50,0,0,0,0,0,0,0,0,0,0,0,0,'search for 26884'),
-(20162,6,0,0,0,0,26886,55,0,2000002419,0,0,0,0,0,0,0,''),
-(20163,1,0,0,0,0,0,0,0,2000003315,0,0,0,0,0,0,0,''),
-(20163,5,0,0,0,0,0,0,0,2000003316,0,0,0,0,0,0,0,''),
-(20163,9,0,0,0,0,0,0,0,2000003317,0,0,0,0,0,0,0,''),
-(20163,10,0,0,0,0,0,0,0,2000002419,0,0,0,0,0,0,0,''),
-(20164,1,0,0,0,0,0,0,0,2000003318,0,0,0,0,0,0,0,''),
-(20164,5,0,0,0,0,0,0,0,2000003319,0,0,0,0,0,0,0,''),
-(20164,9,0,0,0,0,0,0,0,2000003320,0,0,0,0,0,0,0,''),
-(20164,10,0,0,0,0,0,0,0,2000002419,0,0,0,0,0,0,0,''),
-(20165,1,0,0,0,0,0,0,0,2000003321,0,0,0,0,0,0,0,''),
-(20165,2,0,0,0,0,0,0,0,2000002419,0,0,0,0,0,0,0,''),
-(20165,6,0,0,0,0,0,0,0,2000003322,0,0,0,0,0,0,0,'');
+(20161,1000,0,0,0,0,0,0,0,2000003309,0,0,0,0,0,0,0,''),
+(20161,5000,0,0,0,0,0,0,0,2000003310,0,0,0,0,0,0,0,''),
+(20161,9000,0,0,0,0,0,0,0,2000003311,0,0,0,0,0,0,0,''),
+(20161,15000,0,0,0,0,0,0,0,2000003312,0,0,0,0,0,0,0,''),
+(20161,17000,0,0,0,0,0,0,0,2000003313,0,0,0,0,0,0,0,''),
+(20162,1000,0,0,0,0,0,0,0,2000003314,0,0,0,0,0,0,0,''),
+(20162,3000,31,26886,50,0,0,0,0,0,0,0,0,0,0,0,0,'search for 26886'),
+(20162,4000,0,0,0,0,26886,55,0,2000002419,0,0,0,0,0,0,0,''),
+(20162,5000,31,26884,50,0,0,0,0,0,0,0,0,0,0,0,0,'search for 26884'),
+(20162,6000,0,0,0,0,26886,55,0,2000002419,0,0,0,0,0,0,0,''),
+(20163,1000,0,0,0,0,0,0,0,2000003315,0,0,0,0,0,0,0,''),
+(20163,5000,0,0,0,0,0,0,0,2000003316,0,0,0,0,0,0,0,''),
+(20163,9000,0,0,0,0,0,0,0,2000003317,0,0,0,0,0,0,0,''),
+(20163,10000,0,0,0,0,0,0,0,2000002419,0,0,0,0,0,0,0,''),
+(20164,1000,0,0,0,0,0,0,0,2000003318,0,0,0,0,0,0,0,''),
+(20164,5000,0,0,0,0,0,0,0,2000003319,0,0,0,0,0,0,0,''),
+(20164,9000,0,0,0,0,0,0,0,2000003320,0,0,0,0,0,0,0,''),
+(20164,10000,0,0,0,0,0,0,0,2000002419,0,0,0,0,0,0,0,''),
+(20165,1000,0,0,0,0,0,0,0,2000003321,0,0,0,0,0,0,0,''),
+(20165,2000,0,0,0,0,0,0,0,2000002419,0,0,0,0,0,0,0,''),
+(20165,6000,0,0,0,0,0,0,0,2000003322,0,0,0,0,0,0,0,'');
 DELETE FROM dbscript_string WHERE entry BETWEEN 2000003309 AND 2000003322;
 INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
 (2000003309,'Oh boy Jones and I have had some adventures...',0,0,0,0,NULL),
@@ -6331,33 +6331,33 @@ INSERT INTO dbscript_string (entry, content_default, sound, type, language, emot
 (2000003322,'He\'s not nuts, he\'s crazy!  Always going off looking for fortune and glory...',0,0,0,0,NULL);
 DELETE FROM dbscripts_on_creature_movement WHERE id = 2719901;
 INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(2719901,6,0,0,0,0,0,0,0,2000003307,0,0,0,0,0,0,0,'text'),
-(2719901,9,15,48060,0,0,27201,100,1,0,0,0,0,0,0,0,0,'cast on buddy'),
-(2719901,13,15,31951,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'self cast'),
-(2719901,16,1,34,0,0,0,0,0,0,0,0,0,0,0,0,0,'emote'),
-(2719901,17,10,26811,30000,1,0,0,0x08,1,0,0,0,4750.463,-4855.128,26.2912,3.223225,'summon'),
-(2719901,17,10,26811,30000,2,0,0,0x08,1,0,0,0,4745.12,-4860.948,26.47852,3.0143,'summon'),
-(2719901,17,10,26811,30000,3,0,0,0x08,1,0,0,0,4744.829,-4857.377,26.21797,3.138813,'summon'),
-(2719901,17,10,26811,30000,4,0,0,0x08,1,0,0,0,4747.837,-4855.803,26.29635,3.199038,'summon'),
-(2719901,17,10,26811,30000,5,0,0,0x08,1,0,0,0,4749.208,-4858.506,26.11398,3.083149,'summon'),
-(2719901,17,10,26811,30000,6,0,0,0x08,1,0,0,0,4743.229,-4859.637,26.3787,3.062698,'summon'),
-(2719901,17,10,26812,30000,1,0,0,0x08,1,0,0,0,4742.136,-4853.964,26.52132,3.232042,'summon'),
-(2719901,18,0,0,0,0,0,0,0,2000003308,0,0,0,0,0,0,0,'text'),
-(2719901,19,10,26811,30000,7,0,0,0x08,1,0,0,0,4739.357,-4859.631,26.47296,3.046688,'summon'),
-(2719901,19,10,26811,30000,8,0,0,0x08,1,0,0,0,4741.025,-4857.699,26.28104,3.126867,'summon'),
-(2719901,19,10,26812,30000,2,0,0,0x08,1,0,0,0,4741.983,-4859.361,26.38358,3.067841,'summon'),
-(2719901,19,10,26812,30000,3,0,0,0x08,1,0,0,0,4743.075,-4855.354,26.39851,3.248129,'summon'),
-(2719901,19,10,26812,30000,4,0,0,0x08,1,0,0,0,4750.957,-4859.446,26.23071,3.108402,'summon'),
-(2719901,22,15,31691,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'self cast'),
-(2719901,23,10,26812,30000,5,0,0,0x08,1,0,0,0,4748.298,-4854.623,26.39423,3.316829,'summon'),
-(2719901,23,10,26812,30000,6,0,0,0x08,1,0,0,0,4751.419,-4861.647,26.38838,3.026995,'summon'),
-(2719901,23,10,26812,30000,7,0,0,0x08,1,0,0,0,4739.595,-4853.759,26.6206,3.276289,'summon'),
-(2719901,23,10,26812,30000,8,0,0,0x08,1,0,0,0,4753.862,-4853.526,26.34044,3.273866,'summon'),
-(2719901,23,10,26811,30000,9,0,0,0x08,1,0,0,0,4749.309,-4858.304,26.17426,3.15747,'summon'),
-(2719901,24,28,7,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'STATE_DEAD '),
-(2719901,25,10,26812,30000,9,0,0,0x08,1,0,0,0,4754.053,-4856.113,26.13182,3.204622,'summon'),
-(2719901,25,10,26812,30000,10,0,0,0x08,1,0,0,0,4750.386,-4856.741,26.16952,3.1457,'summon'),
-(2719901,25,10,26811,30000,10,0,0,0x08,1,0,0,0,4751.07,-4853.443,26.40733,3.293092,'summon');
+(2719901,6000,0,0,0,0,0,0,0,2000003307,0,0,0,0,0,0,0,'text'),
+(2719901,9000,15,48060,0,0,27201,100,1,0,0,0,0,0,0,0,0,'cast on buddy'),
+(2719901,13000,15,31951,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'self cast'),
+(2719901,16000,1,34,0,0,0,0,0,0,0,0,0,0,0,0,0,'emote'),
+(2719901,17000,10,26811,30000,1,0,0,0x08,1,0,0,0,4750.463,-4855.128,26.2912,3.223225,'summon'),
+(2719901,17000,10,26811,30000,2,0,0,0x08,1,0,0,0,4745.12,-4860.948,26.47852,3.0143,'summon'),
+(2719901,17000,10,26811,30000,3,0,0,0x08,1,0,0,0,4744.829,-4857.377,26.21797,3.138813,'summon'),
+(2719901,17000,10,26811,30000,4,0,0,0x08,1,0,0,0,4747.837,-4855.803,26.29635,3.199038,'summon'),
+(2719901,17000,10,26811,30000,5,0,0,0x08,1,0,0,0,4749.208,-4858.506,26.11398,3.083149,'summon'),
+(2719901,17000,10,26811,30000,6,0,0,0x08,1,0,0,0,4743.229,-4859.637,26.3787,3.062698,'summon'),
+(2719901,17000,10,26812,30000,1,0,0,0x08,1,0,0,0,4742.136,-4853.964,26.52132,3.232042,'summon'),
+(2719901,18000,0,0,0,0,0,0,0,2000003308,0,0,0,0,0,0,0,'text'),
+(2719901,19000,10,26811,30000,7,0,0,0x08,1,0,0,0,4739.357,-4859.631,26.47296,3.046688,'summon'),
+(2719901,19000,10,26811,30000,8,0,0,0x08,1,0,0,0,4741.025,-4857.699,26.28104,3.126867,'summon'),
+(2719901,19000,10,26812,30000,2,0,0,0x08,1,0,0,0,4741.983,-4859.361,26.38358,3.067841,'summon'),
+(2719901,19000,10,26812,30000,3,0,0,0x08,1,0,0,0,4743.075,-4855.354,26.39851,3.248129,'summon'),
+(2719901,19000,10,26812,30000,4,0,0,0x08,1,0,0,0,4750.957,-4859.446,26.23071,3.108402,'summon'),
+(2719901,22000,15,31691,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'self cast'),
+(2719901,23000,10,26812,30000,5,0,0,0x08,1,0,0,0,4748.298,-4854.623,26.39423,3.316829,'summon'),
+(2719901,23000,10,26812,30000,6,0,0,0x08,1,0,0,0,4751.419,-4861.647,26.38838,3.026995,'summon'),
+(2719901,23000,10,26812,30000,7,0,0,0x08,1,0,0,0,4739.595,-4853.759,26.6206,3.276289,'summon'),
+(2719901,23000,10,26812,30000,8,0,0,0x08,1,0,0,0,4753.862,-4853.526,26.34044,3.273866,'summon'),
+(2719901,23000,10,26811,30000,9,0,0,0x08,1,0,0,0,4749.309,-4858.304,26.17426,3.15747,'summon'),
+(2719901,24000,28,7,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'STATE_DEAD '),
+(2719901,25000,10,26812,30000,9,0,0,0x08,1,0,0,0,4754.053,-4856.113,26.13182,3.204622,'summon'),
+(2719901,25000,10,26812,30000,10,0,0,0x08,1,0,0,0,4750.386,-4856.741,26.16952,3.1457,'summon'),
+(2719901,25000,10,26811,30000,10,0,0,0x08,1,0,0,0,4751.07,-4853.443,26.40733,3.293092,'summon');
 DELETE FROM dbscript_string WHERE entry BETWEEN 2000003307 AND 2000003308;
 INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
 (2000003307,'Finally, a worthy offering!',0,3,0,15,NULL),
@@ -6486,13 +6486,13 @@ INSERT INTO creature_movement_template (entry,pathId,point,position_x,position_y
 (26812,10,5,4613.373,-4922.53,48.0477,1000,1,100);
 DELETE FROM dbscripts_on_creature_movement WHERE id = 2681101;
 INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(2681101,1,1,71,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
-(2681101,3,1,71,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
-(2681101,5,1,10,0,0,0,0,0,0,0,0,0,0,0,0,0,'');
+(2681101,1000,1,71,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(2681101,3000,1,71,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(2681101,5000,1,10,0,0,0,0,0,0,0,0,0,0,0,0,0,'');
 DELETE FROM dbscripts_on_event WHERE id = 17801;
 INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(17801,1,31,27199,50,0,0,0,0x08,0,0,0,0,0,0,0,0,'search for buddy - 27199: safety check - only one available'),
-(17801,2,10,27199,55000,0,0,0,0x08,0,0,0,0,4678.617,-4859.459,35.56327,3.124139,'summon - Warlord Jin\'arrak');
+(17801,1000,31,27199,50,0,0,0,0x08,0,0,0,0,0,0,0,0,'search for buddy - 27199: safety check - only one available'),
+(17801,2000,10,27199,55000,0,0,0,0x08,0,0,0,0,4678.617,-4859.459,35.56327,3.124139,'summon - Warlord Jin\'arrak');
 DELETE FROM `creature` WHERE `guid` = 104389;
 UPDATE creature_template SET UnitFlags = 768, MovementType = 2 WHERE entry = 27199;
 UPDATE creature_template_addon SET auras = '17327' WHERE entry = 27199;
@@ -6716,7 +6716,7 @@ INSERT INTO creature_spawn_entry (guid,entry) VALUES
 (94323,26811),(94323,26812),(118801,26811),(118801,26812),(118800,26811),(118800,26812),(118802,26811),(118802,26812),
 (118789,26811),(118789,26812),(118787,26811),(118787,26812),(118788,26811),(118788,26812);
 
-UPDATE creature_template SET Faction = 16 WHERE Entry = 20101;
+UPDATE creature_template SET Faction = 16, EquipmentTemplateId = 2352 WHERE Entry = 20101;
 UPDATE creature SET spawntimesecsmin = 30, spawntimesecsmax = 30 WHERE id = 20071;
 DELETE FROM `creature` WHERE `guid` = 126787;
 DELETE FROM gossip_menu_option WHERE menu_id = 8071;
@@ -6724,10 +6724,10 @@ INSERT INTO gossip_menu_option(menu_id, id, option_icon, option_text, option_id,
 (8071,0,0,'Wind Trader Marid, I\'ve returned with more information on the nether drakes. I\'m prepared to be your business partner, and for an extra sum, I\'ll take care of that troublesome elf and her human friend.',1,1,0,0,807101,0,0,NULL,3121);
 DELETE FROM dbscripts_on_gossip WHERE id = 807101;
 INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(807101,1,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
-(807101,1,29,3,2,0,0,0,0,0,0,0,0,0,0,0,0,'NPCFlags removed'),
-(807101,1,0,0,0,0,0,0,0,2000003323,0,0,0,0,0,0,0,''),
-(807101,2,20,2,0,0,0,0,0,0,0,0,0,0,0,0,0,'movement changed to 2:waypoints');
+(807101,1000,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(807101,1000,29,3,2,0,0,0,0,0,0,0,0,0,0,0,0,'NPCFlags removed'),
+(807101,1000,0,0,0,0,0,0,0,2000003323,0,0,0,0,0,0,0,''),
+(807101,2000,20,2,0,0,0,0,0,0,0,0,0,0,0,0,0,'movement changed to 2:waypoints');
 DELETE FROM conditions WHERE condition_entry = 3121;
 INSERT INTO conditions (condition_entry,type,value1,value2) VALUE (3121,9,10273,0);
 DELETE FROM dbscript_string WHERE entry BETWEEN 2000003323 AND 2000003324;
@@ -6741,10 +6741,10 @@ INSERT INTO creature_movement_template (entry,pathId,point,position_x,position_y
 (20071,0,3,4305.531,2141.197,129.5266,1000,1,0.148921);
 DELETE FROM dbscripts_on_creature_movement WHERE id = 2007101;
 INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(2007101,1,0,0,0,0,0,0,0,2000003324,0,0,0,0,0,0,0,''),
-(2007101,3,22,14,0x01 | 0x10 | 0x20,0,0,0,0,0,0,0,0,0,0,0,0,''),
-(2007101,6,10,20101,60000,0,0,0,0,0,0,0,0,4322.216,2148.113,124.918,4.014257,'Summon Nether-stalker'),
-(2007101,6,10,20101,60000,0,0,0,0,0,0,0,0,4327.583,2133.33,126.4966,3.508112,'Summon Nether-stalker');
+(2007101,1000,0,0,0,0,0,0,0,2000003324,0,0,0,0,0,0,0,''),
+(2007101,3000,22,14,0x01 | 0x10,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(2007101,6000,10,20101,60000,0,0,0,0,0,0,0,0,4322.216,2148.113,124.918,4.014257,'Summon Nether-stalker'),
+(2007101,6000,10,20101,60000,0,0,0,0,0,0,0,0,4327.583,2133.33,126.4966,3.508112,'Summon Nether-stalker');
 
 DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 28523);
 DELETE FROM creature_movement WHERE id IN (SELECT guid FROM creature WHERE id = 28523);
@@ -7287,13 +7287,13 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `dat
 ('5158', '0', '4', '59', '33554432', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '');
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 ('590102', '0', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '4.34587', ''),
-('590102', '1', '5', '59', '33554432', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '');
+('590102', '1000', '5', '59', '33554432', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '');
 
 DELETE FROM dbscripts_on_quest_start WHERE id IN (11390,11391);
 INSERT INTO dbscripts_on_quest_start (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(11390,1,15,45973,0,0,0,0,6,0,0,0,0,0,0,0,0,''),
-(11391,1,15,45973,0,0,0,0,6,0,0,0,0,0,0,0,0,''),
-(11391,2,10,15214,15000,0,0,0,0x08,0,0,0,0,2046.149,-3221.081,60.13985,6.230825,'Summon Invisible Stalker');
+(11390,1000,15,45973,0,0,0,0,6,0,0,0,0,0,0,0,0,''),
+(11391,1000,15,45973,0,0,0,0,6,0,0,0,0,0,0,0,0,''),
+(11391,2000,10,15214,15000,0,0,0,0x08,0,0,0,0,2046.149,-3221.081,60.13985,6.230825,'Summon Invisible Stalker');
 DELETE FROM dbscripts_on_gossip WHERE id = 895400;
 INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (895400,0,15,45973,0,0,0,0,6,0,0,0,0,0,0,0,0,'');
@@ -7344,12 +7344,12 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid
 DELETE FROM dbscripts_on_gossip WHERE id IN (930100);
 INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (930100,0,15,61545,0,0,0,0,0,0,0,0,0,0,0,0,0,'Summon Budd'),
-(930100,1,18,0,0,0,0,0,4,0,0,0,0,0,0,0,0,'despawn Budd');
+(930100,1000,18,0,0,0,0,0,4,0,0,0,0,0,0,0,0,'despawn Budd');
 UPDATE `creature` SET `position_x` = '3827.66', `position_y` = '-1969.91', `position_z` = '208.36', `orientation` = '0.523599', `spawntimesecsmin` = '30', `spawntimesecsmax` = '30' WHERE `guid` =96083;
 DELETE FROM dbscripts_on_relay WHERE id = 20166;
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES 
 (20166,0,31,23033,100,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Garg EAI 23745: search for 23033'),
-(20166,1,15,53824,0,0,23033,101,1,0,0,0,0,0,0,0,0,'Part of Garg EAI 23745: cast Throw');
+(20166,1000,15,53824,0,0,23033,101,1,0,0,0,0,0,0,0,0,'Part of Garg EAI 23745: cast Throw');
 UPDATE creature_template SET EquipmentTemplateId = 2522 WHERE Entry = 32663;
 DELETE FROM creature_equip_template WHERE entry = 2522;
 INSERT INTO creature_equip_template (entry, equipentry1, equipentry2, equipentry3) VALUES (2522, 17040, 0, 0);
@@ -7381,57 +7381,57 @@ INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalo
 (2480701,0,21,1,0,0,24718,100,7,0,0,0,0,0,0,0,0,'Lebronski - active'),
 (2480701,0,21,1,0,0,24719,100,7,0,0,0,0,0,0,0,0,'Gwendolyn - active'),
 (2480701,0,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Walt - active'),
-(2480701,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0.807769,'Walt'),
-(2480701,2,0,0,0,0,0,0,0,2000003066,0,0,0,0,0,0,0,'Walt'),
-(2480701,3,28,0,0,0,24717,100,7,0,0,0,0,0,0,0,0,'Stanwad - STAND_STATE'),
-(2480701,3,28,0,0,0,24720,100,7,0,0,0,0,0,0,0,0,'Needlemeyer - STAND_STATE'),
-(2480701,3,20,0,0,0,24718,100,7,0,0,0,0,0,0,0,0,'Lebronski - idle'),
-(2480701,3,20,0,0,0,24719,100,7,0,0,0,0,0,0,0,0,'Gwendolyn - idle'),
-(2480701,4,3,0,0,0,24717,100,7,0,0,0,0,478.5301,-5932.788,308.7202,4.286737,'Stanwad - move'),
-(2480701,4,3,0,0,0,24720,100,7,0,0,0,0,479.78,-5925.5,308.721,3.98059,'Needlemeyer - move'),
-(2480701,4,3,0,0,0,24718,100,7,0,0,0,0,489.749,-5923.61,308.656,4.1133,'Lebronski - move'),
-(2480701,4,3,0,0,0,24719,100,7,0,0,0,0,474.2464,-5930.146,308.7548,4.992265,'Gwendolyn - move'),
-(2480701,5,3,0,0,0,24720,100,7,0,0,0,0,476.659,-5929.89,308.721,4.50008,'Needlemeyer - move'),
-(2480701,5,3,0,0,0,24718,100,7,0,0,0,0,485.8252,-5930.573,309.0128,100,'Lebronski - move'),
-(2480701,6,3,0,0,0,24718,100,7,0,0,0,0,481.1437,-5933.588,308.7708,3.45762,'Lebronski - move'),
-(2480701,8,0,0,0,0,24717,100,7,2000003067,0,0,0,0,0,0,0,'Stanwad - text'),
-(2480701,11,0,0,0,0,24717,100,7,2000003068,0,0,0,0,0,0,0,'Stanwad - text'),
-(2480701,11,1,11,0,0,24717,100,7,0,0,0,0,0,0,0,0,'Stanwad - emote'),
-(2480701,11,1,392,0,0,24720,100,7,0,0,0,0,0,0,0,0,'Needlemeyer - emote'),
-(2480701,11,1,392,0,0,24718,100,7,0,0,0,0,0,0,0,0,'Lebronski - emote'),
-(2480701,11,1,392,0,0,24719,100,7,0,0,0,0,0,0,0,0,'Gwendolyn - emote'),
-(2480701,14,1,11,0,0,24717,100,7,0,0,0,0,0,0,0,0,'Stanwad - emote'),
-(2480701,16,3,0,0,0,24717,100,7,0,0,0,0,0,0,0,3.871264,'Stanwad - move'),
-(2480701,17,0,0,0,0,24717,100,7,2000003069,0,0,0,0,0,0,0,'Stanwad - text'),
-(2480701,19,1,1,0,0,24717,100,7,0,0,0,0,0,0,0,0,'Stanwad - emote'),
-(2480701,23,0,0,0,0,24719,100,7,2000003070,0,0,0,0,0,0,0,'Gwendolyn - text'),
-(2480701,26,0,0,0,0,24720,100,7,2000003071,0,0,0,0,0,0,0,'Needlemeyer - text'),
-(2480701,28,1,0,0,0,24720,100,7,0,0,0,0,0,0,0,0,'Needlemeyer - emote'),
-(2480701,28,1,0,0,0,24718,100,7,0,0,0,0,0,0,0,0,'Lebronski - emote'),
-(2480701,28,1,0,0,0,24719,100,7,0,0,0,0,0,0,0,0,'Gwendolyn - emote'),
-(2480701,30,0,0,0,0,24718,100,7,2000003072,0,0,0,0,0,0,0,'Lebronski - text'),
-(2480701,34,0,0,0,0,0,0,0,2000003073,0,0,0,0,0,0,0,'Walt - text'),
-(2480701,38,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,'Walt - emote'),
-(2480701,42,3,0,0,0,24720,100,7,0,0,0,0,479.78,-5925.5,308.721,100,'Needlemeyer - move'),
-(2480701,44,3,0,0,0,24720,100,7,0,0,0,0,482.058,-5925.68,308.721,100,'Needlemeyer - move'),
-(2480701,45,3,0,0,0,24720,100,7 | 0x08,0,0,0,0,483.309,-5926.559,308.6645,3.47321,'Needlemeyer - move'),
-(2480701,45,28,5,0,0,24720,100,7,0,0,0,0,0,0,0,0,'Needlemeyer - STAND_SIT'),
-(2480701,44,3,0,0,0,24719,100,7,0,0,0,0,467.963,-5923.52,309.837,3.84355,'Gwendolyn - move'),
-(2480701,50,20,2,0,0,24719,100,7,0,0,0,0,0,0,0,0,'Gwendolyn - wps'),
-(2480701,46,3,0,0,0,24718,100,7,0,0,0,0,485.8252,-5930.573,309.0128,100,'Lebronski - move'),
-(2480701,48,3,0,0,0,24718,100,7,0,0,0,0,489.749,-5923.61,308.656,100,'Lebronski - move'),
-(2480701,50,20,2,0,0,24718,100,7,0,0,0,0,0,0,0,0,'Lebronski - wps'),
-(2480701,48,3,0,0,0,24717,100,7,0,0,0,0,481.899,-5930.41,308.721,1.13352,'Stanwad - move'),
-(2480701,50,3,0,0,0,24717,100,7 | 0x08,0,0,0,0,479.6632,-5929.458,308.6646,1.117009,'Stanwad - move'),
-(2480701,50,28,5,0,0,24717,100,7,0,0,0,0,0,0,0,0,'Stanwad - STAND_SIT'),
-(2480701,53,21,0,0,0,24717,100,7,0,0,0,0,0,0,0,0,'Stanwad - unactive'),
-(2480701,53,21,0,0,0,24720,100,7,0,0,0,0,0,0,0,0,'Needlemeyer - unactive'),
-(2480701,53,21,0,0,0,24718,100,7,0,0,0,0,0,0,0,0,'Lebronski - unactive'),
-(2480701,53,21,0,0,0,24719,100,7,0,0,0,0,0,0,0,0,'Gwendolyn - unactive'),
-(2480701,54,3,0,0,0,0,0,0,0,0,0,0,0,0,0,3.735,'Walt'),
-(2480701,54,20,0,0,0,0,0,0,0,0,0,0,0,0,0,3.735,'Walt - idle'),
-(2480701,54,35,6,2,0,0,0,0,0,0,0,0,0,0,0,0,'Walt - Send EVENT'),
-(2480701,55,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Walt - unactive');
+(2480701,1000,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0.807769,'Walt'),
+(2480701,2000,0,0,0,0,0,0,0,2000003066,0,0,0,0,0,0,0,'Walt'),
+(2480701,3000,28,0,0,0,24717,100,7,0,0,0,0,0,0,0,0,'Stanwad - STAND_STATE'),
+(2480701,3000,28,0,0,0,24720,100,7,0,0,0,0,0,0,0,0,'Needlemeyer - STAND_STATE'),
+(2480701,3000,20,0,0,0,24718,100,7,0,0,0,0,0,0,0,0,'Lebronski - idle'),
+(2480701,3000,20,0,0,0,24719,100,7,0,0,0,0,0,0,0,0,'Gwendolyn - idle'),
+(2480701,4000,3,0,0,0,24717,100,7,0,0,0,0,478.5301,-5932.788,308.7202,4.286737,'Stanwad - move'),
+(2480701,4000,3,0,0,0,24720,100,7,0,0,0,0,479.78,-5925.5,308.721,3.98059,'Needlemeyer - move'),
+(2480701,4000,3,0,0,0,24718,100,7,0,0,0,0,489.749,-5923.61,308.656,4.1133,'Lebronski - move'),
+(2480701,4000,3,0,0,0,24719,100,7,0,0,0,0,474.2464,-5930.146,308.7548,4.992265,'Gwendolyn - move'),
+(2480701,5000,3,0,0,0,24720,100,7,0,0,0,0,476.659,-5929.89,308.721,4.50008,'Needlemeyer - move'),
+(2480701,5000,3,0,0,0,24718,100,7,0,0,0,0,485.8252,-5930.573,309.0128,100,'Lebronski - move'),
+(2480701,6000,3,0,0,0,24718,100,7,0,0,0,0,481.1437,-5933.588,308.7708,3.45762,'Lebronski - move'),
+(2480701,8000,0,0,0,0,24717,100,7,2000003067,0,0,0,0,0,0,0,'Stanwad - text'),
+(2480701,11000,0,0,0,0,24717,100,7,2000003068,0,0,0,0,0,0,0,'Stanwad - text'),
+(2480701,11000,1,11,0,0,24717,100,7,0,0,0,0,0,0,0,0,'Stanwad - emote'),
+(2480701,11000,1,392,0,0,24720,100,7,0,0,0,0,0,0,0,0,'Needlemeyer - emote'),
+(2480701,11000,1,392,0,0,24718,100,7,0,0,0,0,0,0,0,0,'Lebronski - emote'),
+(2480701,11000,1,392,0,0,24719,100,7,0,0,0,0,0,0,0,0,'Gwendolyn - emote'),
+(2480701,14000,1,11,0,0,24717,100,7,0,0,0,0,0,0,0,0,'Stanwad - emote'),
+(2480701,16000,3,0,0,0,24717,100,7,0,0,0,0,0,0,0,3.871264,'Stanwad - move'),
+(2480701,17000,0,0,0,0,24717,100,7,2000003069,0,0,0,0,0,0,0,'Stanwad - text'),
+(2480701,19000,1,1,0,0,24717,100,7,0,0,0,0,0,0,0,0,'Stanwad - emote'),
+(2480701,23000,0,0,0,0,24719,100,7,2000003070,0,0,0,0,0,0,0,'Gwendolyn - text'),
+(2480701,26000,0,0,0,0,24720,100,7,2000003071,0,0,0,0,0,0,0,'Needlemeyer - text'),
+(2480701,28000,1,0,0,0,24720,100,7,0,0,0,0,0,0,0,0,'Needlemeyer - emote'),
+(2480701,28000,1,0,0,0,24718,100,7,0,0,0,0,0,0,0,0,'Lebronski - emote'),
+(2480701,28000,1,0,0,0,24719,100,7,0,0,0,0,0,0,0,0,'Gwendolyn - emote'),
+(2480701,30000,0,0,0,0,24718,100,7,2000003072,0,0,0,0,0,0,0,'Lebronski - text'),
+(2480701,34000,0,0,0,0,0,0,0,2000003073,0,0,0,0,0,0,0,'Walt - text'),
+(2480701,38000,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,'Walt - emote'),
+(2480701,42000,3,0,0,0,24720,100,7,0,0,0,0,479.78,-5925.5,308.721,100,'Needlemeyer - move'),
+(2480701,44000,3,0,0,0,24720,100,7,0,0,0,0,482.058,-5925.68,308.721,100,'Needlemeyer - move'),
+(2480701,45000,3,0,0,0,24720,100,7 | 0x08,0,0,0,0,483.309,-5926.559,308.6645,3.47321,'Needlemeyer - move'),
+(2480701,45000,28,5,0,0,24720,100,7,0,0,0,0,0,0,0,0,'Needlemeyer - STAND_SIT'),
+(2480701,44000,3,0,0,0,24719,100,7,0,0,0,0,467.963,-5923.52,309.837,3.84355,'Gwendolyn - move'),
+(2480701,50000,20,2,0,0,24719,100,7,0,0,0,0,0,0,0,0,'Gwendolyn - wps'),
+(2480701,46000,3,0,0,0,24718,100,7,0,0,0,0,485.8252,-5930.573,309.0128,100,'Lebronski - move'),
+(2480701,48000,3,0,0,0,24718,100,7,0,0,0,0,489.749,-5923.61,308.656,100,'Lebronski - move'),
+(2480701,50000,20,2,0,0,24718,100,7,0,0,0,0,0,0,0,0,'Lebronski - wps'),
+(2480701,48000,3,0,0,0,24717,100,7,0,0,0,0,481.899,-5930.41,308.721,1.13352,'Stanwad - move'),
+(2480701,50000,3,0,0,0,24717,100,7 | 0x08,0,0,0,0,479.6632,-5929.458,308.6646,1.117009,'Stanwad - move'),
+(2480701,50000,28,5,0,0,24717,100,7,0,0,0,0,0,0,0,0,'Stanwad - STAND_SIT'),
+(2480701,53000,21,0,0,0,24717,100,7,0,0,0,0,0,0,0,0,'Stanwad - unactive'),
+(2480701,53000,21,0,0,0,24720,100,7,0,0,0,0,0,0,0,0,'Needlemeyer - unactive'),
+(2480701,53000,21,0,0,0,24718,100,7,0,0,0,0,0,0,0,0,'Lebronski - unactive'),
+(2480701,53000,21,0,0,0,24719,100,7,0,0,0,0,0,0,0,0,'Gwendolyn - unactive'),
+(2480701,54000,3,0,0,0,0,0,0,0,0,0,0,0,0,0,3.735,'Walt'),
+(2480701,54000,20,0,0,0,0,0,0,0,0,0,0,0,0,0,3.735,'Walt - idle'),
+(2480701,54000,35,6,2,0,0,0,0,0,0,0,0,0,0,0,0,'Walt - Send EVENT'),
+(2480701,55000,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Walt - unactive');
 
 TRUNCATE `world_safe_locs`;
 INSERT INTO `world_safe_locs` (`id`, `map`, `x`, `y`, `z`, `o`, `name`) VALUES
@@ -8130,15 +8130,15 @@ INSERT INTO creature_template_addon (entry, mount, bytes1, b2_0_sheath, b2_1_pvp
 DELETE FROM dbscripts_on_relay WHERE id IN (20167,20168,20169);
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (20167,0,34,3128,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of 27443 EAI: check if source is male'),
-(20167,1,15,48763,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 27443 EAI: cast 48763'),
-(20167,2,15,48655,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 27202 EAI: Player - Force Cast "The Perfect Dissemblance: Summon Player\'s Footman & Credit Credit"'),
-(20167,3,15,48654,1,0,0,0,0,0,0,0,0,0,0,0,0,'Part of 27202 EAI: source - Force Cast: "The Perfect Dissemblance: Summon Priest\'s Footman"'),
+(20167,1000,15,48763,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 27443 EAI: cast 48763'),
+(20167,2000,15,48655,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 27202 EAI: Player - Force Cast "The Perfect Dissemblance: Summon Player\'s Footman & Credit Credit"'),
+(20167,3000,15,48654,1,0,0,0,0,0,0,0,0,0,0,0,0,'Part of 27202 EAI: source - Force Cast: "The Perfect Dissemblance: Summon Priest\'s Footman"'),
 (20168,0,34,3127,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of 27443 EAI: check if source is female'),
-(20168,1,15,48761,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 27443 EAI: cast 48761'),
-(20168,2,15,48655,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 27202 EAI: Player - Force Cast: "The Perfect Dissemblance: Summon Player\'s Footman & Credit Credit"'),
-(20168,3,15,48654,1,0,0,0,0,0,0,0,0,0,0,0,0,'Part of 27202 EAI: source - Force Cast: "The Perfect Dissemblance: Summon Priest\'s Footman"'),
+(20168,1000,15,48761,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 27443 EAI: cast 48761'),
+(20168,2000,15,48655,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 27202 EAI: Player - Force Cast: "The Perfect Dissemblance: Summon Player\'s Footman & Credit Credit"'),
+(20168,3000,15,48654,1,0,0,0,0,0,0,0,0,0,0,0,0,'Part of 27202 EAI: source - Force Cast: "The Perfect Dissemblance: Summon Priest\'s Footman"'),
 (20169,0,31,27202,20,0,0,0,0,0,0,0,0,0,0,0,0,'Part of 27405 EAI: search for 27202'),
-(20169,1,26,0,0,0,27202,21,1,0,0,0,0,0,0,0,0,'Part of 27405 EAI: attack start');
+(20169,1000,26,0,0,0,27202,21,1,0,0,0,0,0,0,0,0,'Part of 27405 EAI: attack start');
 DELETE FROM conditions WHERE condition_entry IN (3127,3128);
 INSERT INTO conditions (condition_entry, type, value1, value2) VALUES (3127, 41, 0, 0), (3128, 41, 1, 0);
 DELETE FROM dbscripts_on_quest_end WHERE id = 12260;
