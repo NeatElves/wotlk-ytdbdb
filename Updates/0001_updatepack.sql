@@ -8156,3 +8156,31 @@ DELETE FROM `creature_movement` WHERE `id` IN (22568, 22634, 94818, 94819, 94927
 INSERT INTO conditions (condition_entry, type, value1, value2) VALUES
 (3129,-3,3063,0), (3130,-1,3129,2099);
 UPDATE gossip_menu_option SET condition_id = 3130 WHERE menu_id = 941 AND id = 1;
+
+DELETE FROM `creature_linking_template` WHERE `entry` = 17151;
+INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES (17151, 530, 17151, 3, 20);
+UPDATE `creature_template` SET `MinLevel` = 60, `MaxLevel` = 60, `UnitFlags` = 33554432 WHERE `entry` = 14366;
+
+DELETE FROM spell_script_target WHERE entry IN(24390,24391);
+INSERT INTO spell_script_target(entry, type, targetEntry, inverseEffectMask) VALUES
+(24390,0,180102,0), (24390,0,180101,0), (24390,0,180100,0), (24390,0,180087,0), (24390,0,180088,0),
+(24390,0,180089,0), (24390,0,180090,0), (24390,0,180091,0), (24391,0,180102,0), (24391,0,180101,0),
+(24391,0,180100,0), (24391,0,180087,0), (24391,0,180088,0), (24391,0,180089,0), (24391,0,180090,0), (24391,0,180091,0);
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|33554432 WHERE `Entry`=15045;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|33554432 WHERE `Entry`=15046;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|33554432 WHERE `Entry`=15062;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|33554432 WHERE `Entry`=15063;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|33554432 WHERE `Entry`=15064;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|33554432 WHERE `Entry`=15074;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|33554432 WHERE `Entry`=15075;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|33554432 WHERE `Entry`=15087;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|33554432 WHERE `Entry`=15089;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|33554432 WHERE `Entry`=15107;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|33554432 WHERE `Entry`=15108;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|768 WHERE `Entry`=15065;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|768 WHERE `Entry`=15066;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|768 WHERE `Entry`=15071;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|768 WHERE `Entry`=15072;
+UPDATE `creature_template` SET `UnitFlags`=`UnitFlags`|33554688 WHERE `Entry`=23301;
+DELETE FROM spell_script_target WHERE entry=38640;
+INSERT INTO spell_script_target(entry, type, targetEntry, inverseEffectMask) VALUES (38640,1,21326,0);
