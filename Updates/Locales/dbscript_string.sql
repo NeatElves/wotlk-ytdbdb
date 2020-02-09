@@ -3329,6 +3329,9 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Ох уж этот Джонс...'
 UPDATE `dbscript_string` SET `content_loc8` = 'Он не чокнутый – он полный псих! Все время куда-то стремится в поисках богатства и славы...' WHERE `entry` = 2000003322;
 UPDATE `dbscript_string` SET `content_loc8` = 'Давай перенесем нашу дискуссию в более...уединенное место. Иди за мной, $n.' WHERE `entry` = 2000003323;
 UPDATE `dbscript_string` SET `content_loc8` = 'Нет, я с тобой больше связываться не буду – я еще в своем уме! Знаешь, иногда лучший способ заработать деньги – не тратить их!' WHERE `entry` = 2000003324;
+UPDATE `dbscript_string` SET `content_loc8` = 'Ну как вам тут, нравится?' WHERE `entry` = 2000003325;
+UPDATE `dbscript_string` SET `content_loc8` = 'Ярмарка Новолуния – величайшее зрелище в Запределье!' WHERE `entry` = 2000003326;
+UPDATE `dbscript_string` SET `content_loc8` = 'Не забудь купить напитки и подарки!' WHERE `entry` = 2000003327;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;
