@@ -360,7 +360,7 @@ UPDATE `mangos_string` SET `content_loc8` = 'Нет такого персона�
 UPDATE `mangos_string` SET `content_loc8` = 'Такого IP нет в списке заблокированных.' WHERE `entry` = 415;
 UPDATE `mangos_string` SET `content_loc8` = 'Учетная запись %s не была блокирована ранее.' WHERE `entry` = 416;
 UPDATE `mangos_string` SET `content_loc8` = 'История блокировок учетной записи %s:' WHERE `entry` = 417;
-UPDATE `mangos_string` SET `content_loc8` = 'Дата блокировки: %s. Время блокировки: %s. Статус: %s. Причина: %s. Блокировал: %s.' WHERE `entry` = 418;
+UPDATE `mangos_string` SET `content_loc8` = 'Дата блокировки: %s. Время блокировки: %s. Статус: %s. Причина: %s. Блокировал: %s. Разблокировал вручную : %s' WHERE `entry` = 418;
 UPDATE `mangos_string` SET `content_loc8` = 'Информация' WHERE `entry` = 419;
 UPDATE `mangos_string` SET `content_loc8` = 'Никогда' WHERE `entry` = 420;
 UPDATE `mangos_string` SET `content_loc8` = 'Да' WHERE `entry` = 421;
