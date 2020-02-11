@@ -8659,3 +8659,60 @@ INSERT INTO `game_event_time` (`entry`, `start_time`, `end_time`) VALUES
 (86, '2011-01-06 23:01:00', '2020-12-30 22:00:00'), (83, '2010-12-01 23:01:00', '2020-12-30 22:00:00');
 
 UPDATE `gameobject_template` SET `flags` = '21' WHERE `entry` IN (180763,180764,180870,180871,180872,180873);
+
+UPDATE `creature_template` SET `Faction` = '1744' WHERE `Entry` =35259;
+UPDATE `creature_template` SET `Faction` = '1743' WHERE `Entry` =35258;
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(8357, 0, 0, 'World''s End Tavern', 0, 1, 1, 8358, 1500, 0, 0, 0, NULL, 0, 0),
+(8357, 1, 0, 'Bank', 0, 1, 1, 8359, 1502, 0, 0, 0, NULL, 0, 0),
+(8357, 2, 0, 'Inn', 0, 1, 1, 8360, 1504, 0, 0, 0, NULL, 0, 0),
+(8357, 3, 0, 'Flight Master', 0, 1, 1, 8361, 1505, 0, 0, 0, NULL, 0, 0),
+(8357, 4, 0, 'Mailbox', 0, 1, 1, 8363, 1509, 0, 0, 0, NULL, 0, 0),
+(8357, 5, 0, 'Stable Master', 0, 1, 1, 8364, 1512, 0, 0, 0, NULL, 0, 0),
+(8357, 6, 0, 'Battlemaster', 0, 1, 1, 8365, 0, 0, 0, 0, NULL, 0, 0),
+(8357, 7, 0, 'Profession Trainer', 0, 1, 1, 8403, 0, 0, 0, 0, NULL, 0, 0),
+(8357, 8, 0, 'Mana Loom', 0, 1, 1, 8550, 1532, 0, 0, 0, NULL, 0, 0),
+(8357, 9, 0, 'Alchemy Lab', 0, 1, 1, 8551, 1533, 0, 0, 0, NULL, 0, 0),
+(8357, 10, 0, 'Gem Merchant', 0, 1, 1, 8552, 1518, 0, 0, 0, NULL, 0, 0);
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (8403, 10504, 0, 0);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(8403, 0, 0, 'Alchemy', 0, 1, 1, 8411, 1520, 0, 0, 0, NULL, 0, 0),
+(8403, 1, 0, 'Blacksmithing', 0, 1, 1, 8412, 1521, 0, 0, 0, NULL, 0, 0),
+(8403, 2, 0, 'Cooking', 0, 1, 1, 8413, 1523, 0, 0, 0, NULL, 0, 0),
+(8403, 3, 0, 'Enchanting', 0, 1, 1, 8414, 1524, 0, 0, 0, NULL, 0, 0),
+(8403, 4, 0, 'First Aid', 0, 1, 1, 8415, 1527, 0, 0, 0, NULL, 0, 0),
+(8403, 5, 0, 'Jewelcrafting', 0, 1, 1, 8416, 1528, 0, 0, 0, NULL, 0, 0),
+(8403, 6, 0, 'Leatherworking', 0, 1, 1, 8417, 1529, 0, 0, 0, NULL, 0, 0),
+(8403, 7, 0, 'Skinning', 0, 1, 1, 8418, 1530, 0, 0, 0, NULL, 0, 0);
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (8365, 10438, 0, 0);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(8365, 0, 0, 'Alliance Battlemasters', 0, 1, 1, 8408, 1513, 0, 0, 0, NULL, 0, 0),
+(8365, 1, 0, 'Horde Battlemasters', 0, 1, 1, 8409, 1515, 0, 0, 0, NULL, 0, 0);
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES
+(8358, 10431, 0, 0), (8359, 10432, 0, 0), (8360, 10433, 0, 0), (8361, 10435, 0, 0), (8363, 10436, 0, 0),
+(8364, 10437, 0, 0), (8550, 10503, 0, 0), (8551, 10701, 0, 0), (8552, 10702, 0, 0), (8408, 10513, 0, 0),
+(8409, 10514, 0, 0), (8411, 10516, 0, 0), (8412, 10517, 0, 0), (8413, 10518, 0, 0), (8414, 10519, 0, 0),
+(8415, 10520, 0, 0), (8416, 10521, 0, 0), (8417, 10522, 0, 0), (8418, 10523, 0, 0);
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1500' WHERE `menu_id` =8419 AND `id` =0;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1501' WHERE `menu_id` =8419 AND `id` =1;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1503' WHERE `menu_id` =8419 AND `id` =2;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1505' WHERE `menu_id` =8419 AND `id` =3;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1507' WHERE `menu_id` =8419 AND `id` =4;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1511' WHERE `menu_id` =8419 AND `id` =5;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1532' WHERE `menu_id` =8419 AND `id` =8;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1533' WHERE `menu_id` =8419 AND `id` =9;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1517' WHERE `menu_id` =8419 AND `id` =10;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1520' WHERE `menu_id` =8424 AND `id` =0;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1521' WHERE `menu_id` =8424 AND `id` =1;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1523' WHERE `menu_id` =8424 AND `id` =2;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1524' WHERE `menu_id` =8424 AND `id` =3;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1527' WHERE `menu_id` =8424 AND `id` =4;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1528' WHERE `menu_id` =8424 AND `id` =5;
+UPDATE `gossip_menu_option` SET `action_poi_id` = '1529' WHERE `menu_id` =8424 AND `id` =6;
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(8365, 2, 0, 'Arena Battlemasters', 0, 1, 1, 9206, 1516, 0, 0, 0, NULL, 0, 0);
+UPDATE `npc_text` SET `text0_0` = 'You can find our mana loom in the merchant''s bazaar within the Lower City.', `em0_0` = '1' WHERE `ID` =10503;
+
+UPDATE `creature_model_info` SET `modelid_other_gender`=11135 WHERE `modelid`=11134;
+UPDATE `creature_model_info` SET `modelid_other_gender`=11134 WHERE `modelid`=11135;
+UPDATE `creature_model_info` SET `modelid_other_gender`=0 WHERE `modelid`=11136;
