@@ -2415,6 +2415,17 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Как смеешь ты выз
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Что здесь происходит, сержант?' WHERE `entry` = -20780;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я не знаю. Для собственного спокойствия лучше убить обоих!' WHERE `entry` = -20781;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'НА ПОМОЩЬ! НА ПОМОЩЬ! $gОН УКРАЛ:ОНА ПОХИТИЛА; МОЙ ОБРАЗ!' WHERE `entry` = -20782;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Умри, трусливое создание!' WHERE `entry` = -20783;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Во имя Света!' WHERE `entry` = -20784;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Прийти сюда было глупым поступком.' WHERE `entry` = -20785;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Пусть сталь очистит тебя!' WHERE `entry` = -20786;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Аббендис увидит, как ты очистишься!' WHERE `entry` = -20787;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Осквернитель!' WHERE `entry` = -20788;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Скройся с глаз моих долой!' WHERE `entry` = -20789;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Негодяй!' WHERE `entry` = -20790;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Ничего себе!' WHERE `entry` = -20791;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Гнусное отродье. Такие, как ты, не заслуживают права жить. Сдохни!' WHERE `entry` = -20792;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Моя прекрасная лесопилка. Ты! Ты поплатишься за это жизнью!' WHERE `entry` = -20793;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

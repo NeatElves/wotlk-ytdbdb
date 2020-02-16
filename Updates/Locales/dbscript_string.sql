@@ -3332,6 +3332,15 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Нет, я с тобой боль
 UPDATE `dbscript_string` SET `content_loc8` = 'Ну как вам тут, нравится?' WHERE `entry` = 2000003325;
 UPDATE `dbscript_string` SET `content_loc8` = 'Ярмарка Новолуния – величайшее зрелище в Запределье!' WHERE `entry` = 2000003326;
 UPDATE `dbscript_string` SET `content_loc8` = 'Не забудь купить напитки и подарки!' WHERE `entry` = 2000003327;
+UPDATE `dbscript_string` SET `content_loc8` = 'Как раз вовремя!' WHERE `entry` = 2000003328;
+UPDATE `dbscript_string` SET `content_loc8` = 'Твое последнее слово, грязное отродье?' WHERE `entry` = 2000003329;
+UPDATE `dbscript_string` SET `content_loc8` = 'С другой стороны, мне все равно. Гори в аду, тварь!' WHERE `entry` = 2000003330;
+UPDATE `dbscript_string` SET `content_loc8` = 'Ха! Эта шутка никогда не обрастет бородой.' WHERE `entry` = 2000003331;
+UPDATE `dbscript_string` SET `content_loc8` = 'Я чувствую, что эта земля тебя запятнала, пехотинец. Обратись с докладом к епископу перед началом твоей следующей стражи.' WHERE `entry` = 2000003332;
+UPDATE `dbscript_string` SET `content_loc8` = 'Тебе требуется благословление епископа. Ступай к нему поскорее.' WHERE `entry` = 2000003333;
+UPDATE `dbscript_string` SET `content_loc8` = 'Сам верховный адмирал пришел убедиться в нашем рвении. Если я еще раз увижу, как ты прохлаждаешься на своем посту, я сам выпущу тебе кишки.' WHERE `entry` = 2000003334;
+UPDATE `dbscript_string` SET `content_loc8` = 'Я слышал перешептывания о чужаках. Будь осторожен.' WHERE `entry` = 2000003335;
+UPDATE `dbscript_string` SET `content_loc8` = 'От тебя скверно пахнет. Прими душ.' WHERE `entry` = 2000003336;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;
