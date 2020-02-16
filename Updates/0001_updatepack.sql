@@ -10669,3 +10669,12 @@ INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`position_x`,
 (19881,2,4,2306.801,2184.204,92.2989,5000,3,100);
 
 UPDATE `gossip_menu_option` SET `option_text` = '<Copy the pattern into my journal.>' WHERE `menu_id` =6799 AND `id` =0;
+UPDATE `gossip_menu_option` SET `option_text` = 'Gul''dan is my answer.' WHERE `menu_id` =4764 AND `id` =0;
+UPDATE `gossip_menu_option` SET `option_text` = 'Kel''Thuzad is my answer.' WHERE `menu_id` =4764 AND `id` =1;
+UPDATE `gossip_menu_option` SET `option_text` = 'Ner''zhul is my answer.' WHERE `menu_id` =4764 AND `id` =2;
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(4764, 3, 0, 'Kil''jaeden is my answer.', 0, 1, 1, -1, 0, 476400, 0, 0, NULL, 0, 1163);
+UPDATE `gossip_menu_option` SET `option_text` = 'Eva, I have lost the Spectral Essence. I need another.' WHERE `menu_id` =3310 AND `id` =1;
+UPDATE `gossip_menu_option` SET `option_text` = 'I require a vial of aqual quintessence, Hydraxis, for I go to the Molten Core to extinguish a rune of the Firelords.' WHERE `menu_id` =5065 AND `id` =0;
+UPDATE `gossip_menu_option` SET `option_text` = 'The markings on this tablet show ancient diagrams and dire words of power, used to create  Gurubashi Mojo Madness...' WHERE `menu_id` =6443 AND `id` =0;
+UPDATE `gossip_menu_option` SET `option_text` = 'I''d like to stable my pet here.' WHERE `menu_id` =6791 AND `id` =0;
