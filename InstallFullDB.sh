@@ -130,32 +130,6 @@ echo
 echo
 
 # Core updates
-echo "> Trying to retrieve last core update packaged in database ..."
-LAST_CORE_REV=0
-CORE_REVS="$(grep -r "^.*required_[0-9]*.* DEFAULT NULL" ${ADDITIONAL_PATH}Full_DB/* | sed 's/.*required_\([0-9]*\).*/\1/') "
-CORE_REVS+=$(grep -ri '.*alter table.*required_' ${ADDITIONAL_PATH}Updates/mangos/* | sed 's/.*required_\([0-9]*\).*required_\([0-9]*\).*/\1 \2/')
-if [ "$CORE_REVS" != "" ]
-then
-  for rev in $CORE_REVS
-  do
-    if [ "$rev" -gt "$LAST_CORE_REV" ]
-    then
-      LAST_CORE_REV=$rev
-    fi
-  done
-fi
-
-if [ "$LAST_CORE_REV" -eq "0" ]
-then
-  echo "ERROR: cannot get last core revision in DB"
-  exit 1
-else
-  echo "  Found last core revision in DB is $LAST_CORE_REV"
-fi
-echo
-echo
-
-# Core updates
 echo "> Processing database Core updates ..."
 COUNT=0
 for UPDATE in "${ADDITIONAL_PATH}Updates/mangos/"[0-9]*.sql
