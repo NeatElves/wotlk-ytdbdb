@@ -3349,6 +3349,7 @@ UPDATE `dbscript_string` SET `content_loc8` = '%s приветствует эм�
 UPDATE `dbscript_string` SET `content_loc8` = '%s плачет слезами счастья.' WHERE `entry` = 2000003342;
 UPDATE `dbscript_string` SET `content_loc8` = '%s одобрительно ревет!' WHERE `entry` = 2000003343;
 UPDATE `dbscript_string` SET `content_loc8` = '%s благодарит эмиссара Светлое Копыто.' WHERE `entry` = 2000003344;
+UPDATE `dbscript_string` SET `content_loc8` = 'Сквернобот начинает фыркать, словно забарахливший мотор.' WHERE `entry` = 2000003345;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;
