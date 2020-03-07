@@ -4202,6 +4202,7 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (10139, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Позвольте мне взглянуть на ваш товар.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (10139, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу остановиться здесь.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (10139, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Конфета или Жизнь!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(10140, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я потерял свой томик "Школы тайной магии – мастерство". Могу я получить новый?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (10144, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Да, меня это интересует.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (10144, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Да, меня это интересует.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (10153, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Учитель профессий', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
