@@ -4844,8 +4844,6 @@ UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000
 UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry=2598;
 UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry=10825;
 
-UPDATE creature_movement_template SET waittime=1000 WHERE entry IN(11583) AND point = 9;
-
 UPDATE `dbscript_string` SET `content_default` = 'Klaven doesn''t pay me enough to deal with those zombies, drones or whatever he calls ''em.' WHERE `entry` =2000001768;
 UPDATE `dbscript_string` SET `content_default` = '%s gestures to the pitcher of water sitting on the edge of the well.' WHERE `entry` =2000000254;
 UPDATE `dbscript_string` SET `content_default` = 'We have heard your requests, and we agree... it is noble in intent. We will purify your waters. Go with our blessing, shaman.', `language` = '12' WHERE `entry` =2000000354;
@@ -12545,3 +12543,120 @@ INSERT INTO `creature_linking` (`master_guid`,`guid`,`flag`)VALUES (59129,59126,
 UPDATE creature_template SET ExtraFlags=ExtraFlags|0x00020000 WHERE entry IN(4277);
 UPDATE `creature_movement` SET `script_id`='5' WHERE `id` IN ('51956', '51955', '52109', '49671', '52108', '49613') AND `point`='1';
 UPDATE `creature` SET `spawndist` = '5', `MovementType` = '1' WHERE (`guid` = '52002');
+
+UPDATE `quest_template` SET `NextQuestId` = '0' WHERE `entry` =10635;
+UPDATE `quest_template` SET `NextQuestId` = '0' WHERE `entry` =10636;
+UPDATE `quest_template` SET `RequiredCondition` = '2532' WHERE `entry` IN (10634,10635,10636);
+
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `entry` =121 AND `item` =832;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` IN (1076,1077);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` IN (1925,1928,10400,10401,10402);
+
+UPDATE `creature_template` SET `UnitFlags` = 33555200 WHERE `entry` = 20133;
+UPDATE `creature_template` SET `SpeedWalk` = (2.77778 / 2.5), `SpeedRun` = (2 / 7) WHERE `entry` IN (18703,20700);
+UPDATE `creature_template` SET `Scale` = 1.2, `UnitFlags` = 0, `SpeedWalk` = (2.5 / 2.5), `SpeedRun` = (6 / 7) WHERE `entry` = 20415;
+UPDATE `creature_template` SET `UnitFlags` = 33554432 WHERE `entry` =  19433;
+UPDATE `creature` SET `position_z` = 51.7520 WHERE `id` = 21233 AND `guid` = 92059;
+UPDATE creature_model_info SET combat_reach=1 WHERE modelid=17955;
+DELETE FROM spell_proc_event WHERE entry IN(12966,16257);
+INSERT INTO spell_proc_event(entry,procEx) VALUES (12966,65536), (16257,65536);
+UPDATE creature_template SET UnitFlags=33555200 WHERE entry=22333;
+REPLACE INTO `creature_template_spells` (`entry`, `spell1`) VALUES (17731, 34984);
+DELETE FROM gossip_menu_option WHERE menu_id=8662;
+DELETE FROM dbscripts_on_gossip WHERE id=866200;
+UPDATE `creature` SET `position_x` = '-7404.57', `position_y` = '-894.073', `position_z` = '171.873', `orientation` = '4.7112' WHERE `guid` =123879;
+UPDATE dbscripts_on_quest_start SET datalong2=1|32 WHERE id IN(5943,5821) AND command=22;
+UPDATE gameobject_loot_template SET condition_id=340 WHERE item=6172 AND entry=28604;
+UPDATE creature_template SET MovementType = 2 WHERE entry = 16584;
+UPDATE creature_template SET MovementType = 2 WHERE entry = 7847;
+UPDATE `creature_template` SET `UnitFlags` = 64 WHERE `entry` = 19511;
+UPDATE `creature_template` SET `UnitFlags` = 64 WHERE `entry` = 21563;
+UPDATE `creature_template` SET `UnitFlags` = 64 WHERE `entry` = 19512;
+UPDATE `creature_template` SET `UnitFlags` = 64 WHERE `entry` = 21564;
+UPDATE `creature_model_info` SET `bounding_radius` = 6.846691 WHERE `modelid` = 18816;
+UPDATE `creature_model_info` SET `bounding_radius` = 5.896758 WHERE `modelid` = 21191;
+UPDATE `conditions` SET `value2` = '1' WHERE `condition_entry` =2260;
+
+DELETE FROM creature_movement_template WHERE entry IN (11583);
+INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
+(11583, 0, 0, -7348.85, -1495.13, 552.515, 100, 0, 0),
+(11583, 0, 1, -7348.54, -1494.18, 552.515, 100, 0, 0),
+(11583, 0, 2, -7392.87, -1475.7, 544.619, 100, 0, 0),
+(11583, 0, 3, -7423.42, -1437.66, 535.314, 100, 0, 0),
+(11583, 0, 4, -7445.25, -1402.11, 523.842, 100, 0, 0),
+(11583, 0, 5, -7460.38, -1372.6, 513.092, 100, 0, 0),
+(11583, 0, 6, -7479.81, -1331.76, 498.759, 100, 0, 0),
+(11583, 0, 7, -7492.58, -1295.35, 488.091, 100, 0, 0),
+(11583, 0, 8, -7502, -1256.5, 476.758, 100, 20000, 0);
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='17085';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'16' WHERE `Entry`='20792';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'16' WHERE `Entry`='20090';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'16' WHERE `Entry`='20079';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='22313';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='22310';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'16' WHERE `Entry`='17153';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='18062';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='17159';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='17160';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='17155';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'16' WHERE `Entry`='18145';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='17154';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='17157';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='17156';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='17158';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='18181';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='18182';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='18400';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'64' WHERE `Entry`='22022';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'16' WHERE `Entry`='21428';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'4' WHERE `Entry`='21706';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='21708';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='21707';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='21060';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='22115';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'16' WHERE `Entry`='21059';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384 WHERE `Entry`='21050';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='22313';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'4' WHERE `Entry`='22298';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'16' WHERE `Entry`='19653';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384 WHERE `Entry`='21267';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='18881';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='20498';
+UPDATE `creature_template` SET `MechanicImmuneMask`=`MechanicImmuneMask`|16384, `SchoolImmuneMask`=`SchoolImmuneMask`|'8' WHERE `Entry`='18882';
+
+UPDATE creature_template SET MovementType=0 WHERE entry IN(11583);
+UPDATE `creature_template` SET `MechanicImmuneMask` = `MechanicImmuneMask`|42106710 WHERE `entry` IN (17954,20631);
+UPDATE `creature` SET `spawndist`= 3, `MovementType`= 1 WHERE `id` IN (15320, 15323);
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES
+(14327, 18363, 1, 0, -18363, 1, 0, ''), (11467, 18363, 1, 0, -18363, 1, 0, ''), (11486, 18363, 1, 0, -18363, 1, 0, ''), (14326, 18363, 1, 0, -18363, 1, 0, '');
+DELETE FROM `reference_loot_template` WHERE `entry` = 18296 AND `item` = 18493;
+DELETE FROM `reference_loot_template` WHERE `entry` = 18296 AND `item` = 18494;
+DELETE FROM `reference_loot_template` WHERE `entry` = 18296 AND `item` = 18497;
+DELETE FROM `reference_loot_template` WHERE `entry` = 18296 AND `item` = 18498;
+INSERT INTO `reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES
+(18450, 18450, 0, 1, 1, 1, 0, 'Robe of Combustion'),
+(18450, 18451, 0, 1, 1, 1, 0, 'Hyena Hide Belt'),
+(18450, 18458, 0, 1, 1, 1, 0, 'Modest Armguards'),
+(18450, 18459, 0, 1, 1, 1, 0, 'Gallant''s Wristguards'),
+(18450, 18460, 0, 1, 1, 1, 0, 'Unsophisticated Hand Cannon'),
+(18450, 18462, 0, 1, 1, 1, 0, 'Jagged Bone Fist'),
+(18450, 18463, 0, 1, 1, 1, 0, 'Ogre Pocket Knife'),
+(18450, 18464, 0, 1, 1, 1, 0, 'Gordok Nose Ring'),
+(18450, 18493, 0, 1, 1, 1, 0, 'Bulky Iron Spaulders'),
+(18450, 18494, 0, 1, 1, 1, 0, 'Denwatcher''s Shoulders'),
+(18450, 18496, 0, 1, 1, 1, 0, 'Heliotrope Cloak'),
+(18450, 18497, 0, 1, 1, 1, 0, 'Sublime Wristguards'),
+(18450, 18498, 0, 1, 1, 1, 0, 'Hedgecutter');
+DELETE FROM `creature_loot_template` WHERE `item` IN (18450,18451,18458,18459,18460,18462,18463,18464,18496) AND `entry` in (14321,14323,14326);
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES
+(14321, 18450, 100, 0, -18450, 1, 0, ''), (14323, 18450, 100, 0, -18450, 1, 0, ''), (14326, 18450, 100, 0, -18450, 1, 0, '');
+DELETE FROM `creature_questrelation` WHERE `quest` = 5528;
+INSERT INTO `creature_questrelation` (`id`, `quest`) VALUES ('14322', '5528');
+UPDATE `creature_template` SET `LootId` = '14322' WHERE `Entry` =14322;
+UPDATE `creature_template` SET `LootId` = '14325' WHERE `Entry` =14325;
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES
+(14322, 18363, 1, 0, -18363, 1, 0, ''), (14325, 18363, 1, 0, -18363, 1, 0, ''), (14322, 18334, 1, 0, -18334, 1, 0, ''), (14325, 18334, 1, 0, -18334, 1, 0, ''),
+(14322, 4595, 23, 0, 1, 6, 0, 'Junglevine Wine'), (14322, 14047, 25, 0, 2, 4, 0, 'Runecloth'), (14322, 18425, 40, 0, 1, 1, 0, 'Kreeg''s Mug'),
+(14322, 18640, 2, 0, 1, 1, 0, 'Happy Fun Rock'), (14325, 14047, 25, 0, 2, 4, 0, 'Runecloth'), (14325, 18502, 0, 1, 1, 1, 0, 'Monstrous Glaive'),
+(14325, 18503, 0, 1, 1, 1, 0, 'Kromcrush''s Chestplate'), (14325, 18505, 0, 1, 1, 1, 0, 'Mugger''s Belt'), (14325, 18507, 0, 1, 1, 1, 0, 'Boots of the Full Moon'),
+(14325, 18640, 2, 0, 1, 1, 0, 'Happy Fun Rock');
