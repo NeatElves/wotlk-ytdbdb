@@ -3111,7 +3111,6 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (8660, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '<Призвать Темного Крикуна Аккарая.>', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (8660, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '<Призвать Каррога.>', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (8661, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Покажите мне ваш ассортимент... э-э... вещей.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(8662, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Пошли!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (8664, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Покажи мне, что у тебя есть на продажу.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (8671, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Вставьте 35 апекситовых осколков в призму.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (8672, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Создать 1 нестабильный настой Зверя из 10 апекситовых осколков.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),

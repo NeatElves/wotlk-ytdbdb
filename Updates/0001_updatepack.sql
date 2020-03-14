@@ -12660,3 +12660,170 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (14322, 18640, 2, 0, 1, 1, 0, 'Happy Fun Rock'), (14325, 14047, 25, 0, 2, 4, 0, 'Runecloth'), (14325, 18502, 0, 1, 1, 1, 0, 'Monstrous Glaive'),
 (14325, 18503, 0, 1, 1, 1, 0, 'Kromcrush''s Chestplate'), (14325, 18505, 0, 1, 1, 1, 0, 'Mugger''s Belt'), (14325, 18507, 0, 1, 1, 1, 0, 'Boots of the Full Moon'),
 (14325, 18640, 2, 0, 1, 1, 0, 'Happy Fun Rock');
+
+UPDATE `creature_template` SET `InhabitType` = 4 WHERE `entry` = 20127;
+UPDATE `gameobject_loot_template` SET `maxcount` = '3' WHERE `entry` =180184 AND `item` =2447;
+UPDATE `conditions` SET `value2` = '1' WHERE `condition_entry` =519;
+DELETE FROM spell_script_target WHERE entry=30098;
+INSERT INTO spell_script_target (entry, `type`, targetEntry, inverseEffectMask) VALUES (30098, 0, 181653, 6), (30098, 1, 17253, 5), (30098, 0, 182483, 3);
+UPDATE `creature` SET `position_z` = '82.5407' WHERE `guid` =102406;
+UPDATE creature_template SET ExtraFlags=ExtraFlags|4096 WHERE Entry=21417;
+UPDATE creature_movement_template SET waittime=5000 WHERE entry=19259;
+UPDATE creature_movement SET waittime=10000 WHERE id IN (125227,125228,125010,125008,125231,125026,125056);
+UPDATE creature_movement SET waittime=5000 WHERE id IN (99982,99981,99980,66056,35933,35520,35830,35196,36043,34738,36202,35561,34712,35166,36086,34734,34707,35916);
+DELETE FROM creature_movement WHERE id =8002;
+UPDATE creature SET spawndist=5, MovementType=1 WHERE guid =8002;
+DELETE FROM `creature` WHERE `guid` = 7818;
+DELETE FROM `creature` WHERE `guid` = 7841;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(7767, 1718, 0, 1, 1, 0, 0, -6150.35, 50.8235, 416.672, 0.777208, 180, 180, 0, 0, 71, 0, 0, 0),
+(7770, 1718, 0, 1, 1, 0, 0, -6122.96, 79.1654, 416.991, 6.14859, 180, 180, 0, 0, 71, 0, 0, 0),
+(7786, 1718, 0, 1, 1, 0, 0, -6137.65, 122.852, 420.845, 5.70716, 180, 180, 0, 0, 71, 0, 0, 0),
+(7791, 1718, 0, 1, 1, 0, 0, -6155.71, 84.8144, 415.915, 4.8443, 180, 180, 0, 0, 71, 0, 0, 0),
+(7798, 1718, 0, 1, 1, 0, 0, -6167.99, 135.883, 423.093, 0.434909, 180, 180, 0, 0, 71, 0, 0, 0),
+(7799, 1718, 0, 1, 1, 0, 0, -6205.47, 99.902, 430.335, 2.27112, 180, 180, 5, 0, 71, 0, 0, 1),
+(7803, 1718, 0, 1, 1, 0, 0, -6152.7, 48.1789, 416.72, 0.306881, 180, 180, 0, 0, 71, 0, 0, 0),
+(7813, 1718, 0, 1, 1, 0, 0, -6111.35, 47.9522, 412.837, 2.55295, 180, 180, 0, 0, 71, 0, 0, 0),
+(7815, 1718, 0, 1, 1, 0, 0, -6040.92, 44.5182, 407.748, 3.17296, 180, 180, 0, 0, 71, 0, 0, 0),
+(7816, 1718, 0, 1, 1, 0, 0, -6073.79, 40.1757, 409.231, 3.7633, 180, 180, 0, 0, 71, 0, 0, 0);
+
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (672902,2131401,2201801,2201802,2131402,2451802,2439802,2439803,2439804,2889701);
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(2201801, 0, 0, 31, 22016, 10, 0, 0, 0, 0, -5000, 0, 0, 0, 0, 0, 0, 0, ''),
+(2201801, 2000, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2201801, 4000, 0, 1, 66, 0, 0, 22016, 10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'force 22016 to: emote'),
+(2201802, 0, 0, 31, 22016, 10, 0, 0, 0, 0, -5000, 0, 0, 0, 0, 0, 0, 0, ''),
+(2201802, 2000, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2201802, 4000, 0, 0, 0, 0, 0, 22016, 10, 4, 2000002982, 0, 0, 0, 0, 0, 0, 0, 'force 22016 to: say'),
+(2131401, 4000, 0, 1, 66, 0, 0, 19740, 10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'force 19740 to: emote'),
+(2131401, 2000, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2131401, 0, 0, 31, 19740, 10, 0, 0, 0, 0, -5000, 0, 0, 0, 0, 0, 0, 0, ''),
+(672902, 1000, 0, 29, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'npcFlags added'),
+(672902, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 2000001817, 0, 0, 0, 0, 0, 0, 0, ''),
+(672902, 2000, 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'wp pause'),
+(2451802, 1000, 0, 20, 2, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'set pathID = 0'),
+(2439802, 0, 0, 39, 1, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'fly on'),
+(2439802, 1000, 0, 15, 43831, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2439803, 0, 0, 39, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'fly off'),
+(2439803, 0, 0, 14, 43831, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2439804, 5000, 0, 15, 43754, 0, 0, 24398, 106147, 17, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2889701, 1000, 0, 20, 1, 100, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'movement chenged to 1:random');
+DELETE FROM dbscripts_on_creature_death WHERE id IN (21419);
+INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(21419, 2000, 0, 20, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'movement chenged to 2:waypoint'),
+(21419, 10000, 0, 23, 20577, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'temp model removed!');
+UPDATE `creature_movement` SET `script_id` = 2201801 WHERE `id` IN (SELECT guid FROM `creature` WHERE `id` =22018) AND `script_id` = 2131401;
+UPDATE `creature_movement` SET `script_id` = 2201802 WHERE `id` IN (SELECT guid FROM `creature` WHERE `id` =22018) AND `script_id` = 2131402;
+UPDATE `creature_addon` SET `auras` = NULL WHERE `auras` LIKE '13864';
+UPDATE `creature_addon` SET `auras` = NULL WHERE `auras` LIKE '15288';
+UPDATE `creature_addon` SET `auras` = NULL WHERE `auras` LIKE '55078';
+UPDATE `creature_template` SET `UnitFlags` = '33024' WHERE `Entry` =19446;
+DELETE FROM `creature_addon` WHERE `guid` IN (123169,123170,123171,123172,136966,144696,144698,144699,116578,118372,118371,118370,118369);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(96154, 1, 2477.37, -5551, 420.647, 0.746414, 300000, 2838301, NULL),
+(96153, 1, 2511.04, -5590.1, 420.646, 6.03884, 300000, 2838302, NULL);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(88722, 28391, 609, 1, 1, 0, 0, 2520.24, -5599.18, 420.727, 3.71755, 20, 20, 0, 0, 2614, 0, 0, 0),
+(88730, 28391, 609, 1, 69, 25361, 0, 2483.3, -5545.52, 420.727, 4.79965, 20, 20, 0, 0, 2614, 0, 0, 0),
+(88726, 28391, 609, 1, 69, 0, 0, 2520.34, -5588.22, 420.727, 1.0821, 20, 20, 0, 0, 2614, 0, 0, 0),
+(88722, 28391, 609, 1, 69, 0, 0, 2523.57, -5591.07, 421.484, 3.82227, 20, 20, 0, 0, 2614, 0, 0, 0);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(148738, 28394, 609, 1, 69, 0, 0, 2513.98, -5614.97, 420.727, 3.15905, 20, 20, 0, 0, 2614, 0, 0, 0),
+(148739, 28394, 609, 1, 69, 0, 0, 2516.23, -5593.2, 420.647, 3.2567, 20, 20, 0, 0, 2614, 0, 0, 0),
+(148740, 28394, 609, 1, 69, 0, 0, 2525.87, -5595.92, 420.727, 2.87979, 20, 20, 0, 0, 2614, 0, 0, 0),
+(148741, 28394, 609, 1, 69, 0, 0, 2489.18, -5545.59, 421.477, 3.87463, 20, 20, 0, 0, 2614, 0, 0, 0),
+(148742, 28394, 609, 1, 69, 0, 0, 2507.27, -5621.15, 420.727, 1.13446, 20, 20, 0, 0, 2614, 0, 0, 0),
+(148743, 28394, 609, 1, 69, 0, 0, 2489.81, -5536.31, 420.727, 0.558505, 20, 20, 0, 0, 2614, 0, 0, 0);
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(2838301, 0, 0, 21, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Acherus Necromancer - active'),
+(2838301, 3000, 0, 15, 51516, 0, 0, 28391, 10, 1, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 7000, 0, 15, 51517, 0, 0, 28391, 88730, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 8000, 0, 14, 29266, 0, 0, 28391, 88730, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 10000, 0, 22, 1770, 129, 0, 28391, 88730, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'temp faction'),
+(2838301, 11000, 0, 3, 0, 0, 0, 28391, 88730, 23, 0, 0, 0, 0, 0, 0, 0, 4.16204, ''),
+(2838301, 11000, 0, 28, 8, 0, 0, 28391, 88730, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'STATE_KNEEL'),
+(2838301, 15000, 0, 0, 0, 0, 0, 28391, 88730, 23, 2000003348, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 20000, 0, 0, 0, 0, 0, 28357, 10, 7, 2000003351, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 25000, 0, 3, 0, 0, 0, 28357, 10, 7, 0, 0, 0, 0, 0, 0, 0, 2.78367, ''),
+(2838301, 28000, 0, 0, 0, 0, 0, 28357, 10, 7, 2000003354, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 31000, 0, 3, 0, 0, 0, 28357, 10, 7, 0, 0, 0, 0, 0, 0, 0, 1.50472, ''),
+(2838301, 31000, 0, 0, 0, 0, 0, 0, 0, 0, 2000003356, 2000003357, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 35000, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2482.23, -5546.44, 420.644, 0.761266, ''),
+(2838301, 39000, 0, 1, 133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 44000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 44000, 0, 15, 51537, 0, 0, 28391, 88730, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 46000, 0, 15, 51519, 0, 0, 28391, 88730, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 48000, 0, 28, 0, 0, 0, 28391, 88730, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'STATE_STAND'),
+(2838301, 50000, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2477.37, -5551, 420.647, 0.77, ''),
+(2838301, 54000, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.746414, ''),
+(2838301, 55000, 0, 0, 0, 0, 0, 28357, 10, 7, 2000003359, 2000003360, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 60000, 0, 0, 0, 0, 0, 28391, 88730, 23, 2000003361, 2000003362, 0, 0, 0, 0, 0, 0, ''),
+(2838301, 61000, 0, 21, 1, 0, 0, 28391, 88730, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Death Knight Initiate - active'),
+(2838301, 61000, 0, 25, 1, 0, 0, 28391, 88730, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'RUN ON'),
+(2838301, 62000, 0, 20, 2, 0, 0, 28391, 88730, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'movement chenged to 2:waypoint'),
+(2838301, 63000, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'movement chenged to 0:idle'),
+(2838301, 65000, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Acherus Necromancer - unactive'),
+(2838302, 0, 0, 21, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Acherus Necromancer - active'),
+(2838302, 3000, 0, 15, 51516, 0, 0, 28394, 148739, 1, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 7000, 0, 15, 51517, 0, 0, 28394, 148739, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 8000, 0, 14, 29266, 0, 0, 28394, 148739, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 10000, 0, 22, 1770, 129, 0, 28394, 148739, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'temp faction'),
+(2838302, 11000, 0, 3, 0, 0, 0, 28394, 148739, 23, 0, 0, 0, 0, 0, 0, 0, 3.07005, ''),
+(2838302, 11000, 0, 28, 8, 0, 0, 28394, 148739, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'STATE_KNEEL'),
+(2838302, 15000, 0, 0, 0, 0, 0, 28394, 148739, 23, 2000003347, 2000003346, 2000003363, 0, 0, 0, 0, 0, ''),
+(2838302, 20000, 0, 0, 0, 0, 0, 28357, 20, 7, 2000003349, 2000003352, 2000003350, 2000003364, 0, 0, 0, 0, ''),
+(2838302, 26000, 0, 0, 0, 0, 0, 28357, 20, 7, 2000003353, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 31000, 0, 3, 0, 0, 0, 28357, 20, 7, 0, 0, 0, 0, 0, 0, 0, 1.26755, ''),
+(2838302, 35000, 0, 0, 0, 0, 0, 28357, 20, 7, 2000003355, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 41000, 0, 3, 0, 0, 0, 28357, 20, 7, 0, 0, 0, 0, 0, 0, 0, 6.19669, ''),
+(2838302, 41000, 0, 0, 0, 0, 0, 0, 0, 0, 2000003356, 2000003357, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 46000, 0, 0, 0, 0, 0, 0, 0, 0, 2000003358, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 50000, 0, 15, 26047, 0, 0, 28405, 148744, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 50000, 0, 15, 26047, 0, 0, 28405, 148745, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 50000, 0, 15, 26047, 0, 0, 28405, 148746, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 52000, 0, 1, 0, 0, 0, 28405, 148744, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 52000, 0, 1, 0, 0, 0, 28405, 148745, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 52000, 0, 1, 0, 0, 0, 28405, 148746, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 53000, 0, 22, 2093, 129, 0, 28405, 148744, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'temp faction'),
+(2838302, 53000, 0, 22, 2093, 129, 0, 28405, 148745, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'temp faction'),
+(2838302, 53000, 0, 22, 2093, 129, 0, 28405, 148746, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'temp faction'),
+(2838302, 53000, 0, 20, 2, 0, 0, 28394, 148739, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'movement chenged to 2:waypoint'),
+(2838302, 67000, 0, 1, 374, 0, 0, 28405, 148744, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 67000, 0, 1, 374, 0, 0, 28405, 148745, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 67000, 0, 1, 374, 0, 0, 28405, 148746, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 69000, 0, 18, 0, 0, 0, 28405, 148744, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 69000, 0, 18, 0, 0, 0, 28405, 148745, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 69000, 0, 18, 0, 0, 0, 28405, 148746, 23, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2838302, 72000, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'movement chenged to 0:idle'),
+(2838302, 73000, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Acherus Necromancer - unactive');
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(148744, 28405, 609, 1, 69, 0, 0, 2520.44, -5593.01, 420.727, 3.4383, 20, 20, 0, 0, 5341, 0, 0, 2),
+(148745, 28405, 609, 1, 69, 0, 0, 2516.65, -5596.68, 420.727, 1.39626, 20, 20, 0, 0, 5341, 0, 0, 2),
+(148746, 28405, 609, 1, 69, 0, 0, 2515.93, -5589.89, 420.727, 4.92183, 20, 20, 0, 0, 5341, 0, 0, 2);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(148744, 1, 2520.44, -5593.01, 420.727, 3.4383, 10000, 2840501, NULL),
+(148745, 1, 2516.65, -5596.68, 420.727, 1.39626, 10000, 2840501, NULL),
+(148746, 1, 2515.93, -5589.89, 420.727, 4.92183, 10000, 2840501, NULL);
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(2840501, 0, 0, 1, 373, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2840501, 1000, 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'wp pause');
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
+(2000003346, 'I hurt... suffering unbearable... end my pain... I beg of you!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL),
+(2000003347, 'Who... who are you? Who.. what am I?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL),
+(2000003348, 'I return from the grave to do my master''s bidding.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL),
+(2000003349, 'Another failure...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 0, NULL),
+(2000003350, 'This one has awoken too soon. It retains emotion and memory...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 0, NULL),
+(2000003351, 'The Lich King will be pleased with this initiate.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 5, 0, NULL),
+(2000003352, 'Useless...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 0, NULL),
+(2000003353, 'You have been measured and found wanting...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 25, 0, NULL),
+(2000003354, 'Place upon it the trappings befitting a herald of Arthas.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 0, NULL),
+(2000003355, 'Dispose of it...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 0, NULL),
+(2000003356, 'Yes, instructor.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 0, NULL),
+(2000003357, 'Right away, instructor.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 0, NULL),
+(2000003358, 'Rise, minions. Rise and feast upon the weak!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 22, 0, NULL),
+(2000003359, 'Stand and be measured! Rise, for your master awaits your arrival. Go now!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 5, 0, NULL),
+(2000003360, 'Listen, death knight... Listen for the voice of your master. He calls to you now.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 5, 0, NULL),
+(2000003361, 'Victory to the Scourge!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 66, 0, NULL),
+(2000003362, 'Death to all that oppose us!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 66, 0, NULL),
+(2000003363, 'I have awoken to a nightmare?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL),
+(2000003364, 'Pathetic...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 0, NULL);
