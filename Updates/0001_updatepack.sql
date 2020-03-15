@@ -5096,6 +5096,7 @@ INSERT INTO creature_movement_template (entry, pathId, point, position_x, positi
 
 UPDATE `game_event_creature_data` SET `guid` = '54895' WHERE `guid` =57895 AND `event` =2;
 
+DELETE FROM dbscripts_on_gossip WHERE id IN (404100,404200,795900,737900,737901,737902);
 INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (404100, 0, 30, 315, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'fly to Rut''theran Village'),
 (404200, 0, 30, 316, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'fly to Thunder Bluff'),
@@ -12827,3 +12828,62 @@ INSERT INTO `dbscript_string` (`entry`, `content_default`, `content_loc1`, `cont
 (2000003362, 'Death to all that oppose us!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 66, 0, NULL),
 (2000003363, 'I have awoken to a nightmare?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL),
 (2000003364, 'Pathetic...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 0, NULL);
+
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (2889702);
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(2889702, 1000, 0, 21, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'active'),
+(2889702, 1000, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'RUN ON');
+DELETE FROM dbscripts_on_go_template_use WHERE id IN (194739);
+DELETE FROM dbscripts_on_gossip WHERE id IN (755900,755901,755902,755903,756000,756001,756002,756003,889100);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(756000, 0, 0, 8, 17901, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(756000, 1000, 0, 15, 31807, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(756001, 0, 0, 8, 17901, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(756001, 1000, 0, 15, 31814, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(756002, 0, 0, 8, 17901, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(756002, 1000, 0, 15, 31813, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(756003, 0, 0, 8, 17901, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(756003, 1000, 0, 15, 31812, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(755900, 0, 0, 8, 17900, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(755900, 1000, 0, 15, 31808, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(755901, 0, 0, 8, 17900, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(755901, 1000, 0, 15, 31810, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(755902, 0, 0, 8, 17900, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(755902, 1000, 0, 15, 31811, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(755903, 0, 0, 8, 17900, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(755903, 1000, 0, 15, 31815, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(889100, 1000, 0, 0, 0, 0, 0, 0, 0, 2, 2000001182, 0, 0, 0, 0, 0, 0, 0, 'say_summon_horseman_1'),
+(889100, 3000, 0, 0, 0, 0, 0, 0, 0, 2, 2000001183, 0, 0, 0, 0, 0, 0, 0, 'say_summon_horseman_2'),
+(889100, 5000, 0, 0, 0, 0, 0, 0, 0, 2, 2000001184, 0, 0, 0, 0, 0, 0, 0, 'say_summon_horseman_3'),
+(889100, 8000, 0, 0, 0, 0, 0, 0, 0, 2, 2000001185, 0, 0, 0, 0, 0, 0, 0, 'say_summon_horseman_4'),
+(889100, 8000, 0, 15, 42909, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'cast Headless Horseman Climax - Summoning Rhyme, Shake, Medium'),
+(889100, 10000, 0, 10, 23682, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1765.28, 1347.46, 17.5514, 0.100363, 'summon Headless Horseman');
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(88730, 1, 2453.87, -5545.37, 420.643, 3.84632, 0, 0, NULL),
+(88730, 2, 2423.38, -5574.52, 420.631, 4.3346, 0, 0, NULL),
+(88730, 3, 2423.38, -5610.59, 420.6, 4.31103, 0, 0, NULL),
+(88730, 4, 2410.19, -5626.02, 420.654, 3.70549, 0, 0, NULL),
+(88730, 5, 2381.18, -5637.17, 420.858, 3.73062, 0, 0, NULL),
+(88730, 6, 2372.68, -5645.34, 426.017, 3.99137, 0, 0, NULL),
+(88730, 7, 2348.25, -5666.51, 426.029, 4.10762, 11000, 2839101, NULL),
+(88730, 8, 2373.07, -5652.69, 426.126, 0.618087, 0, 0, NULL),
+(88730, 9, 2382.63, -5645.56, 421.512, 0.402889, 3000, 2839102, NULL);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(148739, 1, 2516.23, -5593.2, 420.647, 3.07005, 100000, 2839401, NULL);
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(2839101, 3000, 0, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2839101, 9000, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2839102, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'RUN OFF'),
+(2839102, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'movement chenged to 0:idle'),
+(2839102, 1000, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Death Knight Initiate- unactive'),
+(2839102, 2000, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'despawn');
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(2839401, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'movement chenged to 0:idle'),
+(2839401, 1000, 0, 26, 0, 0, 0, 28405, 148744, 16, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2839401, 1000, 0, 26, 0, 0, 0, 28405, 148745, 16, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(2839401, 1000, 0, 26, 0, 0, 0, 28405, 148746, 16, 0, 0, 0, 0, 0, 0, 0, 0, '');
+UPDATE `gameobject` SET `position_x` = '-9262.57', `position_y` = '356.955', `position_z` = '77.8105', `orientation` = '2.05949', `rotation2` = '0.857168', `rotation3` = '0.515037' WHERE `guid` =1022;
+UPDATE `gossip_menu_option` SET `action_script_id` = '755903' WHERE `menu_id` =7559 AND `id` =3;
+UPDATE `gossip_menu_option` SET `action_script_id` = '756003' WHERE `menu_id` =7560 AND `id` =3;
+DELETE FROM `creature_template_addon` WHERE `entry` = 11326;
+INSERT INTO `creature_template_addon` (`entry`, `auras`) VALUES (11326, '18873');

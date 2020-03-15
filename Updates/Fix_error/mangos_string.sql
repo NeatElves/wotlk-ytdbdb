@@ -330,9 +330,9 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (370, 'Required heroic keys:', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (371, 'Required quest (heroic difficulty):', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (372, 'No achievement!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(373, 'UNUSED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(374, 'UNUSED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(375, 'UNUSED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(373, 'Static custom chat: channel ''%s'' has password set.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(374, 'Static custom chat: channel ''%s'' is not eligible for conversion.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(375, 'Static custom chat: channel ''%s'', new status: %s', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (376, '%u - |cffffffff|Hpool:%u|h[%s]|h|r AutoSpawn: %u MaxLimit: %u Creatures: %u GameObjecs: %u Pools %u', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (377, 'No pools found for map ''%s'' (Id:%u)', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (378, 'You can''t use this command at non-instanceable map ''%s'' (Id:%u). Use .lookup pool command instead.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -563,10 +563,10 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (609, 'The Alliance Flag was returned to its base by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (610, 'The Horde flag was returned to its base by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (611, 'The Horde flag was picked up by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(612, 'The Alliance Flag was picked up by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(613, 'The flags are now placed at their bases.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(614, 'The Alliance flag is now placed at its base.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(612, 'The Alliance Flag was picked up by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`) VALUES
+(613, 'The flags are now placed at their bases.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(614, 'The Alliance flag is now placed at its base.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (615, 'The Horde flag is now placed at its base.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (616, 'The battle for the Strand of the Ancients begins in 2 minutes.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (617, 'The battle for the Strand of the Ancients begins in 1 minute.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
