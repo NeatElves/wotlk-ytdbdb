@@ -33,11 +33,6 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (88801, 888, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 18, 512, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Watcher Dodds - Set UnitFlag IMMUNE_TO_NPC on Spawn'),
 (88802, 888, 21, 0, 100, 0, 0, 0, 0, 0, 0, 0, 18, 512, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Watcher Dodds - Restore UnitFlag IMMUNE_TO_NPC on Reached Home'),
-(1623101, 16231, 1, 30, 100, 1, 10000, 60000, 300000, 600000, 0, 0, 53, 10035, 0, 0, 22, 1, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Dame Auriferous - Start Relay Script 1 and Set Phase 1 OOC (Phase 0)'),
-(1623102, 16231, 1, 29, 100, 1, 80000, 120000, 80000, 120000, 0, 0, 53, 10036, 0, 0, 22, 2, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Dame Auriferous - Start Relay Script 2 and Set Phase 2 OOC (Phase 1)'),
-(1623103, 16231, 1, 27, 100, 1, 80000, 120000, 80000, 120000, 0, 0, 53, 10037, 0, 0, 22, 3, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Dame Auriferous - Start Relay Script 3 and Set Phase 3 OOC (Phase 2)'),
-(1623104, 16231, 1, 23, 100, 1, 80000, 120000, 80000, 120000, 0, 0, 53, 10038, 0, 0, 22, 4, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Dame Auriferous - Start Relay Script 4 and Set Phase 4 OOC (Phase 3)'),
-(1623105, 16231, 1, 15, 100, 1, 80000, 120000, 80000, 120000, 0, 0, 53, 10039, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Dame Auriferous - Start Relay Script 5 and Set Phase 0 OOC (Phase 4)'),
 (2066601, 20666, 30, 0, 100, 1, 5, 20845, 0, 0, 0, 0, 0, 0, 0, 0, 11, 35740, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Blade''s Edge - Orb Trigger 01 - Cast Holy Nova on Receive AI Event 5'),
 (2066602, 20666, 30, 491521, 100, 1, 5, 20845, 0, 0, 0, 0, 23, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Blade''s Edge - Orb Trigger 01 - Increment Phase on Receive AI Event 5 (Phase 1-14)'),
 (2066603, 20666, 30, 458751, 100, 1, 5, 20845, 0, 0, 0, 0, 22, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Blade''s Edge - Orb Trigger 01 - Set Phase 4 on Receive AI Event 5 (Phase 16)'),
@@ -156,7 +151,7 @@ INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `c
 (10164, 0, -11205, 0, '23391 - Random Say'),
 (10164, 0, -11204, 0, '23391 - Random Say');
 
-UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,1368,16231,20666,21025,22990,23059,23061,23118,23261,23281,23282,30366,32838,33211,33224);
+UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,1368,20666,21025,22990,23059,23061,23118,23261,23281,23282,30366,32838,33211,33224);
 
 REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 ('1882908','18829','34','0','100','1','34436','-1','0','0','0','0','13','-100','1','0','0','0','0','0','0','0','0','0','Hellfire Warder - Reset Threat on target hit by Shadow Burst');

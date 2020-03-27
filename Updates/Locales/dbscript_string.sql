@@ -3369,6 +3369,9 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Победа будет за Пл
 UPDATE `dbscript_string` SET `content_loc8` = 'Смерть всем, кто противостоит нам!' WHERE `entry` = 2000003362;
 UPDATE `dbscript_string` SET `content_loc8` = 'Я... что это, страшный сон?' WHERE `entry` = 2000003363;
 UPDATE `dbscript_string` SET `content_loc8` = 'Жалкое зрелище...' WHERE `entry` = 2000003364;
+UPDATE `dbscript_string` SET `content_loc8` = 'Нельзя подводить командира! Кель''тас нас освободит!' WHERE `entry` = 2000003365;
+UPDATE `dbscript_string` SET `content_loc8` = 'Хмм...' WHERE `entry` = 2000003366;
+UPDATE `dbscript_string` SET `content_loc8` = 'Да. Это помогло.' WHERE `entry` = 2000003367;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;
