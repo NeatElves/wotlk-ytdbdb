@@ -15138,8 +15138,8 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid
 (8471, 1121, 0, 1, 1, 0, 0, -5127.64, -1692.72, 497.961, 5.73283, 15, 15, 1, 0, 148, 165, 0, 1),
 (2576, 1124, 0, 1, 1, 0, 0, -5556.3, 521.664, 382.386, 4.04916, 180, 180, 0, 0, 160, 350, 0, 0),
 (2673, 1124, 0, 1, 1, 0, 0, -5602.53, 656.692, 384.234, 2.7131, 180, 180, 5, 0, 160, 350, 0, 1),
-(9101, 1124, 0, 1, 1, 0, 0, -5526.6, 700.04, 395.057, 1.5888, 180, 180, 5, 0, 160, 350, 0, 1),
-(78401, 1124, 0, 1, 1, 0, 0, -5590.15, 736.674, 391.81, 2.6762, 180, 180, 0, 0, 160, 350, 0, 0),
+(50503, 1124, 0, 1, 1, 0, 0, -5526.6, 700.04, 395.057, 1.5888, 180, 180, 5, 0, 160, 350, 0, 1),
+(50506, 1124, 0, 1, 1, 0, 0, -5590.15, 736.674, 391.81, 2.6762, 180, 180, 0, 0, 160, 350, 0, 0),
 (63591, 1124, 0, 1, 1, 0, 0, -5595.8, 713.236, 382.348, 4.06796, 180, 180, 5, 0, 160, 350, 0, 1),
 (63592, 1124, 0, 1, 1, 0, 0, -5635.81, 763.415, 387.562, 0.922635, 180, 180, 0, 0, 160, 350, 0, 0),
 (80702, 1124, 0, 1, 1, 0, 0, -5644.7, 677.735, 388.477, 0.729619, 180, 180, 0, 0, 160, 350, 0, 0),
@@ -16018,3 +16018,25 @@ UPDATE `creature_template` SET `SpeedWalk`= (2.5 / 2.5), `SpeedRun`= (13 / 7) WH
 UPDATE `creature_template` SET `SpeedWalk`= (2.5 / 2.5), `SpeedRun`= (9.7 / 7) WHERE `entry`=14566;
 UPDATE `creature_template` SET `SpeedWalk`= (2.5 / 2.5) WHERE `entry`=15730;
 UPDATE `creature_template` SET `SpeedWalk`= (0.01 / 2.5), `SpeedRun`= (0.01 / 7) WHERE `entry`=16363;
+
+UPDATE `creature_template` SET `PickpocketLootId` = '0' WHERE `Entry` IN (7276,7286);
+DELETE FROM `pickpocketing_loot_template` WHERE `entry` IN (7276,7286);
+UPDATE `gossip_menu_option` SET `action_script_id` = '94001' WHERE `menu_id` =940 AND `id` =0;
+UPDATE `gossip_menu_option` SET `action_script_id` = '94101' WHERE `menu_id` =941 AND `id` =0;
+UPDATE `gossip_menu_option` SET `action_script_id` = '94101' WHERE `menu_id` =941 AND `id` =1;
+DELETE FROM `dbscripts_on_gossip` WHERE id IN (94000,94100);
+
+DELETE FROM creature_linking WHERE guid IN (67176,76201,75813);
+INSERT INTO creature_linking (guid, master_guid, flag) VALUES (67176, 75813, 3), (76201, 75813, 3);
+UPDATE `creature` SET `position_x` = '7198.52', `position_y` = '-7093.96', `position_z` = '66.5416', `orientation` = '0.366519', `MovementType` = '2' WHERE `guid` =55972;
+DELETE FROM creature_movement_template WHERE entry=16204;
+INSERT INTO creature_movement_template (entry, pathId, point, position_x, position_y, position_z, orientation, waittime, script_id, comment) VALUES
+(16204, 0, 1, 7198.52, -7093.96, 66.5416, 0.366519, 1800000, 1620401, 'Start Magister Idonis and Arcanist Janeda dialogue');
+DELETE FROM dbscripts_on_creature_movement WHERE id=1620401;
+INSERT INTO dbscripts_on_creature_movement (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1620401, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2000000242, 0, 0, 0, 0, 0, 0, 0, 'Magister Idoni - say text'),
+(1620401, 6000, 0, 0, 0, 0, 0, 16240, 55973, 16, 2000000243, 0, 0, 0, 0, 0, 0, 0, 'Arcanist Janeda - say text');
+DELETE FROM dbscript_string WHERE entry IN (2000000242,2000000243);
+INSERT INTO dbscript_string (entry, content_default, broadcast_text_id, comment) VALUES
+(2000000242,'Why doesn''t Kaendris move against Dar''Khan yet?  What is it we''re waiting for?',0,'Magister Idonis 16204'),
+(2000000243,'We must remain focused on our work.  Once the sanctum starts producing at full capacity, Silvermoon will be forced to send help.  Functioning arcane sanctums are in short supply.',0,'Arcanist Janeda 16240');

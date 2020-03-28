@@ -247,8 +247,8 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Ничего ты не получ
 UPDATE `dbscript_string` SET `content_loc8` = 'НИКТО НЕ ПРОЙДЕТ ЧЕРЕЗ МЕНЯ' WHERE `entry` = 2000000239;
 UPDATE `dbscript_string` SET `content_loc8` = 'Чем дольше вы тянете, тем короче будущее, которое я могу предсказать!' WHERE `entry` = 2000000240;
 UPDATE `dbscript_string` SET `content_loc8` = 'Поспеши, $n. Моя судьба в твоих руках.' WHERE `entry` = 2000000241;
-UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000000242;
-UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000000243;
+UPDATE `dbscript_string` SET `content_loc8` = 'Почему Каэндрис все еще не предпринял никаких мер насчет Дар''Кхана? Чего он ждет?' WHERE `entry` = 2000000242;
+UPDATE `dbscript_string` SET `content_loc8` = 'Нельзя отвлекаться от работы! Как только храм начнет работать в полную силу, Луносвет будет вынужден прислать помощь. Действующих чародейских храмов очень мало.' WHERE `entry` = 2000000243;
 UPDATE `dbscript_string` SET `content_loc8` = 'Возьми манящую свечу из этого ящика, $n.' WHERE `entry` = 2000000244;
 UPDATE `dbscript_string` SET `content_loc8` = 'Я... Мне... нехорошо.' WHERE `entry` = 2000000245;
 UPDATE `dbscript_string` SET `content_loc8` = 'Мой разум... моя плоть... я... гнию!' WHERE `entry` = 2000000246;
