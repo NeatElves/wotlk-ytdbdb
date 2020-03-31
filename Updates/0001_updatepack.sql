@@ -16144,5 +16144,24 @@ DELETE FROM `creature_addon` WHERE `guid` IN (73686,73690,73702,73712,73716);
 UPDATE `creature_template` SET `SpeedWalk` = (1.66667 / 2.5) WHERE `entry` IN (3275,5841);
 
 DELETE FROM `gameobject` WHERE `guid` = 28182;
-# Dalaran book autoclose & despawn
-UPDATE `gameobject_template` SET `data3` = '60000', `data5` = '1' WHERE `entry` IN (192651,192652,192653,192706,192707,192708,192709,192710,192711,192713,192865,192866,192867,192868,192869,192870,192871,192872,192874,192880,192881,192882,192883,192884,192885,192886,192887,192888,192889,192890,192891,192894,192895,192896,192905);
+
+UPDATE creature_onkill_reputation SET MaxStanding1=4 WHERE creature_id IN (18797,20662);
+DELETE FROM `spell_script_target` WHERE `entry` = 34303;
+INSERT INTO `spell_script_target` (`entry`, `type`, `targetEntry`, `inverseEffectMask`) VALUES
+(34303, 1, 16975, 0),(34303, 1, 16974, 0),(34303, 1, 20145, 0);
+
+UPDATE `gameobject_template` SET `data2` = '3000' WHERE `entry` in (138493,176575,176996,177184,177210,177237,177238,179588,183445,191819,192683,181173,191550,192014);
+UPDATE `gameobject_template` SET `data2` = '2750' WHERE `entry` in (180810);
+UPDATE `gameobject_template` SET `data2` = '20000' WHERE `entry` in (185916);
+UPDATE `gameobject_template` SET `data2` = '180000' WHERE `entry` in (177746);
+UPDATE `gameobject_template` SET `data2` = '45000' WHERE `entry` in (179672,179673,179674);
+UPDATE `gameobject_template` SET `data3` = '90000' WHERE `entry` =185565;
+UPDATE `gameobject_template` SET `data3` = '310000' WHERE `entry` =186482;
+
+UPDATE creature_movement_template SET waittime=5000 WHERE entry IN (14483, 14482);
+UPDATE `creature_linking` SET `flag` = '3' WHERE `guid` =136932;
+UPDATE `creature_linking` SET `flag` = '3' WHERE `guid` =136933;
+UPDATE creature_template_addon SET bytes1=0, b2_1_pvp_state=16 WHERE entry=9623;
+UPDATE creature_template_addon SET bytes1=0 WHERE entry=11016;
+UPDATE creature_template_addon SET bytes1=0, b2_1_pvp_state=16 WHERE entry=9999;
+UPDATE creature_template_addon SET bytes1=0, b2_1_pvp_state=16 WHERE entry=5644;

@@ -35,8 +35,8 @@ UPDATE gameobject_template SET data2=5, data3=0, data8=0 WHERE entry=176110;
 -- Dawn's Gambit: add data from GO trap 176110 until we are able to trigger trap GOs without spells
 UPDATE gameobject_template SET data2=5, data3=18110, data4=1, data8=1 WHERE entry=177304; 
 
--- The Demon Seed GO: make it despawnable on use with short autoclose value
-UPDATE gameobject_template SET data3=65536, data5=1 WHERE entry=3524;
+-- The Demon Seed GO: make it despawnable on use with short autoclose value (autoclose = autoCloseTime / IN_MILLISECONDS (prior to 3.0.3, conversion was / 0x10000))
+UPDATE gameobject_template SET data3=1000, data5=1 WHERE entry=3524;
 
 -- Add missing GO template 175622 spawn by GO Rookery Egg 175124 (guessed data)
 DELETE FROM gameobject_template WHERE entry=175622;
@@ -70,6 +70,14 @@ UPDATE gameobject_template SET data1=3701 WHERE entry=153556;
 UPDATE gameobject_template SET data8=1 WHERE entry=183929; -- set serverside so that it's not visible to players
 -- Sealed Tome traps
 UPDATE gameobject_template SET data8=1 WHERE entry IN (181831,181838,181840,181842,181844);
+-- Corki's Prison - make data match 182351 (autoclose = autoCloseTime / IN_MILLISECONDS (prior to 3.0.3, conversion was / 0x10000))
+UPDATE gameobject_template SET data2=300000 WHERE entry IN (182349,182350);
+
+-- ============================================================
+-- WOTLK section
+-- ============================================================
+-- Dalaran book: make it despawnable on use with autoclose value (autoclose = autoCloseTime / IN_MILLISECONDS (prior to 3.0.3, conversion was / 0x10000))
+UPDATE gameobject_template SET data3=180000, data5=1 WHERE entry IN (192651,192652,192653,192706,192707,192708,192709,192710,192711,192713,192865,192866,192867,192868,192869,192870,192871,192872,192874,192880,192881,192882,192883,192884,192885,192886,192887,192888,192889,192890,192891,192894,192895,192896,192905);
 
 -- -------------------------------
 -- Creature custom changes
