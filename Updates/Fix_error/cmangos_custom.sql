@@ -72,6 +72,8 @@ UPDATE gameobject_template SET data8=1 WHERE entry=183929; -- set serverside so 
 UPDATE gameobject_template SET data8=1 WHERE entry IN (181831,181838,181840,181842,181844);
 -- Corki's Prison - make data match 182351 (autoclose = autoCloseTime / IN_MILLISECONDS (prior to 3.0.3, conversion was / 0x10000))
 UPDATE gameobject_template SET data2=300000 WHERE entry IN (182349,182350);
+-- Consuming Flames Trap
+UPDATE gameobject_template SET data3=0, data8=1 WHERE entry=178673; -- 21650, 0
 
 -- ============================================================
 -- WOTLK section
