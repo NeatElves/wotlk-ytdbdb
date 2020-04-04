@@ -1,5 +1,5 @@
 -- =========================================================================================================================================================
--- =================                    APPLY LATEST ITEM NAMES AND REFERENCE NAMES TO LOOT / REFERENCE / VENDOR TABLES                    ================= 
+-- =================                    APPLY LATEST ITEM NAMES AND REFERENCE NAMES TO LOOT / REFERENCE / VENDOR TABLES                    =================
 -- =========================================================================================================================================================
 UPDATE `reference_loot_template` SET comments='';
 UPDATE `reference_loot_template` ct JOIN `item_template` it ON it.entry = ct.item AND ct.MinCountOrRef > 0 SET ct.comments = CONCAT(ct.comments, "", it.name);
@@ -121,7 +121,7 @@ UPDATE conditions SET comments=CONCAT('Player is Dead OR NOT Within ',value2,'y 
 UPDATE conditions SET comments=CONCAT('All Players in Group are Dead OR NOT Within ',value2,'y of Source') WHERE type=36 AND value1=1 AND value2 !=0 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
 UPDATE conditions SET comments=CONCAT('All Players in Instance are Dead OR NOT Within ',value2,'y of Source') WHERE type=36 AND value1=2 AND value2 !=0 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
 UPDATE conditions SET comments=CONCAT('Creature Source is Dead') WHERE type=36 AND value1=3 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
-UPDATE conditions SET comments=CONCAT('Creature of Entry ',value1,' Found Alive Within ',value2,'y of Source') WHERE type=37 AND comments IS NULL; 
+UPDATE conditions SET comments=CONCAT('Creature of Entry ',value1,' Found Alive Within ',value2,'y of Source') WHERE type=37 AND comments IS NULL;
 -- CONDITION_PVP_SCRIPT
 
 -- NOT, OR, AND (Run a few times to completely fill out the most complex conditions)
@@ -129,12 +129,12 @@ UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions)
    SET t.comments = CONCAT('NOT (',t1.comments,')')
  WHERE t.value1 = t1.condition_entry AND t.comments IS NULL
    AND t.type = -3;
-   
+
 UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions) t1, (SELECT DISTINCT condition_entry, comments FROM conditions) t2 -- CONDITION_OR
    SET t.comments = CONCAT('(',t1.comments,' OR ',t2.comments,')')
  WHERE t.value1 = t1.condition_entry AND t.value2= t2.condition_entry AND t.comments IS NULL
    AND t.type = -2;
-   
+
 UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions) t1, (SELECT DISTINCT condition_entry, comments FROM conditions) t2 -- CONDITION_AND
    SET t.comments = CONCAT('(',t1.comments,' AND ',t2.comments,')')
  WHERE t.value1 = t1.condition_entry AND t.value2= t2.condition_entry AND t.comments IS NULL
@@ -144,42 +144,42 @@ UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions)
    SET t.comments = CONCAT('NOT (',t1.comments,')')
  WHERE t.value1 = t1.condition_entry AND t.comments IS NULL
    AND t.type = -3;
-   
+
 UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions) t1, (SELECT DISTINCT condition_entry, comments FROM conditions) t2 -- CONDITION_OR
    SET t.comments = CONCAT('(',t1.comments,' OR ',t2.comments,')')
  WHERE t.value1 = t1.condition_entry AND t.value2= t2.condition_entry AND t.comments IS NULL
    AND t.type = -2;
-   
+
 UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions) t1, (SELECT DISTINCT condition_entry, comments FROM conditions) t2 -- CONDITION_AND
    SET t.comments = CONCAT('(',t1.comments,' AND ',t2.comments,')')
  WHERE t.value1 = t1.condition_entry AND t.value2= t2.condition_entry AND t.comments IS NULL
    AND t.type = -1;
-   
+
 UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions) t1 -- CONDITION_NOT
    SET t.comments = CONCAT('NOT (',t1.comments,')')
  WHERE t.value1 = t1.condition_entry AND t.comments IS NULL
    AND t.type = -3;
-   
+
 UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions) t1, (SELECT DISTINCT condition_entry, comments FROM conditions) t2 -- CONDITION_OR
    SET t.comments = CONCAT('(',t1.comments,' OR ',t2.comments,')')
  WHERE t.value1 = t1.condition_entry AND t.value2= t2.condition_entry AND t.comments IS NULL
    AND t.type = -2;
-   
+
 UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions) t1, (SELECT DISTINCT condition_entry, comments FROM conditions) t2 -- CONDITION_AND
    SET t.comments = CONCAT('(',t1.comments,' AND ',t2.comments,')')
  WHERE t.value1 = t1.condition_entry AND t.value2= t2.condition_entry AND t.comments IS NULL
    AND t.type = -1;
-   
+
 UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions) t1 -- CONDITION_NOT
    SET t.comments = CONCAT('NOT (',t1.comments,')')
  WHERE t.value1 = t1.condition_entry AND t.comments IS NULL
    AND t.type = -3;
-   
+
 UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions) t1, (SELECT DISTINCT condition_entry, comments FROM conditions) t2 -- CONDITION_OR
    SET t.comments = CONCAT('(',t1.comments,' OR ',t2.comments,')')
  WHERE t.value1 = t1.condition_entry AND t.value2= t2.condition_entry AND t.comments IS NULL
    AND t.type = -2;
-   
+
 UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions) t1, (SELECT DISTINCT condition_entry, comments FROM conditions) t2 -- CONDITION_AND
    SET t.comments = CONCAT('(',t1.comments,' AND ',t2.comments,')')
  WHERE t.value1 = t1.condition_entry AND t.value2= t2.condition_entry AND t.comments IS NULL
@@ -204,15 +204,15 @@ UPDATE `creature_ai_scripts` SET `event_param1` =1544 WHERE `event_param1` =1409
 UPDATE `creature_ai_scripts` SET `event_param6` =3025 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =10120;
 
 # Finall_Spell_UP
-UPDATE dbscripts_on_creature_death SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58); 
-UPDATE dbscripts_on_creature_movement SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58); 
-UPDATE dbscripts_on_event SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58); 
-UPDATE dbscripts_on_go_use SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58); 
-UPDATE dbscripts_on_go_template_use SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58); 
-UPDATE dbscripts_on_gossip SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58); 
-UPDATE dbscripts_on_quest_end SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58); 
-UPDATE dbscripts_on_quest_start SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58); 
-UPDATE dbscripts_on_spell SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58); 
+UPDATE dbscripts_on_creature_death SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
+UPDATE dbscripts_on_creature_movement SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
+UPDATE dbscripts_on_event SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
+UPDATE dbscripts_on_go_use SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
+UPDATE dbscripts_on_go_template_use SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
+UPDATE dbscripts_on_gossip SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
+UPDATE dbscripts_on_quest_end SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
+UPDATE dbscripts_on_quest_start SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
+UPDATE dbscripts_on_spell SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
 UPDATE dbscripts_on_relay SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
 
 # NPC_ADDON_FIX
