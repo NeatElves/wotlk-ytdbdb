@@ -17193,3 +17193,57 @@ UPDATE creature_template_addon SET auras=NULL WHERE entry=21029;
 UPDATE creature_template SET NpcFlags=0 WHERE Entry=27354;
 UPDATE creature_template SET Family=0 WHERE entry=15630;
 UPDATE creature_template SET Faction =35 WHERE Entry IN (13431,13432);
+
+UPDATE creature_movement SET waittime=5000 WHERE id IN (59462,59496,59516,59497);
+
+DELETE FROM dbscripts_on_spell WHERE id =56562;
+INSERT INTO `dbscripts_on_spell` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(56562, 1, 45, 0, 50000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Random Scripts');
+DELETE FROM dbscript_random_templates WHERE id = 50000;
+INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
+(50000, 1, 50001, 10, 'YTDB - 30292 - Random Scripts'),
+(50000, 1, 50002, 90, 'YTDB - 30292 - Random Scripts');
+DELETE FROM dbscripts_on_relay WHERE id BETWEEN 50001 AND 50002;
+INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(50001, 1000, 15, 56566, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - cast Create Bear Flank'),
+(50001, 500, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - despawn self'),
+(50002, 1000, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - despawn self');
+
+UPDATE creature SET spawntimesecsmin=300, spawntimesecsmax=300 WHERE id=20554;
+UPDATE `creature` SET `position_x` = '-471.73', `position_y` = '8857.5', `position_z` = '239.455', `orientation` = '3.72776', `spawntimesecsmin` = '120', `spawntimesecsmax` = '120' WHERE `guid` =76996;
+UPDATE creature SET spawntimesecsmin=180, spawntimesecsmax=180 WHERE id=21207;
+UPDATE creature SET spawntimesecsmin=300, spawntimesecsmax=300 WHERE id=21778;
+UPDATE creature SET spawntimesecsmin=120, spawntimesecsmax=180 WHERE id=18583;
+UPDATE creature SET spawntimesecsmin=60, spawntimesecsmax=120 WHERE id=22357;
+
+UPDATE creature SET spawntimesecsmin=420, spawntimesecsmax=480 WHERE id IN (20854,20763);
+UPDATE creature SET spawntimesecsmin=300, spawntimesecsmax=300 WHERE id IN (20858);
+UPDATE creature_template SET UnitFlags=768 WHERE entry=20854;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=20763;
+DELETE FROM creature_linking WHERE master_guid=77664;
+INSERT INTO creature_linking (guid, master_guid, flag) VALUES (77663, 77664, 1024);
+DELETE FROM creature_movement WHERE id IN (77663,77664);
+INSERT INTO creature_movement (id, point, position_x, position_y, position_z, orientation, waittime, script_id) VALUES
+(77663, 1, 4053.541, 2289.103, 113.7999, 100, 0, 0),
+(77663, 2, 4055.439, 2300.95, 113.1935, 100, 0, 0),
+(77663, 3, 4055.692, 2302.558, 113.0787, 100, 15000, 7766301),
+(77664, 1, 4057.016, 2323.65, 112.3185, 100, 5000, 7766401),
+(77664, 2, 4057.763, 2315.901, 112.5745, 100, 15000, 7766402);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (7766301,7766401,7766402);
+INSERT INTO dbscripts_on_creature_movement (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(7766301, 2000, 0, 41, 0, 0, 0, 20854, 77664, 16+64+1, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn Ethereum Gladiator'),
+(7766301, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captured Protectorate Vanguard - Set Idle Movement Type'),
+(7766301, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2000003368, 0, 0, 0, 0, 0, 0, 0, 'Captured Protectorate Vanguard - Say Text'),
+(7766401, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2000003369, 0, 0, 0, 0, 0, 0, 0, 'Ethereum Gladiator - Say Text'),
+(7766401, 2000, 0, 41, 0, 0, 0, 20763, 77663, 16+64+1, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn Captured Protectorate Vanguard'),
+(7766402, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2000003370, 0, 0, 0, 0, 0, 0, 0, 'Ethereum Gladiator - Say Text'),
+(7766402, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Ethereum Gladiator - Set Idle Movement Type'),
+(7766402, 0, 0, 1, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Ethereum Gladiator - Set EmoteState 27'),
+(7766402, 2000, 0, 5, 46, 768, 0, 20763, 77663, 16, 0, 0, 0, 0, 0, 0, 0, 0, 'Captured Protectorate Vanguard - Remove Unit Flag IMMUNE_TO_PLAYER and IMMUNE_TO_NPC'),
+(7766402, 2000, 1, 5, 46, 768, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Ethereum Gladiator - Remove Unit Flag IMMUNE_TO_PLAYER and IMMUNE_TO_NPC'),
+(7766402, 2000, 2, 26, 0, 0, 0, 20763, 77663, 16, 0, 0, 0, 0, 0, 0, 0, 0, 'Ethereum Gladiator - Attack Captured Protectorate Vanguard');
+DELETE FROM dbscript_string WHERE entry IN (2000003368,2000003369,2000003370);
+INSERT INTO dbscript_string (entry, content_default, broadcast_text_id, comment) VALUES
+(2000003368, 'For the Protectorate! DIE ETHEREUM FILTH!', 0, 'Captured Protectorate Vanguard (20763)'),
+(2000003369, 'Send it out!', 0, 'Ethereum Gladiator (20854)'),
+(2000003370, 'Time for the pain!', 0, 'Ethereum Gladiator (20854)');

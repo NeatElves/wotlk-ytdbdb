@@ -384,7 +384,6 @@ echo
 echo
 
 echo "You have now a clean and recent YTDB database loaded into $DATABASE"
-echo "Enjoy using YTDB"
 echo
 if [ "$FORCE_WAIT" != "NO" ]
 then
@@ -396,3 +395,6 @@ then
   done
   echo .
 fi
+
+echo "Enjoy using YTDB"
+echo
