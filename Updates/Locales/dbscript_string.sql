@@ -3375,6 +3375,9 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Да. Это помогло.' WHE
 UPDATE `dbscript_string` SET `content_loc8` = 'За Протекторат! УМРИТЕ, МЕРЗКИЕ ДУХИ!' WHERE `entry` = 2000003368;
 UPDATE `dbscript_string` SET `content_loc8` = 'Выпускай!' WHERE `entry` = 2000003369;
 UPDATE `dbscript_string` SET `content_loc8` = 'Пришло время боли!' WHERE `entry` = 2000003370;
+UPDATE `dbscript_string` SET `content_loc8` = 'Слава богу, вы здесь, уже почти пора обедать!' WHERE `entry` = 2000003371;
+UPDATE `dbscript_string` SET `content_loc8` = 'Я уж думал, мне конец.' WHERE `entry` = 2000003372;
+UPDATE `dbscript_string` SET `content_loc8` = 'Даже не знаю, что хуже – быть рабом Разлкраза или отправиться на съедение оркам Скверны. В любом случае – спасибо!' WHERE `entry` = 2000003373;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;
