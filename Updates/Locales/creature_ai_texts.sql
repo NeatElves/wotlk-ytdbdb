@@ -43,6 +43,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = '%s громко и пронзи
 UPDATE `creature_ai_texts` SET `content_loc8` = 'За Драконью Пасть!' WHERE `entry` = -101;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Да здравствует Драконья Пасть! Умри, $gничтожный:ничтожная:r; |3-6($r)!' WHERE `entry` = -102;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Мозги...' WHERE `entry` = -103;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Кто посмел бросить вызов Найасу? $GТщедушный:Тщедушная:r; |3-6($r), ты ничем не лучше тупых троллей, которых я стравил друг с другом!' WHERE `entry` = -104;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Твои кости затрещат под моими ногами, |3-6($r)!' WHERE `entry` = -105;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s впадает в бешенство!' WHERE `entry` = -106;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я король змей! Я кое-что могу.' WHERE `entry` = -123;

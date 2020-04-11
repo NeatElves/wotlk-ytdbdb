@@ -17480,3 +17480,173 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`,`delay`,`command`,`datalong`,`d
 UPDATE `gameobject` SET `rotation2` = '0', `rotation3` = '0', `spawntimesecsmin` = '180', `spawntimesecsmax` = '180' WHERE `guid` =21012;
 UPDATE `gameobject` SET `position_x` = '-74.4834', `position_y` = '3141.48', `position_z` = '-4.13124', `orientation` = '-2.56563', `rotation2` = '0', `rotation3` = '0', `spawntimesecsmin` = '180', `spawntimesecsmax` = '180' WHERE `guid` =21702;
 UPDATE `gameobject` SET `position_x` = '65.8562', `position_y` = '3209.62', `position_z` = '31.8304', `orientation` = '-1.6057', `rotation2` = '0', `rotation3` = '0', `spawntimesecsmin` = '180', `spawntimesecsmax` = '180' WHERE `guid` =21703;
+
+UPDATE `creature_template_addon` SET `emote` = '0' WHERE `entry` =11882;
+UPDATE `creature` SET `position_x`=2356.8830, `position_y`=7285.9355, `position_z`=365.9563, `orientation`=3.260055 WHERE `guid`=126872;
+UPDATE `spell_proc_event` SET `ppmRate`=15 WHERE `entry`=26480;
+UPDATE `creature_template` SET `Faction` = 1055 WHERE `entry` = 10817;
+UPDATE `creature_template` SET `ExtraFlags`=`ExtraFlags`|64 WHERE `entry` IN (18528,22861,22862,22863,22864);
+
+DELETE FROM dbscripts_on_event WHERE id = 10554;
+INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(10554,10,31,17207,255,0,0,0,0x08,0,0,0,0,0,0,0,0,'search for buddy - terminate if alive'),
+(10554,100,10,17207,300000,0,0,0,0,0,0,0,0,-12129.6,955.959,4.66874,5.01439,'summon Naias');
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(13558, 2692, 0, 1, 1, 0, 0, 322.596, -2852.32, 114.743, 5.24172, 300, 300, 5, 0, 2138, 0, 0, 1),
+(13781, 2692, 0, 1, 1, 0, 0, 286.494, -2853.12, 114.057, 0.13959, 300, 300, 5, 0, 2138, 0, 0, 1),
+(13826, 2692, 0, 1, 1, 0, 0, 228.857, -2857.77, 110.373, 4.72984, 300, 300, 0, 0, 2138, 0, 0, 0),
+(13841, 2692, 0, 1, 1, 0, 0, 226.024, -2800.45, 121.4, 2.38498, 300, 300, 3, 0, 2138, 0, 0, 1),
+(13846, 2692, 0, 1, 1, 0, 0, 228.939, -2862.09, 110.32, 1.58825, 300, 300, 0, 0, 2138, 0, 0, 0),
+(14041, 2692, 0, 1, 1, 0, 0, 176.296, -2813.96, 111.868, 3.05849, 300, 300, 5, 0, 2138, 0, 0, 1),
+(14104, 2692, 0, 1, 1, 0, 0, 181.583, -2845.65, 105.135, 3.1481, 300, 300, 10, 0, 2138, 0, 0, 1),
+(85055, 2692, 0, 1, 1, 0, 0, 349.677, -2851.57, 116.143, 2.53285, 300, 300, 10, 0, 2138, 0, 0, 1),
+(85060, 2692, 0, 1, 1, 0, 0, 195.942, -2803.87, 117.493, 1.12359, 300, 300, 5, 0, 2138, 0, 0, 1),
+(85076, 2692, 0, 1, 1, 0, 0, 179.757, -2745.51, 116.005, 4.32658, 300, 300, 5, 0, 2138, 0, 0, 1),
+(85098, 2692, 0, 1, 1, 0, 0, 209.429, -2755.17, 121.055, 2.6779, 300, 300, 0, 0, 2138, 0, 0, 0),
+(85102, 2692, 0, 1, 1, 0, 0, 181.936, -2717.07, 115.346, 6.21694, 300, 300, 10, 0, 2138, 0, 0, 1),
+(85109, 2692, 0, 1, 1, 0, 0, 211.269, -2787.34, 122.442, 1.3367, 300, 300, 0, 0, 2138, 0, 0, 0);
+DELETE FROM `creature_loot_template` WHERE `entry` = 2692 AND `item` = 6887;
+
+UPDATE creature_template SET UnitFlags=33536 WHERE entry IN(22421);
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES ('9712', '13287', '0', '0');
+UPDATE creature SET position_x=-1609.1764, position_y=5299.9365, position_z=-38.582882, orientation=0.541052043437957763, MovementType=2 WHERE id=18653;
+DELETE FROM `creature_movement_template` WHERE `entry`=18653;
+INSERT INTO `creature_movement_template` (`entry`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
+(18653,1,-1609.1764,5299.9365,-38.582882,480000,0,0.541052043437957763),
+(18653,2,-1616.1292,5301.4927,-40.20918,0,0,100),
+(18653,3,-1618.9323,5305.5425,-40.20918,4000,1865301,100),
+(18653,4,-1618.9323,5305.5425,-40.20918,3000,1865302,0.418879032135009765);
+DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN(1865301,1865302);
+INSERT INTO `dbscripts_on_creature_movement` (`id`,`delay`,`priority`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(1865301,1000,0,0,0,0,0,2000003374,0,0,0,18652,20,0,'Zahlia - Don''t go too far away Seth.  You know mommy doesn''t like it when she can''t hear you.',0,0,0,0),
+(1865302,1000,0,0,0,0,0,2000003375,0,0,0,0,0,0,'Seth - Coming, momma!',0,0,0,0);
+DELETE FROM `dbscript_string` WHERE `entry` in (2000003374, 2000003375);
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`, `broadcast_text_id`) VALUES 
+(2000003374, 'Don''t go too far away Seth.  You know mommy doesn''t like it when she can''t hear you.', 0, 0, 0, 0, 'Zahlia (Entry: 18652)',0),
+(2000003375, 'Coming, momma!', 0, 0, 0, 0, 'Seth (Entry: 18653)',0);
+UPDATE quest_template SET CompleteScript=10020 WHERE entry=10020;
+DELETE FROM `dbscripts_on_quest_end` WHERE `id` IN(10020);
+INSERT INTO `dbscripts_on_quest_end` (`id`,`delay`,`priority`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(10020,0,0,32,1,0,0,0,0,0,0,18653,25,0,'Seth - Pause Waypoints',0,0,0,0),
+(10020,875,0,42,0,0,0,3699,3697,0,0,0,0,0,'Sha''nir - Set Equipment slots',0,0,0,0),
+(10020,2484,0,1,133,0,0,0,0,0,0,0,0,0,'Sha''nir - STATE_USESTANDING_NOSHEATHE',0,0,0,0),
+(10020,9750,0,1,0,0,0,0,0,0,0,0,0,0,'Sha''nir - ONESHOT_NONE',0,0,0,0),
+(10020,9750,0,42,1,0,0,0,0,0,0,0,0,0,'Sha''nir - Reset Equipment slots',0,0,0,0),
+(10020,11000,0,3,0,0,0,0,0,0,0,0,0,0,'Sha''nir - Move',-1607.125,5299.7305,-38.577827,100),
+(10020,13984,0,0,0,0,0,2000003376,0,0,0,0,0,0,'Sha''nir - Drink this, Zahlia.  It is not as potent as I''d hoped, but perhaps it will help.',0,0,0,0),
+(10020,17453,0,42,0,0,0,2199,0,0,0,18652,5,0,'Zahlia - Set Equipment slots',0,0,0,0),
+(10020,19484,0,1,92,0,0,0,0,0,0,18652,5,0,'Zahlia - OneShotEatNoSheathe',0,0,0,0),
+(10020,25703,0,0,0,0,0,2000003377,0,0,0,18652,5,0,'Zahlia - I... I can see...',0,0,0,0),
+(10020,28000,0,42,1,0,0,0,0,0,0,18652,5,0,'Zahlia - Reset Equipment slots',0,0,0,0),
+(10020,29250,0,28,8,0,0,0,0,0,0,18652,5,0,'Zahlia - UNIT_STAND_STATE_KNEEL',0,0,0,0),
+(10020,31672,0,1,18,0,0,0,0,0,0,18652,5,0,'Zahlia - OneShotCry',0,0,0,0),
+(10020,32875,0,3,0,0,0,0,0,0,0,0,0,0,'Sha''nir - Move',-1605.4729,5292.9756,-38.577824,100),
+(10020,34219,0,0,0,0,0,2000003378,0,0,0,18652,10,0,'Zahlia - I thought I''d never see my son''s face again.  Come here, Seth!  Let mom take a look at you!',0,0,0,0),
+(10020,35703,0,36,1,0,0,0,0,0,0,0,0,0,'Sha''nir - Reset Facing',0,0,0,0),
+(10020,36531,0,28,0,0,0,0,0,0,0,18652,10,0,'Zahlia - UNIT_STAND_STATE_STAND',0,0,0,0),
+(10020,36531,0,3,0,0,0,0,0,0,0,18653,25,0,'Seth - Move',-1607.6587,5301.146,-38.577797,100),
+(10020,37875,0,0,0,0,0,2000003379,0,0,0,18653,25,0,'Seth - Don''t cry mommy.  I''m right here, see?',0,0,0,0),
+(10020,60000,0,32,0,0,0,0,0,0,0,18653,10,0,'Seth - Resume Waypoints',0,0,0,0);
+DELETE FROM `dbscript_string` WHERE `entry` BETWEEN 2000003376 AND 2000003379;
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`, `broadcast_text_id`) VALUES 
+(2000003376, 'Drink this, Zahlia.  It is not as potent as I''d hoped, but perhaps it will help.', 0, 0, 0, 1, 'Sha''nir (Entry: 18597)',0),
+(2000003377, 'I... I can see...', 0, 0, 0, 0, 'Zahlia (Entry: 18652)',0),
+(2000003378, 'I thought I''d never see my son''s face again.  Come here, Seth!  Let mom take a look at you!', 0, 0, 0, 0, 'Zahlia (Entry: 18652)',0),
+(2000003379, 'Don''t cry mommy.  I''m right here, see?', 0, 0, 0, 0, 'Seth (Entry: 18653)',0);
+UPDATE quest_template SET CompleteScript=10944 WHERE entry=10944;
+UPDATE creature_template SET SpeedRun=6.94444/7, UnitFlags=512 WHERE entry=22820;
+UPDATE creature_template SET SpeedWalk=0.5/2.5, SpeedRun=0.5/7, UnitFlags=33555200, MovementType=2, InhabitType=7 WHERE entry=22870;
+UPDATE creature_model_info SET bounding_radius=1.2 WHERE modelid=21123;
+DELETE FROM `creature_template_addon` WHERE `entry`=22870;
+INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES 
+(22870, 0, 0, 1, 16, 0, 0, '36545 36550');
+UPDATE creature_template SET SpeedRun=7/7, UnitFlags=33554752 WHERE entry=22865;
+DELETE FROM `creature_template_addon` WHERE `entry`=22865;
+INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES 
+(22865, 0, 0, 1, 16, 0, 0, '37816');
+DELETE FROM creature_movement_template WHERE entry=22870 AND pathId=0;
+INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
+(22870,0,1,-3721.043,1032.0703,57.038933,0,0,100),
+(22870,0,2,-3719.4136,1032.1066,58.927586,0,0,100),
+(22870,0,3,-3718.9402,1032.773,63.844257,1000,1,100);
+DELETE FROM `creature_movement_template` WHERE `entry`=22820 AND pathId=1;
+INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
+(22820,1,1,-3723.654,1032.8693,55.958088,0,0,100),
+(22820,1,2,-3721.3906,1031.8082,55.95844,1000,7,100);
+DELETE FROM `dbscripts_on_quest_end` WHERE `id` IN(10944);
+INSERT INTO `dbscripts_on_quest_end` (`id`,`delay`,`priority`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(10944,0,0,31,21768,20,0,0,0,0,0,0,0,8,'Akama - Terminate Script if Vagath already spawned (Both events should not run simultaneously)',0,0,0,0),
+(10944,0,1,21,1,0,0,0,0,0,0,0,0,0,'Akama - Set Active object on',0,0,0,0),
+(10944,0,1,32,1,0,0,0,0,0,0,21699,20,0,'Maiev - Pause Waypoints',0,0,0,0),
+(10944,0,1,10,22820,166516,0,0,0,0,0,0,0,0,'Akama - Spawn Seer Olum',-3726.361,1040.7139,56.039852,5.846852779388427734), -- 906ms
+(10944,0,2,29,3,2,0,0,0,0,0,22820,20,0,'Seer Olum - Remove NPCFlags 3 (Same npc is spawned as questgiver in SSC, so need to remove NPCFlags here)',0,0,0,0), -- 906ms
+(10944,531,0,29,1,2,0,0,0,0,0,0,0,0,'Akama - Remove NPCFlag 1',0,0,0,0),
+(10944,531,0,5,209,1,0,0,0,0,0,0,0,0,'Akama - Sheathe Weapons',0,0,0,0),
+(10944,2140,0,20,2,1,0,0,0,0,0,22820,20,0,'Seer Olum - Start moving on PathId 1',0,0,0,0),
+(10944,2140,0,0,0,0,0,2000003380,0,0,0,22820,20,0,'Seer Olum - Akama, my friend!  Have you been informed?  I was found out by Vashj''s followers.  Our secret is in peril!',0,0,0,0),
+(10944,11593,0,0,0,0,0,2000003381,0,0,0,0,0,0,'Akama - Olum... old friend.  It is good to see that you are safe.',0,0,0,0),
+(10944,21343,0,0,0,0,0,2000003382,0,0,0,22820,10,0,'Seer Olum - Illidan is looking for me.  I am not safe here... none of us are.',0,0,0,0),
+(10944,28609,0,0,0,0,0,2000003383,0,0,0,0,0,0,'Akama - Illidan will become suspicious... that much is for certain.  We will deal with it as we always do.',0,0,0,0),
+(10944,38343,0,0,0,0,0,2000003384,0,0,0,22820,10,0,'Seer Olum - Illidan will find me and when he does... he will pry the Ashtongue secret from me - such is the power of the Betrayer!  No... there is only one way.  My usefulness to the cause has come to an end. I must venture into the spirit world!',0,0,0,0),
+(10944,45484,0,1,1,0,0,0,0,0,0,22820,10,0,'Seer Olum - OneShotTalk',0,0,0,0),
+(10944,63828,0,0,0,0,0,2000003385,0,0,0,0,0,0,'Akama - You cannot... be serious, Olum.  Your sacrifice has already been too great.',0,0,0,0),
+(10944,73562,0,0,0,0,0,2000003386,0,0,0,22820,10,0,'Seer Olum - My decision is final.  I will not be dissuaded.  I have devoted my life to our plan.  To jeopardize it now would betray all who have died for the cause long before me.',0,0,0,0),
+(10944,80734,0,1,1,0,0,0,0,0,0,22820,10,0,'Seer Olum - OneShotTalk',0,0,0,0),
+(10944,86937,0,0,0,0,0,2000003387,0,0,0,0,0,0,'Akama - It appears your mind is set then.  We will guide you to the spirit world with as much kindness as we can.',0,0,0,0),
+(10944,100343,0,0,0,0,0,2000003388,0,0,0,22820,10,0,'Seer Olum - I thank you, Akama.  You honor me by allowing me this moment, surrounded by my brothers.  Farewell, friend.  Guide our people well.',0,0,0,0),
+(10944,106281,0,1,1,0,0,0,0,0,0,22820,10,0,'Seer Olum - OneShotTalk',0,0,0,0),
+(10944,109922,0,3,0,0,0,0,0,0,0,0,0,0,'Akama - Move',-3718.6228,1030.651,55.958855,100),
+(10944,111953,0,15,39552,0,0,0,0,0,0,0,0,0,'Akama - Cast Olum''s Sacrifice',0,0,0,0),
+(10944,112109,0,45,10164,0,0,0,0,0,0,21701,73631,16,'Ashtongue Deathsworn - Face Seer Olum',0,0,0,0),
+(10944,112109,0,45,10164,0,0,0,0,0,0,21701,73650,16,'Ashtongue Deathsworn - Face Seer Olum',0,0,0,0),
+(10944,112359,1,28,8,0,0,0,0,0,0,21701,73631,16,'Ashtongue Deathsworn - UNIT_STAND_STATE_KNEEL',0,0,0,0),
+(10944,112359,1,28,8,0,0,0,0,0,0,21701,73650,16,'Ashtongue Deathsworn - UNIT_STAND_STATE_KNEEL',0,0,0,0),
+(10944,118047,0,28,7,0,0,0,0,0,0,22820,5,0,'Seer Olum - UNIT_STAND_STATE_DEAD',0,0,0,0),
+(10944,118422,0,10,22870,300000,0,0,0,0,0,0,0,0,'Akama - Spawn Olum''s Spirit',-3720.8591,1032.0737,57.247444,0.014412877149879932),
+(10944,120859,0,36,1,0,0,0,0,0,0,21701,73631,16,'Ashtongue Deathsworn - Reset Facing',0,0,0,0),
+(10944,120859,0,36,1,0,0,0,0,0,0,21701,73650,16,'Ashtongue Deathsworn - Reset Facing',0,0,0,0),
+(10944,120859,0,28,0,0,0,0,0,0,0,21701,73631,16,'Ashtongue Deathsworn - UNIT_STAND_STATE_STAND',0,0,0,0),
+(10944,120859,0,28,0,0,0,0,0,0,0,21701,73650,16,'Ashtongue Deathsworn - UNIT_STAND_STATE_STAND',0,0,0,0),
+(10944,125843,0,0,0,0,0,2000003389,0,0,0,0,0,0,'Akama - Farewell, dear friend. We shall meet you in the next world when our duties in this one are fulfilled.',0,0,0,0),
+(10944,139062,0,3,0,0,0,0,0,0,0,0,0,0,'Akama - Move',-3714.558,1028.9514,55.95947,2.775073528289794921),
+(10944,141078,0,36,1,0,0,0,0,0,0,0,0,0,'Akama - Reset Facing',0,0,0,0),
+(10944,146359,0,28,8,0,0,0,0,0,0,0,0,0,'Akama - UNIT_STAND_STATE_KNEEL',0,0,0,0),
+(10944,146515,0,0,0,0,0,2000003390,0,0,0,0,0,0,'Akama - Master!  We''ve found the traitor who escaped Vashj!  His body lies in front of me... lifeless!',0,0,0,0),
+(10944,146703,0,10,22865,86359,0,0,0,0,0,0,0,0,'Akama - Spawn Illidan''s Presence',-3721.8667,1029.5006,56.03928,0.03490658476948738),
+(10944,155000,0,0,0,0,0,2000003391,0,0,0,22865,10,0,'Illidan''s Presence - You disappoint me, Akama.  I wanted to question the treacherous worm myself!  I''m beginning to question your allegiance, Broken.',0,0,0,0),
+(10944,160890,0,1,5,0,0,0,0,0,0,22865,10,0,'Illidan''s Presence - OneShotExclamation',0,0,0,0),
+(10944,169453,0,28,0,0,0,0,0,0,0,0,0,0,'Akama - UNIT_STAND_STATE_STAND',0,0,0,0),
+(10944,169578,0,0,0,0,0,2000003392,0,0,0,0,0,0,'Akama - But, sire!  You have misjudged my actions... I do have knowledge of someone close to you who plans to betray you.  It is that dog, Kael''thas!  He has allied with Kil''jaeden and intends to replace you as Lord of Outland!',0,0,0,0),
+(10944,170656,0,1,20,0,0,0,0,0,0,0,0,0,'Akama - OneShotBeg',0,0,0,0),
+(10944,177937,0,1,1,0,0,0,0,0,0,0,0,0,'Akama - OneShotTalk',0,0,0,0),
+(10944,186562,0,0,0,0,0,2000003393,0,0,0,22865,10,0,'I do not sense lies in your voice, Akama.  That Kael''thas would betray me does not come as a big surprise - I''m not as oblivious as some would think. That one of your own was involved with him puts your loyalties into question.',0,0,0,0),
+(10944,192515,0,1,1,0,0,0,0,0,0,22865,10,0,'Illidan''s Presence - OneShotTalk',0,0,0,0),
+(10944,209687,0,0,0,0,0,2000003394,0,0,0,22865,10,0,'Send your Ashtongue into Tempest Keep and slay his most prized possession, the phoenix known as Al''ar.  I must know that you''re not on his side.  Do not think of betraying me, Broken.  We both know who owns your soul!',0,0,0,0),
+(10944,215625,0,1,53,0,0,0,0,0,0,22865,10,0,'Illidan''s Presence - OneShotBattleRoar',0,0,0,0),
+(10944,220093,0,40,0,0,0,0,0,0,0,185520,10,1,'Akama - Despawn Fel Fire',0,0,0,0),
+(10944,231437,0,29,1,1,0,0,0,0,0,0,0,0,'Akama - Readd NPCFlag 1',0,0,0,0),
+(10944,231437,0,4,209,1,0,0,0,0,0,0,0,0,'Akama - Unsheathe Weapons',0,0,0,0),
+(10944,231562,0,0,0,0,0,2000003395,0,0,0,0,0,0,'Akama - It will be done, my lord!',0,0,0,0),
+(10944,231562,0,32,0,0,0,0,0,0,0,21699,20,0,'Maiev - Resume Waypoints',0,0,0,0),
+(10944,231562,1,21,0,0,0,0,0,0,0,0,0,0,'Akama - Set Active object off',0,0,0,0);
+DELETE FROM `dbscripts_on_relay` WHERE `id` IN(10164) AND command=36;
+INSERT INTO `dbscripts_on_relay` (`id`,`delay`,`priority`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(10164,0,0,36,0,0,0,0,0,0,0,22820,20,1,'Ashtongue Deathsworn - Face Seer Olum',0,0,0,0);
+DELETE FROM `dbscript_string` WHERE `entry` BETWEEN 2000003380 AND 2000003395;
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`, `broadcast_text_id`) VALUES
+(2000003380, 'Akama, my friend!  Have you been informed?  I was found out by Vashj''s followers.  Our secret is in peril!', 11611, 0, 0, 0, 'Seer Olum (Entry: 22820)',0),
+(2000003381, 'Olum... old friend.  It is good to see that you are safe.', 11600, 0, 0, 6, 'Akama (Entry: 21700)',0),
+(2000003382, 'Illidan is looking for me.  I am not safe here... none of us are.', 11612, 0, 0, 1, 'Seer Olum (Entry: 22820)',0),
+(2000003383, 'Illidan will become suspicious... that much is for certain.  We will deal with it as we always do.', 11601, 0, 0, 0, 'Akama (Entry: 21700)',0),
+(2000003384, 'Illidan will find me and when he does... he will pry the Ashtongue secret from me - such is the power of the Betrayer!  No... there is only one way.  My usefulness to the cause has come to an end. I must venture into the spirit world!', 11613, 0, 0, 6, 'Seer Olum (Entry: 22820)',0),
+(2000003385, 'You cannot... be serious, Olum.  Your sacrifice has already been too great.', 11602, 0, 0, 274, 'Akama (Entry 21700)',0),
+(2000003386, 'My decision is final.  I will not be dissuaded.  I have devoted my life to our plan.  To jeopardize it now would betray all who have died for the cause long before me.', 11614, 0, 0, 274, 'Seer Olum (Entry: 22820)',0),
+(2000003387, 'It appears your mind is set then.  We will guide you to the spirit world with as much kindness as we can.', 11603, 0, 0, 396, 'Akama (Entry: 21700)',0),
+(2000003388, 'I thank you, Akama.  You honor me by allowing me this moment, surrounded by my brothers.  Farewell, friend.  Guide our people well.', 11615, 0, 0, 2, 'Seer Olum (Entry: 22820)',0),
+(2000003389, 'Farewell, dear friend. We shall meet you in the next world when our duties in this one are fulfilled.', 11604, 0, 0, 0, 'Akama (Entry: 21700)',0),
+(2000003390, 'Master!  We''ve found the traitor who escaped Vashj!  His body lies in front of me... lifeless!', 11605, 0, 0, 0, 'Akama (Entry: 21700)',0),
+(2000003391, 'You disappoint me, Akama.  I wanted to question the treacherous worm myself!  I''m beginning to question your allegiance, Broken.', 11608, 0, 0, 1, 'Illidan''s Presence (Entry: 22865)',0),
+(2000003392, 'But, sire!  You have misjudged my actions... I do have knowledge of someone close to you who plans to betray you.  It is that dog, Kael''thas!  He has allied with Kil''jaeden and intends to replace you as Lord of Outland!', 11606, 0, 0, 0, 'Akama (Entry: 21700)',0),
+(2000003393, 'I do not sense lies in your voice, Akama.  That Kael''thas would betray me does not come as a big surprise - I''m not as oblivious as some would think. That one of your own was involved with him puts your loyalties into question.', 11609, 0, 0, 5, 'Illidan''s Presence (Entry: 22865)',0),
+(2000003394, 'Send your Ashtongue into Tempest Keep and slay his most prized possession, the phoenix known as Al''ar.  I must know that you''re not on his side.  Do not think of betraying me, Broken.  We both know who owns your soul!', 11610, 0, 0, 1, 'Illidan''s Presence (Entry: 22865)',0),
+(2000003395, 'It will be done, my lord!', 11607, 0, 0, 66, 'Akama (Entry: 21700)',0);
