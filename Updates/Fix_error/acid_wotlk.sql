@@ -151,5 +151,22 @@ INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `c
 REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (2286501, 22865, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 11, 39663, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Illidan''s Presence - Cast Summon Cosmetic Fel Fire on Spawn');
 
+REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(1763601, 17636, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Kalynna Lathred - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(1957101, 19571, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Innkeeper Remi Dodoso  - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(1957201, 19572, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Gant  - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(1957301, 19573, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Dash  - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(1957401, 19574, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Kizzie  - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(1957501, 19575, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Qiff  - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(1957601, 19576, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Xyrol  - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(1961001, 19610, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Irradiated Worker - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(1961201, 19612, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Irradiated Manager - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(1964502, 19645, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Papa Wheeler  - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(1970901, 19709, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Chief Engineer Trep - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(1973701, 19737, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Engineering Crewmember - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(1988001, 19880, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Nether-Stalker Khay''ji - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(2149301, 21493, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Kablamm Farflinger - Start Relay Script (Random Emote) on Receive AI Event 5'),
+(2175101, 21751, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Chubis - Start Relay Script (Random Emote) on Receive AI Event 5');
 
-UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,1368,20666,21025,22865,22990,23059,23061,23118,23261,23281,23282,30366,32838,33211,33224);
+
+UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,1368,17636,19571,19572,19573,19574,19575,19576,19610,19612,19709,19737,19880,21493,21751,20666,21025,22865,22990,23059,23061,23118,23261,23281,23282,30366,32838,33211,33224);
