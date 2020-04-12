@@ -111,6 +111,11 @@ REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_in
 (3322401, 33224, 22, 0, 100, 1, 58, 2878, 0, 0, 0, 0, 41, 0, 0, 0, 12, 33220, 0, 30000, 28, 6, 62574, 0, 'YTDB - Q. A Blade Fit For A Champion'),
 (3322402, 33224, 22, 0, 100, 1, 58, 2879, 0, 0, 0, 0, 11, 62581, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Q. A Blade Fit For A Champion');
 
+REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
+(2111401, 21114, 1, 0, 100, 1, 30000, 300000, 300000, 600000, 0, 0, 11, 36301, 0, 0, 54, 0, 0, 10171, 53, 10164, 0, 0, 'YTDB(TBCDB) - Station Technician - Cast On Fire and Say Random Text amd Start Relay Script OOC'),
+(2111402, 21114, 1, 0, 100, 33, 30000, 60000, 30000, 60000, 0, 0, 10, 273, 274, -1, 10, 6, 1, -1, 0, 0, 0, 0, 'YTDB(TBCDB) - Station Technician - Random Emote OOC'),
+(2111403, 21114, 21, 0, 100, 0, 0, 0, 0, 0, 0, 0, 5, 133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Station Technician - Emote on Reached Home');
+
 INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`language`,`emote`,`broadcast_text_id`,`comment`) VALUES
 (-10042,'You''ve sealed your fate, Akama. The Master will learn of your betrayal!','0','1','0','0','0','YTDB(TBCDB) - Vagath'),
 (-11198,'And wheresoever did you find the module to activate that controller?  No matter, you won''t be doing that again.','0','0','0','0','0','YTDB(TBCDB) - 23390'),
@@ -128,7 +133,14 @@ INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`langu
 (-11210,'Get away from my clutch!!!','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281'),
 (-11211,'I tire of interruptions from the insignificant.  Your time has come, $n!','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281'),
 (-11212,'I know you by your stench, little $n.  Here, in my perch, is where your bones shall finally rest.','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281'),
-(-11213,'I believe that I shall feast upon both $r and ogre flesh tonight.','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281');
+(-11213,'I believe that I shall feast upon both $r and ogre flesh tonight.','7274','1','0','0','0','YTDB(TBCDB) - 23282/23281/23261/23281'),
+(-11222,'I''M ON FIRE!!!','0','0','0','0','0','YTDB(TBCDB) - Station Technician 21114'),
+(-11223,'I''M ON FIRE!!!  AGAIN!!','0','0','0','0','0','YTDB(TBCDB) - Station Technician 21114'),
+(-11224,'IT BURNS!!','0','0','0','0','0','YTDB(TBCDB) - Station Technician 21114'),
+(-11225,'Not again...','0','0','0','0','0','YTDB(TBCDB) - Station Technician 21114'),
+(-11226,'WHY ME!?!','0','0','0','0','0','YTDB(TBCDB) - Station Technician 21114'),
+(-11227,'This is going to hurt in the morning.','0','0','0','0','0','YTDB(TBCDB) - Station Technician 21114'),
+(-11228,'YEOW!!','0','0','0','0','0','YTDB(TBCDB) - Station Technician 21114');
 
 INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 (10083, 0, -11213, 0, '23282/23281/23261/23281 - Random Texts'),
@@ -146,7 +158,14 @@ INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `c
 (10163, 0, -11199, 0, '23390 - Random Say'),
 (10163, 0, -11198, 0, '23390 - Random Say'),
 (10164, 0, -11205, 0, '23391 - Random Say'),
-(10164, 0, -11204, 0, '23391 - Random Say');
+(10164, 0, -11204, 0, '23391 - Random Say'),
+(10171,0,-11222,0,'21114 - Random OOC Texts'),
+(10171,0,-11223,0,'21114 - Random OOC Texts'),
+(10171,0,-11224,0,'21114 - Random OOC Texts'),
+(10171,0,-11225,0,'21114 - Random OOC Texts'),
+(10171,0,-11226,0,'21114 - Random OOC Texts'),
+(10171,0,-11227,0,'21114 - Random OOC Texts'),
+(10171,0,-11228,0,'21114 - Random OOC Texts');
 
 REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (2286501, 22865, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 11, 39663, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Illidan''s Presence - Cast Summon Cosmetic Fel Fire on Spawn');
@@ -168,5 +187,4 @@ REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_in
 (2149301, 21493, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Kablamm Farflinger - Start Relay Script (Random Emote) on Receive AI Event 5'),
 (2175101, 21751, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Chubis - Start Relay Script (Random Emote) on Receive AI Event 5');
 
-
-UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,1368,17636,19571,19572,19573,19574,19575,19576,19610,19612,19709,19737,19880,21493,21751,20666,21025,22865,22990,23059,23061,23118,23261,23281,23282,30366,32838,33211,33224);
+UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,1368,17636,19571,19572,19573,19574,19575,19576,19610,19612,19709,19737,19880,21114,21493,21751,20666,21025,22865,22990,23059,23061,23118,23261,23281,23282,30366,32838,33211,33224);

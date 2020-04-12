@@ -17744,15 +17744,6 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `dat
 (10249, 2312, 0, 9, 57774, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 1'),
 (10249, 5390, 0, 35, 5, 95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Throw AI Event 5'),
 (10249, 5265, 0, 0, 0, 0, 0, 0, 0, 0, 2000001090, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Hooray!'),
-(10249, 5562, 0, 40, 0, 0, 0, 0, 57766, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
-(10249, 5562, 0, 40, 0, 0, 0, 0, 57767, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
-(10249, 5562, 0, 40, 0, 0, 0, 0, 57768, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
-(10249, 5562, 0, 40, 0, 0, 0, 0, 57769, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
-(10249, 5562, 0, 40, 0, 0, 0, 0, 57770, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
-(10249, 5562, 0, 40, 0, 0, 0, 0, 57771, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
-(10249, 5562, 0, 40, 0, 0, 0, 0, 57772, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
-(10249, 5562, 0, 40, 0, 0, 0, 0, 57773, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
-(10249, 5562, 0, 40, 0, 0, 0, 0, 57774, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
 (10249, 11375, 0, 0, 0, 0, 0, 0, 0, 0, 2000001090, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Hooray!'),
 (10249, 11406, 0, 35, 5, 95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Throw AI Event 5'),
 (10249, 11625, 0, 9, 57775, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 2'),
@@ -17764,15 +17755,6 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `dat
 (10249, 11625, 0, 9, 57781, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 2'),
 (10249, 11625, 0, 9, 57782, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 2'),
 (10249, 11625, 0, 9, 57783, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 2'),
-(10249, 15265, 0, 40, 0, 0, 0, 0, 57775, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 2'),
-(10249, 15265, 0, 40, 0, 0, 0, 0, 57776, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 2'),
-(10249, 15265, 0, 40, 0, 0, 0, 0, 57777, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 2'),
-(10249, 15265, 0, 40, 0, 0, 0, 0, 57778, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 2'),
-(10249, 15265, 0, 40, 0, 0, 0, 0, 57779, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 2'),
-(10249, 15265, 0, 40, 0, 0, 0, 0, 57780, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 2'),
-(10249, 15265, 0, 40, 0, 0, 0, 0, 57781, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 2'),
-(10249, 15265, 0, 40, 0, 0, 0, 0, 57782, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 2'),
-(10249, 15265, 0, 40, 0, 0, 0, 0, 57783, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 2'),
 (10249, 16469, 0, 9, 57784, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 3'),
 (10249, 16469, 0, 9, 57785, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 3'),
 (10249, 16469, 0, 9, 57786, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 3'),
@@ -17784,15 +17766,6 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `dat
 (10249, 16469, 0, 9, 57792, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 3'),
 (10249, 17422, 0, 35, 5, 95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Throw AI Event 5'),
 (10249, 17437, 0, 0, 0, 0, 0, 0, 0, 0, 2000001090, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Hooray!'),
-(10249, 20125, 0, 40, 0, 0, 0, 0, 57784, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 3'),
-(10249, 20125, 0, 40, 0, 0, 0, 0, 57785, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 3'),
-(10249, 20125, 0, 40, 0, 0, 0, 0, 57786, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 3'),
-(10249, 20125, 0, 40, 0, 0, 0, 0, 57787, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 3'),
-(10249, 20125, 0, 40, 0, 0, 0, 0, 57788, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 3'),
-(10249, 20125, 0, 40, 0, 0, 0, 0, 57789, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 3'),
-(10249, 20125, 0, 40, 0, 0, 0, 0, 57790, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 3'),
-(10249, 20125, 0, 40, 0, 0, 0, 0, 57791, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 3'),
-(10249, 20125, 0, 40, 0, 0, 0, 0, 57792, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 3'),
 (10249, 21344, 0, 9, 57793, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 4'),
 (10249, 21344, 0, 9, 57794, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 4'),
 (10249, 21344, 0, 9, 57795, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 4'),
@@ -17802,15 +17775,6 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `dat
 (10249, 21344, 0, 9, 57799, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 4'),
 (10249, 21344, 0, 9, 57800, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 4'),
 (10249, 21344, 0, 9, 57801, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 4'),
-(10249, 24578, 0, 40, 0, 0, 0, 0, 57793, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 4'),
-(10249, 24578, 0, 40, 0, 0, 0, 0, 57794, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 4'),
-(10249, 24578, 0, 40, 0, 0, 0, 0, 57795, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 4'),
-(10249, 24578, 0, 40, 0, 0, 0, 0, 57796, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 4'),
-(10249, 24578, 0, 40, 0, 0, 0, 0, 57797, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 4'),
-(10249, 24578, 0, 40, 0, 0, 0, 0, 57798, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 4'),
-(10249, 24578, 0, 40, 0, 0, 0, 0, 57799, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 4'),
-(10249, 24578, 0, 40, 0, 0, 0, 0, 57800, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 4'),
-(10249, 24578, 0, 40, 0, 0, 0, 0, 57801, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 4'),
 (10249, 26203, 0, 9, 57802, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 5'),
 (10249, 26203, 0, 9, 57803, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 5'),
 (10249, 26203, 0, 9, 57804, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 5'),
@@ -17820,15 +17784,6 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `dat
 (10249, 26203, 0, 9, 57808, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 5'),
 (10249, 26203, 0, 9, 57809, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 5'),
 (10249, 26203, 0, 9, 57810, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 5'),
-(10249, 29453, 0, 40, 0, 0, 0, 0, 57802, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 5'),
-(10249, 29453, 0, 40, 0, 0, 0, 0, 57803, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 5'),
-(10249, 29453, 0, 40, 0, 0, 0, 0, 57804, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 5'),
-(10249, 29453, 0, 40, 0, 0, 0, 0, 57805, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 5'),
-(10249, 29453, 0, 40, 0, 0, 0, 0, 57806, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 5'),
-(10249, 29453, 0, 40, 0, 0, 0, 0, 57807, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 5'),
-(10249, 29453, 0, 40, 0, 0, 0, 0, 57808, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 5'),
-(10249, 29453, 0, 40, 0, 0, 0, 0, 57809, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 5'),
-(10249, 29453, 0, 40, 0, 0, 0, 0, 57810, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 5'),
 (10249, 31078, 0, 9, 57811, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 6'),
 (10249, 31078, 0, 9, 57812, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 6'),
 (10249, 31078, 0, 9, 57813, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 6'),
@@ -17838,15 +17793,6 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `dat
 (10249, 31078, 0, 9, 57817, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 6'),
 (10249, 31078, 0, 9, 57818, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 6'),
 (10249, 31078, 0, 9, 57819, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 6'),
-(10249, 34734, 0, 40, 0, 0, 0, 0, 57811, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 6'),
-(10249, 34734, 0, 40, 0, 0, 0, 0, 57812, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 6'),
-(10249, 34734, 0, 40, 0, 0, 0, 0, 57813, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 6'),
-(10249, 34734, 0, 40, 0, 0, 0, 0, 57814, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 6'),
-(10249, 34734, 0, 40, 0, 0, 0, 0, 57815, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 6'),
-(10249, 34734, 0, 40, 0, 0, 0, 0, 57816, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 6'),
-(10249, 34734, 0, 40, 0, 0, 0, 0, 57817, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 6'),
-(10249, 34734, 0, 40, 0, 0, 0, 0, 57818, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 6'),
-(10249, 34734, 0, 40, 0, 0, 0, 0, 57819, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 6'),
 (10249, 35937, 0, 9, 57820, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 7'),
 (10249, 35937, 0, 9, 57821, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 7'),
 (10249, 35937, 0, 9, 57822, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 7'),
@@ -17856,15 +17802,6 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `dat
 (10249, 35937, 0, 9, 57826, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 7'),
 (10249, 35937, 0, 9, 57827, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 7'),
 (10249, 35937, 0, 9, 57828, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 7'),
-(10249, 39172, 0, 40, 0, 0, 0, 0, 57820, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 7'),
-(10249, 39172, 0, 40, 0, 0, 0, 0, 57821, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 7'),
-(10249, 39172, 0, 40, 0, 0, 0, 0, 57822, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 7'),
-(10249, 39172, 0, 40, 0, 0, 0, 0, 57823, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 7'),
-(10249, 39172, 0, 40, 0, 0, 0, 0, 57824, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 7'),
-(10249, 39172, 0, 40, 0, 0, 0, 0, 57825, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 7'),
-(10249, 39172, 0, 40, 0, 0, 0, 0, 57826, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 7'),
-(10249, 39172, 0, 40, 0, 0, 0, 0, 57827, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 7'),
-(10249, 39172, 0, 40, 0, 0, 0, 0, 57828, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 7'),
 (10249, 40000, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Set Active object off');
 DELETE FROM `dbscripts_on_relay` WHERE `id` IN(10166,10167,10168,10169) AND command=1;
 INSERT INTO `dbscripts_on_relay` (`id`,`delay`,`priority`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
@@ -17878,3 +17815,50 @@ INSERT INTO dbscript_random_templates (id,type,target_id,chance,comments) VALUES
 (10172,1,10167,0,'Area 52 - Random Emote'),
 (10172,1,10168,0,'Area 52 - Random Emote'),
 (10172,1,10169,0,'Area 52 - Random Emote');
+
+DELETE FROM `creature` WHERE `guid` = 61432;
+DELETE FROM `creature` WHERE `guid` = 61402;
+DELETE FROM `creature` WHERE `guid` = 61433;
+DELETE FROM `creature` WHERE `guid` = 61403;
+DELETE FROM `creature` WHERE `guid` = 61437;
+DELETE FROM `creature` WHERE `guid` = 61411;
+UPDATE creature SET MovementType=0, spawndist=0 WHERE guid IN (61360,61442,61447,61483,61486,61444,61458,61356,61440);
+UPDATE creature SET position_x=1943.78, position_y=5599.0747, position_z=267.372 WHERE guid=61483;
+DELETE FROM creature_movement WHERE id=61483;
+DELETE FROM creature_addon WHERE guid=61486;
+DELETE FROM dbscripts_on_relay WHERE id=10164;
+INSERT INTO dbscripts_on_relay (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(10164, 0, 0, 15, 35132, 0, 0, 21234, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Blade''s Edge Stalker - Cast Boom'),
+(10164, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Station Technician - Stop Emote'),
+(10164, 0, 2, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Station Technician - Set Run On'),
+(10164, 0, 3, 20, 1, 5, 8000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Station Technician - Timed Random Movement'),
+(10164, 8000, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Station Technician - Set Run Off'),
+(10164, 8000, 1, 14, 36301, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Station Technician - Remove Aura On Fire');
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(61453, 21152, 530, 1, 0, 0, 1885.87, 5575.56, 259.612, 1.65806, 300, 300, 5, 0, 6326, 0, 0, 1),
+(61406, 21152, 530, 1, 0, 0, 1916.85, 5521.49, 280.536, 0.194286, 300, 300, 5, 0, 6326, 0, 0, 1),
+(61452, 21152, 530, 1, 0, 0, 1920.97, 5557.84, 263.343, 1.38317, 300, 300, 5, 0, 6326, 0, 0, 1);
+DELETE FROM `creature` WHERE `guid` = 61353;
+DELETE FROM `creature` WHERE `guid` = 61358;
+DELETE FROM `creature` WHERE `guid` = 61357;
+DELETE FROM `creature` WHERE `guid` = 61359;
+DELETE FROM `creature` WHERE `guid` = 61354;
+DELETE FROM `creature` WHERE `guid` = 61399;
+DELETE FROM `creature` WHERE `guid` = 61439;
+DELETE FROM `creature` WHERE `guid` = 61420;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(61435, 21115, 530, 1, 0, 0, 1898.52, 5589.53, 267.594, 2.37365, 300, 300, 0, 0, 13972, 0, 0, 0),
+(61475, 21115, 530, 1, 0, 0, 1930.83, 5603.07, 267.402, 1.309, 300, 300, 0, 0, 13972, 0, 0, 0),
+(61413, 21115, 530, 1, 0, 0, 1863.2, 5537.73, 275.714, 1.5708, 300, 300, 0, 0, 13972, 0, 0, 0),
+(61443, 21115, 530, 1, 0, 0, 1898.7, 5563.3, 261.776, 3.07178, 300, 300, 0, 0, 13972, 0, 0, 0),
+(61436, 21115, 530, 1, 0, 0, 1952.94, 5565.57, 262.763, 0.174533, 300, 300, 0, 0, 13972, 0, 0, 0),
+(61400, 21115, 530, 1, 0, 0, 1900, 5571.08, 262.156, 2.89725, 300, 300, 0, 0, 13972, 0, 0, 0),
+(61485, 21115, 530, 1, 0, 0, 1952.09, 5570.28, 262.503, 0.226893, 300, 300, 0, 0, 13972, 0, 0, 0),
+(61482, 21115, 530, 1, 0, 0, 1956.01, 5590.55, 268.584, 0.628319, 300, 300, 0, 0, 13972, 0, 0, 0),
+(61476, 21115, 530, 1, 0, 0, 1941.04, 5601.94, 267.402, 1.46608, 300, 300, 0, 0, 13972, 0, 0, 0);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(75060, 21976, 530, 1, 0, 0, 3102.53, 3658.58, 154.721, 0.989135, 300, 300, 0, 0, 11178, 3155, 0, 0),
+(75061, 21976, 530, 1, 0, 0, 3072.53, 3728.25, 154.773, 4.59327, 300, 300, 0, 0, 11178, 3155, 0, 0),
+(75225, 21976, 530, 1, 0, 0, 3005.08, 3737.22, 155.901, 3.00284, 300, 300, 0, 0, 11178, 3155, 0, 0),
+(61403, 21976, 530, 1, 0, 0, 2974.63, 3686.09, 157.646, 3.35234, 300, 300, 0, 0, 11178, 3155, 0, 0),
+(61402, 21976, 530, 1, 0, 0, 3053.05, 3691.84, 156.225, 5.92452, 300, 300, 0, 0, 11178, 3155, 0, 0);

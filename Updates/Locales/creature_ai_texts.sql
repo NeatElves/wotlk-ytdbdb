@@ -1653,6 +1653,13 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Оно идет за тобой
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s разбивает склянку с зеленым газом.' WHERE `entry` = -11219;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s чувствует опасность и спасается бегством.' WHERE `entry` = -11220;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s выглядит слабым и его можно взять в плен.' WHERE `entry` = -11221;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'ГОРЮ!!!' WHERE `entry` = -11222;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'ПОМОГИТЕ!!! ГОРЮ!!!' WHERE `entry` = -11223;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'БОЛЬНО!!!' WHERE `entry` = -11224;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Только не это...' WHERE `entry` = -11225;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Почему я?!' WHERE `entry` = -11226;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Утром будет очень больно.' WHERE `entry` = -11227;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'ОЙ!!!' WHERE `entry` = -11228;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Да благословит тебя Свет.' WHERE `entry` = -19997;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Твои раны серьезны, но ты будешь жить.' WHERE `entry` = -19998;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Отдыхай. Ты сегодня хорошо сражался.' WHERE `entry` = -19999;
