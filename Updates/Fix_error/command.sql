@@ -67,6 +67,8 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES
 ('cast dist', 3, 'Syntax: .cast dist #spellid [#dist [triggered]]\r\n  You will cast spell to pint at distance #dist. If ''trigered'' or part provided then spell casted with triggered flag. Not all spells can be casted as area spells.'),
 ('cast self', 3, 'Syntax: .cast self #spellid [triggered]\r\nCast #spellid by target at target itself. If ''trigered'' or part provided then spell casted with triggered flag.'),
 ('cast target', 3, 'Syntax: .cast target #spellid [triggered]\r\n  Selected target will cast #spellid to his victim. If ''trigered'' or part provided then spell casted with triggered flag.'),
+('channel list', 1, 'Syntax: .channel list [#max] [static]\r\n\r\nShow list of custom channels with amounts of players joined.'),
+('channel static', 1, 'Syntax: .channel static $channelname on|off\r\n\r\nEnable or disable static mode for a custom channel with name $channelname. Static custom channel upon conversion acquires a set of properties identical to global channes.'),
 ('character achievements', 2, 'Syntax: .character achievements [$player_name]\r\n\r\nShow completed achievments for selected player or player find by $player_name.'),
 ('character customize', 2, 'Syntax: .character customize [$name]\r\n\r\nMark selected in game or by $name in command character for customize at next login.'),
 ('character deleted delete', 4, 'Syntax: .character deleted delete #guid|$name\r\n\r\nCompletely deletes the selected characters.\r\nIf $name is supplied, only characters with that string in their name will be deleted, if #guid is supplied, only the character with that GUID will be deleted.'),
@@ -78,7 +80,6 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES
 ('character rename', 2, 'Syntax: .character rename [$name]\r\n\r\nMark selected in game or by $name in command character for rename at next login.'),
 ('character reputation', 2, 'Syntax: .character reputation [$player_name]\r\n\r\nShow reputation information for selected player or player find by $player_name.'),
 ('character titles', 2, 'Syntax: .character titles [$player_name]\r\n\r\nShow known titles list for selected player or player find by $player_name.'),
-('chat static', 2, 'Syntax: .chat static $channelname on|off\r\n\r\nEnable or disable static mode for a custom channel with name $channelname. Static custom channel upon conversion acquires a set of properties identical to global channes.'),
 ('combatstop', 2, 'Syntax: .combatstop [$playername]\r\nStop combat for selected character. If selected non-player then command applied to self. If $playername provided then attempt applied to online player $playername.'),
 ('commands', 0, 'Syntax: .commands\r\n\r\nDisplay a list of available commands for your account level.'),
 ('cooldown', 3, 'Syntax: .cooldown [#spell_id]\r\n\r\nRemove all (if spell_id not provided) or #spel_id spell cooldown from selected character or you (if no selection).'),
@@ -285,9 +286,9 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES
 ('respawn', 3, 'Syntax: .respawn\r\n\r\nRespawn selected creature or respawn all nearest creatures (if none selected) and GO without waiting respawn time expiration.'),
 ('revive', 3, 'Syntax: .revive\r\n\r\nRevive the selected player. If no player is selected, it will revive you.'),
 ('save', 0, 'Syntax: .save\r\n\r\nSaves your character.'),
-('saveall', 1, 'Syntax: .saveall\r\n\r\nSave all characters in game.'),
-('send items', 3, 'Syntax: .send items #playername "#subject" "#text" itemid1[:count1] itemid2[:count2] ... itemidN[:countN]\r\n\r\nSend a mail to a player. Subject and mail text must be in "". If for itemid not provided related count values then expected 1, if count > max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12.');
+('saveall', 1, 'Syntax: .saveall\r\n\r\nSave all characters in game.');
 INSERT INTO `command` (`name`, `security`, `help`) VALUES
+('send items', 3, 'Syntax: .send items #playername "#subject" "#text" itemid1[:count1] itemid2[:count2] ... itemidN[:countN]\r\n\r\nSend a mail to a player. Subject and mail text must be in "". If for itemid not provided related count values then expected 1, if count > max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12.'),
 ('send mail', 1, 'Syntax: .send mail #playername "#subject" "#text"\r\n\r\nSend a mail to a player. Subject and mail text must be in "".'),
 ('send mass items', 3, 'Syntax: .send mass items #racemask|$racename|alliance|horde|all "#subject" "#text" itemid1[:count1] itemid2[:count2] ... itemidN[:countN]\r\n\r\nSend a mail to players. Subject and mail text must be in "". If for itemid not provided related count values then expected 1, if count > max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12.'),
 ('send mass mail', 3, 'Syntax: .send mass mail #racemask|$racename|alliance|horde|all "#subject" "#text"\r\n\r\nSend a mail to players. Subject and mail text must be in "".'),

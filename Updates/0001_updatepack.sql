@@ -17650,3 +17650,15 @@ INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `lan
 (2000003393, 'I do not sense lies in your voice, Akama.  That Kael''thas would betray me does not come as a big surprise - I''m not as oblivious as some would think. That one of your own was involved with him puts your loyalties into question.', 11609, 0, 0, 5, 'Illidan''s Presence (Entry: 22865)',0),
 (2000003394, 'Send your Ashtongue into Tempest Keep and slay his most prized possession, the phoenix known as Al''ar.  I must know that you''re not on his side.  Do not think of betraying me, Broken.  We both know who owns your soul!', 11610, 0, 0, 1, 'Illidan''s Presence (Entry: 22865)',0),
 (2000003395, 'It will be done, my lord!', 11607, 0, 0, 66, 'Akama (Entry: 21700)',0);
+
+UPDATE quest_template SET CompleteScript=9863 WHERE entry=9863;
+DELETE FROM spell_script_target WHERE entry=32127;
+INSERT INTO spell_script_target (entry,type,targetEntry,inverseEffectMask) VALUES (32127,1,18228,0);
+DELETE FROM `dbscripts_on_quest_end` WHERE `id` IN(9863);
+INSERT INTO `dbscripts_on_quest_end` (`id`,`delay`,`priority`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(9863,0,0,31,10042,20,0,0,0,0,0,0,0,8,'Farseer Kurkush - Terminate Script if Thrall is in range (Both events should not run simultaneously)',0,0,0,0),
+(9863,0,1,0,0,0,0,2000003396,0,0,0,0,0,0,'Farseer Kurkush - %s places the Murkblood idols atop the Lightning stone and invokes the spirits.',0,0,0,0),
+(9863,2719,0,15,32127,0,0,0,0,0,0,0,0,0,'Farseer Kurkush - Cast Call to Lightning',0,0,0,0);
+DELETE FROM `dbscript_string` WHERE `entry`=2000003396;
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`, `broadcast_text_id`) VALUES
+(2000003396, '%s places the Murkblood idols atop the Lightning stone and invokes the spirits.', 0, 2, 1, 0, 'Farseer Kurkush (Entry: 18066)',0);

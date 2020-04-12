@@ -159,6 +159,13 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (173, 'You changed runic power of %s to %i/%i.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (174, '%s changed your runic power to %i/%i.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (175, 'Liquid level: %f, ground: %f, type flags %u, status: %d.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(176, 'Conversion failed: channel ''%s'' has password set', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(177, 'Conversion failed: channel ''%s'' is not eligible', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(178, 'Conversion succeeded: channel ''%s'' static status is now %s', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(179, '(Static)', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(180, '(Password)', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(181, 'There are no matching custom channels at the moment', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(182, 'Listing up to %u custom channels matching criterea:', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (200, 'No selection.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (201, 'Object GUID is: %s', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (202, 'The name was too long by %i characters.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -558,13 +565,13 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (604, 'Let the battle for Warsong Gulch begin!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (605, '$n captured the Horde flag!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (606, '$n captured the Alliance flag!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(607, 'The Horde flag was dropped by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(607, 'The Horde flag was dropped by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`) VALUES
 (608, 'The Alliance Flag was dropped by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (609, 'The Alliance Flag was returned to its base by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (610, 'The Horde flag was returned to its base by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (611, 'The Horde flag was picked up by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(612, 'The Alliance Flag was picked up by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`) VALUES
+(612, 'The Alliance Flag was picked up by $n!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (613, 'The flags are now placed at their bases.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (614, 'The Alliance flag is now placed at its base.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (615, 'The Horde flag is now placed at its base.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),

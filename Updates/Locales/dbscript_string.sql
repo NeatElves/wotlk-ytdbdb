@@ -3400,6 +3400,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Но, государь, вы не
 UPDATE `dbscript_string` SET `content_loc8` = 'В твоем голосе нет лжи. Акама. Меня не удивляет предательство Кель''таса: я не столь забывчив, каким меня считают. А то, что один из твоего племени спутался с ним, ставит под вопрос твою преданность.' WHERE `entry` = 2000003393;
 UPDATE `dbscript_string` SET `content_loc8` = 'Пошли своих пеплоустов в Крепость Бурь и убей его главную ценность: феникса по имени Ал''ар. Я должен знать, что ты не на его стороне. И не вздумай предать меня. Мы оба знаем, кому принадлежит твоя душа!' WHERE `entry` = 2000003394;
 UPDATE `dbscript_string` SET `content_loc8` = 'Будет исполнено, мой господин!' WHERE `entry` = 2000003395;
+UPDATE `dbscript_string` SET `content_loc8` = '%s размещает идолов Темной Крови на камне Молний и заклинает духов.' WHERE `entry` = 2000003396;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;

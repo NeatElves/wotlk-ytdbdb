@@ -144,6 +144,13 @@ UPDATE `mangos_string` SET `content_loc8` = 'команда консоли се�
 UPDATE `mangos_string` SET `content_loc8` = 'Вы установили запас силы рун %s до %i/%i.' WHERE `entry` = 173;
 UPDATE `mangos_string` SET `content_loc8` = '%s установил запас Вашей силы рун до %i/%i.' WHERE `entry` = 174;
 UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 175;
+UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 176;
+UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 177;
+UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 178;
+UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 179;
+UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 180;
+UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 181;
+UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 182;
 UPDATE `mangos_string` SET `content_loc8` = 'Нет выбора.' WHERE `entry` = 200;
 UPDATE `mangos_string` SET `content_loc8` = 'GUID игрового объекта: %s' WHERE `entry` = 201;
 UPDATE `mangos_string` SET `content_loc8` = 'Слишком длинное имя из %i знаков.' WHERE `entry` = 202;
