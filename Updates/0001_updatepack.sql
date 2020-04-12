@@ -17732,7 +17732,7 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 DELETE FROM `dbscripts_on_quest_end` WHERE `id` IN(10249);
 INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (10249, 0, 0, 21, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Set Active object on'),
-(10249, 1640, 0, 0, 0, 0, 0, 0, 0, 0, 2000003397, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Three cheers for $n!  $G He''s : She''s; saved the town from the Burning Legion!'),
+(10249, 1640, 0, 0, 0, 0, 0, 0, 0, 0, 2000001089, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Three cheers for $n!  $G He''s : She''s; saved the town from the Burning Legion!'),
 (10249, 2312, 0, 9, 57766, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 1'),
 (10249, 2312, 0, 9, 57767, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 1'),
 (10249, 2312, 0, 9, 57768, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 1'),
@@ -17743,7 +17743,7 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `dat
 (10249, 2312, 0, 9, 57773, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 1'),
 (10249, 2312, 0, 9, 57774, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 1'),
 (10249, 5390, 0, 35, 5, 95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Throw AI Event 5'),
-(10249, 5265, 0, 0, 0, 0, 0, 0, 0, 0, 2000003398, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Hooray!'),
+(10249, 5265, 0, 0, 0, 0, 0, 0, 0, 0, 2000001090, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Hooray!'),
 (10249, 5562, 0, 40, 0, 0, 0, 0, 57766, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
 (10249, 5562, 0, 40, 0, 0, 0, 0, 57767, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
 (10249, 5562, 0, 40, 0, 0, 0, 0, 57768, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
@@ -17753,7 +17753,7 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `dat
 (10249, 5562, 0, 40, 0, 0, 0, 0, 57772, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
 (10249, 5562, 0, 40, 0, 0, 0, 0, 57773, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
 (10249, 5562, 0, 40, 0, 0, 0, 0, 57774, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 1'),
-(10249, 11375, 0, 0, 0, 0, 0, 0, 0, 0, 2000003398, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Hooray!'),
+(10249, 11375, 0, 0, 0, 0, 0, 0, 0, 0, 2000001090, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Hooray!'),
 (10249, 11406, 0, 35, 5, 95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Throw AI Event 5'),
 (10249, 11625, 0, 9, 57775, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 2'),
 (10249, 11625, 0, 9, 57776, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 2'),
@@ -17783,7 +17783,7 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `dat
 (10249, 16469, 0, 9, 57791, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 3'),
 (10249, 16469, 0, 9, 57792, 5, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Spawn Fireworks Wave 3'),
 (10249, 17422, 0, 35, 5, 95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Throw AI Event 5'),
-(10249, 17437, 0, 0, 0, 0, 0, 0, 0, 0, 2000003398, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Hooray!'),
+(10249, 17437, 0, 0, 0, 0, 0, 0, 0, 0, 2000001090, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Hooray!'),
 (10249, 20125, 0, 40, 0, 0, 0, 0, 57784, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 3'),
 (10249, 20125, 0, 40, 0, 0, 0, 0, 57785, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 3'),
 (10249, 20125, 0, 40, 0, 0, 0, 0, 57786, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Despawn Fireworks Wave 3'),
@@ -17868,7 +17868,7 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `dat
 (10249, 40000, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rocket-Chief Fuselage - Set Active object off');
 DELETE FROM `dbscripts_on_relay` WHERE `id` IN(10166,10167,10168,10169) AND command=1;
 INSERT INTO `dbscripts_on_relay` (`id`,`delay`,`priority`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
-(10166,0,0,1,75,0,0,0,0,0,0,0,0,0,'Area 52 - Random Emote - OneShotRoar',0,0,0,0),
+(10166,0,0,1,15,0,0,0,0,0,0,0,0,0,'Area 52 - Random Emote - OneShotRoar',0,0,0,0),
 (10167,0,0,1,11,0,0,0,0,0,0,0,0,0,'Area 52 - Random Emote - OneShotLaugh',0,0,0,0),
 (10168,0,0,1,21,0,0,0,0,0,0,0,0,0,'Area 52 - Random Emote - OneShotApplaud',0,0,0,0),
 (10169,0,0,1,4,0,0,0,0,0,0,0,0,0,'Area 52 - Random Emote - OneShotCheer',0,0,0,0);
@@ -17878,7 +17878,3 @@ INSERT INTO dbscript_random_templates (id,type,target_id,chance,comments) VALUES
 (10172,1,10167,0,'Area 52 - Random Emote'),
 (10172,1,10168,0,'Area 52 - Random Emote'),
 (10172,1,10169,0,'Area 52 - Random Emote');
-DELETE FROM `dbscript_string` WHERE `entry` IN(2000003397,2000003398);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`, `broadcast_text_id`) VALUES
-(2000003397, 'Three cheers for $n!  $G He''s : She''s; saved the town from the Burning Legion!', 0, 1, 0, 0, 'Rocket-Chief Fuselage (Entry: 19570)', 0),
-(2000003398, 'Hooray!', 0, 1, 0, 0, 'Rocket-Chief Fuselage (Entry: 19570)', 0);
