@@ -25,7 +25,10 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 ('2315204','23152','6','0','100','0','0','0','0','0','0','0','1','-10042','0','0','53','10134','0','0','0','0','0','0','YTDB(TBCDB) - Vagath - Yell and Start Relay Script on Death');
 
 REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
-('136801','1368','1','0','100','1','30000','60000','30000','60000','0','0','53','4','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Justin - Start Relay Script OOC');
+('136801','1368','1','0','100','1','30000','60000','30000','60000','0','0','53','4','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Justin - Start Relay Script OOC'),
+('1978001','19780','30','0','100','1','5','19617','0','0','0','0','0','0','0','0','22','1','0','0','0','0','0','0','YTDB(TBCDB) - Off-Duty Engineer - Set Phase 1 on Receive AI Event 5 (A)'),
+('1978002','19780','30','0','100','1','6','19617','0','0','0','0','0','0','0','0','22','0','0','0','0','0','0','0','YTDB(TBCDB) - Off-Duty Engineer - Set Phase 0 on Receive AI Event 6 (B)'),
+('1978003','19780','1','2','100','1','8000','14000','8000','14000','0','0','5','92','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Off-Duty Engineer - OneShotEatNoSheathe OOC (Phase 0)');
 
 REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (88801, 888, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 18, 512, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Watcher Dodds - Set UnitFlag IMMUNE_TO_NPC on Spawn'),
@@ -187,4 +190,4 @@ REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_in
 (2149301, 21493, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Kablamm Farflinger - Start Relay Script (Random Emote) on Receive AI Event 5'),
 (2175101, 21751, 30, 0, 100, 1, 5, 19570, 0, 0, 0, 0, 53, -10172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Chubis - Start Relay Script (Random Emote) on Receive AI Event 5');
 
-UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,1368,17636,19571,19572,19573,19574,19575,19576,19610,19612,19709,19737,19880,21114,21493,21751,20666,21025,22865,22990,23059,23061,23118,23261,23281,23282,30366,32838,33211,33224);
+UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,1368,17636,19571,19572,19573,19574,19575,19576,19610,19612,19709,19737,19780,19880,21114,21493,21751,20666,21025,22865,22990,23059,23061,23118,23261,23281,23282,30366,32838,33211,33224);
