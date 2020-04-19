@@ -17882,7 +17882,7 @@ INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `lan
 (2000001079, 'No... you must take this from me, $n!  I feel its dark power swaying my will already!  Use it to destroy Varedis.', 0, 0, 0, 274, 'Altruis the Sufferer (Entry: 18417)',0);
 
 UPDATE `creature` SET  `position_x` = '3749.68', `position_y` = '-5114.06', `position_z` = '142.115', `orientation` = '2.93215' WHERE `guid` =52228;
-UPDATE gameobject_template SET flags=4 WHERE entry=181444;
+UPDATE gameobject_template SET flags=0, faction=114 WHERE entry=181444;
 UPDATE `creature_template_addon` SET `b2_1_pvp_state` = '16', `emote` = '233' WHERE `entry` =19610;
 DELETE FROM `creature` WHERE `guid` = 58220;
 DELETE FROM `creature_addon` WHERE `guid` = 58220;
@@ -18516,3 +18516,36 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 DELETE FROM dbscripts_on_creature_movement WHERE id IN (2086501);
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (2086501, 0, 2, 59, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Protean Horror - Set UnitFlags to 0');
+
+DELETE FROM creature_loot_template WHERE item=21915;
+DELETE FROM game_event_gameobject WHERE guid = 72029;
+INSERT INTO game_event_gameobject (guid, event) VALUES (72029, -12);
+UPDATE `creature_template` SET `ModelId4` = 0, `ModelId3` = 13132 WHERE `entry` = 11446;
+UPDATE `creature_template` SET `SpeedWalk` = (2.5 / 2.5), `SpeedRun` = (12 / 7) WHERE `entry` = 11501;
+UPDATE `conditions` SET `type` = '24' WHERE `condition_entry` =3011;
+DELETE FROM `dbscripts_on_gossip` WHERE `id` IN (238700);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(238700, 1000, 9, 0, 20, 0, 173266, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gossip Menu 2387 - Wooden Outhouse (173265) - Respawn Goodsteel Ledger (173266) for 20 sec');
+UPDATE `creature` SET `position_x` = '-3883.912', `position_y` = '-11577.22', `position_z` = '-132.7659', `orientation` = '1.169371' WHERE `guid` =55133;
+DELETE FROM gameobject WHERE id=185952;
+DELETE FROM `spell_threat` WHERE `entry` = 20243;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=24397;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=24403;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=24404;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=24405;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=24406;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=24407;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=24408;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=24409;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=24445;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=24448;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=24453;
+UPDATE creature_template SET UnitFlags=768 WHERE entry=24455;
+UPDATE gameobject_loot_template SET ChanceOrQuestChance=-100 WHERE entry=22604;
+UPDATE creature_template SET UnitFlags=33024 WHERE entry=23999;
+
+DELETE FROM `creature` WHERE `guid` = 58220;
+INSERT INTO creature (guid, id, map, spawnMask, modelid, equipment_id, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, curhealth, curmana, MovementType) VALUES
+(58220, 16733, 530, 1, 0, 0, -3928.165, -11568.19, -150.2529, 1.012291, 300, 300, 0, 15952, 0, 0);
+DELETE FROM `creature_movement` WHERE `id` =9603;
+UPDATE `creature` SET `position_x` = '-4870.97', `position_y` = '-1629.69', `position_z` = '503.438', `orientation` = '4.64258', `MovementType` = '0' WHERE `guid` =9603;

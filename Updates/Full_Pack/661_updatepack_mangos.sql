@@ -29537,7 +29537,7 @@ DELETE FROM creature_template_addon WHERE entry=1010;
 INSERT INTO creature_template_addon (entry, mount, bytes1, b2_0_sheath, b2_1_pvp_state, emote, moveflags, auras) VALUES (1010, 0, 0, 1, 16, 0, 0, '8852');
 REPLACE INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES ('138068', '0', '0', '0', '0', '0', '0', '43632'), ('138073', '0', '0', '0', '0', '0', '0', '43632');
 DELETE FROM `creature_template_addon` WHERE `entry` = 18927;
-UPDATE `spell_template` SET `EffectMiscValue1` = '15795' WHERE `Id` =34849;
+
 REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
 (51417, 10184, 249, 3, 1, 0, 0, -4.8689, -217.171, -86.7104, 3.14159, 604800, 604800, 0, 0, 4880750, 0, 0, 0),
 (48750, 12129, 249, 3, 1, 0, 0, -90.718, -106.234, -38.1972, 0.603836, 7200, 7200, 5, 0, 882000, 3994, 0, 1),
