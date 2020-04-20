@@ -221,6 +221,7 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (840, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'У меня срочное дело к капралу Треснувшее Копыто.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (840, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Герой, прошу тебя, продолжай...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (840, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Зачем вы здесь?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(840, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Мое азшаритовое оружие уничтожено! Мне нужна ваша помощь, чтобы победить троицу силы.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (841, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Рассказывай дальше.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (842, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Какая трагедия...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (880, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Что может быть хуже смерти?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
