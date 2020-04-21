@@ -18796,3 +18796,53 @@ INSERT INTO `creature_movement` (`id`,`point`,`position_x`,`position_y`,`positio
 (75417,21,7644.346,-7223.3926,155.79414,0,0,100),
 (75417,22,7678.174,-7192.7446,150.11502,0,0,100),
 (75417,23,7697.3315,-7177.1694,147.36722,0,0,100);
+
+DELETE FROM spell_proc_event WHERE entry IN(45396);
+INSERT INTO spell_proc_event(entry,Cooldown) VALUES (45396,45);
+DELETE FROM spell_proc_event WHERE entry IN(45398);
+INSERT INTO spell_proc_event(entry,Cooldown) VALUES (45398,40);
+UPDATE `creature_template` SET `ResistanceFire` = '0', `ResistanceShadow` = '0', `ResistanceArcane` = '0' WHERE `Entry` in (6517,6518,6519,6527);
+UPDATE `creature_template` SET `ResistanceNature` = '0', `ResistanceShadow` = '0', `ResistanceArcane` = '0' WHERE `Entry` in (8908);
+UPDATE `creature_template` SET `ResistanceFire` = '0', `ResistanceNature` = '0', `ResistanceFrost` = '0', `ResistanceShadow` = '0', `ResistanceArcane` = '0' WHERE `Entry` IN (6520,6521,6560);
+UPDATE `creature_template` SET `ResistanceFire` = '0', `ResistanceNature` = '0', `ResistanceShadow` = '0', `ResistanceArcane` = '0' WHERE `Entry` in (11461,11462,11464,11465);
+UPDATE `creature_template` SET `ResistanceNature` = '180', `ResistanceArcane` = '0' WHERE `Entry` =11492;
+
+DELETE FROM spell_proc_event WHERE entry IN(37655,37705,45059);
+INSERT INTO spell_proc_event(entry,SchoolMask,procEx,Cooldown) VALUES (37655,127,65536,60);
+INSERT INTO spell_proc_event(entry,procEx) VALUES (37705,65536), (45059,65536);
+UPDATE creature_template_addon SET emote=415 WHERE entry IN(4949);
+UPDATE `quest_template` SET `CompleteScript` = 0 WHERE entry = 790;
+DELETE FROM `dbscripts_on_quest_end` WHERE `id` = 790;
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES
+(24549, 19233, 0.01, 0, -19233, 1, 0, ''), (23774, 19233, 0.01, 0, -19233, 1, 0, ''), (23582, 19233, 0.01, 0, -19233, 1, 0, ''),
+(20031, 19233, 0.01, 0, -19233, 1, 0, ''), (20032, 19233, 0.01, 0, -19233, 1, 0, ''), (20033, 19233, 0.01, 0, -19233, 1, 0, ''),
+(20036, 19233, 0.01, 0, -19233, 1, 0, ''), (20043, 19233, 0.01, 0, -19233, 1, 0, ''), (20044, 19233, 0.01, 0, -19233, 1, 0, ''),
+(20048, 19233, 0.01, 0, -19233, 1, 0, ''), (20049, 19233, 0.01, 0, -19233, 1, 0, ''), (20052, 19233, 0.01, 0, -19233, 1, 0, ''),
+(21178, 19233, 0.01, 0, -19233, 1, 0, ''), (23542, 19233, 0.01, 0, -19233, 1, 0, ''), (23580, 19233, 0.01, 0, -19233, 1, 0, ''),
+(23581, 19233, 0.01, 0, -19233, 1, 0, ''), (23596, 19233, 0.01, 0, -19233, 1, 0, ''), (23597, 19233, 0.01, 0, -19233, 1, 0, ''),
+(24059, 19233, 0.01, 0, -19233, 1, 0, ''), (24065, 19233, 0.01, 0, -19233, 1, 0, ''), (24179, 19233, 0.01, 0, -19233, 1, 0, ''),
+(24180, 19233, 0.01, 0, -19233, 1, 0, ''), (24374, 19233, 0.01, 0, -19233, 1, 0, '');
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 10664;
+UPDATE `creature_template` SET `SpeedWalk` = (2.5 / 2.5) WHERE `entry` = 5916;
+UPDATE `creature_template` SET `SpeedWalk` = (1.94444 / 2.5) WHERE `entry` = 10405;
+UPDATE `creature` SET `spawntimesecsmin` = 180, `spawntimesecsmax` = 180 WHERE `id` = 1949;
+UPDATE `creature_template_addon` SET `emote` = 233 WHERE `entry` = 7804;
+UPDATE `creature` SET `position_x` = '-11264.48', `position_y` = '1538.75', `position_z` = '28.16913', `spawndist` = '3', `MovementType` = '1' WHERE `guid` =53224;
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(148853, 2334, 0, 1, 1, 0, 0, -8950.46, 881.596, 59.5403, 1.32645, 300, 300, 0, 0, 166, 0, 0, 0),
+(148854, 2334, 0, 1, 1, 0, 0, -8409.47, 626.147, 59.5403, 5.79449, 300, 300, 0, 0, 166, 0, 0, 0),
+(148855, 2334, 0, 1, 1, 0, 0, -8408.04, 625.904, 59.5403, 2.09439, 300, 300, 0, 0, 166, 0, 0, 0),
+(148856, 599, 0, 1, 1, 0, 0, -11192.8, 1468.71, 15.8036, 5.44497, 115200, 172800, 3, 0, 428, 0, 0, 1),
+(148857, 599, 0, 1, 1, 0, 0, -11245.7, 1481.68, 23.5027, 0.898819, 115200, 172800, 3, 0, 428, 0, 0, 1);
+INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES (15903, 1, 'NPC 599');
+INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES (599, 15903, 0, 'NPC 599');
+UPDATE `creature` SET `position_x` = '171.682', `position_y` = '-260.075', `position_z` = '150.132', `orientation` = '1.142', `spawndist` = '40' WHERE `guid` =82723;
+UPDATE `creature` SET `position_x` = '313.328', `position_y` = '-376.999', `position_z` = '169.598', `orientation` = '0.914', `spawndist` = '40' WHERE `guid` =13752;
+UPDATE `creature` SET `position_x` = '361.078', `position_y` = '-54.289', `position_z` = '145.192', `orientation` = '2.182', `spawndist` = '40' WHERE `guid` =82719;
+UPDATE `creature` SET `position_x` = '550.981', `position_y` = '-101.974', `position_z` = '145.18', `orientation` = '2.755', `spawndist` = '40' WHERE `guid` =82722;
+UPDATE `creature` SET `spawndist` = '40' WHERE `guid` =83031;
+UPDATE `creature` SET `spawndist` = '40' WHERE `guid` =83035;
+UPDATE `creature` SET `spawndist` = '5', `MovementType` = '1' WHERE `guid` =52898;
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(148858, 14344, 1, 1, 1, 0, 0, 4250.07, -781.841, 262.327, 0.233983, 115200, 172800, 5, 0, 3322, 0, 0, 1);
+INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `comments`) VALUES (931, 9000, 1, 0, 'Denalan 2080 - Stop Emote');
