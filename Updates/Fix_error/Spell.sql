@@ -33,3 +33,5 @@ UPDATE `spell_template` SET `EffectTriggerSpell3` = 65410 WHERE `id` =65418;
 UPDATE `spell_template` SET `EffectTriggerSpell3` = 65412 WHERE `id` =65420;
 UPDATE `spell_template` SET `EffectTriggerSpell3` = 65415 WHERE `id` =65421;
 UPDATE `spell_template` SET `EffectTriggerSpell3` = 65416 WHERE `id` =65419;
+
+UPDATE `spell_template` SET `InterruptFlags` = 15 WHERE `Id` in (8016,7901);

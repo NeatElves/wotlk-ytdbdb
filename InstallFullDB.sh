@@ -72,7 +72,8 @@ FORCE_WAIT="YES"
 ## Set the variable to "YES" to use the dev directory
 DEV_UPDATES="NO"
 
-# Enjoy using the tool
+## Enjoy using the tool
+OPTIMIZE="NO"
 EOF
 }
 

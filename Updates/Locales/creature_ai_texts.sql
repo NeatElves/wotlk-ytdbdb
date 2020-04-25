@@ -541,6 +541,13 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Моя чуять свежее 
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Моя съесть вас всех!' WHERE `entry` = -1566;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я полакомлюсь твоими косточками!' WHERE `entry` = -1567;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Передавай привет Дедушке Зиме, ничтожество...' WHERE `entry` = -1568;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Ты $gпришел:пришла; спасти этот мир? Излечить его?' WHERE `entry` = -1569;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Начинается...' WHERE `entry` = -1570;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Испепелитель...' WHERE `entry` = -1571;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'На колени! На колени перед Испепелителем!' WHERE `entry` = -1572;
+UPDATE `creature_ai_texts` SET `content_loc8` = '$gГосподин мой:Госпожа моя;, прошу вас, позвольте мне дожить до того дня, когда вы очистите этот мир от неверных!' WHERE `entry` = -1573;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Возьмите меня с собой, $gсударь:сударыня;.' WHERE `entry` = -1574;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Я недостоин, $gсэр:мэм;.' WHERE `entry` = -1575;
 UPDATE `creature_ai_texts` SET `content_loc8` = '$gДерзкий глупец:Дерзкая тварь;! Ты $gдумал:думала; похитить кровь Зелемара? Ты заплатишь за это собственной кровью!' WHERE `entry` = -10000;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я тебя собираюсь приготовить, а потом – съесть!' WHERE `entry` = -10001;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Надеюсь, всех вас ждет мучительная смерть!' WHERE `entry` = -10002;

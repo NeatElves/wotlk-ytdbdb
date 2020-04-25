@@ -746,7 +746,7 @@ UPDATE `mangos_string` SET `content_loc8` = 'Ветеран' WHERE `entry` = 813
 UPDATE `mangos_string` SET `content_loc8` = 'Участник' WHERE `entry` = 814;
 UPDATE `mangos_string` SET `content_loc8` = 'Новичок' WHERE `entry` = 815;
 UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 816;
-UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 817;
+UPDATE `mangos_string` SET `content_loc8` = 'Предупреждение: вы вошли в зону, запрещенную для полетов, и будете спешены!' WHERE `entry` = 817;
 UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 818;
 UPDATE `mangos_string` SET `content_loc8` = 'Завершение демона...' WHERE `entry` = 1000;
 UPDATE `mangos_string` SET `content_loc8` = 'Аккаунт: %s удален' WHERE `entry` = 1001;
