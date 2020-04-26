@@ -2434,8 +2434,6 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Я уже думал, что м
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я перед тобой в долгу, дружище.' WHERE `entry` = -20771;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Мм-м...' WHERE `entry` = -20772;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s издает громкий лающий вой!' WHERE `entry` = -20773;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Я сдаюсь! Не руби меня!' WHERE `entry` = -20774;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Я пойду с тобой. Только ребят моих пощади – они хорошие парни, ошиблись просто...' WHERE `entry` = -20775;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Глаза |3-1(%s) на миг вспыхивают красным.' WHERE `entry` = -20776;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Это лучшее, на что ты $gспособен:способна;?' WHERE `entry` = -20777;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Ты $gосмелился:осмелилась; бросить вызов Недару, повелителю тундры?!' WHERE `entry` = -20778;

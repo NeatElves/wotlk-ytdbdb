@@ -19062,9 +19062,9 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (4972, 1, 7, -3202.731, -2847.48, 38.70749, 100, 1000, 1, NULL);
 DELETE FROM `dbscript_string` WHERE `entry` IN(2000003412,2000003413,2000003414);
 INSERT INTO `dbscript_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES 
-(2000003412, 'Kagoro, I require your presence!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 22, 1755, 'Krog (Entry: 4926)'),
-(2000003413, 'Go to the Shady Rest Inn and follow the tracks. See where they lead and report back to me.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 1, 1648, 'Krog (Entry: 4926)'),
-(2000003414, 'Understood. I will return shortly.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 1, 1649, 'Kagoro (Entry: 4972)');
+(2000003412, 'Kagoro, I require your presence!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 22, 0, 'Krog (Entry: 4926)'),
+(2000003413, 'Go to the Shady Rest Inn and follow the tracks. See where they lead and report back to me.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 1, 0, 'Krog (Entry: 4926)'),
+(2000003414, 'Understood. I will return shortly.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 1, 0, 'Kagoro (Entry: 4972)');
 REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
 ('116494', '8921', '230', '0', '0', '508.71408', '-54.984196', '-63.601387', '1.151917338371276855', '7200', '7200', '0', '0', '2700', '0', '0', '2'),
 ('116495', '8921', '230', '0', '0', '509.71408', '-53.984196', '-63.601387', '0', '7200', '7200', '0', '0', '2700', '0', '0', '0'),
@@ -19546,3 +19546,107 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3
 INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES
 ('3149', '9', '24554', '0', '0', '0', '0', ''), ('3150', '8', '24554', '0', '0', '0', '0', ''), ('3151', '8', '24801', '0', '0', '0', '0', ''), ('3152', '-3', '3151', '0', '0', '0', '0', ''),
 ('3153', '-2', '3150', '3149', '0', '0', '0', ''), ('3154', '-1', '3152', '3153 ', '0', '0', '0', '');
+
+UPDATE quest_template SET CompleteScript=10970 WHERE entry=10970;
+DELETE FROM dbscripts_on_quest_end WHERE id=10970;
+INSERT INTO dbscripts_on_quest_end (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(10970,312,0,0,0,0,0,0,0,0,2000003426,0,0,0,0.000000,0.000000,0.000000,0.000000,'Commander Ameer - Stand back, $n. This may be an Ethereum trap.'),
+(10970,4400,0,3,0,0,0,0,0,0,2000003426,0,0,0,4248.613770,2168.86,137.74632,100,'Commander Ameer - Move'),
+(10970,8200,0,0,0,0,0,0,0,0,2000003427,0,0,0,0.000000,0.000000,0.000000,0.000000,'Commander Ameer - %s uses the Ethereum prison key on the salvaged Ethereum prison.'),
+(10970,9200,0,1,28,0,0,0,0,0,0,0,0,0,0.000000,0.000000,0.000000,0.000000,'Commander Ameer - STATE_WORK_SHEATHED'),
+(10970,12900,0,1,0,0,0,0,0,0,0,0,0,0,0.000000,0.000000,0.000000,0.000000,'Commander Ameer - ONESHOT_NONE'),
+(10970,13100,0,14,35465,0,0,20520,5,0,0,0,0,0,0.000000,0.000000,0.000000,0.000000,'Ethereum Prisoner - Remove Aura 35465'),
+(10970,13100,0,36,0,0,0,20520,5,3,0,0,0,0,0.000000,0.000000,0.000000,0.000000,'Ethereum Prisoner - Face Commander Ameer'),
+(10970,13100,0,11,0,0,0,184488,5,7,0,0,0,0,0.000000,0.000000,0.000000,0.000000,'Salvaged Ethereum Prison - Open'),
+(10970,13100,1,23,22900,0,0,20520,5,0,0,0,0,0,0.000000,0.000000,0.000000,0.000000,'Etherium Prisoner - Morph'),
+(10970,15000,0,0,0,0,0,20520,5,0,2000003428,0,0,0,0.000000,0.000000,0.000000,0.000000,'Tortured Protectorate Vanguard - Commander... I am not long for this world... Taken to a holding pen...'),
+(10970,29500,0,15,3617,0,0,20520,5,7,0,0,0,0,0.000000,0.000000,0.000000,0.000000,'Tortured Protectorate Vanguard - Cast 3617'),
+(10970,35000,0,0,0,0,0,0,0,0,2000003429,0,0,0,0.000000,0.000000,0.000000,0.000000,'Commander Ameer - Those fools! What have they done! What horrors do they hold? And for what purpose? I will need your help again, hero. Help us. Help your people.'),
+(10970,41000,0,3,0,0,0,0,0,0,0,0,0,0,4252.6523,2166.07,137.79778,100,'Commander Ameer - Move'),
+(10970,43000,0,3,0,0,0,0,0,0,0,0,0,0,0.000000,0.000000,0.000000,1.099557399749755859,'Commander Ameer - Orientation');
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(5131, 20520, 530, 1, 1, 0, 0, 4245.32, 2171.15, 137.948, 0.680678, 300, 300, 0, 0, 7181, 0, 0, 0);
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(32337, 184998, 530, 1, 1, 4245.33, 2171.18, 137.678, 3.63029, 0, 0, -0.970295, 0.241925, 180, 180, 100, 1);
+UPDATE gameobject SET spawntimesecsmin=0, spawntimesecsmax=0 WHERE id=184488;
+DELETE FROM `dbscript_string` WHERE `entry` BETWEEN 2000003426 AND 2000003429;
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES 
+(2000003426, 'Stand back, $n. This may be an Ethereum trap.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 0, 'Commander Ameer (Entry: 20448)'),
+(2000003427, '%s uses the Ethereum prison key on the salvaged Ethereum prison.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, 0, 'Commander Ameer (Entry: 20448)'),
+(2000003428, 'Commander... I am not long for this world... Taken to a holding pen... hundreds... thousands... beings from other worlds... Imprisoned... Imprisoned by Ethereum. Many of them our allies. Must... Must save the others... It... It''s not too late...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 0, 'Tortured Protectorate Vanguard (Entry: 20520)'),
+(2000003429, 'Those fools! What have they done! What horrors do they hold? And for what purpose? I will need your help again, hero. Help us. Help your people.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 0, 'Commander Ameer (Entry: 20448)');
+
+DELETE FROM creature_template_addon WHERE entry = 9696;
+INSERT INTO creature_template_addon (entry, mount, bytes1, b2_0_sheath, b2_1_pvp_state, emote, moveflags, auras) VALUES (9696,0,0,1,0,0,0,NULL);
+DELETE FROM `dbscripts_on_relay` WHERE `id` = 10124;
+INSERT INTO `dbscripts_on_relay` (`id`,`delay`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(10124,0,15,42660,0,0,0,0,0,0,0,0,0,'Gavis Greyshield - Cast Gavis Greyshield Credit',0,0,0,0),
+(10124,0,4,59,784,0,0,0,0,0,0,0,0,'Gavis Greyshield - Set UnitFlags 784',0,0,0,0),
+(10124,0,22,84,1,0,0,0,0,0,0,0,0,'Gavis Greyshield - Set Faction 84',0,0,0,0),
+(10124,2000,42,0,0,0,0,0,0,0,0,0,0,'Gavis Greyshield - Set Equipment Slots',0,0,0,0),
+(10124,4000,0,0,0,0,2000003430,0,0,0,0,0,0,'Gavis Greyshield - Say',0,0,0,0),
+(10124,7000,0,0,0,0,2000003431,0,0,0,0,0,0,'Gavis Greyshield - Say',0,0,0,0),
+(10124,13000,18,0,0,0,0,0,0,0,0,0,0,'Gavis Greyshield - Despawn Self',0,0,0,0);
+DELETE FROM `dbscript_string` WHERE `entry` BETWEEN 2000003430 AND 2000003431;
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
+(2000003430, 'I surrender! Stay your blade!', 0, 0, 0, 5, 'Gavis Greyshield (Entry: 23941)'),
+(2000003431, 'I will go with you. Just spare my men. They''re good lads who''ve only made a mistake...', 0, 0, 0, 1, 'Gavis Greyshield (Entry: 23941)');
+UPDATE gameobject SET spawntimesecsmin=28, spawntimesecsmax=28 WHERE id=185191;
+UPDATE creature SET spawntimesecsmin=28, spawntimesecsmax=28 WHERE id=22288;
+DELETE FROM spell_script_target WHERE entry=38729;
+INSERT INTO spell_script_target (entry,type,targetentry,inverseEffectMask) VALUES (38729,1,22288,3), (38729,0,185191,6);
+DELETE FROM spell_script_target WHERE entry=38736;
+INSERT INTO spell_script_target (entry,type,targetentry,inverseEffectMask) VALUES (38736,1,22288,0);
+UPDATE creature_model_info SET bounding_radius=8, combat_reach=10.4 WHERE modelid=18988;
+UPDATE creature_linking_template SET flag=flag|128 WHERE entry IN (20984,21783,21805);
+
+DELETE FROM dbscript_string WHERE entry IN (2000001270,2000001271,2000001272,2000001273,2000001274);
+UPDATE gossip_menu_option SET action_script_id=0 WHERE menu_id=8228;
+DELETE FROM dbscripts_on_gossip WHERE id IN (822801,822800);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (2098536,2098541,2098501);
+DELETE FROM creature_movement_template where entry=20985;
+DELETE FROM dbscripts_on_creature_death WHERE id=19554;
+UPDATE gossip_menu_option SET option_id=100 WHERE menu_id=8228 AND id=0;
+UPDATE gossip_menu_option SET option_id=101 WHERE menu_id=8228 AND id=1;
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES
+('99', '33', '0', '0', '0', '0', '0', 'Source of Condition''''s Last Waypoint == 0');
+UPDATE `conditions` SET `value1` = 99 WHERE `condition_entry` =2194;
+
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(5198, 18568, 530, 1, 1, 0, 0, -2237.78, 5555.18, 112.131, 2.80998, 300, 300, 0, 0, 5589, 3155, 0, 0),
+(66071, 18568, 530, 1, 1, 0, 0, -2047.15, 5589.73, 53.159, 4.1888, 300, 300, 0, 0, 5589, 3155, 0, 0);
+UPDATE `creature` SET `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `id` in (18568,18547,18593);
+REPLACE INTO creature (guid, id, map, spawnMask, modelid, equipment_id, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, currentwaypoint, curhealth, curmana, DeathState, MovementType) VALUES
+(5202, 18547, 530, 1, 0, 0, -2107.36, 5641.19, 50.3112, 3.24631, 300, 300, 0, 0, 3484, 5751, 0, 0),
+(5208, 18547, 530, 1, 0, 0, -2103.54, 5644.81, 50.3112, 1.53589, 300, 300, 0, 0, 3484, 5751, 0, 0),
+(148860, 18547, 530, 1, 0, 0, -2102.45, 5646.07, 50.3112, 3.68265, 300, 300, 0, 0, 3484, 5751, 0, 0),
+(148861, 18547, 530, 1, 0, 0, -2089.48, 5639.69, 50.3112, 2.98451, 300, 300, 0, 0, 3484, 5751, 0, 0);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(148862, 18593, 530, 1, 1, 0, 0, -2156.62, 5497.37, 50.3841, 4.5204, 300, 300, 0, 0, 4422, 2620, 0, 0),
+(148863, 18593, 530, 1, 1, 0, 0, -2220.31, 5516.13, 64.1556, 0.541052, 300, 300, 0, 0, 4422, 2620, 0, 0);
+REPLACE INTO creature (guid, id, map, spawnMask, modelid, equipment_id, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, currentwaypoint, curhealth, curmana, DeathState, MovementType) VALUES
+(148865, 19684, 530, 1, 0, 0, -1853, 5125.58, -38.8575, 0.627608, 300, 300, 10, 0, 7097, 0, 0, 1),
+(148864, 19684, 530, 1, 0, 0, -1628.91, 5181.64, -36.0806, 5.68681, 300, 300, 0, 0, 7097, 0, 0, 2),
+(148866, 19684, 530, 1, 0, 0, -1834.76, 5355.98, -12.3448, 5.65487, 300, 300, 0, 0, 7097, 0, 0, 0);
+DELETE FROM `creature_movement` WHERE `id`=148864;
+INSERT INTO `creature_movement` (`id`,`point`,`position_x`,`position_y`,`position_z`,`orientation`,`waittime`,`script_id`) VALUES
+(148864,1,-1568.287,5139.504,-23.90513,100,0,0),
+(148864,2,-1628.911,5181.641,-36.08061,100,0,0),
+(148864,3,-1634.133,5185.489,-37.14691,100,0,0);
+
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp2` = '4422', `BaseDamageExp2` = '66.121' WHERE `Level` =63 AND `Class` =2;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '1551', `BaseDamageExp1` = '23.4508' WHERE `Level` = 50 AND `Class` = 8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '1604', `BaseDamageExp1` = '23.8815' WHERE `Level` = 51 AND `Class` = 8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '1660', `BaseDamageExp1` = '24.4958' WHERE `Level` = 52 AND `Class` = 8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '1717', `BaseDamageExp1` = '24.9442' WHERE `Level` = 53 AND `Class` = 8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '1773', `BaseDamageExp1` = '25.5368' WHERE `Level` = 54 AND `Class` = 8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '1830', `BaseDamageExp1` = '26.079' WHERE `Level` =55 AND `Class` =8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '1889', `BaseDamageExp1` = '26.4791' WHERE `Level` =56 AND `Class` =8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '1949' WHERE `Level` =57 AND `Class` =8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '5461', `BaseDamageExp1` = '104.723' WHERE `Level` = 74 AND `Class` = 8;
+UPDATE `creature_template_classlevelstats` SET `BaseDamageExp1` = '108.832' WHERE `Level` = 75 AND `Class` = 8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '5778', `BaseDamageExp1` = '112.941' WHERE `Level` = 76 AND `Class` = 8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '5945', `BaseDamageExp1` = '117.05' WHERE `Level` = 77 AND `Class` = 8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '6117', `BaseDamageExp1` = '121.159' WHERE `Level` = 78 AND `Class` = 8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '6295', `BaseDamageExp1` = '125.268' WHERE `Level` = 79 AND `Class` = 8;
+UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '6478', `BaseDamageExp1` = '129.377' WHERE `Level` = 80 AND `Class` = 8;

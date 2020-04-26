@@ -1274,11 +1274,6 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Со всем должным по
 UPDATE `dbscript_string` SET `content_loc8` = 'Ты прав, Эйтригг. Момент крайне неблагоприятен. Позаботься, чтобы к Адскому Крику были отправлены наши лучшие послы.' WHERE `entry` = 2000001267;
 UPDATE `dbscript_string` SET `content_loc8` = 'Сию секунду, сэр! За Орду!' WHERE `entry` = 2000001268;
 UPDATE `dbscript_string` SET `content_loc8` = 'Если он хоть чем-то похож на отца, то союз с маг''харами станет началом новой эры для Орды.' WHERE `entry` = 2000001269;
-UPDATE `dbscript_string` SET `content_loc8` = 'Вы слышали смертных! ВОН ОТСЮДА!!!' WHERE `entry` = 2000001270;
-UPDATE `dbscript_string` SET `content_loc8` = 'Скажи, когда будешь $gготов:готова;, $n. Мы атакуем по твоей команде.' WHERE `entry` = 2000001271;
-UPDATE `dbscript_string` SET `content_loc8` = 'Теперь или никогда, солдаты! Давайте сделаем это! За К''ареш! За Протекторат!' WHERE `entry` = 2000001272;
-UPDATE `dbscript_string` SET `content_loc8` = 'Время уничтожить тебя наконец-то пришло, Пространствус!' WHERE `entry` = 2000001273;
-UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000001274;
 UPDATE `dbscript_string` SET `content_loc8` = 'Хорошо, поехали. Я знаю одно отличное местечко!' WHERE `entry` = 2000001275;
 UPDATE `dbscript_string` SET `content_loc8` = 'Что... происходит... со мной? Уберите от меня эту кошку!' WHERE `entry` = 2000001276;
 UPDATE `dbscript_string` SET `content_loc8` = 'Сверкунчик смотрит на Виеру Шепот Солнца очень голодными глазами.' WHERE `entry` = 2000001277;
@@ -3430,6 +3425,12 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Отец... но... как?' WHER
 UPDATE `dbscript_string` SET `content_loc8` = 'Ты думал, что твое предательство будет забыто? Что оно затеряется под тщательно сооруженным покровом над моей смертью? Клинок, кровь моей крови, чувствовал твою жестокость еще долго после того, как мое сердце перестало биться. И в смерти я знал, что ты сделал. Но теперь цепи Кел''Тузада больше не держат меня. Я пришел, чтобы служить справедливости. Я – ИСПЕПЕЛИТЕЛЬ.' WHERE `entry` = 2000003423;
 UPDATE `dbscript_string` SET `content_loc8` = 'Прости меня, отец! Пожалуйста...' WHERE `entry` = 2000003424;
 UPDATE `dbscript_string` SET `content_loc8` = 'Ты $gпрощен:прощена;...' WHERE `entry` = 2000003425;
+UPDATE `dbscript_string` SET `content_loc8` = 'Назад, $n. Это может быть ловушка братства Эфириум.' WHERE `entry` = 2000003426;
+UPDATE `dbscript_string` SET `content_loc8` = '%s использует ключ на трофейной тюрьме братства Эфириум.' WHERE `entry` = 2000003427;
+UPDATE `dbscript_string` SET `content_loc8` = 'Командор... Я не жилец в этом мире... Был заключен в тюрьму... сотни...тысячи... создания из других миров... в темницах... захвачены в темницы Эфириума. Многие из них – наши союзники... Должны... должны спасти остальных... Еще... еще не поздно...' WHERE `entry` = 2000003428;
+UPDATE `dbscript_string` SET `content_loc8` = 'Эти глупцы! Что они натворили! Какими ужасами завладели? И для чего? Мне снова нужна твоя помощь. Помоги нам. Помоги своему народу.' WHERE `entry` = 2000003429;
+UPDATE `dbscript_string` SET `content_loc8` = 'Я сдаюсь! Не руби меня!' WHERE `entry` = 2000003430;
+UPDATE `dbscript_string` SET `content_loc8` = 'Я пойду с тобой. Только ребят моих пощади – они хорошие парни, ошиблись просто...' WHERE `entry` = 2000003431;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;
