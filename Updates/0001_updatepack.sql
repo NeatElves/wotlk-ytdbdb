@@ -19650,3 +19650,349 @@ UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '5945', `BaseD
 UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '6117', `BaseDamageExp1` = '121.159' WHERE `Level` = 78 AND `Class` = 8;
 UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '6295', `BaseDamageExp1` = '125.268' WHERE `Level` = 79 AND `Class` = 8;
 UPDATE `creature_template_classlevelstats` SET `BaseHealthExp1` = '6478', `BaseDamageExp1` = '129.377' WHERE `Level` = 80 AND `Class` = 8;
+
+UPDATE gameobject_template SET data6=-1000 WHERE entry=178559;
+UPDATE `gameobject_template` SET `data6` = '-1' WHERE `entry` IN (190721,194645,195089);
+UPDATE quest_template SET PrevQuestId=4810 WHERE entry=4734;
+UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry=15260;
+UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry=15261;
+UPDATE creature_linking_template SET flag=flag-32 WHERE master_entry=11988;
+UPDATE creature_template SET MinLevelHealth=1006, MaxLevelHealth=1057 WHERE Entry=4308;
+UPDATE `creature` SET `curhealth` = '1006' WHERE `id` =4308;
+UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry IN (9297,9521,9526,9527);
+
+DELETE FROM creature_template_addon WHERE entry=5843;
+INSERT INTO creature_template_addon (entry,mount,bytes1,b2_0_sheath,b2_1_pvp_state,emote,moveflags,auras) VALUES (5843,0,0,1,16,173,0,NULL);
+UPDATE creature_template SET ExtraFlags=0 WHERE Entry IN (576, 888, 2142, 11040);
+UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE Entry in (888,499,1203,1204,1436,887,1098);
+UPDATE quest_template SET Details="I hear Greatfather Winter - with the generous support of Smokywood Pastures - has put presents for everyone under the tree in Ironforge. I wish I could go, but I've got to look after the PX-238 Winter Wondervolt.$B$BBut you should definitely check it out. I'm sure Greatfather Winter has some presents with your name on them." WHERE entry=8827;
+UPDATE quest_template SET Details="I hear Great-father Winter - with the generous support of Smokywood Pastures - has put presents for everyone under the tree in Orgrimmar. I wish I could go, but I've got to look after the PX-238 Winter Wondervolt.$B$BBut you should definitely check it out. I'm sure Great-father Winter has some presents with your name on them." WHERE entry=8828;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26239' WHERE `modelid` = 18801 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26240' WHERE `modelid` = 18800 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26245' WHERE `modelid` = 18802 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26246' WHERE `modelid` = 18803 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26247' WHERE `modelid` = 18804 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26248' WHERE `modelid` = 18805 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26249' WHERE `modelid` = 18806 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26250' WHERE `modelid` = 18807 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26242' WHERE `modelid` = 18796 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26241' WHERE `modelid` = 18797 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26253' WHERE `modelid` = 18810 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26254' WHERE `modelid` = 18811 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26243' WHERE `modelid` = 19339 AND `event` = 2;
+UPDATE `game_event_creature_data` SET `modelid` = '0', `spell_start` = '26244' WHERE `modelid` = 19342 AND `event` = 2;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1' WHERE `entry` =16380 AND `item` IN (43071,43079,43075,43083);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1' WHERE `entry` =16379 AND `item` IN (43071,43079,43075,43083);
+UPDATE `gameobject_template` SET `faction` = '0' WHERE `entry` =177272;
+UPDATE gameobject SET spawntimesecsmin=900, spawntimesecsmax=900, animprogress=100, state=1 WHERE id IN (177272, 177273, 177274, 177275, 177276, 177277, 177278, 177279, 177280, 177281);
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(32500, 177272, 1, 1, 1, -4447.88, 1409.79, 129.364, 1.64934, 0, 0, 0.734322, 0.678801, 900, 900, 100, 1),
+(32502, 177272, 1, 1, 1, -4446.78, 1422.18, 129.333, 1.29591, 0, 0, 0.603556, 0.797321, 900, 900, 100, 1),
+(32504, 177272, 1, 1, 1, -4434.14, 1432.94, 129.343, 0.518362, 0, 0, 0.256289, 0.9666, 900, 900, 100, 1),
+(32505, 177272, 1, 1, 1, -4433.71, 1393.45, 129.328, 3.06934, 0, 0, 0.999347, 0.0361207, 900, 900, 100, 1),
+(32508, 177272, 1, 1, 1, -4419.84, 1394.43, 129.34, 3.88222, 0, 0, 0.932213, -0.361909, 900, 900, 100, 1),
+(32510, 177272, 1, 1, 1, -4419.48, 1431.52, 129.328, 5.76718, 0, 0, 0.255151, -0.966901, 900, 900, 100, 1),
+(32511, 177272, 1, 1, 1, -4409.8, 1420.48, 129.333, 5.17577, 0, 0, 0.525843, -0.850581, 900, 900, 100, 1),
+(32512, 177272, 1, 1, 1, -4408.93, 1406.13, 129.327, 4.2333, 0, 0, 0.854685, -0.519146, 900, 900, 100, 1),
+(32515, 177272, 1, 1, 1, 1870.44, -1771.93, 62.0935, 4.2121, 0, 0, 0.860139, -0.510059, 900, 900, 100, 1),
+(32517, 177272, 1, 1, 1, 1870.73, -1771.51, 62.0804, 4.22781, 0, 0, 0.856107, -0.516798, 900, 900, 100, 1),
+(32520, 177272, 1, 1, 1, 2711.59, -1879.38, 192.824, 0.656589, 0, 0, 0.322429, 0.946594, 900, 900, 100, 1),
+(32522, 177281, 530, 1, 1, 2092.26, 6768.03, 163.529, -0.749613, 0, 0, -0.366092, 0.930578, 900, 900, 100, 1),
+(32528, 177278, 1, 1, 1, 2904.41, -1398.96, 206.901, 1.56207, 0, 0, 0.704015, 0.710185, 900, 900, 100, 1),
+(32534, 177280, 1, 1, 1, 6409.28, 467.947, 7.45344, 0.593412, 0, 0, 0.292372, 0.956305, 900, 900, 100, 1),
+(32538, 177280, 1, 1, 1, 7790.75, -2446.62, 486.522, 1.20428, 0, 0, 0.566407, 0.824125, 900, 900, 100, 1),
+(32540, 177278, 571, 1, 1, 3493.46, 1978.83, 64.5993, 1.72536, 0, 0, 0.759588, 0.650404, 900, 900, 100, 1),
+(32541, 177278, 1, 1, 1, 9728.97, 961.72, 1293.25, -0.235619, 0, 0, -0.117537, 0.993068, 900, 900, 100, 1);
+UPDATE quest_template SET ZoneOrSort=1 WHERE entry=384;
+UPDATE page_text SET text="In the years that followed, after Stormwind betrayed the Stonemasons' Guild, Sir Erlgadin grew bitter about the role of the nobles within the Kingdom. He no longer wished to uphold the position that his father's bloodline had earned for him in the House of Nobles. But I digress. The purpose of this story is not to act as a political treatise or a biography. This is the account of my experiences hunting big game in the green hills of Stranglethorn." WHERE entry=156;
+UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry in (575,1860,1863,2070,417,3450,3939,4526,4534,5032,5037,5038,5040,5041,5766,10928,10979,17252,6412);
+UPDATE creature_template SET MeleeBaseAttackTime=2000 WHERE entry = 12123;
+UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry in (14662,14663,14664,14666,14668);
+DELETE FROM dbscript_string WHERE entry=2000001270;
+INSERT INTO dbscript_string (entry, content_default, content_loc1, content_loc2, content_loc3, content_loc4, content_loc5, content_loc6, content_loc7, content_loc8, sound, type, language, emote, comment) VALUES
+(2000001270, '%s devours all nearby zombies!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, NULL);
+DELETE FROM dbscripts_on_event WHERE id=10495;
+INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(10495, 7000, 0, 0, 0, 0, 0, 0, 0, 2000001270, 0, 0, 0, 0, 0, 0, 0, ''),
+(10495, 7000, 15, 28404, 0, 0, 0, 0, 0x04, 0, 0, 0, 0, 0, 0, 0, 0, '');
+DELETE FROM spell_target_position WHERE id IN (29240, 29269);
+INSERT INTO spell_target_position (id, target_map, target_position_x, target_position_y, target_position_z, target_orientation) VALUES
+(29240, 533, 2722.03, -3514.3, 262.354, 2.84269), (29269, 533, 2684.95, -3457.55, 262.578, 4.62159);
+UPDATE creature_template SET SpeedWalk=(2 / 2.5), SpeedRun=(4/7.0), Detection=3 WHERE Entry IN (16057, 16056);
+UPDATE creature_template SET Detection=7 WHERE Entry=16236;
+UPDATE creature_template SET MechanicImmuneMask=76234719 WHERE Entry IN (9033, 8983);
+UPDATE creature_loot_template SET ChanceOrQuestChance=-5 WHERE item IN (14395, 14396);
+UPDATE creature_loot_template SET ChanceOrQuestChance=-25 WHERE item=3236;
+UPDATE creature_template SET Scale=1.35 WHERE Entry=12818;
+UPDATE creature_template SET MovementType=2 WHERE entry=11862;
+UPDATE `creature_template` SET `SpeedWalk` = '1', `MeleeBaseAttackTime` = '2000', `RangedBaseAttackTime` = '2000' WHERE `Entry` = '2744';
+REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+('7596', '2744', '0', '0', '0', '-6382.8745', '-3111.3088', '310.9184', '0.77', '86400', '172800', '0', '0', '1753', '0', '0', '2');
+DELETE FROM `creature_movement` WHERE `id`= 7596;
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
+(7596, 00, -6372.1616, -3097.3650, 310.83580, 100, 0, 0),
+(7596, 01, -6361.8994, -3085.7556, 310.83670, 100, 0, 0),
+(7596, 02, -6348.1245, -3068.2239, 310.83420, 100, 0, 0),
+(7596, 03, -6336.6840, -3075.1226, 310.83334, 100, 0, 0),
+(7596, 04, -6323.1780, -3086.4673, 310.83383, 100, 0, 0),
+(7596, 05, -6316.0550, -3093.8215, 310.83590, 100, 0, 0),
+(7596, 06, -6330.4220, -3111.4817, 310.83606, 100, 0, 0),
+(7596, 07, -6340.5110, -3123.8710, 310.83542, 100, 0, 0),
+(7596, 08, -6350.4185, -3135.8296, 310.83500, 100, 0, 0),
+(7596, 09, -6340.5110, -3123.8710, 310.83542, 100, 0, 0),
+(7596, 10, -6330.4220, -3111.4817, 310.83606, 100, 0, 0),
+(7596, 11, -6316.0550, -3093.8215, 310.83590, 100, 0, 0),
+(7596, 12, -6323.1780, -3086.4673, 310.83383, 100, 0, 0),
+(7596, 13, -6336.6840, -3075.1226, 310.83334, 100, 0, 0),
+(7596, 14, -6348.1245, -3068.2239, 310.83420, 100, 0, 0),
+(7596, 15, -6361.8994, -3085.7556, 310.83670, 100, 0, 0),
+(7596, 16, -6372.1616, -3097.3650, 310.83580, 100, 0, 0),
+(7596, 17, -6382.3237, -3110.7766, 310.83508, 100, 0, 0);
+UPDATE `creature_template` SET `SpeedWalk` = 1 WHERE `Entry` = 2723;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(53086, 2723, 0, 1, 1, 0, 0, -6357.77, -3113.28, 285.362, 4.03171, 300, 300, 0, 0, 1674, 0, 0, 0),
+(39321, 2723, 0, 1, 1, 0, 0, -6331.81, -3116.75, 299.806, 4.50057, 300, 300, 1, 0, 1674, 0, 0, 1),
+(39322, 2723, 0, 1, 1, 0, 0, -6347.62, -3067.33, 301.195, 0.0523599, 300, 300, 1, 0, 1674, 0, 0, 1),
+(39325, 2723, 0, 1, 1, 0, 0, -6328.17, -3091.63, 310.917, 1.44862, 300, 300, 1, 0, 1674, 0, 0, 1),
+(39327, 2723, 0, 1, 1, 0, 0, -6343.04, -3078.38, 310.917, 0.331613, 300, 300, 1, 0, 1674, 0, 0, 1),
+(39354, 2723, 0, 1, 1, 0, 0, -6374.31, -3124.62, 283.973, 1.0472, 300, 300, 0, 0, 1674, 0, 0, 0),
+(39380, 2723, 0, 1, 1, 0, 0, -6365.73, -3131.67, 283.973, 0.994838, 300, 300, 0, 0, 1674, 0, 0, 0);
+UPDATE creature_template_addon SET auras='11964' WHERE entry IN (6136, 5983);
+UPDATE creature_template_addon SET auras='18847' WHERE entry=2923;
+DELETE FROM dbscripts_on_spell WHERE id IN (29182, 29188);
+INSERT INTO dbscripts_on_spell (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+(29182, 0, 0, 15, 29181, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Teleport to Lair of the Twin Emperors'),
+(29188, 0, 0, 15, 29190, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Teleport to Final Chamber');
+UPDATE dbscripts_on_gossip SET data_flags=6 WHERE id IN (664400,664401);
+INSERT INTO `creature_spawn_entry` (`guid`, `entry`) VALUES
+(341, 684), (341, 772), (347, 684), (347, 772), (367, 684), (367, 772), (377, 684), (377, 772), (394, 684), (394, 772), (411, 684), (411, 772),
+(418, 684), (418, 772), (440, 684), (440, 772), (442, 684), (442, 772), (458, 684), (458, 772), (468, 684), (468, 772), (475, 684), (475, 772),
+(477, 684), (477, 772), (479, 684), (479, 772), (491, 684), (491, 772), (496, 684), (496, 772), (506, 684), (506, 772), (513, 684), (513, 772),
+(514, 684), (514, 772), (527, 684), (527, 772), (533, 684), (533, 772), (537, 684), (537, 772), (539, 684), (539, 772), (546, 684), (546, 772),
+(554, 684), (554, 772), (564, 684), (564, 772), (575, 684), (575, 772), (582, 684), (582, 772), (586, 684), (586, 772), (627, 684), (627, 772),
+(677, 684), (677, 772), (678, 684), (678, 772), (739, 684), (739, 772), (751, 684), (751, 772), (889, 684), (889, 772), (977, 684), (977, 772),
+(210, 684), (210, 772), (238, 684), (238, 772), (344, 684), (344, 772), (366, 684), (366, 772), (375, 684), (375, 772), (403, 684), (403, 772),
+(428, 684), (428, 772), (431, 684), (431, 772), (486, 684), (486, 772), (487, 684), (487, 772), (489, 684), (489, 772), (493, 684), (493, 772),
+(505, 684), (505, 772), (509, 684), (509, 772), (521, 684), (521, 772), (534, 684), (534, 772), (535, 684), (535, 772), (538, 684), (538, 772),
+(548, 684), (548, 772), (552, 684), (552, 772), (553, 684), (553, 772), (588, 684), (588, 772), (591, 684), (591, 772), (596, 684), (596, 772),
+(626, 684), (626, 772), (661, 684), (661, 772), (679, 684), (679, 772), (783, 684), (783, 772), (39305, 684), (39305, 772), (39393, 684), (39393, 772),
+(39394, 684), (39394, 772), (39418, 684), (39418, 772), (39446, 684), (39446, 772), (39466, 684), (39466, 772), (39609, 684), (39609, 772), (39632, 684), (39632, 772), 
+(39641, 684), (39641, 772), (39658, 684), (39658, 772), (75419, 684), (75419, 772), (39295, 684), (39295, 772), (148867, 684), (148867, 772);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(341, 0, 0, 1, 1, 0, 0, -12647.3, -414.763, 18.2433, 2.01449, 300, 300, 5, 0, 0, 0, 0, 1),
+(347, 0, 0, 1, 1, 0, 0, -12686.1, -88.5606, 12.098, 4.91893, 300, 300, 10, 0, 0, 0, 0, 1),
+(367, 0, 0, 1, 1, 0, 0, -13093.7, -158.198, -1.5694, 2.38863, 300, 300, 5, 0, 0, 0, 0, 1),
+(377, 0, 0, 1, 1, 0, 0, -13105.9, -286.305, 10.0925, 0.639988, 300, 300, 5, 0, 0, 0, 0, 1),
+(394, 0, 0, 1, 1, 0, 0, -12912.6, -353.317, 13.4452, 1.8268, 300, 300, 5, 0, 0, 0, 0, 1),
+(411, 0, 0, 1, 1, 0, 0, -13047.7, -303, 13.3939, 5.5434, 300, 300, 5, 0, 0, 0, 0, 1),
+(418, 0, 0, 1, 1, 0, 0, -12282.8, -720.313, 17.0055, 1.18738, 300, 300, 5, 0, 0, 0, 0, 1),
+(440, 0, 0, 1, 1, 0, 0, -12314.1, -742.487, 12.1928, 4.8004, 300, 300, 5, 0, 0, 0, 0, 1),
+(442, 0, 0, 1, 1, 0, 0, -12944.7, -299.226, 10.7879, 0.361776, 300, 300, 5, 0, 0, 0, 0, 1),
+(458, 0, 0, 1, 1, 0, 0, -12156.2, -922.453, 39.5709, 3.97728, 300, 300, 10, 0, 0, 0, 0, 1),
+(468, 0, 0, 1, 1, 0, 0, -12148.9, -983.322, 35.1428, 0.305261, 300, 300, 5, 0, 0, 0, 0, 1),
+(475, 0, 0, 1, 1, 0, 0, -12036.2, -922.681, 43.3261, 3.32987, 300, 300, 5, 0, 0, 0, 0, 1),
+(477, 0, 0, 1, 1, 0, 0, -12095.7, -987.971, 49.5976, 2.62021, 300, 300, 5, 0, 0, 0, 0, 1),
+(479, 0, 0, 1, 1, 0, 0, -12127.5, -743.169, 14.0338, 2.31471, 300, 300, 5, 0, 0, 0, 0, 1),
+(491, 0, 0, 1, 1, 0, 0, -12150.1, -793.224, 26.7442, 3.90213, 300, 300, 5, 0, 0, 0, 0, 1),
+(496, 0, 0, 1, 1, 0, 0, -12087.7, -852.536, 41.6183, 0.166622, 300, 300, 5, 0, 0, 0, 0, 1),
+(506, 0, 0, 1, 1, 0, 0, -12147.5, -846.319, 40.2675, 4.53568, 300, 300, 5, 0, 0, 0, 0, 1),
+(513, 0, 0, 1, 1, 0, 0, -12192.4, -949.117, 33.2409, 2.46563, 300, 300, 10, 0, 0, 0, 0, 1),
+(514, 0, 0, 1, 1, 0, 0, -12351.8, -844.327, 40.3441, 2.86061, 300, 300, 5, 0, 0, 0, 0, 1),
+(527, 0, 0, 1, 1, 0, 0, -12252.3, -951.109, 44.5195, 0.255408, 300, 300, 5, 0, 0, 0, 0, 1),
+(533, 0, 0, 1, 1, 0, 0, -12183.6, -898.137, 39.5455, 4.94159, 300, 300, 10, 0, 0, 0, 0, 1),
+(537, 0, 0, 1, 1, 0, 0, -12118.4, -821.391, 36.4835, 2.26353, 300, 300, 5, 0, 0, 0, 0, 1),
+(539, 0, 0, 1, 1, 0, 0, -12378.7, -747.576, 31.4413, -0.894327, 300, 300, 5, 0, 0, 0, 0, 1),
+(546, 0, 0, 1, 1, 0, 0, -12211.4, -923.087, 39.9216, 4.41719, 300, 300, 5, 0, 0, 0, 0, 1),
+(554, 0, 0, 1, 1, 0, 0, -12218.6, -985.548, 33.7145, 0.149292, 300, 300, 5, 0, 0, 0, 0, 1),
+(564, 0, 0, 1, 1, 0, 0, -12426.8, -776.325, 35.791, 5.49222, 300, 300, 10, 0, 0, 0, 0, 1),
+(575, 0, 0, 1, 1, 0, 0, -12348.9, -779.705, 31.5376, 1.13463, 300, 300, 5, 0, 0, 0, 0, 1),
+(582, 0, 0, 1, 1, 0, 0, -12832.3, -111.459, 4.89921, 0.403745, 300, 300, 5, 0, 0, 0, 0, 1),
+(586, 0, 0, 1, 1, 0, 0, -12051.4, -884.42, 45.0339, 3.49483, 300, 300, 5, 0, 0, 0, 0, 1),
+(627, 0, 0, 1, 1, 0, 0, -12709.7, -52.2938, 5.97928, 3.07905, 300, 300, 5, 0, 0, 0, 0, 1),
+(677, 0, 0, 1, 1, 0, 0, -12087.6, -920.919, 51.2018, 3.92699, 300, 300, 5, 0, 0, 0, 0, 1),
+(678, 0, 0, 1, 1, 0, 0, -12244.5, -680.986, 14.1356, 2.97223, 300, 300, 5, 0, 0, 0, 0, 1),
+(739, 0, 0, 1, 1, 0, 0, -12714.6, -410.374, 18.4577, 6.2343, 300, 300, 10, 0, 0, 0, 0, 1),
+(751, 0, 0, 1, 1, 0, 0, -12114, -886.153, 47.5352, 6.19765, 300, 300, 5, 0, 0, 0, 0, 1),
+(889, 0, 0, 1, 1, 0, 0, -12785.9, -43.8879, 6.26619, 1.48084, 300, 300, 10, 0, 0, 0, 0, 1),
+(977, 0, 0, 1, 1, 0, 0, -12811.4, -246.76, 18.1375, 5.40466, 300, 300, 5, 0, 0, 0, 0, 1),
+(210, 0, 0, 1, 1, 0, 0, -12768.4, -322.875, 12.058, 3.06739, 300, 300, 5, 0, 0, 0, 0, 1),
+(238, 0, 0, 1, 1, 0, 0, -12854.2, -349.937, 15.2196, 3.87586, 300, 300, 5, 0, 0, 0, 0, 1),
+(344, 0, 0, 1, 1, 0, 0, -12879.3, -378.25, 9.30467, 3.42171, 300, 300, 5, 0, 0, 0, 0, 1),
+(366, 0, 0, 1, 1, 0, 0, -12823, -456.419, 14.9604, 0.720483, 300, 300, 10, 0, 0, 0, 0, 1),
+(375, 0, 0, 1, 1, 0, 0, -12791.7, -475, 21.2411, 2.54872, 300, 300, 10, 0, 0, 0, 0, 1),
+(403, 0, 0, 1, 1, 0, 0, -12794.7, -419.504, 15.2032, 2.79503, 300, 300, 10, 0, 0, 0, 0, 1),
+(428, 0, 0, 1, 1, 0, 0, -12822.1, -150.036, 10.3581, 1.95566, 300, 300, 5, 0, 0, 0, 0, 1),
+(431, 0, 0, 1, 1, 0, 0, -12841.7, -208.334, 10.465, 0.4744, 300, 300, 5, 0, 0, 0, 0, 1),
+(486, 0, 0, 1, 1, 0, 0, -12076.1, -1015.35, 52.157, 0.337071, 300, 300, 2, 0, 0, 0, 0, 1),
+(487, 0, 0, 1, 1, 0, 0, -12052.5, -952.927, 48.3519, 4.24438, 300, 300, 5, 0, 0, 0, 0, 1),
+(489, 0, 0, 1, 1, 0, 0, -12028.2, -847.941, 41.6001, 2.29809, 300, 300, 5, 0, 0, 0, 0, 1),
+(493, 0, 0, 1, 1, 0, 0, -12704.8, -108.278, 11.7571, 0.601868, 300, 300, 10, 0, 0, 0, 0, 1),
+(505, 0, 0, 1, 1, 0, 0, -12681, -153.979, 20.5652, 4.26287, 300, 300, 5, 0, 0, 0, 0, 1),
+(509, 0, 0, 1, 1, 0, 0, -12613, -78.5322, 18.2388, 6.14421, 300, 300, 5, 0, 0, 0, 0, 1),
+(521, 0, 0, 1, 1, 0, 0, -12585.8, -291.52, 17.8689, 3.99338, 300, 300, 5, 0, 0, 0, 0, 1),
+(534, 0, 0, 1, 1, 0, 0, -12566.7, -248.508, 17.356, 0.316794, 300, 300, 5, 0, 0, 0, 0, 1),
+(535, 0, 0, 1, 1, 0, 0, -12681.1, -305.207, 13.6782, 4.60864, 300, 300, 3, 0, 0, 0, 0, 1),
+(538, 0, 0, 1, 1, 0, 0, -12860.3, -416.644, 13.7714, 4.22427, 300, 300, 10, 0, 0, 0, 0, 1),
+(548, 0, 0, 1, 1, 0, 0, -12907.7, -407.618, 12.1279, 0.521576, 300, 300, 5, 0, 0, 0, 0, 1),
+(552, 0, 0, 1, 1, 0, 0, -12740.9, -22.3074, 9.20442, 2.0834, 300, 300, 5, 0, 0, 0, 0, 1),
+(553, 0, 0, 1, 1, 0, 0, -12773.7, -364.65, 10.2239, -0.027463, 300, 300, 5, 0, 0, 0, 0, 1),
+(588, 0, 0, 1, 1, 0, 0, -12866.1, -276.616, 5.04852, 2.08677, 300, 300, 10, 0, 0, 0, 0, 1),
+(591, 0, 0, 1, 1, 0, 0, -12651.1, -282.201, 19.6694, 0.17036, 300, 300, 5, 0, 0, 0, 0, 1),
+(596, 0, 0, 1, 1, 0, 0, -12900.9, -312.683, 14.5511, 2.72667, 300, 300, 5, 0, 0, 0, 0, 1),
+(626, 0, 0, 1, 1, 0, 0, -12749.9, -86.366, 5.00393, 3.13366, 300, 300, 5, 0, 0, 0, 0, 1),
+(661, 0, 0, 1, 1, 0, 0, -12781.7, -281.666, 15.4579, 5.73306, 300, 300, 5, 0, 0, 0, 0, 1),
+(679, 0, 0, 1, 1, 0, 0, -12776.8, -113.877, 4.34917, 4.00164, 300, 300, 10, 0, 0, 0, 0, 1),
+(783, 0, 0, 1, 1, 0, 0, -12748, -250.8, 32.9493, 5.80207, 300, 300, 5, 0, 0, 0, 0, 1),
+(39305, 0, 0, 1, 1, 0, 0, -12738.9, -215.763, 38.4689, 4.76722, 300, 300, 5, 0, 0, 0, 0, 1),
+(39393, 0, 0, 1, 1, 0, 0, -12717.1, -179.31, 35.0471, 2.29955, 300, 300, 5, 0, 0, 0, 0, 1),
+(39394, 0, 0, 1, 1, 0, 0, -12573.8, -180.401, 14.704, 0.763302, 300, 300, 5, 0, 0, 0, 0, 1),
+(39418, 0, 0, 1, 1, 0, 0, -12334.7, -815.234, 32.9202, 2.54231, 300, 300, 5, 0, 0, 0, 0, 1),
+(39446, 0, 0, 1, 1, 0, 0, -12307.8, -679.962, 15.5986, 2.66818, 300, 300, 5, 0, 0, 0, 0, 1),
+(39466, 0, 0, 1, 1, 0, 0, -12347.8, -710.986, 17.0866, 5.36212, 300, 300, 5, 0, 0, 0, 0, 1),
+(39609, 0, 0, 1, 1, 0, 0, -12312.9, -748.511, 13.3077, 5.41488, 300, 300, 5, 0, 0, 0, 0, 1),
+(39632, 0, 0, 1, 1, 0, 0, -12687.1, -243.015, 38.3067, 2.13173, 300, 300, 5, 0, 0, 0, 0, 1),
+(39641, 0, 0, 1, 1, 0, 0, -12643.6, -225.073, 39.1751, 5.40503, 300, 300, 5, 0, 0, 0, 0, 1),
+(39658, 0, 0, 1, 1, 0, 0, -12979.5, -304.001, 13.7637, 0.359221, 300, 300, 5, 0, 0, 0, 0, 1),
+(75419, 0, 0, 1, 1, 0, 0, -12650.2, -114.033, 16.8294, 0, 300, 300, 10, 0, 0, 0, 0, 1),
+(39295, 0, 0, 1, 1, 0, 0, -12517.5, -352.893, 16.4823, 4.2898, 300, 300, 5, 0, 0, 0, 0, 1),
+(148867, 0, 0, 1, 1, 0, 0, -12914.2, -280.606, 6.30183, 5.91554, 300, 300, 5, 0, 0, 0, 0, 1);
+DELETE FROM `creature` WHERE `guid` = 14118;
+DELETE FROM `pool_creature` WHERE `guid` = 13990;
+DELETE FROM `pool_creature` WHERE `guid` = 14660;
+DELETE FROM `creature` WHERE `guid` = 13990;
+DELETE FROM `pool_template` WHERE `entry` = 177;
+UPDATE `creature` SET `spawntimesecsmin` = 53200, `spawntimesecsmax` = 53200 WHERE `guid` =14660;
+INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `condition_id`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES
+(41574, 3973, 0, 0, 0, 1545, 0, 0, 2, 1);
+DELETE FROM spell_script_target WHERE entry IN(41557,41575);
+INSERT INTO spell_script_target (entry,type,targetEntry,inverseEffectMask) VALUES
+(41557,1,23256,0), (41557,1,23428,0), (41557,1,22270,0), (41557,1,22266,0), (41557,1,23316,0), (41557,1,23233,0), (41557,1,23115,0),
+(41557,1,23300,0), (41557,1,23253,0), (41557,1,23112,0), (41557,1,22271,0), (41557,1,22264,0), (41557,1,23110,0), (41575,1,23257,0),
+(41575,1,22982,0), (41575,1,23413,0), (41575,1,23335,0), (41575,1,23120,0), (41575,1,23208,0), (41575,1,23334,0), (41575,1,23392,0),
+(41575,1,23016,0), (41575,1,23042,0), (41575,1,23048,0), (41575,1,23415,0), (41575,1,23367,0);
+UPDATE quest_template SET OfferRewardText='The Scepter of the Shifting Sands is whole once more, $N.$B$BIt must be you who uses the scepter. It must be you who heralds the next age of your people. You must wait for the armies of the Horde and the Alliance to arrive in Silithus before you may ring the Scarab Gong.' WHERE entry=8742;
+UPDATE quest_template SET Details='A thousand years has passed and just as it was fated, one stands before me. One who shall lead their people to a new age.$B$BThe Old God trembles, $N. Oh yes, it fears your faith. Shatter the prophecy of C\'Thun.$B$BIt knows you come, champion - and with you comes the might of Kalimdor. You have only to let me know when you are prepared and I shall grant you The Scepter of the Shifting Sands.' WHERE entry=8742;
+UPDATE quest_template SET OfferRewardText='You did it! Vectus is defeated! And Dawn\'s Gambit... did it work?$B$BHm... maybe my device wasn\'t the success I had hoped, but I\'m glad you were able to handle things anyway. Well done, $N!$B$BThe Argent Dawn, and the good people of Azeroth, are in your debt.' WHERE entry=4771;
+UPDATE quest_template SET Details='Finally, you are of age, $N... of age to battle in the name of the Horde. To conquer for the glory of the Warchief.$B$BYes...$B$B<Kaltunk looks you over.>$B$BYou will do nicely.$B$BNo doubt you wish to find a great dragon or demon and strangle it with your bare hands, but perhaps it would be wise to start on something less... dangerous.$B$B<Kaltunk laughs.>$B$BReport to Gornek, he should be able to assign a task better suited to a young $c. You will find Gornek in the Den, to the west.' WHERE entry=4641;
+UPDATE quest_template SET Objectives='Speak with Gornek. You recall Kaltunk marking your map with his location and mentioning that Gornek resided in the Den, a building to the west. ' WHERE entry=4641;
+UPDATE quest_template SET RequestItemsText='You\'ve done it already, but we will continue to accept any troll tribal necklaces you find and are willing to turn in.  By turning them in to me, you\'ll continue to improve your standing amongst the Wildhammers; if you\'re willing to fight for us, then we\'ll be willing to fight for you!$B$BI need five troll tribal necklaces for them to count, $N.' WHERE entry=2881;
+UPDATE quest_template SET OfferRewardText='Another set of necklaces means that there are fewer trolls in the Hinterlands we have to worry about!$BYou\'ve done it again, $N.$B$BKeep up the good work!' WHERE entry=2881;
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(32349, 2857, 0, 1, 1, -12520.1, -729.142, 39.9971, 2.89724, 0, 0, 0.992546, 0.121873, 7200, 7200, 255, 1),
+(32353, 2857, 0, 1, 1, -12140.4, -187.807, 31.6856, 2.04204, 0, 0, 0.852641, 0.522496, 7200, 7200, 255, 1),
+(32354, 2857, 0, 1, 1, -11667.2, 919.916, 3.42246, 1.88495, 0, 0, 0.809015, 0.587788, 7200, 7200, 255, 1),
+(32357, 2857, 0, 1, 1, -11535.5, 547.522, 50.7442, 1.81514, 0, 0, 0.78801, 0.615662, 7200, 7200, 255, 1),
+(32359, 2857, 0, 1, 1, -10477.4, -2541.66, 19.6449, -2.26892, 0, 0, -0.906306, 0.422622, 7200, 7200, 255, 1),
+(32360, 2857, 0, 1, 1, -9957.83, -3600.77, 22.7541, -2.96704, 0, 0, -0.996194, 0.0871655, 7200, 7200, 255, 1),
+(32364, 2857, 0, 1, 1, -7018.64, -3341.54, 241.667, 6.19592, 0, 0, -0.0436192, 0.999048, 7200, 7200, 100, 1),
+(32367, 2857, 0, 1, 1, -6381.32, -3413.04, 241.666, 3.00195, 0, 0, 0.989016, 0.147811, 7200, 7200, 100, 1),
+(32387, 2857, 0, 1, 1, -6368.06, -3135.1, 283.889, 1.46608, 0, 0, 0.66913, 0.743145, 7200, 7200, 100, 1),
+(32390, 2857, 0, 1, 1, -6324.55, -3111.33, 300.279, 3.49067, 0, 0, -0.984807, 0.173652, 7200, 7200, 100, 1),
+(32392, 2857, 0, 1, 1, -6321.2, -3088.82, 301.113, 5.65487, 0, 0, -0.309016, 0.951057, 7200, 7200, 100, 1),
+(32417, 2857, 1, 1, 1, -2987.63, -4292.42, 0.062737, -0.174532, 0, 0, -0.0871553, 0.996195, 7200, 7200, 255, 1),
+(32419, 2857, 1, 1, 1, -2699.24, -4286.74, 3.67091, 0.610864, 0, 0, 0.300705, 0.953717, 7200, 7200, 255, 1),
+(32421, 2857, 1, 1, 1, -2562.67, -3982.02, 8.77391, 1.41372, 0, 0, 0.649449, 0.760405, 7200, 7200, 255, 1),
+(32424, 2857, 1, 1, 1, -2384.47, 2408.75, 76.4762, -2.53072, 0, 0, -0.953716, 0.300709, 7200, 7200, 255, 1),
+(32431, 2857, 1, 1, 1, -2372.9, -4076.46, 6.72439, -2.16421, 0, 0, -0.882948, 0.469471, 7200, 7200, 255, 1),
+(32433, 2857, 1, 1, 1, -2359.31, -4278.73, 0.512181, -0.575957, 0, 0, -0.284015, 0.95882, 7200, 7200, 255, 1),
+(32435, 2857, 1, 1, 1, -2308.99, 2626.03, 60.2422, 2.05949, 0, 0, 0.857168, 0.515037, 7200, 7200, 255, 1),
+(32440, 2857, 0, 1, 1, -2283.33, -1611.53, -66.2569, -0.069812, 0, 0, -0.0348989, 0.999391, 7200, 7200, 255, 1),
+(32447, 2857, 0, 1, 1, -2230.21, -1469.4, -46.3219, -2.426, 0, 0, -0.936671, 0.350211, 7200, 7200, 255, 1),
+(32449, 2857, 1, 1, 1, -1757.97, 911.563, 92.4926, 2.49582, 0, 0, 0.948324, 0.317305, 7200, 7200, 255, 1),
+(32450, 2857, 1, 1, 1, -1696.59, 1021.16, 89.2987, -2.61799, 0, 0, -0.965925, 0.258821, 7200, 7200, 255, 1),
+(32451, 2857, 1, 1, 1, -1287.23, 2903.94, 113.557, -1.79769, 0, 0, -0.782608, 0.622514, 7200, 7200, 255, 1);
+INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
+(32421, 15833, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32433, 15833, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32419, 15833, 0, 'Dustwallow Marsh - Solid Chest Pool'),
+(32417, 15833, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32431, 15833, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32447, 15829, 0, 'Dustwallow Marsh - Solid Chest Pool'),
+(32440, 15823, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32451, 15832, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32435, 15832, 0, 'Dustwallow Marsh - Solid Chest Pool'),
+(32424, 15832, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32450, 15832, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32449, 15832, 0, 'Dustwallow Marsh - Solid Chest Pool'),
+(32359, 15826, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32360, 15831, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32387, 15827, 0, 'Dustwallow Marsh - Solid Chest Pool'),
+(32364, 15827, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32367, 15827, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32390, 15827, 0, 'Dustwallow Marsh - Solid Chest Pool'),
+(32392, 15827, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32349, 15825, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32357, 15825, 0, 'Dustwallow Marsh - Solid Chest Pool'),
+(32353, 15828, 0, 'Dustwallow Marsh - Solid Chest Pool'), (32354, 15828, 0, 'Dustwallow Marsh - Solid Chest Pool');
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(32452, 4149, 0, 1, 1, -7438.18, -2317.32, 237.041, 5.60251, 0, 0, -0.333807, 0.942641, 7200, 7200, 100, 1),
+(32462, 4149, 0, 1, 1, -7311.24, -2277.52, 245.914, 0.558504, 0, 0, 0.275637, 0.961262, 7200, 7200, 100, 1),
+(32468, 4149, 0, 1, 1, -7483.71, -2268.2, 233.716, 0.0698117, 0, 0, 0.0348988, 0.999391, 7200, 7200, 100, 1),
+(32469, 4149, 0, 1, 1, -7387.19, -2237.2, 233.927, 3.85718, 0, 0, -0.936671, 0.35021, 7200, 7200, 100, 1);
+REPLACE INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES ('177', '1', 'Badlands (Dustbelch Grotto) - Chest Pool');
+REPLACE INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
+('32452', '177', '0', 'Badlands (Dustbelch Grotto) - Solid Chest (4149)'),
+('32462', '177', '0', 'Badlands (Dustbelch Grotto) - Solid Chest (4149)'),
+('32468', '177', '0', 'Badlands (Dustbelch Grotto) - Solid Chest (4149)'),
+('32469', '177', '0', 'Badlands (Dustbelch Grotto) - Solid Chest (4149)');
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(12575, 2843, 0, 1, 1, -9140.58, -282.026, 71.8892, 1.3439, 0, 0, 0, 0, 3600, 3600, 100, 1),
+(8302, 2843, 0, 1, 1, -9060.95, -463.424, 72.5782, 1.53589, 0, 0, 0.694658, 0.71934, 3600, 3600, 255, 1),
+(16923, 2843, 0, 1, 1, -9038.98, -303.642, 74.3616, 2.28638, 0, 0, 0, 0, 3600, 3600, 100, 1),
+(5341, 2843, 0, 1, 1, -8955.38, -439.217, 64.7955, -2.86233, 0, 0, -0.990267, 0.139178, 3600, 3600, 255, 1),
+(8051, 2843, 0, 1, 1, -8613.8, -176.181, 86.2264, 0.830514, 0, 0, 0.403425, 0.915013, 3600, 3600, 100, 1),
+(14260, 2843, 0, 1, 1, -8593.03, -169.743, 87.1218, 0.767945, 0, 0, 0, 0, 3600, 3600, 100, 1),
+(7072, 2843, 0, 1, 1, -8564.62, -212.033, 85.301, 2.47837, 0, 0, 0.945519, 0.325567, 3600, 3600, 255, 1),
+(25284, 2843, 0, 1, 1, -8556.58, -199.101, 85.8751, 1.93731, 0, 0, 0, 0, 3600, 3600, 100, 1),
+(19767, 2843, 0, 1, 1, -6541.69, 362.199, 384.464, 1.23852, 0, 0, 0.580434, 0.814307, 3600, 3600, 100, 1),
+(19766, 2843, 0, 1, 1, -6538.18, 359.67, 371.134, 5.3418, 0, 0, 0.453505, -0.891254, 3600, 3600, 100, 1),
+(19765, 2843, 0, 1, 1, -6520.52, 688.075, 387.612, 6.21242, 0, 0, 0.0353748, -0.999374, 3600, 3600, 100, 1),
+(19764, 2843, 0, 1, 1, -6516.55, 288.024, 372.061, 0.760217, 0, 0, 0.371021, 0.928624, 3600, 3600, 100, 1),
+(3305, 2843, 0, 1, 1, -6493.9, 502.314, 387.246, 0.977737, 0, 0, 0.469627, 0.882865, 3600, 3600, 100, 1),
+(19645, 2843, 0, 1, 1, -6490.65, 512.377, 387.494, 0.925024, 0, 0, 0, 0, 3600, 3600, 100, 1),
+(19644, 2843, 0, 1, 1, -6484.93, 294.773, 372.653, 2.49582, 0, 0, 0, 0, 3600, 3600, 100, 1),
+(19646, 2843, 0, 1, 1, -6396.81, 784.359, 386.216, 5.19288, 0, 0, 0.518547, -0.855049, 3600, 3600, 100, 1),
+(19647, 2843, 0, 1, 1, 1784.69, 1344.27, 89.4032, 5.77809, 0, 0, 0.249873, -0.968279, 3600, 3600, 100, 1),
+(12431, 2843, 0, 1, 1, 1900.49, 1487.23, 93.9514, 1.44862, 0, 0, 0, 0, 3600, 3600, 100, 1),
+(4883, 2843, 0, 1, 1, 1963.66, 1383.45, 64.1756, -1.29154, 0, 0, -0.601814, 0.798637, 3600, 3600, 255, 1),
+(32470, 2843, 0, 1, 1, 1963.77, 1383.59, 64.1604, 5.77888, 0, 0, 0.249489, -0.968378, 3600, 3600, 100, 1),
+(32472, 2843, 0, 1, 1, 1966.76, 1617.83, 88.1989, 4.29629, 0, 0, 0.837914, -0.545803, 3600, 3600, 100, 1),
+(32479, 2843, 0, 1, 1, 2021.08, 1855.79, 102.886, 4.55772, 0, 0, 0.759624, -0.650363, 3600, 3600, 100, 1),
+(32481, 2843, 0, 1, 1, 2036.59, 1916.59, 102.783, 6.23153, 0, 0, 0.025824, -0.999667, 3600, 3600, 100, 1),
+(32485, 2843, 0, 1, 1, 2081.69, 1967.03, 101.193, 2.82743, 0, 0, 0, 0, 3600, 3600, 100, 1),
+(32491, 2843, 1, 1, 1, 10262.1, 961.428, 1340.93, 5.89251, 0, 0, 0.194099, -0.980982, 3600, 3600, 100, 1),
+(32493, 2843, 1, 1, 1, 10328, 1033.01, 1339.31, 1.74533, 0, 0, 0, 0, 3600, 3600, 100, 1),
+(32496, 2843, 1, 1, 1, 10485.3, 1059.98, 1325.47, -1.0472, 0, 0, 0, 0, 3600, 3600, 100, 1),
+(32546, 2843, 1, 1, 1, 10504.8, 1064.71, 1325.83, -0.279252, 0, 0, 0, 0, 3600, 3600, 100, 1),
+(15801, 2843, 1, 1, 1, 10812.8, 897.368, 1336.4, 0.444496, 0, 0, 0.220423, 0.975404, 3600, 3600, 100, 1),
+(2434, 2843, 1, 1, 1, 10911.3, 848.826, 1329.36, 2.04204, 0, 0, 0, 0, 3600, 3600, 100, 1),
+(1566, 2843, 1, 1, 1, 10912.2, 977.162, 1338.64, 3.82496, 0, 0, 0.942192, -0.335074, 3600, 3600, 100, 1),
+(1564, 2843, 1, 1, 1, 10942.8, 942.153, 1340.68, 5.62352, 0, 0, 0.323884, -0.946097, 3600, 3600, 100, 1);
+INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
+(15908, 1, 'Battered Chests (2843) - Dun Morogh - Coldridge Valley - Cave'),
+(15906, 1, 'Battered Chests (2843)- Tirisfal - Deathknell'),
+(15907, 1, 'Battered Chests (2843)- Tirisfal - Deathknell - Cave'),
+(15909, 1, 'Battered Chests (2843) - Dun Morogh - Coldridge Valley'),
+(15910, 1, 'Battered Chests (2843) - Teldrassil - Shadowglen - Cave'),
+(15911, 1, 'Battered Chests (2843) - Teldrassil - Shadowglen'),
+(15912, 1, 'Battered Chests (2843) - Elwynn Forest - Northshire - Cave'),
+(15913, 1, 'Battered Chests (2843) - Elwynn Forest - Northshire');
+INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
+(4883, 15906, 0, 'Battered Chest (2843) - Tirisfal - Deathknell #5'),
+(32472, 15906, 0, 'Battered Chest (2843) - Tirisfal - Deathknell #4'),
+(12431, 15906, 0, 'Battered Chest (2843) - Tirisfal - Deathknell #3'),
+(32470, 15906, 0, 'Battered Chest (2843) - Tirisfal - Deathknell #2'),
+(19647, 15906, 0, 'Battered Chest (2843) - Tirisfal - Deathknell #1'),
+(32485, 15907, 0, 'Battered Chest (2843) - Tirisfal - Deathknell - Cave #3'),
+(32481, 15907, 0, 'Battered Chest (2843) - Tirisfal - Deathknell - Cave #2'),
+(32479, 15907, 0, 'Battered Chest (2843) - Tirisfal - Deathknell - Cave #1'),
+(19764, 15908, 0, 'Battered Chest (2843) - Dun Morogh - Coldridge Valley - Cave #3'),
+(19767, 15908, 0, 'Battered Chest (2843) - Dun Morogh - Coldridge Valley - Cave #2'),
+(19766, 15908, 0, 'Battered Chest (2843) - Dun Morogh - Coldridge Valley - Cave #1'),
+(19646, 15909, 0, 'Battered Chest (2843) - Dun Morogh - Coldridge Valley #1'),
+(19765, 15909, 0, 'Battered Chest (2843) - Dun Morogh - Coldridge Valley #2'),
+(3305, 15909, 0, 'Battered Chest (2843) - Dun Morogh - Coldridge Valley #3'),
+(1564, 15910, 0, 'Battered Chest (2843) - Teldrassil - Shadowglen - Cave #1'),
+(1566, 15910, 0, 'Battered Chest (2843) - Teldrassil - Shadowglen - Cave #2'),
+(2434, 15910, 0, 'Battered Chest (2843) - Teldrassil - Shadowglen - Cave #3'),
+(15801, 15910, 0, 'Battered Chest (2843) - Teldrassil - Shadowglen - Cave #4'),
+(32491, 15911, 0, 'Battered Chest (2843) - Teldrassil - Shadowglen #1'),
+(32493, 15911, 0, 'Battered Chest (2843) - Teldrassil - Shadowglen #2'),
+(32496, 15911, 0, 'Battered Chest (2843) - Teldrassil - Shadowglen #3'),
+(25284, 15912, 0, 'Battered Chest (2843) - Elwynn Forest - Northshire - Cave #1'),
+(8051, 15912, 0, 'Battered Chest (2843) - Elwynn Forest - Northshire - Cave #2'),
+(14260, 15912, 0, 'Battered Chest (2843) - Elwynn Forest - Northshire - Cave #3'),
+(7072, 15912, 0, 'Battered Chest (2843) - Elwynn Forest - Northshire - Cave #4'),
+(16923, 15913, 0, 'Battered Chest (2843) - Elwynn Forest - Northshire #1'),
+(12575, 15913, 0, 'Battered Chest (2843) - Elwynn Forest - Northshire #2'),
+(5341, 15913, 0, 'Battered Chest (2843) - Elwynn Forest - Northshire #3'),
+(8302, 15913, 0, 'Battered Chest (2843) - Elwynn Forest - Northshire #4'),
+(19644, 15908, 0, 'Battered Chest (2843) - Dun Morogh - Coldridge Valley - Cave #4'),
+(19645, 15909, 0, 'Battered Chest (2843) - Dun Morogh - Coldridge Valley #4'),
+(32546, 15911, 0, 'Battered Chest (2843) - Teldrassil - Shadowglen #4');
