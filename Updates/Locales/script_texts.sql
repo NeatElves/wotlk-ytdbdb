@@ -1252,6 +1252,7 @@ UPDATE `script_texts` SET `content_loc8` = 'ДЗИНЬ! 428 000 градусов
 UPDATE `script_texts` SET `content_loc8` = '428 000 градусов по Кракленгейту... Ну что, горячая штучка?!' WHERE `entry` = -1010019;
 UPDATE `script_texts` SET `content_loc8` = 'Если мерить в градусах Кракленгейта, получается 428 000! Ай да Кракл!' WHERE `entry` = -1010020;
 UPDATE `script_texts` SET `content_loc8` = 'Пресвятой Кракл! Температура 428 000 градусов по Кракленгейту!' WHERE `entry` = -1010021;
+UPDATE `script_texts` SET `content_loc8` = 'Спасибо, что $gосвободил:освободила; меня. Поговори с моей сестрой на заставе Расщепленного Дерева. А я... Мне нужно найти место для отдыха.' WHERE `entry` = -1010022;
 UPDATE `script_texts` SET `content_loc8` = '%s издает низкое горловое рычание.' WHERE `entry` = -1015001;
 UPDATE `script_texts` SET `content_loc8` = 'Ты никогда не получишь Сердце Ярости! Его сила принадлежит Иллидану!' WHERE `entry` = -1015002;
 UPDATE `script_texts` SET `content_loc8` = '%s достает Сердце Ярости.' WHERE `entry` = -1015003;
@@ -1591,6 +1592,7 @@ UPDATE `script_texts` SET `content_loc8` = 'Эй, Камнеузл!' WHERE `entr
 UPDATE `script_texts` SET `content_loc8` = 'Пойдем, милый.' WHERE `entry` = -1230067;
 UPDATE `script_texts` SET `content_loc8` = '%s целует своего любимого.' WHERE `entry` = -1230068;
 UPDATE `script_texts` SET `content_loc8` = '%s целует госпожу Нагмару.' WHERE `entry` = -1230069;
+UPDATE `script_texts` SET `content_loc8` = 'Император Тауриссан не желает, чтобы его беспокоили! Поворачивайте назад или встречайте свою погибель, жалкие смертные!' WHERE `entry` = -1230070;
 UPDATE `script_texts` SET `content_loc8` = 'Вот это сюрприз. Обычно, чтобы найти обед, мне приходится покидать логово.' WHERE `entry` = -1249000;
 UPDATE `script_texts` SET `content_loc8` = 'Знай своё место, смертный!' WHERE `entry` = -1249001;
 UPDATE `script_texts` SET `content_loc8` = 'Эта бессмысленная возня вгоняет меня в тоску. Я сожгу вас всех!' WHERE `entry` = -1249002;

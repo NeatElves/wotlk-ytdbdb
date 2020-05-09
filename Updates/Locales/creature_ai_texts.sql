@@ -390,7 +390,6 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Лес плачет! Стихи
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Кошмар нельзя остановить!' WHERE `entry` = -1140;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s выжимает остатки жизни из |3-1($n) и поглощает $gего:ее; душу.' WHERE `entry` = -1141;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Рамштайн жаждет живой плоти!' WHERE `entry` = -1193;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Император Тауриссан не желает, чтобы его беспокоили! Поворачивайте назад или встречайте свою погибель, жалкие смертные!' WHERE `entry` = -1194;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Сейчас тебя отмэлоунят!' WHERE `entry` = -1195;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Тебя ОТМЭЛОУНИЛИ!' WHERE `entry` = -1196;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'ТИММИ!' WHERE `entry` = -1197;
@@ -638,7 +637,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Спасибо!' WHERE `entry` 
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Помогите мне, рабы!' WHERE `entry` = -10087;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Нас не остановить!' WHERE `entry` = -10088;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Лазутчики!' WHERE `entry` = -10089;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Вам тут не рады!' WHERE `entry` = -10090;
+UPDATE `creature_ai_texts` SET `content_loc8` = '%s распадается на осколки.' WHERE `entry` = -10090;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Остальные справятся и без нас.' WHERE `entry` = -10091;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Они никогда не узнают о том, что нас нет.' WHERE `entry` = -10092;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Если мы будем медлить, тут разразится настоящий ад!' WHERE `entry` = -10093;
@@ -1467,7 +1466,6 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Когда я доберусь 
 UPDATE `creature_ai_texts` SET `content_loc8` = 'А ну прочь от правящего лорда! Я серьезно говорю!' WHERE `entry` = -10961;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Нет, нет, нет! Назад!' WHERE `entry` = -10962;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Гори! Гори! Гори!' WHERE `entry` = -10963;
-UPDATE `creature_ai_texts` SET `content_loc8` = '%s выражает свою признательность за освобождение от воздействия духа кои-кои.' WHERE `entry` = -10964;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Ай-ай-ай-ай!!!!' WHERE `entry` = -10965;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'А-А-А-А-А!' WHERE `entry` = -10966;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Аааай!!!!!!' WHERE `entry` = -10967;

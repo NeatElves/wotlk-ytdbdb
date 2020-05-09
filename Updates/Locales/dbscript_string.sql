@@ -1275,6 +1275,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Ты прав, Эйтригг. М
 UPDATE `dbscript_string` SET `content_loc8` = 'Сию секунду, сэр! За Орду!' WHERE `entry` = 2000001268;
 UPDATE `dbscript_string` SET `content_loc8` = 'Если он хоть чем-то похож на отца, то союз с маг''харами станет началом новой эры для Орды.' WHERE `entry` = 2000001269;
 UPDATE `dbscript_string` SET `content_loc8` = '%s уничтожает всех зомби вокруг!' WHERE `entry` = 2000001270;
+UPDATE `dbscript_string` SET `content_loc8` = '%s выражает свою признательность за освобождение от воздействия духа кои-кои.' WHERE `entry` = 2000001271;
 UPDATE `dbscript_string` SET `content_loc8` = 'Хорошо, поехали. Я знаю одно отличное местечко!' WHERE `entry` = 2000001275;
 UPDATE `dbscript_string` SET `content_loc8` = 'Что... происходит... со мной? Уберите от меня эту кошку!' WHERE `entry` = 2000001276;
 UPDATE `dbscript_string` SET `content_loc8` = 'Сверкунчик смотрит на Виеру Шепот Солнца очень голодными глазами.' WHERE `entry` = 2000001277;

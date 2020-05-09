@@ -415,6 +415,7 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (1965, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу кое-что у тебя купить.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1969, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Где сейчас дирижабль?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1970, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ты ни на что не годишься, Риббли. Пора тебе платить за свою слабость!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(1970, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Твои родичи шлют тебе привет, Риббли. И хотят заполучить твою голову!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1971, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Где сейчас дирижабль?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2021, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Обучите меня.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2050, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Спасибо, Джон-Оборванец. Твоя история была очень интересной и познавательной.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),

@@ -19996,3 +19996,240 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (19644, 15908, 0, 'Battered Chest (2843) - Dun Morogh - Coldridge Valley - Cave #4'),
 (19645, 15909, 0, 'Battered Chest (2843) - Dun Morogh - Coldridge Valley #4'),
 (32546, 15911, 0, 'Battered Chest (2843) - Teldrassil - Shadowglen #4');
+
+DELETE FROM `creature_loot_template` WHERE `item` = 15754;
+DELETE FROM `gameobject_loot_template` WHERE `item` = 15754;
+UPDATE quest_template SET NextQuestInChain=0 WHERE entry IN(9560,9562);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = 100 WHERE `entry` =18238 AND `item` =24559;
+DELETE FROM `creature_loot_template` WHERE `item` IN (4405,6712,9261,9355,9356,9358,18588,19244);
+DELETE FROM `pickpocketing_loot_template` WHERE `entry` = 11911 AND `item` = 1179;
+
+DELETE FROM creature_template_addon WHERE entry IN(20115);
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 12818;
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` = 1096);
+DELETE FROM `creature_template_addon` WHERE `entry` = 1096;
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (18077,18079));
+DELETE FROM dbscripts_on_creature_movement WHERE id = 2007101;
+INSERT INTO dbscripts_on_creature_movement (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(2007101,1000,0,0,0,0,0,0,0,0,2000003324,0,0,0,0,0,0,0,''),
+(2007101,3600,2,22,14,0x01 | 0x20,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(2007101,3600,0,10,20101,60000,0,0,0,0,0,0,0,0,4322.216,2148.113,124.918,4.014257,'Summon Nether-stalker'),
+(2007101,3600,1,10,20101,60000,0,0,0,0,0,0,0,0,4327.583,2133.33,126.4966,3.508112,'Summon Nether-stalker');
+UPDATE `spell_proc_event` SET `SchoolMask` = `SchoolMask`&~1 WHERE `entry` = 16880;
+UPDATE `creature_template` SET `UnitFlags` = 33555200 WHERE `entry` = 20289;
+INSERT INTO dbscripts_on_spell(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+('38640', '4000', '0', '0', '0', '0', '0', '0', '0', '2', '2000001271', '0', '0', '0', '0', '0', '0', '0', 'Leafbeard Delayed Emote/Text');
+INSERT INTO `dbscript_string` (`entry`,`content_default`,`sound`,`type`,`language`,`emote`,`broadcast_text_id`,`comment`) VALUES
+('2000001271','The %s appears very grateful to be free of the koi-koi spirit''s influence.','0','2','0','34','0','21326');
+UPDATE `quest_template` SET `RewSpellCast`=0 WHERE `entry`=10240;
+DELETE FROM `dbscripts_on_quest_end` WHERE `id`=10240;
+INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(10240, 0, 0, 15, 34656, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'cast Arcane Explosion (Cosmetic)'),
+(10240, 1000, 0, 10, 19842, 53000, 0, 0, 0, 0, 0, 0, 0, 0, 2314.31, 2208.68, 99.2333, 2.61799, 'Invis KV Defender'),
+(10240, 1000, 0, 10, 19842, 53000, 0, 0, 0, 0, 0, 0, 0, 0, 2319.45, 2247.42, 100.931, 2.09439, 'Invis KV Defender'),
+(10240, 1000, 0, 10, 19842, 53000, 0, 0, 0, 0, 0, 0, 0, 0, 2321.79, 2280.23, 102.159, 3.38594, 'Invis KV Defender'),
+(10240, 1000, 0, 10, 19842, 53000, 0, 0, 0, 0, 0, 0, 0, 0, 2285.11, 2351.05, 113.36, 4.04916, 'Invis KV Defender'),
+(10240, 1000, 0, 10, 19842, 53000, 0, 0, 0, 0, 0, 0, 0, 0, 2287.69, 2199.4, 94.2328, 3.90954, 'Invis KV Defender'),
+(10240, 1000, 0, 10, 19842, 53000, 0, 0, 0, 0, 0, 0, 0, 0, 2289.06, 2316.21, 105.876, 1.98968, 'Invis KV Defender'),
+(10240, 1000, 0, 9, 43929, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'respawn gameobject Kirin''Var Ward 183955'),
+(10240, 1500, 0, 10, 20618, 20000, 1, 0, 0, 0, 1, 0, 0, 0, 2349.556, 2276.039, 104.7442, 2.99193, 'Mana Invader'),
+(10240, 1500, 0, 10, 20618, 20000, 2, 0, 0, 0, 1, 0, 0, 0, 2341.932, 2327.533, 106.0814, 2.99193, 'Mana Invader'),
+(10240, 1500, 0, 10, 19842, 53000, 0, 0, 0, 0, 0, 0, 0, 0, 2275.86, 2371.76, 115.388, 0.610865, 'Invis KV Defender'),
+(10240, 2500, 0, 10, 20618, 20000, 3, 0, 0, 0, 1, 0, 0, 0, 2348.756, 2242.13, 100.2601, 2.99193, 'Mana Invader'),
+(10240, 5000, 0, 10, 20618, 20000, 4, 0, 0, 0, 1, 0, 0, 0, 2346.622, 2344.688, 113.5465, 2.99193, 'Mana Invader'),
+(10240, 7500, 0, 10, 20618, 20000, 5, 0, 0, 0, 1, 0, 0, 0, 2372.703, 2248.804, 120.5678, 2.99193, 'Mana Invader'),
+(10240, 7500, 0, 10, 20618, 20000, 6, 0, 0, 0, 1, 0, 0, 0, 2346.931, 2366.628, 119.0465, 2.99193, 'Mana Invader'),
+(10240, 7500, 0, 10, 20618, 20000, 7, 0, 0, 0, 1, 0, 0, 0, 2382.531, 2306.004, 119.7753, 2.99193, 'Mana Invader'),
+(10240, 7500, 0, 10, 20618, 20000, 8, 0, 0, 0, 1, 0, 0, 0, 2381.858, 2271.859, 132.7906, 2.99193, 'Mana Invader'),
+(10240, 8500, 0, 10, 20618, 20000, 9, 0, 0, 0, 1, 0, 0, 0, 2377.704, 2210.01, 92.98299, 2.99193, 'Mana Invader'),
+(10240, 8500, 0, 10, 20618, 20000, 10, 0, 0, 0, 1, 0, 0, 0, 2388.935, 2339.117, 109.0553, 2.99193, 'Mana Invader'),
+(10240, 9500, 0, 10, 20618, 20000, 11, 0, 0, 0, 1, 0, 0, 0, 2394.022, 2179.261, 87.07649, 2.99193, 'Mana Invader'),
+(10240, 9500, 0, 10, 20618, 20000, 12, 0, 0, 0, 1, 0, 0, 0, 2392.072, 2295.18, 130.9156, 2.99193, 'Mana Invader'),
+(10240, 10500, 0, 10, 20618, 20000, 13, 0, 0, 0, 1, 0, 0, 0, 2379.913, 2366.843, 133.4303, 2.99193, 'Mana Invader'),
+(10240, 13000, 0, 10, 20618, 20000, 14, 0, 0, 0, 1, 0, 0, 0, 2394.534, 2377.391, 145.6293, 2.99193, 'Mana Invader'),
+(10240, 20000, 0, 10, 20618, 20000, 0, 0, 0, 0, 0, 0, 0, 0, 2288.425, 2375.898, 107.9934, 3.458402, 'Mana Invader'),
+(10240, 20000, 0, 10, 20618, 20000, 15, 0, 0, 0, 1, 0, 0, 0, 2348.756, 2242.13, 100.2601, 2.99193, 'Mana Invader'),
+(10240, 20000, 0, 10, 20618, 20000, 16, 0, 0, 0, 1, 0, 0, 0, 2349.556, 2276.039, 104.7442, 2.99193, 'Mana Invader'),
+(10240, 20000, 0, 10, 20618, 20000, 2, 0, 0, 0, 1, 0, 0, 0, 2341.932, 2327.533, 106.0814, 2.99193, 'Mana Invader'),
+(10240, 20000, 0, 10, 20618, 20000, 4, 0, 0, 0, 1, 0, 0, 0, 2346.622, 2344.688, 113.5465, 2.99193, 'Mana Invader'),
+(10240, 21000, 0, 10, 20618, 20000, 0, 0, 0, 0, 0, 0, 0, 0, 2286.954, 2380.31, 105.9464, 3.796812, 'Mana Invader'),
+(10240, 22000, 0, 10, 20618, 20000, 5, 0, 0, 0, 1, 0, 0, 0, 2372.703, 2248.804, 120.5678, 2.99193, 'Mana Invader'),
+(10240, 22000, 0, 10, 20618, 20000, 6, 0, 0, 0, 1, 0, 0, 0, 2346.931, 2366.628, 119.0465, 2.99193, 'Mana Invader'),
+(10240, 22000, 0, 10, 20618, 20000, 7, 0, 0, 0, 1, 0, 0, 0, 2382.531, 2306.004, 119.7753, 2.99193, 'Mana Invader'),
+(10240, 22000, 0, 10, 20618, 20000, 8, 0, 0, 0, 1, 0, 0, 0, 2381.858, 2271.859, 132.7906, 2.99193, 'Mana Invader'),
+(10240, 23000, 0, 10, 20618, 20000, 10, 0, 0, 0, 1, 0, 0, 0, 2388.935, 2339.117, 109.0553, 2.99193, 'Mana Invader'),
+(10240, 23000, 0, 10, 20618, 20000, 12, 0, 0, 0, 1, 0, 0, 0, 2392.072, 2295.18, 130.9156, 2.99193, 'Mana Invader'),
+(10240, 24000, 0, 10, 20618, 20000, 17, 0, 0, 0, 1, 0, 0, 0, 2350.455, 2396.234, 121.9635, 2.99193, 'Mana Invader'),
+(10240, 24000, 0, 10, 20618, 20000, 13, 0, 0, 0, 1, 0, 0, 0, 2379.913, 2366.843, 133.4303, 2.99193, 'Mana Invader'),
+(10240, 26500, 0, 10, 20618, 20000, 14, 0, 0, 0, 1, 0, 0, 0, 2394.534, 2377.391, 145.6293, 2.99193, 'Mana Invader'),
+(10240, 27500, 0, 10, 20618, 20000, 9, 0, 0, 0, 1, 0, 0, 0, 2377.704, 2210.01, 92.98299, 2.99193, 'Mana Invader'),
+(10240, 28500, 0, 10, 20618, 20000, 18, 0, 0, 0, 1, 0, 0, 0, 2325.373, 2427.574, 111.5927, 2.99193, 'Mana Invader'),
+(10240, 28500, 0, 10, 20618, 20000, 19, 0, 0, 0, 1, 0, 0, 0, 2348.138, 2427.328, 137.0282, 2.99193, 'Mana Invader'),
+(10240, 28500, 0, 10, 20618, 20000, 20, 0, 0, 0, 1, 0, 0, 0, 2322.732, 2454.401, 107.2447, 2.99193, 'Mana Invader'),
+(10240, 35500, 0, 10, 20618, 20000, 10, 0, 0, 0, 1, 0, 0, 0, 2388.935, 2339.117, 109.0553, 2.99193, 'Mana Invader'),
+(10240, 35500, 0, 10, 20618, 20000, 15, 0, 0, 0, 1, 0, 0, 0, 2348.756, 2242.13, 100.2601, 2.99193, 'Mana Invader'),
+(10240, 35500, 0, 10, 20618, 20000, 16, 0, 0, 0, 1, 0, 0, 0, 2349.556, 2276.039, 104.7442, 2.99193, 'Mana Invader'),
+(10240, 35500, 0, 10, 20618, 20000, 2, 0, 0, 0, 1, 0, 0, 0, 2341.932, 2327.533, 106.0814, 2.99193, 'Mana Invader'),
+(10240, 35500, 0, 10, 20618, 20000, 4, 0, 0, 0, 1, 0, 0, 0, 2346.622, 2344.688, 113.5465, 2.99193, 'Mana Invader'),
+(10240, 35500, 0, 10, 20618, 20000, 6, 0, 0, 0, 1, 0, 0, 0, 2346.931, 2366.628, 119.0465, 2.99193, 'Mana Invader'),
+(10240, 35500, 0, 10, 20618, 20000, 7, 0, 0, 0, 1, 0, 0, 0, 2382.531, 2306.004, 119.7753, 2.99193, 'Mana Invader'),
+(10240, 35500, 0, 10, 20618, 20000, 12, 0, 0, 0, 1, 0, 0, 0, 2392.072, 2295.18, 130.9156, 2.99193, 'Mana Invader'),
+(10240, 35500, 0, 10, 20618, 20000, 8, 0, 0, 0, 1, 0, 0, 0, 2381.858, 2271.859, 132.7906, 2.99193, 'Mana Invader'),
+(10240, 35500, 0, 10, 20618, 20000, 17, 0, 0, 0, 1, 0, 0, 0, 2350.455, 2396.234, 121.9635, 2.99193, 'Mana Invader'),
+(10240, 35500, 0, 10, 20618, 20000, 13, 0, 0, 0, 1, 0, 0, 0, 2379.913, 2366.843, 133.4303, 2.99193, 'Mana Invader'),
+(10240, 36000, 0, 10, 20618, 20000, 5, 0, 0, 0, 1, 0, 0, 0, 2372.703, 2248.804, 120.5678, 2.99193, 'Mana Invader'),
+(10240, 40000, 0, 10, 20618, 20000, 18, 0, 0, 0, 1, 0, 0, 0, 2325.373, 2427.574, 111.5927, 2.99193, 'Mana Invader'),
+(10240, 41000, 0, 10, 20618, 20000, 19, 0, 0, 0, 1, 0, 0, 0, 2348.138, 2427.328, 137.0282, 2.99193, 'Mana Invader'),
+(10240, 42000, 0, 10, 20618, 20000, 20, 0, 0, 0, 1, 0, 0, 0, 2322.732, 2454.401, 107.2447, 2.99193, 'Mana Invader');
+UPDATE `creature_template` SET `ExtraFlags`=`ExtraFlags`|16384 WHERE `Entry`=20618;
+UPDATE creature_template SET ExtraFlags=ExtraFlags|256 WHERE Entry=18856;
+UPDATE `creature_template` SET `SpeedRun` = (7.22222 / 7) WHERE `entry` = 22381;
+UPDATE creature_template SET UnitFlags=768 WHERE Entry=17077;
+UPDATE `creature_template` SET `MechanicImmuneMask`='1024' WHERE `Entry`='18612';
+UPDATE creature_model_info SET bounding_radius='1.546536' WHERE modelid IN(20364);
+UPDATE creature_template SET UnitFlags=33587264 WHERE entry IN(17380,18601);
+UPDATE creature_template SET UnitFlags=0x02000000 WHERE entry IN(17662,18602);
+DELETE FROM spell_script_target WHERE entry IN (28000,24938);
+INSERT INTO spell_script_target (entry, `type`, targetEntry, inverseEffectMask) VALUES (28000, 1, 15328, 0), (24938, 0, 180524, 0);
+UPDATE creature_template SET Scale=1 WHERE Entry=20415;
+
+UPDATE `creature_template` SET `UnitFlags` = 33554432, `MechanicImmuneMask` = 42106710, `MovementType` = 0 WHERE `entry` IN (17954,20631);
+UPDATE `creature_template` SET `UnitFlags` = 4608 WHERE `entry` = 8397;
+UPDATE `creature_template_addon` SET `bytes1` = 0 WHERE `entry` = 8397;
+UPDATE `creature_template` SET `UnitFlags` = 512 WHERE `entry` = 5644;
+DELETE FROM spell_proc_event WHERE entry IN(11213);
+INSERT INTO spell_proc_event(entry,procFlags) VALUES (11213,0x00015410);
+UPDATE creature_template SET UnitFlags=33554496 WHERE entry IN(8982);
+UPDATE creature_template SET Faction=14, UnitFlags=33600 WHERE Entry=21514;
+DELETE FROM creature WHERE id=22447;
+DELETE FROM dbscripts_on_event WHERE priority=1 AND delay=5000 AND id=14400;
+INSERT INTO dbscripts_on_event (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(14400, 5000, 1, 1, 15, 0, 0, 10204, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Misha emote OneShotRoar');
+DELETE FROM dbscripts_on_event WHERE priority=1 AND delay=0 AND id IN (14400,14536);
+INSERT INTO dbscripts_on_event (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(14400, 0, 1, 10, 22447, 35000, 0, 0, 0, 0, 0, 0, 0, 0, 3607.51, 7184.14, 139.596, 3.85718, 'Summon [DND]Sablemane''s Trap Target'),
+(14536, 0, 1, 10, 22447, 35000, 0, 0, 0, 0, 0, 0, 0, 0, 3607.51, 7184.14, 139.596, 3.85718, 'Summon [DND]Sablemane''s Trap Target');
+UPDATE dbscripts_on_event SET datalong=29266, comments='Gorgrom - Cast Spell Permanent Feign Death' WHERE datalong=38763 AND id=14536;
+UPDATE dbscripts_on_event SET datalong=29266, comments='Gorgrom - Cast Spell Permanent Feign Death' WHERE datalong=38763 AND id=14400;
+UPDATE `item_template` SET `SellPrice` = 96748 WHERE `entry` = 18538;
+UPDATE `item_template` SET `SellPrice` = 20465 WHERE `entry` = 18528;
+UPDATE `item_template` SET `SellPrice` = 16770 WHERE `entry` = 18495;
+UPDATE `item_template` SET `SellPrice` = 21629 WHERE `entry` = 18532;
+UPDATE `item_template` SET `SellPrice` = 31331 WHERE `entry` = 18530;
+UPDATE `item_template` SET `SellPrice` = 10984 WHERE `entry` = 18533;
+UPDATE `item_template` SET `SellPrice` = 9963 WHERE `entry` = 18529;
+UPDATE `item_template` SET `SellPrice` = 31340 WHERE `entry` = 18500;
+UPDATE `item_template` SET `SellPrice` = 66135 WHERE `entry` = 18537;
+UPDATE `item_template` SET `SellPrice` = 34589 WHERE `entry` = 18499;
+UPDATE `item_template` SET `SellPrice` = 65383 WHERE `entry` = 18531;
+UPDATE `item_template` SET `SellPrice` = 71503 WHERE `entry` = 18534;
+UPDATE `item_template` SET `SellPrice` = 17791 WHERE `entry` = 18479;
+UPDATE `item_template` SET `SellPrice` = 11860 WHERE `entry` = 18480;
+UPDATE `item_template` SET `SellPrice` = 19768 WHERE `entry` = 18478;
+UPDATE `item_template` SET `SellPrice` = 7907 WHERE `entry` = 18475;
+UPDATE `item_template` SET `SellPrice` = 19768 WHERE `entry` = 18477;
+UPDATE `item_template` SET `SellPrice` = 15149 WHERE `entry` = 18476;
+UPDATE `item_template` SET `SellPrice` = 30986 WHERE `entry` = 18482;
+UPDATE `item_template` SET `SellPrice` = 51451 WHERE `entry` = 18481;
+UPDATE `item_template` SET `SellPrice` = 37362 WHERE `entry` = 18483;
+UPDATE `item_template` SET `SellPrice` = 53822 WHERE `entry` = 18484;
+UPDATE `item_template` SET `SellPrice` = 34569 WHERE `entry` = 18485;
+UPDATE `item_template` SET `SellPrice` = 18655 WHERE `entry` = 18490;
+UPDATE `item_template` SET `SellPrice` = 73101 WHERE `entry` = 18520;
+UPDATE `item_template` SET `SellPrice` = 17606 WHERE `entry` = 18521;
+UPDATE `item_template` SET `SellPrice` = 36253 WHERE `entry` = 18522;
+UPDATE `item_template` SET `SellPrice` = 34810 WHERE `entry` = 18523;
+UPDATE `item_template` SET `SellPrice` = 35596 WHERE `entry` = 18524;
+UPDATE `item_template` SET `SellPrice` = 13730 WHERE `entry` = 18525;
+UPDATE `item_template` SET `SellPrice` = 17924 WHERE `entry` = 18526;
+UPDATE `item_template` SET `SellPrice` = 17988 WHERE `entry` = 18527;
+
+#DELETE FROM npc_text WHERE Id IN (1259,1260);
+#DELETE FROM npc_text_broadcast_text WHERE Id IN (1259,1260);
+#INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES (1259, 1, 3412), (1260, 1, 3414);
+#DELETE FROM npc_text WHERE Id=10045;
+#DELETE FROM npc_text_broadcast_text WHERE Id=10045;
+#INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES (10045, 1, 18120);
+#DELETE FROM npc_text WHERE Id=9922;
+#DELETE FROM npc_text_broadcast_text WHERE Id=9922;
+#INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES (9922, 1, 17425);
+
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(39561, 181449, 530, 1, 1, 92.8436, 3523.19, 60.1161, -3.05433, 0, 0, -0.999048, 0.0436174, 180, 180, 100, 1);
+DELETE FROM dbscripts_on_event WHERE id=10346;
+INSERT INTO `dbscripts_on_event` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(10346, 0, 1, 10, 16994, 600000, 0, 0, 0, 0, 0, 0, 0, 0, 106.73, 3504.38, 63.6, 2.21, 0, 'quest 9370'),
+(10346, 0, 1, 10, 16996, 600000, 0, 0, 0, 0, 0, 0, 0, 0, 104.05, 3504.84, 63.66, 2.21, 0, 'quest 9370'),
+(10346, 0, 1, 10, 16996, 600000, 0, 0, 0, 0, 0, 0, 0, 0, 106.65, 3508.66, 63.35, 2.21, 0, 'quest 9370'),
+(10346, 0, 0, 31, 16994, 100, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'search for 16994'),
+(10346, 2000, 0, 26, 0, 0, 0, 16994, 100, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Attack Player');
+UPDATE gameobject_template SET flags=32 WHERE entry=183295;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(83791, 18872, 530, 1, 1, 0, 0, 3451.38, 3763.74, 145.83, 1.25396, 300, 300, 5, 0, 6200, 0, 0, 1),
+(83792, 18872, 530, 1, 1, 0, 0, 3461.8, 3716.18, 145.598, 2.97773, 300, 300, 5, 0, 6200, 0, 0, 1),
+(83794, 18872, 530, 1, 1, 0, 0, 3569.72, 3655.27, 129.757, 3.204, 300, 300, 5, 0, 6200, 0, 0, 1),
+(83796, 18872, 530, 1, 1, 0, 0, 3480.83, 3684.24, 143.731, 1.26418, 300, 300, 5, 0, 6200, 0, 0, 1),
+(83797, 18872, 530, 1, 1, 0, 0, 3525.18, 3659.38, 141.993, 3.61834, 300, 300, 5, 0, 6200, 0, 0, 1),
+(83800, 18872, 530, 1, 1, 0, 0, 3458.01, 3675.52, 150.502, 2.57912, 300, 300, 5, 0, 6200, 0, 0, 1),
+(83789, 18872, 530, 1, 1, 0, 0, 3473.16, 3647.82, 153.055, 5.13783, 300, 300, 0, 0, 6200, 0, 0, 2),
+(83801, 18872, 530, 1, 1, 0, 0, 3471.42, 3632.28, 140.738, 0.401785, 300, 300, 5, 0, 6200, 0, 0, 1),
+(83805, 18872, 530, 1, 1, 0, 0, 3592.73, 3591.89, 127.39, 0.866783, 300, 300, 5, 0, 6200, 0, 0, 1),
+(83807, 18872, 530, 1, 1, 0, 0, 3562.9, 3536.68, 128.11, 3.90582, 300, 300, 5, 0, 6200, 0, 0, 1),
+(83808, 18872, 530, 1, 1, 0, 0, 3490.1, 3578.72, 158.708, 4.60767, 300, 300, 0, 0, 6200, 0, 0, 0),
+(83783, 18872, 530, 1, 1, 0, 0, 3472.1, 3574.68, 167.441, 2.09439, 300, 300, 0, 0, 6200, 0, 0, 0),
+(83809, 18872, 530, 1, 1, 0, 0, 3464.84, 3483.73, 146.39, 3.735, 300, 300, 0, 0, 6200, 0, 0, 0),
+(83810, 18872, 530, 1, 1, 0, 0, 3421.09, 3462.32, 146.243, 1.27409, 300, 300, 0, 0, 6200, 0, 0, 0),
+(83786, 18872, 530, 1, 1, 0, 0, 3392.22, 3446.12, 140.322, 5.28835, 300, 300, 0, 0, 6200, 0, 0, 0),
+(83811, 18872, 530, 1, 1, 0, 0, 3388.58, 3487.28, 139.944, 0.461515, 300, 300, 5, 0, 6200, 0, 0, 1),
+(83814, 18872, 530, 1, 1, 0, 0, 3390.68, 3504.14, 142.865, 1.51216, 300, 300, 5, 0, 6200, 0, 0, 1),
+(83787, 18872, 530, 1, 1, 0, 0, 3368.88, 3446.43, 140.362, 3.59538, 300, 300, 0, 0, 6200, 0, 0, 0),
+(83817, 18872, 530, 1, 1, 0, 0, 3345.08, 3642.22, 142.315, 5.9778, 300, 300, 5, 0, 6200, 0, 0, 1),
+(83820, 18872, 530, 1, 1, 0, 0, 3412.48, 3609.1, 140.999, 0.785398, 300, 300, 0, 0, 6200, 0, 0, 0),
+(83821, 18872, 530, 1, 1, 0, 0, 3409.75, 3673.84, 148.697, 1.46608, 300, 300, 0, 0, 6200, 0, 0, 0),
+(83788, 18872, 530, 1, 1, 0, 0, 3424.25, 3661.14, 153.203, 4.46804, 300, 300, 0, 0, 6200, 0, 0, 0),
+(83824, 18872, 530, 1, 1, 0, 0, 3413.71, 3757.16, 141.008, 6.00811, 300, 300, 5, 0, 6200, 0, 0, 1);
+REPLACE INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
+(83783, 0, 8, 1, 16, 0, 0, '33900'), (83786, 0, 8, 1, 16, 0, 0, '33900'), (83787, 0, 8, 1, 16, 0, 0, '33900'), (83788, 0, 3, 1, 16, 0, 0, NULL);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(83789, 1, 3473.16, 3647.82, 153.055, 5.13783, 0, 0, NULL), (83789, 2, 3476.94, 3638.69, 156.83, 5.11034, 0, 0, NULL),
+(83789, 3, 3481.55, 3627.72, 156.581, 5.11034, 0, 0, NULL), (83789, 4, 3477.12, 3626.11, 157.967, 1.92555, 0, 0, NULL),
+(83789, 5, 3474.13, 3635.32, 158.273, 1.89885, 0, 0, NULL), (83789, 6, 3469.14, 3645.99, 154.383, 2.02137, 0, 0, NULL);
+
+UPDATE creature SET position_x=2432.24, position_y=-5062.68, position_z=80.0662, orientation=4.80509 WHERE guid=17748;
+UPDATE `conditions` SET `value2` =1, comments='Quest ID 4136 Taken AND NOT Rewarded' WHERE `condition_entry` =1697;
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(1970, 1, 0, 'Your family says hello, Ribbly. And they want your head!', 0, 1, 1, -1, 0, 197000, 0, 0, NULL, 0, 1697);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES ('3155', '-3', '1697', '0', '0', '0', '0', 'NOT (Quest ID 4136 Taken AND NOT Rewarded)');
+UPDATE `gossip_menu_option` SET `condition_id` = 3155 WHERE `menu_id` =1970 AND `id` =0;
+
+UPDATE creature_template SET SpeedRun=6/7,SpeedWalk=2/2.5 WHERE entry IN(18412);
+DELETE FROM dbscripts_on_event WHERE id=14525 AND delay=5000;
+DELETE FROM dbscripts_on_event WHERE id=14525 AND delay=24000 AND command=3;
+UPDATE dbscripts_on_event SET priority=1 WHERE id=12821;
+DELETE FROM `dbscripts_on_event` WHERE `id`=12821 AND command=31;
+INSERT INTO `dbscripts_on_event` (`id`,`delay`,`priority`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(12821,0,0,31,19851,190,0,0,0,0,0,0,0,8,'(You, Robot script) - Terminate Script if Negatron already spawned',0,0,0,0);
+DELETE FROM `dbscripts_on_quest_end` WHERE `id`=10715;
+INSERT INTO `dbscripts_on_quest_end` (`id`,`delay`,`priority`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(10715,532,0,3,0,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Move',2916.1465,5958.8535,3.4114933,100),
+(10715,1985,0,3,0,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Orientation',0,0,0,2.879793167114257812),
+(10715,3188,0,42,0,0,0,2716,3757,0,0,0,0,0,'Baron Sablemane - Set Equipment',0,0,0,0),
+(10715,4438,0,1,133,0,0,0,0,0,0,0,0,0,'Baron Sablemane - STATE_USESTANDING_NOSHEATHE',0,0,0,0),
+(10715,10516,0,1,0,0,0,0,0,0,0,0,0,0,'Baron Sablemane - ONESHOT_NONE',0,0,0,0),
+(10715,11703,0,3,0,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Move',2918.75,5957.291,3.2864933,100),
+(10715,12922,0,3,0,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Move',2919.1094,5956.9316,3.1809025,100),
+(10715,13719,0,36,1,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Reset Facing',0,0,0,0),
+(10715,13719,0,42,1,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Restore Default Equipment',0,0,0,0),
+(10715,15485,0,0,0,0,0,2000000444,0,0,0,0,0,0,'Baron Sablemane - There, it is completed.',0,0,0,0);
+DELETE FROM `dbscripts_on_quest_end` WHERE `id`=10799;
+INSERT INTO `dbscripts_on_quest_end` (`id`,`delay`,`priority`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(10799,532,0,3,0,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Move',2916.1465,5958.8535,3.4114933,100),
+(10799,1985,0,3,0,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Orientation',0,0,0,2.879793167114257812),
+(10799,3188,0,42,0,0,0,2716,3757,0,0,0,0,0,'Baron Sablemane - Set Equipment',0,0,0,0),
+(10799,4438,0,1,133,0,0,0,0,0,0,0,0,0,'Baron Sablemane - STATE_USESTANDING_NOSHEATHE',0,0,0,0),
+(10799,10516,0,1,0,0,0,0,0,0,0,0,0,0,'Baron Sablemane - ONESHOT_NONE',0,0,0,0),
+(10799,11703,0,3,0,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Move',2918.75,5957.291,3.2864933,100),
+(10799,12922,0,3,0,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Move',2919.1094,5956.9316,3.1809025,100),
+(10799,13719,0,36,1,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Reset Facing',0,0,0,0),
+(10799,13719,0,42,1,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Restore Default Equipment',0,0,0,0),
+(10799,15485,0,0,0,0,0,2000000444,0,0,0,0,0,0,'Baron Sablemane - There, it is completed.',0,0,0,0);
