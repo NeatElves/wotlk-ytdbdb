@@ -20233,3 +20233,16 @@ INSERT INTO `dbscripts_on_quest_end` (`id`,`delay`,`priority`,`command`,`datalon
 (10799,13719,0,36,1,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Reset Facing',0,0,0,0),
 (10799,13719,0,42,1,0,0,0,0,0,0,0,0,0,'Baron Sablemane - Restore Default Equipment',0,0,0,0),
 (10799,15485,0,0,0,0,0,2000000444,0,0,0,0,0,0,'Baron Sablemane - There, it is completed.',0,0,0,0);
+
+UPDATE gameobject SET position_x=-8703.753, position_y=904.8344, position_z=108.5348, orientation=5.384343, rotation2=-0.4344444, rotation3=0.9006986 WHERE id=25342;
+REPLACE INTO gameobject (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, state) VALUES
+(32471, 25352, 0, 1, -8704.108, 926.3359, 113.2273, 5.384343, 0, 0, -0.4344444, 0.9006986, 120, 120, 0, 1),
+(14778, 25353, 0, 1, -8812.216, 935.5714, 108.2936, 3.813545, 0, 0, -0.9440889, 0.3296909, 120, 120, 0, 1),
+(15889, 25354, 0, 1, -8790.714, 935.9266, 112.9862, 3.813545, 0, 0, -0.9440889, 0.3296909, 120, 120, 0, 1);
+INSERT INTO gameobject (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, state) VALUES
+(32542, 25355, 0, 1, -8687.896, 885.3235, 103.556, 2.242746, 0, 0, 0.9006977, 0.4344464, 120, 120, 0, 0),
+(32544, 25356, 0, 1, -8667.109, 880.1191, 109.4213, 2.242746, 0, 0, 0.9006977, 0.4344464, 120, 120, 0, 0),
+(32554, 25357, 0, 1, -8687.7, 863.7401, 109.4213, 2.242746, 0, 0, 0.9006977, 0.4344464, 120, 120, 0, 0);
+
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (1863202,1863403,1863901,1863902,1863903,1863904,1866701,1866702,1866703,1870801,1870802);
+DELETE FROM dbscript_string WHERE entry IN (2000000149,2000000150,2000000228,2000000235,2000000236,2000000239);
