@@ -75,11 +75,14 @@ UPDATE gameobject_template SET data2=300000 WHERE entry IN (182349,182350);
 -- Consuming Flames Trap
 UPDATE gameobject_template SET data3=0, data8=1 WHERE entry=178673; -- 21650, 0
 
+-- -------------------------------
+-- Item custom changes
+-- -------------------------------
+
 -- ============================================================
--- WOTLK section
+-- Classic section
 -- ============================================================
--- Dalaran book: make it despawnable on use with autoclose value (autoclose = autoCloseTime / IN_MILLISECONDS (prior to 3.0.3, conversion was / 0x10000))
-UPDATE gameobject_template SET data3=180000, data5=1 WHERE entry IN (192651,192652,192653,192706,192707,192708,192709,192710,192711,192713,192865,192866,192867,192868,192869,192870,192871,192872,192874,192880,192881,192882,192883,192884,192885,192886,192887,192888,192889,192890,192891,192894,192895,192896,192905);
+
 
 -- -------------------------------
 -- Creature custom changes
@@ -92,3 +95,9 @@ UPDATE gameobject_template SET data3=180000, data5=1 WHERE entry IN (192651,1926
 -- -------------------------------
 
 -- None
+
+-- ============================================================
+-- WOTLK section
+-- ============================================================
+-- Dalaran book: make it despawnable on use with autoclose value (autoclose = autoCloseTime / IN_MILLISECONDS (prior to 3.0.3, conversion was / 0x10000))
+UPDATE gameobject_template SET data3=180000, data5=1 WHERE entry IN (192651,192652,192653,192706,192707,192708,192709,192710,192711,192713,192865,192866,192867,192868,192869,192870,192871,192872,192874,192880,192881,192882,192883,192884,192885,192886,192887,192888,192889,192890,192891,192894,192895,192896,192905);

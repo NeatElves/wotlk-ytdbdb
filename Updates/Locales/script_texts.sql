@@ -1253,6 +1253,10 @@ UPDATE `script_texts` SET `content_loc8` = '428 000 градусов по Кра
 UPDATE `script_texts` SET `content_loc8` = 'Если мерить в градусах Кракленгейта, получается 428 000! Ай да Кракл!' WHERE `entry` = -1010020;
 UPDATE `script_texts` SET `content_loc8` = 'Пресвятой Кракл! Температура 428 000 градусов по Кракленгейту!' WHERE `entry` = -1010021;
 UPDATE `script_texts` SET `content_loc8` = 'Спасибо, что $gосвободил:освободила; меня. Поговори с моей сестрой на заставе Расщепленного Дерева. А я... Мне нужно найти место для отдыха.' WHERE `entry` = -1010022;
+UPDATE `script_texts` SET `content_loc8` = 'Я жду только вас, $n. Ступайте впереди!' WHERE `entry` = -1010023;
+UPDATE `script_texts` SET `content_loc8` = 'Умри, $n! Элуна не позволит тебе вредить ее созданиям!' WHERE `entry` = -1010024;
+UPDATE `script_texts` SET `content_loc8` = 'Ты осмеливаешься касаться меня?!' WHERE `entry` = -1010025;
+UPDATE `script_texts` SET `content_loc8` = 'Получилось! Встретимся у Джер''Кая, возле лагеря Зловещего Тотема.' WHERE `entry` = -1010026;
 UPDATE `script_texts` SET `content_loc8` = '%s издает низкое горловое рычание.' WHERE `entry` = -1015001;
 UPDATE `script_texts` SET `content_loc8` = 'Ты никогда не получишь Сердце Ярости! Его сила принадлежит Иллидану!' WHERE `entry` = -1015002;
 UPDATE `script_texts` SET `content_loc8` = '%s достает Сердце Ярости.' WHERE `entry` = -1015003;

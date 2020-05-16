@@ -294,23 +294,11 @@ echo "  ACID successfully applied"
 echo
 echo
 
-# Apply cmangos_custom.sql
-echo "> Trying to apply ${ADDITIONAL_PATH}utilities/cmangos_custom.sql ..."
-$MYSQL_COMMAND < ${ADDITIONAL_PATH}utilities/cmangos_custom.sql
-if [[ $? != 0 ]]
-then
-  echo "ERROR: cannot apply ${ADDITIONAL_PATH}utilities/cmangos_custom.sql"
-  exit 1
-fi
-echo "  CMaNGOS custom updates successfully applied"
-echo
-echo
-
-# Apply Fix_error changes (specific fixes to known wrong/missing data)
-echo "> Trying to apply ${ADDITIONAL_PATH}Updates/Fix_error ..."
-for f in "${ADDITIONAL_PATH}Updates/Fix_error/"*.sql
+# Apply cmangos utilites
+echo "> Trying to apply ${ADDITIONAL_PATH}utilities ..."
+for f in "${ADDITIONAL_PATH}utilities/"*.sql
 do
-  echo "    Appending Fix_error file fixes `basename $f` to database $DATABASE"
+  echo "    Appending utilites file update `basename $f` to database $DATABASE"
   $MYSQL_COMMAND < $f
   if [[ $? != 0 ]]
   then
@@ -318,7 +306,7 @@ do
     exit 1
   fi
 done
-echo "  Fix_error changes successfully applied"
+echo "  Utilites data successfully applied"
 echo
 echo
 
