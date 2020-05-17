@@ -20301,15 +20301,14 @@ UPDATE quest_template SET PrevQuestId=0, NextQuestId=13937, RequiredCondition=31
 UPDATE quest_template SET PrevQuestId=0 WHERE entry=13937;
 
 DELETE FROM `spell_bonus_data` WHERE `entry` = 24844;
-INSERT INTO `spell_bonus_data` (`entry`, `direct_bonus`, `dot_bonus`, `ap_bonus`, `ap_dot_bonus`, `comments`) VALUES
-(24844, 0.1, 0, 0, 0, 'Lightning Breath (Rank 1)');
-DELETE FROM dbscripts_on_relay WHERE id IN(10193,10194,10195,10196,10197) AND command IN(0,1);
+INSERT INTO `spell_bonus_data` (`entry`, `direct_bonus`, `dot_bonus`, `ap_bonus`, `ap_dot_bonus`, `comments`) VALUES (24844, 0.1, 0, 0, 0, 'Lightning Breath (Rank 1)');
+DELETE FROM dbscripts_on_relay WHERE id IN(10193,10194,10195,10196,10197);
 INSERT INTO dbscripts_on_relay (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (10193,0,0,1,0,0,0,0,0,2,16,6,0,0,0.000000,0.000000,0.000000,0.000000,'Gahk - Random Random Emote'),
 (10194,0,0,1,0,0,0,0,0,2,273,4,66,0,0.000000,0.000000,0.000000,0.000000,'Grella/Sky Sergeant Doryn - Random Random Emote Group 1'),
 (10195,0,0,1,0,0,0,0,0,2,6,25,5,0,0.000000,0.000000,0.000000,0.000000,'Grella/Sky Sergeant Doryn - Random Random Emote Group 2'),
-(10196,0,0,0,10167,0,0,0,0,2,0,0,0,0,0.000000,0.000000,0.000000,0.000000,'Grella/Sky Sergeant Doryn - Random Text'),
-(10197,0,0,0,10166,0,0,0,0,2,0,0,0,0,0.000000,0.000000,0.000000,0.000000,'Gahk - Random Text');
+(10196,0,0,45,0,10176,0,0,0,2,0,0,0,0,0.000000,0.000000,0.000000,0.000000,'Grella/Sky Sergeant Doryn - Random Text'),
+(10197,0,0,45,0,10177,0,0,0,2,0,0,0,0,0.000000,0.000000,0.000000,0.000000,'Gahk - Random Text');
 DELETE FROM dbscript_random_templates WHERE id IN(10176,10177) AND target_id IN(10193,10194,10195,10196,10197);
 INSERT INTO dbscript_random_templates (id,type,target_id,chance,comments) VALUES
 (10176,1,10194,25,'Grella/Sky Sergeant Doryn Revered Aura Reaction (Emote)'),
@@ -20436,3 +20435,15 @@ UPDATE creature_template SET MovementType = 2 WHERE Entry = 19456;
 DELETE FROM creature_movement_template WHERE entry = 19456;
 INSERT INTO creature_movement_template (entry, point, position_x, position_y, position_z, orientation, waittime, script_id) VALUES
 (19456,1,8211.638,-6334.247,64.63468,0.327416,5000,3);
+
+update game_event_time set start_time = '2011-01-01 00:48:00' where entry = 62;
+update game_event_time set start_time = '2011-01-01 01:00:00' where entry = 63;
+update game_event_time set start_time = '2011-01-01 01:48:00' where entry = 70;
+update game_event_time set start_time = '2011-01-01 02:00:00' where entry = 71;
+DELETE FROM dbscripts_on_relay WHERE id IN (19999);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(19999,0,16,11803,2,0,0,0,0,0,0,0,0,0,0,0,0,'Part of L70ETC - Power of the Horde Concert: play Sound');
+DELETE FROM spell_script_target WHERE entry IN(17372);
+INSERT INTO spell_script_target(entry, type, targetEntry, inverseEffectMask) VALUES (17372,1,10384,0), (17372,1,10385,0);
+DELETE FROM spell_script_target WHERE entry=38640;
+INSERT INTO spell_script_target(entry, type, targetEntry, inverseEffectMask) VALUES (38640,1,21326,0);

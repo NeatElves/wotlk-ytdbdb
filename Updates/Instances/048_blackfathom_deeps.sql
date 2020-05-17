@@ -76,35 +76,35 @@ INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pv
 (50507, 0, 0, 0, 0, 0, 0, NULL);
 
 REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
-(4787, 0, 7, 1, 16, 0, 0, NULL),
-(4789, 0, 0, 1, 16, 0, 0, '30831'),
-(4798, 0, 33554432, 1, 16, 0, 0, NULL),
-(4799, 0, 0, 1, 16, 0, 0, NULL),
-(4805, 0, 0, 1, 16, 0, 0, '12544'),
-(4807, 0, 0, 1, 16, 0, 0, NULL),
-(4809, 0, 0, 1, 16, 0, 0, NULL),
-(4810, 0, 0, 1, 16, 0, 0, NULL),
-(4811, 0, 0, 1, 16, 0, 0, NULL),
-(4812, 0, 0, 1, 16, 0, 0, NULL),
-(4813, 0, 0, 1, 16, 0, 0, NULL),
-(4814, 0, 0, 1, 16, 0, 0, NULL),
-(4815, 0, 0, 1, 16, 0, 0, NULL),
-(4818, 0, 0, 1, 16, 0, 0, NULL),
-(4819, 0, 0, 1, 16, 0, 0, NULL),
-(4820, 0, 0, 1, 16, 0, 0, NULL),
-(4821, 0, 0, 1, 16, 0, 0, NULL),
-(4822, 0, 0, 1, 16, 0, 0, NULL),
-(4823, 0, 0, 1, 16, 0, 0, NULL),
-(4824, 0, 0, 1, 16, 0, 0, NULL),
-(4825, 0, 0, 1, 16, 0, 0, NULL),
-(4827, 0, 0, 1, 16, 0, 0, NULL),
-(4829, 0, 0, 1, 16, 0, 0, NULL),
-(4830, 0, 0, 1, 16, 0, 0, NULL),
-(4831, 0, 0, 1, 16, 0, 0, NULL),
-(4832, 0, 8, 1, 16, 0, 0, '8734'),
-(4887, 0, 0, 1, 16, 0, 0, NULL),
-(6243, 0, 1114112, 1, 16, 0, 0, '7165'),
-(12902, 0, 0, 1, 16, 0, 0, '12550');
+(4787, 0, 7, 1, 16, 0, 0, NULL), -- Argent Guard Thaelrid
+(4789, 0, 0, 1, 16, 0, 0, '30831'), -- Fallenroot Rogue
+(4798, 0, 33554432, 1, 16, 0, 0, NULL), -- Fallenroot Shadowstalker
+(4799, 0, 0, 1, 16, 0, 0, NULL), -- Fallenroot Hellcaller
+(4805, 0, 0, 1, 16, 0, 0, '12544'), -- Blackfathom Sea Witch
+(4807, 0, 0, 1, 16, 0, 0, NULL), -- Blackfathom Myrmidon
+(4809, 0, 0, 1, 16, 0, 0, NULL), -- Twilight Acolyte
+(4810, 0, 0, 1, 16, 0, 0, NULL), -- Twilight Reaver
+(4811, 0, 0, 1, 16, 0, 0, NULL), -- Twilight Aquamancer
+(4812, 0, 0, 1, 16, 0, 0, NULL), -- Twilight Loreseeker
+(4813, 0, 0, 1, 16, 0, 0, NULL), -- Twilight Shadowmage
+(4814, 0, 0, 1, 16, 0, 0, NULL), -- Twilight Elementalist
+(4815, 0, 0, 1, 16, 0, 0, NULL), -- Murkshallow Snapclaw
+(4818, 0, 0, 1, 16, 0, 0, NULL), -- Blindlight Murloc
+(4819, 0, 0, 1, 16, 0, 0, NULL), -- Blindlight Muckdweller
+(4820, 0, 0, 1, 16, 0, 0, NULL), -- Blindlight Oracle
+(4821, 0, 0, 1, 16, 0, 0, NULL), -- Skittering Crustacean
+(4822, 0, 0, 1, 16, 0, 0, NULL), -- Snapping Crustacean
+(4823, 0, 0, 1, 16, 0, 0, NULL), -- Barbed Crustacean
+(4824, 0, 0, 1, 16, 0, 0, NULL), -- Aku'mai Fisher
+(4825, 0, 0, 1, 16, 0, 0, NULL), -- Aku'mai Snapjaw
+(4827, 0, 0, 1, 16, 0, 0, NULL), -- Deep Pool Threshfin
+(4829, 0, 0, 1, 16, 0, 0, NULL), -- Aku'mai
+(4830, 0, 0, 1, 16, 0, 0, NULL), -- Old Serra'kis
+(4831, 0, 0, 1, 16, 0, 0, NULL), -- Lady Sarevess
+(4832, 0, 8, 1, 16, 0, 0, '8734'), -- Twilight Lord Kelris
+(4887, 0, 0, 1, 16, 0, 0, NULL), -- Ghamoo-ra
+(6243, 0, 1114112, 1, 16, 0, 0, '7165'), -- Gelihast
+(12902, 0, 0, 1, 16, 0, 0, '12550'); -- Lorgus Jett
 
 -- INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 
