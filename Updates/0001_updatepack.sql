@@ -20447,3 +20447,43 @@ DELETE FROM spell_script_target WHERE entry IN(17372);
 INSERT INTO spell_script_target(entry, type, targetEntry, inverseEffectMask) VALUES (17372,1,10384,0), (17372,1,10385,0);
 DELETE FROM spell_script_target WHERE entry=38640;
 INSERT INTO spell_script_target(entry, type, targetEntry, inverseEffectMask) VALUES (38640,1,21326,0);
+
+UPDATE quest_template SET OfferRewardText="These'll do nicely, and if I'm not mistaken, your little egg's just about ready to hatch. How does it feel? You know, you about to be a $gfather:mother;? Haha, didn't think ya'd have to deal with such responsibility, now did ya?" WHERE entry=4297;
+UPDATE quest_template SET OfferRewardText="Here, take the egg... better you have it so it bonds to you and looks to you to be its $gdadda:momma;.$B$BCongrats, $N. You're a parent... kinda." WHERE entry=4298;
+UPDATE `gossip_menu_option` SET `option_text` = 'Continue...' WHERE `menu_id` =1053 AND `id` =0;
+UPDATE `gossip_menu_option` SET `option_text` = 'Hearthglen?? But...' WHERE `menu_id` =2904 AND `id` =0;
+UPDATE `gossip_menu_option` SET `option_text` = 'Continue...' WHERE `menu_id` =15018 AND `id` =0;
+UPDATE `gossip_menu_option` SET `option_text` = 'Continue...' WHERE `menu_id` =15022 AND `id` =0;
+
+INSERT INTO `item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES ('16884', '24281', '0', '2', '1', '1', '0', '');
+INSERT INTO `item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES ('16885', '24281', '0', '2', '1', '1', '0', '');
+INSERT INTO `item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES ('29569', '24281', '0', '2', '1', '1', '0', '');
+INSERT INTO `item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES ('16883', '24281', '0', '2', '1', '1', '0', '');
+INSERT INTO `item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES ('43575', '24281', '0', '2', '1', '1', '0', '');
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` in (16883,16884,16885,29569,43575) AND `groupid` =2;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =16884 AND `item` =3928;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =16882 AND `item` =929;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =16883 AND `item` =1710;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =16885 AND `item` =13446;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =43575 AND `item` =33447;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '10', `groupid` = '1' WHERE `entry` =16882 AND `item` in (2892,3775,5237,6947,6949);
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '25' WHERE `entry` =16882 AND `item` =5374;
+DELETE FROM `creature_loot_template` WHERE `entry` = 7052 AND `item` = 5374;
+DELETE FROM `creature_loot_template` WHERE `entry` = 7056 AND `item` = 5374;
+UPDATE `item_loot_template` SET `item` = '1491', `ChanceOrQuestChance` = '0.01', `mincountOrRef` = '-1491' WHERE `entry` =16882 AND `item` =2194;
+UPDATE `item_loot_template` SET `item` = '7755', `ChanceOrQuestChance` = '0.01', `groupid` = '3', `mincountOrRef` = '-7755' WHERE `entry` =16883 AND `item` =5756;
+DELETE FROM `item_loot_template` WHERE `entry` = 16882 AND `item` = 3413;
+DELETE FROM `item_loot_template` WHERE `entry` = 16883 AND `item` = 6331;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0.01', `groupid` = '3' WHERE `entry` =16883 AND `item` =1265;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0.01', `groupid` = '3' WHERE `entry` =16883 AND `item` =2721;
+DELETE FROM `reference_loot_template` WHERE `entry` = 7755 AND `item` = 10332;
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES
+(6489, 10332, 0.5, 0, 1, 1, 0, ''), (6488, 10332, 0.5, 0, 1, 1, 0, ''), (6427, 10332, 0.5, 0, 1, 1, 0, ''), (6426, 10332, 0.5, 0, 1, 1, 0, ''),
+(4543, 10332, 0.5, 0, 1, 1, 0, ''), (4542, 10332, 0.5, 0, 1, 1, 0, ''), (4540, 10332, 0.5, 0, 1, 1, 0, ''), (4308, 10332, 0.5, 0, 1, 1, 0, ''),
+(4306, 10332, 0.5, 0, 1, 1, 0, ''), (4304, 10332, 0.5, 0, 1, 1, 0, ''), (4303, 10332, 0.5, 0, 1, 1, 0, ''), (4302, 10332, 0.5, 0, 1, 1, 0, ''),
+(4299, 10332, 0.5, 0, 1, 1, 0, ''), (4297, 10332, 0.5, 0, 1, 1, 0, ''), (4296, 10332, 0.5, 0, 1, 1, 0, ''), (4294, 10332, 0.5, 0, 1, 1, 0, ''),
+(4291, 10332, 0.5, 0, 1, 1, 0, ''), (3974, 10332, 0.5, 0, 1, 1, 0, ''), (4287, 10332, 0.5, 0, 1, 1, 0, ''), (4286, 10332, 0.5, 0, 1, 1, 0, ''),
+(4283, 10332, 0.5, 0, 1, 1, 0, ''), (3983, 10332, 0.5, 0, 1, 1, 0, ''), (3977, 10332, 0.5, 0, 1, 1, 0, ''), (4289, 10332, 0.5, 0, 1, 1, 0, ''),
+(4288, 10332, 0.5, 0, 1, 1, 0, ''), (4300, 10332, 0.5, 0, 1, 1, 0, '');
+
+UPDATE `creature_template_addon` SET `auras` = '25786 26575' WHERE `entry` =15933;
