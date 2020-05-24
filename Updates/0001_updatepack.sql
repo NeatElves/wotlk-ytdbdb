@@ -20487,3 +20487,22 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (4288, 10332, 0.5, 0, 1, 1, 0, ''), (4300, 10332, 0.5, 0, 1, 1, 0, '');
 
 UPDATE `creature_template_addon` SET `auras` = '25786 26575' WHERE `entry` =15933;
+
+UPDATE `creature` SET `position_x`=-2563.89,`position_y`=6288.29,`position_z`=15.295,`orientation`=5.23599 WHERE `id` IN (18369);
+UPDATE `creature` SET `position_x`=-918.143,`position_y`=8663.94,`position_z`=172.542,`orientation`=0.523599 WHERE `id` IN (18445);
+DELETE FROM `creature` WHERE `guid` IN (88005,88004,88002,88010,88011,88001,88003,88014,88007,88023,88019,88015,88021,88020,88024,88016,88012,88022,88018,88017,88009,88008,88006,88013);
+DELETE FROM `gossip_menu` WHERE `entry` = 7894;
+INSERT INTO `gossip_menu` (`entry`,`text_id`) VALUES (7894,9658);
+DELETE FROM `npc_text` WHERE `ID` = 9658;
+INSERT INTO `npc_text` (`ID`, `text0_0`, `text0_1`, `lang0`, `prob0`, `em0_0`, `em0_1`) VALUES (9658,"Anything for you, $n!","",0,100,5,1);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES ('3180', '2', '27808', '1', '0', '0', '1', ''), ('3181', '-1', '3180', '408', '0', '0', '0', '');
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(7891, 0, 0, 'Wazat, I have done something foolish and have lost my key as a result of this action. Could I trouble you for a spare?', 16144, 1, 1, 7894, 0, 789100, 0, 0, NULL, 0, 3181);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+('789100', '0', '0', '15', '33383', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Cast ''Spare Jump-a-tron Key''');
+DELETE FROM `npc_text` WHERE `ID` = 7637;
+INSERT INTO `npc_text` (`ID`,`text0_0`,`lang0`,`prob0`) VALUES (7637,"The markings of this tablet show ancient diagrams and hold dire words of power.$B$BYou believe it is an alchemical recipe, but it is beyond your skill...",0,1);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES ('3182', '29', '171', '300', '0', '0', '0', '');
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (6443, 7637, 0, 3182);
+DELETE FROM `creature_template_spells` WHERE `entry` = 14822;
+UPDATE `creature` SET `spawntimesecsmin` = '60', `spawntimesecsmax` = '120' WHERE `id` =20709;

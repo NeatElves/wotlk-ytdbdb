@@ -82,7 +82,9 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES
 ('character titles', 2, 'Syntax: .character titles [$player_name]\r\n\r\nShow known titles list for selected player or player find by $player_name.'),
 ('combatstop', 2, 'Syntax: .combatstop [$playername]\r\nStop combat for selected character. If selected non-player then command applied to self. If $playername provided then attempt applied to online player $playername.'),
 ('commands', 0, 'Syntax: .commands\r\n\r\nDisplay a list of available commands for your account level.'),
-('cooldown', 3, 'Syntax: .cooldown [#spell_id]\r\n\r\nRemove all (if spell_id not provided) or #spel_id spell cooldown from selected character or you (if no selection).'),
+('cooldown clear', 3, 'Syntax: .cooldown clear [spell id] Remove cooldown from selected unit.'),
+('cooldown clearclientside', 3, 'Syntax: .cooldown clearclientside  Clear all cooldown client side only.'),
+('cooldown list', 3, 'Syntax: .cooldown list  Active cooldown from selected unit.'),
 ('damage', 3, 'Syntax: .damage $damage_amount [$school [$spellid]]\r\n\r\nApply $damage to target. If not $school and $spellid provided then this flat clean melee damage without any modifiers. If $school provided then damage modified by armor reduction (if school physical), and target absorbing modifiers and result applied as melee damage to target. If spell provided then damage modified and applied as spell damage. $spellid can be shift-link.'),
 ('debug anim', 2, 'Syntax: .debug anim #emoteid\r\n\r\nPlay emote #emoteid for your character.'),
 ('debug arena', 3, 'Syntax: .debug arena\r\n\r\nToggle debug mode for arenas. In debug mode GM can start arena with single player.'),
@@ -218,7 +220,9 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES
 ('modify standstate', 2, 'Syntax: .modify standstate #emoteid\r\n\r\nChange the emote of your character while standing to #emoteid.'),
 ('modify swim', 1, 'Syntax: .modify swim #rate\r\n\r\nModify the swim speed of the selected player to "normal swim speed"*rate. If no player is selected, modify your speed.\r\n\r\n #rate may range from 0.1 to 10.'),
 ('modify tp', 1, 'Syntax: .modify tp #amount\r\n\r\nSet free talent pointes for selected character or character''s pet. It will be reset to default expected at next levelup/login/quest reward.'),
-('movegens', 3, 'Syntax: .movegens\r\n  Show movement generators stack for selected creature or player.'),
+('movement cometome', 3, 'Syntax: .movement cometome  Move selected creature to you.'),
+('movement movegens', 3, 'Syntax: .movement movegens  Show movement generators stack for selected creature or player.'),
+('movement movespeed', 3, 'Syntax: .movement movespeed  Show speed of selected creature.'),
 ('mute', 1, 'Syntax: .mute [$playerName] $timeInMinutes\r\n\r\nDisible chat messaging for any character from account of character $playerName (or currently selected) at $timeInMinutes minutes. Player can be offline.'),
 ('namego', 1, 'Syntax: .namego [$charactername]\r\n\r\nTeleport the given character to you. Character can be offline.'),
 ('neargrave', 3, 'Syntax: .neargrave [alliance|horde]\r\n\r\nFind nearest graveyard linked to zone (or only nearest from accepts alliance or horde faction ghosts).'),
@@ -285,9 +289,9 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES
 ('reset talents', 3, 'Syntax: .reset talents [Playername]\r\n  Removes all talents (current spec) of the targeted player or pet or named player. With player talents also will be reset talents for all character''s pets if any.'),
 ('respawn', 3, 'Syntax: .respawn\r\n\r\nRespawn selected creature or respawn all nearest creatures (if none selected) and GO without waiting respawn time expiration.'),
 ('revive', 3, 'Syntax: .revive\r\n\r\nRevive the selected player. If no player is selected, it will revive you.'),
-('save', 0, 'Syntax: .save\r\n\r\nSaves your character.'),
-('saveall', 1, 'Syntax: .saveall\r\n\r\nSave all characters in game.');
+('save', 0, 'Syntax: .save\r\n\r\nSaves your character.');
 INSERT INTO `command` (`name`, `security`, `help`) VALUES
+('saveall', 1, 'Syntax: .saveall\r\n\r\nSave all characters in game.'),
 ('send items', 3, 'Syntax: .send items #playername "#subject" "#text" itemid1[:count1] itemid2[:count2] ... itemidN[:countN]\r\n\r\nSend a mail to a player. Subject and mail text must be in "". If for itemid not provided related count values then expected 1, if count > max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12.'),
 ('send mail', 1, 'Syntax: .send mail #playername "#subject" "#text"\r\n\r\nSend a mail to a player. Subject and mail text must be in "".'),
 ('send mass items', 3, 'Syntax: .send mass items #racemask|$racename|alliance|horde|all "#subject" "#text" itemid1[:count1] itemid2[:count2] ... itemidN[:countN]\r\n\r\nSend a mail to players. Subject and mail text must be in "". If for itemid not provided related count values then expected 1, if count > max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12.'),
