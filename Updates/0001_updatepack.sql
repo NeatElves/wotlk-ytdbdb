@@ -20506,3 +20506,89 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3
 INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (6443, 7637, 0, 3182);
 DELETE FROM `creature_template_spells` WHERE `entry` = 14822;
 UPDATE `creature` SET `spawntimesecsmin` = '60', `spawntimesecsmax` = '120' WHERE `id` =20709;
+
+DELETE FROM `pool_gameobject` WHERE `guid` = 93801 AND `pool_entry` = 10689;
+DELETE FROM `pool_gameobject` WHERE `guid` = 93802 AND `pool_entry` = 10689;
+DELETE FROM `pool_gameobject` WHERE `guid` = 91805 AND `pool_entry` = 10691;
+DELETE FROM `pool_gameobject` WHERE `guid` = 91865 AND `pool_entry` = 10697;
+DELETE FROM `pool_gameobject` WHERE `guid` = 93791 AND `pool_entry` = 10699;
+DELETE FROM `pool_gameobject` WHERE `guid` = 96076 AND `pool_entry` = 10699;
+DELETE FROM `pool_gameobject` WHERE `guid` = 93805 AND `pool_entry` = 10704;
+DELETE FROM `pool_gameobject` WHERE `guid` = 93806 AND `pool_entry` = 10707;
+DELETE FROM `pool_gameobject` WHERE `guid` = 88762 AND `pool_entry` = 10708;
+DELETE FROM `pool_gameobject` WHERE `guid` = 91914 AND `pool_entry` = 10709;
+DELETE FROM `pool_gameobject` WHERE `guid` = 91960 AND `pool_entry` = 10710;
+DELETE FROM `pool_gameobject` WHERE `guid` = 93807 AND `pool_entry` = 10711;
+DELETE FROM `pool_gameobject` WHERE `guid` = 91928 AND `pool_entry` = 10714;
+DELETE FROM `pool_gameobject` WHERE `guid` = 88751 AND `pool_entry` = 10715;
+DELETE FROM `pool_gameobject` WHERE `guid` = 88765 AND `pool_entry` = 10719;
+DELETE FROM `pool_gameobject` WHERE `guid` = 91903 AND `pool_entry` = 10719;
+DELETE FROM `pool_gameobject` WHERE `guid` = 93809 AND `pool_entry` = 10720;
+DELETE FROM `pool_gameobject` WHERE `guid` = 91788 AND `pool_entry` = 10723;
+DELETE FROM `pool_gameobject` WHERE `guid` = 88766 AND `pool_entry` = 10724;
+DELETE FROM `pool_gameobject` WHERE `guid` = 88756 AND `pool_entry` = 10726;
+DELETE FROM `pool_gameobject` WHERE `guid` = 96129 AND `pool_entry` = 10728;
+DELETE FROM `pool_gameobject` WHERE `guid` = 96233 AND `pool_entry` = 10728;
+DELETE FROM `pool_gameobject` WHERE `guid` = 93787 AND `pool_entry` = 10731;
+DELETE FROM `pool_gameobject` WHERE `guid` = 91952 AND `pool_entry` = 10733;
+DELETE FROM `pool_gameobject` WHERE `guid` = 93799 AND `pool_entry` = 10736;
+DELETE FROM `pool_gameobject` WHERE `guid` = 96093 AND `pool_entry` = 10737;
+DELETE FROM `pool_gameobject` WHERE `guid` = 96222 AND `pool_entry` = 10737;
+DELETE FROM `pool_gameobject` WHERE `guid` = 88744 AND `pool_entry` = 10741;
+DELETE FROM `pool_gameobject` WHERE `guid` = 88757 AND `pool_entry` = 10741;
+DELETE FROM `pool_gameobject` WHERE `guid` = 96165 AND `pool_entry` = 10742;
+DELETE FROM `pool_gameobject` WHERE `guid` = 7453 AND `pool_entry` = 10748;
+DELETE FROM `pool_gameobject` WHERE `guid` = 91768 AND `pool_entry` = 10751;
+DELETE FROM `pool_gameobject` WHERE `guid` = 88745 AND `pool_entry` = 10751;
+DELETE FROM `pool_gameobject` WHERE `guid` = 3718 AND `pool_entry` = 10751;
+DELETE FROM `pool_gameobject` WHERE `guid` = 93810 AND `pool_entry` = 10752;
+DELETE FROM `pool_gameobject` WHERE `guid` = 96141 AND `pool_entry` = 10754;
+DELETE FROM `pool_gameobject` WHERE `guid` = 91801 AND `pool_entry` = 10755;
+DELETE FROM `pool_gameobject` WHERE `guid` = 2264 AND `pool_entry` = 10758;
+DELETE FROM `pool_gameobject` WHERE `guid` = 96214 AND `pool_entry` = 10761;
+DELETE FROM `pool_gameobject` WHERE `guid` = 88748 AND `pool_entry` = 10762;
+UPDATE `pool_gameobject` SET `description` = 'GO 142140,[185881],map=1' WHERE `description` = 'GO 142140,[176589,185881],map=1';
+UPDATE `pool_gameobject` SET `description` = 'GO 142140,[185881],map=0' WHERE `description` = 'GO 142140,[176589,185881],map=0';
+UPDATE `pool_gameobject` SET `description` = 'GO 142140,[185881],map=530' WHERE `description` = 'GO 142140,[176589,185881],map=530';
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(32557, 176589, 0, 1, 3151.6, -3727.88, 133.603, 0.541051, 0, 0, 0, 0, 900, 900, 100, 1),
+(32558, 176589, 0, 1, 1575.14, -3213, 78.003, 4.924, 0, 0, 0, 0, 900, 900, 100, 1),
+(32561, 176589, 0, 1, -7991, -840, 132.058, 2.495, 0, 0, 0, 0, 900, 900, 100, 1),
+(32565, 176589, 0, 1, -7922, -1410, 137.799, 1.956, 0, 0, 0, 0, 900, 900, 100, 1),
+(32571, 176589, 1, 1, -7886.15, 1178.26, -1.58162, 0.355033, 0, 0, 0, 0, 900, 900, 100, 1),
+(32574, 176589, 0, 1, 3026.97, -3701, 130.465, 4.738, 0, 0, 0, 0, 900, 900, 100, 1),
+(32578, 176589, 0, 1, 2424.83, -5085, 84.331, 3.856, 0, 0, 0, 0, 900, 900, 100, 1),
+(32573, 176589, 1, 1, -7908, 1898.56, 12.147, 3.895, 0, 0, 0, 0, 900, 900, 100, 1);
+UPDATE `pool_gameobject` SET `pool_entry` = '10708' WHERE `guid` =89890;
+DELETE FROM `pool_template` WHERE `entry` IN (10751,15914,15915,946);
+INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
+(10751, 1, 'Master Black Lotus (176589) Pool - Burning Steppes'), (15914, 1, 'Master Black Lotus (176589) Pool - Winterspring'),
+(15915, 1, 'Master Black Lotus (176589) Pool - Silithus'), (15916, 1, 'Master Black Lotus (176589) Pool - Eastern Plaguelands');
+DELETE FROM `pool_gameobject` WHERE `guid` IN (SELECT `guid` FROM `gameobject` WHERE `id` = 176589);
+INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
+(93810, 10751, 0, 'Burning Steppes - Black Lotus'), (32561, 10751, 0, 'Burning Steppes - Black Lotus'), (93809, 10751, 0, 'Burning Steppes - Black Lotus'),
+(93806, 10751, 0, 'Burning Steppes - Black Lotus'), (32565, 10751, 0, 'Burning Steppes - Black Lotus'), (93805, 10751, 0, 'Burning Steppes - Black Lotus'),
+(93799, 10751, 0, 'Burning Steppes - Black Lotus'), (93791, 10751, 0, 'Burning Steppes - Black Lotus'), (93787, 10751, 0, 'Burning Steppes - Black Lotus'),
+(93807, 10751, 0, 'Burning Steppes - Black Lotus'), (93802, 10751, 0, 'Burning Steppes - Black Lotus'), (93801, 10751, 0, 'Burning Steppes - Black Lotus'),
+(91865, 15914, 0, 'Winterspring - Black Lotus'), (91903, 15914, 0, 'Winterspring - Black Lotus'), (91914, 15914, 0, 'Winterspring - Black Lotus'),
+(91928, 15914, 0, 'Winterspring - Black Lotus'), (91952, 15914, 0, 'Winterspring - Black Lotus'), (91801, 15914, 0, 'Winterspring - Black Lotus'),
+(91805, 15914, 0, 'Winterspring - Black Lotus'), (91960, 15914, 0, 'Winterspring - Black Lotus'), (91788, 15914, 0, 'Winterspring - Black Lotus'),
+(2264, 15914, 0, 'Winterspring - Black Lotus'), (7453, 15914, 0, 'Winterspring - Black Lotus'), (91768, 15914, 0, 'Winterspring - Black Lotus'),
+(88756, 15915, 0, 'Silithus - Black Lotus'), (88751, 15915, 0, 'Silithus - Black Lotus'), (88757, 15915, 0, 'Silithus - Black Lotus'),
+(88748, 15915, 0, 'Silithus - Black Lotus'), (88745, 15915, 0, 'Silithus - Black Lotus'), (3718, 15915, 0, 'Silithus - Black Lotus'),
+(88744, 15915, 0, 'Silithus - Black Lotus'), (88766, 15915, 0, 'Silithus - Black Lotus'), (88765, 15915, 0, 'Silithus - Black Lotus'),
+(32571, 15915, 0, 'Silithus - Black Lotus'), (88762, 15915, 0, 'Silithus - Black Lotus'), (32573, 15915, 0, 'Silithus - Black Lotus'),
+(96214, 15916, 0, 'Eastern Plaguelands - Black Lotus'), (32557, 15916, 0, 'Eastern Plaguelands - Black Lotus'), (32574, 15916, 0, 'Eastern Plaguelands - Black Lotus'),
+(96222, 15916, 0, 'Eastern Plaguelands - Black Lotus'), (96165, 15916, 0, 'Eastern Plaguelands - Black Lotus'), (96233, 15916, 0, 'Eastern Plaguelands - Black Lotus'),
+(96093, 15916, 0, 'Eastern Plaguelands - Black Lotus'), (96076, 15916, 0, 'Eastern Plaguelands - Black Lotus'), (32578, 15916, 0, 'Eastern Plaguelands - Black Lotus'),
+(96129, 15916, 0, 'Eastern Plaguelands - Black Lotus'), (96141, 15916, 0, 'Eastern Plaguelands - Black Lotus'), (32558, 15916, 0, 'Eastern Plaguelands - Black Lotus');
+UPDATE `gameobject` SET `spawntimesecsmin` = 2700, `spawntimesecsmax` = 4500 WHERE `id` = 176589;
+
+DELETE FROM dbscripts_on_relay WHERE id = 19998;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(19998,100,31,21417,30,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Infernal Attacker EAI: search for 21417'),
+(19998,1000,15,37277,1,0,21417,30,3,0,0,0,0,0,0,0,0,'Part of Infernal Attacker EAI: cast 37277 b->s');
+UPDATE creature SET spawndist = 5, MovementType = 1 WHERE id = 21419;
+DELETE FROM creature_movement WHERE id IN (SELECT guid FROM creature WHERE id = 21419);
+DELETE FROM dbscripts_on_creature_movement WHERE id BETWEEN 2141901 AND 2141904;
+DELETE FROM dbscripts_on_creature_death WHERE id = 21419;
