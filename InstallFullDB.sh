@@ -9,8 +9,9 @@
 ####################################################################################################
 
 # need to be changed on each official DB/CORE release
-FULLDB_FILE="YTDB_0.14.9_R660_cMaNGOS_R13994_RuDB_R69.sql"
-DB_TITLE="YTDB_0.14.9_R660"
+FULLDB_FILE_ZIP="YTDB_0.15.0_R662_cMaNGOS_R14017_RuDB_R70.sql.gz"
+FULLDB_FILE=${FULLDB_FILE_ZIP%.gz}
+DB_TITLE="YTDB_0.15.0_R662"
 NEXT_MILESTONES="0.19 0.20"
 
 # internal use
@@ -120,6 +121,15 @@ fi
 
 # Full Database
 echo "> Processing YTDB database $DB_TITLE ..."
+echo "  - Unziping $FULLDB_FILE_ZIP"
+gzip -kdf "${ADDITIONAL_PATH}Full_DB/$FULLDB_FILE_ZIP"
+if [[ $? != 0 ]]
+then
+  echo "ERROR: cannot unzip ${ADDITIONAL_PATH}Full_DB/$FULLDB_FILE_ZIP"
+  echo "GZIP 1.6 or greater should be installed"
+  exit 1
+fi
+echo "  - Applying $FULLDB_FILE"
 $MYSQL_COMMAND < "${ADDITIONAL_PATH}Full_DB/$FULLDB_FILE"
 if [[ $? != 0 ]]
 then
@@ -127,58 +137,6 @@ then
   exit 1
 fi
 echo "  $DB_TITLE is applied!"
-echo
-echo
-
-# Core updates
-echo "> Processing database Core updates ..."
-COUNT=0
-for UPDATE in "${ADDITIONAL_PATH}Updates/mangos/"[0-9]*.sql
-do
-  if [ -e "$UPDATE" ]
-  then
-    echo "    Appending $UPDATE"
-    $MYSQL_COMMAND < "$UPDATE"
-    if [[ $? != 0 ]]
-    then
-      echo "ERROR: cannot apply $UPDATE"
-      exit 1
-    fi
-    ((COUNT++))
-  fi
-done
-if [ "$COUNT" != 0 ]
-then
-  echo "  $COUNT Core updates applied successfully"
-else
-  echo "  Did not find any new Core update to apply"
-fi
-echo
-echo
-
-# Updates full pack
-echo "> Processing database full pack updates ..."
-COUNT=0
-for UPDATE in "${ADDITIONAL_PATH}Updates/Full_Pack/"[0-9]*.sql
-do
-  if [ -e "$UPDATE" ]
-  then
-    echo "    Appending $UPDATE"
-    $MYSQL_COMMAND < "$UPDATE"
-    if [[ $? != 0 ]]
-    then
-      echo "ERROR: cannot apply $UPDATE"
-      exit 1
-    fi
-    ((COUNT++))
-  fi
-done
-if [ "$COUNT" != 0 ]
-then
-  echo "  $COUNT DB full pack updates applied successfully"
-else
-  echo "  Did not find any new DB full pack update to apply"
-fi
 echo
 echo
 
@@ -230,6 +188,32 @@ then
   echo "  $COUNT Instance files applied successfully"
 else
   echo "  Did not find any instance file to apply"
+fi
+echo
+echo
+
+# Core updates
+echo "> Processing database Core updates ..."
+COUNT=0
+for UPDATE in "${ADDITIONAL_PATH}Updates/mangos/"[0-9]*.sql
+do
+  if [ -e "$UPDATE" ]
+  then
+    echo "    Appending $UPDATE"
+    $MYSQL_COMMAND < "$UPDATE"
+    if [[ $? != 0 ]]
+    then
+      echo "ERROR: cannot apply $UPDATE"
+      exit 1
+    fi
+    ((COUNT++))
+  fi
+done
+if [ "$COUNT" != 0 ]
+then
+  echo "  $COUNT Core updates applied successfully"
+else
+  echo "  Did not find any new Core update to apply"
 fi
 echo
 echo
