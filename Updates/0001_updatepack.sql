@@ -20592,3 +20592,5 @@ UPDATE creature SET spawndist = 5, MovementType = 1 WHERE id = 21419;
 DELETE FROM creature_movement WHERE id IN (SELECT guid FROM creature WHERE id = 21419);
 DELETE FROM dbscripts_on_creature_movement WHERE id BETWEEN 2141901 AND 2141904;
 DELETE FROM dbscripts_on_creature_death WHERE id = 21419;
+
+UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry IN (14372,7438,7439,7440,7441,7442,10199,10916,10738);

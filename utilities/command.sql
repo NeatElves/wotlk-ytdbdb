@@ -210,7 +210,8 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES
 ('modify mana', 1, 'Syntax: .modify mana #newmana\r\n\r\nModify the mana of the selected player. If no player is selected, modify your mana.'),
 ('modify money', 1, 'Syntax: .modify money #money\r\n.money #money\r\n\r\nAdd or remove money to the selected player. If no player is selected, modify your money.\r\n\r\n #gold can be negative to remove money.'),
 ('modify morph', 2, 'Syntax: .modify morph #displayid\r\n\r\nChange your current model id to #displayid.'),
-('modify mount', 1, 'Syntax: .modify mount #id #speed\r\nDisplay selected player as mounted at #id creature and set speed to #speed value.'),
+('gm mountup', 1, 'Syntax: .gm mountup [fast|slow]\r\n\r\nAcquire a random unusual land mount.'),
+('modify mount', 1, 'Syntax: .modify mount [fast|slow]\r\n\r\nProvide selected player a random unusual land mount.'),
 ('modify phase', 3, 'Syntax: .modify phase #phasemask\r\n\r\nSelected character phasemask changed to #phasemask with related world vision update. Change active until in game phase changed, or GM-mode enable/disable, or re-login. Character pts pasemask update to same value.'),
 ('modify rage', 1, 'Syntax: .modify rage #newrage\r\n\r\nModify the rage of the selected player. If no player is selected, modify your rage.'),
 ('modify rep', 2, 'Syntax: .modify rep #repId (#repvalue | $rankname [#delta])\r\nSets the selected players reputation with faction #repId to #repvalue or to $reprank.\r\nIf the reputation rank name is provided, the resulting reputation will be the lowest reputation for that rank plus the delta amount, if specified.\r\nYou can use ''.pinfo rep'' to list all known reputation ids, or use ''.lookup faction $name'' to locate a specific faction id.'),
@@ -288,9 +289,9 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES
 ('reset stats', 3, 'Syntax: .reset stats [Playername]\r\n  Resets(recalculate) all stats of the targeted player to their original VALUESat current level.'),
 ('reset talents', 3, 'Syntax: .reset talents [Playername]\r\n  Removes all talents (current spec) of the targeted player or pet or named player. With player talents also will be reset talents for all character''s pets if any.'),
 ('respawn', 3, 'Syntax: .respawn\r\n\r\nRespawn selected creature or respawn all nearest creatures (if none selected) and GO without waiting respawn time expiration.'),
-('revive', 3, 'Syntax: .revive\r\n\r\nRevive the selected player. If no player is selected, it will revive you.'),
-('save', 0, 'Syntax: .save\r\n\r\nSaves your character.');
+('revive', 3, 'Syntax: .revive\r\n\r\nRevive the selected player. If no player is selected, it will revive you.');
 INSERT INTO `command` (`name`, `security`, `help`) VALUES
+('save', 0, 'Syntax: .save\r\n\r\nSaves your character.'),
 ('saveall', 1, 'Syntax: .saveall\r\n\r\nSave all characters in game.'),
 ('send items', 3, 'Syntax: .send items #playername "#subject" "#text" itemid1[:count1] itemid2[:count2] ... itemidN[:countN]\r\n\r\nSend a mail to a player. Subject and mail text must be in "". If for itemid not provided related count values then expected 1, if count > max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12.'),
 ('send mail', 1, 'Syntax: .send mail #playername "#subject" "#text"\r\n\r\nSend a mail to a player. Subject and mail text must be in "".'),
