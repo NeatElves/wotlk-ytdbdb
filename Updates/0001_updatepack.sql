@@ -22,3 +22,11 @@ DELETE FROM `gossip_menu_option` WHERE `menu_id` = 5711;
 DELETE FROM `gossip_menu_option` WHERE `menu_id` = 5712;
 DELETE FROM `gossip_menu_option` WHERE `menu_id` = 5713;
 DELETE FROM `gossip_menu_option` WHERE `menu_id` = 10265;
+
+UPDATE dbscripts_on_spell SET delay=delay*1000 WHERE `id` = 56562;
+UPDATE dbscripts_on_creature_movement SET delay=delay*1000 WHERE `id` = 1644001;
+
+DELETE FROM dbscripts_on_event WHERE id=3938;
+INSERT INTO `dbscripts_on_event` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(3938, 20000, 0, 10, 10373, 3000000, 0, 0, 0, 0, 0, 0, 0, 0, 6888.34, -480.37, 40.62, 3.7581, 0, 'Spawn Xabraxxis for quest 4763'),
+(3938, 20000, 0, 26, 0, 0, 0, 10373, 50, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Xabraxxis attacks - quest 4763');

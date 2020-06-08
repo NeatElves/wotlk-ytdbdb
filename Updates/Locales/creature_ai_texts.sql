@@ -13,6 +13,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Свежие кости!' WHERE
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Гр-р-р-р... Свежее мясо!' WHERE `entry` = -6;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Ты не получишь свечку!' WHERE `entry` = -7;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Айй! Моя бежать!' WHERE `entry` = -8;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Что?.. Кто посмел исцелить фурболга в МОЕМ лагере?! Узнайте же, каков Забраксис в гневе!' WHERE `entry` = -9;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Тебе не скрыться от меня, $gразбойник:разбойница;. Я чую твой страх.' WHERE `entry` = -11;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s выползает из отверстия!' WHERE `entry` = -12;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Это лучшее, на что ты $gспособен:способна;?' WHERE `entry` = -13;

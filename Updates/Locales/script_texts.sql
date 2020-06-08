@@ -12,6 +12,7 @@ UPDATE `script_texts` SET `content_loc8` = '%s впадает в исступл�
 UPDATE `script_texts` SET `content_loc8` = '%s впадает в безумную ярость!' WHERE `entry` = -1000004;
 UPDATE `script_texts` SET `content_loc8` = '%s впадает в бешенство!' WHERE `entry` = -1000005;
 UPDATE `script_texts` SET `content_loc8` = '%s впадает в исступление!' WHERE `entry` = -1000006;
+UPDATE `script_texts` SET `content_loc8` = '%s в панике пытается бежать!' WHERE `entry` = -1000007;
 UPDATE `script_texts` SET `content_loc8` = 'Сюда, малыши. Сразитесь со мной!' WHERE `entry` = -1000100;
 UPDATE `script_texts` SET `content_loc8` = 'Иди за мной, $n. Я отведу тебя в Убежище Братства Справедливости. Только ты меня защищай, а то я долго не протяну.' WHERE `entry` = -1000101;
 UPDATE `script_texts` SET `content_loc8` = 'Проход спрятан в Луноречье. Не спускайте своих глаз с воров. Они хотят моей смерти.' WHERE `entry` = -1000102;
@@ -1257,6 +1258,8 @@ UPDATE `script_texts` SET `content_loc8` = 'Я жду только вас, $n. �
 UPDATE `script_texts` SET `content_loc8` = 'Умри, $n! Элуна не позволит тебе вредить ее созданиям!' WHERE `entry` = -1010024;
 UPDATE `script_texts` SET `content_loc8` = 'Ты осмеливаешься касаться меня?!' WHERE `entry` = -1010025;
 UPDATE `script_texts` SET `content_loc8` = 'Получилось! Встретимся у Джер''Кая, возле лагеря Зловещего Тотема.' WHERE `entry` = -1010026;
+UPDATE `script_texts` SET `content_loc8` = '%s ощущает манящий запах очищенной еды.' WHERE `entry` = -1010027;
+UPDATE `script_texts` SET `content_loc8` = '%s начинает жадно поглощать пищу.' WHERE `entry` = -1010028;
 UPDATE `script_texts` SET `content_loc8` = '%s издает низкое горловое рычание.' WHERE `entry` = -1015001;
 UPDATE `script_texts` SET `content_loc8` = 'Ты никогда не получишь Сердце Ярости! Его сила принадлежит Иллидану!' WHERE `entry` = -1015002;
 UPDATE `script_texts` SET `content_loc8` = '%s достает Сердце Ярости.' WHERE `entry` = -1015003;
