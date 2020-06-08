@@ -389,6 +389,8 @@ fi
 echo "Enjoy using YTDB"
 echo
 } | tee InstallFullDB.sh.log
+echo
+echo
 else {
 export MYSQL_PWD="$PASSWORD"
 MYSQL_COMMAND="$MYSQL -h$DB_HOST -P$DB_PORT -u$USERNAME $DATABASE"
@@ -678,3 +680,5 @@ echo "Enjoy using YTDB"
 echo
 } 2> InstallFullDB.sh.log
 fi
+echo
+echo
