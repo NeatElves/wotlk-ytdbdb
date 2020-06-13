@@ -36,3 +36,26 @@ UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = 0, `groupid` = 1 WHE
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = 5, `groupid` = 1 WHERE `entry` =21838 AND `item` in (32536,32537);
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = 2, `groupid` = 1 WHERE `entry` =21838 AND `item` in (32540,32541);
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = 5, `groupid` = 0 WHERE `entry` =21838 AND `item` = 32782;
+
+UPDATE creature_template SET SpeedRun=12/7,SpeedWalk=2.5/2.5 WHERE entry IN(21216);
+DELETE FROM dbscripts_on_creature_movement WHERE id=1613401 AND command=15;
+INSERT INTO dbscripts_on_creature_movement (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(1613401, 201500, 0, 15, 27824, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'search for 16114');
+UPDATE gameobject SET spawntimesecsmin=-180, spawntimesecsmax=-180 WHERE id=181103;
+DELETE FROM dbscripts_on_event WHERE id=9900;
+INSERT INTO dbscripts_on_event (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(9900, 1000, 0, 9, 37382, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rimblat - respawn Flower');
+UPDATE `item_template` SET `name` = 'Deprecated BKP "Impact" Shot', `BuyCount` = 200, `BuyPrice` = 300, `SellPrice` = 0, `ItemLevel` = 35, `RequiredLevel` = 30, `stackable` = 1000, `StatsCount` = 0, `stat_type1` = 0, `stat_value1` = 0, `stat_type2` = 0, `stat_value2` = 0, `armor` = 0, `delay` = 3000, `MaxDurability` = 0, `BagFamily` = 2 ,`dmg_min1` = 9, `dmg_max1` = 9 WHERE `entry` =3034;
+
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(126144, 14369, 429, 1, 1, 0, 0, 188.172, 537.305, -48.467, 1.5966, 7200, 7200, 5, 0, 2369, 2369, 0, 1),
+(126143, 14369, 429, 1, 1, 0, 0, 128.297, 516.187, -48.4718, 1.6321, 7200, 7200, 0, 0, 2369, 2369, 0, 0),
+(126145, 14369, 429, 1, 1, 0, 0, 130.955, 524.283, -48.0481, 1.61341, 7200, 7200, 5, 0, 2369, 2369, 0, 1),
+(122940, 14369, 429, 1, 1, 0, 0, 163.733, 555.391, -48.3836, 3.1765, 7200, 7200, 0, 0, 2369, 2369, 0, 0),
+(126560, 14369, 429, 1, 1, 0, 0, 192.928, 587.385, -48.3836, 6.17846, 7200, 7200, 0, 0, 2369, 2369, 0, 0),
+(130993, 14369, 429, 1, 1, 0, 0, 153.425, 626.966, -27.8899, 0.017453, 7200, 7200, 0, 0, 2369, 2369, 0, 0),
+(130999, 14369, 429, 1, 1, 0, 0, 114.44, 602.178, -27.8082, 3.10669, 7200, 7200, 0, 0, 2369, 2369, 0, 0),
+(88024, 14369, 429, 1, 1, 0, 0, 186.983, 479.252, -48.371, 1.5708, 7200, 7200, 0, 0, 2369, 2369, 0, 0),
+(88023, 14369, 429, 1, 1, 0, 0, 186.675, 457.618, -48.3594, 4.79965, 7200, 7200, 0, 0, 2369, 2369, 0, 0),
+(88022, 14369, 429, 1, 1, 0, 0, 121.754, 476.583, -48.3816, 1.58825, 7200, 7200, 0, 0, 2369, 2369, 0, 0),
+(88021, 14369, 429, 1, 1, 0, 0, 121.172, 468.779, -48.3799, 4.67748, 7200, 7200, 0, 0, 2369, 2369, 0, 0);
