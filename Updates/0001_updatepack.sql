@@ -181,3 +181,6 @@ REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `posit
 
 UPDATE `creature_template` SET `GossipMenuId` = '0' WHERE `Entry` = 22292;
 DELETE FROM `gossip_menu` WHERE `entry` = 9818;
+
+INSERT INTO `spell_script_target` (`entry`, `type`, `targetEntry`, `inverseEffectMask`) VALUES ('23208', '0', '179747', '0');
+UPDATE `creature_template` SET `InhabitType` = 4, `MovementType` = 1 WHERE `Entry` =14564;
