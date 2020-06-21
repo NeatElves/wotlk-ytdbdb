@@ -1440,7 +1440,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Нет! Хозяин будет
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Наконец-то я свободен. Как же давно я не чувствовал вкус настоящей свободы!' WHERE `entry` = -10934;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Мне нет равных!' WHERE `entry` = -10935;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Умри, смертное ничтожество!' WHERE `entry` = -10936;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Да! ДА! Уохахахаха!' WHERE `entry` = -10937;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Да... да!' WHERE `entry` = -10937;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я размышляю насчет отпуска. Я слыхал, в Дольном Очаге неплохо...' WHERE `entry` = -10938;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Время уходить никогда не приходит слишком быстро!' WHERE `entry` = -10939;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я слышал, Блэкмур начал странно себя вести.' WHERE `entry` = -10940;
