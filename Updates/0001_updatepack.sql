@@ -1888,3 +1888,5 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (38336, 0, 2, -8745.29, 656.266, 105.091, 100, 0, 1, NULL),
 (38339, 0, 1, 1764.49, -4345.93, -7.798, 100, 9000, 3833601, NULL),
 (38339, 0, 2, 1764.49, -4345.93, -7.798, 100, 0, 1, NULL);
+
+UPDATE creature_template SET MovementType = 0 WHERE entry = 21628;
