@@ -1900,3 +1900,18 @@ INSERT INTO dbscripts_on_relay (id, delay, priority, command, datalong, datalong
 (10124,1100,0,0,0,0,0,0,0,0,2000003430,0,0,0,0,0,0,0,'Gavis Greyshield - Say'),
 (10124,4000,0,0,0,0,0,0,0,0,2000003431,0,0,0,0,0,0,0,'Gavis Greyshield - Say'),
 (10124,15000,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Gavis Greyshield - Despawn Self');
+
+UPDATE creature_template SET MinLevel=60,MaxLevel=60 WHERE entry IN(22207);
+UPDATE creature_template SET Leash=34 WHERE entry IN(16524);
+UPDATE creature_template SET SpeedWalk=1 WHERE Entry IN (1748, 12580);
+DELETE FROM creature_movement_template WHERE entry=12581;
+INSERT INTO creature_movement_template (entry, pathId, point, position_x, position_y, position_z, orientation, waittime, script_id, comment) VALUES
+(12581, 0, 1, -9049.96, 446.152, 93.056, 0.365, 500, 5, 'Mercutio - Run ON (Generic)'),
+(12581, 0, 2, -9049.96, 446.152, 93.056, 0.365, 0, 0, ''),
+(12581, 0, 3, -9059.62, 431.933, 93.0563, 0, 0, 0, ''),
+(12581, 0, 4, -9074.04, 422.621, 93.0563, 0, 0, 0, ''),
+(12581, 0, 5, -9083.23, 422.767, 92.5363, 0, 0, 0, ''),
+(12581, 0, 6, -9090.48, 412.304, 92.1038, 0, 4000, 1, 'Mercutio - Despawn Self (Generic)');
+DELETE FROM dbscripts_on_creature_movement WHERE id=1258101;
+
+UPDATE `creature` SET `position_x` = '-360.278', `position_y` = '1495.03', `position_z` = '17.196', `orientation` = '0.830526' WHERE `guid` =12929;
