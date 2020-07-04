@@ -1915,3 +1915,17 @@ INSERT INTO creature_movement_template (entry, pathId, point, position_x, positi
 DELETE FROM dbscripts_on_creature_movement WHERE id=1258101;
 
 UPDATE `creature` SET `position_x` = '-360.278', `position_y` = '1495.03', `position_z` = '17.196', `orientation` = '0.830526' WHERE `guid` =12929;
+
+UPDATE item_template SET spellcharges_1=-1, spellcharges_2=-1 WHERE entry=7866;
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(32581, 179945, 30, '-1070.53369140625', '-617.908203125', '51.32492446899414062', '5.838126659393310546', '0', '0', '-0.22069740295410156', '0.975342333316802978', 7200, 7200, 100, 1);
+UPDATE `creature` SET `position_x` = '6723.88', `position_y` = '-4715.68', `position_z` = '722.038', `orientation` = '2.93694', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =52739;
+UPDATE `creature` SET `position_x` = '6716.85', `position_y` = '-4713.84', `position_z` = '721.702', `orientation` = '1.27409', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =43201;
+UPDATE `creature` SET `position_x` = '6720.53', `position_y` = '-4712.91', `position_z` = '721.976', `orientation` = '1.85005', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =84757;
+UPDATE creature SET position_x = '6722.873047', position_y = '-4701.359375', position_z = '721.922241', orientation = '3.002866' WHERE guid = '44645';
+UPDATE `gameobject` SET `position_x` = '6696.57', `position_y` = '-4648.01', `position_z` = '721.942', `orientation` = '-2.23402', `rotation2` = '-0.898793', `rotation3` = '0.438373', `spawntimesecsmin` = '2', `spawntimesecsmax` = '2' WHERE `guid` =2284;
+UPDATE `gossip_menu_option` SET `action_script_id` = 0, `condition_id` = 470 WHERE  `menu_id` =2703 AND `id` =0;
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES ('2703', '2', '0', 'I lost the Cache of Mau''ari. What can I do?', '5758', '1', '1', '-1', '0', '270300', '0', '0', NULL, '0', '1228');
+UPDATE `creature_template` SET `NpcFlags` = 0, `GossipMenuId` = 0 WHERE `Entry` IN (7770, 10676);
+DELETE FROM `gossip_menu` WHERE `entry` = 11874 AND `text_id` = 16642;
+DELETE FROM `gossip_menu` WHERE `entry` IN (11189, 11876);
