@@ -1929,3 +1929,55 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 UPDATE `creature_template` SET `NpcFlags` = 0, `GossipMenuId` = 0 WHERE `Entry` IN (7770, 10676);
 DELETE FROM `gossip_menu` WHERE `entry` = 11874 AND `text_id` = 16642;
 DELETE FROM `gossip_menu` WHERE `entry` IN (11189, 11876);
+
+INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES (946, 1, 'Horde Armaments');
+INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
+(15891, 1, 'Nagrand - Fishing hole'), (15892, 1, 'Nagrand - Fishing hole'), (15893, 1, 'Nagrand - Fishing hole'),
+(15894, 1, 'Nagrand - Fishing hole'), (15895, 1, 'Nagrand - Fishing hole'), (15896, 1, 'Nagrand - Fishing hole');
+
+REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(16385, 8551, 0, 0, 0, 1969.5, -4522.47, 75.5379, 2.35553, 300, 300, 5, 0, 2400, 5013, 0, 1),
+(16503, 8551, 0, 0, 0, 1991.47, -4494.67, 75.5214, 5.74802, 300, 300, 5, 0, 2400, 5013, 0, 1),
+(16579, 8551, 0, 0, 0, 2021.77, -4568.32, 79.7546, 0.476076, 300, 300, 3, 0, 2400, 5013, 0, 1),
+(16841, 8551, 0, 0, 0, 1971.8, -4510.33, 74.9946, 5.044, 300, 300, 0, 0, 2400, 5013, 0, 0),
+(16899, 8551, 0, 0, 0, 2814.52, -3757.79, 122.507, 3.35103, 300, 300, 0, 0, 2400, 5013, 0, 0),
+(16909, 8551, 0, 0, 0, 2855.31, -3232.34, 134.27, 6.26573, 300, 300, 0, 0, 2400, 5013, 0, 0),
+(17213, 8551, 0, 0, 0, 3135.96, -3867.93, 135.447, 3.33358, 300, 300, 0, 0, 2400, 5013, 0, 0),
+(17743, 8551, 0, 0, 0, 3185.53, -3456.8, 165.529, 4.13643, 300, 300, 0, 0, 2400, 5013, 0, 0);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(18893, 8555, 0, 0, 0, 2977.84, -2746.88, 98.9196, 5.77704, 300, 300, 2, 0, 3189, 0, 0, 1),
+(22310, 8555, 0, 0, 0, 3012.34, -2741.36, 98.955, 4.46025, 300, 300, 3, 0, 3189, 0, 0, 1),
+(18975, 8555, 0, 0, 0, 2950.29, -2715, 97.0207, 0.767945, 300, 300, 0, 0, 3189, 0, 0, 0),
+(1429, 8555, 0, 0, 0, 2762.68, -2494.09, 77.8183, 2.57758, 300, 300, 3, 0, 3189, 0, 0, 1),
+(2605, 8555, 0, 0, 0, 2815.56, -2547.53, 78.9078, 0.069813, 300, 300, 2, 0, 3189, 0, 0, 1),
+(3190, 8555, 0, 0, 0, 2795.34, -2493.56, 83.4455, 2.98305, 300, 300, 3, 0, 3189, 0, 0, 1),
+(3843, 8555, 0, 0, 0, 2832.42, -2577.52, 85.0079, 5.2348, 300, 300, 2, 0, 3189, 0, 0, 1),
+(4067, 8555, 0, 0, 0, 2978.03, -2828.08, 105.686, 0.618434, 300, 300, 10, 0, 3189, 0, 0, 1),
+(11296, 8555, 0, 0, 0, 2947.38, -2844.13, 104.719, 0.975752, 300, 300, 5, 0, 3189, 0, 0, 1),
+(13990, 8555, 0, 0, 0, 2946.7, -2808.76, 106.573, 2.1261, 300, 300, 5, 0, 3189, 0, 0, 1),
+(14118, 8555, 0, 0, 0, 2965.59, -2783.07, 110.778, 5.23169, 300, 300, 10, 0, 3189, 0, 0, 1),
+(17843, 8555, 0, 0, 0, 3185.53, -3456.8, 165.529, 4.13643, 300, 300, 0, 0, 3189, 0, 0, 0),
+(18975, 8555, 0, 0, 0, 3135.96, -3867.93, 135.447, 3.33358, 300, 300, 0, 0, 3189, 0, 0, 0),
+(22288, 8555, 0, 0, 0, 2855.31, -3232.34, 134.27, 6.26573, 300, 300, 0, 0, 3189, 0, 0, 0),
+(22302, 8555, 0, 0, 0, 2814.52, -3757.79, 122.507, 3.35103, 300, 300, 0, 0, 3189, 0, 0, 0);
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
+(22302, 0, 0, 1, 16, 0, 0, '8734'), (22288, 0, 0, 1, 16, 0, 0, '8734'), (18975, 0, 0, 1, 16, 0, 0, '8734'), (17843, 0, 0, 1, 16, 0, 0, '8734'),
+(16899, 0, 0, 1, 16, 0, 0, '8734'), (16909, 0, 0, 1, 16, 0, 0, '8734'), (17213, 0, 0, 1, 16, 0, 0, '8734'), (17743, 0, 0, 1, 16, 0, 0, '8734');
+INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALUES
+(53477, 15919, 0, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(22302, 15919, 0, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(16899, 15919, 0, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(53478, 15920, 0, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(22288, 15920, 0, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(16909, 15920, 0, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(148433, 15917, 0, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(18975, 15917, 0, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(17213, 15917, 0, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(148434, 15918, 0, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(17843, 15918, 0, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(17743, 15918, 0, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner');
+INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
+(15919, 1, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(15920, 1, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(15917, 1, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
+(15918, 1, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner');
