@@ -1981,3 +1981,134 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (15920, 1, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
 (15917, 1, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner'),
 (15918, 1, 'Plaguewood Ziggurat - Necromancer/Crypt Fiend/Dark Summoner');
+
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = 5 WHERE `item` =20310;
+UPDATE `quest_template` SET `NextQuestId` = 0 WHERE `entry` in (1482,1484);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(22314, 4718, 1, 1, 1, 0, 0, 214.75, 2988.45, 1.52134, 3.29002, 300, 300, 0, 0, 1064, 1007, 0, 2),
+(53653, 4718, 1, 1, 1, 0, 0, 254.037, 2948.59, 7.70299, 6.1579, 300, 300, 3, 0, 1064, 1007, 0, 1),
+(53651, 4718, 1, 1, 1, 0, 0, -15.5941, 2814.09, -30.8625, 0.01377, 300, 300, 20, 0, 1064, 1007, 0, 1),
+(53652, 4718, 1, 1, 1, 0, 0, -210.944, 2751.28, -1.83553, 0.842348, 300, 300, 20, 0, 1064, 1007, 0, 1),
+(53654, 4718, 1, 1, 1, 0, 0, 147.734, 2709.56, -67.6734, 5.92973, 300, 300, 20, 0, 1064, 1007, 0, 1);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(22314, 1, 212.601, 2988.42, 1.62505, 0, 0, 0, NULL),
+(22314, 2, 226.332, 2985.68, 0.983753, 0, 0, 0, NULL),
+(22314, 3, 253.515, 2978.99, 1.51978, 0, 0, 0, NULL),
+(22314, 4, 268.765, 2972.77, 2.48183, 0, 0, 0, NULL),
+(22314, 5, 273.255, 2963.84, 2.30325, 0, 0, 0, NULL),
+(22314, 6, 273.085, 2949.85, 2.23244, 0, 0, 0, NULL),
+(22314, 7, 273.568, 2921.85, 2.26282, 0, 0, 0, NULL),
+(22314, 8, 273.936, 2910.11, 2.42889, 0, 0, 0, NULL),
+(22314, 9, 273.936, 2910.11, 2.42889, 0, 0, 0, NULL),
+(22314, 10, 274.324, 2938.09, 2.258, 0, 0, 0, NULL),
+(22314, 11, 273.259, 2966.06, 2.40732, 0, 0, 0, NULL),
+(22314, 12, 268.307, 2974.86, 2.56783, 0, 0, 0, NULL),
+(22314, 13, 249.718, 2976.1, 1.12339, 0, 0, 0, NULL),
+(22314, 14, 236.822, 2981.54, 1.29474, 0, 0, 0, NULL);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(31184, 5771, 1, 1, 1, 0, 0, -1879.11, 1719.84, 62.1328, 5.95271, 300, 300, 0, 0, 1410, 1283, 0, 0);
+UPDATE `creature` SET `position_x` = '400.813', `position_y` = '-960.106', `position_z` = '110.501', `orientation` = '3.10669' WHERE `guid` =14190;
+UPDATE `creature` SET `position_x` = '-16.3255', `position_y` = '-321.615', `position_z` = '131.254', `orientation` = '4.38078' WHERE `guid` =13547;
+
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(5441, 0, 0, 'Warmaster, I have lost my insignia. Could you supply me with a replacement?', 9001, 1, 1, -1, 0, 544100, 0, 0, NULL, 0, 3201),
+(5441, 1, 0, 'Warmaster, I have lost my insignia. Could you supply me with a replacement?', 9001, 1, 1, -1, 0, 544101, 0, 0, NULL, 0, 3202),
+(5441, 2, 0, 'Warmaster, I have lost my insignia. Could you supply me with a replacement?', 9001, 1, 1, -1, 0, 544102, 0, 0, NULL, 0, 3203),
+(5441, 3, 0, 'Warmaster, I have lost my insignia. Could you supply me with a replacement?', 9001, 1, 1, -1, 0, 544103, 0, 0, NULL, 0, 3204),
+(5441, 4, 0, 'Warmaster, I have lost my insignia. Could you supply me with a replacement?', 9001, 1, 1, -1, 0, 544104, 0, 0, NULL, 0, 3205),
+(5441, 5, 0, 'Warmaster, I have lost my insignia. Could you supply me with a replacement?', 9001, 1, 1, -1, 0, 544105, 0, 0, NULL, 0, 3200);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(544100, 0, 15, 22108, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Conjure Frostwolf Rank 1 Insignia'''),
+(544101, 0, 15, 22109, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Conjure Frostwolf Rank 2 Insignia'''),
+(544102, 0, 15, 22110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Conjure Frostwolf Rank 3 Insignia'''),
+(544103, 0, 15, 22111, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Conjure Frostwolf Rank 4 Insignia'''),
+(544104, 0, 15, 22112, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Conjure Frostwolf Rank 5 Insignia'''),
+(544105, 0, 15, 22113, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Conjure Frostwolf Rank 6 Insignia''');
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES
+(3183, 8, 7161, 0, 0, 0, 0, ''), (3189, -3, 3184, 0, 0, 0, 0, ''), (3195, 2, 17690, 1, 0, 0, 1, ''), (3201, -1, 3195, 3189, 3183, 0, 0, ''),
+(3184, 8, 7163, 0, 0, 0, 0, ''), (3190, -3, 3185, 0, 0, 0, 0, ''), (3196, 2, 17905, 1, 0, 0, 1, ''), (3202, -1, 3196, 3190, 3184, 0, 0, ''),
+(3185, 8, 7164, 0, 0, 0, 0, ''), (3191, -3, 3186, 0, 0, 0, 0, ''), (3197, 2, 17906, 1, 0, 0, 1, ''), (3203, -1, 3197, 3191, 3185, 0, 0, ''),
+(3186, 8, 7165, 0, 0, 0, 0, ''), (3192, -3, 3187, 0, 0, 0, 0, ''), (3198, 2, 17907, 1, 0, 0, 1, ''), (3204, -1, 3198, 3192, 3186, 0, 0, ''),
+(3187, 8, 7166, 0, 0, 0, 0, ''), (3193, -3, 3188, 0, 0, 0, 0, ''), (3199, 2, 17908, 1, 0, 0, 1, ''), (3205, -1, 3199, 3193, 3187, 0, 0, ''),
+(3188, 8, 7167, 0, 0, 0, 0, ''), (3194, 2, 17909, 1, 0, 0, 1, ''), (3200, -1, 3194, 3188, 0, 0, 0, '');
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(5442, 0, 0, 'Lieutenant, I have lost my insignia. Could you please supply me with a replacement?', 9003, 1, 1, -1, 0, 544200, 0, 0, NULL, 0, 3224),
+(5442, 1, 0, 'Lieutenant, I have lost my insignia. Could you please supply me with a replacement?', 9003, 1, 1, -1, 0, 544201, 0, 0, NULL, 0, 3225),
+(5442, 2, 0, 'Lieutenant, I have lost my insignia. Could you please supply me with a replacement?', 9003, 1, 1, -1, 0, 544202, 0, 0, NULL, 0, 3226),
+(5442, 3, 0, 'Lieutenant, I have lost my insignia. Could you please supply me with a replacement?', 9003, 1, 1, -1, 0, 544203, 0, 0, NULL, 0, 3227),
+(5442, 4, 0, 'Lieutenant, I have lost my insignia. Could you please supply me with a replacement?', 9003, 1, 1, -1, 0, 544204, 0, 0, NULL, 0, 3228),
+(5442, 5, 0, 'Lieutenant, I have lost my insignia. Could you please supply me with a replacement?', 9003, 1, 1, -1, 0, 544205, 0, 0, NULL, 0, 3223);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(544200, 0, 15, 22114, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Conjure Stormpike Rank 1 Insignia'''),
+(544201, 0, 15, 22115, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Conjure Stormpike Rank 2 Insignia'''),
+(544202, 0, 15, 22116, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Conjure Stormpike Rank 3 Insignia'''),
+(544203, 0, 15, 22117, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Conjure Stormpike Rank 4 Insignia'''),
+(544204, 0, 15, 22118, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Conjure Stormpike Rank 5 Insignia'''),
+(544205, 0, 15, 22119, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Conjure Stormpike Rank 6 Insignia''');
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES
+(3206, 8, 7162, 0, 0, 0, 0, ''), (3212, -3, 3207, 0, 0, 0, 0, ''), (3218, 2, 17691, 1, 0, 0, 1, ''), (3224, -1, 3218, 3212, 3206, 0, 0, ''),
+(3207, 8, 7168, 0, 0, 0, 0, ''), (3213, -3, 3208, 0, 0, 0, 0, ''), (3219, 2, 17900, 1, 0, 0, 1, ''), (3225, -1, 3219, 3213, 3207, 0, 0, ''),
+(3208, 8, 7169, 0, 0, 0, 0, ''), (3214, -3, 3209, 0, 0, 0, 0, ''), (3220, 2, 17901, 1, 0, 0, 1, ''), (3226, -1, 3220, 3214, 3208, 0, 0, ''),
+(3209, 8, 7170, 0, 0, 0, 0, ''), (3215, -3, 3210, 0, 0, 0, 0, ''), (3221, 2, 17902, 1, 0, 0, 1, ''), (3227, -1, 3221, 3215, 3209, 0, 0, ''),
+(3210, 8, 7171, 0, 0, 0, 0, ''), (3216, -3, 3211, 0, 0, 0, 0, ''), (3222, 2, 17903, 1, 0, 0, 1, ''), (3228, -1, 3222, 3216, 3210, 0, 0, ''),
+(3211, 8, 7172, 0, 0, 0, 0, ''), (3217, 2, 17904, 1, 0, 0, 1, ''), (3223, -1, 3217, 3211, 0, 0, 0, '');
+
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(6539, 1, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653901, 0, 0, NULL, 0, 3270),
+(6539, 2, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653902, 0, 0, NULL, 0, 3271),
+(6539, 3, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653903, 0, 0, NULL, 0, 3272),
+(6539, 4, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653904, 0, 0, NULL, 0, 3273),
+(6539, 5, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653905, 0, 0, NULL, 0, 3286),
+(6539, 6, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653906, 0, 0, NULL, 0, 3274),
+(6539, 7, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653907, 0, 0, NULL, 0, 3275),
+(6539, 8, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653908, 0, 0, NULL, 0, 3276),
+(6539, 9, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653909, 0, 0, NULL, 0, 3277),
+(6539, 10, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653910, 0, 0, NULL, 0, 3287),
+(6539, 11, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653911, 0, 0, NULL, 0, 3278),
+(6539, 12, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653912, 0, 0, NULL, 0, 3279),
+(6539, 13, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653913, 0, 0, NULL, 0, 3280),
+(6539, 14, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653914, 0, 0, NULL, 0, 3281),
+(6539, 15, 0, 'Anachronos, I have lost the signet ring. Could you supply me with a replacement?', 11348, 1, 1, -1, 0, 653915, 0, 0, NULL, 0, 3288);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(653901, 0, 15, 25932, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight TANK R1'''),
+(653902, 0, 15, 25933, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight TANK R2'''),
+(653903, 0, 15, 25934, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight TANK R3'''),
+(653904, 0, 15, 25935, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight TANK R4'''),
+(653905, 0, 15, 25936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight TANK R5'''),
+(653906, 0, 15, 25927, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight DPS R1'''),
+(653907, 0, 15, 25928, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight DPS R2'''),
+(653908, 0, 15, 25929, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight DPS R3'''),
+(653909, 0, 15, 25930, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight DPS R4'''),
+(653910, 0, 15, 25931, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight DPS R5'''),
+(653911, 0, 15, 25921, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight CASTER R1'''),
+(653912, 0, 15, 25922, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight CASTER R2'''),
+(653913, 0, 15, 25923, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight CASTER R3'''),
+(653914, 0, 15, 25924, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight CASTER R4'''),
+(653915, 0, 15, 25925, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast ''Signet Ring of the Bronze Dragonflight CASTER R5''');
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES
+(3229, 5, 910, 3, 0, 0, 0, ''), (3230, 5, 910, 4, 0, 0, 0, ''), (3231, 5, 910, 5, 0, 0, 0, ''), (3232, 5, 910, 6, 0, 0, 0, ''), (3233, 5, 910, 7, 0, 0, 0, ''),
+(3234, 8, 8747, 0, 0, 0, 0, ''), (3246, -3, 3235, 0, 0, 0, 0, ''), (3258, 2, 21196, 1, 0, 0, 1, ''), (3270, -1, 3258, 3246, 3234, 3229, 0, ''),
+(3235, 8, 8748, 0, 0, 0, 0, ''), (3247, -3, 3236, 0, 0, 0, 0, ''), (3259, 2, 21197, 1, 0, 0, 1, ''), (3271, -1, 3259, 3247, 3235, 3230, 0, ''),
+(3236, 8, 8749, 0, 0, 0, 0, ''), (3248, -3, 3237, 0, 0, 0, 0, ''), (3260, 2, 21198, 1, 0, 0, 1, ''), (3272, -1, 3260, 3248, 3236, 3231, 0, ''),
+(3237, 8, 8750, 0, 0, 0, 0, ''), (3249, -3, 2561, 0, 0, 0, 0, ''), (3261, 2, 21199, 1, 0, 0, 1, ''), (3273, -1, 3261, 3249, 3237, 3232, 0, ''),
+(3238, 8, 8752, 0, 0, 0, 0, ''), (3250, -3, 3239, 0, 0, 0, 0, ''), (3262, 2, 21201, 1, 0, 0, 1, ''), (3274, -1, 3262, 3250, 3238, 3229, 0, ''),
+(3239, 8, 8753, 0, 0, 0, 0, ''), (3251, -3, 3240, 0, 0, 0, 0, ''), (3263, 2, 21202, 1, 0, 0, 1, ''), (3275, -1, 3263, 3251, 3239, 3230, 0, ''),
+(3240, 8, 8754, 0, 0, 0, 0, ''), (3252, -3, 3241, 0, 0, 0, 0, ''), (3264, 2, 21203, 1, 0, 0, 1, ''), (3276, -1, 3264, 3252, 3240, 3231, 0, ''),
+(3241, 8, 8755, 0, 0, 0, 0, ''), (3253, -3, 2562, 0, 0, 0, 0, ''), (3265, 2, 21204, 1, 0, 0, 1, ''), (3277, -1, 3265, 3253, 3241, 3232, 0, ''),
+(3242, 8, 8757, 0, 0, 0, 0, ''), (3254, -3, 3243, 0, 0, 0, 0, ''), (3266, 2, 21206, 1, 0, 0, 1, ''), (3278, -1, 3266, 3254, 3242, 3229, 0, ''),
+(3243, 8, 8758, 0, 0, 0, 0, ''), (3255, -3, 3244, 0, 0, 0, 0, ''), (3267, 2, 21207, 1, 0, 0, 1, ''), (3279, -1, 3267, 3255, 3243, 3230, 0, ''),
+(3244, 8, 8759, 0, 0, 0, 0, ''), (3256, -3, 3245, 0, 0, 0, 0, ''), (3268, 2, 21208, 1, 0, 0, 1, ''), (3280, -1, 3268, 3256, 3244, 3231, 0, ''),
+(3245, 8, 8760, 0, 0, 0, 0, ''), (3257, -3, 2563, 0, 0, 0, 0, ''), (3269, 2, 21209, 1, 0, 0, 1, ''), (3281, -1, 3269, 3257, 3245, 3232, 0, ''),
+(3282, 2, 21205, 1, 0, 0, 1, ''), (3283, 2, 21200, 1, 0, 0, 1, ''), (3284, 2, 21210, 1, 0, 0, 1, ''), (3285, -1, 3284, 3283, 3282, 3233, 0, ''),
+(3286, -1, 3285, 2561, 0, 0, 0, ''), (3287, -1, 3285, 2562, 0, 0, 0, ''), (3288, -1, 3285, 2563, 0, 0, 0, '');
+
+UPDATE `creature` SET `position_x` = '-8240.33', `position_y` = '-4648.71', `position_z` = '0.334381', `orientation` = '0.750492', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =81298;
+UPDATE `creature_template` SET `MinLevel` = '63', `MaxLevel` = '63', `Faction` = '776' WHERE `Entry` =15192;
+
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES ('3289', '15', '30', '1', '0', '0', '0', ''), ('3290', '15', '29', '2', '0', '0', '0', '');
+UPDATE `quest_template` SET `RequiredCondition` = '3290' WHERE `entry` IN (8168,8171);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES ('3291', '15', '39', '2', '0', '0', '0', ''), ('3292', '-1', '3291', '3289', '0', '0', '0', '');
+UPDATE `quest_template` SET `RequiredCondition` = '3292' WHERE `entry` IN (8167,8170);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES ('3293', '15', '49', '2', '0', '0', '0', ''), ('3294', '-1', '3293', '536', '0', '0', '0', '');
+UPDATE `quest_template` SET `RequiredCondition` = '3294' WHERE `entry` IN (8166,8169);
+UPDATE `quest_template` SET `RequiredCondition` = '1843' WHERE `entry` IN (8105,8120);
