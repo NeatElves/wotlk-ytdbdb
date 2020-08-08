@@ -8272,3 +8272,5 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid
 (114150, 26772, 571, 1, 1, 0, 0, 4094.65, 2231.3, 150.305, 4.39823, 90, 90, 5, 0, 13936, 0, 0, 1),
 (114151, 26772, 571, 1, 1, 0, 0, 4085.34, 2238.71, 150.305, 6.26573, 90, 90, 5, 0, 13936, 0, 0, 1),
 (114154, 26772, 571, 1, 1, 0, 0, 4057.07, 2189.56, 151.928, 2.21657, 90, 90, 5, 0, 13936, 0, 0, 1);
+
+UPDATE `dbscript_string` SET `content_default` = 'Into this blade, I imbue the power to strike down the strongest of demons! No demon shall stand before the wielder of this weapon!', `broadcast_text_id` = 19603 WHERE `entry` =2000002508;
