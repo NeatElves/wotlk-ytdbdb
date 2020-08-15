@@ -8274,3 +8274,18 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid
 (114154, 26772, 571, 1, 1, 0, 0, 4057.07, 2189.56, 151.928, 2.21657, 90, 90, 5, 0, 13936, 0, 0, 1);
 
 UPDATE `dbscript_string` SET `content_default` = 'Into this blade, I imbue the power to strike down the strongest of demons! No demon shall stand before the wielder of this weapon!', `broadcast_text_id` = 19603 WHERE `entry` =2000002508;
+
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(94, 176370, 0, 1, 1, -3776.13, -731.8, 8.2887, -1.03847, 0, 0, -0.496216, 0.868199, 180, 180, 100, 1);
+UPDATE `gameobject` SET `position_z` = '5.449245' WHERE `guid` =8510;
+
+DELETE FROM `command` WHERE `name` LIKE '%ahbot%';
+INSERT INTO `command` (`name`, `security`, `help`) VALUES
+('ahbot item', 3, 'Syntax: .ahbot item #itemid [$itemvalue [$addchance [$minamount [$maxamount]]]] [reset]\r\n\r\nShow/modify AHBot item. Setting $itemvalue to 0 bans item. Setting $addchance greater than 0 (0-100, default 0) overrides normal loot sources in favor of a fixed add chance. Min/max amount defaults to item stack size. Parameter "reset" resets item configuration.'),
+('ahbot rebuild', 3, 'Syntax: .ahbot rebuild [all]\r\n\r\nExpire all auctions by ahbot except those bidded on by a player. Bidded auctions can be forced expired by using the "all" option. AHBot will re-fill auctions using current settings.'),
+('ahbot reload', 3, 'Syntax: .ahbot reload\r\n\r\nReload AHBot settings from configuration file.'),
+('ahbot status', 3, 'Syntax: .ahbot status\r\n\r\nShow current amount of items added to the auction house by AHBot.');
+DELETE FROM `mangos_string` WHERE `entry` IN (1171,1172,1180,1181,1182,1183,1184,1185,1186,1187,1188,1189,1190,1191);
+INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`) VALUES
+(1171, 'Reloaded AHBot configuration.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(1172, 'Error while trying to reload AHBot configuration.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);

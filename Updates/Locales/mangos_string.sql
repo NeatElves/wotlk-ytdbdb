@@ -848,8 +848,8 @@ UPDATE `mangos_string` SET `content_loc8` = 'Библиотека скрипто
 UPDATE `mangos_string` SET `content_loc8` = 'Библиотека скриптов перезагружена.' WHERE `entry` = 1168;
 UPDATE `mangos_string` SET `content_loc8` = 'Библиотека скриптов построена для другой версии ядра.' WHERE `entry` = 1169;
 UPDATE `mangos_string` SET `content_loc8` = 'Игрок выделил: %s.\r\nФракция: %u.\r\nнпцФлаг: %u.\r\nBase Entry: %u, Spawned Entry %u (Сложность %u).\r\nДисплейID: %u (Текущий: %u).' WHERE `entry` = 1170;
-UPDATE `mangos_string` SET `content_loc8` = 'Все наcтройки перезагружены из файла конфигурации ahbot.' WHERE `entry` = 1171;
-UPDATE `mangos_string` SET `content_loc8` = 'Ошибка при попытке перезагрузить файл конфигурации ahbot.' WHERE `entry` = 1172;
+UPDATE `mangos_string` SET `content_loc8` = 'Конфигурация AHBot перезагружена.' WHERE `entry` = 1171;
+UPDATE `mangos_string` SET `content_loc8` = 'Ошибка при попытке перезагрузить конфигурацию AHBot.' WHERE `entry` = 1172;
 UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 1173;
 UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 1174;
 UPDATE `mangos_string` SET `content_loc8` = '|            | Альянс |  Орда   | Нейтральный  |  Всего   |' WHERE `entry` = 1175;
