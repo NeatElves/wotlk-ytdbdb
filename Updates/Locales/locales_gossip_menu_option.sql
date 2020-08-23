@@ -3589,6 +3589,7 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (9427, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу остановиться здесь.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9427, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Позвольте мне взглянуть на ваш товар.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9429, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я покажу тебе! Дай мне этот учебный парашют!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(9434, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Сбей ледяного змея на землю, и я добью его.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9437, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу отдать моего любимца в ваши стойла.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9453, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Позвольте мне взглянуть на ваш товар.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9455, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Распорядитель, пожалуйста, разреши мне поехать на одном из драконов в палаты королевы на верху замка.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),

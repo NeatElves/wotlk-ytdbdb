@@ -3533,6 +3533,8 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Подкрепление – к �
 UPDATE `dbscript_string` SET `content_loc8` = 'К восточному проходу! Быстро!' WHERE `entry` = 2000003535;
 UPDATE `dbscript_string` SET `content_loc8` = 'У восточного прохода есть еще!' WHERE `entry` = 2000003536;
 UPDATE `dbscript_string` SET `content_loc8` = 'Восточный проход! Быстрее!' WHERE `entry` = 2000003537;
+UPDATE `dbscript_string` SET `content_loc8` = '%s улетает.' WHERE `entry` = 2000003538;
+UPDATE `dbscript_string` SET `content_loc8` = 'Не переживай, $gбраток:сестренка;. Рокхан обо всем позаботится. Никуда она не денется.' WHERE `entry` = 2000003539;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;
