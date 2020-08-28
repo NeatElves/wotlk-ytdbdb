@@ -2571,6 +2571,9 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Держись крепче, м
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Никогда не видел ничего подобного. Хорошо, что ты с нами.' WHERE `entry` = -20848;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Малигос явно обезумел.' WHERE `entry` = -20849;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Трепещи же предо мной, мелюзга!' WHERE `entry` = -20850;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Я чую твой страх, |3-6($r).' WHERE `entry` = -20851;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Я поглощу вашу плоть и вставлю себе зубы из ваших костей!' WHERE `entry` = -20852;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Ты не магнатавр! Откуда... у тебя... такая... сила?' WHERE `entry` = -20853;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Слишком поздно! Договор уже заключен. Осталось лишь обсудить детали. Маленькие детали... такие, например, как ты!' WHERE `entry` = -20896;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Тссс... я здесь, у почтового ящика. Быстро иди сюда и смотри, чтобы за тобой не было хвоста.' WHERE `entry` = -20897;
 
