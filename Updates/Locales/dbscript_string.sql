@@ -2053,7 +2053,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Это так. Наши враг�
 UPDATE `dbscript_string` SET `content_loc8` = 'Верно, но как далеко мы можем зайти? В какой момент мы перестанем быть лучше наших врагов?' WHERE `entry` = 2000002055;
 UPDATE `dbscript_string` SET `content_loc8` = 'О нет! Не получается!' WHERE `entry` = 2000002056;
 UPDATE `dbscript_string` SET `content_loc8` = 'Пусть это будет уроком для тех, кто хочет принести на нашу землю зло!' WHERE `entry` = 2000002057;
-UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000002058;
+UPDATE `dbscript_string` SET `content_loc8` = 'Дети смерти, услышьте мой зов!' WHERE `entry` = 2000002058;
 UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000002059;
 UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000002060;
 UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000002061;
@@ -3539,6 +3539,9 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Убегай!' WHERE `entry` = 20
 UPDATE `dbscript_string` SET `content_loc8` = 'Я не хочу умирать!' WHERE `entry` = 2000003541;
 UPDATE `dbscript_string` SET `content_loc8` = '$gБольшой парень:Большая девица; спасет нас!' WHERE `entry` = 2000003542;
 UPDATE `dbscript_string` SET `content_loc8` = 'Они повсюду!' WHERE `entry` = 2000003543;
+UPDATE `dbscript_string` SET `content_loc8` = 'Нет... НЕТ! Что ты $gнаделал:наделала;?! Столько древних змеев пропало... какая магия могла сотворить такое?' WHERE `entry` = 2000003544;
+UPDATE `dbscript_string` SET `content_loc8` = 'Бесполезная затея, $gмальчик:девочка;... ты умрешь за то, что $gпрервал:прервала; мою работу!' WHERE `entry` = 2000003545;
+UPDATE `dbscript_string` SET `content_loc8` = 'Ты больше не черный змей. Иди... иди и служи делу Плети.' WHERE `entry` = 2000003546;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;

@@ -2600,6 +2600,11 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Постой минутку! Е
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Что за?.. Вон там Ноздорму!' WHERE `entry` = -20877;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'У меня такое чувство, будто меня протащили сквозь время. Спасибо за помощь...' WHERE `entry` = -20878;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Извини, мне не удалось продержаться до конца. Надеюсь, это не значит, что ты вот-вот прекратишь свое существование...' WHERE `entry` = -20879;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Я лишь выполнял приказы. Прошу тебя...' WHERE `entry` = -20880;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Победа за тобой. Пожалуйста, отпусти меня.' WHERE `entry` = -20881;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Пощади!' WHERE `entry` = -20882;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Мне была суждена другая смерть!' WHERE `entry` = -20883;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Это не конец... смерть только... закаляет...' WHERE `entry` = -20884;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Слишком поздно! Договор уже заключен. Осталось лишь обсудить детали. Маленькие детали... такие, например, как ты!' WHERE `entry` = -20896;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Тссс... я здесь, у почтового ящика. Быстро иди сюда и смотри, чтобы за тобой не было хвоста.' WHERE `entry` = -20897;
 
