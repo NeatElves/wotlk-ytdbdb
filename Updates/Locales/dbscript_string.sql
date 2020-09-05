@@ -3542,6 +3542,15 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Они повсюду!' WHERE `en
 UPDATE `dbscript_string` SET `content_loc8` = 'Нет... НЕТ! Что ты $gнаделал:наделала;?! Столько древних змеев пропало... какая магия могла сотворить такое?' WHERE `entry` = 2000003544;
 UPDATE `dbscript_string` SET `content_loc8` = 'Бесполезная затея, $gмальчик:девочка;... ты умрешь за то, что $gпрервал:прервала; мою работу!' WHERE `entry` = 2000003545;
 UPDATE `dbscript_string` SET `content_loc8` = 'Ты больше не черный змей. Иди... иди и служи делу Плети.' WHERE `entry` = 2000003546;
+UPDATE `dbscript_string` SET `content_loc8` = 'Ты думаешь, ты выиграл, смертный? Узри полную силу Антиока!' WHERE `entry` = 2000003547;
+UPDATE `dbscript_string` SET `content_loc8` = 'Смотри! Коса Антиока!' WHERE `entry` = 2000003548;
+UPDATE `dbscript_string` SET `content_loc8` = 'Куда ж подевалась эта кошка?' WHERE `entry` = 2000003549;
+UPDATE `dbscript_string` SET `content_loc8` = 'Пятнистый?' WHERE `entry` = 2000003550;
+UPDATE `dbscript_string` SET `content_loc8` = 'Вот ты где, маленькая дрянь!' WHERE `entry` = 2000003551;
+UPDATE `dbscript_string` SET `content_loc8` = '%s раздраженно фыркает.' WHERE `entry` = 2000003552;
+UPDATE `dbscript_string` SET `content_loc8` = 'Пора сделать еще одного Пятнюгу.' WHERE `entry` = 2000003553;
+UPDATE `dbscript_string` SET `content_loc8` = 'Убирайся, пока я не пробил. Да, не пробил... по тебе. Уловил?' WHERE `entry` = 2000003554;
+UPDATE `dbscript_string` SET `content_loc8` = 'Если я когда-нибудь отсюда выберусь, я стану РАЗБИВАТЬ все часы, что попадутся у меня на пути...' WHERE `entry` = 2000003555;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;
