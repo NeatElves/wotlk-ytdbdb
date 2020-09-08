@@ -3551,6 +3551,14 @@ UPDATE `dbscript_string` SET `content_loc8` = '%s раздраженно фыр�
 UPDATE `dbscript_string` SET `content_loc8` = 'Пора сделать еще одного Пятнюгу.' WHERE `entry` = 2000003553;
 UPDATE `dbscript_string` SET `content_loc8` = 'Убирайся, пока я не пробил. Да, не пробил... по тебе. Уловил?' WHERE `entry` = 2000003554;
 UPDATE `dbscript_string` SET `content_loc8` = 'Если я когда-нибудь отсюда выберусь, я стану РАЗБИВАТЬ все часы, что попадутся у меня на пути...' WHERE `entry` = 2000003555;
+UPDATE `dbscript_string` SET `content_loc8` = 'Шлемейль!' WHERE `entry` = 2000003556;
+UPDATE `dbscript_string` SET `content_loc8` = 'А?' WHERE `entry` = 2000003557;
+UPDATE `dbscript_string` SET `content_loc8` = 'Очевидно, с этой порцией чумы у тебя ничего не вышло. Что скажешь в свое оправдание?' WHERE `entry` = 2000003558;
+UPDATE `dbscript_string` SET `content_loc8` = 'Но... я точно следовал вашим инструкциям! Мне очень жаль...' WHERE `entry` = 2000003559;
+UPDATE `dbscript_string` SET `content_loc8` = 'Жаль? ЖАЛЬ?! Сейчас тебе действительно станет очень жаль!' WHERE `entry` = 2000003560;
+UPDATE `dbscript_string` SET `content_loc8` = 'Упс. Оно, кажется, РАБОТАЕТ! Странно...' WHERE `entry` = 2000003561;
+UPDATE `dbscript_string` SET `content_loc8` = 'Да!' WHERE `entry` = 2000003562;
+UPDATE `dbscript_string` SET `content_loc8` = 'Мне потребуется уборка и новый помощник!' WHERE `entry` = 2000003563;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;
