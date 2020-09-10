@@ -29,6 +29,7 @@ PASSWORD=""
 MYSQL=""
 DEV_UPDATES="NO"
 FORCE_WAIT="YES"
+AHBOT="NO"
 LOGERRFILE="NO"
 OPTIMIZE="YES"
 
@@ -72,6 +73,10 @@ FORCE_WAIT="YES"
 ## Define if the 'dev' directory for processing development SQL files needs to be used
 ## Set the variable to "YES" to use the dev directory
 DEV_UPDATES="NO"
+
+## Define if AHBot SQL updates need to be applied (by default, assume the core is built without AHBot)
+## Requires CORE_PATH to be set to a proper value. Set the variable to "YES" to import SQL updates.
+AHBOT="NO"
 
 ## Enjoy using the log
 LOGERRFILE="NO"
@@ -166,7 +171,7 @@ if [ "$COUNT" != 0 ]
 then
   echo "  $COUNT DB updates applied successfully"
 else
-  echo "  Did not find any new DB update to apply"
+  echo "  Did not found any new DB update to apply"
 fi
 echo
 echo
@@ -223,21 +228,24 @@ fi
 echo
 echo
 
-# Apply ahbot folder
-echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/ahbot ..."
-for f in "${ADDITIONAL_PATH}Updates/mangos/base/ahbot/"*.sql
-do
-  echo "    Appending AHBot file update `basename $f` to database $DATABASE"
-  $MYSQL_COMMAND < $f
-  if [[ $? != 0 ]]
-  then
-    echo "ERROR: cannot apply $f"
-    exit 1
-  fi
-done
-echo "  AHBot datas successfully applied"
-echo
-echo
+# Apply optional AHBot commands documentation
+if [ "$AHBOT" == "YES" ]
+then
+ echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/ahbot ..."
+ for f in "${ADDITIONAL_PATH}Updates/mangos/base/ahbot/"*.sql
+ do
+echo "    Appending AHBot SQL file `basename $f` to database $DATABASE"
+$MYSQL_COMMAND < $f
+if [[ $? != 0 ]]
+then
+  echo "ERROR: cannot apply $f"
+  exit 1
+fi
+ done
+ echo "  AHBot SQL files successfully applied"
+ echo
+ echo
+fi
 
 # Apply dbc folder
 echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data ..."
@@ -472,7 +480,7 @@ if [ "$COUNT" != 0 ]
 then
   echo "  $COUNT DB updates applied successfully"
 else
-  echo "  Did not find any new DB update to apply"
+  echo "  Did not found any new DB update to apply"
 fi
 echo
 echo
@@ -529,21 +537,24 @@ fi
 echo
 echo
 
-# Apply ahbot folder
-echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/ahbot ..."
-for f in "${ADDITIONAL_PATH}Updates/mangos/base/ahbot/"*.sql
-do
-  echo "    Appending AHBot file update `basename $f` to database $DATABASE"
-  $MYSQL_COMMAND < $f
-  if [[ $? != 0 ]]
-  then
-    echo "ERROR: cannot apply $f"
-    exit 1
-  fi
-done
-echo "  AHBot datas successfully applied"
-echo
-echo
+# Apply optional AHBot commands documentation
+if [ "$AHBOT" == "YES" ]
+then
+ echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/ahbot ..."
+ for f in "${ADDITIONAL_PATH}Updates/mangos/base/ahbot/"*.sql
+ do
+echo "    Appending AHBot SQL file `basename $f` to database $DATABASE"
+$MYSQL_COMMAND < $f
+if [[ $? != 0 ]]
+then
+  echo "ERROR: cannot apply $f"
+  exit 1
+fi
+ done
+ echo "  AHBot SQL files successfully applied"
+ echo
+ echo
+fi
 
 # Apply dbc folder
 echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data ..."
