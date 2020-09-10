@@ -8279,12 +8279,6 @@ REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `posit
 (94, 176370, 0, 1, 1, -3776.13, -731.8, 8.2887, -1.03847, 0, 0, -0.496216, 0.868199, 180, 180, 100, 1);
 UPDATE `gameobject` SET `position_z` = '5.449245' WHERE `guid` =8510;
 
-DELETE FROM `command` WHERE `name` LIKE '%ahbot%';
-INSERT INTO `command` (`name`, `security`, `help`) VALUES
-('ahbot item', 3, 'Syntax: .ahbot item #itemid [$itemvalue [$addchance [$minamount [$maxamount]]]] [reset]\r\n\r\nShow/modify AHBot item. Setting $itemvalue to 0 bans item. Setting $addchance greater than 0 (0-100, default 0) overrides normal loot sources in favor of a fixed add chance. Min/max amount defaults to item stack size. Parameter "reset" resets item configuration.'),
-('ahbot rebuild', 3, 'Syntax: .ahbot rebuild [all]\r\n\r\nExpire all auctions by ahbot except those bidded on by a player. Bidded auctions can be forced expired by using the "all" option. AHBot will re-fill auctions using current settings.'),
-('ahbot reload', 3, 'Syntax: .ahbot reload\r\n\r\nReload AHBot settings from configuration file.'),
-('ahbot status', 3, 'Syntax: .ahbot status\r\n\r\nShow current amount of items added to the auction house by AHBot.');
 DELETE FROM `mangos_string` WHERE `entry` IN (1171,1172,1180,1181,1182,1183,1184,1185,1186,1187,1188,1189,1190,1191);
 INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`) VALUES
 (1171, 'Reloaded AHBot configuration.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -13503,3 +13497,21 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid
 (131808, 27226, 571, 1, 1, 0, 0, 3024.63, -1041.3, 13.3771, 2.89725, 300, 300, 0, 0, 9291, 3231, 0, 0),
 (131825, 27226, 571, 1, 1, 0, 0, 3015.02, -1066.29, 15.13, 3.45575, 300, 300, 0, 0, 9291, 3231, 0, 0),
 (131826, 27226, 571, 1, 1, 0, 0, 2791.81, -851.943, -18.8839, 5.42797, 300, 300, 0, 0, 9291, 3231, 0, 0);
+
+DELETE FROM dbscripts_on_relay WHERE id = 20334;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20334,1,15,48272,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Onslaught Generic EAI'),
+(20334,2,15,48272,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Onslaught Generic EAI'),
+(20334,3,15,48272,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Onslaught Generic EAI'),
+(20334,4,15,48272,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Onslaught Generic EAI'),
+(20334,5,15,48272,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Onslaught Generic EAI'),
+(20334,1000,4,59,256,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Onslaught Generic EAI'),
+(20334,3000,15,36599,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Onslaught Generic EAI'),
+(20334,4000,15,36599,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Onslaught Generic EAI'),
+(20334,5000,15,36599,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Onslaught Generic EAI'),
+(20334,6000,15,36599,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Onslaught Generic EAI'),
+(20334,7000,23,9786,0,0,0,0,0x08,0,0,0,0,0,0,0,0,'Part of Onslaught Generic EAI');
+UPDATE creature_template SET Faction = 190, UnitFlags = 33554688, MovementType = 0 WHERE entry = 27276;
+DELETE FROM dbscripts_on_relay WHERE id = 20335;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20335,1,37,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Let Them Not Rise! Rat EAI');

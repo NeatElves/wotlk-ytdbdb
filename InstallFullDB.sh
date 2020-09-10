@@ -223,6 +223,22 @@ fi
 echo
 echo
 
+# Apply ahbot folder
+echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/ahbot ..."
+for f in "${ADDITIONAL_PATH}Updates/mangos/base/ahbot/"*.sql
+do
+  echo "    Appending AHBot file update `basename $f` to database $DATABASE"
+  $MYSQL_COMMAND < $f
+  if [[ $? != 0 ]]
+  then
+    echo "ERROR: cannot apply $f"
+    exit 1
+  fi
+done
+echo "  AHBot datas successfully applied"
+echo
+echo
+
 # Apply dbc folder
 echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data ..."
 for f in "${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data/"*.sql
@@ -510,6 +526,22 @@ then
 else
   echo "  Did not find any new Core update to apply"
 fi
+echo
+echo
+
+# Apply ahbot folder
+echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/ahbot ..."
+for f in "${ADDITIONAL_PATH}Updates/mangos/base/ahbot/"*.sql
+do
+  echo "    Appending AHBot file update `basename $f` to database $DATABASE"
+  $MYSQL_COMMAND < $f
+  if [[ $? != 0 ]]
+  then
+    echo "ERROR: cannot apply $f"
+    exit 1
+  fi
+done
+echo "  AHBot datas successfully applied"
 echo
 echo
 
