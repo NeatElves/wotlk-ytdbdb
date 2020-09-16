@@ -2618,6 +2618,8 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Молись, Бездарь...
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Надеюсь, один из нас умрет. Надеюсь, это будешь ты, Бездарь.' WHERE `entry` = -20895;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Слишком поздно! Договор уже заключен. Осталось лишь обсудить детали. Маленькие детали... такие, например, как ты!' WHERE `entry` = -20896;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Тссс... я здесь, у почтового ящика. Быстро иди сюда и смотри, чтобы за тобой не было хвоста.' WHERE `entry` = -20897;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Может кто-нибудь помочь мне выбраться отсюда? Мне нужно вернуться в Ядозлобь и закончить смену.' WHERE `entry` = -20898;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Врата проломлены! Защищайте крепость!' WHERE `entry` = -20899;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

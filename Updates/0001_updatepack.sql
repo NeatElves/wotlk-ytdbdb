@@ -14476,3 +14476,126 @@ UPDATE `creature_model_info` SET `modelid_other_gender` =0, `modelid_alternative
 UPDATE `creature_model_info` SET `modelid_other_gender` =20546, `modelid_alternative` =20542 WHERE `modelid` =20545;
 UPDATE `creature_model_info` SET `modelid_other_gender` =17589 WHERE `modelid` =17590;
 UPDATE `creature_model_info` SET `modelid_other_gender` =0, `modelid_alternative` =152 WHERE `modelid` =11650;
+
+DELETE FROM creature_movement WHERE id IN (53579);
+INSERT INTO creature_movement (id,point,position_x,position_y,position_z,orientation,waittime,script_id) VALUES
+(53579,1,-6176.23,367.765,399.027,100,0,0),
+(53579,2,-6175.59,372.002,398.762,100,0,0),
+(53579,3,-6173.71,377.969,398.094,100,0,0),
+(53579,4,-6168.25,384.133,398.862,100,0,0),
+(53579,5,-6154.19,384.475,395.543,100,0,0),
+(53579,6,-6144.23,384.717,395.543,100,0,0),
+(53579,7,-6133.63,384.975,395.543,100,0,0),
+(53579,8,-6130.53,385.051,395.543,100,0,0),
+(53579,9,-6128.31,375.267,395.546,100,0,0),
+(53579,10,-6124.68,374.77,395.544,100,0,0),
+(53579,11,-6120.87,374.264,395.543,100,0,0),
+(53579,12,-6119.17,374.119,395.543,100,0,0),
+(53579,13,-6110.06,372.976,395.543,100,0,0),
+(53579,14,-6101.62,371.917,395.543,100,0,0),
+(53579,15,-6092.11,374.839,395.542,100,0,0),
+(53579,16,-6087.19,382.263,395.542,100,0,0),
+(53579,17,-6093.13,392.712,395.542,100,0,0),
+(53579,18,-6101.46,396.17,395.541,100,0,0),
+(53579,19,-6108.38,395.153,395.541,100,0,0),
+(53579,20,-6115.81,394.059,395.541,100,0,0),
+(53579,21,-6123.79,392.886,395.541,100,0,0),
+(53579,22,-6129.47,392.734,395.542,100,0,0),
+(53579,23,-6130.7,384.36,395.543,100,0,0),
+(53579,24,-6139.4,384.155,395.543,100,0,0),
+(53579,25,-6152.98,383.835,395.543,100,0,0),
+(53579,26,-6166.78,383.51,399.154,100,0,0),
+(53579,27,-6174.5,376.627,398.138,100,0,0),
+(53579,28,-6176.23,367.765,399.027,100,0,0);
+
+UPDATE creature_template_addon SET bytes1 = 5 WHERE entry = 25307;
+
+DELETE FROM dbscripts_on_gossip WHERE id IN (950700);
+INSERT INTO dbscripts_on_gossip (id,delay,priority,command,datalong,datalong2,datalong3,buddy_entry,search_radius,data_flags,dataint,dataint2,dataint3,dataint4,x,y,z,o,condition_id,comments) VALUES
+(950700,10,0,0,0,1,0,0,0,0x04,2000000066,0,0,0,0,0,0,0,0,'Say'),
+(950700,20,0,22,190,1,0,0,0,0x04,0,0,0,0,0,0,0,0,0,'change faction'),
+(950700,30,0,29,1,2,0,0,0,0x04,0,0,0,0,0,0,0,0,0,'change NPC_flag'),
+(950700,50,0,18,60000,0,0,0,0,0x04,0,0,0,0,0,0,0,0,0,'despawn');
+DELETE FROM dbscripts_on_gossip WHERE id IN (950800);
+INSERT INTO dbscripts_on_gossip (id,delay,priority,command,datalong,datalong2,datalong3,buddy_entry,search_radius,data_flags,dataint,dataint2,dataint3,dataint4,x,y,z,o,condition_id,comments) VALUES
+(950800,10,0,0,0,1,0,0,0,0x04,2000000065,0,0,0,0,0,0,0,0,'Say'),
+(950800,20,0,22,190,1,0,0,0,0x04,0,0,0,0,0,0,0,0,0,'change faction'),
+(950800,30,0,29,1,2,0,0,0,0x04,0,0,0,0,0,0,0,0,0,'change NPC_flag'),
+(950800,50,0,18,60000,0,0,0,0,0x04,0,0,0,0,0,0,0,0,0,'despawn');
+DELETE FROM dbscripts_on_gossip WHERE id IN (950900);
+INSERT INTO dbscripts_on_gossip (id,delay,priority,command,datalong,datalong2,datalong3,buddy_entry,search_radius,data_flags,dataint,dataint2,dataint3,dataint4,x,y,z,o,condition_id,comments) VALUES
+(950900,10,0,0,0,1,0,0,0,0x04,2000000064,0,0,0,0,0,0,0,0,'Say'),
+(950900,20,0,22,190,1,0,0,0,0x04,0,0,0,0,0,0,0,0,0,'change faction'),
+(950900,30,0,29,1,2,0,0,0,0x04,0,0,0,0,0,0,0,0,0,'change NPC_flag'),
+(950900,50,0,18,60000,0,0,0,0,0x04,0,0,0,0,0,0,0,0,0,'despawn');
+DELETE FROM dbscripts_on_gossip WHERE id IN (951000);
+INSERT INTO dbscripts_on_gossip (id,delay,priority,command,datalong,datalong2,datalong3,buddy_entry,search_radius,data_flags,dataint,dataint2,dataint3,dataint4,x,y,z,o,condition_id,comments) VALUES
+(951000,10,0,0,0,1,0,0,0,0x04,2000000075,0,0,0,0,0,0,0,0,'Say'),
+(951000,20,0,22,190,1,0,0,0,0x04,0,0,0,0,0,0,0,0,0,'change faction'),
+(951000,30,0,29,1,2,0,0,0,0x04,0,0,0,0,0,0,0,0,0,'change NPC_flag'),
+(951000,50,0,18,60000,0,0,0,0,0x04,0,0,0,0,0,0,0,0,0,'despawn');
+UPDATE creature SET spawntimesecsmin = 30, spawntimesecsmax = 30 WHERE id IN (27376,27378,27379,27381);
+UPDATE dbscript_string SET emote = 5 WHERE entry = 2000000075;
+UPDATE dbscript_string SET emote = 5 WHERE entry BETWEEN 2000000064 AND 2000000066;
+
+DELETE FROM creature_linking_template WHERE entry IN (34918,34919);
+INSERT INTO creature_linking_template VALUES (34918, 628, 34922, 3, 30), (34919, 628, 34924, 3, 30);
+DELETE FROM creature WHERE id IN (34776,35069,34775) AND map=628;
+DELETE FROM creature WHERE id IN (34802,35273,34793) AND map=628;
+DELETE FROM creature WHERE id IN (34924,34922,34918,34919) AND map=628;
+UPDATE gameobject SET spawntimesecsmin = 800, spawntimesecsmax = 800 WHERE id IN (195702, 195701);
+DELETE FROM spell_script_target WHERE entry IN (66550,66551,66630,66637);
+INSERT INTO spell_script_target (entry, type, targetEntry) VALUES (66550, 1, 22515), (66551, 1, 22515), (66630, 1, 34984), (66637, 1, 34984);
+DELETE FROM achievement_criteria_requirement WHERE criteria_id IN (12060,12061);
+INSERT INTO achievement_criteria_requirement VALUES (12060, 22, 0, 0), (12061, 22, 0, 0);
+DELETE FROM dbscripts_on_relay WHERE id = 20500;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20500,10,31,22515,15,0,0,0,0,0,0,0,0,0,0,0,0,'Part of High Commander Halford Wyrmbane / Overlord Agmar EAI: search for 22515 (terminate if not found)'),
+(20500,500,15,66776,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of High Commander Halford Wyrmbane / Overlord Agmar EAI: cast 66776'),
+(20500,900,35,5,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of High Commander Halford Wyrmbane / Overlord Agmar EAI: send self event A');
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(32584, 195705, 628, 3, 1, 827.962, -994.476, 134.07, 3.14159, 0, 0, -1, 0, -800, -800, 0, 1),
+(32594, 195705, 628, 3, 1, 738.795, -1106.75, 134.745, 3.14159, 0, 0, -1, 0, -800, -800, 0, 1),
+(32602, 195705, 628, 3, 1, 672.264, -1157.04, 133.706, 3.14159, 0, 0, -1, 0, -800, -800, 0, 1),
+(32625, 195706, 628, 3, 1, 827.962, -994.476, 134.07, 3.14159, 0, 0, -1, 0, -800, -800, 0, 1),
+(32647, 195706, 628, 3, 1, 738.795, -1106.75, 134.745, 3.14159, 0, 0, -1, 0, -800, -800, 0, 1),
+(32654, 195706, 628, 3, 1, 672.264, -1157.04, 133.706, 3.14159, 0, 0, -1, 0, -800, -800, 0, 1);
+
+DELETE FROM creature WHERE guid = 117773;
+DELETE FROM dbscripts_on_go_template_use WHERE id = 188673;
+INSERT INTO dbscripts_on_go_template_use (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(188673,10,40,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'gobject despawn');
+DELETE FROM dbscripts_on_spell WHERE id = 48347;
+INSERT INTO dbscripts_on_spell (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(48347,0,1,15,48351,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast: Bombard the Ballistae: Ballista Bow'),
+(48347,0,2,15,48352,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast: Bombard the Ballistae: Ballista Frame'),
+(48347,10,1,15,48353,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast: Bombard the Ballistae: Ballista Missile'),
+(48347,10,2,15,48354,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast: Bombard the Ballistae: Ballista Wheel'),
+(48347,100,0,15,52687,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast: Bombard the Ballistae: Knockback'),
+(48347,500,0,18,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'desp self');
+DELETE FROM spell_script_target WHERE entry IN(48347);
+INSERT INTO spell_script_target VALUES (48347,0,188673,5);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(117843, 27331, 571, 1, 1, 0, 0, 2693.77, -235.367, 141.835, 0, 60, 60, 0, 0, 0, 0, 0, 0),
+(117842, 27331, 571, 1, 1, 0, 0, 2765.3, -198.251, 139.379, 0, 60, 60, 0, 0, 42, 0, 0, 0),
+(117841, 27331, 571, 1, 1, 0, 0, 2747.92, -475.867, 123.343, 0, 60, 60, 0, 0, 42, 0, 0, 0),
+(117840, 27331, 571, 1, 1, 0, 0, 2778.94, -143.57, 140.273, 1.55334, 60, 60, 0, 0, 42, 0, 0, 0),
+(117839, 27331, 571, 1, 1, 0, 0, 2746.87, -115.952, 115.763, 0, 60, 60, 0, 0, 42, 0, 0, 0),
+(117773, 27331, 571, 1, 1, 0, 0, 2827.29, -146.76, 141.301, 1.81514, 60, 60, 0, 0, 42, 0, 0, 0),
+(140561, 27331, 571, 1, 1, 0, 0, 2687.32, -284.687, 127.258, 0, 60, 60, 0, 0, 42, 0, 0, 0),
+(140562, 27331, 571, 1, 1, 0, 0, 2816.98, -330.83, 132.795, 0, 60, 60, 0, 0, 42, 0, 0, 0),
+(140563, 27331, 571, 1, 1, 0, 0, 2768.44, -413.206, 132.824, 0, 60, 60, 0, 0, 42, 0, 0, 0),
+(140564, 27331, 571, 1, 1, 0, 0, 2711.5, -405.056, 131.989, 0, 60, 60, 0, 0, 42, 0, 0, 0),
+(140565, 27331, 571, 1, 1, 0, 0, 2807.64, -381.349, 132.208, 0, 60, 60, 0, 0, 42, 0, 0, 0),
+(140566, 27331, 571, 1, 1, 0, 0, 3028.85, -472.839, 123.723, 0, 60, 60, 0, 0, 42, 0, 0, 0),
+(140567, 27331, 571, 1, 1, 0, 0, 3066.17, -467.153, 124.767, 1.72788, 60, 60, 0, 0, 42, 0, 0, 0),
+(140568, 27331, 571, 1, 1, 0, 0, 3005.24, -406.32, 126.684, 0, 60, 60, 0, 0, 42, 0, 0, 0),
+(140569, 27331, 571, 1, 1, 0, 0, 2976.92, -451.393, 125.846, 0, 60, 60, 0, 0, 42, 0, 0, 0),
+(140570, 27331, 571, 1, 1, 0, 0, 2884.74, -437.698, 118.457, 1.13446, 60, 60, 0, 0, 42, 0, 0, 0),
+(140571, 27331, 571, 1, 1, 0, 0, 2845.07, -366.855, 114.054, 5.89921, 60, 60, 0, 0, 42, 0, 0, 0),
+(140572, 27331, 571, 1, 1, 0, 0, 2865.39, -337.324, 113.945, 4.7822, 60, 60, 0, 0, 42, 0, 0, 0),
+(140573, 27331, 571, 1, 1, 0, 0, 2518.24, -297.032, 1.41257, 0, 60, 60, 0, 0, 0, 0, 0, 0),
+(140574, 27331, 571, 1, 1, 0, 0, 2618.04, -509.168, 6.73705, 0, 60, 60, 0, 0, 0, 0, 0, 0),
+(140575, 27331, 571, 1, 1, 0, 0, 2597.69, -213.537, 1.99794, 0, 60, 60, 0, 0, 0, 0, 0, 0);
+UPDATE gameobject SET spawntimesecsmin = 60, spawntimesecsmax = 60, animprogress = 255 WHERE id = 188673;
+UPDATE creature_template SET UnitFlags = 33555200 WHERE entry = 27331;
