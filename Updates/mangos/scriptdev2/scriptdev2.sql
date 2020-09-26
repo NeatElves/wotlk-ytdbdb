@@ -3293,7 +3293,8 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1010026','We\'ve done it! Meet me back by Jer\'kai above the Grim Totem camp.','0','0','0','0','4080','Kindal Moonweaver SAY_QUEST_COMPLETE'),
 
 ('-1010027','%s is lured out by the sweet scent of the purified food.','0','2','0','0','5617','Blackwood Furbolg - on event 3938'),
-('-1010028','%s begins to greedily devour the food.','0','2','0','0','5618','Blackwood Furbolg - on event 3938');
+('-1010028','%s begins to greedily devour the food.','0','2','0','0','5618','Blackwood Furbolg - on event 3938'),
+('-1010029','Help! We''re being attacked! Dark Irons!','0','1','0','0','494','SAY_MIRAN_AMBUSH');
 
 -- -1 015 000 TBC texts
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
@@ -7750,7 +7751,7 @@ INSERT INTO script_waypoint VALUES
 (1379,0,21,-5688.68,-3769,323.957,0,0,0,''),
 (1379,0,22,-5688.14,-3782.65,322.667,0,0,0,''),
 (1379,0,23,-5699.23,-3792.65,322.448,0,30000,0,'Protecting the Shipment - End'),
-(1379,0,24,-5700.8,-3792.78,322.588,0,0,0,''),
+(1379,0,24,-5700.8,-3792.78,322.588,0,0,5000,''),
 (1840,0,1,2689.68,-1937.47,72.14,0,0,0,''),
 (1840,0,2,2683.11,-1926.82,72.14,0,0,0,''),
 (1840,0,3,2678.73,-1919.42,68.86,2.11887,1000,0,'escort paused'),

@@ -21,8 +21,13 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (20038,'spell_explosion_razorgore'),
 (25684,'spell_summon_mana_fiends_moam'),
 (25937,'spell_viscidus_freeze'),
+(26009,'spell_cthun_periodic_rotate'),
 (26084,'spell_aq_whirlwind'),
+(26136,'spell_cthun_periodic_rotate'),
+(26137,'spell_cthun_rotate_trigger'),
+(26152,'spell_cthun_periodic_eye_trigger'),
 (26180,'spell_huhuran_wyvern_string'),
+(26398,'spell_cthun_hook_tentacle'),
 (26584,'spell_summon_toxic_slime'),
 (26591,'spell_teleport_image'),
 (26619,'spell_periodic_scarab_trigger'),
@@ -40,6 +45,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 -- Wotlk
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (47028,'spell_taunka_face_me'),
+(47431,'spell_capture_jormungar_spawn'),
+(47435,'spell_scrape_corrosive_spit'),
 (48268,'spell_container_of_rats'),
 (49099,'spell_army_of_the_dead');
 
