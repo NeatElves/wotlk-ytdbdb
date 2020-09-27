@@ -15369,3 +15369,48 @@ UPDATE `quest_template` SET `StartScript` = 0 WHERE `entry` = 10163;
 DELETE FROM `dbscripts_on_quest_start` WHERE `id` = 10163;
 
 DELETE FROM `creature_battleground` WHERE `guid` in (151044,151048,151032,151037,151045,151049,151033,151038,151042,151046,151034,151039,151043,151047,151035,151040,151036,151041);
+
+UPDATE creature_template SET detection=95 WHERE Entry=15589;
+DELETE FROM spell_script_target WHERE entry=26399;
+INSERT INTO `spell_script_target` (`entry`, `type`, `targetEntry`, `inverseEffectMask`) VALUES
+(26399, 1, 15725, 5), (26399, 1, 15726, 5), (26399, 1, 15904, 5), (26399, 1, 15728, 6), (26399, 1, 15334, 6), (26399, 1, 15910, 6);
+
+DELETE FROM achievement_criteria_requirement WHERE criteria_id IN (3684);
+INSERT INTO achievement_criteria_requirement VALUES (3684, 5, 24378, 0);
+DELETE FROM achievement_criteria_requirement WHERE criteria_id IN (1239);
+INSERT INTO achievement_criteria_requirement VALUES (1239, 22, 0, 0);
+DELETE FROM achievement_criteria_requirement WHERE criteria_id IN (3693);
+INSERT INTO achievement_criteria_requirement VALUES (3693, 22, 0, 0);
+DELETE FROM achievement_criteria_requirement WHERE criteria_id IN (3879);
+INSERT INTO achievement_criteria_requirement VALUES (3879, 7, 24378, 0);
+
+DELETE FROM achievement_criteria_requirement WHERE criteria_id IN (1235);
+INSERT INTO achievement_criteria_requirement VALUES (1235, 22, 0, 0);
+DELETE FROM achievement_criteria_requirement WHERE criteria_id IN (1234);
+INSERT INTO achievement_criteria_requirement VALUES (1234, 22, 0, 0);
+DELETE FROM achievement_criteria_requirement WHERE criteria_id IN (3804,3805,3806,3807,3808,3809,3810,3811,3812,3813);
+INSERT INTO achievement_criteria_requirement VALUES (3804, 22, 0, 0), (3805, 22, 0, 0), (3806, 22, 0, 0), (3807, 22, 0, 0), (3808, 22, 0, 0), (3809, 22, 0, 0), (3810, 22, 0, 0),
+(3811, 22, 0, 0), (3812, 22, 0, 0), (3813, 22, 0, 0);
+
+UPDATE creature SET spawntimesecsmin = 120, spawntimesecsmax = 120 WHERE guid = 4373;
+DELETE FROM creature_movement WHERE id = 4373;
+UPDATE creature_template SET MovementType = 2 WHERE entry = 330;
+DELETE FROM creature_movement_template WHERE entry = 330;
+INSERT INTO creature_movement_template (entry, point, position_x, position_y, position_z, orientation, waittime, script_id) VALUES
+(330,1,-9789.04,-883.081,39.7169,5.49499,0,0),
+(330,2,-9778.89,-886.159,39.5577,6.22148,0,0),
+(330,3,-9764.3,-887.894,39.4625,0.42539,0,0),
+(330,4,-9756.13,-883.658,39.4828,1.05764,0,0),
+(330,5,-9754.27,-867.836,39.5175,1.88623,0,0),
+(330,6,-9765,-857.964,39.5037,2.5067,0,0),
+(330,7,-9780.19,-855.94,39.6235,3.03291,0,0),
+(330,8,-9788.41,-861.402,39.4437,3.72799,0,0),
+(330,9,-9794.33,-873.049,39.6014,5.36554,0,0);
+DELETE FROM creature_linking WHERE guid IN (4413,127222);
+INSERT INTO creature_linking (guid, master_guid, flag) VALUES (4413, 4373, 512), (127222, 4373, 512);
+
+DELETE FROM achievement_criteria_requirement WHERE criteria_id IN (7020) AND type=11;
+DELETE FROM achievement_criteria_requirement WHERE criteria_id IN (1824) AND type=11;
+INSERT INTO achievement_criteria_requirement VALUES (1824, 17, 0, 0);
+DELETE FROM achievement_criteria_requirement WHERE criteria_id IN (5605,5606);
+INSERT INTO achievement_criteria_requirement VALUES (5605, 22, 0, 0), (5606, 22, 0, 0);
