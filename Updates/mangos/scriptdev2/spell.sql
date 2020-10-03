@@ -19,6 +19,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (19872,'spell_calm_dragonkin'),
 (19873,'spell_destroy_egg'),
 (20038,'spell_explosion_razorgore'),
+(21651,'spell_opening_capping'),
 (25684,'spell_summon_mana_fiends_moam'),
 (25937,'spell_viscidus_freeze'),
 (26009,'spell_cthun_periodic_rotate'),
@@ -40,7 +41,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (40251,'spell_shadow_of_death'),
 (41289,'spell_ethereal_ring_signal_flare'),
 (41999,'spell_shadow_of_death_remove'),
-(44006,'spell_teleport_self_akilzon');
+(44006,'spell_teleport_self_akilzon'),
+(43681,'spell_inactive');
 
 -- Wotlk
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
@@ -48,6 +50,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (47431,'spell_capture_jormungar_spawn'),
 (47435,'spell_scrape_corrosive_spit'),
 (48268,'spell_container_of_rats'),
+(47447,'spell_corrosive_spit'),
 (49099,'spell_army_of_the_dead');
 
 -- Hunter

@@ -3566,6 +3566,11 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Парни, пойдите, по�
 UPDATE `dbscript_string` SET `content_loc8` = 'Да, ваше преосвященство. Ну же!' WHERE `entry` = 2000003568;
 UPDATE `dbscript_string` SET `content_loc8` = 'Эй, кто звонил в колокол?' WHERE `entry` = 2000003569;
 UPDATE `dbscript_string` SET `content_loc8` = 'Телохранитель ворчит.' WHERE `entry` = 2000003570;
+UPDATE `dbscript_string` SET `content_loc8` = 'Моя королева, они знают?' WHERE `entry` = 2000003571;
+UPDATE `dbscript_string` SET `content_loc8` = 'Нет, любовь моя.' WHERE `entry` = 2000003572;
+UPDATE `dbscript_string` SET `content_loc8` = 'Они не должны узнать о судьбе юного паладина. По крайней мере, пока.' WHERE `entry` = 2000003573;
+UPDATE `dbscript_string` SET `content_loc8` = 'Они не станут.' WHERE `entry` = 2000003574;
+UPDATE `dbscript_string` SET `content_loc8` = 'Иди сюда, $n.' WHERE `entry` = 2000003575;
 UPDATE `dbscript_string` SET `content_loc8` = 'Голова раскалывается от магии? Отдохните в "Печальном отшельнике"!' WHERE `entry` = 2000005185;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лучшие напитки в Штормграде!' WHERE `entry` = 2000005186;
 UPDATE `dbscript_string` SET `content_loc8` = 'В "Печальном отшельнике" вы всегда будете чувствовать себя в своей тарелке!' WHERE `entry` = 2000005187;
