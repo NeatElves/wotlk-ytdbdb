@@ -17071,6 +17071,21 @@ INSERT INTO creature_movement (id,point,position_x,position_y,position_z,orienta
 (121076,35,4789.76,1114.39,136.91,100,0,0),
 (121076,36,4777.86,1103.19,134.89,100,1000,1);
 
-INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES ('3353', '2', '33306', '0', '0', '0', '1', '');
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES ('3353', '2', '33306', '1', '0', '0', '1', '');
 UPDATE `gossip_menu_option` SET `condition_id` = 3353 WHERE `menu_id` =8960 AND `id` =0;
 UPDATE `gossip_menu_option` SET `condition_id` = 3353 WHERE `menu_id` =8958 AND `id` =6;
+
+DELETE FROM `creature` WHERE `guid` IN (143798,143802,143801,143799,143800,143804,143806,143805,143808,143807);
+UPDATE creature SET phaseMask = 64 WHERE guid IN (143749,143756,143757);
+UPDATE creature SET phaseMask = 128 WHERE guid IN (143755,143750,143751);
+DELETE FROM `creature` WHERE `guid` IN (143746,143747,143748,143752,143753,143754);
+DELETE FROM spell_script_target WHERE entry=24390 AND targetEntry=184141;
+INSERT INTO spell_script_target VALUES (24390, 0, 184141, 0);
+DELETE FROM spell_script_target WHERE entry=24390 AND targetEntry IN (182527,182528,182529);
+INSERT INTO spell_script_target VALUES (24390, 0, 182527, 0), (24390, 0, 182528, 0), (24390, 0, 182529, 0);
+DELETE FROM `gameobject` WHERE `guid` = 19775;
+UPDATE gameobject SET spawntimesecsmin=-86400, spawntimesecsmax=-86400 WHERE id IN (184380,184381);
+UPDATE gameobject SET spawntimesecsmin=86400, spawntimesecsmax=86400 WHERE id IN (184382);
+UPDATE gameobject_template SET faction=35 WHERE entry IN(186734,186744,186736);
+UPDATE `creature_template` SET `MinLevel` = 70, `MaxLevel` = 70, `MinLevelHealth` = 3827, `MaxLevelHealth` = 3827, `MinMeleeDmg` = 252, `MaxMeleeDmg` = 357, `MinRangedDmg` = 215, `MaxRangedDmg` = 320, `Armor` = 6719 WHERE `Entry` =24223;
+UPDATE `creature_template` SET `UnitFlags` = 33554432, `ExtraFlags` = `ExtraFlags`|524288 WHERE `entry` = 24223;
