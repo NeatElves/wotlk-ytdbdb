@@ -49,8 +49,9 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (47028,'spell_taunka_face_me'),
 (47431,'spell_capture_jormungar_spawn'),
 (47435,'spell_scrape_corrosive_spit'),
-(48268,'spell_container_of_rats'),
 (47447,'spell_corrosive_spit'),
+(48268,'spell_container_of_rats'),
+(48397,'spell_drop_off_villager'),
 (49099,'spell_army_of_the_dead');
 
 -- Hunter
@@ -126,7 +127,22 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (36189,'spell_infernal_pet_scaling_3'),
 (36190,'spell_infernal_pet_scaling_4');
 
--- Alterac Valley
+-- Battleground and Outdoor PvP
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
-(24677,'spell_gy_mid_trigger');
-
+-- Arathi basin
+(23936,'spell_battleground_banner_trigger'),
+(23932,'spell_battleground_banner_trigger'),
+(23938,'spell_battleground_banner_trigger'),
+(23935,'spell_battleground_banner_trigger'),
+(23937,'spell_battleground_banner_trigger'),
+-- Alterac Valley
+(24677,'spell_battleground_banner_trigger'),
+-- Zangarmarsh
+(32433,'spell_outdoor_pvp_banner_trigger'),
+(32438,'spell_outdoor_pvp_banner_trigger'),
+-- Isle of Conquest
+(35092,'spell_battleground_banner_trigger'),
+(65826,'spell_battleground_banner_trigger'),
+(65825,'spell_battleground_banner_trigger'),
+(66686,'spell_battleground_banner_trigger'),
+(66687,'spell_battleground_banner_trigger');

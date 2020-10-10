@@ -211,6 +211,8 @@ UPDATE `creature_ai_scripts` SET `event_param6` =3025 WHERE `event_type` =10 AND
 UPDATE `creature_ai_scripts` SET `event_param6` =3142 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =9000;
 UPDATE `creature_ai_scripts` SET `event_param6` =3295 WHERE `event_type` =10 AND `event_param5` =15 AND `event_param6` =20037;
 UPDATE `creature_ai_scripts` SET `event_param6` =3298 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20040;
+UPDATE `creature_ai_scripts` SET `event_param6` =3372 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20096;
+UPDATE `creature_ai_scripts` SET `event_param6` =3375 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20099;
 
 # Finall_Spell_UP
 UPDATE dbscripts_on_creature_death SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
