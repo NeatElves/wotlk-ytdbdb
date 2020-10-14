@@ -18533,6 +18533,8 @@ DELETE FROM creature WHERE guid IN (150380,150381,150382,150383,150384,150385,15
 DELETE FROM creature_battleground WHERE guid IN (150380,150381,150382,150383,150384,150385,150386,150387,150388,150389,150390,150391,150392,150393);
 DELETE FROM creature_template_addon WHERE entry IN (36349,36350);
 INSERT INTO creature_template_addon (entry, auras) VALUES (36349, 68652), (36350, 68652);
+INSERT INTO creature_battleground (guid, event1, event2) VALUES (87363, 60, 0);
+DELETE FROM creature WHERE guid = 87363;
 REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
 (87363, 11998, 30, 15, 1, 0, 0, -1503.12, -705.124, 47.3355, 5.8865, 120, 120, 0, 0, 45780, 0, 0, 0);
 
@@ -18604,7 +18606,6 @@ INSERT INTO conditions (condition_entry,type,value1,value2,value3,value4,flags) 
 
 UPDATE conditions SET type = 23 WHERE condition_entry =1985;
 UPDATE creature SET position_x = 4699.06, position_y = 541.116, position_z = 120.504, orientation = 2.25148, spawntimesecsmin = 300, spawntimesecsmax = 300 WHERE guid =120292;
-DELETE FROM creature WHERE guid = 87363;
 UPDATE creature_template SET RegenerateStats = 0 WHERE entry = 27061;
 DELETE FROM creature_template_spells WHERE entry = 27061;
 INSERT INTO creature_template_spells(entry, spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8) VALUES (27061,47921,47938,49857,47966,0,47939,0,0);
@@ -18664,3 +18665,34 @@ REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `posit
 (33436, 190353, 571, 1, 1, 5113.7, 1088.28, 227.836, 0.715585, 0, 0, 0.350207, 0.936672, 300, 300, 100, 1),
 (33438, 190353, 571, 1, 1, 5107.82, 1096.33, 225.725, 0.331611, 0, 0, 0.165047, 0.986286, 300, 300, 100, 1),
 (33439, 190353, 571, 1, 1, 5122.98, 1091.04, 226.306, 1.6057, 0, 0, 0.719339, 0.694659, 300, 300, 100, 1);
+
+DELETE FROM creature WHERE guid = 150155;
+DELETE FROM creature_battleground WHERE guid = 150155;
+UPDATE creature SET movementType=0, spawndist=0 WHERE id IN (12053,12050);
+UPDATE `creature` SET `spawnMask` = 15 WHERE `map` = 30;
+UPDATE `gameobject` SET `spawnMask` = 15 WHERE `map` = 30;
+UPDATE creature_template SET NpcFlags=NpcFlags|1, GossipMenuId=4942 WHERE Entry=11997;
+DELETE FROM gossip_menu WHERE entry=4942;
+INSERT INTO gossip_menu (entry, text_id) VALUES (4942, 8900);
+DELETE FROM npc_text WHERE ID=8900;
+INSERT INTO npc_text (ID, text0_0) VALUES
+(8900, 'Soldier! You are now in the middle of the battle for Alterac Valley. We don\'t have a lot of time, so let me give you the basics real quick.$B$BDrek\'thar is your main goal. He needs to die. But before you can get to him, you need to peel away the layers, as you would an onion.$B$BYou will want to hunt down the Captain, Galvangar they call him. He\'s a real tough lad, but he needs to fall. His presence bolsters the morale. When the Horde shall see his demise, our victory will surely be ripe for the taking.');
+UPDATE creature_template SET NpcFlags=NpcFlags|1, GossipMenuId=4947 WHERE Entry=11998;
+DELETE FROM gossip_menu WHERE entry=4947;
+INSERT INTO gossip_menu (entry, text_id) VALUES (4947, 8905);
+DELETE FROM npc_text WHERE ID=8905;
+INSERT INTO npc_text (ID, text0_0) VALUES
+(8905, 'Soldier! You are now in the middle of the battle for Alterac Valley. We don\'t have a lot of time, so let me give you the basics real quick.$B$BVanndar is your main goal. He needs to die. But before you can get to him, you need to peel away the layers, as you would an onion.$B$BYou will want to hunt down the Captain, Balinda they call her. She\'s a real tough gal, but she needs to fall. Her presencebolsters the morale. When the Horde shall see her head upon a pike, the victory will be ours.');
+UPDATE creature SET orientation=6.00393 WHERE guid=150145;
+UPDATE `creature` SET `position_x` = '320.486', `position_y` = '-502.645', `position_z` = '71.2321', `orientation` = '5.93412', `spawntimesecsmin` = '430', `spawntimesecsmax` = '430' WHERE `guid` =118200;
+UPDATE `creature` SET `position_x` = '-1303.38', `position_y` = '-267.989', `position_z` = '91.9538', `orientation` = '2.24345', `spawntimesecsmin` = '430', `spawntimesecsmax` = '430', `spawndist` = '2' WHERE `guid` =94939;
+UPDATE creature_template SET NpcFlags=NpcFlags|384 WHERE entry = 3625;
+UPDATE creature_template SET NpcFlags=NpcFlags|640 WHERE entry = 4255;
+UPDATE creature_template SET NpcFlags=NpcFlags|384 WHERE entry = 5134;
+UPDATE creature_template SET NpcFlags=NpcFlags|3200 WHERE entry = 5139;
+UPDATE creature_template SET NpcFlags=NpcFlags|3200 WHERE entry = 10364;
+UPDATE creature_template SET NpcFlags=NpcFlags|640 WHERE entry = 10367;
+UPDATE creature_template SET faction = 38 WHERE entry = 10981;
+UPDATE creature_template SET EquipmentTemplateId = 4049, faction = 1335 WHERE entry = 11998;
+UPDATE creature_template SET NpcFlags=NpcFlags|3715 WHERE entry = 12096;
+UPDATE creature_template SET NpcFlags=NpcFlags|3715 WHERE entry = 12097;
