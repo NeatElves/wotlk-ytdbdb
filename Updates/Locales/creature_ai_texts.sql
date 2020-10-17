@@ -2644,6 +2644,18 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Вы пришли испыта�
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Побыстрее разберитесь с ними. У меня нет времени на эту возню!' WHERE `entry` = -20921;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Возможно, тебе стоит пересмотреть свое поведение.' WHERE `entry` = -20922;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Меня отзывают назад в Драконий Покой, союзник. Прощай!' WHERE `entry` = -20923;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Что происходит?' WHERE `entry` = -20924;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Что тут делают все эти Отрекшиеся?' WHERE `entry` = -20925;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Отчего город закрыт?' WHERE `entry` = -20926;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Мы требуем ответа!' WHERE `entry` = -20927;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Где Вождь?' WHERE `entry` = -20928;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Когда мы сможем снова открыть магазины? Вы знаете, какие убытки я несу?' WHERE `entry` = -20929;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Это оскорбление!' WHERE `entry` = -20930;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Как Тралл мог допустить, чтобы с нашим городом случилось такое?' WHERE `entry` = -20931;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Тебя к нам в дом не звали! Уходи и ищи для разорения какие-нибудь другие земли!' WHERE `entry` = -20932;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Неповоротливый йормунгар на секунду замолкает, широко раскрыв рот.' WHERE `entry` = -20933;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Крошшер Зинка годен и может быть использован для уничтожения лесных угодий.' WHERE `entry` = -20934;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Система безопасности крошшера Зинка активирована. Возвращаюсь на базу.' WHERE `entry` = -20935;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
