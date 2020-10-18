@@ -1737,7 +1737,7 @@ INSERT INTO spell_template (Id, Category, Dispel, Mechanic, Attributes, Attribut
 ('26592','0','0','0','536936848','268468224','0','0','0','0','0','0','0','0','1','0','0','0','0','0','0','1','0','0','0','0','0','0','101','0','0','40','40','85','0','0','0','0','0','6','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','-1','0','0','6','6','6','1','0','0','1','0','0','0','0','0','0','0','0','1','1','1','0','0','0','0','0','0','77','77','77','0','0','0','0','0','0','0','0','0','0','0','0','2' ,'18','30','0','0','0','0','0','0','0','0','0','0','1680','0','0','Bestial Wrath','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','0','133','0','0','9','0','0','0','0','1','1','1','0','0','0','1','0','0');
 
 -- Fix Felguard Destroyer 18977 Sweeping Charge Id: 96 (SPELL_EFFECT_CHARGE) not working correctly changing to Id: 149 (SPELL_EFFECT_CHARGE_DEST)
-UPDATE `spell_template` SET `Effect1` = 149 WHERE `Id` IN (33971);
+UPDATE `spell_template` SET `EffectImplicitTargetA1` = 6 WHERE `Id` IN (25744,25787,33971);
 
 -- Nether Beam - Netherspite - restricted to one target
 UPDATE spell_template SET MaxAffectedTargets=1 WHERE Id IN(30469);
@@ -1748,6 +1748,22 @@ UPDATE spell_template SET SchoolMask=1 WHERE SchoolMask=0;
 -- Missing spell for aggro
 INSERT INTO spell_template (Id,Attributes,AttributesEx2,CastingTimeIndex,DurationIndex,RangeIndex,EquippedItemClass,Effect1,EffectImplicitTargetA1,EffectTriggerSpell1,DmgMultiplier1,SchoolMask,IsServerSide,SpellName) VALUES
 ('47680','384','4','1','1','1','-1','64','1','47681','0','1','1','Force Cast Aggro');
+
+-- Remove SPELL_INTERRUPT_FLAG_ABORT_ON_DMG from Spells falsly interrupted by damage
+UPDATE `spell_template` SET `InterruptFlags` = `InterruptFlags`&~0x00000010 WHERE `Id` IN (
+33968, -- Corrosive Mist
+35394 -- Spore Cloud
+);
+
+UPDATE spell_template SET Attributes=320 WHERE id=28282; -- This makes Ashbringer passive aura icon invisible
+UPDATE spell_template SET AttributesEx=32, AttributesEx3=131072 WHERE id=28441; -- AB Effect 000, critters/neutral no longer attack
+
+-- Osmosis - child spell should not be categorized as channel
+UPDATE `spell_template` SET `AttributesEx`=AttributesEx&~0x00004004 WHERE `Id` IN(35342);
+
+-- fully custom - summons GO 185520 - spellid and name from official data
+INSERT INTO spell_template(Id,SpellName,Effect1,EffectDieSides1,EffectBaseDice1,EffectImplicitTargetA1,EffectMiscValue1,IsServerSide) VALUES
+(39663,'Summon Cosmetic Fel Fire',76,1,1,18,185520,2);
 
 -- Custom spells to be used with .modify commands. These spell ids are free in all expansions.
 INSERT INTO `spell_template` (`Id`, `Attributes`, `CastingTimeIndex`, `ProcChance`, `SpellLevel`, `DurationIndex`, `EquippedItemClass`, `Effect1`, `EffectApplyAuraName1`, `EffectMiscValue1`, `SpellName`) VALUES

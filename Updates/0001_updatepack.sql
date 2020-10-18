@@ -19358,3 +19358,9 @@ UPDATE creature_model_info SET modelid_alternative = 24418 WHERE modelid = 24443
 UPDATE creature_model_info SET modelid_alternative = 27250 WHERE modelid = 24418;
 UPDATE creature_model_info SET modelid_alternative = 27251 WHERE modelid = 27250;
 UPDATE creature_model_info SET modelid_alternative = 24443 WHERE modelid = 27251;
+
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 8982);
+DELETE FROM creature_template_addon WHERE entry IN (30748,32358,37629,38524,38525,38544,38563,38564);
+UPDATE creature_template_addon SET auras = NULL WHERE entry IN (25264,30204,35143,35359);
+UPDATE creature_template_addon SET auras = 70115 WHERE entry IN (37027,38080);
+UPDATE creature_template_addon SET auras = '58930 61153 61150 61145' WHERE entry =14688;
