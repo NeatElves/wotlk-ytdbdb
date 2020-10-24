@@ -35,6 +35,19 @@ REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_in
 (2299001, 22990, 0, 0, 100, 1025, 2000, 9000, 7500, 12000, 0, 0, 11, 39945, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Akama - Cast Chain Lightning'),
 (2299002, 22990, 21, 0, 100, 0, 0, 0, 0, 0, 0, 0, 45, 5, 300, 11, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Akama - Send AI Event A on Reached Home');
 
+INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
+('2111801','21118','11','0','100','0','0','0','0','0','0','0','57','2','25','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Razak Ironsides - Enable Range Mode on Spawn'),
+('2111802','21118','4','0','50','0','0','0','0','0','0','0','54','0','0','10172','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Razak Ironsides - Random Say on Aggro'),
+('2111803','21118','9','0','100','1025','5','30','2300','3900','0','0','11','36246','1','256','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Razak Ironsides - Cast Shoot Tech Gun'),
+('2142601','21426','30','0','100','1','6','0','0','0','0','0','51','0','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Gnome Defender - 209 - Unpause Waypoint Movement on Receive AI Event Custom B'),
+('2144104','21441','30','0','100','1','5','0','0','0','0','0','51','0','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Station Sharpshooter - Unpause Waypoint Movement on Receive AI Event Custom A');
+
+INSERT INTO dbscript_random_templates (id, type, target_id, chance, comments) VALUES
+(10172,0,-11229,0,'YTDB(TBCDB) - 21118 - Random Aggro Texts'),
+(10172,0,-11230,0,'YTDB(TBCDB) - 21118 - Random Aggro Texts'),
+(10172,0,-11231,0,'YTDB(TBCDB) - 21118 - Random Aggro Texts'),
+(10172,0,-11232,0,'YTDB(TBCDB) - 21118 - Random Aggro Texts');
+
 REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (3036651, 30366, 1, 0, 100, 0, 1000, 1000, 0, 0, 0, 0, 12, 30340, 0, 300000, 11, 56577, 0, 0, 0, 0, 0, 0, 'YTDB - Quest 13011'),
 (3283851, 32838, 10, 0, 100, 1, 1, 5, 21600000, 28800000, 0, 0, 11, 61839, 7, 22, 11, 61995, 0, 0, 41, 3000, 0, 0, 'YTDB - NPC 32838'),
@@ -44,9 +57,13 @@ REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_in
 (3322402, 33224, 22, 0, 100, 1, 58, 2879, 0, 0, 0, 0, 11, 62581, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Q. A Blade Fit For A Champion');
 
 INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`language`,`emote`,`broadcast_text_id`,`comment`) VALUES
-(-10042,'You''ve sealed your fate, Akama. The Master will learn of your betrayal!','0','1','0','0','0','YTDB(TBCDB) - Vagath');
+(-10042,'You''ve sealed your fate, Akama. The Master will learn of your betrayal!','0','1','0','0','20745','YTDB(TBCDB) - Vagath'),
+('-11229','I only have one rule. Everyone fights. No one quits.','0','0','0','0','19093','YTDB(TBCDB) - Razak Ironsides 21118'),
+('-11230','You don''t do your job, I''ll shoot you myself.','0','0','0','0','19094','YTDB(TBCDB) - Razak Ironsides 21118'),
+('-11231','Come on you apes. You want to live forever?','0','0','0','0','19095','YTDB(TBCDB) - Razak Ironsides 21118'),
+('-11232','Warm it up and give ''em everything you''ve got.','0','0','0','0','19096','YTDB(TBCDB) - Razak Ironsides 21118');
 
 REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (2286501, 22865, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 11, 39663, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Illidan''s Presence - Cast Summon Cosmetic Fel Fire on Spawn');
 
-UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,20666,21025,22865,22990,30366,32838,33211,33224);
+UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,20666,21025,21118,21426,22865,22990,30366,32838,33211,33224);

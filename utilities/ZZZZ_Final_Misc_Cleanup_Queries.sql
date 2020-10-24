@@ -281,21 +281,23 @@ SET
 `copy`.`UnitClass`=`creature_template`.`UnitClass`,
 `copy`.`UnitFlags`=`creature_template`.`UnitFlags`,
 `copy`.`NpcFlags`=`creature_template`.`NpcFlags`,
-`copy`.`dynamicflags`=`creature_template`.`dynamicflags`,
+`copy`.`DynamicFlags`=`creature_template`.`DynamicFlags`,
+`copy`.`InhabitType`=`creature_template`.`InhabitType`,
 `copy`.`EquipmentTemplateId`=`creature_template`.`EquipmentTemplateId`,
 `copy`.`Faction`=`creature_template`.`Faction`,
 `copy`.`SpeedRun`=`creature_template`.`SpeedRun`,
 `copy`.`SpeedWalk`=`creature_template`.`SpeedWalk`,
-`copy`.`scale`=`creature_template`.`scale`,
+`copy`.`Scale`=`creature_template`.`Scale`,
 `copy`.`DamageSchool`=`creature_template`.`DamageSchool`,
 `copy`.`SchoolImmuneMask`=`creature_template`.`SchoolImmuneMask`,
 `copy`.`MinLootGold`=`creature_template`.`MinLootGold`,
 `copy`.`MaxLootGold`=`creature_template`.`MaxLootGold`,
 `copy`.`VehicleTemplateId`=`creature_template`.`VehicleTemplateId`,
 `copy`.`MechanicImmuneMask`=`creature_template`.`MechanicImmuneMask`,
+`copy`.`MovementType`=`creature_template`.`MovementType`,
 `copy`.`VisibilityDistanceType`=`creature_template`.`VisibilityDistanceType`
 WHERE
-`copy`.`entry`=`creature_template`.`DifficultyEntry1`;
+`copy`.`Entry`=`creature_template`.`DifficultyEntry1`;
 UPDATE
 `creature_template`, `creature_template` AS `copy`
 SET
@@ -303,21 +305,23 @@ SET
 `copy`.`UnitClass`=`creature_template`.`UnitClass`,
 `copy`.`UnitFlags`=`creature_template`.`UnitFlags`,
 `copy`.`NpcFlags`=`creature_template`.`NpcFlags`,
-`copy`.`dynamicflags`=`creature_template`.`dynamicflags`,
+`copy`.`DynamicFlags`=`creature_template`.`DynamicFlags`,
+`copy`.`InhabitType`=`creature_template`.`InhabitType`,
 `copy`.`EquipmentTemplateId`=`creature_template`.`EquipmentTemplateId`,
 `copy`.`Faction`=`creature_template`.`Faction`,
 `copy`.`SpeedRun`=`creature_template`.`SpeedRun`,
 `copy`.`SpeedWalk`=`creature_template`.`SpeedWalk`,
-`copy`.`scale`=`creature_template`.`scale`,
+`copy`.`Scale`=`creature_template`.`Scale`,
 `copy`.`DamageSchool`=`creature_template`.`DamageSchool`,
 `copy`.`SchoolImmuneMask`=`creature_template`.`SchoolImmuneMask`,
 `copy`.`MinLootGold`=`creature_template`.`MinLootGold`,
 `copy`.`MaxLootGold`=`creature_template`.`MaxLootGold`,
 `copy`.`VehicleTemplateId`=`creature_template`.`VehicleTemplateId`,
 `copy`.`MechanicImmuneMask`=`creature_template`.`MechanicImmuneMask`,
+`copy`.`MovementType`=`creature_template`.`MovementType`,
 `copy`.`VisibilityDistanceType`=`creature_template`.`VisibilityDistanceType`
 WHERE
-`copy`.`entry`=`creature_template`.`DifficultyEntry2`;
+`copy`.`Entry`=`creature_template`.`DifficultyEntry2`;
 UPDATE
 `creature_template`, `creature_template` AS `copy`
 SET
@@ -325,21 +329,23 @@ SET
 `copy`.`UnitClass`=`creature_template`.`UnitClass`,
 `copy`.`UnitFlags`=`creature_template`.`UnitFlags`,
 `copy`.`NpcFlags`=`creature_template`.`NpcFlags`,
-`copy`.`dynamicflags`=`creature_template`.`dynamicflags`,
+`copy`.`DynamicFlags`=`creature_template`.`DynamicFlags`,
+`copy`.`InhabitType`=`creature_template`.`InhabitType`,
 `copy`.`EquipmentTemplateId`=`creature_template`.`EquipmentTemplateId`,
 `copy`.`Faction`=`creature_template`.`Faction`,
 `copy`.`SpeedRun`=`creature_template`.`SpeedRun`,
 `copy`.`SpeedWalk`=`creature_template`.`SpeedWalk`,
-`copy`.`scale`=`creature_template`.`scale`,
+`copy`.`Scale`=`creature_template`.`Scale`,
 `copy`.`DamageSchool`=`creature_template`.`DamageSchool`,
 `copy`.`SchoolImmuneMask`=`creature_template`.`SchoolImmuneMask`,
 `copy`.`MinLootGold`=`creature_template`.`MinLootGold`,
 `copy`.`MaxLootGold`=`creature_template`.`MaxLootGold`,
 `copy`.`VehicleTemplateId`=`creature_template`.`VehicleTemplateId`,
 `copy`.`MechanicImmuneMask`=`creature_template`.`MechanicImmuneMask`,
+`copy`.`MovementType`=`creature_template`.`MovementType`,
 `copy`.`VisibilityDistanceType`=`creature_template`.`VisibilityDistanceType`
 WHERE
-`copy`.`entry`=`creature_template`.`DifficultyEntry3`;
+`copy`.`Entry`=`creature_template`.`DifficultyEntry3`;
 
 # Final_FIX
 # UPDATE `creature` SET `phaseMask` = 65535 WHERE guid in (select (guid) from game_event_creature);

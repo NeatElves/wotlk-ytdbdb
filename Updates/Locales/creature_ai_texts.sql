@@ -1730,6 +1730,10 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Только не это...' WH
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Почему я?!' WHERE `entry` = -11226;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Утром будет очень больно.' WHERE `entry` = -11227;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'ОЙ!!!' WHERE `entry` = -11228;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'У меня только одно правило. Дерутся все. Никто не уходит.' WHERE `entry` = -11229;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Если не выполните свою работу, я сам вас застрелю.' WHERE `entry` = -11230;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Вперед, обезьяны! Вы что, хотите жить вечно?' WHERE `entry` = -11231;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Подготовьтесь как следует и задайте им!' WHERE `entry` = -11232;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Да благословит тебя Свет.' WHERE `entry` = -19997;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Твои раны серьезны, но ты будешь жить.' WHERE `entry` = -19998;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Отдыхай. Ты сегодня хорошо сражался.' WHERE `entry` = -19999;
