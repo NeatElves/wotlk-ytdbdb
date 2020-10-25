@@ -20170,5 +20170,4 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid
 UPDATE creature_template SET UnitFlags=526336, SpeedWalk=(12 / 2.5), SpeedRun=(12 / 7) WHERE Entry=16441;
 UPDATE creature_template SET UnitFlags=256 WHERE entry IN(23682);
 UPDATE creature_template SET MovementType=0 WHERE entry IN(23682);
-аддоны проверить
-# UPDATE creature_addon SET auras = NULL WHERE guid IN (SELECT guid FROM creature WHERE id = 37133);
+UPDATE creature_template_addon SET b2_0_sheath = 1 WHERE entry =37133;
