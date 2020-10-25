@@ -19360,9 +19360,12 @@ UPDATE creature_model_info SET modelid_alternative = 27251 WHERE modelid = 27250
 UPDATE creature_model_info SET modelid_alternative = 24443 WHERE modelid = 27251;
 
 DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 8982);
-DELETE FROM creature_template_addon WHERE entry IN (30748,32358,37629,38524,38525,38544,38563,38564);
-UPDATE creature_template_addon SET auras = NULL WHERE entry IN (25264,30204,35143,35359);
-UPDATE creature_template_addon SET auras = 70115 WHERE entry IN (37027,38080);
+DELETE FROM creature_template_addon WHERE entry IN (30748,37629,38524,38525,38544,38563,38564);
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 28747);
+UPDATE creature_addon SET auras = NULL WHERE guid IN (SELECT guid FROM creature WHERE id = 37133);
+UPDATE creature_template_addon SET auras = '70115 69898' WHERE entry = 37027;
+UPDATE creature_template_addon SET auras = NULL WHERE entry IN (25264,28747,30204,32358,35143,35359,37133);
+UPDATE creature_template_addon SET auras = '70115' WHERE entry = 38080;
 UPDATE creature_template_addon SET auras = '58930 61153 61150 61145' WHERE entry =14688;
 
 DELETE FROM dbscripts_on_quest_start WHERE id = 12440;
@@ -20163,3 +20166,9 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid
 (61555, 20751, 530, 1, 1, 0, 0, 1907.13, 5187.73, 265.788, 0.140625, 300, 300, 5, 0, 6116, 0, 0, 1),
 (61561, 20751, 530, 1, 1, 0, 0, 1864.64, 5177.07, 265.518, 3.2525, 300, 300, 5, 0, 6116, 0, 0, 1),
 (61565, 20751, 530, 1, 1, 0, 0, 1816.96, 5085.33, 265.245, 5.66166, 300, 300, 5, 0, 6116, 0, 0, 1);
+
+UPDATE creature_template SET UnitFlags=526336, SpeedWalk=(12 / 2.5), SpeedRun=(12 / 7) WHERE Entry=16441;
+UPDATE creature_template SET UnitFlags=256 WHERE entry IN(23682);
+UPDATE creature_template SET MovementType=0 WHERE entry IN(23682);
+аддоны проверить
+# UPDATE creature_addon SET auras = NULL WHERE guid IN (SELECT guid FROM creature WHERE id = 37133);

@@ -1360,6 +1360,9 @@ UPDATE `script_texts` SET `content_loc8` = 'Враги падут! За Азер
 UPDATE `script_texts` SET `content_loc8` = 'Если нам суждено сегодня умереть, мы не уйдем без борьбы! Вот увидите, эти демоны будут валиться как подкошенные!' WHERE `entry` = -1015097;
 UPDATE `script_texts` SET `content_loc8` = 'Пусть вы ослабли, а из ваших ран сочится кровь, вы продолжаете бороться за этот мир. Ничто не встанет у нас на пути!' WHERE `entry` = -1015098;
 UPDATE `script_texts` SET `content_loc8` = 'Братья мои, товарищи по оружию! Я должен идти на поиски сил Орды, чтобы привести их сюда! Сохраняйте твердость духа, о храбрые охотники! Не сдавайтесь врагу, приходящему из порталов!' WHERE `entry` = -1015099;
+UPDATE `script_texts` SET `content_loc8` = 'Мууууу...' WHERE `entry` = -1015100;
+UPDATE `script_texts` SET `content_loc8` = 'Муууууууууу!' WHERE `entry` = -1015101;
+UPDATE `script_texts` SET `content_loc8` = 'Бесси, ты вернулась! Хвала Свету!' WHERE `entry` = -1015102;
 UPDATE `script_texts` SET `content_loc8` = 'Только что прилетел дирижабль, который отправится в Оргриммар! Все на борт! Мы летим в Дуротар!' WHERE `entry` = -1020001;
 UPDATE `script_texts` SET `content_loc8` = 'Дирижабль до Подгорода прибыл! Кому в Тирисфальские леса – садитесь!' WHERE `entry` = -1020002;
 UPDATE `script_texts` SET `content_loc8` = 'Дирижабль до Гром''гола прибыл! Все, кому в Тернистую долину – садитесь!' WHERE `entry` = -1020003;
@@ -2303,7 +2306,6 @@ UPDATE `script_texts` SET `content_loc8` = 'Посмотрим, на что вы
 UPDATE `script_texts` SET `content_loc8` = 'Сопротивление бесполезно.' WHERE `entry` = -1542013;
 UPDATE `script_texts` SET `content_loc8` = 'Прочь... прочь от меняяя...' WHERE `entry` = -1542014;
 UPDATE `script_texts` SET `content_loc8` = 'Убить их!' WHERE `entry` = -1542015;
-UPDATE `script_texts` SET `content_loc8` = 'Вы думаете, что ваша жалкая магия будет удерживать меня вечно?' WHERE `entry` = -1542016;
 UPDATE `script_texts` SET `content_loc8` = 'Вы чувствуете этот запах? Свежее мясо как-то проникло в нашу цитадель. Опасайтесь любых злоумышленников.' WHERE `entry` = -1543000;
 UPDATE `script_texts` SET `content_loc8` = 'Лечите меня! БЫСТРО!' WHERE `entry` = -1543001;
 UPDATE `script_texts` SET `content_loc8` = 'Назад, ничтожество!' WHERE `entry` = -1543002;
@@ -2329,7 +2331,7 @@ UPDATE `script_texts` SET `content_loc8` = 'Что, больше некому с
 UPDATE `script_texts` SET `content_loc8` = 'Вот и все!' WHERE `entry` = -1543022;
 UPDATE `script_texts` SET `content_loc8` = 'Твои дни сочтены!' WHERE `entry` = -1543023;
 UPDATE `script_texts` SET `content_loc8` = 'Мой господин уничтожит всех вас...' WHERE `entry` = -1543024;
-UPDATE `script_texts` SET `content_loc8` = '%s спускается с небес.' WHERE `entry` = -1543025;
+UPDATE `script_texts` SET `content_loc8` = 'Назан спускается с небес.' WHERE `entry` = -1543025;
 UPDATE `script_texts` SET `content_loc8` = 'Гнусные, назойливые насекомые. Освободите меня, и я, быть может, дарую вам лёгкую смерть!' WHERE `entry` = -1544000;
 UPDATE `script_texts` SET `content_loc8` = 'Паразиты! Кровососы! Пейте мою кровь – и захлебнитесь ею!' WHERE `entry` = -1544001;
 UPDATE `script_texts` SET `content_loc8` = 'Иллидан самодовольный глупец. Я сокрушу его, и Запределье будет моим!' WHERE `entry` = -1544002;
