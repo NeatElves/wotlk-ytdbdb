@@ -733,6 +733,7 @@ INSERT INTO scripted_event_id VALUES
 /* DRAGONBLIGHT */
 UPDATE creature_template SET ScriptName='npc_destructive_ward' WHERE entry=27430;
 UPDATE creature_template SET ScriptName='npc_crystalline_ice_giant' WHERE entry=26809;
+UPDATE gameobject_template SET ScriptName='go_scrying_orb' WHERE entry=189292;
 UPDATE gameobject_template SET ScriptName='go_portal_to_orgrimmar' WHERE entry=193948;
 UPDATE gameobject_template SET ScriptName='go_portal_to_undercity' WHERE entry=193955;
 
@@ -854,7 +855,6 @@ UPDATE instance_template SET ScriptName='instance_gundrak' WHERE map=604;
 UPDATE creature_template SET ScriptName='boss_the_maker' WHERE entry=17381;
 UPDATE creature_template SET ScriptName='boss_broggok' WHERE entry=17380;
 UPDATE creature_template SET ScriptName='boss_kelidan_the_breaker' WHERE entry=17377;
-UPDATE creature_template SET ScriptName='mob_broggok_poisoncloud' WHERE entry=17662;
 UPDATE creature_template SET ScriptName='mob_shadowmoon_channeler' WHERE entry=17653;
 UPDATE gameobject_template SET ScriptName='go_prison_cell_lever' WHERE entry=181982;
 UPDATE instance_template SET ScriptName='instance_blood_furnace' WHERE map=542;

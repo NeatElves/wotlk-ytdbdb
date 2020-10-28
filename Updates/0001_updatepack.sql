@@ -20171,3 +20171,4 @@ UPDATE creature_template SET UnitFlags=526336, SpeedWalk=(12 / 2.5), SpeedRun=(1
 UPDATE creature_template SET UnitFlags=256 WHERE entry IN(23682);
 UPDATE creature_template SET MovementType=0 WHERE entry IN(23682);
 UPDATE creature_template_addon SET b2_0_sheath = 1 WHERE entry =37133;
+UPDATE creature_template SET UnitFlags=UnitFlags|768 WHERE entry IN(23758);
