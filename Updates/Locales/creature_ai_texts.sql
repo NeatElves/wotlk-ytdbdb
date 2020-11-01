@@ -2660,6 +2660,11 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Тебя к нам в дом н
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Неповоротливый йормунгар на секунду замолкает, широко раскрыв рот.' WHERE `entry` = -20933;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Крошшер Зинка годен и может быть использован для уничтожения лесных угодий.' WHERE `entry` = -20934;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Система безопасности крошшера Зинка активирована. Возвращаюсь на базу.' WHERE `entry` = -20935;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'МОООЗГИИИИИИ!!!' WHERE `entry` = -20936;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Я ХОЧУ ЕССССТЬ!!!' WHERE `entry` = -20937;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'НАКОРМИ МЕНЯ!! НАКОРМИ МЕНЯ!!!' WHERE `entry` = -20938;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'НХТО, не-хотел-тебя-обидеть, не хотел тебя обидеть!' WHERE `entry` = -20939;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'НЕ УБЕГАТЬ!!! ХВАТИТ УБЕГАТЬ!!!!' WHERE `entry` = -20940;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
