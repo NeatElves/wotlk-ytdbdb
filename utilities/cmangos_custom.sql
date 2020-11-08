@@ -27,7 +27,13 @@
 -- Make Moonwell GO server-side (visible by GM only)
 UPDATE gameobject_template SET data3=1 WHERE entry=177272; 
 
--- Set radius of Supply Crate trap to zero to prevent trap from triggering with coming by players (it should trigger on player usage of original GO)
+-- Make Incantion of Celebras Trap only visible by GM
+UPDATE gameobject_template SET data8=1 WHERE entry=178963;
+
+-- Make Containment Coffer TRAP only visible by GM
+UPDATE gameobject_template SET data8=1 WHERE entry=103575;
+
+-- Set radius of Supply Crate trap to zero to prevent trap from being triggered by nearby players (it should trigger on player usage of original GO)
 UPDATE gameobject_template SET data2=0 WHERE entry IN (175534, 175535, 175536, 175537);
 
 -- Make Dawn's Gambit Trap only visible by GM
@@ -49,6 +55,9 @@ UPDATE gameobject_template SET data2=10 WHERE entry=109515;
 -- Set a 70 yards diameter for Ragnaros GO because because it needs to be triggered by SD2 script otherwise (and said script do not exist yet)
 UPDATE gameobject_template SET data2=70 WHERE entry=178088;
 
+-- Set 20 yards radius to Suppression Device GO and cooldown because it needs to be triggered by SD2 script otherwise (and said script does not exist yet because GO spell casting in not implemented)
+UPDATE gameobject_template SET data2=20 WHERE entry=179784;
+
 -- Currently the core cannot make a GO usable for a specific quest if the items it holds are not objectives of the quest
 
 -- Link Hive'Ashi Pod GO to quest 1126 so it is usable by players on the quest
@@ -62,6 +71,9 @@ UPDATE gameobject_template SET data8=1221 WHERE entry IN (68865, 21530, 21277);
 
 -- Thaurissan Relic - original tbc-db value 0, classic-db (and classic sniff) value 3702 - the quest which involves actually using this object is 3701
 UPDATE gameobject_template SET data1=3701 WHERE entry=153556;
+
+-- Make object 181444 (Kel'Thuzad Trigger) despawnable on usage
+UPDATE gameobject_template SET data4=1 WHERE entry=181444;
 
 -- ============================================================
 -- TBC section

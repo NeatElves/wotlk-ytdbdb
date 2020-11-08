@@ -23565,16 +23565,6 @@ INSERT INTO creature_movement (id,point,position_x,position_y,position_z,orienta
 (112910,8,4444.663,107.8721,104.0855,100,0,0),
 (112910,9,4443.907,115.8326,104.0855,100,0,0);
 
-# xak, vremennaya zamena id 20390 na 50000
-UPDATE creature_ai_scripts SET action1_param1 = 50000 WHERE id =2737002;
-DELETE FROM dbscripts_on_relay WHERE id IN (50000);
-INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(50000,10,31,27370,5,0,27359,50,7 | 0x08,0,0,0,0,0,0,0,0,'Part of Vengeful Geist EAI: buddy search for 27370 - terminate if alive'),
-(50000,100,1,0,0,0,27359,40,7,0,0,0,0,0,0,0,0,'Part of Vengeful Geist EAI: buddy emote 0'),
-(50000,150,25,1,0,0,27359,40,7,0,0,0,0,0,0,0,0,'Part of Vengeful Geist EAI: buddy Run ON'),
-(50000,1000,0,0,10,0,27359,50,7,2000003640,2000003641,2000003642,2000003643,0,0,0,0,'Part of Vengeful Geist EAI: buddy - random say'),
-(50000,2000,8,27359,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Vengeful Geist EAI: kill credit'),
-(50000,3000,20,2,0,0,27359,40,7,0,0,0,0,0,0,0,0,'Part of Vengeful Geist EAI: buddy waypoints');
 DELETE FROM dbscript_string WHERE entry BETWEEN 2000003640 AND 2000003643;
 INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
 (2000003640,'Thank you, kind soul.',0,0,7,4,NULL),

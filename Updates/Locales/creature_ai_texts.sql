@@ -2665,6 +2665,25 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Я ХОЧУ ЕССССТЬ!!!' 
 UPDATE `creature_ai_texts` SET `content_loc8` = 'НАКОРМИ МЕНЯ!! НАКОРМИ МЕНЯ!!!' WHERE `entry` = -20938;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'НХТО, не-хотел-тебя-обидеть, не хотел тебя обидеть!' WHERE `entry` = -20939;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'НЕ УБЕГАТЬ!!! ХВАТИТ УБЕГАТЬ!!!!' WHERE `entry` = -20940;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Впечатляюще. Хозяин сказал, что ты и твои люди будут помехой. Неважно, ваш конец близок. Скоро объединенная мощь Наксрамаса обрушится на это место и размозжит ваше жалкое существование.' WHERE `entry` = -20941;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'И куда ты с этим направляешься, смертное создание? Положи фолиант – и, может быть, тебе удастся избежать вечности, наполненной мучениями.' WHERE `entry` = -20942;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Том не твой...' WHERE `entry` = -20943;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Дай... мне... книгу...' WHERE `entry` = -20944;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Тель''зан получит тебя...' WHERE `entry` = -20945;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Присоединись к нам...' WHERE `entry` = -20946;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Лишь крах ожидает тебя...' WHERE `entry` = -20947;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Я вижу одну из их чумных телег!' WHERE `entry` = -20948;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Я когда-нибудь рассказывал вам, солдаты, о том, как я уничтожил мост Тандола? Да, тот мост уничтожили не дворфы из клана Черного Железа! Это был я!' WHERE `entry` = -20949;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Это бессмыслица. Почему бы им просто не заставить Наксрамас пролететь над крепостью Стражей Зимы и не взорвать ее? Я к тому, что... на месте Кел''Тузада я бы именно так и поступил.' WHERE `entry` = -20950;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Хотел бы я знать, сумеем ли мы найти когда-нибудь ключ к загадке странной руды. Должна же она хоть для чего-нибудь использоваться!' WHERE `entry` = -20951;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Эй, кто-нибудь из вас знаком с МакГоувером из Валгарда? Это мой дядя. Знаете, как его кличут? Профи. Да, просто "Профи". Я тоже хочу стать Профи.' WHERE `entry` = -20952;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Прекратите болтать. Нам нужно оставаться бдительными!' WHERE `entry` = -20953;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Запах смерти здесь повсюду.' WHERE `entry` = -20954;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Наездник, я слышал, что ты сам поднял жителей нашей деревни из этого ада. Это правда?' WHERE `entry` = -20955;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Ну что, кто-нибудь знает хоть что-нибудь о Тель''зане? Кто он такой? Как получилось так, что он встал во главе армии Плети?' WHERE `entry` = -20956;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Все в руинах... Плеть заплатит за это!' WHERE `entry` = -20957;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Где все трупы? Что они сделали с нашими собратьями?' WHERE `entry` = -20958;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Надеюсь, я доживу до того момента, когда Артас получит по заслугам.' WHERE `entry` = -20959;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
