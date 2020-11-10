@@ -291,6 +291,7 @@ UPDATE creature_template SET ScriptName='boss_grandmaster_vorpil' WHERE entry=18
 UPDATE creature_template SET ScriptName='boss_blackheart_the_inciter' WHERE entry=18667;
 UPDATE creature_template SET ScriptName='boss_ambassador_hellmaw' WHERE entry=18731;
 UPDATE creature_template SET ScriptName='npc_void_traveler' WHERE entry=19226;
+UPDATE creature_template SET ScriptName='dummy_blackheart_the_inciter' WHERE entry IN(19300,19301,19302,19303,19304);
 UPDATE gameobject_template SET ScriptName='go_screaming_hall_door' WHERE entry=183295;
 
 /*  */
@@ -503,8 +504,10 @@ UPDATE creature_template SET ScriptName='npc_aether_tech_vendor' WHERE entry IN(
 UPDATE creature_template SET ScriptName='npc_bashir_flesh_fiend' WHERE entry IN(23249);
 UPDATE creature_template SET ScriptName='npc_disruptor_tower' WHERE entry IN(23250);
 UPDATE creature_template SET ScriptName='npc_grand_collector' WHERE entry IN(23333);
+UPDATE gameobject_template SET ScriptName='go_nether_drake_egg_trap' WHERE entry=184958;
 
 /* BLASTED LANDS */
+UPDATE creature_template SET ScriptName='boss_kazzak' WHERE entry=12397;
 UPDATE creature_template SET ScriptName='npc_agent_proudwell' WHERE entry=19942;
 UPDATE gameobject_template SET ScriptName='go_infernaling_summoner_portal_hound' WHERE entry=183357;
 
@@ -1044,11 +1047,8 @@ UPDATE creature_template SET ScriptName='boss_netherspite' WHERE entry=15689;
 UPDATE creature_template SET ScriptName='boss_malchezaar' WHERE entry=15690;
 UPDATE creature_template SET ScriptName='boss_nightbane' WHERE entry=17225;
 UPDATE creature_template SET ScriptName='boss_bigbadwolf' WHERE entry=17521;
-UPDATE creature_template SET ScriptName='mob_demon_chain' WHERE entry=17248;
 UPDATE creature_template SET ScriptName='npc_fiendish_portal' WHERE entry=17265;
-UPDATE creature_template SET ScriptName='npc_shade_of_aran_blizzard' WHERE entry=17161;
 UPDATE creature_template SET ScriptName='npc_netherspite_portal' WHERE entry IN (17367,17368,17369);
-UPDATE creature_template SET ScriptName='npc_infernal_target' WHERE entry=17644;
 UPDATE creature_template SET ScriptName='npc_barnes' WHERE entry=16812;
 UPDATE creature_template SET ScriptName='npc_grandmother' WHERE entry=17603;
 UPDATE creature_template SET ScriptName='npc_image_of_medivh' WHERE entry=17651;
@@ -1069,7 +1069,6 @@ UPDATE creature_template SET ScriptName='npc_orc_necrolyte' WHERE entry=21747;
 INSERT INTO scripted_event_id VALUES
 (10591,'event_spell_summon_nightbane'),
 (10951,'event_spell_medivh_journal');
-UPDATE creature_template SET ScriptName='npc_infernal_relay' WHERE entry=17645;
 UPDATE gameobject_template SET ScriptName='go_chessboard' WHERE entry IN(185324);
 
 /* LOCH MODAN */
@@ -1133,6 +1132,7 @@ UPDATE creature_template SET ScriptName='mob_lump' WHERE entry=18351;
 UPDATE creature_template SET ScriptName='npc_nagrand_captive' WHERE entry IN (18209,18210);
 UPDATE creature_template SET ScriptName='npc_creditmarker_visit_with_ancestors' WHERE entry IN (18840,18841,18842,18843);
 UPDATE creature_template SET ScriptName='npc_rethhedron' WHERE entry=22357;
+UPDATE creature_template SET ScriptName='npc_gurthock' WHERE entry=18471;
 
 /* NAXXRAMAS */
 UPDATE instance_template SET ScriptName='instance_naxxramas' WHERE map=533;
@@ -1468,6 +1468,7 @@ UPDATE creature_template SET ScriptName='npc_mist' WHERE entry=3568;
 
 /* THE MECHANAR */
 UPDATE creature_template SET ScriptName='boss_mechano_lord_capacitus' WHERE entry = 19219;
+UPDATE creature_template SET ScriptName='mob_nether_charge' WHERE entry IN(20405);
 UPDATE creature_template SET ScriptName='boss_nethermancer_sepethrea' WHERE entry=19221;
 UPDATE creature_template SET ScriptName='boss_pathaleon_the_calculator' WHERE entry=19220;
 UPDATE creature_template SET ScriptName='mob_nether_wraith' WHERE entry=21062;
@@ -3418,7 +3419,8 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1015100','Mooooo...','0','0','0','0','18179','bessy SAY_ESCORT_1'),
 ('-1015101','Moooooooooo!','0','0','0','0','18180','bessy SAY_ESCORT_2'),
 ('-1015102','Bessy, you''re home. Thank the Light!','0','0','0','0','18181','bessy SAY_THADELL'),
-('-1015103','Quickly, get to the middle of the platform! Illidan''s fury is soon to be unleashed!','0','4','0','0','0','Marcus Auralion - On Accept');
+('-1015103','Quickly, get to the middle of the platform! Illidan''s fury is soon to be unleashed!','0','4','0','0','0','Marcus Auralion - On Accept'),
+('-1015104','[Demonic] Ka kalix!','0','0','0','0','15551','Sal''salabim - On Gossip Select');
 
 -- -1 020 000 WOTLK texts
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
@@ -7675,7 +7677,7 @@ INSERT INTO gossip_texts (entry,content_default,comment) VALUES
 --
 
 TRUNCATE script_waypoint;
-INSERT INTO script_waypoint VALUES
+INSERT INTO `script_waypoint` (`entry`, `pathId`, `pointid`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
 (349,0,1,-8769.59,-2185.73,141.975,0,0,0,''),
 (349,0,2,-8776.54,-2193.78,140.96,0,0,0,''),
 (349,0,3,-8783.29,-2194.82,140.462,0,0,0,''),
@@ -10299,7 +10301,7 @@ INSERT INTO script_waypoint VALUES
 (20985,0,38,3984.63,2077.76,256.405,0,0,0,''),
 (20985,0,39,3978.75,2066.79,256.405,0,0,0,''),
 (20985,0,40,3959.94,2039.18,257.63,0,0,0,''),
-(20985,0,41,3955.86,2030.96,257.812,4.133,0,0,''),
+(20985,0,41,3955.86,2030.96,257.812,4.133,60000,0,'Captain Saeed - Wait and Kill Dimensius the All-Devouring 19554'),
 (21027,0,1,-2638.89,1358.96,35.9607,0,0,0,''),
 (21027,0,2,-2652.62,1354.46,34.8615,0,0,0,''),
 (21027,0,3,-2670.7,1348.18,34.446,0,0,0,''),

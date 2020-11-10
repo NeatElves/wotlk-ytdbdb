@@ -15,7 +15,10 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (1121,'spell_entangle_fankriss'),
 (3730,'spell_initialize_image'),
 (7054,'spell_forsaken_skill'),
+(13278,'spell_gdr_channel'),
+(13493,'spell_gdr_periodic'),
 (16380,'spell_greater_invisibility_mob'),
+(17244,'spell_anastari_possess'),
 (19832,'spell_possess_razorgore'),
 (19872,'spell_calm_dragonkin'),
 (19873,'spell_destroy_egg'),
@@ -38,15 +41,42 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 
 -- TBC
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(32811,'spell_greater_invisibility_mob'),
+(29969,'spell_summon_blizzard'),
+(29970,'spell_dispel_blizzard'),
+(29979,'spell_massive_magnetic_pull'),
+(30004,'spell_flame_wreath'),
+(29770,'spell_midnight_mount'),
 (29883,'spell_blink_arcane_anomaly'),
 (29907,'spell_astral_bite'),
 (29690,'spell_inebriate_removal'),
+(30115,'spell_sacrifice'),
 (31702,'spell_someone_grab_me'),
 (31703,'spell_magnetic_pull'),
 (31704,'spell_levitate'),
+(30166,'spell_shadow_grasp_magtheridon'),
+(30410,'spell_shadow_grasp_cube'),
+(30658,'spell_quake_magtheridon'),
+(30571,'spell_quake_magtheridon_knockback'),
+(30425,'spell_portal_attunement'),
+(30469,'spell_nether_beam'),
+(38546,'spell_face_random_target'),
+(30659,'spell_fel_infusion'),
+(35139,'spell_throw_booms_doom'),
+(35150,'spell_nether_charge_passive'),
+(37670,'spell_nether_charge_timer'),
+(33676,'spell_incite_chaos'),
+(30843,'spell_enfeeble'),
+(41624,'spell_enfeeble_removal'),
+(32264,'spell_shirrak_inhibit_magic'),
+(33332,'spell_suppression_blast'),
+(32830,'spell_auchenai_possess'),
+(36557,'spell_cursed_scarab_periodic'),
+(36560,'spell_cursed_scarab_despawn_periodic'),
 (34874,'spell_despawn_underbog_mushrooms'),
 (36374,'spell_summon_smoke_beacon'),
 (37591,'spell_inebriate_removal'),
+(34231,'spell_increased_holy_light_healing'),
 (30926,'spell_vazruden_liquid_fire_script'),
 (33793,'spell_vazruden_liquid_fire_script'),
 (33794,'spell_vazruden_liquid_fire_script'),
@@ -66,6 +96,13 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (40251,'spell_shadow_of_death'),
 (41289,'spell_ethereal_ring_signal_flare'),
 (41999,'spell_shadow_of_death_remove'),
+(33040,'spell_wota_main_cast_and_jump'),
+(33049,'spell_wota_main_cast_and_jump'),
+(33045,'spell_wota_dot'),
+(33048,'spell_wota_search'),
+(33229,'spell_wota_remove'),
+(42783,'spell_wrath_of_the_astromancer'),
+(45043,'spell_power_circle'),
 (44006,'spell_teleport_self_akilzon'),
 (43681,'spell_inactive');
 
@@ -152,7 +189,29 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (36189,'spell_infernal_pet_scaling_3'),
 (36190,'spell_infernal_pet_scaling_4');
 
+-- Warrior
+INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(5308,'spell_warrior_execute'),
+(20658,'spell_warrior_execute'),
+(20660,'spell_warrior_execute'),
+(20661,'spell_warrior_execute'),
+(20662,'spell_warrior_execute'),
+(25234,'spell_warrior_execute'),
+(25236,'spell_warrior_execute'),
+(47470,'spell_warrior_execute'),
+(47471,'spell_warrior_execute'),
+(20647,'spell_warrior_execute_damage');
+
+-- Mage
+INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(11213,'spell_arcane_concentration'),
+(12574,'spell_arcane_concentration'),
+(12575,'spell_arcane_concentration'),
+(12576,'spell_arcane_concentration'),
+(12577,'spell_arcane_concentration');
+
 -- Battleground and Outdoor PvP
+-- Alterac Valley
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
 -- Arathi basin
 (23936,'spell_battleground_banner_trigger'),

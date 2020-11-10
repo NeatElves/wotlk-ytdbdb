@@ -3728,6 +3728,7 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (9592, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Где мне найти ключ от отремонтированного крошшера?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9594, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Какое решение было принято?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9595, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'И как драконы Бесконечности собираются вмешаться?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(9603, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Хех... "Приманка для драконов"? Ну-ка подмани мне Ледяную Бурю!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9607, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Хорошо, я возьму эту твою микстуру.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9610, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Что они, по-твоему, замышляют?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9611, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Что ты хочешь, чтобы я сделал?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),

@@ -1364,6 +1364,7 @@ UPDATE `script_texts` SET `content_loc8` = 'Мууууу...' WHERE `entry` = -10
 UPDATE `script_texts` SET `content_loc8` = 'Муууууууууу!' WHERE `entry` = -1015101;
 UPDATE `script_texts` SET `content_loc8` = 'Бесси, ты вернулась! Хвала Свету!' WHERE `entry` = -1015102;
 UPDATE `script_texts` SET `content_loc8` = 'Быстро встань в центре платформы! Иллидан скоро обрушит на нас свою ярость!' WHERE `entry` = -1015103;
+UPDATE `script_texts` SET `content_loc8` = '[Язык демонов] Ка каликс!' WHERE `entry` = -1015104;
 UPDATE `script_texts` SET `content_loc8` = 'Только что прилетел дирижабль, который отправится в Оргриммар! Все на борт! Мы летим в Дуротар!' WHERE `entry` = -1020001;
 UPDATE `script_texts` SET `content_loc8` = 'Дирижабль до Подгорода прибыл! Кому в Тирисфальские леса – садитесь!' WHERE `entry` = -1020002;
 UPDATE `script_texts` SET `content_loc8` = 'Дирижабль до Гром''гола прибыл! Все, кому в Тернистую долину – садитесь!' WHERE `entry` = -1020003;

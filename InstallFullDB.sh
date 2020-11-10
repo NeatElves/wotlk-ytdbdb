@@ -248,18 +248,39 @@ fi
 fi
 
 # Apply dbc folder
-echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data ..."
-for f in "${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data/"*.sql
+echo "> Trying to apply DBC updates ..."
+for UPDATEFILE in ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data/*.sql
 do
-  echo "    Appending DBC file update `basename $f` to database $DATABASE"
-  $MYSQL_COMMAND < $f
-  if [[ $? != 0 ]]
+  if [ -e "$UPDATEFILE" ]
   then
-    echo "ERROR: cannot apply $f"
-    exit 1
+      for UPDATE in ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data/*.sql
+      do
+          echo "    process update $UPDATE"
+          $MYSQL_COMMAND < $UPDATE
+          [[ $? != 0 ]] && exit 1
+      done
+      echo "  DBC updates applied"
+  else
+      echo "  No DBC update to process"
   fi
+  break
 done
-echo "  DBC datas successfully applied"
+for UPDATEFILE in ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data/*/*.sql
+do
+  if [ -e "$UPDATEFILE" ]
+  then
+      for UPDATE in ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data/*/*.sql
+      do
+          echo "    process update $UPDATE"
+          $MYSQL_COMMAND < $UPDATE
+          [[ $? != 0 ]] && exit 1
+      done
+      echo "  DBC subupdates applied"
+  else
+      echo "  No DBC subupdate to process"
+  fi
+  break
+done
 echo
 echo
 
@@ -557,18 +578,39 @@ fi
 fi
 
 # Apply dbc folder
-echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data ..."
-for f in "${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data/"*.sql
+echo "> Trying to apply DBC updates ..."
+for UPDATEFILE in ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data/*.sql
 do
-  echo "    Appending DBC file update `basename $f` to database $DATABASE"
-  $MYSQL_COMMAND < $f
-  if [[ $? != 0 ]]
+  if [ -e "$UPDATEFILE" ]
   then
-    echo "ERROR: cannot apply $f"
-    exit 1
+      for UPDATE in ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data/*.sql
+      do
+          echo "    process update $UPDATE"
+          $MYSQL_COMMAND < $UPDATE
+          [[ $? != 0 ]] && exit 1
+      done
+      echo "  DBC updates applied"
+  else
+      echo "  No DBC update to process"
   fi
+  break
 done
-echo "  DBC datas successfully applied"
+for UPDATEFILE in ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data/*/*.sql
+do
+  if [ -e "$UPDATEFILE" ]
+  then
+      for UPDATE in ${ADDITIONAL_PATH}Updates/mangos/base/dbc/original_data/*/*.sql
+      do
+          echo "    process update $UPDATE"
+          $MYSQL_COMMAND < $UPDATE
+          [[ $? != 0 ]] && exit 1
+      done
+      echo "  DBC subupdates applied"
+  else
+      echo "  No DBC subupdate to process"
+  fi
+  break
+done
 echo
 echo
 
