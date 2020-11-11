@@ -110,6 +110,8 @@ then {
 export MYSQL_PWD="$PASSWORD"
 MYSQL_COMMAND="$MYSQL -h$DB_HOST -P$DB_PORT -u$USERNAME $DATABASE"
 
+echo $(date +"%y-%m-%d %T");
+
 # Print header
 echo
 echo "Welcome to the YTDB helper $SCRIPT_FILE"
@@ -439,6 +441,8 @@ echo
 else {
 export MYSQL_PWD="$PASSWORD"
 MYSQL_COMMAND="$MYSQL -h$DB_HOST -P$DB_PORT -u$USERNAME $DATABASE"
+
+echo $(date +"%y-%m-%d %T");
 
 # Print header
 echo
