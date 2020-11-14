@@ -2685,6 +2685,9 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Все в руинах... Пл�
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Где все трупы? Что они сделали с нашими собратьями?' WHERE `entry` = -20958;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Надеюсь, я доживу до того момента, когда Артас получит по заслугам.' WHERE `entry` = -20959;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Победу Альянсу!' WHERE `entry` = -20960;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'ЧУЖАКИ! УБЕЙТЕ ИХ!' WHERE `entry` = -20961;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'ГАДЫ ИЗ АЛЬЯНСА! УМРИТЕ! УМРИТЕ!' WHERE `entry` = -20962;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Снесите им головы! За Орду!' WHERE `entry` = -20963;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

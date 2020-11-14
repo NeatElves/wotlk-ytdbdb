@@ -66,15 +66,4 @@ INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`langu
 REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (2286501, 22865, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 11, 39663, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Illidan''s Presence - Cast Summon Cosmetic Fel Fire on Spawn');
 
-# xak, vremennaya zamena id 20390 na 50000
-UPDATE creature_ai_scripts SET action1_param1 = 50000 WHERE id =2737002;
-DELETE FROM dbscripts_on_relay WHERE id IN (50000);
-INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(50000,10,31,27370,5,0,27359,50,7 | 0x08,0,0,0,0,0,0,0,0,'Part of Vengeful Geist EAI: buddy search for 27370 - terminate if alive'),
-(50000,100,1,0,0,0,27359,40,7,0,0,0,0,0,0,0,0,'Part of Vengeful Geist EAI: buddy emote 0'),
-(50000,150,25,1,0,0,27359,40,7,0,0,0,0,0,0,0,0,'Part of Vengeful Geist EAI: buddy Run ON'),
-(50000,1000,0,0,10,0,27359,50,7,2000003640,2000003641,2000003642,2000003643,0,0,0,0,'Part of Vengeful Geist EAI: buddy - random say'),
-(50000,2000,8,27359,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Vengeful Geist EAI: kill credit'),
-(50000,3000,20,2,0,0,27359,40,7,0,0,0,0,0,0,0,0,'Part of Vengeful Geist EAI: buddy waypoints');
-
 UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,20666,21025,21118,21426,22865,22990,30366,32838,33211,33224);
