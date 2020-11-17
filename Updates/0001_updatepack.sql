@@ -19828,8 +19828,8 @@ INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`position_x`,
 DELETE FROM dbscripts_on_creature_movement WHERE id=2142601;
 INSERT INTO dbscripts_on_creature_movement (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (2142601, 0, 0, 0, 0, 0, 0, 21427, 100, 0, 2000005176, 2000005177, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Strider Jock - Yell');
-# DELETE FROM creature_linking_template WHERE master_entry=21426;
-# INSERT INTO creature_linking_template (entry, map, master_entry, flag, search_range) VALUES (21427, 530, 21426, 515, 0);
+DELETE FROM creature_linking_template WHERE master_entry=21426;
+INSERT INTO creature_linking_template (entry, map, master_entry, flag, search_range) VALUES (21427, 530, 21426, 515, 30);
 
 DELETE FROM creature_movement_template WHERE entry=17848;
 INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
@@ -24967,3 +24967,64 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `comman
 (1999501, 1000, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
 
 UPDATE creature_template SET Leash=70 WHERE entry IN(18473,20706);
+
+UPDATE creature_template SET UnitFlags = 33555200 WHERE entry = 30413;
+DELETE FROM spell_script_target WHERE entry = 56711;
+INSERT INTO spell_script_target (entry, type, targetEntry, inverseEffectMask) VALUES (56711, 1, 30413, 0);
+
+UPDATE quest_template SET PrevQuestId = 13372 WHERE entry = 13384;
+
+UPDATE `creature` SET `position_z` = '-98.2515' WHERE `guid` =112592;
+UPDATE `creature` SET `position_z` = '-97.716' WHERE `guid` =112589;
+UPDATE `creature` SET `position_z` = '-95.9504' WHERE `guid` =112593;
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 30078);
+UPDATE creature SET spawndist = 0, MovementType = 2 WHERE guid IN (112593,112589,112592);
+DELETE FROM creature_movement WHERE id IN (112593,112589,112592);
+INSERT INTO creature_movement (id, point, position_x, position_y, position_z, orientation, waittime, script_id) VALUES
+(112593,1,3590.2,366.514,-95.9504,4.39823,100,13),
+(112593,2,3590.2,366.514,-95.9504,4.39823,100,3),
+(112589,1,3503.11,175.5,-97.716,1.02974,100,11),
+(112589,2,3503.11,175.5,-97.716,1.02974,100,3),
+(112592,1,3485.56,357.341,-98.2515,5.32325,100,15),
+(112592,2,3485.56,357.341,-98.2515,5.32325,100,3);
+DELETE FROM creature_addon WHERE guid IN (112656,112661);
+INSERT INTO creature_addon (guid, mount, bytes1, b2_0_sheath, b2_1_pvp_state, emote, moveflags, auras) VALUES (112656,0,0,1,0,0,0,29266), (112661,0,0,1,0,0,0,29266);
+UPDATE creature SET position_x = 3592.494, position_y = 191.1563, position_z = -113.6729, orientation = 1.22173 WHERE guid = 112661;
+UPDATE creature SET position_x = 3611.361, position_y = 204.7483, position_z = -113.6808, orientation = 3.665191 WHERE guid = 112656;
+UPDATE `creature` SET `position_z` = '235.041' WHERE `guid` =105781;
+UPDATE `creature` SET `position_z` = '-113.679' WHERE `guid` =112606;
+UPDATE `creature` SET `position_z` = '-113.679' WHERE `guid` =112605;
+UPDATE `creature` SET `position_z` = '-113.679' WHERE `guid` =112604;
+UPDATE `creature` SET `position_z` = '-113.679' WHERE `guid` =112607;
+DELETE FROM creature_addon WHERE guid IN (112604,112605,112606,112607);
+INSERT INTO creature_addon (guid, mount, bytes1, b2_0_sheath, b2_1_pvp_state, emote, moveflags, auras) VALUES
+(112604,0,0,1,0,0,0,42051), (112605,0,0,1,0,0,0,42050), (112606,0,0,1,0,0,0,42047), (112607,0,0,1,0,0,0,55810);
+
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=1433 AND `point`=36;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=2983 AND `point`=31;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=17635 AND `point`=14;
+DELETE FROM creature_movement_template WHERE `point`=15 AND entry=17635;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=15553 AND `point`=5;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=15552 AND `point`=2 AND pathId=1;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=15552 AND `point`=5 AND pathId=0;
+DELETE FROM creature_movement_template WHERE `point`=6 AND entry=15552;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=17682 AND `point`=8;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=5901 AND `point`=6;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=17243 AND `point`=18;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=19170 AND `point`=7 AND pathId=2;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=19170 AND `point`=7 AND pathId=3;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=19170 AND `point`=7 AND pathId=4;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=19170 AND `point`=8 AND pathId=5;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=19170 AND `point`=8 AND pathId=6;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=19170 AND `point`=8 AND pathId=7;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=1481 AND `point`=3 AND pathId=3;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=1483 AND `point`=5 AND pathId=1;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=22980 AND `point`=26 AND pathId=4;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=22980 AND `point`=1 AND pathId=4;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=22980 AND `point`=14 AND pathId=1;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=17647 AND `point`=14;
+DELETE FROM creature_movement_template WHERE `point`=15 AND entry=17647;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=17995 AND `point`=14;
+DELETE FROM creature_movement_template WHERE `point`=15 AND entry=17995;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=17996 AND `point`=14;
+DELETE FROM creature_movement_template WHERE `point`=15 AND entry=17996;
