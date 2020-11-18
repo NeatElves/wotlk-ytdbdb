@@ -25028,3 +25028,37 @@ UPDATE creature_movement_template SET waittime=1000 WHERE entry=17995 AND `point
 DELETE FROM creature_movement_template WHERE `point`=15 AND entry=17995;
 UPDATE creature_movement_template SET waittime=1000 WHERE entry=17996 AND `point`=14;
 DELETE FROM creature_movement_template WHERE `point`=15 AND entry=17996;
+UPDATE creature_movement_template SET script_id=2210201 WHERE entry=22102 AND `point`=7 AND pathId BETWEEN 1 AND 3;
+UPDATE creature_movement_template SET waittime=0, script_id=0 WHERE entry=22102 AND `point`=6 AND pathId BETWEEN 1 AND 3;
+UPDATE creature_movement_template SET script_id=2210201 WHERE entry=22102 AND `point`=10;
+UPDATE creature_movement_template SET waittime=0, script_id=0 WHERE entry=22102 AND `point`=9;
+UPDATE creature_movement_template SET waittime=1000 WHERE entry=22102 AND script_id=2210201;
+
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(42088, 19547, 1, 1, 1, 1268.82, -300.327, 6.23046, -0.977384, 0, 0, -0.469471, 0.882948, 300, 300, 100, 1),
+(42089, 19547, 1, 1, 1, 1432.74, 49.0701, 21.7349, 2.02458, 0, 0, 0.848048, 0.52992, 300, 300, 100, 1),
+(42090, 19547, 1, 1, 1, 1169.03, 49.4346, -0.828489, -0.767945, 0, 0, -0.374607, 0.927184, 300, 300, 100, 1),
+(42781, 19590, 1, 1, 1, 1168.98, 49.815, -3.28093, 2.47837, 0, 0, 0.945519, 0.325567, 300, 300, 100, 1),
+(1776, 20899, 1, 1, 1, 1048.63, -440.455, 3.94077, 2.1293, 0, 0, 0.874619, 0.48481, 300, 300, 100, 1),
+(15005, 19600, 1, 1, 1, 1049.96, -442.421, 3.39679, 0.558505, 0, 0, 0.275637, 0.961262, 300, 300, 100, 1),
+(42780, 19590, 1, 1, 1, 1048.91, -440.569, 4.021, -2.86234, 0, 0, -0.990268, 0.139173, 300, 300, 100, 1),
+(5175, 19591, 1, 1, 1, 1166.8, 51.1317, -0.971587, -2.46091, 0, 0, -0.942641, 0.333809, 300, 300, 100, 1),
+(9670, 19592, 1, 1, 1, 1049.03, -442.099, 4.80105, 5.14872, 0, 0, -0.537299, 0.843392, -300, -300, 0, 0),
+(18969, 19601, 1, 1, 1, 1168.32, 50.7767, 0.041739, 4.97862, 0, 0, 0.607002, -0.794701, -300, -300, 0, 0);
+DELETE FROM dbscripts_on_event WHERE id IN (693, 694);
+INSERT INTO `dbscripts_on_event` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(693, 0, 0, 9, 9670, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Set NG-5 Charge (Red) - Respawn GO NG5 Explosive (Red)'),
+(694, 0, 0, 9, 18969, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Set NG-5 Charge (Blue) - Respawn GO NG5 Explosive (Blue)');
+DELETE FROM dbscripts_on_event WHERE id IN (691, 692);
+INSERT INTO `dbscripts_on_event` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(691, 0, 0, 40, 0, 0, 0, 19592, 50, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remote Detonate GO NG5 Explosive (Red) - Despawn NG5 Explosive (Red)'),
+(691, 0, 0, 40, 0, 0, 0, 19600, 50, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remote Detonate GO NG5 Explosive (Red) - Despawn Spell Focus (Red)'),
+(691, 0, 0, 13, 0, 0, 0, 20899, 50, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remote Detonate GO NG5 Explosive (Red) - Activate Venture Co. Wagon (Red)'),
+(691, 0, 0, 13, 0, 0, 0, 19590, 50, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remote Detonate GO NG5 Explosive (Red) - Activate Venture Co. Wagon Trap'),
+(692, 0, 0, 40, 0, 0, 0, 19601, 50, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remote Detonate GO NG5 Explosive (Blue) - Despawn NG5 Explosive (Blue)'),
+(692, 0, 0, 40, 0, 0, 0, 19591, 50, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remote Detonate GO NG5 Explosive (Blue) - Despawn Spell Focus (Blue)'),
+(692, 0, 0, 13, 0, 0, 0, 19547, 50, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remote Detonate GO NG5 Explosive (Blue) - Activate Venture Co. Wagon (Blue)'),
+(692, 0, 0, 13, 0, 0, 0, 19590, 50, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remote Detonate GO NG5 Explosive (Blue) - Activate Venture Co. Wagon Trap');
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(3941, 19602, 1, 1, 1, 1245.09, 18.2578, -4.65858, 2.26893, 0, 0, 0.906308, 0.422617, 2, 2, 100, 1),
+(55587, 19603, 1, 1, 1, 985.849, -390.181, 9.57425, 1.79769, 0, 0, 0.782608, 0.622514, 2, 2, 100, 1);
