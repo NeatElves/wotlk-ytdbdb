@@ -25062,3 +25062,17 @@ INSERT INTO `dbscripts_on_event` (`id`, `delay`, `priority`, `command`, `datalon
 REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
 (3941, 19602, 1, 1, 1, 1245.09, 18.2578, -4.65858, 2.26893, 0, 0, 0.906308, 0.422617, 2, 2, 100, 1),
 (55587, 19603, 1, 1, 1, 985.849, -390.181, 9.57425, 1.79769, 0, 0, 0.782608, 0.622514, 2, 2, 100, 1);
+
+DELETE FROM dbscripts_on_creature_movement WHERE id = 817;
+UPDATE creature_template SET MinLootGold = 600000, MaxLootGold = 700000, MechanicImmuneMask = 617299839 WHERE entry = 39746;
+UPDATE creature_template SET UnitFlags = 33587520, MinLootGold = 1500000, MaxLootGold = 1750000, MechanicImmuneMask = 617299839 WHERE entry = 39805;
+UPDATE creature_template SET MinLootGold = 600000, MaxLootGold = 700000, MechanicImmuneMask = 617299839 WHERE entry = 39747;
+UPDATE creature_template SET MinLootGold = 1500000, MaxLootGold = 1750000, MechanicImmuneMask = 617299839 WHERE entry = 39823;
+UPDATE creature_template SET MinLootGold = 600000, MaxLootGold = 700000, MechanicImmuneMask = 617299839, MovementType = 2 WHERE entry = 39751;
+UPDATE creature_template SET MechanicImmuneMask = 617299839 WHERE entry = 39899;
+UPDATE creature_template SET MinLootGold = 1500000, MaxLootGold = 1750000, MechanicImmuneMask = 617299839 WHERE entry = 39920;
+UPDATE creature_template SET MechanicImmuneMask = 617299839 WHERE entry = 39922;
+UPDATE creature_template SET UnitClass = 8 WHERE entry IN (40417,40418);
+UPDATE creature_template SET UnitFlags = 33555200 WHERE Entry IN (40626,40627,40628);
+UPDATE creature_template SET MechanicImmuneMask = 617299839, MinLootGold = 2000000, MaxLootGold = 2250000 WHERE Entry IN (39863,39864,39944,39945);
+UPDATE creature_template SET MechanicImmuneMask = 617299839 WHERE entry IN (40142,40143,40144,40145);

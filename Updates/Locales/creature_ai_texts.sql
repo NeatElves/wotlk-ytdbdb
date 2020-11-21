@@ -2688,6 +2688,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Победу Альянсу!' W
 UPDATE `creature_ai_texts` SET `content_loc8` = 'ЧУЖАКИ! УБЕЙТЕ ИХ!' WHERE `entry` = -20961;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'ГАДЫ ИЗ АЛЬЯНСА! УМРИТЕ! УМРИТЕ!' WHERE `entry` = -20962;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Снесите им головы! За Орду!' WHERE `entry` = -20963;
+UPDATE `creature_ai_texts` SET `content_loc8` = '%s вдохновляет других участников сражения боевым кличем!' WHERE `entry` = -20964;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
