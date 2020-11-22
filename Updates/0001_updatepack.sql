@@ -25076,3 +25076,22 @@ UPDATE creature_template SET UnitClass = 8 WHERE entry IN (40417,40418);
 UPDATE creature_template SET UnitFlags = 33555200 WHERE Entry IN (40626,40627,40628);
 UPDATE creature_template SET MechanicImmuneMask = 617299839, MinLootGold = 2000000, MaxLootGold = 2250000 WHERE Entry IN (39863,39864,39944,39945);
 UPDATE creature_template SET MechanicImmuneMask = 617299839 WHERE entry IN (40142,40143,40144,40145);
+
+UPDATE creature_template_addon SET auras = NULL WHERE entry IN (30680,30681,30682);
+UPDATE creature_template SET InhabitType = 4 WHERE entry = 30648;
+UPDATE `creature_template` SET `MinLevel` = '83', `MaxLevel` = '83', `Expansion` = '2', `MinLevelHealth` = '5808', `MaxLevelHealth` = '5808', `MinMeleeDmg` = '509', `MaxMeleeDmg` = '683', `MinRangedDmg` = '371', `MaxRangedDmg` = '535', `Armor` = '10673', `MeleeAttackPower` = '805', `RangedAttackPower` = '135' WHERE `Entry` IN (30494,30648);
+UPDATE `creature_template` SET `MinLevel` = '80', `MaxLevel` = '80', `Expansion` = '2', `MinLevelHealth` = '37800', `MaxLevelHealth` = '37800', `MinMeleeDmg` = '422', `MaxMeleeDmg` = '586', `MinRangedDmg` = '345', `MaxRangedDmg` = '509', `Armor` = '9729', `MeleeAttackPower` = '642', `RangedAttackPower` = '103' WHERE `Entry` =31103;
+UPDATE `creature_template` SET `MinLevel` = '80', `MaxLevel` = '80', `Expansion` = '2', `MinLevelHealth` = '12600', `MaxLevelHealth` = '12600', `MinMeleeDmg` = '422', `MaxMeleeDmg` = '586', `MinRangedDmg` = '345', `MaxRangedDmg` = '509', `Armor` = '9729', `MeleeAttackPower` = '642', `RangedAttackPower` = '103' WHERE `Entry` =31138;
+
+DELETE FROM game_tele WHERE id BETWEEN 1500 AND 1529;
+INSERT INTO game_tele(id, position_x, position_y, position_z, orientation, map, name) VALUES
+(1500,160.67,-83.63,12.55,0.3,574,'UK'), (1501,160.67,-83.63,12.55,0.3,574,'UTK'), (1502,145.61,-5.03,-16.64,6.2,576,'NEX'),
+(1504,422.47,787.77,828.26,5.7,601,'AZN'), (1505,422.47,787.77,828.26,5.7,601,'AN'), (1506,338.90,-1106.79,65.19,0.6,619,'ANK'),
+(1507,338.90,-1106.79,65.19,0.6,619,'OLD'), (1508,338.90,-1106.79,65.19,0.6,619,'AKO'), (1509,338.90,-1106.79,65.19,0.6,619,'OK'),
+(1510,-517.01,-492.41,11.02,4.8,600,'DTK'), (1511,1822.06,803.60,44.36,0,608,'VH'), (1512,1890.01,646.39,176.67,4.1,604,'GD'),
+(1513,1153.24,800.64,195.94,4.7,599,'HOS'), (1514,1331.77,250.64,52.99,4.7,602,'HOL'), (1515,1055.93,986.85,361.07,5.7,578,'Occ'),
+(1516,576.16,-327.27,110.14,3,575,'UP'), (1517,1434.52,548.92,35.94,5.2,595,'COS'), (1518,803.86,618.03,412.39,3.1,650,'ToC'),
+(1519,5243.43,1937.14,707.695,0.8,668,'HoR'), (1520,437.03,213.44,528.71,0.1,658,'PoS'), (1521,4920.83,2178.75,638.73,1.9,632,'FoS'),
+(1522,3229.24,393.31,62.22,1.5,615,'OS'), (1523,-499.93,-103.51,153.76,0,624,'VoA'), (1524,732.87,1324.93,267.23,5.5,616,'EoE'),
+(1525,-903.641,-148.94,459.97,6.3,603,'Uldu'), (1526,563.698,83.9,395.147,1.6,649,'TC'), (1527,563.698,83.9,395.147,1.6,649,'ToC'),
+(1528,66.31,2211.6,30,3.1,631,'ICC'), (1529,3271.07,533.46,87.66,3.1,724,'RS');
