@@ -24926,11 +24926,11 @@ DELETE FROM creature_movement WHERE id = 113887;
 INSERT INTO creature_movement (id, point, position_x, position_y, position_z, orientation, waittime, script_id) VALUES
 (113887,1,4917.72,1228.6,226.005,3.92699,100,11),
 (113887,2,4917.72,1228.6,226.005,3.92699,100,3);
-DELETE FROM dbscripts_on_relay WHERE id = 20448;
+DELETE FROM dbscripts_on_relay WHERE id = 20451;
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(20448,0,0,0,0,0,0,0,0x04,2000003788,0,0,0,0,0,0,0,'Part of Taunka Huntsman EAI: say'),
-(20448,4999,31,27573,7,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Taunka Huntsman EAI: say'),
-(20448,5000,0,0,0,0,27573,7,7,2000003789,0,0,0,0,0,0,0,'Part of Taunka Huntsman EAI: buddy say');
+(20451,0,0,0,0,0,0,0,0x04,2000003788,0,0,0,0,0,0,0,'Part of Taunka Huntsman EAI: say'),
+(20451,4999,31,27573,7,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Taunka Huntsman EAI: say'),
+(20451,5000,0,0,0,0,27573,7,7,2000003789,0,0,0,0,0,0,0,'Part of Taunka Huntsman EAI: buddy say');
 DELETE FROM dbscript_string WHERE entry BETWEEN 2000003788 AND 2000003789;
 INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
 (2000003788,'These kodo are in amazing condition.',0,0,1,1,NULL),
@@ -25095,3 +25095,7 @@ INSERT INTO game_tele(id, position_x, position_y, position_z, orientation, map, 
 (1522,3229.24,393.31,62.22,1.5,615,'OS'), (1523,-499.93,-103.51,153.76,0,624,'VoA'), (1524,732.87,1324.93,267.23,5.5,616,'EoE'),
 (1525,-903.641,-148.94,459.97,6.3,603,'Uldu'), (1526,563.698,83.9,395.147,1.6,649,'TC'), (1527,563.698,83.9,395.147,1.6,649,'ToC'),
 (1528,66.31,2211.6,30,3.1,631,'ICC'), (1529,3271.07,533.46,87.66,3.1,724,'RS');
+
+UPDATE `creature_template` SET `InhabitType`=4, `MovementType`=0 WHERE `Entry`=22400;
+UPDATE `creature` SET `spawndist`=0, `MovementType`=0 WHERE `id`=22400;
+UPDATE creature_template_addon SET moveflags=0, auras=NULL WHERE entry IN (29308,29310);

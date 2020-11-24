@@ -119,7 +119,9 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (47447,'spell_corrosive_spit'),
 (48268,'spell_container_of_rats'),
 (48397,'spell_drop_off_villager'),
-(49099,'spell_army_of_the_dead');
+(49099,'spell_army_of_the_dead'),
+(55931,'spell_conjure_flame_sphere'),
+(57283,'spell_remove_mushroom_power');
 
 -- Hunter
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
