@@ -220,7 +220,8 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (86875,13,1179.5,1014.78,361.07,0,0,4.42555),
 (86875,14,1173.92,1002.97,361.07,0,0,4.12394);
 
--- INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES
+INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES
+(28166,578,27654,16+4096,50);
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 -- Centrifuge Construct / Ring-Lord Sorcerress / Ring-Lord Conjurer

@@ -25099,3 +25099,39 @@ INSERT INTO game_tele(id, position_x, position_y, position_z, orientation, map, 
 UPDATE `creature_template` SET `InhabitType`=4, `MovementType`=0 WHERE `Entry`=22400;
 UPDATE `creature` SET `spawndist`=0, `MovementType`=0 WHERE `id`=22400;
 UPDATE creature_template_addon SET moveflags=0, auras=NULL WHERE entry IN (29308,29310);
+
+DELETE FROM dbscripts_on_spell WHERE id=9096;
+INSERT INTO `dbscripts_on_spell` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(9096, 0, 0, 15, 9738, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rift Spawn - cast Rift Spawn Becomes Visible');
+DELETE FROM dbscripts_on_spell WHERE id=21917;
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(21917, 25000, 7, 7046, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Celebras Stone Trap - Give quest completion');
+
+UPDATE `creature_template` SET `UnitFlags` = 33024 WHERE `entry` = 24933;
+
+# part 14019_01_mangos_ability_sets
+ALTER TABLE creature_template_spells ADD COLUMN `setId` INT UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Id of set of spells' AFTER `entry`;
+ALTER TABLE creature_template_spells DROP PRIMARY KEY, ADD PRIMARY KEY(entry, setId);
+
+DELETE FROM creature_template_spells WHERE entry IN (27692,27755,27756);
+INSERT INTO creature_template_spells (entry,setId,spell1,spell2,spell3,spell6) VALUES
+(27692,1,50328,50341,50344,53389),
+(27755,1,49840,49838,49592,53389),
+(27756,1,50232,50240,50253,53389),
+(27692,0,50328,50341,0,53389),
+(27755,0,49840,49838,0,53389),
+(27756,0,50232,50240,0,53389);
+
+UPDATE `gameobject_template` SET `faction` = 114 WHERE `entry` = 184640;
+DELETE FROM spell_script_target WHERE entry=16074;
+INSERT INTO spell_script_target (entry, type, targetEntry, inverseEffectMask) VALUES (16074, 1, 10263, 0);
+
+UPDATE creature_template SET UnitFlags = 2181300992 WHERE Entry = 25075;
+UPDATE creature_template SET UnitFlags = 768 WHERE Entry IN (31720,31723,31724);
+DELETE FROM dbscripts_on_relay WHERE id IN (20452,20453);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20452,0,1,69,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 31720/31723/31724 EAI: emote 69'),
+(20452,15000,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 31720/31723/31724 EAI: emote 0'),
+(20453,0,1,233,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 31720/31723/31724 EAI: emote 233'),
+(20453,15000,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 31720/31723/31724 EAI: emote 0');
+UPDATE creature_template SET UnitFlags = 768 WHERE Entry = 31725;
