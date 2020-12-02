@@ -3307,7 +3307,7 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (9010, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Тарук велел мне забрать у тебя должок.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9010, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ты продаешь что-нибудь такое?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9013, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '<Тщательно обыскать карманы пирата в поисках денег для уплаты долга.>', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(9014, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Вот твое золото. Купи себе какую-нибудь побрякушку.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(9014, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Вот твое золото. Купи себе какую-нибудь побрякушку.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Вы уверены, что хотите подкупить Ольгу?'),
 (9015, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Слушай, налей-ка Джеку что-нибудь за мой счет. Что-нибудь... покрепче.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9016, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ну а если я пить не люблю, что тогда?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (9017, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Церемония открытия нового бочонка', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
