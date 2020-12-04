@@ -26207,6 +26207,7 @@ INSERT INTO gossip_menu (entry,text_id,script_id,condition_id) VALUES (10195, 14
 DELETE FROM creature_template_spells WHERE entry = 24418;
 INSERT INTO creature_template_spells (entry, setId, spell1, spell2, spell3, spell4, spell5) VALUES
 (24418,0,43770,0,0,0,0), (24418,1,43799,43769,44009,0,0);
+DELETE FROM dbscripts_on_spell WHERE id IN (43770,43789);
 DELETE FROM vehicle_accessory WHERE vehicle_entry = 25968;
 INSERT INTO vehicle_accessory (vehicle_entry, seat, accessory_entry, comment) VALUES
 (25968,0,25801,'Nedar, Lord of Rhinos on "Lunchbox"');
@@ -26233,3 +26234,32 @@ UPDATE `gossip_menu_option` SET `box_text` = NULL WHERE `menu_id` =593 AND `id` 
 UPDATE `gossip_menu_option` SET `box_text` = NULL WHERE `menu_id` =593 AND `id` =2;
 UPDATE `gossip_menu_option` SET `box_text` = NULL WHERE `menu_id` =590 AND `id` =0;
 UPDATE `gossip_menu_option` SET `box_text` = NULL WHERE `menu_id` =9603 AND `id` =0;
+
+DELETE FROM dbscripts_on_spell WHERE id = 48363;
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(48363,10,35,5,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(48363,1000,46,43671,0,0,0,0,0x02,2,0,0,0,0,0,0,0,'cast 43671 with seat selection');
+
+DELETE FROM dbscripts_on_quest_start WHERE id IN (11390,11391);
+INSERT INTO dbscripts_on_quest_start (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(11391,2,10,15214,15000,0,0,0,0x08,0,0,0,0,2046.149,-3221.081,60.13985,6.230825,'Summon Invisible Stalker');
+UPDATE quest_template SET StartScript = 0 WHERE entry = 11390;
+UPDATE quest_template SET StartScript = 11391 WHERE entry = 11391;
+DELETE FROM dbscripts_on_gossip WHERE id = 895400;
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(895400,0,15,45973,0,0,0,0,0,0,0,0,0,0,0,0,0,'');
+UPDATE creature SET position_x = 1980.004, position_y = -3264.764, position_z = 134.8941, orientation = 6.143559 WHERE guid = 105962;
+UPDATE creature SET position_x = 1970.854, position_y = -3265.108, position_z = 134.7769, orientation = 6.143559 WHERE guid = 105961;
+UPDATE creature SET spawndist = 0, MovementType = 2 WHERE guid IN (105961,105962);
+DELETE FROM creature_movement WHERE id IN (105962,105961);
+INSERT INTO creature_movement (id, point, position_x, position_y, position_z, waittime, script_id, orientation) VALUES
+(105961,1,1970.854,-3265.108,134.7769,30000,1521403,6.143559),
+(105962,1,1980.004,-3264.764,134.8941,30000,1521403,6.143559);
+DELETE FROM dbscripts_on_creature_movement WHERE id = 1521403;
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1521403,1,31,24418,5,0,0,0,0x08,0,0,0,0,0,0,0,0,'search for 24418'),
+(1521403,2,15,45973,0,0,0,0,0,0,0,0,0,0,0,0,0,'');
+DELETE FROM dbscripts_on_spell WHERE id = 71694;
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(71694,800,34,556,11390,0,0,0,6 |0x08,0,0,0,0,0,0,0,0,'Player check: must be in q.11390'),
+(71694,2000,15,43806,0,0,0,0,6,0,0,0,0,0,0,0,0,'Player Cast: Kill Credit: Deliver Sack');
