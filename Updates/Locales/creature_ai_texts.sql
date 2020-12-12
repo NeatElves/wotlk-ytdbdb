@@ -2358,7 +2358,6 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Грязный, вонючий 
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Никому не дозволено красть лошадей Китрика!' WHERE `entry` = -20629;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Скоро ты будешь болтаться на виселице...' WHERE `entry` = -20630;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Скольких еще из вас мне нужно отправить Королю-личу разрезанными на куски, пока он не одумается?' WHERE `entry` = -20631;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'И плачевно...' WHERE `entry` = -20632;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Смерть – единственный выход!' WHERE `entry` = -20633;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я голоден...' WHERE `entry` = -20634;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Мне нужно есть...' WHERE `entry` = -20635;
@@ -2690,6 +2689,15 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'ГАДЫ ИЗ АЛЬЯНСА! �
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Снесите им головы! За Орду!' WHERE `entry` = -20963;
 UPDATE `creature_ai_texts` SET `content_loc8` = '%s вдохновляет других участников сражения боевым кличем!' WHERE `entry` = -20964;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Стражи выводка явились!' WHERE `entry` = -20965;
+UPDATE `creature_ai_texts` SET `content_loc8` = '%s выгибается, как бы приглашая вас сесть себе на спину.' WHERE `entry` = -20966;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Только один из нас может покинуть этот мир!' WHERE `entry` = -20967;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'И это все? Это лучшее, что Саланар смог выставить против меня?' WHERE `entry` = -20968;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Давай, слабак! Попробуй меня достать!' WHERE `entry` = -20969;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Ты никогда не вернешься в мир живых!' WHERE `entry` = -20970;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Еще одно ничтожество решило, будто может победить Темного всадника Акеруса!' WHERE `entry` = -20971;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Сдавайся, чужак!' WHERE `entry` = -20972;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Я чую запах страха.' WHERE `entry` = -20973;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Жалкое зрелище...' WHERE `entry` = -20974;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

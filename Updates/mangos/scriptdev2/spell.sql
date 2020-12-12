@@ -128,6 +128,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 
 -- Wotlk
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(42912,'spell_summon_banshee'),
 (43768,'spell_flying_machine_controls'),
 (43770,'spell_grappling_hook'),
 (43789,'spell_grappling_beam'),
@@ -138,6 +139,9 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (48268,'spell_container_of_rats'),
 (48397,'spell_drop_off_villager'),
 (49099,'spell_army_of_the_dead'),
+(51519,'spell_death_knight_initiate_visual'),
+(51769,'spell_emblazon_runeblade_aura'),
+(51770,'spell_emblazon_runeblade'),
 (55931,'spell_conjure_flame_sphere'),
 (57283,'spell_remove_mushroom_power'),
 (73159,'spell_play_movie');
