@@ -26378,8 +26378,8 @@ UPDATE gameobject_template SET Faction=35 WHERE entry=179673;
 UPDATE gameobject_template SET Faction=35 WHERE entry=179674;
 UPDATE creature_template SET Faction=90 WHERE Entry=14482;
 UPDATE creature_template SET Faction=90 WHERE Entry=14483;
-UPDATE gameobject_template SET ExtraFlags=0x00040000 WHERE entry IN(183788);
-UPDATE gameobject_template SET ExtraFlags=0x00040000 WHERE entry IN(176080,176081,176082,176083,176084,176085);
+#UPDATE gameobject_template SET ExtraFlags=0x00040000 WHERE entry IN(183788);
+#UPDATE gameobject_template SET ExtraFlags=0x00040000 WHERE entry IN(176080,176081,176082,176083,176084,176085);
 
 UPDATE creature_template_addon SET mount = 0 WHERE entry = 28768;
 DELETE FROM dbscripts_on_creature_death WHERE id = 28768;
@@ -26714,3 +26714,17 @@ REPLACE INTO spell_script_target(entry, type, targetEntry, inverseEffectMask) VA
 UPDATE `creature_template` SET `Faction` = 14 WHERE `Entry` =23055;
 UPDATE `creature_template` SET `MovementType` = 1 WHERE `Entry` =19568;
 
+DELETE FROM dbscripts_on_spell WHERE id = 52264;
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(52264,0,15,52266,1,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(52264,1000,37,0,0,0,28654,20,0,0,0,0,0,0,0,0,0,''),
+(52264,2000,14,52263,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(52264,5000,15,52267,0,0,28654,20,3,0,0,0,0,0,0,0,0,''),
+(52264,6000,0,0,0,0,28654,20,3,2000001418,0,0,0,0,0,0,0,'');
+DELETE FROM dbscripts_on_relay WHERE id = 20045;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20045,1000,31,28654,50,0,0,0,8,0,0,0,0,0,0,0,0,'terminate if 28654 is alive'),
+(20045,1500,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'despawn self');
+
+DELETE FROM spell_script_target WHERE entry = 51904;
+INSERT INTO spell_script_target VALUES (51904,1,28529,0), (51904,1,28662,0);
