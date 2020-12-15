@@ -2698,6 +2698,14 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Еще одно ничтоже�
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Сдавайся, чужак!' WHERE `entry` = -20972;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я чую запах страха.' WHERE `entry` = -20973;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Жалкое зрелище...' WHERE `entry` = -20974;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Да продлятся твои страдания, рыцарь смерти...' WHERE `entry` = -20975;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'За Короля-лича!' WHERE `entry` = -20976;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Сразите их во имя Плети!' WHERE `entry` = -20977;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Продли их мучения, рыцарь смерти!' WHERE `entry` = -20978;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Пусть их священникам нечего будет воскрешать!' WHERE `entry` = -20979;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Принеси мне их плоть...' WHERE `entry` = -20980;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Живым не будет пощады!' WHERE `entry` = -20981;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Слабым не будет пощады!' WHERE `entry` = -20982;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
