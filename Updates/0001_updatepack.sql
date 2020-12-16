@@ -26501,6 +26501,43 @@ UPDATE creature_template SET MovementType=3 WHERE entry IN(21424);
 UPDATE creature SET MovementType=3 WHERE id IN(20127);
 UPDATE creature SET MovementType=3 WHERE id IN(18257);
 UPDATE creature SET MovementType=3 WHERE id IN(21153);
+DELETE FROM creature WHERE guid IN (72940,72947,72962,72969,72990,72998,73007);
+DELETE FROM creature_addon WHERE guid IN (72917,72940,72947,72962,72969,72990,72998,73007);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(72917, 21153, 530, 1, 1, 0, 0, -3180.17, 2623.67, 141.622, 3.43878, 300, 300, 0, 0, 17742, 0, 0, 3);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(72917, 1, -3045.57, 2592.94, 140.845, 0, 0, 2115301, NULL),
+(72917, 2, -3046.09, 2591.68, 139.928, 0, 0, 0, NULL),
+(72917, 3, -3028.98, 2582, 141.622, 0, 0, 0, NULL),
+(72917, 4, -3014.28, 2567.43, 141.622, 0, 0, 0, NULL),
+(72917, 5, -2997.18, 2547.18, 141.622, 0, 0, 0, NULL),
+(72917, 6, -2975.06, 2527.35, 141.622, 0, 0, 0, NULL),
+(72917, 7, -2944.82, 2526, 141.622, 0, 0, 0, NULL),
+(72917, 8, -2925.33, 2546.51, 141.622, 0, 0, 0, NULL),
+(72917, 9, -2919.25, 2565.87, 141.622, 0, 0, 0, NULL),
+(72917, 10, -2920.08, 2589.36, 141.622, 0, 0, 0, NULL),
+(72917, 11, -2931.99, 2608.76, 141.622, 0, 0, 0, NULL),
+(72917, 12, -2955.63, 2618.87, 141.622, 0, 0, 0, NULL),
+(72917, 13, -2977.5, 2619.67, 141.622, 0, 0, 0, NULL),
+(72917, 14, -3014.67, 2609.54, 141.622, 0, 0, 0, NULL),
+(72917, 15, -3055.04, 2590.46, 141.622, 0, 0, 0, NULL),
+(72917, 16, -3085.54, 2571.63, 141.622, 0, 0, 0, NULL),
+(72917, 17, -3114.72, 2555.92, 141.622, 0, 0, 0, NULL),
+(72917, 18, -3143.01, 2552.03, 141.622, 0, 0, 0, NULL),
+(72917, 19, -3176.69, 2560.46, 141.622, 0, 0, 0, NULL),
+(72917, 20, -3190.57, 2587.82, 141.622, 0, 0, 0, NULL),
+(72917, 21, -3187.1, 2615.27, 141.622, 0, 0, 0, NULL),
+(72917, 22, -3164.5, 2634.34, 141.622, 0, 0, 0, NULL),
+(72917, 23, -3137.51, 2639.93, 141.622, 0, 0, 0, NULL),
+(72917, 24, -3099.44, 2633.7, 141.622, 0, 0, 0, NULL),
+(72917, 25, -3074.34, 2622.92, 141.622, 0, 0, 0, NULL),
+(72917, 26, -3057.4, 2608.77, 141.622, 0, 0, 0, NULL),
+(72917, 27, -3045.57, 2592.94, 140.845, 0, 0, 0, NULL),
+(72917, 28, -3046.09, 2591.68, 139.928, 0, 0, 0, NULL),
+(72917, 29, -3028.98, 2582, 141.622, 0, 0, 0, NULL);
+UPDATE creature_template_addon SET mount = 17719 WHERE entry =21153;
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(2115301, 0, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'RUN ON');
 UPDATE creature SET MovementType=3 WHERE id IN(21879);
 UPDATE creature SET MovementType=3 WHERE id IN(21648);
 INSERT INTO creature_spawn_data(Guid,Id) SELECT Guid, 3 FROM creature WHERE Id IN(21648);
