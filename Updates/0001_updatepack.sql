@@ -26378,8 +26378,8 @@ UPDATE gameobject_template SET Faction=35 WHERE entry=179673;
 UPDATE gameobject_template SET Faction=35 WHERE entry=179674;
 UPDATE creature_template SET Faction=90 WHERE Entry=14482;
 UPDATE creature_template SET Faction=90 WHERE Entry=14483;
-#UPDATE gameobject_template SET ExtraFlags=0x00040000 WHERE entry IN(183788);
-#UPDATE gameobject_template SET ExtraFlags=0x00040000 WHERE entry IN(176080,176081,176082,176083,176084,176085);
+UPDATE gameobject_template SET ExtraFlags=0x00001000 WHERE entry IN(183788);
+UPDATE gameobject_template SET ExtraFlags=0x00001000 WHERE entry IN(176080,176081,176082,176083,176084,176085);
 
 UPDATE creature_template_addon SET mount = 0 WHERE entry = 28768;
 DELETE FROM dbscripts_on_creature_death WHERE id = 28768;
@@ -27039,3 +27039,25 @@ INSERT INTO dbscript_string (entry, content_default, sound, type, language, emot
 (2000001583,'I have heard the call, my lord!',0,0,0,66,NULL),
 (2000003810,'A dozen will fall before I am slain!',0,0,0,66,NULL),
 (2000003811,'You will hear their cries from up here, my lord!',0,0,0,66,NULL);
+
+UPDATE creature_template SET MinLevel=55, MaxLevel=56 WHERE Entry = 28845;
+
+DELETE FROM spell_script_target WHERE entry = 49308;
+INSERT INTO spell_script_target VALUES (49308,1,28351,0);
+DELETE FROM creature_movement_template WHERE entry IN (26690,26691,26692);
+INSERT INTO creature_movement_template (entry, point, position_x, position_y, position_z, orientation) VALUES
+(26690,1,477.580,-484.558,104.738,4.759),
+(26690,2,478.309,-511.049,104.724,3.180),
+(26690,3,311.576,-509.201,104.407,3.180),
+(26691,1,477.580,-484.558,104.738,4.759),
+(26691,2,478.309,-511.049,104.724,3.180),
+(26691,3,311.576,-509.201,104.407,3.180),
+(26692,1,477.580,-484.558,104.738,4.759),
+(26692,2,478.309,-511.049,104.724,3.180),
+(26692,3,311.576,-509.201,104.407,3.180);
+
+UPDATE gameobject_template SET ExtraFlags = 4096 WHERE entry IN (194675);
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(33527, 194437, 603, 3, 1, 2307, 274.325, 424.288, 1.5708, 0, 0, 0.707108, 0.707106, 180, 180, 255, 1),
+(33529, 194912, 603, 3, 1, 2338.32, 2565.08, 419.246, 0, 0, 0, 0, 1, 180, 180, 255, 1),
+(33530, 194914, 603, 3, 1, 2277.42, 298.693, 419.246, 3.14159, 0, 0, 1, 0.00000126759, 180, 180, 255, 1);
