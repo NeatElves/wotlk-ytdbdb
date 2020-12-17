@@ -27098,3 +27098,30 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (33527, 194437, 603, 3, 1, 2307, 274.325, 424.288, 1.5708, 0, 0, 0.707108, 0.707106, 180, 180, 255, 1),
 (33529, 194912, 603, 3, 1, 2338.32, 2565.08, 419.246, 0, 0, 0, 0, 1, 180, 180, 255, 1),
 (33530, 194914, 603, 3, 1, 2277.42, 298.693, 419.246, 3.14159, 0, 0, 1, 0.00000126759, 180, 180, 255, 1);
+
+DELETE FROM spell_script_target WHERE entry = 49308;
+INSERT INTO spell_script_target VALUES (49308,1,28351,0);
+UPDATE gameobject SET spawnMask=0,position_x=0,position_y=-10.30644,position_z=0,orientation=1.570796 WHERE id IN(194437);
+
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (2861101,2861102);
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(2861101,0,31,28557,20,0,0,0,0,-15000,0,0,0,0,0,0,0,''),
+(2861101,100,3,0,700,0,0,0,0,0,0,0,0,2165.24,-5877.88,101.342,4.76026,''),
+(2861101,3000,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(2861101,3500,35,5,7,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(2861102,0,31,28557,20,0,0,0,0,-15000,0,0,0,0,0,0,0,''),
+(2861102,100,3,0,700,0,0,0,0,0,0,0,0,2144.43,-5724.82,100.802,0.60027,''),
+(2861102,3000,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(2861101,3500,35,5,7,0,0,0,0,0,0,0,0,0,0,0,0,'');
+DELETE FROM dbscripts_on_relay WHERE id = 20480;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20480,1000,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'PArt of Scarlet Peasant 28557 EAI: state emote - off'),
+(20480,3000,0,0,0,0,0,0,0,2000001085,2000002535,0,0,0,0,0,0,'PArt of Scarlet Peasant 28557 EAI: random say'),
+(20480,8000,1,234,0,0,0,0,0,0,0,0,0,0,0,0,0,'PArt of Scarlet Peasant 28557 EAI: emote');
+
+DELETE FROM spell_script_target WHERE entry  IN (52365,52528,53464,53465);
+INSERT INTO spell_script_target VALUES (52528,0,193183,0), (52365,0,193184,0), (53464,0,193182,0), (53465,0,193185,0);
+UPDATE gameobject_template SET ExtraFlags = 4096 WHERE entry IN (193183,193184,193182,193185);
+
+DELETE FROM spell_script_target WHERE entry IN (64030,64029,64024,65061);
+INSERT INTO spell_script_target VALUES (64030,3,139214,0), (64024,3,139210,0), (64029,3,139020,0), (65061,3,139280,0);

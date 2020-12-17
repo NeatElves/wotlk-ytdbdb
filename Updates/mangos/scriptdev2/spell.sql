@@ -33,11 +33,17 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (26137,'spell_cthun_rotate_trigger'),
 (26152,'spell_cthun_periodic_eye_trigger'),
 (26180,'spell_huhuran_wyvern_string'),
-(26398,'spell_cthun_hook_tentacle'),
+(26205,'spell_hook_tentacle_trigger'),
+(26217,'spell_cthun_tentacles_summon'),
+(26237,'spell_cthun_tentacles_summon'),
+(26332,'spell_cthun_mouth_tentacle'),
+(26398,'spell_cthun_tentacles_summon'),
 (26584,'spell_summon_toxic_slime'),
 (26591,'spell_teleport_image'),
 (26619,'spell_periodic_scarab_trigger'),
 (26686,'spell_aq_whirlwind'),
+(26767,'spell_cthun_tentacles_summon'),
+(26769,'spell_cthun_periodic_eye_trigger'),
 (28282,'spell_ashbringer_item');
 
 -- TBC
@@ -270,9 +276,16 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 -- Zangarmarsh
 (32433,'spell_outdoor_pvp_banner_trigger'),
 (32438,'spell_outdoor_pvp_banner_trigger'),
+-- Strand of the Ancients
+(52365,'spell_split_teleport_boat'),
+(52528,'spell_split_teleport_boat'),
+(53464,'spell_split_teleport_boat'),
+(53465,'spell_split_teleport_boat'),
 -- Isle of Conquest
 (35092,'spell_battleground_banner_trigger'),
 (65826,'spell_battleground_banner_trigger'),
 (65825,'spell_battleground_banner_trigger'),
+(66630,'spell_gunship_portal_click'),
+(66637,'spell_gunship_portal_click'),
 (66686,'spell_battleground_banner_trigger'),
 (66687,'spell_battleground_banner_trigger');
