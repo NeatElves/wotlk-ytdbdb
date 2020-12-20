@@ -3807,6 +3807,16 @@ UPDATE `dbscript_string` SET `content_loc8` = 'В атаку!' WHERE `entry` = 2
 UPDATE `dbscript_string` SET `content_loc8` = 'И сейчас ты умрешь' WHERE `entry` = 2000003809;
 UPDATE `dbscript_string` SET `content_loc8` = 'Я унесу с собой в могилу дюжину врагов!' WHERE `entry` = 2000003810;
 UPDATE `dbscript_string` SET `content_loc8` = 'Их вопли будут слышны даже здесь, мой повелитель!' WHERE `entry` = 2000003811;
+UPDATE `dbscript_string` SET `content_loc8` = 'Эй, ты! Продолжай следить за этими бастионами: вторгшиеся враги могут начать наступление в любой момент!' WHERE `entry` = 2000003812;
+UPDATE `dbscript_string` SET `content_loc8` = 'Есть, сэр! Я не подведу Орду Скверны!' WHERE `entry` = 2000003813;
+UPDATE `dbscript_string` SET `content_loc8` = 'Все, что вы знаете... ничего не останется.' WHERE `entry` = 2000003814;
+UPDATE `dbscript_string` SET `content_loc8` = 'У нас сколько угодно времени...' WHERE `entry` = 2000003815;
+UPDATE `dbscript_string` SET `content_loc8` = 'От нас не убежишь!' WHERE `entry` = 2000003816;
+UPDATE `dbscript_string` SET `content_loc8` = 'Не думайте, что можете победить!' WHERE `entry` = 2000003817;
+UPDATE `dbscript_string` SET `content_loc8` = 'Бурлит и пылает...' WHERE `entry` = 2000003818;
+UPDATE `dbscript_string` SET `content_loc8` = 'Сила! Еще, еще, еще!' WHERE `entry` = 2000003819;
+UPDATE `dbscript_string` SET `content_loc8` = 'Оп-па! Похоже, произведенный вами шум привлек нежелательное внимание!' WHERE `entry` = 2000003820;
+UPDATE `dbscript_string` SET `content_loc8` = 'Зззахватчики и зззаключенный! Убить их!' WHERE `entry` = 2000003821;
 UPDATE `dbscript_string` SET `content_loc8` = 'ВПЕРЕД!' WHERE `entry` = 2000005164;
 UPDATE `dbscript_string` SET `content_loc8` = 'Прибытие!' WHERE `entry` = 2000005165;
 UPDATE `dbscript_string` SET `content_loc8` = 'Эй, не зевай! У нас гости!' WHERE `entry` = 2000005166;

@@ -48,6 +48,26 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 
 -- TBC
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(42144,'spell_horseman_create_water_bucket'),
+(42074,'spell_horseman_fire'),
+(43885,'spell_horseman_maniacal_laugh'),
+(43884,'spell_horseman_maniacal_laugh_delayed'),
+(43886,'spell_horseman_maniacal_laugh_delayed'),
+(42140,'spell_horseman_start_fire_periodic'),
+(42143,'spell_horseman_start_fire_target_test'),
+(43711,'spell_horseman_start_fire_target_test'),
+(42132,'spell_horseman_start_fire'),
+(42079,'spell_horseman_start_fire'),
+(43715,'spell_horseman_start_fire'),
+(42637,'spell_horseman_conflagrate_periodic'),
+(42638,'spell_horseman_conflagrate_target_test'),
+(42339,'spell_bucket_lands'),
+(42348,'spell_fire_extinguish'),
+(42151,'spell_all_fires_out_test'),
+(43321,'spell_human_child_laughter'),
+(43324,'spell_orc_child_laughter'),
+(43323,'spell_human_child_crying'),
+(42178,'spell_invisible_campfire_remove'),
 (32811,'spell_greater_invisibility_mob'),
 (29969,'spell_summon_blizzard'),
 (29970,'spell_dispel_blizzard'),
@@ -158,8 +178,14 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (51976,'spell_siphon_of_acherus_credit'),
 (51979,'spell_siphon_of_acherus_credit'),
 (51981,'spell_siphon_of_acherus_credit'),
+(52479,'spell_gift_of_the_harvester'),
+(52519,'spell_ghoulplosion'),
+(52555,'spell_dispel_scarlet_ghoul_credit'),
 (52694,'spell_recall_eye_of_acherus'),
+(54148,'spell_ritual_of_the_sword'),
+(54205,'spell_svala_transforming'),
 (55931,'spell_conjure_flame_sphere'),
+(57082,'spell_crystal_spikes'),
 (57283,'spell_remove_mushroom_power'),
 (59275,'spell_summon_gauntlet_mobs_periodic_aura'),
 (73159,'spell_play_movie');
@@ -263,7 +289,6 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (70811,'spell_item_shaman_t10_elemental_2p_bonus');
 
 -- Battleground and Outdoor PvP
--- Alterac Valley
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
 -- Arathi basin
 (23936,'spell_battleground_banner_trigger'),
@@ -278,9 +303,19 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (32438,'spell_outdoor_pvp_banner_trigger'),
 -- Strand of the Ancients
 (52365,'spell_split_teleport_boat'),
+(52459,'spell_end_of_round'),
 (52528,'spell_split_teleport_boat'),
 (53464,'spell_split_teleport_boat'),
 (53465,'spell_split_teleport_boat'),
+-- Wintergrasp
+(56659,'spell_build_wintergrasp_vehicle'),
+(56662,'spell_build_wintergrasp_vehicle'),
+(56664,'spell_build_wintergrasp_vehicle'),
+(56666,'spell_build_wintergrasp_vehicle'),
+(56668,'spell_build_wintergrasp_vehicle'),
+(56670,'spell_build_wintergrasp_vehicle'),
+(58622,'spell_teleport_lake_wintergrasp'),
+(61409,'spell_build_wintergrasp_vehicle'),
 -- Isle of Conquest
 (35092,'spell_battleground_banner_trigger'),
 (65826,'spell_battleground_banner_trigger'),
@@ -288,4 +323,6 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (66630,'spell_gunship_portal_click'),
 (66637,'spell_gunship_portal_click'),
 (66686,'spell_battleground_banner_trigger'),
-(66687,'spell_battleground_banner_trigger');
+(66687,'spell_battleground_banner_trigger'),
+(68077,'spell_repair_cannon_aura'),
+(68078,'spell_repair_cannon');

@@ -2706,6 +2706,11 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Пусть их священн�
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Принеси мне их плоть...' WHERE `entry` = -20980;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Живым не будет пощады!' WHERE `entry` = -20981;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Слабым не будет пощады!' WHERE `entry` = -20982;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Йо-хо-хо, и бутылка гномского спирта!' WHERE `entry` = -20983;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Вот так!' WHERE `entry` = -20984;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Рома и девок всем пиратам!' WHERE `entry` = -20985;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Получи, сухопутная крыса!' WHERE `entry` = -20986;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Сокровище будет нашим!' WHERE `entry` = -20987;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
