@@ -2423,10 +2423,10 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Темная Госпожа с�
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Они убили сотни наших! Мы едва сумели уйти живыми! Помогите!' WHERE `entry` = -20695;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Вы обязаны нам помочь! Мы бездомные!' WHERE `entry` = -20696;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Не поделишься монеткой?' WHERE `entry` = -20697;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Твоя смотреть туда – там облако похоже на нашего вождя.' WHERE `entry` = -20698;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Там жук!' WHERE `entry` = -20699;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Летит корабль! Нет, гарпия!.. стоять, это опять птица.' WHERE `entry` = -20700;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Там птица!' WHERE `entry` = -20701;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Там жук!' WHERE `entry` = -20698;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Там птица!' WHERE `entry` = -20699;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Твоя смотреть туда – там облако похоже на нашего вождя.' WHERE `entry` = -20700;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Летит корабль! Нет, гарпия!.. стоять, это опять птица.' WHERE `entry` = -20701;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Нападай, Гроза Плети. Сейчас я покажу господину, кто из нас может называться чемпионом!' WHERE `entry` = -20702;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Ну и союзника ты выбрал, Крок!' WHERE `entry` = -20703;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Может быть... ты и прав, Крок.' WHERE `entry` = -20704;
