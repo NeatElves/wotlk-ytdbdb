@@ -3817,6 +3817,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Бурлит и пылает...' 
 UPDATE `dbscript_string` SET `content_loc8` = 'Сила! Еще, еще, еще!' WHERE `entry` = 2000003819;
 UPDATE `dbscript_string` SET `content_loc8` = 'Оп-па! Похоже, произведенный вами шум привлек нежелательное внимание!' WHERE `entry` = 2000003820;
 UPDATE `dbscript_string` SET `content_loc8` = 'Зззахватчики и зззаключенный! Убить их!' WHERE `entry` = 2000003821;
+UPDATE `dbscript_string` SET `content_loc8` = 'Все на борт! Заряжай пушки!' WHERE `entry` = 2000003822;
 UPDATE `dbscript_string` SET `content_loc8` = 'ВПЕРЕД!' WHERE `entry` = 2000005164;
 UPDATE `dbscript_string` SET `content_loc8` = 'Прибытие!' WHERE `entry` = 2000005165;
 UPDATE `dbscript_string` SET `content_loc8` = 'Эй, не зевай! У нас гости!' WHERE `entry` = 2000005166;
