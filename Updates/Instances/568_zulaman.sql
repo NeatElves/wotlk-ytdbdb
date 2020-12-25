@@ -1353,7 +1353,35 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 
 -- INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
 -- INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipment_id`, `spell_start`, `spell_end`, `event`) VALUES
--- INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
+
+INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
+(@OGUID+4, 12), -- Sitting Skeleton 01 (Hallow's End)
+(@OGUID+5, 12), -- Sitting Skeleton 011 (Hallow's End)
+(@OGUID+6, 12), -- Sitting Skeleton 01 (Hallow's End)
+(@OGUID+7, 12), -- Sitting Skeleton 01 (Hallow's End)
+(@OGUID+8, 12), -- Sitting Skeleton 01 (Hallow's End)
+(@OGUID+9, 12), -- Sitting Skeleton 01 (Hallow's End)
+(@OGUID+10, 12), -- Sitting Skeleton 01 (Hallow's End)
+(@OGUID+11, 12), -- Sitting Skeleton 04 (Hallow's End)
+(@OGUID+12, 12), -- Sitting Skeleton 04 (Hallow's End)
+(@OGUID+13, 12), -- Laying Skeleton 02 (Hallow's End)
+(@OGUID+14, 12), -- Laying Skeleton 02 (Hallow's End)
+(@OGUID+15, 12), -- Laying Skeleton 02 (Hallow's End)
+(@OGUID+16, 12), -- Laying Skeleton 02 (Hallow's End)
+(@OGUID+17, 12), -- Laying Skeleton 02 (Hallow's End)
+(@OGUID+18, 12), -- Laying Skeleton 02 (Hallow's End)
+(@OGUID+19, 12), -- Laying Skeleton 02 (Hallow's End)
+(@OGUID+20, 12), -- Laying Skeleton 02 (Hallow's End)
+(@OGUID+21, 12), -- Laying Skeleton 02 (Hallow's End)
+(@OGUID+22, 12), -- Laying Skeleton 02 (Hallow's End)
+(@OGUID+23, 12), -- Laying Skeleton 03 (Hallow's End)
+(@OGUID+24, 12), -- Laying Skeleton 03 (Hallow's End)
+(@OGUID+25, 12), -- Laying Skeleton 03 (Hallow's End)
+(@OGUID+26, 12), -- Laying Skeleton 03 (Hallow's End)
+(@OGUID+27, 12), -- Laying Skeleton 03 (Hallow's End)
+(@OGUID+28, 12), -- Laying Skeleton 03 (Hallow's End)
+(@OGUID+29, 12), -- Laying Skeleton 03 (Hallow's End)
+(@OGUID+30, 12); -- Laying Skeleton 03 (Hallow's End)
 
 -- =======
 -- POOLING
