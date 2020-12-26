@@ -35126,20 +35126,6 @@ DELETE FROM dbscripts_on_relay WHERE id IN (20050);
 UPDATE creature_template SET MinLevel = 81, MaxLevel = 81 WHERE entry = 30858;
 UPDATE creature_template SET MinLevel = 81, MaxLevel = 81 WHERE entry = 31546;
 
-DELETE FROM vehicle_accessory WHERE vehicle_entry IN (40081,40470,40471,40472);
-INSERT INTO vehicle_accessory (vehicle_entry, seat, accessory_entry, comment) VALUES
-(40081,0,40083, 'Orb Carrier - Shadow Orb 1'),
-(40081,1,40100, 'Orb Carrier - Shadow Orb 2'),
-(40470,0,40083, 'Orb Carrier - Shadow Orb 1'),
-(40470,1,40100, 'Orb Carrier - Shadow Orb 2'),
-(40471,0,40083, 'Orb Carrier - Shadow Orb 1'),
-(40471,1,40100, 'Orb Carrier - Shadow Orb 2'),
-(40471,2,40468, 'Orb Carrier - Shadow Orb 3'),
-(40471,3,40469, 'Orb Carrier - Shadow Orb 4'),
-(40472,0,40083, 'Orb Carrier - Shadow Orb 1'),
-(40472,1,40100, 'Orb Carrier - Shadow Orb 2'),
-(40472,2,40468, 'Orb Carrier - Shadow Orb 3'),
-(40472,3,40469, 'Orb Carrier - Shadow Orb 4');
 UPDATE creature_template SET RegenerateStats=12 WHERE entry IN (39863,39864,39944,39945,40142,40143,40144,40145);
 UPDATE creature_template SET VehicleTemplateId=746 WHERE entry IN (40471,40472);
 UPDATE creature_template SET UnitFlags=33554432 WHERE entry IN (40081,40470,40471,40472);
@@ -35156,7 +35142,7 @@ REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `posit
 DELETE FROM `gameobject` WHERE `guid` = 200000;
 
 UPDATE gameobject_template SET flags=48 WHERE entry=203624;
-UPDATE creature_template SET MovementType=2 WHERE entry=40091;
+UPDATE creature_template SET MovementType=2 WHERE entry IN (40091,43280,43281,43282);
 UPDATE creature_template SET Faction=14, UnitFlags=33554432, MinLevelHealth=3963, MaxLevelHealth=3963 WHERE entry IN (40029,40055);
 
 REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
@@ -42737,3 +42723,9 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (110489, 185455, 530, 1, 1, -1752.69, 5842.35, 146.44, 5.93412, 0, 0, -0.173648, 0.984808, 120, 120, 255, 1),
 (110490, 185457, 530, 1, 1, -1938.58, 5561.43, -12.4281, 0.471238, 0, 0, 0.233445, 0.97237, 120, 120, 255, 1);
 REPLACE INTO game_event_gameobject (guid, `event`) SELECT guid, 12 FROM gameobject WHERE id IN (180405,180406,180407,180408,180409,180410,180411,180412,180415,180425,180426,180427,180428,180429,180431,180432,180433,180434,180471,180472,180523,180570,180700,180766,185434,185435,185436,185437,185438,185454,185455,185456,185457,185458,186234,186614,186615,186720,189303,190034,190035,190037,190038,190039,190040,190041,190042,190043,190044,190045,190046,190047,190048,190049,190050,190051,190052,190053,190054,190055,190056,190057,190058,190059,190060,190061,190062,190063,190081,190100,190102,190104,190105,190106,190107,190108,190109,190110,190112,190113,190114,190115,190116,191882,194064,194071,194072,194081);
+
+DELETE FROM spell_script_target WHERE entry=75509;
+INSERT INTO spell_script_target VALUES (75509,1,40142,0), (75509,1,39863,0);
+UPDATE creature_template SET Faction=14, UnitFlags=33554432, MinLevel=80, MaxLevel=80, MinLevelHealth=4274, MaxLevelHealth=4274 WHERE entry IN (40041,40042,40043,40044,40055);
+
+UPDATE creature_template SET Faction=16 WHERE entry IN(25486,25483,25506,25484,25851,25837,25373);
