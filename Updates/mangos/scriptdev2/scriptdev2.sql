@@ -1004,8 +1004,6 @@ INSERT INTO scripted_areatrigger VALUES
 (5740,'at_frostworn_general'),
 (5605,'at_wrath_lich_king'),
 (5660,'at_queldelar_start');
-INSERT INTO scripted_event_id VALUES
-(22795,'event_spell_summon_ice_wall');
 
 /* PIT OF SARON */
 UPDATE instance_template SET ScriptName='instance_pit_of_saron' WHERE map=658;
@@ -1202,7 +1200,6 @@ UPDATE creature_template SET ScriptName='npc_commander_arcus' WHERE entry IN(234
 UPDATE instance_template SET ScriptName='instance_eye_of_eternity' WHERE map=616;
 UPDATE creature_template SET ScriptName='boss_malygos' WHERE entry=28859;
 UPDATE creature_template SET ScriptName='npc_power_spark' WHERE entry=30084;
-UPDATE creature_template SET ScriptName='npc_wyrmrest_skytalon' WHERE entry=30161;
 INSERT INTO scripted_event_id VALUES
 (20711,'event_go_focusing_iris');
 
@@ -6782,25 +6779,25 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 -- -1 616 000 EYE OF ETERNITY
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
 ('-1616000','Lesser beings, intruding here! A shame that your excess courage does not compensate for your stupidity!','14512','1','0','0','0','malygos SAY_INTRO_1'),
-('-1616001','None but the blue dragonflight are welcome here! Perhaps this is the work of Alexstrasza? Well then, she has sent you to your deaths.','14513','1','0','0','0','malygos SAY_INTRO_2'),
-('-1616002','What could you hope to accomplish, to storm brazenly into my domain? To employ MAGIC? Against ME? <Laughs>','14514','1','0','0','0','malygos SAY_INTRO_3'),
-('-1616003','I am without limits here... the rules of your cherished reality do not apply... In this realm, I am in control...','14515','1','0','0','0','malygos SAY_INTRO_4'),
-('-1616004','I give you one chance. Pledge fealty to me, and perhaps I won''t slaughter you for your insolence!','14516','1','0','0','0','malygos SAY_INTRO_5'),
-('-1616005','My patience has reached its limit, I WILL BE RID OF YOU!','14517','1','0','0','0','malygos SAY_AGGRO'),
-('-1616006','Watch helplessly as your hopes are swept away...','14525','1','0','0','0','malygos SAY_VORTEX'),
+('-1616001','None but the blue dragonflight are welcome here. Perhaps this is the work of Alexstrasza? Well, then, she has sent you to your deaths!','14513','1','0','0','0','malygos SAY_INTRO_2'),
+('-1616002','What could you hope to accomplish? To storm brazenly into my domain... to employ magic... against ME?','14514','1','0','0','0','malygos SAY_INTRO_3'),
+('-1616003','I am without limits here. The rules of your cherished reality do not apply. In this realm, I am in control!','14515','1','0','0','0','malygos SAY_INTRO_4'),
+('-1616004','I give you one chance. Pledge fealty to me, and perhaps I will not slaughter you for your insolence.','14516','1','0','0','0','malygos SAY_INTRO_5'),
+('-1616005','My patience has reached its limit. I will be rid of you!','14517','1','0','0','0','malygos SAY_AGGRO'),
+('-1616006','Watch helplessly as your hopes are swept away!','14525','1','0','0','0','malygos SAY_VORTEX'),
 ('-1616007','I AM UNSTOPPABLE!','14533','1','0','0','0','malygos SAY_SPARK_BUFF'),
 ('-1616008','Your stupidity has finally caught up to you!','14519','1','0','0','0','malygos SAY_SLAY_1_A'),
 ('-1616009','More artifacts to confiscate...','14520','1','0','0','0','malygos SAY_SLAY_1_B'),
 ('-1616010','<Laughs> How very... naive...','14521','1','0','0','0','malygos SAY_SLAY_1_C'),
-('-1616011','I had hoped to end your lives quickly, but you have proven more...resilient then I had anticipated. Nonetheless, your efforts are in vain, it is you reckless, careless mortals who are to blame for this war! I do what I must...And if it means your...extinction...THEN SO BE IT!','14522','1','0','0','0','malygos SAY_END_PHASE_1'),
+('-1616011','I had hoped to end your lives quickly, but you have proven more... resilient than I anticipated. Nonetheless, your efforts are in vain. It is you reckless, careless mortals who are to blame for this war. I do what I must, and if it means your extinction.... then SO BE IT!!','14522','1','0','0','0','malygos SAY_END_PHASE_1'),
 ('-1616012','Few have experienced the pain I will now inflict upon you!','14523','1','0','0','0','malygos SAY_START_PHASE_2'),
 ('-1616013','You will not succeed while I draw breath!','14518','1','0','0','0','malygos SAY_DEEP_BREATH'),
 ('-1616014','I will teach you IGNORANT children just how little you know of magic...','14524','1','0','0','0','malygos SAY_SHELL'),
 ('-1616015','Your energy will be put to good use!','14526','1','0','0','0','malygos SAY_SLAY_2_A'),
 ('-1616016','I am the spell-weaver! My power is infinite!','14527','1','0','0','0','malygos SAY_SLAY_2_B'),
 ('-1616017','Your spirit will linger here forever!','14528','1','0','0','0','malygos SAY_SLAY_2_C'),
-('-1616018','ENOUGH! If you intend to reclaim Azeroth''s magic, then you shall have it...','14529','1','0','0','0','malygos SAY_END_PHASE_2'),
-('-1616019','Now your benefactors make their appearance...But they are too late. The powers contained here are sufficient to destroy the world ten times over! What do you think they will do to you?','14530','1','0','0','0','malygos SAY_INTRO_PHASE_3'),
+('-1616018','ENOUGH! If you intend to reclaim Azeroth\'s magic, then you shall have it!','14529','1','0','0','0','malygos SAY_END_PHASE_2'),
+('-1616019','Now your benefactors make their appearance, but they are too late! The powers contained here are sufficient to destroy the world ten times over. What do you think they will do to you?','14530','1','0','0','0','malygos SAY_INTRO_PHASE_3'),
 ('-1616020','SUBMIT!','14531','1','0','0','0','malygos SAY_START_PHASE_3'),
 ('-1616021','Alexstrasza! Another of your brood falls!','14534','1','0','0','0','malygos SAY_SLAY_3_A'),
 ('-1616022','Little more then gnats!','14535','1','0','0','0','malygos SAY_SLAY_3_B'),
@@ -6809,11 +6806,11 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1616025','Still standing? Not for long...','14537','1','0','0','0','malygos SAY_SPELL_1'),
 ('-1616026','Your cause is lost!','14538','1','0','0','0','malygos SAY_SPELL_2'),
 ('-1616027','Your fragile mind will be shattered!','14539','1','0','0','0','malygos SAY_SPELL_3'),
-('-1616028','UNTHINKABLE! The mortals will destroy... e-everything... my sister... what have you-','14540','1','0','0','0','malygos SAY_DEATH'),
-('-1616029','I did what I had to, brother. You gave me no alternative.','14406','1','0','1','0','alextrasza SAY_OUTRO_1'),
-('-1616030','And so ends the Nexus War.','14407','1','0','1','0','alextrasza SAY_OUTRO_2'),
-('-1616031','This resolution pains me deeply, but the destruction, the monumental loss of life had to end. Regardless of Malygos'' recent transgressions, I will mourn his loss. He was once a guardian, a protector. This day, one of the world''s mightiest has fallen.','14408','1','0','1','0','alextrasza SAY_OUTRO_3'),
-('-1616032','The red dragonflight will take on the burden of mending the devastation wrought on Azeroth. Return home to your people and rest. Tomorrow will bring you new challenges, and you must be ready to face them. Life...goes on.','14409','1','0','1','0','alextrasza SAY_OUTRO_4'),
+('-1616028','Unthinkable! The mortals will destroy... everything! My sister, what have you...','14540','1','0','0','0','malygos SAY_DEATH'),
+('-1616029','REUSE ME','0','0','0','0','0','REUSE ME'),
+('-1616030','REUSE ME','0','0','0','0','0','REUSE ME'),
+('-1616031','REUSE ME','0','0','0','0','0','REUSE ME'),
+('-1616032','REUSE ME','0','0','0','0','0','REUSE ME'),
 ('-1616033','A Power Spark forms from a nearby rift!','0','3','0','0','0','malygos SAY_EMOTE_SPARK'),
 ('-1616034','%s takes a deep breath.','0','3','0','0','0','malygos SAY_EMOTE_BREATH');
 
@@ -7384,10 +7381,10 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1668003','I will not make the same mistake again, Sylvanas. This time there will be no escape. You will all serve me in death!','17213','1','0','0','0','lich king SAY_HORDE_INTRO_1'),
 ('-1668004','He''s too powerful! Heroes, quickly, come to me! We must leave this place immediately! I will do what I can do hold him in place while we flee.','17058','1','0','1','0','sylvanas SAY_HORDE_INTRO_2'),
 
-('-1668005','Death''s cold embrace awaits.','17221','1','0','0','0','Lich King - SAY_FIRST_WALL'),
-('-1668006','Succumb to the chill of the grave.','17218','1','0','0','0','Lich King - SAY_SECOND_WALL'),
-('-1668007','Another dead end.','17219','1','0','0','0','Lich King - SAY_THIRD_WALL'),
-('-1668008','How long can you fight it?','17220','1','0','0','0','Lich King - SAY_LAST_WALL'),
+('-1668005','REUSE ME','0','0','0','0','0','REUSE ME'),
+('-1668006','REUSE ME','0','0','0','0','0','REUSE ME'),
+('-1668007','REUSE ME','0','0','0','0','0','REUSE ME'),
+('-1668008','REUSE ME','0','0','0','0','0','REUSE ME'),
 
 ('-1668009','Halt! Do not carry that blade any further!','16675','1','0','1','0','Uther - SAY_INTRO_QUELDELAR');
 

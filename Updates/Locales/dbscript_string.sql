@@ -1839,7 +1839,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Никакие стены не у
 UPDATE `dbscript_string` SET `content_loc8` = 'Еще одна преграда! Держитесь, герои. Я разрушу эту стену.' WHERE `entry` = 2000001841;
 UPDATE `dbscript_string` SET `content_loc8` = 'Я устала от этих игр, Артас! Твои стены не остановят меня!' WHERE `entry` = 2000001842;
 UPDATE `dbscript_string` SET `content_loc8` = 'Ты не помешаешь нам уйти, монстр! Сдерживайте нежить, а я уничтожу эту преграду.' WHERE `entry` = 2000001843;
-UPDATE `dbscript_string` SET `content_loc8` = 'Мы почти выбрались... Не сдавайтесь!' WHERE `entry` = 2000001844;
+UPDATE `dbscript_string` SET `content_loc8` = 'Я вижу выход! СКОРЕЕ!' WHERE `entry` = 2000001844;
 UPDATE `dbscript_string` SET `content_loc8` = 'ПРОКЛЯТЫЙ ТУПИК! Значит, все закончится здесь... Готовьтесь, герои, это наша последняя битва!' WHERE `entry` = 2000001845;
 UPDATE `dbscript_string` SET `content_loc8` = 'Пожар! Горим!' WHERE `entry` = 2000001846;
 UPDATE `dbscript_string` SET `content_loc8` = 'Забирайтесь на корабль, живее! Эта гора вот-вот обвалится.' WHERE `entry` = 2000001847;
@@ -3818,6 +3818,14 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Сила! Еще, еще, еще!
 UPDATE `dbscript_string` SET `content_loc8` = 'Оп-па! Похоже, произведенный вами шум привлек нежелательное внимание!' WHERE `entry` = 2000003820;
 UPDATE `dbscript_string` SET `content_loc8` = 'Зззахватчики и зззаключенный! Убить их!' WHERE `entry` = 2000003821;
 UPDATE `dbscript_string` SET `content_loc8` = 'Все на борт! Заряжай пушки!' WHERE `entry` = 2000003822;
+UPDATE `dbscript_string` SET `content_loc8` = 'Я сделала то, что должна была сделать, брат. Ты не оставил мне выбора.' WHERE `entry` = 2000003823;
+UPDATE `dbscript_string` SET `content_loc8` = 'Война Нексуса окончена.' WHERE `entry` = 2000003824;
+UPDATE `dbscript_string` SET `content_loc8` = 'Итоги войны чрезмерно печалят меня, но разрушения и колоссальные потери жизни должны были быть остановлены. Несмотря на последние прегрешения Малигоса, я буду оплакивать его. Когда-то он был заступником, защитником. Сегодня пал один из сильнейших этого мира.' WHERE `entry` = 2000003825;
+UPDATE `dbscript_string` SET `content_loc8` = 'Красные драконы возьмут на себя бремя заживления ран Азерота. Возвращайтесь домой, к своим людям, и отдохните. Будущее несет вам новые испытания, и вы должны быть готовы к ним. Жизнь... продолжается.' WHERE `entry` = 2000003826;
+UPDATE `dbscript_string` SET `content_loc8` = 'Смерть распростерла ледяные объятия.' WHERE `entry` = 2000003827;
+UPDATE `dbscript_string` SET `content_loc8` = 'Покоритесь леденящей смерти!' WHERE `entry` = 2000003828;
+UPDATE `dbscript_string` SET `content_loc8` = 'Вы в ловушке!' WHERE `entry` = 2000003829;
+UPDATE `dbscript_string` SET `content_loc8` = 'Как долго вы сможете сопротивляться?' WHERE `entry` = 2000003830;
 UPDATE `dbscript_string` SET `content_loc8` = 'ВПЕРЕД!' WHERE `entry` = 2000005164;
 UPDATE `dbscript_string` SET `content_loc8` = 'Прибытие!' WHERE `entry` = 2000005165;
 UPDATE `dbscript_string` SET `content_loc8` = 'Эй, не зевай! У нас гости!' WHERE `entry` = 2000005166;
