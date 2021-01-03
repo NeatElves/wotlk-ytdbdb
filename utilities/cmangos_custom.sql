@@ -123,6 +123,10 @@ UPDATE gameobject_template SET data15=1 WHERE entry IN(186648);
 -- The Focusing Iris 193958 193960 & Exit Portal 193908 - must despawn
 UPDATE gameobject_template SET data5 = 1 WHERE entry IN (193958,193960,193908);
 
+-- Coldwind Tree
+-- radius reduced to 2 - original 5 often did not trigger effect0 = player could spam credit.
+UPDATE gameobject_template SET data1 = 2 WHERE entry IN (188539);
+
 -- Dalaran book: make it despawnable on use with autoclose value (autoclose = autoCloseTime / IN_MILLISECONDS (prior to 3.0.3, conversion was / 0x10000))
 UPDATE gameobject_template SET data3=180000, data5=1 WHERE entry IN (192651,192652,192653,192706,192707,192708,192709,192710,192711,192713,192865,192866,192867,192868,192869,192870,192871,192872,192874,192880,192881,192882,192883,192884,192885,192886,192887,192888,192889,192890,192891,192894,192895,192896,192905);
 -- Felwood corrupted *.flower: make it despawnable on use with autoclose value (autoclose = autoCloseTime / IN_MILLISECONDS (prior to 3.0.3, conversion was / 0x10000))
