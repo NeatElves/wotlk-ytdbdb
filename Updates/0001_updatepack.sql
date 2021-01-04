@@ -43487,3 +43487,19 @@ UPDATE `creature_template` SET `MinLevel` = 60, `MaxLevel` = 60, `MinLevelHealth
 UPDATE `creature_template` SET `MinLevel` = 80, `MaxLevel` = 80, `Expansion` = 2, `MinLevelHealth` = 17010, `MaxLevelHealth` = 17010, `Armor` = 9729 WHERE `Entry` =34055;
 UPDATE `creature` SET `curhealth` = 4120 WHERE `guid` =147917;
 UPDATE `creature` SET `curhealth` = 4120 WHERE `guid` =147923;
+
+DELETE FROM spell_script_target WHERE entry IN (50790,50791,50793,50794,50802,50803,50825,50826,51001,51136,59867,51288);
+INSERT INTO spell_script_target VALUES
+(50790,0,192163,0), (50790,3,5990141,0), (50791,0,192164,0), (50791,3,5990140,0), (50793,0,192163,0), (50793,3,5990141,0), (50794,0,192164,0), (50794,3,5990140,0),
+(50802,0,192163,0), (50802,3,5990141,0), (50803,0,192164,0), (50803,3,5990140,0), (50825,0,192163,0), (50825,3,5990141,0), (50826,0,192164,0), (50826,3,5990140,0),
+(51001,3,5990131,0), (51001,3,5990139,0), (51136,3,5990134,0), (51136,3,5990142,0), (59867,3,5990134,0), (59867,3,5990142,0), (51288,1,27983,0), (51288,1,27984,0),
+(51288,1,27985,0), (51288,1,28265,0);
+
+UPDATE `creature_template` SET `MinLevel` = 1, `MaxLevel` = 1, `MinLevelHealth` = 8, `MaxLevelHealth` = 8, `Armor` = 7 WHERE `Entry` =32258;
+UPDATE `creature_template` SET `MinLevelHealth` = 45516, `MaxLevelHealth` = 47080 WHERE `Entry` =27960;
+UPDATE `creature_template` SET `MinLevelHealth` = 36412, `MinLevelMana` = 24939 WHERE `Entry` =27963;
+UPDATE `creature_template` SET `MinLevelHealth` = 45516, `MaxLevelHealth` = 47080 WHERE `Entry` =27971;
+UPDATE `creature_template` SET `MinLevel` = 80, `MaxLevel` = 80, `Expansion` = 2, `MinLevelHealth` = 7212, `MaxLevelHealth` = 7212, `MinMeleeDmg` = 422, `MaxMeleeDmg` = 586, `MinRangedDmg` = 345, `MaxRangedDmg` = 509, `Armor` = 9729, `MeleeAttackPower` = 642, `RangedAttackPower` = 103 WHERE `Entry` in (28234,30897,30898,30899);
+UPDATE `creature_template` SET `MinLevel` = 77, `MaxLevel` = 77, `Expansion` = 2, `MinLevelHealth` = 6637, `MaxLevelHealth` = 6637, `MinMeleeDmg` = 371, `MaxMeleeDmg` = 522, `MinRangedDmg` = 314, `MaxRangedDmg` = 466, `Armor` = 8822, `MeleeAttackPower` = 478, `RangedAttackPower` = 81 WHERE `Entry` =28235;
+
+DELETE FROM game_tele WHERE id = 1527;
