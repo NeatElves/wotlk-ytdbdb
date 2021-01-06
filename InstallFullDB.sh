@@ -434,6 +434,7 @@ then
 fi
 
 echo "Enjoy using YTDB"
+echo $(date +"%y-%m-%d %T");
 echo
 } | tee InstallFullDB.sh.log
 echo
@@ -766,6 +767,7 @@ then
 fi
 
 echo "Enjoy using YTDB"
+echo $(date +"%y-%m-%d %T");
 echo
 } 2> InstallFullDB.sh.log
 fi
