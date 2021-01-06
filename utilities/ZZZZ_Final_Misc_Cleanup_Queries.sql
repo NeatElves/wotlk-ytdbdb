@@ -303,6 +303,10 @@ UPDATE dbscripts_on_quest_start SET datalong = 59 WHERE command IN (2,4,5) AND d
 UPDATE dbscripts_on_spell SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
 UPDATE dbscripts_on_relay SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
 
+# waittime
+UPDATE creature_movement SET waittime = 10 WHERE waittime = 0 AND script_id > 0;
+UPDATE creature_movement_template SET waittime = 10 WHERE waittime = 0 AND script_id > 0;
+
 # NPC_ADDON_FIX
 INSERT IGNORE INTO `creature_template_addon`
 SELECT

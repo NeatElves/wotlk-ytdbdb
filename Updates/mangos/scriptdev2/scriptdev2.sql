@@ -390,6 +390,8 @@ UPDATE creature_template SET ScriptName='mob_ashtongue_channeler' WHERE entry=23
 UPDATE creature_template SET ScriptName='mob_ashtongue_sorcerer' WHERE entry=23215; -- Ashtongue Sorcerer in Shade of Akama
 UPDATE creature_template SET ScriptName='npc_enslaved_soul' WHERE entry=23469;
 UPDATE creature_template SET ScriptName='npc_greater_shadowfiend' WHERE entry=22929;
+UPDATE creature_template SET ScriptName='npc_bonechewer_brawler' WHERE entry=23222;
+UPDATE creature_template SET ScriptName='npc_bonechewer_combatant' WHERE entry=23239;
 
 /* BLACKFATHOM DEPTHS */
 UPDATE instance_template SET ScriptName='instance_blackfathom_deeps' WHERE map=48;
@@ -914,12 +916,15 @@ INSERT INTO scripted_event_id VALUES(10745,'npc_vindicator_sedai');
 UPDATE gameobject_template SET ScriptName='go_kaliri_nest' WHERE entry IN(181582);
 UPDATE gameobject_template SET ScriptName='go_smoke_beacon' WHERE entry=184661;
 UPDATE creature_template SET ScriptName='npc_credit_marker_they_must_burn' WHERE entry=21173;
+UPDATE creature_template SET ScriptName='npc_razorthorn_ravager' WHERE entry=24922;
 
 /* HILLSBRAD FOOTHILLS */
 
 /* HINTERLANDS */
 UPDATE creature_template SET ScriptName='npc_00x09hl' WHERE entry=7806;
 UPDATE creature_template SET ScriptName='npc_rinji' WHERE entry=7780;
+INSERT INTO scripted_event_id VALUES
+(8608,'event_wildhammer_message');
 
 /* HOWLING FJORD */
 INSERT INTO scripted_areatrigger VALUES
@@ -979,6 +984,8 @@ INSERT INTO scripted_areatrigger VALUES
 (5604,'at_icecrown_citadel'),
 (5611,'at_lights_hammer'),
 (5612,'at_lights_hammer'),
+(5628,'at_rampart_skull'),
+(5630,'at_rampart_skull'),
 (5647,'at_putricides_trap'),
 (5709,'at_icecrown_citadel'),
 (5718,'at_frozen_throne_tele'),
@@ -1029,6 +1036,7 @@ UPDATE creature_template SET ScriptName='npc_grand_admiral_westwind' WHERE entry
 
 /* ISLE OF QUEL'DANAS */
 UPDATE creature_template SET ScriptName='npc_converted_sentry' WHERE entry=24981;
+UPDATE creature_template SET ScriptName='npc_suns_reach_reclamation' WHERE entry IN(24965,24967,25061,25057,24932,25108,25069,25046,24975,25112,25163);
 
 /* KARAZHAN */
 UPDATE instance_template SET ScriptName='instance_karazhan' WHERE map=532;
@@ -1537,7 +1545,8 @@ UPDATE creature_template SET ScriptName='mob_giant_claw_tentacle' WHERE entry=15
 UPDATE creature_template SET ScriptName='mob_anubisath_sentinel' WHERE entry=15264;
 INSERT INTO scripted_areatrigger VALUES
 (4033,'at_stomach_cthun'),
-(4034,'at_stomach_cthun');
+(4034,'at_stomach_cthun'),
+(4036,'at_stomach_cthun');
 
 /* TEROKKAR FOREST */
 UPDATE creature_template SET ScriptName='mob_netherweb_victim' WHERE entry=22355;
