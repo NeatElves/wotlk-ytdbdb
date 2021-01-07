@@ -43543,7 +43543,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 UPDATE creature_movement SET waittime = 10 WHERE waittime = 0 AND script_id > 0;
 UPDATE creature_movement_template SET waittime = 10 WHERE waittime = 0 AND script_id > 0;
 
-DELETE FROM `dbscripts_on_creature_movement` WHERE id IN (28586);
+DELETE FROM `dbscripts_on_creature_movement` WHERE id IN (28586,3323501,3357902,3406401,3406403);
 
 UPDATE `creature_template` SET `MinLevel` = 75, `MaxLevel` = 75, `UnitFlags` = 33587968, `Expansion` = 2, `MinLevelHealth` = 10635, `MaxLevelHealth` = 10635, `MinMeleeDmg` = 342, `MaxMeleeDmg` = 485, `MinRangedDmg` = 295, `MaxRangedDmg` = 438, `Armor` = 8219, `MeleeAttackPower` = 392, `RangedAttackPower` = 68 WHERE
 `Entry` in (34856,34857,34858,34859,34860,34861,34868,34869,34870,34871,34883,34887,34900,34901,34902,34903,34904,34905,34906,34908,34909,34910,34966,34970,34974,34975,34977,34979,35016);
@@ -43572,8 +43572,5 @@ UPDATE `creature_template` SET `MinLevel` = 60, `MaxLevel` = 60, `UnitFlags` = 3
 UPDATE `creature_template` SET `MinLevel` = 80, `MaxLevel` = 80, `UnitFlags` = 33587968, `Expansion` = 2, `MinLevelHealth` = 12600, `MaxLevelHealth` = 12600, `MinMeleeDmg` = 422, `MaxMeleeDmg` = 586, `MinRangedDmg` = 345, `MaxRangedDmg` = 509, `Armor` = 9729, `MeleeAttackPower` = 642, `RangedAttackPower` = 103 WHERE `Entry` =36099;
 UPDATE `creature_template` SET `MinLevel` = 80, `MaxLevel` = 80, `UnitFlags` = 33587456, `Expansion` = 2, `MinLevelHealth` = 25200, `MaxLevelHealth` = 25200, `MinMeleeDmg` = 422, `MaxMeleeDmg` = 586, `MinRangedDmg` = 345, `MaxRangedDmg` = 509, `Armor` = 9729, `MeleeAttackPower` = 642, `RangedAttackPower` = 103 WHERE `Entry` IN (34743,34781,35820,35821);
 UPDATE `creature_template` SET `MinLevel` = 80, `MaxLevel` = 80, `UnitFlags` = 33587200, `Expansion` = 2, `MinLevelHealth` = 25200, `MaxLevelHealth` = 25200, `MinMeleeDmg` = 422, `MaxMeleeDmg` = 586, `MinRangedDmg` = 345, `MaxRangedDmg` = 509, `Armor` = 9729, `MeleeAttackPower` = 642, `RangedAttackPower` = 103 WHERE `Entry` IN (35014);
-
-
-
-
-
+UPDATE `creature_template` SET `MinLevelHealth` = 8367000, `MaxLevelHealth` = 8367000 WHERE `Entry` =33271;
+UPDATE `creature_template` SET `MinLevelHealth` = 2178000, `MaxLevelHealth` = 2178000 WHERE `Entry` =33432;
