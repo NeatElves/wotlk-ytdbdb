@@ -43542,3 +43542,38 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 
 UPDATE creature_movement SET waittime = 10 WHERE waittime = 0 AND script_id > 0;
 UPDATE creature_movement_template SET waittime = 10 WHERE waittime = 0 AND script_id > 0;
+
+DELETE FROM `dbscripts_on_creature_movement` WHERE id IN (28586);
+
+UPDATE `creature_template` SET `MinLevel` = 75, `MaxLevel` = 75, `UnitFlags` = 33587968, `Expansion` = 2, `MinLevelHealth` = 10635, `MaxLevelHealth` = 10635, `MinMeleeDmg` = 342, `MaxMeleeDmg` = 485, `MinRangedDmg` = 295, `MaxRangedDmg` = 438, `Armor` = 8219, `MeleeAttackPower` = 392, `RangedAttackPower` = 68 WHERE
+`Entry` in (34856,34857,34858,34859,34860,34861,34868,34869,34870,34871,34883,34887,34900,34901,34902,34903,34904,34905,34906,34908,34909,34910,34966,34970,34974,34975,34977,34979,35016);
+UPDATE `creature_template` SET `MinLevel` = 1, `MaxLevel` = 1, `MinLevelHealth` = 42, `MaxLevelHealth` = 42, `MinMeleeDmg` = 2, `MaxRangedDmg` = 1, `Armor` = 7, `MeleeAttackPower` = 24, `RangedAttackPower` = 100 WHERE `Entry` =13321;
+UPDATE `creature_template` SET `MinLevel` = 80, `MaxLevel` = 80, `MinLevelHealth` = 25200, `MaxLevelHealth` = 25200, `MinMeleeDmg` = 422, `MaxMeleeDmg` = 586, `MinRangedDmg` = 345, `MaxRangedDmg` = 509, `Armor` = 9729, `MeleeAttackPower` = 642, `RangedAttackPower` = 103 WHERE `Entry` =35376;
+UPDATE `creature_template` SET `MinLevelMana` = 18625, `MaxLevelMana` = 18625 WHERE `Entry` =29822;
+UPDATE `creature` SET `curhealth` = 42 WHERE `id` =13321;
+UPDATE `creature_template` SET `MinLevelHealth` = 38440 WHERE `Entry` =26621;
+UPDATE `creature_template` SET `MaxLevelHealth` = 44004, `MinLevelMana` = 21366, `MaxLevelMana` = 21858 WHERE `Entry` =26639;
+UPDATE `creature_template` SET `MinLevelHealth` = 220020, `MaxLevelHealth` = 220020 WHERE `Entry` =26630;
+UPDATE `creature_template` SET `MinLevelHealth` = 176016, `MaxLevelHealth` = 176016, `MinLevelMana` = 3643, `MaxLevelMana` = 3643 WHERE `Entry` =26631;
+UPDATE `creature_template` SET `MinLevelHealth` = 41128, `MaxLevelHealth` = 42540, `MinLevelMana` = 3466, `MaxLevelMana` = 3561 WHERE `Entry` =26636;
+UPDATE `creature_template` SET `MinLevelHealth` = 41128 WHERE `Entry` =26637;
+UPDATE `creature_template` SET `MinLevelHealth` = 41128 WHERE `Entry` =26641;
+UPDATE `creature_template` SET `MinLevelHealth` = 41128 WHERE `Entry` =27871;
+UPDATE `creature_template` SET `MinLevelHealth` = 48700, `MaxLevelHealth` = 50400 WHERE `Entry` IN (28579,28580,28581,28582,28584);
+UPDATE `creature_template` SET `MinLevelMana` = 19465, `MaxLevelMana` = 19970 WHERE `Entry` IN (28581,28582,28584);
+UPDATE `creature_template` SET `MaxLevel` = 82, `MinLevelHealth` = 221561 WHERE `Entry` =28586;
+UPDATE `creature_template` SET `MaxLevel` = 81, `MinLevelHealth` = 50400, `MaxLevelHealth` = 65165, `MinLevelMana` = 19970 WHERE `Entry` =28836;
+UPDATE `creature_template` SET `MinLevel` = 74, `MaxLevel` = 74, `UnitFlags` = 33587200, `Expansion` = 2, `MinLevelHealth` = 10282, `MaxLevelHealth` = 10282, `MinMeleeDmg` = 328, `MaxMeleeDmg` = 467, `MinRangedDmg` = 287, `MaxRangedDmg` = 426, `Armor` = 7918, `MeleeAttackPower` = 354, `RangedAttackPower` = 63 WHERE `Entry` =29682;
+UPDATE `creature_template` SET `MinLevel` = 78, `MaxLevel` = 78, `MinLevelHealth` = 47080, `MaxLevelHealth` = 47080, `Armor` = 9124 WHERE `Entry` =29920;
+UPDATE `creature_template` SET `MaxLevel` = 82, `MinLevelHealth` = 390990, `MaxLevelHealth` = 512278 WHERE `Entry` =28923;
+UPDATE `creature_template` SET `MinLevelHealth` = 4183500, `MaxLevelHealth` = 4183500 WHERE `Entry` =34564;
+UPDATE `creature_template` SET `MinLevel` = 78, `MaxLevel` = 78, `UnitFlags` = 33587968, `Expansion` = 2, `MinLevelHealth` = 11770, `MaxLevelHealth` = 11770, `MinMeleeDmg` = 387, `MaxMeleeDmg` = 543, `MinRangedDmg` = 324, `MaxRangedDmg` = 480, `Armor` = 9124, `MeleeAttackPower` = 528, `RangedAttackPower` = 88 WHERE `Entry` =29748;
+UPDATE `creature_template` SET `MinLevel` = 60, `MaxLevel` = 60, `UnitFlags` = 33555200, `MinLevelHealth` = 4120, `MaxLevelHealth` = 4120, `MinMeleeDmg` = 104, `MaxMeleeDmg` = 138, `MinRangedDmg` = 72, `MaxRangedDmg` = 106, `Armor` = 3750, `MeleeAttackPower` = 252, `RangedAttackPower` = 26 WHERE `Entry` =17965;
+UPDATE `creature_template` SET `MinLevel` = 80, `MaxLevel` = 80, `UnitFlags` = 33587968, `Expansion` = 2, `MinLevelHealth` = 12600, `MaxLevelHealth` = 12600, `MinMeleeDmg` = 422, `MaxMeleeDmg` = 586, `MinRangedDmg` = 345, `MaxRangedDmg` = 509, `Armor` = 9729, `MeleeAttackPower` = 642, `RangedAttackPower` = 103 WHERE `Entry` =36099;
+UPDATE `creature_template` SET `MinLevel` = 80, `MaxLevel` = 80, `UnitFlags` = 33587456, `Expansion` = 2, `MinLevelHealth` = 25200, `MaxLevelHealth` = 25200, `MinMeleeDmg` = 422, `MaxMeleeDmg` = 586, `MinRangedDmg` = 345, `MaxRangedDmg` = 509, `Armor` = 9729, `MeleeAttackPower` = 642, `RangedAttackPower` = 103 WHERE `Entry` IN (34743,34781,35820,35821);
+UPDATE `creature_template` SET `MinLevel` = 80, `MaxLevel` = 80, `UnitFlags` = 33587200, `Expansion` = 2, `MinLevelHealth` = 25200, `MaxLevelHealth` = 25200, `MinMeleeDmg` = 422, `MaxMeleeDmg` = 586, `MinRangedDmg` = 345, `MaxRangedDmg` = 509, `Armor` = 9729, `MeleeAttackPower` = 642, `RangedAttackPower` = 103 WHERE `Entry` IN (35014);
+
+
+
+
+

@@ -343,15 +343,23 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 -- DBSCRIPTS
 -- =========
 
-DELETE FROM spell_script_target WHERE entry IN (50790,50791,50793,50794,50802,50803,50825,50826,51001,51001,51136,59867);
+DELETE FROM spell_script_target WHERE entry IN (50790,50791,50793,50794,50802,50803,50825,50826,51001,51136,59867);
 INSERT INTO spell_script_target (entry, type, targetEntry, inverseEffectMask) VALUES
+(50790,0,192163,0),
 (50790,3,@CGUID+8,0),
+(50791,0,192164,0),
 (50791,3,@CGUID+7,0),
+(50793,0,192163,0),
 (50793,3,@CGUID+8,0),
+(50794,0,192164,0),
 (50794,3,@CGUID+7,0),
+(50802,0,192163,0),
 (50802,3,@CGUID+8,0),
+(50803,0,192164,0),
 (50803,3,@CGUID+7,0),
+(50825,0,192163,0),
 (50825,3,@CGUID+8,0),
+(50826,0,192164,0),
 (50826,3,@CGUID+7,0),
 (51001,3,@CGUID+10,0),
 (51001,3,@CGUID+127,0),
@@ -360,19 +368,18 @@ INSERT INTO spell_script_target (entry, type, targetEntry, inverseEffectMask) VA
 (59867,3,@CGUID+9,0),
 (59867,3,@CGUID+130,0);
 
-DELETE FROM dbscripts_on_creature_movement WHERE id IN (192163,192163);
+DELETE FROM `dbscripts_on_creature_movement` WHERE id IN (2798001,2798001);
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (2798001,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,'Earthen Dwarf - pause WP Movement'),
 (2798001,0,25,0,0,0,27978,100,0,0,0,0,0,0,0,0,0,'Earthen Dwarf - attack Sjonnir');
 
--- INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
--- INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-
-DELETE FROM dbscripts_on_go_template_use WHERE id IN (192163,192164);
+DELETE FROM `dbscripts_on_go_template_use` WHERE id IN (192163,192164);
 INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (192163,0,13,0,0,0,0,0,8,0,0,0,0,0,0,0,0,'Left Pipe - send custom anim'),
 (192164,0,13,0,0,0,0,0,8,0,0,0,0,0,0,0,0,'Right Pipe - send custom anim');
 
+-- INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+-- INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_spell` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
@@ -381,3 +388,5 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
+
+
