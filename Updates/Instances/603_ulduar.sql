@@ -10,7 +10,8 @@ SET @OGUID := 6030000; -- gameobjects
 SET @PGUID := 53500;   -- pools
 
 -- texts
-SET @TGUID := 2000001092;
+-- 2000026800 - 2000026999 Reserved
+SET @TGUID := 2000026800;
 
 
 
@@ -2776,14 +2777,14 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (3290611,3000,15,63294,0,0,0,0,0,0,0,0,0,0,0,0,0,'Cast Freya Dummy Blue'),
 -- 3411901
 (3411901,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,'Pause movement'),
-(3411901,2000,0,0,0,0,0,0,0,2000000024,0,0,0,0,0,0,0,'Say epilogue 1'),
-(3411901,11000,0,0,0,0,33696,10,0,2000000025,0,0,0,0,0,0,0,'Say epilogue 2'),
-(3411901,19000,0,0,0,0,0,0,0,2000000039,0,0,0,0,0,0,0,'Say epilogue 3'),
-(3411901,27000,0,0,0,0,33696,10,0,2000000044,0,0,0,0,0,0,0,'Say epilogue 4'),
-(3411901,36000,0,0,0,0,0,0,0,2000000045,0,0,0,0,0,0,0,'Say epilogue 5'),
-(3411901,44000,0,0,0,0,0,0,0,2000000046,0,0,0,0,0,0,0,'Say epilogue 6'),
-(3411901,53000,0,0,0,0,33696,10,0,2000000047,0,0,0,0,0,0,0,'Say epilogue 7'),
-(3411901,61000,0,0,0,0,33696,10,0,2000001029,0,0,0,0,0,0,0,'Say epilogue 8'),
+(3411901,2000,0,0,0,0,0,0,0,@TGUID+0,0,0,0,0,0,0,0,'Say epilogue 1'),
+(3411901,11000,0,0,0,0,33696,10,0,@TGUID+1,0,0,0,0,0,0,0,'Say epilogue 2'),
+(3411901,19000,0,0,0,0,0,0,0,@TGUID+2,0,0,0,0,0,0,0,'Say epilogue 3'),
+(3411901,27000,0,0,0,0,33696,10,0,@TGUID+3,0,0,0,0,0,0,0,'Say epilogue 4'),
+(3411901,36000,0,0,0,0,0,0,0,@TGUID+4,0,0,0,0,0,0,0,'Say epilogue 5'),
+(3411901,44000,0,0,0,0,0,0,0,@TGUID+5,0,0,0,0,0,0,0,'Say epilogue 6'),
+(3411901,53000,0,0,0,0,33696,10,0,@TGUID+6,0,0,0,0,0,0,0,'Say epilogue 7'),
+(3411901,61000,0,0,0,0,33696,10,0,@TGUID+7,0,0,0,0,0,0,0,'Say epilogue 8'),
 (3411901,70000,0,0,0,0,0,0,0,@TGUID+8,0,0,0,0,0,0,0,'Say epilogue 9'),
 (3411901,78000,0,0,0,0,33696,10,0,@TGUID+9,0,0,0,0,0,0,0,'Say epilogue 10'),
 (3411901,86000,0,0,0,0,0,0,0,@TGUID+10,0,0,0,0,0,0,0,'Say epilogue 11'),
@@ -2800,17 +2801,17 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (3406407,36000,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Resume movement'),
 (3406407,36000,18,35000,0,0,0,0,0,0,0,0,0,0,0,0,0,'Despawn self');
 
-DELETE FROM `dbscript_string` WHERE `entry` IN (2000000024,2000000025,2000000039,2000000044,2000000045,2000000046,2000000047,2000001029);
-DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @TGUID+8 AND @TGUID+20;
+
+DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @TGUID+0 AND @TGUID+20;
 INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
-(2000000024,'What a battle! Did you see that, Rhydian?!','0','1','0','0','0','Brann Bronzebeard - say epilogue 1'),
-(2000000025,'Our friends fought well, Brann, but we\'re not done yet.','0','1','0','0','0','Archmage Rhydian - say epilogue 2'),
-(2000000039,'Perhaps so, but it\'s only a matter of time until we break back into Ulduar. Any luck finding a way to teleport inside?','0','1','0','0','0','Brann Bronzebeard - say epilogue 3'),
-(2000000044,'None at all. I suspect it has something to do with that giant mechanical construct that our scouts spotted in front of the gate.','0','1','0','0','0','Archmage Rhydian - say epilogue 4'),
-(2000000045,'Oi. So we\'ll have to contend with that thing after all then?','0','1','0','0','0','Brann Bronzebeard - say epilogue 5'),
-(2000000046,'What about the plated proto-drake and the fire giant that were spotted nearby? Think your mages can handle those?','0','1','0','0','0','Brann Bronzebeard - say epilogue 6'),
-(2000000047,'The Kirin Tor can\'t possibly spare any additional resources to take on anything that size. We may not have to though.','0','1','0','0','0','Archmage Rhydian - say epilogue 7'),
-(2000001029,'We can sneak past them. As long as we can take down that construct in front of the gate, we should be able to get inside.','0','1','0','0','0','Archmage Rhydian - say epilogue 8'),
+(@TGUID+0,'What a battle! Did you see that, Rhydian?!','0','1','0','0','0','Brann Bronzebeard - say epilogue 1'),
+(@TGUID+1,'Our friends fought well, Brann, but we\'re not done yet.','0','1','0','0','0','Archmage Rhydian - say epilogue 2'),
+(@TGUID+2,'Perhaps so, but it\'s only a matter of time until we break back into Ulduar. Any luck finding a way to teleport inside?','0','1','0','0','0','Brann Bronzebeard - say epilogue 3'),
+(@TGUID+3,'None at all. I suspect it has something to do with that giant mechanical construct that our scouts spotted in front of the gate.','0','1','0','0','0','Archmage Rhydian - say epilogue 4'),
+(@TGUID+4,'Oi. So we\'ll have to contend with that thing after all then?','0','1','0','0','0','Brann Bronzebeard - say epilogue 5'),
+(@TGUID+5,'What about the plated proto-drake and the fire giant that were spotted nearby? Think your mages can handle those?','0','1','0','0','0','Brann Bronzebeard - say epilogue 6'),
+(@TGUID+6,'The Kirin Tor can\'t possibly spare any additional resources to take on anything that size. We may not have to though.','0','1','0','0','0','Archmage Rhydian - say epilogue 7'),
+(@TGUID+7,'We can sneak past them. As long as we can take down that construct in front of the gate, we should be able to get inside.','0','1','0','0','0','Archmage Rhydian - say epilogue 8'),
 (@TGUID+8,'Sneak?! What do you think we are, marmots?','0','1','0','0','0','Brann Bronzebeard - say epilogue 9'),
 (@TGUID+9,'We\'re hunting an old god, Brann.','0','1','0','0','0','Archmage Rhydian - say epilogue 10'),
 (@TGUID+10,'Fine. If our allies are going to be the ones getting their hands dirty, we\'ll leave it to them to decide how to proceed.','0','1','0','0','0','Brann Bronzebeard - say epilogue 11'),

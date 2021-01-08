@@ -10,16 +10,10 @@ SET @OGUID := 5950000; -- gameobjects
 SET @PGUID := 53100;   -- pools
 
 -- texts
-SET @TGUID  := 2000001119; -- texts
-SET @T1GUID := 2000001120; -- texts
-SET @T2GUID := 2000001123; -- texts
-SET @T3GUID := 2000001128; -- texts
-SET @T4GUID := 2000001302; -- texts
-SET @T5GUID := 2000001096; -- texts
-SET @T6GUID := 2000001102; -- texts
-SET @T7GUID := 2000001263; -- texts
-SET @T8GUID := 2000001275; -- texts
-SET @T9GUID := 2000001239; -- texts
+-- 2000025800 - 2000025999 Reserved
+SET @TGUID := 2000025800;
+
+
 
 -- =========
 -- CREATURES
@@ -766,88 +760,88 @@ DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN (2649703,2649705,2649
 2789105,2789207,2789208,2789209,2789210,2652802,2652803,2652804,2652805,2652808,2652810);
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- 2649705
-(2649705,0,0,0,0,0,0,0,0,@T7GUID+70,0,0,0,0,0,0,0,0),
+(2649705,0,0,0,0,0,0,0,0,@TGUID+70,0,0,0,0,0,0,0,0),
 (2649705,0,16,14949,0,0,0,0,8,0,0,0,0,0,0,0,0,0),
 (2649705,10000,32,0,0,0,26499,50,0,0,0,0,0,0,0,0,0,0),
 -- 2649904
 (2649904,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (2649904,0,35,5,70,0,0,0,0,0,0,0,0,0,0,0,0,0),
-(2649904,8000,0,0,0,0,0,0,0,@T7GUID+54,0,0,0,0,0,0,0,0),
+(2649904,8000,0,0,0,0,0,0,0,@TGUID+54,0,0,0,0,0,0,0,0),
 (2649904,8000,16,14947,0,0,0,0,8,0,0,0,0,0,0,0,0,0),
-(2649904,13000,0,0,0,0,26528,30,0,@T7GUID+55,0,0,0,0,0,0,0,0),
+(2649904,13000,0,0,0,0,26528,30,0,@TGUID+55,0,0,0,0,0,0,0,0),
 (2649904,19000,25,0,0,0,26528,30,0,0,0,0,0,0,0,0,0,0),
 (2649904,19000,25,0,0,0,26497,30,0,0,0,0,0,0,0,0,0,0),
 (2649904,19000,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
-(2649904,20000,0,0,0,0,0,0,0,@T7GUID+56,0,0,0,0,0,0,0,0),
+(2649904,20000,0,0,0,0,0,0,0,@TGUID+56,0,0,0,0,0,0,0,0),
 (2649904,20000,32,0,0,0,26528,30,0,0,0,0,0,0,0,0,0,0),
 (2649904,20000,32,0,0,0,26497,30,0,0,0,0,0,0,0,0,0,0),
 (2649904,20000,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
 -- 2649906
 (2649906,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
-(2649906,0,0,0,0,0,0,0,0,@T7GUID+57,0,0,0,0,0,0,0,0),
-(2649906,10000,0,0,0,0,26528,30,0,@T7GUID+58,0,0,0,0,0,0,0,0),
+(2649906,0,0,0,0,0,0,0,0,@TGUID+57,0,0,0,0,0,0,0,0),
+(2649906,10000,0,0,0,0,26528,30,0,@TGUID+58,0,0,0,0,0,0,0,0),
 (2649906,13000,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
 -- 2649907
 (2649907,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
-(2649907,0,0,0,0,0,0,0,0,@T7GUID+59,0,0,0,0,0,0,0,0),
-(2649907,4000,0,0,0,0,26528,30,0,@T7GUID+60,0,0,0,0,0,0,0,0),
-(2649907,10000,0,0,0,0,0,0,0,@T7GUID+61,0,0,0,0,0,0,0,0),
-(2649907,15000,0,0,0,0,26528,30,0,@T7GUID+62,0,0,0,0,0,0,0,0),
-(2649907,22000,0,0,0,0,0,0,0,@T7GUID+63,0,0,0,0,0,0,0,0),
-(2649907,25000,0,0,0,0,26528,30,0,@T7GUID+64,0,0,0,0,0,0,0,0),
+(2649907,0,0,0,0,0,0,0,0,@TGUID+59,0,0,0,0,0,0,0,0),
+(2649907,4000,0,0,0,0,26528,30,0,@TGUID+60,0,0,0,0,0,0,0,0),
+(2649907,10000,0,0,0,0,0,0,0,@TGUID+61,0,0,0,0,0,0,0,0),
+(2649907,15000,0,0,0,0,26528,30,0,@TGUID+62,0,0,0,0,0,0,0,0),
+(2649907,22000,0,0,0,0,0,0,0,@TGUID+63,0,0,0,0,0,0,0,0),
+(2649907,25000,0,0,0,0,26528,30,0,@TGUID+64,0,0,0,0,0,0,0,0),
 (2649907,25000,16,14948,0,0,0,0,8,0,0,0,0,0,0,0,0,0),
-(2649907,30000,0,0,0,0,0,0,0,@T7GUID+65,0,0,0,0,0,0,0,0),
-(2649907,42000,0,0,0,0,26497,30,0,@T7GUID+66,0,0,0,0,0,0,0,0),
+(2649907,30000,0,0,0,0,0,0,0,@TGUID+65,0,0,0,0,0,0,0,0),
+(2649907,42000,0,0,0,0,26497,30,0,@TGUID+66,0,0,0,0,0,0,0,0),
 (2649907,42000,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
-(2649907,44000,0,0,0,0,0,0,0,@T7GUID+67,0,0,0,0,0,0,0,0),
+(2649907,44000,0,0,0,0,0,0,0,@TGUID+67,0,0,0,0,0,0,0,0),
 (2649907,50000,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
-(2649907,57000,0,0,0,0,26528,30,0,@T7GUID+68,0,0,0,0,0,0,0,0),
+(2649907,57000,0,0,0,0,26528,30,0,@TGUID+68,0,0,0,0,0,0,0,0),
 (2649907,59000,32,0,0,0,26528,30,0,0,0,0,0,0,0,0,0,0),
 (2649907,59000,32,0,0,0,26497,30,0,0,0,0,0,0,0,0,0,0),
-(2649907,61000,0,0,0,0,0,0,0,@T7GUID+69,0,0,0,0,0,0,0,0),
+(2649907,61000,0,0,0,0,0,0,0,@TGUID+69,0,0,0,0,0,0,0,0),
 -- 2649911
-(2649911,0,0,0,0,0,0,0,0,@T7GUID+71,0,0,0,0,0,0,0,0),
+(2649911,0,0,0,0,0,0,0,0,@TGUID+71,0,0,0,0,0,0,0,0),
 (2649911,0,25,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
 -- 2649923
 (2649923,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
-(2649923,1000,0,0,0,0,0,0,0,@T7GUID+72,0,0,0,0,0,0,0,0),
+(2649923,1000,0,0,0,0,0,0,0,@TGUID+72,0,0,0,0,0,0,0,0),
 (2649923,1000,29,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (2649923,1000,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (2649923,0,35,5,30,0,0,0,0,0,0,0,0,0,0,0,0,0),
 -- 2649924
-(2649924,3000,0,0,0,0,0,0,0,@T4GUID+34,0,0,0,0,0,0,0,0),
-(2649924,12000,0,0,0,0,28167,@CGUID+145,16,@T4GUID+35,0,0,0,0,0,0,0,0),
+(2649924,3000,0,0,0,0,0,0,0,@TGUID+34,0,0,0,0,0,0,0,0),
+(2649924,12000,0,0,0,0,28167,@CGUID+145,16,@TGUID+35,0,0,0,0,0,0,0,0),
 (2649924,12000,32,0,0,0,27747,@CGUID+105,16,0,0,0,0,0,0,0,0,0),
 (2649924,12000,32,0,0,0,27747,@CGUID+104,16,0,0,0,0,0,0,0,0,0),
 (2649924,12000,32,0,0,0,27745,@CGUID+84,16,0,0,0,0,0,0,0,0,0),
 (2649924,12000,32,0,0,0,27745,@CGUID+85,16,0,0,0,0,0,0,0,0,0),
 (2649924,12000,32,0,0,0,27745,@CGUID+83,16,0,0,0,0,0,0,0,0,0),
 (2649924,12000,32,0,0,0,27745,@CGUID+92,16,0,0,0,0,0,0,0,0,0),
-(2649924,24000,0,0,0,0,28167,@CGUID+147,16,@T4GUID+36,0,0,0,0,0,0,0,0),
+(2649924,24000,0,0,0,0,28167,@CGUID+147,16,@TGUID+36,0,0,0,0,0,0,0,0),
 -- 2649926
-(2649926,1000,0,0,0,0,28167,@CGUID+143,16,@T4GUID+39,0,0,0,0,0,0,0,0),
+(2649926,1000,0,0,0,0,28167,@CGUID+143,16,@TGUID+39,0,0,0,0,0,0,0,0),
 (2649926,1000,20,2,0,0,28167,@CGUID+143,16,0,0,0,0,0,0,0,0,0),
-(2649926,4000,0,0,0,0,28167,@CGUID+144,16,@T4GUID+37,0,0,0,0,0,0,0,0),
-(2649926,8000,0,0,0,0,0,0,0,@T4GUID+40,0,0,0,0,0,0,0,0),
-(2649926,8000,0,0,0,0,28167,@CGUID+145,16,@T4GUID+38,0,0,0,0,0,0,0,0),
-(2649926,12000,0,0,0,0,28167,@CGUID+143,16,@T4GUID+41,0,0,0,0,0,0,0,0),
+(2649926,4000,0,0,0,0,28167,@CGUID+144,16,@TGUID+37,0,0,0,0,0,0,0,0),
+(2649926,8000,0,0,0,0,0,0,0,@TGUID+40,0,0,0,0,0,0,0,0),
+(2649926,8000,0,0,0,0,28167,@CGUID+145,16,@TGUID+38,0,0,0,0,0,0,0,0),
+(2649926,12000,0,0,0,0,28167,@CGUID+143,16,@TGUID+41,0,0,0,0,0,0,0,0),
 -- 2649927
 (2649927,0,15,50773,0,0,28167,@CGUID+143,18,0,0,0,0,0,0,0,0,0),
-(2649927,2000,0,0,0,0,28169,@CGUID+157,16,@T4GUID+42,0,0,0,0,0,0,0,0),
-(2649927,3000,0,0,0,0,28167,@CGUID+144,16,@T4GUID+43,0,0,0,0,0,0,0,0),
+(2649927,2000,0,0,0,0,28169,@CGUID+157,16,@TGUID+42,0,0,0,0,0,0,0,0),
+(2649927,3000,0,0,0,0,28167,@CGUID+144,16,@TGUID+43,0,0,0,0,0,0,0,0),
 -- 2649928
 (2649928,0,15,50773,0,0,28169,@CGUID+157,18,0,0,0,0,0,0,0,0,0),
 -- 2649929
-(2649929,0,0,0,0,0,0,0,0,@T4GUID+44,0,0,0,0,0,0,0,0),
+(2649929,0,0,0,0,0,0,0,0,@TGUID+44,0,0,0,0,0,0,0,0),
 (2649929,2000,10,26533,30000,0,0,0,0,0,0,0,0,2113.45,1287.99,136.383,3.07,0),
-(2649929,3000,0,0,0,0,26533,30,0,@T4GUID+45,0,0,0,0,0,0,0,0),
+(2649929,3000,0,0,0,0,26533,30,0,@TGUID+45,0,0,0,0,0,0,0,0),
 -- 2649930
 (2649930,10000,35,5,100,0,26533,30,0,0,0,0,0,0,0,0,0,0),
-(2649930,12000,0,0,0,0,26533,30,0,@T8GUID+73,0,0,0,0,0,0,0,0),
+(2649930,12000,0,0,0,0,26533,30,0,@TGUID+73,0,0,0,0,0,0,0,0),
 (2649930,27000,15,51908,0,0,26533,30,0,0,0,0,0,0,0,0,0,0),
 (2649930,27000,18,1000,0,0,26533,30,2,0,0,0,0,0,0,0,0,0),
-(2649930,27000,0,0,0,0,0,0,0,@T8GUID+74,0,0,0,0,0,0,0,0),
-(2649930,37000,0,0,0,0,0,0,0,@T8GUID+75,0,0,0,0,0,0,0,0),
+(2649930,27000,0,0,0,0,0,0,0,@TGUID+74,0,0,0,0,0,0,0,0),
+(2649930,37000,0,0,0,0,0,0,0,@TGUID+75,0,0,0,0,0,0,0,0),
 -- 2649931
 (2649931,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (2649931,0,32,0,0,0,27747,@CGUID+105,16,0,0,0,0,0,0,0,0,0),
@@ -857,38 +851,38 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (2649931,0,32,0,0,0,27745,@CGUID+83,16,0,0,0,0,0,0,0,0,0),
 (2649931,0,32,0,0,0,27745,@CGUID+92,16,0,0,0,0,0,0,0,0,0),
 -- 2787701
-(2787701,3000,0,0,0,0,0,0,0,@T1GUID+18,0,0,0,0,0,0,0,0),
-(2787701,9000,0,0,0,0,27876,10,0,@T1GUID+19,0,0,0,0,0,0,0,0),
+(2787701,3000,0,0,0,0,0,0,0,@TGUID+18,0,0,0,0,0,0,0,0),
+(2787701,9000,0,0,0,0,27876,10,0,@TGUID+19,0,0,0,0,0,0,0,0),
 -- 2787704
-(2787704,0,0,0,0,0,0,0,0,@T1GUID+20,0,0,0,0,0,0,0,0),
+(2787704,0,0,0,0,0,0,0,0,@TGUID+20,0,0,0,0,0,0,0,0),
 (2787704,3000,3,0,0,0,27876,10,0,0,0,0,0,1563.34,671.641,102.141,5.91,0),
-(2787704,5000,0,0,0,0,27876,10,0,@T1GUID+21,0,0,0,0,0,0,0,0),
-(2787704,8000,0,0,0,0,0,0,0,@T5GUID+46,0,0,0,0,0,0,0,0),
-(2787704,18000,0,0,0,0,27876,10,0,@T5GUID+47,0,0,0,0,0,0,0,0),
-(2787704,23000,0,0,0,0,0,0,0,@T5GUID+48,0,0,0,0,0,0,0,0),
+(2787704,5000,0,0,0,0,27876,10,0,@TGUID+21,0,0,0,0,0,0,0,0),
+(2787704,8000,0,0,0,0,0,0,0,@TGUID+46,0,0,0,0,0,0,0,0),
+(2787704,18000,0,0,0,0,27876,10,0,@TGUID+47,0,0,0,0,0,0,0,0),
+(2787704,23000,0,0,0,0,0,0,0,@TGUID+48,0,0,0,0,0,0,0,0),
 -- 2788507
-(2788507,0,0,0,0,0,0,0,0,@T2GUID+22,0,0,0,0,0,0,0,0),
+(2788507,0,0,0,0,0,0,0,0,@TGUID+22,0,0,0,0,0,0,0,0),
 (2788507,12000,3,0,0,0,27884,20,0,0,0,0,0,1635.83,723.143,113.562,3.18,0),
-(2788507,12000,0,0,0,0,27884,20,0,@T2GUID+23,0,0,0,0,0,0,0,0),
-(2788507,16000,0,0,0,0,0,0,0,@T2GUID+24,0,0,0,0,0,0,0,0),
+(2788507,12000,0,0,0,0,27884,20,0,@TGUID+23,0,0,0,0,0,0,0,0),
+(2788507,16000,0,0,0,0,0,0,0,@TGUID+24,0,0,0,0,0,0,0,0),
 -- 2788508
-(2788508,0,0,0,0,0,0,0,0,@T2GUID+26,0,0,0,0,0,0,0,0),
-(2788508,1000,0,0,0,0,0,0,0,@T2GUID+25,0,0,0,0,0,0,0,0),
-(2788508,4000,0,0,0,0,27884,20,0,@T2GUID+27,0,0,0,0,0,0,0,0),
+(2788508,0,0,0,0,0,0,0,0,@TGUID+26,0,0,0,0,0,0,0,0),
+(2788508,1000,0,0,0,0,0,0,0,@TGUID+25,0,0,0,0,0,0,0,0),
+(2788508,4000,0,0,0,0,27884,20,0,@TGUID+27,0,0,0,0,0,0,0,0),
 -- 2790301
-(2790301,1000,0,0,0,0,0,0,0,@T1GUID+13,0,0,0,0,0,0,0,0),
+(2790301,1000,0,0,0,0,0,0,0,@TGUID+13,0,0,0,0,0,0,0,0),
 -- 2790305
-(2790305,0,0,0,0,0,0,0,0,@T1GUID+14,0,0,0,0,0,0,0,0),
-(2790305,5000,0,0,0,0,0,0,0,@T1GUID+15,0,0,0,0,0,0,0,0),
+(2790305,0,0,0,0,0,0,0,0,@TGUID+14,0,0,0,0,0,0,0,0),
+(2790305,5000,0,0,0,0,0,0,0,@TGUID+15,0,0,0,0,0,0,0,0),
 -- 2790307
-(2790307,0,0,0,0,0,0,0,0,@T1GUID+16,0,0,0,0,0,0,0,0),
-(2790307,4000,0,0,0,0,0,0,0,@T1GUID+17,0,0,0,0,0,0,0,0),
+(2790307,0,0,0,0,0,0,0,0,@TGUID+16,0,0,0,0,0,0,0,0),
+(2790307,4000,0,0,0,0,0,0,0,@TGUID+17,0,0,0,0,0,0,0,0),
 -- 2790701
-(2790701,0,0,0,0,0,0,0,0,@T3GUID+28,@T3GUID+29,@T3GUID+30,0,0,0,0,0,0),
+(2790701,0,0,0,0,0,0,0,0,@TGUID+28,@TGUID+29,@TGUID+30,0,0,0,0,0,0),
 -- 2790702
-(2790702,0,0,0,0,0,0,0,0,@T3GUID+31,0,0,0,0,0,0,0,0),
-(2790702,6000,0,0,0,0,0,0,0,@T3GUID+32,0,0,0,0,0,0,0,0),
-(2790702,9000,0,0,0,0,0,0,0,@T3GUID+33,0,0,0,0,0,0,0,0),
+(2790702,0,0,0,0,0,0,0,0,@TGUID+31,0,0,0,0,0,0,0,0),
+(2790702,6000,0,0,0,0,0,0,0,@TGUID+32,0,0,0,0,0,0,0,0),
+(2790702,9000,0,0,0,0,0,0,0,@TGUID+33,0,0,0,0,0,0,0,0),
 -- 3057102
 (3057102,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (3057102,0,0,0,0,0,0,0,0,@TGUID+5,0,0,0,0,0,0,0,0),
@@ -911,36 +905,27 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 -- 2789101
 (2789101,0,10,27892,60000,0,0,0,0,0,0,0,0,1601.44,804.938,123.701,5.43,0),
 -- 2789102
-(2789102,0,0,0,0,0,0,0,0,@T6GUID+49,0,0,0,0,0,0,0,0),
+(2789102,0,0,0,0,0,0,0,0,@TGUID+49,0,0,0,0,0,0,0,0),
 -- 2789105
-(2789105,4000,0,0,0,0,0,0,0,@T6GUID+51,0,0,0,0,0,0,0,0),
+(2789105,4000,0,0,0,0,0,0,0,@TGUID+51,0,0,0,0,0,0,0,0),
 -- 2789207
-(2789207,0,0,0,0,0,0,0,0,@T6GUID+50,0,0,0,0,0,0,0,0),
+(2789207,0,0,0,0,0,0,0,0,@TGUID+50,0,0,0,0,0,0,0,0),
 -- 2789208
-(2789108,0,0,0,0,0,0,0,0,@T6GUID+52,0,0,0,0,0,0,0,0),
-(2789108,4000,0,0,0,0,0,0,0,@T6GUID+53,0,0,0,0,0,0,0,0),
+(2789108,0,0,0,0,0,0,0,0,@TGUID+52,0,0,0,0,0,0,0,0),
+(2789108,4000,0,0,0,0,0,0,0,@TGUID+53,0,0,0,0,0,0,0,0),
 -- 2789209
 (2789209,0,1,393,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (2789209,0,16,9035,2,0,0,0,0,0,0,0,0,0,0,0,0,0),
 -- 2652802
-(2652802,0,0,0,0,0,27745,30,0,@T9GUID+76,0,0,0,0,0,0,0,0),
+(2652802,0,0,0,0,0,27745,30,0,@TGUID+76,0,0,0,0,0,0,0,0),
 -- 2652803
-(2652803,0,0,0,0,0,27745,30,0,@T9GUID+77,0,0,0,0,0,0,0,0),
+(2652803,0,0,0,0,0,27745,30,0,@TGUID+77,0,0,0,0,0,0,0,0),
 -- 2652804
 (2652804,0,35,5,30,0,0,0,0,0,0,0,0,0,0,0,0,0),
 -- 2652808
 (2652808,0,35,6,30,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
-DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @TGUID+0 AND @TGUID+12;
-DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @T1GUID+13 AND @T1GUID+21;
-DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @T2GUID+22 AND @T2GUID+27;
-DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @T3GUID+28 AND @T3GUID+33;
-DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @T4GUID+34 AND @T4GUID+45;
-DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @T5GUID+46 AND @T5GUID+48;
-DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @T6GUID+49 AND @T6GUID+53;
-DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @T7GUID+54 AND @T7GUID+72;
-DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @T8GUID+73 AND @T8GUID+75;
-DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @T9GUID+76 AND @T9GUID+77;
+DELETE FROM `dbscript_string` WHERE `entry` BETWEEN @TGUID+0 AND @TGUID+77;
 INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
 (@TGUID+0,'Hey! Stop rooting around in my cellar! Clear out!','0','0','0','5','0','Michael Belfast - say_inn_1'),
 (@TGUID+1,'What were you doing in my cellar? There\'s a food scare going on, and the last thing I need is strangers rummaging around in my goods! Shoo!','0','0','0','5','0','Michael Belfast - say_inn_2'),
@@ -955,71 +940,71 @@ INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `lan
 (@TGUID+10,'Don\'t worry too much. By the time I went off duty, we hadn\'t found a scrap of befouled grain here.','0','0','0','1','0','Footman James - say_inn_9'),
 (@TGUID+11,'Thank the Light for that.','0','0','0','1','0','Hearthsinger Forresten - say_inn_10'),
 (@TGUID+12,'%s nods.','0','2','0','0','0','Fras Siabi - emote_inn_2'),
-(@T1GUID+13,'Ok, enough work for now. Time for refreshments and a little conversation in the inn.','0','0','0','1','0','Roger Owens - say_roger_1'),
-(@T1GUID+14,'Wait, what\'s that smell?','0','0','0','1','0','Roger Owens - say_roger_2'),
-(@T1GUID+15,'Can\'t be me, I took a bath 3 days ago!','0','0','0','1','0','Roger Owens - say_roger_3'),
-(@T1GUID+16,'Oh, close call. It\'s just the grain here.','0','0','0','1','0','Roger Owens - say_roger_4'),
-(@T1GUID+17,'Wait a second. Grain isn\'t supposed to smell like THAT! I better go find a guard.','0','0','0','1','0','Roger Owens - say_roger_5'),
-(@T1GUID+18,'You don\'t mind me checking out your merchandise for signs of tampering, do you?','0','0','0','1','0','Sergeant Morigan - say_morigan_1'),
-(@T1GUID+19,'No, Sergeant.','0','0','0','0','0','Silvio Perelli - say_morigan_2'),
-(@T1GUID+20,'Wait, what is this? You\'ve been holding out on me, Perelli!','0','0','0','1','0','Sergeant Morigan - say_morigan_3'),
-(@T1GUID+21,'What are you talking about, Sergeant!','0','0','0','5','0','Silvio Perelli - say_morigan_4'),
-(@T2GUID+22,'Martha, I\'m out of flour for bread. You wouldn\'t happen to have any grain from that recent shipment, would you?','0','0','0','6','0','Jena Anderson - say_jena_1'),
-(@T2GUID+23,'Oh hello, Jena. Of course you can borrow some grain. Help yourself.','0','0','0','1','0','Martha Goslin - say_jena_2'),
-(@T2GUID+24,'Thanks, Martha! I owe you one.','0','0','0','0','0','Jena Anderson - say_jena_3'),
-(@T2GUID+25,'Martha, something\'s wrong with this grain! Some of the Prince\'s soldiers were looking for this. I\'m going to go look for one.','0','0','0','5','0','Jena Anderson - say_jena_4'),
-(@T2GUID+26,'Oh, dear.','0','0','0','1','0','Jena Anderson - say_jena_5'),
-(@T2GUID+27,'Oh, my.','0','0','0','1','0','Martha Goslin - say_jena_6'),
-(@T3GUID+28,'This grain shipment has been nothing but trouble!','0','0','0','5','0','Bartleby Battson - say_bartelby_1'),
-(@T3GUID+29,'I\'m going to lose my on time bonus because of this!','0','0','0','5','0','Bartleby Battson - say_bartelby_2'),
-(@T3GUID+30,'I wasn\'t even supposed to be here today!','0','0','0','5','0','Bartleby Battson - say_bartelby_3'),
-(@T3GUID+31,'Well, guess I should load everything back into the cart.','0','0','0','0','0','Bartleby Battson - say_bartelby_4'),
-(@T3GUID+32,'Oh, come on! My cart broke, my horse lost a shoe, and now the cargo goes bad!','0','0','0','5','0','Bartleby Battson - say_bartelby_5'),
-(@T3GUID+33,'I guess I\'ll go find the athorities. If I\'m lucky they\'ll tell me it\'s the plague and that we\'re all going to die.','0','0','0','1','0','Bartleby Battson - say_bartelby_6'),
-(@T4GUID+34,'Everyone looks ready. Remember, these people are all infected with the plague and will die soon. We must purge Stratholme to protect the remainder of Lordaeron from the Scourge. Let\'s go.','14293','0','0','396','0','Arthas - city 1'),
-(@T4GUID+35,'Everyone I know seems to be coming down with something really bad.','0','0','0','1','0','Citizen - gossip 1'),
-(@T4GUID+36,'Have you talked to anyone who hasn\'t started getting sick?','0','0','0','1','0','Citizen - gossip 2'),
-(@T4GUID+37,'It must be something in the water, I tell you.','0','0','0','1','0','Citizen - gossip 3'),
-(@T4GUID+38,'My bed is looking pretty good right now.','0','0','0','1','0','Citizen - gossip 4'),
-(@T4GUID+39,'Prince Arthas, may the light be praised! Many people in the town have begun to fall seriously ill, can you help us?','0','0','0','1','0','Citizen - query'),
-(@T4GUID+40,'I can only help you with a clean death.','14294','0','0','0','0','Arthas - city 2'),
-(@T4GUID+41,'What? This can\'t be!','0','0','0','274','0','Citizen - attack'),
-(@T4GUID+42,'Oh, no...','0','0','0','431','0','Citizen - attack 2'),
-(@T4GUID+43,'Did you see that?','0','0','0','5','0','Citizen - attack 3'),
-(@T4GUID+44,'That was just the beginning.','14295','0','0','1','0','Arthas - city 3'),
-(@T4GUID+45,'Yes, this is the beginning. I\'ve been waiting for you, young prince. I am Mal\'Ganis.','14410','1','0','0','0','Malganis - city 4'),
-(@T5GUID+46,'I\'m confiscating this suspicious grain, Perelli. We were looking for signs of tampered food, and it would be in your best interest to stay put while Prince Arthas checks this out.','0','0','0','1','0','Sergeant Morigan - say_morigan_5'),
-(@T5GUID+47,'You have to believe me, I\'m innocent!','0','0','0','1','0','Silvio Perelli - say_morigan_6'),
-(@T5GUID+48,'We\'ll see about that, Perelli. We\'ll see about that.','0','0','0','1','0','Sergeant Morigan - say_morigan_7'),
-(@T6GUID+49,'Looks like a storm\'s coming in, Scruffy...','0','0','0','0','0','Malcolm Moore - say_malcolm_1'),
-(@T6GUID+50,'%s begins to growl...','1108','2','0','0','0','Scruffy - say_malcolm_2'),
-(@T6GUID+51,'What\'s wrong, pal?','0','0','0','0','0','Malcolm Moore - say_malcolm_3'),
-(@T6GUID+52,'What did you find, boy?','0','0','0','16','0','Malcolm Moore - say_malcolm_4'),
-(@T6GUID+53,'This is no good, Scruffy. Stay here and guard the house, I need to go find a soldier.','0','0','0','0','0','Malcolm Moore - say_malcolm_6'),
-(@T7GUID+54,'Glad you could make it, Uther.','12828','0','0','396','0','Arthas - intro 1'),
-(@T7GUID+55,'Watch your tone with me, boy. You may be the prince, but I\'m still your superior as a paladin!','12839','0','0','397','0','Uther - intro 2'),
-(@T7GUID+56,'As if I could forget. Listen, Uther, there\'s something about the plague you should know...','12829','0','0','0','0','Arthas - intro 3'),
-(@T7GUID+57,'Oh, no. We\'re too late. These people have all been infected! They may look fine now, but it\'s just a matter of time before they turn into the undead!','12830','0','0','5','0','Arthas - intro 4'),
-(@T7GUID+58,'What?','12840','0','0','5','0','Uther - intro 5'),
-(@T7GUID+59,'This entire city must be purged.','12831','0','0','396','0','Arthas - intro 6'),
-(@T7GUID+60,'How can you even consider that? There\'s got to be some other way.','12841','0','0','6','0','Uther - intro 7'),
-(@T7GUID+61,'Damn it, Uther! As your future king, I order you to purge this city!','12832','0','0','5','0','Arthas - intro 8'),
-(@T7GUID+62,'You are not my king yet, boy! Nor would I obey that command even if you were!','12842','0','0','396','0','Uther - intro 9'),
-(@T7GUID+63,'Then I must consider this an act of treason.','12833','0','0','396','0','Arthas - intro 10'),
-(@T7GUID+64,'Treason? Have you lost your mind, Arthas?','12843','0','0','5','0','Arthas - intro 11'),
-(@T7GUID+65,'Have I? Lord Uther, by my right of succession and the sovereignty of my crown, I hereby relieve you of your command and suspend your paladins from service.','12834','0','0','378','0','Arthas - intro 12'),
-(@T7GUID+66,'Arthas! You can\'t just--','12837','0','0','396','0','Jaina - intro 13'),
-(@T7GUID+67,'It\'s done! Those of you who have the will to save this land, follow me! The rest of you... get out of my sight!','12835','0','0','1','0','Arthas - intro 14'),
-(@T7GUID+68,'You\'ve just crossed a terrible threshold, Arthas.','12844','0','0','397','0','Uther - intro 15'),
-(@T7GUID+69,'Jaina?','12836','0','0','0','0','Arthas - intro 16'),
-(@T7GUID+70,'I\'m sorry, Arthas. I can\'t watch you do this.','12838','0','0','396','0','Jaina - intro 17'),
-(@T7GUID+71,'Take position here, and I will lead a small force inside Stratholme to begin the culling. We must contain and purge the infected for the sake of all of Lordaeron!','14327','1','0','0','0','Arthas - intro 18'),
-(@T7GUID+72,'All officers should check in with me when their squads are ready. We\'ll enter Stratholme on my order.','0','0','0','0','0','Arthas - city entrance'),
-(@T8GUID+73,'As you can see, your people are now mine. I will now turn this city household by household, until the flame of life has been snuffed out... forever.','14411','1','0','378','0','Malganis - city 5'),
-(@T8GUID+74,'I won\'t allow it, Mal\'Ganis! Better that these people die by my hand than serve as your slaves in death!','14296','1','0','397','0','Arthas - city 6'),
-(@T8GUID+75,'Mal\'Ganis will send out some of his Scourge minions to interfere with us. Those of you with the strongest steel and magic shall go forth and destroy them. I will lead the rest of my forces in purging Stratholme of the infected.','14885','1','0','1','0','Arthas - city 7'),
-(@T9GUID+76,'The Lightbringer...','0','0','0','396','0','Soldier - salute 1'),
-(@T9GUID+77,'Lord Uther...','0','0','0','396','0','Soldier - salute 2');
+(@TGUID+13,'Ok, enough work for now. Time for refreshments and a little conversation in the inn.','0','0','0','1','0','Roger Owens - say_roger_1'),
+(@TGUID+14,'Wait, what\'s that smell?','0','0','0','1','0','Roger Owens - say_roger_2'),
+(@TGUID+15,'Can\'t be me, I took a bath 3 days ago!','0','0','0','1','0','Roger Owens - say_roger_3'),
+(@TGUID+16,'Oh, close call. It\'s just the grain here.','0','0','0','1','0','Roger Owens - say_roger_4'),
+(@TGUID+17,'Wait a second. Grain isn\'t supposed to smell like THAT! I better go find a guard.','0','0','0','1','0','Roger Owens - say_roger_5'),
+(@TGUID+18,'You don\'t mind me checking out your merchandise for signs of tampering, do you?','0','0','0','1','0','Sergeant Morigan - say_morigan_1'),
+(@TGUID+19,'No, Sergeant.','0','0','0','0','0','Silvio Perelli - say_morigan_2'),
+(@TGUID+20,'Wait, what is this? You\'ve been holding out on me, Perelli!','0','0','0','1','0','Sergeant Morigan - say_morigan_3'),
+(@TGUID+21,'What are you talking about, Sergeant!','0','0','0','5','0','Silvio Perelli - say_morigan_4'),
+(@TGUID+22,'Martha, I\'m out of flour for bread. You wouldn\'t happen to have any grain from that recent shipment, would you?','0','0','0','6','0','Jena Anderson - say_jena_1'),
+(@TGUID+23,'Oh hello, Jena. Of course you can borrow some grain. Help yourself.','0','0','0','1','0','Martha Goslin - say_jena_2'),
+(@TGUID+24,'Thanks, Martha! I owe you one.','0','0','0','0','0','Jena Anderson - say_jena_3'),
+(@TGUID+25,'Martha, something\'s wrong with this grain! Some of the Prince\'s soldiers were looking for this. I\'m going to go look for one.','0','0','0','5','0','Jena Anderson - say_jena_4'),
+(@TGUID+26,'Oh, dear.','0','0','0','1','0','Jena Anderson - say_jena_5'),
+(@TGUID+27,'Oh, my.','0','0','0','1','0','Martha Goslin - say_jena_6'),
+(@TGUID+28,'This grain shipment has been nothing but trouble!','0','0','0','5','0','Bartleby Battson - say_bartelby_1'),
+(@TGUID+29,'I\'m going to lose my on time bonus because of this!','0','0','0','5','0','Bartleby Battson - say_bartelby_2'),
+(@TGUID+30,'I wasn\'t even supposed to be here today!','0','0','0','5','0','Bartleby Battson - say_bartelby_3'),
+(@TGUID+31,'Well, guess I should load everything back into the cart.','0','0','0','0','0','Bartleby Battson - say_bartelby_4'),
+(@TGUID+32,'Oh, come on! My cart broke, my horse lost a shoe, and now the cargo goes bad!','0','0','0','5','0','Bartleby Battson - say_bartelby_5'),
+(@TGUID+33,'I guess I\'ll go find the athorities. If I\'m lucky they\'ll tell me it\'s the plague and that we\'re all going to die.','0','0','0','1','0','Bartleby Battson - say_bartelby_6'),
+(@TGUID+34,'Everyone looks ready. Remember, these people are all infected with the plague and will die soon. We must purge Stratholme to protect the remainder of Lordaeron from the Scourge. Let\'s go.','14293','0','0','396','0','Arthas - city 1'),
+(@TGUID+35,'Everyone I know seems to be coming down with something really bad.','0','0','0','1','0','Citizen - gossip 1'),
+(@TGUID+36,'Have you talked to anyone who hasn\'t started getting sick?','0','0','0','1','0','Citizen - gossip 2'),
+(@TGUID+37,'It must be something in the water, I tell you.','0','0','0','1','0','Citizen - gossip 3'),
+(@TGUID+38,'My bed is looking pretty good right now.','0','0','0','1','0','Citizen - gossip 4'),
+(@TGUID+39,'Prince Arthas, may the light be praised! Many people in the town have begun to fall seriously ill, can you help us?','0','0','0','1','0','Citizen - query'),
+(@TGUID+40,'I can only help you with a clean death.','14294','0','0','0','0','Arthas - city 2'),
+(@TGUID+41,'What? This can\'t be!','0','0','0','274','0','Citizen - attack'),
+(@TGUID+42,'Oh, no...','0','0','0','431','0','Citizen - attack 2'),
+(@TGUID+43,'Did you see that?','0','0','0','5','0','Citizen - attack 3'),
+(@TGUID+44,'That was just the beginning.','14295','0','0','1','0','Arthas - city 3'),
+(@TGUID+45,'Yes, this is the beginning. I\'ve been waiting for you, young prince. I am Mal\'Ganis.','14410','1','0','0','0','Malganis - city 4'),
+(@TGUID+46,'I\'m confiscating this suspicious grain, Perelli. We were looking for signs of tampered food, and it would be in your best interest to stay put while Prince Arthas checks this out.','0','0','0','1','0','Sergeant Morigan - say_morigan_5'),
+(@TGUID+47,'You have to believe me, I\'m innocent!','0','0','0','1','0','Silvio Perelli - say_morigan_6'),
+(@TGUID+48,'We\'ll see about that, Perelli. We\'ll see about that.','0','0','0','1','0','Sergeant Morigan - say_morigan_7'),
+(@TGUID+49,'Looks like a storm\'s coming in, Scruffy...','0','0','0','0','0','Malcolm Moore - say_malcolm_1'),
+(@TGUID+50,'%s begins to growl...','1108','2','0','0','0','Scruffy - say_malcolm_2'),
+(@TGUID+51,'What\'s wrong, pal?','0','0','0','0','0','Malcolm Moore - say_malcolm_3'),
+(@TGUID+52,'What did you find, boy?','0','0','0','16','0','Malcolm Moore - say_malcolm_4'),
+(@TGUID+53,'This is no good, Scruffy. Stay here and guard the house, I need to go find a soldier.','0','0','0','0','0','Malcolm Moore - say_malcolm_6'),
+(@TGUID+54,'Glad you could make it, Uther.','12828','0','0','396','0','Arthas - intro 1'),
+(@TGUID+55,'Watch your tone with me, boy. You may be the prince, but I\'m still your superior as a paladin!','12839','0','0','397','0','Uther - intro 2'),
+(@TGUID+56,'As if I could forget. Listen, Uther, there\'s something about the plague you should know...','12829','0','0','0','0','Arthas - intro 3'),
+(@TGUID+57,'Oh, no. We\'re too late. These people have all been infected! They may look fine now, but it\'s just a matter of time before they turn into the undead!','12830','0','0','5','0','Arthas - intro 4'),
+(@TGUID+58,'What?','12840','0','0','5','0','Uther - intro 5'),
+(@TGUID+59,'This entire city must be purged.','12831','0','0','396','0','Arthas - intro 6'),
+(@TGUID+60,'How can you even consider that? There\'s got to be some other way.','12841','0','0','6','0','Uther - intro 7'),
+(@TGUID+61,'Damn it, Uther! As your future king, I order you to purge this city!','12832','0','0','5','0','Arthas - intro 8'),
+(@TGUID+62,'You are not my king yet, boy! Nor would I obey that command even if you were!','12842','0','0','396','0','Uther - intro 9'),
+(@TGUID+63,'Then I must consider this an act of treason.','12833','0','0','396','0','Arthas - intro 10'),
+(@TGUID+64,'Treason? Have you lost your mind, Arthas?','12843','0','0','5','0','Arthas - intro 11'),
+(@TGUID+65,'Have I? Lord Uther, by my right of succession and the sovereignty of my crown, I hereby relieve you of your command and suspend your paladins from service.','12834','0','0','378','0','Arthas - intro 12'),
+(@TGUID+66,'Arthas! You can\'t just--','12837','0','0','396','0','Jaina - intro 13'),
+(@TGUID+67,'It\'s done! Those of you who have the will to save this land, follow me! The rest of you... get out of my sight!','12835','0','0','1','0','Arthas - intro 14'),
+(@TGUID+68,'You\'ve just crossed a terrible threshold, Arthas.','12844','0','0','397','0','Uther - intro 15'),
+(@TGUID+69,'Jaina?','12836','0','0','0','0','Arthas - intro 16'),
+(@TGUID+70,'I\'m sorry, Arthas. I can\'t watch you do this.','12838','0','0','396','0','Jaina - intro 17'),
+(@TGUID+71,'Take position here, and I will lead a small force inside Stratholme to begin the culling. We must contain and purge the infected for the sake of all of Lordaeron!','14327','1','0','0','0','Arthas - intro 18'),
+(@TGUID+72,'All officers should check in with me when their squads are ready. We\'ll enter Stratholme on my order.','0','0','0','0','0','Arthas - city entrance'),
+(@TGUID+73,'As you can see, your people are now mine. I will now turn this city household by household, until the flame of life has been snuffed out... forever.','14411','1','0','378','0','Malganis - city 5'),
+(@TGUID+74,'I won\'t allow it, Mal\'Ganis! Better that these people die by my hand than serve as your slaves in death!','14296','1','0','397','0','Arthas - city 6'),
+(@TGUID+75,'Mal\'Ganis will send out some of his Scourge minions to interfere with us. Those of you with the strongest steel and magic shall go forth and destroy them. I will lead the rest of my forces in purging Stratholme of the infected.','14885','1','0','1','0','Arthas - city 7'),
+(@TGUID+76,'The Lightbringer...','0','0','0','396','0','Soldier - salute 1'),
+(@TGUID+77,'Lord Uther...','0','0','0','396','0','Soldier - salute 2');
 
 
 

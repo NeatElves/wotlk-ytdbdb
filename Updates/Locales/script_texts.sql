@@ -3866,8 +3866,6 @@ UPDATE `script_texts` SET `content_loc8` = 'А я тебе говорил!' WHER
 UPDATE `script_texts` SET `content_loc8` = 'Даже сильнейшие... могут пасть.' WHERE `entry` = -1604028;
 UPDATE `script_texts` SET `content_loc8` = '%s превращается в мамонта!' WHERE `entry` = -1604029;
 UPDATE `script_texts` SET `content_loc8` = '$n $gпронзен:пронзена;!' WHERE `entry` = -1604030;
-UPDATE `script_texts` SET `content_loc8` = 'Эй, стражи! Уходим! Славные герои обо всем позаботятся. За мной!' WHERE `entry` = -1608000;
-UPDATE `script_texts` SET `content_loc8` = 'Я запираю дверь. Удачи вам и спасибо.' WHERE `entry` = -1608001;
 UPDATE `script_texts` SET `content_loc8` = 'Авантюристы, дверь слабеет!' WHERE `entry` = -1608002;
 UPDATE `script_texts` SET `content_loc8` = 'Теперь дверь удерживает лишь половина печати! Продолжай сражаться!' WHERE `entry` = -1608003;
 UPDATE `script_texts` SET `content_loc8` = 'Дверь вот-вот рухнет! Если синие драконы прорвутся сюда, все будет потеряно!' WHERE `entry` = -1608004;
@@ -3878,10 +3876,6 @@ UPDATE `script_texts` SET `content_loc8` = 'Теперь могу--мм--лет�
 UPDATE `script_texts` SET `content_loc8` = 'Я... сама... ярость!' WHERE `entry` = -1608009;
 UPDATE `script_texts` SET `content_loc8` = 'Снова в деле! Так, подумаем о путях отхода.' WHERE `entry` = -1608010;
 UPDATE `script_texts` SET `content_loc8` = 'Я... снова жив!' WHERE `entry` = -1608011;
-UPDATE `script_texts` SET `content_loc8` = 'Не -- крра -- вздумай -- карр-карр -- бежать!' WHERE `entry` = -1608012;
-UPDATE `script_texts` SET `content_loc8` = 'Мой – каааррр! – фаворит! Аак аак аак! Крраа-кар!' WHERE `entry` = -1608013;
-UPDATE `script_texts` SET `content_loc8` = 'Мерзкое маленькое... А-ак, карр!.. Убить! Да, убить тебя!' WHERE `entry` = -1608014;
-UPDATE `script_texts` SET `content_loc8` = 'Не -- карр, карр -- беги!' WHERE `entry` = -1608018;
 UPDATE `script_texts` SET `content_loc8` = 'Прочь с дороги, смертные!' WHERE `entry` = -1608019;
 UPDATE `script_texts` SET `content_loc8` = 'Меня не остановить!' WHERE `entry` = -1608020;
 UPDATE `script_texts` SET `content_loc8` = 'Вода может принять любую форму, занять любое пространство... смести любую преграду.' WHERE `entry` = -1608021;
@@ -3890,7 +3884,6 @@ UPDATE `script_texts` SET `content_loc8` = 'Я смету все!' WHERE `entry`
 UPDATE `script_texts` SET `content_loc8` = 'Тебе не остановить прилив!' WHERE `entry` = -1608024;
 UPDATE `script_texts` SET `content_loc8` = 'Я поглощаю, истребляю, разрушаю и уничтожаю! Преклонитесь перед гневом бушующего моря!' WHERE `entry` = -1608025;
 UPDATE `script_texts` SET `content_loc8` = 'Я... отступаю.' WHERE `entry` = -1608026;
-UPDATE `script_texts` SET `content_loc8` = 'Поверить не могу! Тебе удалось отразить нападение синих драконов и победить их предводителя. Это потрясающе!' WHERE `entry` = -1608027;
 UPDATE `script_texts` SET `content_loc8` = 'Защитная сфера |3-1(%s) дает трещину и лопается!' WHERE `entry` = -1608028;
 UPDATE `script_texts` SET `content_loc8` = 'Никаких зелий!' WHERE `entry` = -1609016;
 UPDATE `script_texts` SET `content_loc8` = 'Запомни этот день, $n! Именно сегодня ты узнаешь, что такое тотальный разгром.' WHERE `entry` = -1609017;
