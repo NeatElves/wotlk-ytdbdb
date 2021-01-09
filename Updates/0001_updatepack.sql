@@ -43583,9 +43583,11 @@ UPDATE `creature_template` SET `MinLevelHealth` = 674050, `MaxLevelHealth` = 674
 DELETE FROM spell_script_target WHERE entry IN (59474,54160,57912,57930,58040);
 INSERT INTO spell_script_target VALUES
 (59474,1,29266,0), (59474,1,32231,0), (54160,1,29266,0), (54160,1,32231,0), (57912,1,31007,0), (57912,1,31008,0),
-(57912,1,31009,0), (57912,1,31010,0), (57912,1,29425,0), (57930,1,30857,0), (58040,1,30896,0);
+(57912,1,31009,0), (57912,1,31010,0), (57912,1,29425,0), (57912,1,30661,0), (57912,1,30662,0), (57912,1,30663,0),
+(57912,1,30664,0), (57912,1,30665,0), (57912,1,30666,0), (57912,1,30667,0), (57912,1,30668,0), (57912,1,32191,0),
+(57930,1,30857,0), (58040,1,30896,0);
 
-UPDATE `creature_template` SET `MinLevel` = 83, `MaxLevel` = 83, `Expansion` = 2, `MinLevelHealth` = 13945, `MaxLevelHealth` = 13945 WHERE `Entry` =30837;
+UPDATE `creature_template` SET `MinLevel` = 83, `MaxLevel` = 83, `UnitFlags` = 33554432, `Expansion` = 2, `MinLevelHealth` = 13945, `MaxLevelHealth` = 13945 WHERE `Entry` =30837;
 UPDATE `creature_template` SET `MinLevelHealth` = 37800, `MaxLevelHealth` = 37800 WHERE `Entry` in (36764,36765,36770,36772);
 UPDATE `creature_template` SET `MinLevelHealth` = 30240, `MaxLevelHealth` = 30240 WHERE `Entry` in (36767,36773);
 UPDATE `creature_template` SET `MinLevelHealth` = 151200, `MaxLevelHealth` = 151200 WHERE `Entry` =37591;
@@ -43696,3 +43698,334 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid
 (150032, 21417, 530, 1, 1, 0, 0, -3782.36, 2150.69, 96.6612, 3.15684, 300, 300, 0, 0, 41, 60, 0, 0),
 (152033, 21417, 530, 1, 1, 0, 0, -3782.97, 2082.78, 107.031, 1.53891, 300, 300, 0, 0, 41, 60, 0, 0),
 (150034, 21417, 530, 1, 1, 0, 0, -3782.79, 2048.17, 109.419, 1.53891, 300, 300, 0, 0, 41, 60, 0, 0);
+
+DELETE FROM `dbscripts_on_creature_movement` WHERE id IN (807,815);
+DELETE FROM `dbscript_string` WHERE `entry` IN (2000001175,2000001176,2000001177);
+UPDATE `creature_template` SET `MinLevelHealth` = 13033, `MaxLevelHealth` = 13033 WHERE `Entry` =37547;
+UPDATE `creature_template` SET `MinLevelMana` = 7988, `MaxLevelMana` = 7988 WHERE `Entry` =37023;
+UPDATE `creature_template` SET `MinLevelHealth` = 808860, `MaxLevelHealth` = 808860 WHERE `Entry` =37666;
+UPDATE `creature_template` SET `MinLevelHealth` = 25200, `MaxLevelHealth` = 25200 WHERE `Entry` =37824;
+UPDATE `creature_template` SET `MinLevelMana` = 4081, `MaxLevelMana` = 4081 WHERE `Entry` =37123;
+UPDATE `creature_template` SET `MinLevelMana` = 119820, `MaxLevelMana` = 119820 WHERE `Entry` =38125;
+UPDATE `creature_template` SET `MinLevel` = 1, `MaxLevel` = 1, `MinLevelHealth` = 8, `MaxLevelHealth` = 8, `MinMeleeDmg` = 2, `MaxRangedDmg` = 1, `Armor` = 7, `MeleeAttackPower` = 24 WHERE `Entry` =38232;
+UPDATE `creature_template` SET `Expansion` = 0, `MinLevelHealth` = 5342, `MaxLevelHealth` = 5342 WHERE `Entry` =38879;
+
+UPDATE `creature_template` SET `GossipMenuId` = 8721 WHERE `Entry` = 30796;
+UPDATE `creature_template` SET `DifficultyEntry1` = 30796 WHERE `Entry` =23110;
+UPDATE `creature_template` SET `MinLevel` = 80, `MaxLevel` = 80, `MinLevelHealth` = 553, `MaxLevelHealth` = 553, `Armor` = 9729 WHERE `Entry` =29364;
+UPDATE `item_template` SET `Flags2` = 8192 WHERE `entry` =51683;
+DELETE FROM spell_area WHERE spell = 68645;
+INSERT INTO spell_area (spell, area, quest_start, quest_start_active, quest_end, condition_id, aura_spell, racemask, gender, autocast) VALUES (68645,4812,0,0,0,0,0,0,2,0);
+UPDATE creature_template SET MovementType = 2 WHERE Entry = 37696;
+UPDATE `gossip_menu_option` SET `option_text` = 'I wish to browse your wares.' WHERE `menu_id` =11101 AND `id` =0;
+UPDATE `gossip_menu_option` SET `option_text` = 'I wish to browse your wares.' WHERE `menu_id` =10996 AND `id` =1;
+UPDATE creature_template SET UnitFlags = 768 WHERE entry = 37120;
+UPDATE creature_template SET Faction = 1735, EquipmentTemplateId = 2527 WHERE entry = 38181;
+DELETE FROM creature_equip_template WHERE entry IN (2527,4859);
+INSERT INTO creature_equip_template VALUES (2527, 50224,0,0);
+UPDATE creature_template SET Faction = 1735, EquipmentTemplateId = 2528 WHERE entry = 37991;
+DELETE FROM creature_equip_template WHERE entry IN (2528,4860);
+INSERT INTO creature_equip_template VALUES (2528, 49734,49734,0);
+UPDATE `gossip_menu_option` SET `option_text` = 'I wish to browse your wares.' WHERE `menu_id` =11098 AND `id` =0;
+UPDATE creature_template SET Faction = 1735 WHERE entry = 37992;
+UPDATE `gossip_menu_option` SET `option_text` = 'I wish to browse your wares.' WHERE `menu_id` =11095 AND `id` =0;
+UPDATE creature_template SET Faction = 1735, EquipmentTemplateId = 2529 WHERE entry = 37993;
+DELETE FROM creature_equip_template WHERE entry IN (2529,4725);
+INSERT INTO creature_equip_template VALUES (2529, 0,0,34274);
+UPDATE `gossip_menu_option` SET `option_text` = 'I wish to browse your wares.' WHERE `menu_id` =11099 AND `id` =0;
+UPDATE creature_template SET Faction = 1735 WHERE entry = 38841;
+UPDATE `gossip_menu_option` SET `option_text` = 'I wish to browse your wares.' WHERE `menu_id` =11097 AND `id` =0;
+UPDATE creature_template SET Faction = 1735 WHERE entry = 38284;
+UPDATE `gossip_menu_option` SET `option_text` = 'I wish to browse your wares.' WHERE `menu_id` =11103 AND `id` =0;
+UPDATE `gossip_menu_option` SET `option_text` = 'I wish to browse your wares.' WHERE `menu_id` =11102 AND `id` =0;
+UPDATE `gossip_menu_option` SET `option_text` = 'I wish to browse your wares.' WHERE `menu_id` =11100 AND `id` =0;
+UPDATE creature_template SET visibilityDistanceType = 5 WHERE entry IN (37957,37958,37959);
+UPDATE creature_template SET MovementType = 2 WHERE entry = 36880;
+UPDATE creature_template SET NpcFlags = 1, GossipMenuId = 10954 WHERE entry IN (36939,38156,38637,38638);
+DELETE FROM gossip_menu WHERE entry IN (10954);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES (10954, 15219, 0, 0);
+DELETE FROM gossip_menu_option WHERE menu_id = 10954;
+INSERT INTO gossip_menu_option (menu_id, id, option_icon, option_text, option_broadcast_text, option_id, npc_option_npcflag, action_menu_id, action_script_id, condition_id) VALUES
+(10954,0,0,'My companions are all accounted for, Saurfang. Let\'s go!',37637, 1, 1, -1, 0, 0);
+DELETE FROM gossip_menu_option WHERE menu_id = 10875;
+INSERT INTO gossip_menu_option (menu_id, id, option_icon, option_text, option_broadcast_text, option_id, npc_option_npcflag, action_menu_id, action_script_id, condition_id) VALUES
+(10875,0,0,'My companions are all accounted for, Muradin. Let\'s go!',36920, 1, 1, -1, 0, 0);
+UPDATE creature_template SET UnitFlags = 32832 WHERE entry IN (37007,38031);
+UPDATE creature_template SET Faction = 16, UnitFlags = 33344, MovementType = 2 WHERE entry IN (37011,38061);
+UPDATE creature_template SET MovementType = 2 WHERE entry IN (37119);
+UPDATE creature_template SET Faction = 84, EquipmentTemplateid = 2530 WHERE Entry = 37021;
+DELETE FROM creature_equip_template WHERE entry IN (2530,4281);
+INSERT INTO creature_equip_template VALUES (2530, 49724,0,0);
+UPDATE creature_template SET MovementType = 2 WHERE entry = 37025;
+UPDATE creature_template SET MovementType = 2 WHERE entry = 37038;
+UPDATE creature_template SET UnitFlags = 32832 WHERE entry = 37127;
+UPDATE creature_template SET UnitFlags = 32832 WHERE entry = 37134;
+UPDATE creature_template SET Faction = 1735 WHERE entry = 37189;
+UPDATE creature_template SET MovementType = 2 WHERE entry = 37217;
+UPDATE creature_template SET Faction = 82, MovementType = 2 WHERE entry = 37230;
+UPDATE creature_template SET MovementType = 3 WHERE entry = 37533;
+UPDATE creature_template SET MovementType = 3 WHERE entry = 37534;
+UPDATE `gossip_menu_option` SET `option_text` = 'Yeah, I\'m sure safety is your top priority. Give me a rocket pack.', `option_broadcast_text` = 37026, `action_script_id` = 1088501 WHERE `menu_id` =10885 AND `id` =0;
+DELETE FROM dbscripts_on_gossip WHERE id in (1088500,1088501);
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1088501,0,17,49278,1,0,0,0,0,0,0,0,0,0,0,0,0,'create 49278 for Player');
+UPDATE creature_template SET NpcFlags = 1, GossipMenuId = 10953 WHERE entry = 37187;
+DELETE FROM gossip_menu WHERE entry IN (10952,10953);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES (10952, 15218, 0, 0), (10953, 15217, 0, 0);
+DELETE FROM gossip_menu_option WHERE menu_id IN (10952,10953);
+INSERT INTO gossip_menu_option (menu_id, id, option_icon, option_text, option_broadcast_text, option_id, npc_option_npcflag, action_menu_id, action_script_id, condition_id) VALUES
+(10952,0,0,'Lok\'tar ogar! We are ready! Onward, brother orc!',37633, 1, 1, -1, 0, 0),
+(10953,0,0,'We are ready to go, High Overlord. The Lich King must fall!',37631, 1, 1, 10952, 0, 0);
+UPDATE creature_template SET InhabitType = 3, MovementType = 2 WHERE entry = 37200;
+DELETE FROM gossip_menu WHERE entry IN (10933,10934);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES  (10933, 15194, 0, 0), (10934, 15195, 0, 0);
+DELETE FROM gossip_menu_option WHERE menu_id IN (10933,10934);
+INSERT INTO gossip_menu_option (menu_id, id, option_icon, option_text, option_broadcast_text, option_id, npc_option_npcflag, action_menu_id, action_script_id, condition_id) VALUES
+(10933,0,0,'We\'re ready, Muradin.',37446, 1, 1, 10934, 0, 0),
+(10934,0,0,'We\'re sure. Let\'s go!',37448, 1, 1, -1, 0, 0);
+UPDATE creature_template SET Faction = 1735, UnitFlags = 768 WHERE entry = 39372;
+DELETE FROM gossip_menu_option WHERE menu_id IN (11206,11207);
+INSERT INTO gossip_menu_option (menu_id,id,option_icon,option_text,option_id,npc_option_npcflag,action_menu_id,action_poi_id,action_script_id,box_coded,box_money,box_text,condition_id) VALUES
+(11206,0,0,'Northrend requires your attention Overlord Hellscream. We will deal with the Lich King and his minions without your aid.', 1, 1, 11207, 0, 0, 0, 0, NULL, 0),
+(11207,0,0,'The word is given. The Lich King will die by our hands!', 1, 1, 11208, 0, 0, 0, 0, NULL, 0);
+DELETE FROM npc_text WHERE ID IN(15608,15609);
+INSERT INTO npc_text (ID, text0_0, text0_1, lang0, prob0, em0_1,em0_2,em0_3) VALUES
+(15608,'You turn away the might of the Warsong Offensive? Has the chaos of battle turned you mad? With my help, victory is at hand! Without my help, your fight will be difficult.','',0,1,396,0,0),
+(15609,'Glory to the Horde!','',0,1,5,0,0);
+
+UPDATE `creature_template` SET `DifficultyEntry1` = 0 WHERE `Entry` =30405;
+UPDATE `creature_template` SET `DifficultyEntry1` = 31366 WHERE `Entry` =28070;
+DELETE FROM `creature_involvedrelation` WHERE `quest` = 13417;
+DELETE FROM `creature_questrelation` WHERE `quest` = 13417;
+UPDATE `creature_template` SET `NpcFlags` = 3, `GossipMenuId` = 10012 WHERE `Entry` =31366;
+DELETE FROM `gossip_menu` WHERE `entry` = 10012 AND `text_id` = 131000;
+
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 22323);
+DELETE FROM creature_movement WHERE id IN (SELECT guid FROM creature WHERE id = 22323);
+DELETE FROM creature WHERE id = 22323;
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(82552, 22323, 530, 1, 1, 0, 0, 812.533, 2553.2, 293.69, 4.74659, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82553, 22323, 530, 1, 1, 0, 0, 871.139, 2272.32, 288.928, 1.82762, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82554, 22323, 530, 1, 1, 0, 0, 904.055, 2231.69, 303.629, 0.124355, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82555, 22323, 530, 1, 1, 0, 0, 835.823, 2222.47, 288.053, 5.26474, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82556, 22323, 530, 1, 1, 0, 0, 837.035, 2285.32, 282.788, 0.775314, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82557, 22323, 530, 1, 1, 0, 0, 863.034, 2247.81, 294.686, 4.13377, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82558, 22323, 530, 1, 1, 0, 0, 773.122, 2262.28, 282.028, 3.22473, 300, 300, 0, 0, 6986, 0, 0, 0),
+(82559, 22323, 530, 1, 1, 0, 0, 806.654, 2471.27, 290.114, 2.16464, 300, 300, 0, 0, 6986, 0, 0, 0),
+(82560, 22323, 530, 1, 1, 0, 0, 805.013, 2171.16, 272.545, 1.55763, 300, 300, 0, 0, 6986, 0, 0, 0),
+(82561, 22323, 530, 1, 1, 0, 0, 709.597, 2517.03, 276.588, 2.04363, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82562, 22323, 530, 1, 1, 0, 0, 802.07, 2425.66, 280.738, 1.3758, 300, 300, 0, 0, 6986, 0, 0, 0),
+(82563, 22323, 530, 1, 1, 0, 0, 847.641, 2439.58, 290.364, 5.01209, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82564, 22323, 530, 1, 1, 0, 0, 876.59, 2168.81, 279.876, 5.33303, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82565, 22323, 530, 1, 1, 0, 0, 779.815, 2137.84, 272.479, 6.13372, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82566, 22323, 530, 1, 1, 0, 0, 816.281, 2243.53, 281.457, 3.42258, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82567, 22323, 530, 1, 1, 0, 0, 712.249, 2554.65, 281.907, 0.672701, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82568, 22323, 530, 1, 1, 0, 0, 806.551, 2378.54, 282.029, 1.22445, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82569, 22323, 530, 1, 1, 0, 0, 718.36, 2521.69, 277.671, 5.59252, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82570, 22323, 530, 1, 1, 0, 0, 796.947, 2534.29, 295.917, 1.74533, 300, 300, 0, 0, 6986, 0, 0, 0),
+(82545, 22323, 530, 1, 1, 0, 0, 679.607, 2408.13, 275.515, 4.46554, 300, 300, 0, 0, 6986, 0, 0, 2),
+(82546, 22323, 530, 1, 1, 0, 0, 726.174, 2408.9, 276.176, 1.96874, 300, 300, 0, 0, 6986, 0, 0, 2),
+(82551, 22323, 530, 1, 1, 0, 0, 779.805, 2025.52, 272.724, 2.08223, 300, 300, 5, 0, 6986, 0, 0, 1),
+(82547, 22323, 530, 1, 1, 0, 0, 829.674, 2094.12, 273.802, 0.704021, 300, 300, 0, 0, 6986, 0, 0, 2),
+(82548, 22323, 530, 1, 1, 0, 0, 851.156, 2121.01, 272.107, 1.72684, 300, 300, 0, 0, 6986, 0, 0, 2),
+(82549, 22323, 530, 1, 1, 0, 0, 704.168, 2375.99, 275.044, 0.221236, 300, 300, 0, 0, 6986, 0, 0, 2),
+(82550, 22323, 530, 1, 1, 0, 0, 817.436, 2132.32, 272.494, 4.06733, 300, 300, 0, 0, 6986, 0, 0, 2);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(82545, 1, 679.607, 2408.13, 275.515, 4.46554, 0, 0, NULL),
+(82545, 2, 677.541, 2400.87, 274.946, 4.85666, 0, 0, NULL),
+(82545, 3, 678.927, 2395.34, 275.264, 5.01217, 0, 0, NULL),
+(82545, 4, 679.93, 2392.23, 275.251, 5.17004, 0, 0, NULL),
+(82545, 5, 681.961, 2388.15, 275.372, 5.28785, 0, 0, NULL),
+(82545, 6, 684.97, 2383.71, 274.984, 5.56117, 0, 0, NULL),
+(82545, 7, 690.925, 2379.25, 274.374, 5.75909, 0, 0, NULL),
+(82545, 8, 694.463, 2377.45, 273.667, 5.83684, 0, 0, NULL),
+(82545, 9, 695.756, 2376.93, 274.388, 6.07246, 0, 0, NULL),
+(82545, 10, 701.245, 2375.79, 275.05, 6.23033, 0, 0, NULL),
+(82545, 11, 706.482, 2375.7, 275.153, 0.302925, 0, 0, NULL),
+(82545, 12, 711.215, 2377.33, 275.438, 0.616299, 0, 0, NULL),
+(82545, 13, 716.927, 2381.38, 272.248, 0.616299, 0, 0, NULL),
+(82545, 14, 719.359, 2383.2, 273.801, 0.851919, 0, 0, NULL),
+(82545, 15, 722.331, 2386.65, 275.481, 1.00978, 0, 0, NULL),
+(82545, 16, 724.193, 2389.62, 275.891, 1.00978, 0, 0, NULL),
+(82545, 17, 726.662, 2393.59, 276.493, 1.12995, 0, 0, NULL),
+(82545, 18, 728.872, 2399.21, 274.473, 1.32787, 0, 0, NULL),
+(82545, 19, 729.293, 2402.68, 274.717, 1.52579, 0, 0, NULL),
+(82545, 20, 728.52, 2407.61, 275.214, 1.79911, 0, 0, NULL),
+(82545, 21, 726.606, 2411.07, 275.995, 2.11248, 0, 0, NULL),
+(82545, 22, 723.957, 2415.48, 276.199, 2.11248, 0, 0, NULL),
+(82545, 23, 721.531, 2418.13, 274.696, 2.3858, 0, 0, NULL),
+(82545, 24, 718.388, 2421.09, 276.384, 2.3858, 0, 0, NULL),
+(82545, 25, 717.355, 2422.04, 277.072, 2.50361, 0, 0, NULL),
+(82545, 26, 712.82, 2425.33, 276.266, 2.70153, 0, 0, NULL),
+(82545, 27, 708.791, 2427.19, 275.148, 2.8594, 0, 0, NULL),
+(82545, 28, 704.638, 2428.37, 275.363, 2.97721, 0, 0, NULL),
+(82545, 29, 698.914, 2428.63, 275.059, 3.5262, 0, 0, NULL),
+(82545, 30, 697.251, 2427.79, 275.059, 3.84193, 0, 0, NULL),
+(82545, 31, 693.323, 2424.48, 274.191, 3.84193, 0, 0, NULL),
+(82545, 32, 688.677, 2420.57, 274.58, 3.84193, 0, 0, NULL),
+(82545, 33, 685.374, 2417.78, 276.457, 3.84193, 0, 0, NULL),
+(82545, 34, 683.098, 2414.4, 275.706, 4.1553, 0, 0, NULL),
+(82545, 35, 681.059, 2411.13, 275.887, 4.1553, 0, 0, NULL),
+(82546, 1, 726.174, 2408.9, 276.176, 1.96874, 0, 0, NULL),
+(82546, 2, 722.791, 2414.82, 276.54, 2.18473, 0, 0, NULL),
+(82546, 3, 720.432, 2417.4, 274.4, 2.38029, 0, 0, NULL),
+(82546, 4, 715.872, 2421.74, 277.481, 2.38029, 0, 0, NULL),
+(82546, 5, 713.056, 2423.17, 277.026, 2.72194, 0, 0, NULL),
+(82546, 6, 707.616, 2425.59, 275.472, 2.72194, 0, 0, NULL),
+(82546, 7, 702.663, 2427.67, 275.294, 2.87745, 0, 0, NULL),
+(82546, 8, 696.946, 2426.02, 275.095, 3.43508, 0, 0, NULL),
+(82546, 9, 693.295, 2423.41, 274.499, 3.82385, 0, 0, NULL),
+(82546, 10, 691.084, 2421.49, 273.462, 3.85527, 0, 0, NULL),
+(82546, 11, 687.698, 2417.64, 275.139, 4.01313, 0, 0, NULL),
+(82546, 12, 683.264, 2412.37, 275.341, 4.01313, 0, 0, NULL),
+(82546, 13, 679.808, 2408.26, 275.505, 4.01313, 0, 0, NULL),
+(82546, 14, 677.572, 2403.82, 274.973, 4.40662, 0, 0, NULL),
+(82546, 15, 677.509, 2398.34, 275.115, 4.95561, 0, 0, NULL),
+(82546, 16, 679.962, 2391.42, 275.322, 5.11348, 0, 0, NULL),
+(82546, 17, 683.962, 2385.55, 275.132, 5.3491, 0, 0, NULL),
+(82546, 18, 686.043, 2382.74, 274.94, 5.3491, 0, 0, NULL),
+(82546, 19, 690.594, 2377.98, 274.59, 5.66168, 0, 0, NULL),
+(82546, 20, 693.107, 2376.78, 273.585, 5.93736, 0, 0, NULL),
+(82546, 21, 697.717, 2375.12, 274.877, 5.93736, 0, 0, NULL),
+(82546, 22, 702.069, 2374.7, 275.054, 0.047659, 0, 0, NULL),
+(82546, 23, 705.8, 2375.56, 275.134, 0.323334, 0, 0, NULL),
+(82546, 24, 710.227, 2377.05, 275.396, 0.323334, 0, 0, NULL),
+(82546, 25, 712.81, 2378.54, 275.593, 0.794573, 0, 0, NULL),
+(82546, 26, 716.733, 2382.53, 272.139, 0.794573, 0, 0, NULL),
+(82546, 27, 720.578, 2386.45, 274.829, 0.794573, 0, 0, NULL),
+(82546, 28, 722.589, 2389.16, 275.402, 0.990138, 0, 0, NULL),
+(82546, 29, 725.15, 2393.06, 276.432, 0.990138, 0, 0, NULL),
+(82546, 30, 726.718, 2396.7, 275.232, 1.22576, 0, 0, NULL),
+(82546, 31, 727.429, 2398.67, 274.811, 1.22576, 0, 0, NULL),
+(82546, 32, 727.583, 2400.88, 274.672, 1.52735, 0, 0, NULL),
+(82546, 33, 727.714, 2403.91, 275.075, 1.52735, 0, 0, NULL),
+(82547, 1, 831.089, 2094.96, 273.941, 0.492957, 0, 0, NULL),
+(82547, 2, 835.847, 2097.24, 273.123, 0.492957, 0, 0, NULL),
+(82547, 3, 840.576, 2099.78, 272.091, 0.492957, 0, 0, NULL),
+(82547, 4, 845.719, 2102.54, 270.281, 0.492957, 0, 0, NULL),
+(82547, 5, 848.753, 2105.9, 272.844, 0.886442, 0, 0, NULL),
+(82547, 6, 851.516, 2110.88, 272.199, 1.12206, 0, 0, NULL),
+(82547, 7, 852.005, 2114.89, 269.918, 1.55325, 0, 0, NULL),
+(82547, 8, 851.518, 2119.53, 271.003, 1.71111, 0, 0, NULL),
+(82547, 9, 850.561, 2122.76, 272.176, 1.90903, 0, 0, NULL),
+(82547, 10, 848.691, 2126.38, 272.527, 2.10695, 0, 0, NULL),
+(82547, 11, 846.274, 2129.53, 273.567, 2.26246, 0, 0, NULL),
+(82547, 12, 843.402, 2131.87, 271.768, 2.57583, 0, 0, NULL),
+(82547, 13, 840.137, 2133.68, 270.536, 2.65359, 0, 0, NULL),
+(82547, 14, 835.806, 2135.03, 273.104, 2.88921, 0, 0, NULL),
+(82547, 15, 832.349, 2135.52, 274.225, 3.04707, 0, 0, NULL),
+(82547, 16, 828.947, 2134.9, 272.751, 3.44056, 0, 0, NULL),
+(82547, 17, 825.154, 2133.73, 273.764, 3.44056, 0, 0, NULL),
+(82547, 18, 821.69, 2131.6, 272.93, 3.75393, 0, 0, NULL),
+(82547, 19, 818.444, 2129.32, 273.725, 3.75393, 0, 0, NULL),
+(82547, 20, 816.131, 2126.46, 272.813, 4.18747, 0, 0, NULL),
+(82547, 21, 813.556, 2122.02, 270.826, 4.18747, 0, 0, NULL),
+(82547, 22, 811.623, 2118.68, 271.495, 4.18747, 0, 0, NULL),
+(82547, 23, 808.681, 2114.63, 272.197, 4.30528, 0, 0, NULL),
+(82547, 24, 805.928, 2109.9, 272.12, 4.98701, 0, 0, NULL),
+(82547, 25, 807.398, 2105.97, 271.829, 5.10482, 0, 0, NULL),
+(82547, 26, 809.467, 2102.61, 271.059, 5.34044, 0, 0, NULL),
+(82547, 27, 811.502, 2100.2, 272.546, 5.49595, 0, 0, NULL),
+(82547, 28, 814.453, 2097.55, 273.282, 5.65381, 0, 0, NULL),
+(82547, 29, 817.385, 2095.42, 271.998, 5.65381, 0, 0, NULL),
+(82547, 30, 820.378, 2094.13, 270.541, 5.92949, 0, 0, NULL),
+(82547, 31, 823.319, 2093.39, 270.729, 6.08735, 0, 0, NULL),
+(82547, 32, 825.872, 2093.17, 272.376, 6.24522, 0, 0, NULL),
+(82548, 1, 851.055, 2121.76, 272.107, 1.81321, 0, 0, NULL),
+(82548, 2, 848.912, 2125.67, 272.419, 2.24675, 0, 0, NULL),
+(82548, 3, 845.772, 2129.58, 273.71, 2.24675, 0, 0, NULL),
+(82548, 4, 841.178, 2133.15, 270.533, 2.52242, 0, 0, NULL),
+(82548, 5, 835.205, 2135.77, 273.711, 2.75804, 0, 0, NULL),
+(82548, 6, 831.29, 2135.85, 274.334, 3.22928, 0, 0, NULL),
+(82548, 7, 825.823, 2135.37, 273.387, 3.22928, 0, 0, NULL),
+(82548, 8, 820.045, 2134.01, 272.104, 3.42485, 0, 0, NULL),
+(82548, 9, 816.518, 2131.43, 272.807, 3.89609, 0, 0, NULL),
+(82548, 10, 812.508, 2126.58, 272.101, 4.05395, 0, 0, NULL),
+(82548, 11, 810.708, 2123.45, 271.494, 4.24952, 0, 0, NULL),
+(82548, 12, 808.832, 2119.69, 270.762, 4.24952, 0, 0, NULL),
+(82548, 13, 807.06, 2116.14, 271.97, 4.24952, 0, 0, NULL),
+(82548, 14, 804.238, 2110.49, 272.057, 4.24952, 0, 0, NULL),
+(82548, 15, 804.065, 2105.31, 272.521, 4.91632, 0, 0, NULL),
+(82548, 16, 805.706, 2101.86, 271.1, 5.23205, 0, 0, NULL),
+(82548, 17, 808.807, 2098.42, 271.496, 5.54778, 0, 0, NULL),
+(82548, 18, 812.009, 2095.52, 272.407, 5.54778, 0, 0, NULL),
+(82548, 19, 816.582, 2092.78, 272.145, 5.82345, 0, 0, NULL),
+(82548, 20, 820.6, 2091.66, 269.462, 6.09913, 0, 0, NULL),
+(82548, 21, 824.758, 2091.44, 272.084, 0.129318, 0, 0, NULL),
+(82548, 22, 829.86, 2092.1, 272.792, 0.129318, 0, 0, NULL),
+(82548, 23, 835.75, 2093.51, 273.666, 0.54715, 0, 0, NULL),
+(82548, 24, 841.44, 2097.17, 272.127, 0.54715, 0, 0, NULL),
+(82548, 25, 843.769, 2099.11, 271.777, 0.742714, 0, 0, NULL),
+(82548, 26, 846.435, 2101.56, 270.673, 0.742714, 0, 0, NULL),
+(82548, 27, 849.275, 2104.17, 273.012, 0.742714, 0, 0, NULL),
+(82548, 28, 851.773, 2108.2, 272.673, 1.0985, 0, 0, NULL),
+(82548, 29, 852.548, 2111.1, 272.471, 1.45193, 0, 0, NULL),
+(82548, 30, 852.321, 2114.93, 269.851, 1.72525, 0, 0, NULL),
+(82548, 31, 851.656, 2119.19, 270.721, 1.72525, 0, 0, NULL),
+(82549, 1, 703.972, 2375.87, 275.048, 0.310768, 0, 0, NULL),
+(82549, 2, 711.636, 2378.34, 275.592, 0.310768, 0, 0, NULL),
+(82549, 3, 716.419, 2380.99, 272.341, 0.546388, 0, 0, NULL),
+(82549, 4, 719.999, 2384.13, 274.307, 0.784364, 0, 0, NULL),
+(82549, 5, 723.521, 2388.63, 275.41, 0.942229, 0, 0, NULL),
+(82549, 6, 726.04, 2392.29, 276.604, 0.982284, 0, 0, NULL),
+(82549, 7, 728.087, 2397.22, 275.028, 1.25796, 0, 0, NULL),
+(82549, 8, 728.682, 2401.48, 274.634, 1.49593, 0, 0, NULL),
+(82549, 9, 728.466, 2406.12, 275.169, 1.69386, 0, 0, NULL),
+(82549, 10, 727.066, 2410.55, 276.223, 1.92947, 0, 0, NULL),
+(82549, 11, 724.352, 2414.59, 275.907, 2.2452, 0, 0, NULL),
+(82549, 12, 722.525, 2416.87, 274.881, 2.2452, 0, 0, NULL),
+(82549, 13, 720.713, 2418.35, 274.529, 2.46669, 0, 0, NULL),
+(82549, 14, 716.975, 2421.34, 277.177, 2.46669, 0, 0, NULL),
+(82549, 15, 714.783, 2423.09, 277.773, 2.46669, 0, 0, NULL),
+(82549, 16, 711.318, 2425.87, 275.804, 2.46669, 0, 0, NULL),
+(82549, 17, 707.324, 2427.73, 275.403, 2.78006, 0, 0, NULL),
+(82549, 18, 703.216, 2428.48, 275.167, 3.05574, 0, 0, NULL),
+(82549, 19, 698.686, 2427.65, 275.135, 3.44922, 0, 0, NULL),
+(82549, 20, 694.942, 2425.59, 274.873, 3.76495, 0, 0, NULL),
+(82549, 21, 691.81, 2423.34, 273.396, 3.76495, 0, 0, NULL),
+(82549, 22, 689.245, 2420.97, 274.229, 3.96052, 0, 0, NULL),
+(82549, 23, 685.975, 2417.48, 276.107, 3.96052, 0, 0, NULL),
+(82549, 24, 683.66, 2413.84, 275.497, 4.19614, 0, 0, NULL),
+(82549, 25, 681.469, 2409.98, 276.117, 4.19614, 0, 0, NULL),
+(82549, 26, 679.742, 2406.94, 275.407, 4.19614, 0, 0, NULL),
+(82549, 27, 677.567, 2402.94, 274.87, 4.43175, 0, 0, NULL),
+(82549, 28, 677.36, 2396.83, 275.272, 5.02316, 0, 0, NULL),
+(82549, 29, 680.055, 2390.77, 275.318, 5.21872, 0, 0, NULL),
+(82549, 30, 682.824, 2386.59, 275.217, 5.33653, 0, 0, NULL),
+(82549, 31, 685.852, 2383.37, 274.938, 5.5321, 0, 0, NULL),
+(82549, 32, 689.336, 2380.82, 274.842, 5.68996, 0, 0, NULL),
+(82549, 33, 691.756, 2379.19, 274.237, 5.68996, 0, 0, NULL),
+(82549, 34, 693.892, 2377.75, 273.619, 5.68996, 0, 0, NULL),
+(82549, 35, 696.812, 2376.61, 274.761, 5.96564, 0, 0, NULL),
+(82550, 1, 817.149, 2131.8, 272.708, 4.0461, 0, 0, NULL),
+(82550, 2, 813.526, 2127.19, 272.73, 4.0461, 0, 0, NULL),
+(82550, 3, 810.844, 2123.51, 271.518, 4.06966, 0, 0, NULL),
+(82550, 4, 808.251, 2120.05, 270.703, 4.06966, 0, 0, NULL),
+(82550, 5, 805.314, 2116.13, 271.872, 4.06966, 0, 0, NULL),
+(82550, 6, 805.567, 2108.93, 272.176, 4.81186, 0, 0, NULL),
+(82550, 7, 805.939, 2105.21, 272.341, 4.81186, 0, 0, NULL),
+(82550, 8, 807.775, 2101.8, 270.51, 5.27524, 0, 0, NULL),
+(82550, 9, 810.516, 2097.45, 272.373, 5.27524, 0, 0, NULL),
+(82550, 10, 814.883, 2094.68, 272.222, 5.82659, 0, 0, NULL),
+(82550, 11, 818.081, 2093.25, 272.093, 5.94204, 0, 0, NULL),
+(82550, 12, 820.707, 2092.72, 269.765, 6.13761, 0, 0, NULL),
+(82550, 13, 824.17, 2092.21, 271.471, 6.13761, 0, 0, NULL),
+(82550, 14, 828.241, 2092.44, 272.615, 0.090042, 0, 0, NULL),
+(82550, 15, 832.714, 2093.75, 273.203, 0.325662, 0, 0, NULL),
+(82550, 16, 836.777, 2095.52, 273.922, 0.443471, 0, 0, NULL),
+(82550, 17, 840.756, 2097.94, 272.143, 0.601337, 0, 0, NULL),
+(82550, 18, 844.796, 2100.22, 270.439, 0.601337, 0, 0, NULL),
+(82550, 19, 847.4, 2102, 271.376, 0.601337, 0, 0, NULL),
+(82550, 20, 849.775, 2104.4, 273.431, 0.839312, 0, 0, NULL),
+(82550, 21, 852.535, 2109.63, 272.614, 1.15269, 0, 0, NULL),
+(82550, 22, 853.084, 2112.12, 271.936, 1.46842, 0, 0, NULL),
+(82550, 23, 852.978, 2114.79, 270.125, 1.66634, 0, 0, NULL),
+(82550, 24, 852.432, 2120.48, 271.807, 1.66634, 0, 0, NULL),
+(82550, 25, 850.606, 2124.14, 272.242, 2.0339, 0, 0, NULL),
+(82550, 26, 847.168, 2129.69, 273.133, 2.18941, 0, 0, NULL),
+(82550, 27, 844.04, 2132.09, 271.963, 2.54284, 0, 0, NULL),
+(82550, 28, 839.46, 2134.1, 270.573, 2.77846, 0, 0, NULL),
+(82550, 29, 835.315, 2135.67, 273.687, 2.77846, 0, 0, NULL),
+(82550, 30, 831.261, 2136.05, 274.269, 3.09419, 0, 0, NULL),
+(82550, 31, 826.048, 2135.51, 273.344, 3.28976, 0, 0, NULL),
+(82550, 32, 822.351, 2134.96, 272.622, 3.28976, 0, 0, NULL);

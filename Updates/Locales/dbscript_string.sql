@@ -3867,6 +3867,12 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Итоги войны чрезм�
 UPDATE `dbscript_string` SET `content_loc8` = 'Красные драконы возьмут на себя бремя заживления ран Азерота. Возвращайтесь домой, к своим людям, и отдохните. Будущее несет вам новые испытания, и вы должны быть готовы к ним. Жизнь... продолжается.' WHERE `entry` = 2000027603;
 UPDATE `dbscript_string` SET `content_loc8` = 'Летающий помост вдали подрагивает, когда магическая энергия, поддерживающая его в воздухе, уменьшается.' WHERE `entry` = 2000027800;
 UPDATE `dbscript_string` SET `content_loc8` = 'Все на борт! Заряжай пушки!' WHERE `entry` = 2000028200;
+UPDATE `dbscript_string` SET `content_loc8` = 'От нас не убежишь!' WHERE `entry` = 2000028400;
+UPDATE `dbscript_string` SET `content_loc8` = 'Живые? Здесь?!' WHERE `entry` = 2000028401;
+UPDATE `dbscript_string` SET `content_loc8` = 'Скорей, нападем на них сзади!' WHERE `entry` = 2000028402;
+UPDATE `dbscript_string` SET `content_loc8` = 'Я пробудился...' WHERE `entry` = 2000028423;
+UPDATE `dbscript_string` SET `content_loc8` = 'В покои господина проникли!' WHERE `entry` = 2000028424;
+UPDATE `dbscript_string` SET `content_loc8` = 'Кто... идет?' WHERE `entry` = 2000028425;
 UPDATE `dbscript_string` SET `content_loc8` = 'Смерть распростерла ледяные объятия.' WHERE `entry` = 2000029200;
 UPDATE `dbscript_string` SET `content_loc8` = 'Покоритесь леденящей смерти!' WHERE `entry` = 2000029201;
 UPDATE `dbscript_string` SET `content_loc8` = 'Вы в ловушке!' WHERE `entry` = 2000029202;

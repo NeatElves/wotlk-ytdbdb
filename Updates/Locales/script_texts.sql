@@ -1226,11 +1226,6 @@ UPDATE `script_texts` SET `content_loc8` = 'Я не остановлюсь, по
 UPDATE `script_texts` SET `content_loc8` = 'Соберись с силами. Место, где был убит Стальная Челюсть, немного впереди.' WHERE `entry` = -1001316;
 UPDATE `script_texts` SET `content_loc8` = 'Вон знамя этого пса и там же его труп. Что это? Это он идет на нас!' WHERE `entry` = -1001317;
 UPDATE `script_texts` SET `content_loc8` = 'Ты хорошо $gсражался:сражалась;. Теперь отправляйся на север, в ваш орочий аванпост, и сообщи Властителю Бор''гороку о нашем успехе!' WHERE `entry` = -1001318;
-UPDATE `script_texts` SET `content_loc8` = 'Это маяк. Осколок забытой эпохи.' WHERE `entry` = -1001319;
-UPDATE `script_texts` SET `content_loc8` = 'Они неуправляемы... Ошу''гун взывает к ним...' WHERE `entry` = -1001320;
-UPDATE `script_texts` SET `content_loc8` = 'Уйди, $gсмертный:смертная;... Это не твоя битва.' WHERE `entry` = -1001321;
-UPDATE `script_texts` SET `content_loc8` = 'Мы бесконечны... вечны.' WHERE `entry` = -1001322;
-UPDATE `script_texts` SET `content_loc8` = 'Ты их не остановишь...' WHERE `entry` = -1001323;
 UPDATE `script_texts` SET `content_loc8` = 'Зверь возвращается туда, откуда пришел. Гнев Нептулона утих.' WHERE `entry` = -1010000;
 UPDATE `script_texts` SET `content_loc8` = 'Смотрите, $n! На западе!' WHERE `entry` = -1010001;
 UPDATE `script_texts` SET `content_loc8` = 'Защитник пал!' WHERE `entry` = -1010002;
