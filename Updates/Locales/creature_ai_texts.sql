@@ -403,7 +403,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Мы жаждем мести.' 
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Нет покоя свирепому мертвецу!' WHERE `entry` = -1203;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Еще... Еще душ!' WHERE `entry` = -1204;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Спускайте псов!' WHERE `entry` = -1205;
-UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -1206;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'СМОТТС, У МЕНЯ ТВОЙ ПОЯС... ПРИХОДИ И ЗАБЕРИ ЕГО.' WHERE `entry` = -1206;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'СМОТТС! ЭЙ, СМОТТС!!! ВЫХОДИ, ПОИГРАЕМ!' WHERE `entry` = -1207;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'МНЕ СКУЧНО В КОМПАНИИ ЭТОЙ СТАТУИ. ВЫХОДИ, ПОИГРАЕМ!' WHERE `entry` = -1208;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'ВЫХОДИ К ВЕРШИНЕ ЖАНЕЙРО. Я ЖДУ ТЕБЯ, СМОТТС...' WHERE `entry` = -1209;
@@ -682,7 +682,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Если не начнешь б
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Боевая стойка! Приготовиться к стремительной атаке!' WHERE `entry` = -10130;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Защитная стойка! Укрыться от ударов врага, и в бой!' WHERE `entry` = -10131;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Стойка берсерка! Нападаем, крушим!' WHERE `entry` = -10132;
-UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -10133;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Глаза |3-1(%s) на миг вспыхивают красным.' WHERE `entry` = -10133;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Защищай невинных!' WHERE `entry` = -10134;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Служите общественному долгу!' WHERE `entry` = -10135;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Соблюдайте закон!' WHERE `entry` = -10136;
@@ -2725,6 +2725,12 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Почему ты защища�
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Тебе не разрушить этот портал!' WHERE `entry` = -20994;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Это твоя последняя схватка!' WHERE `entry` = -20995;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Разрушение Даларана неизбежно!' WHERE `entry` = -20996;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Даларан должен пасть!' WHERE `entry` = -20997;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Смерть и уничтожение всем, кто против нас!' WHERE `entry` = -20998;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'За Хранителя Магии!' WHERE `entry` = -20999;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Магия должна... быть ограничена...' WHERE `entry` = -21000;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Кирин-Тор нужно остановить!' WHERE `entry` = -21001;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Войну Нексуса не остановить!' WHERE `entry` = -21002;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
