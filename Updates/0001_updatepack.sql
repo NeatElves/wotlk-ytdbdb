@@ -43582,8 +43582,8 @@ UPDATE `creature_template` SET `MinLevelHealth` = 674050, `MaxLevelHealth` = 674
 
 DELETE FROM spell_script_target WHERE entry IN (59474,54160,57912,57930,58040,54269);
 INSERT INTO spell_script_target VALUES
-(59474,1,29266,0), (59474,1,32231,0), (54160,1,29266,0), (54160,1,32231,0), (57912,1,31007,0), (57912,1,31008,0), (57912,1,31009,0), (57912,1,31010,0), (57912,1,29425,0), (57912,1,30661,0), (57912,1,30662,0),
-(57912,1,30663,0), (57912,1,30664,0), (57912,1,30665,0), (57912,1,30666,0), (57912,1,30667,0), (57912,1,30668,0), (57912,1,32191,0), (57912,1,29321,0), (57930,1,30857,0), (58040,1,30896,0), (54269,1,29313,0);
+(59474,1,29266,0), (59474,1,32231,0), (54160,1,29266,0), (54160,1,32231,0), (57912,1,31007,0), (57912,1,31008,0), (57912,1,31009,0), (57912,1,31010,0), (57912,1,29425,0), (57912,1,30661,0), (57912,1,30662,0), (57912,1,30663,0),
+(57912,1,30664,0), (57912,1,30665,0), (57912,1,30666,0), (57912,1,30667,0), (57912,1,30668,0), (57912,1,32191,0), (57912,1,29321,0), (57912,1,29364,0), (57912,1,29365,0), (57930,1,30857,0), (58040,1,30896,0), (54269,1,29313,0);
 
 UPDATE `creature_template` SET `MinLevel` = 83, `MaxLevel` = 83, `UnitFlags` = 33554432, `Expansion` = 2, `MinLevelHealth` = 13945, `MaxLevelHealth` = 13945 WHERE `Entry` =30837;
 UPDATE `creature_template` SET `MinLevelHealth` = 37800, `MaxLevelHealth` = 37800 WHERE `Entry` in (36764,36765,36770,36772);
@@ -43710,7 +43710,7 @@ UPDATE `creature_template` SET `Expansion` = 0, `MinLevelHealth` = 5342, `MaxLev
 
 UPDATE `creature_template` SET `GossipMenuId` = 8721 WHERE `Entry` = 30796;
 UPDATE `creature_template` SET `DifficultyEntry1` = 30796 WHERE `Entry` =23110;
-UPDATE `creature_template` SET `MinLevel` = 80, `MaxLevel` = 80, `MinLevelHealth` = 553, `MaxLevelHealth` = 553, `Armor` = 9729 WHERE `Entry` =29364;
+UPDATE `creature_template` SET `MinLevel` = 75, `MaxLevel` = 75, `MinLevelHealth` = 467, `MaxLevelHealth` = 467, `Armor` = 8219 WHERE `Entry` =29364;
 UPDATE `item_template` SET `Flags2` = 8192 WHERE `entry` =51683;
 DELETE FROM spell_area WHERE spell = 68645;
 INSERT INTO spell_area (spell, area, quest_start, quest_start_active, quest_end, condition_id, aura_spell, racemask, gender, autocast) VALUES (68645,4812,0,0,0,0,0,0,2,0);
