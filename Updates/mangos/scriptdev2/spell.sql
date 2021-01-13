@@ -231,6 +231,10 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (47374,'spell_ley_line_focus_ring'),
 (47469,'spell_ley_line_focus_ring'),
 (47634,'spell_ley_line_focus_ring'),
+(47710,'spell_summon_telestra_clones'),
+(47711,'spell_telestra_clone_dies_aura'),
+(47712,'spell_telestra_clone_dies_aura'),
+(47713,'spell_telestra_clone_dies_aura'),
 (50546,'spell_ley_line_focus_item_trigger'),
 (50547,'spell_ley_line_focus_item_trigger'),
 (50548,'spell_ley_line_focus_item_trigger'),
@@ -238,6 +242,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (47435,'spell_scrape_corrosive_spit'),
 (47447,'spell_corrosive_spit'),
 (47938,'spell_twisting_blade'),
+(48095,'spell_intense_cold_aura'),
 (48268,'spell_container_of_rats'),
 (48397,'spell_drop_off_villager'),
 (48630,'spell_summon_gauntlet_mobs_periodic_aura'),
@@ -277,6 +282,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (53177,'spell_web_door_aura'),
 (53185,'spell_web_door_aura'),
 (54148,'spell_ritual_of_the_sword'),
+(54164,'spell_summon_players'),
 (54205,'spell_svala_transforming'),
 (54259,'spell_splatter_aura'),
 (54260,'spell_water_globule_missile'),
@@ -319,6 +325,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (66314,'spell_dark_ball_passive'),
 (67009,'spell_nether_power'),
 (67322,'spell_burrower_submerge'),
+(67470,'spell_pursuing_spikes'),
 (67547,'spell_clear_valkyr_essence'),
 (67590,'spell_powering_up'),
 (67630,'spell_leeching_swarm_aura'),
@@ -454,6 +461,10 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (26980,'spell_regrowth'),
 (48442,'spell_regrowth'),
 (48443,'spell_regrowth');
+
+-- Rogue
+INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(14185,'spell_preparation');
 
 -- Shaman
 INSERT INTO spell_scripts(Id, ScriptName) VALUES

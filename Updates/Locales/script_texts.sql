@@ -3861,6 +3861,8 @@ UPDATE `script_texts` SET `content_loc8` = 'А я тебе говорил!' WHER
 UPDATE `script_texts` SET `content_loc8` = 'Даже сильнейшие... могут пасть.' WHERE `entry` = -1604028;
 UPDATE `script_texts` SET `content_loc8` = '%s превращается в мамонта!' WHERE `entry` = -1604029;
 UPDATE `script_texts` SET `content_loc8` = '$n $gпронзен:пронзена;!' WHERE `entry` = -1604030;
+UPDATE `script_texts` SET `content_loc8` = 'Похоже, за свободу придется заплатить кровью!' WHERE `entry` = -1608000;
+UPDATE `script_texts` SET `content_loc8` = 'Интересно... Поблизости столько энергии тайной магии. Надо это разведать...' WHERE `entry` = -1608001;
 UPDATE `script_texts` SET `content_loc8` = 'Авантюристы, дверь слабеет!' WHERE `entry` = -1608002;
 UPDATE `script_texts` SET `content_loc8` = 'Теперь дверь удерживает лишь половина печати! Продолжай сражаться!' WHERE `entry` = -1608003;
 UPDATE `script_texts` SET `content_loc8` = 'Дверь вот-вот рухнет! Если синие драконы прорвутся сюда, все будет потеряно!' WHERE `entry` = -1608004;
@@ -3871,6 +3873,13 @@ UPDATE `script_texts` SET `content_loc8` = 'Теперь могу--мм--лет�
 UPDATE `script_texts` SET `content_loc8` = 'Я... сама... ярость!' WHERE `entry` = -1608009;
 UPDATE `script_texts` SET `content_loc8` = 'Снова в деле! Так, подумаем о путях отхода.' WHERE `entry` = -1608010;
 UPDATE `script_texts` SET `content_loc8` = 'Я... снова жив!' WHERE `entry` = -1608011;
+UPDATE `script_texts` SET `content_loc8` = 'Ничего личного.' WHERE `entry` = -1608012;
+UPDATE `script_texts` SET `content_loc8` = 'Договор заключен.' WHERE `entry` = -1608013;
+UPDATE `script_texts` SET `content_loc8` = 'Прибыль!' WHERE `entry` = -1608014;
+UPDATE `script_texts` SET `content_loc8` = 'Воздух просто пронизан энергией. Какой тут можно собрать урожай!' WHERE `entry` = -1608015;
+UPDATE `script_texts` SET `content_loc8` = 'Так много полезных ресурсов... готовых к изъятию!' WHERE `entry` = -1608016;
+UPDATE `script_texts` SET `content_loc8` = 'Это... невозместимая... потеря.' WHERE `entry` = -1608017;
+UPDATE `script_texts` SET `content_loc8` = '%s начинает ритуал призыва!' WHERE `entry` = -1608018;
 UPDATE `script_texts` SET `content_loc8` = 'Прочь с дороги, смертные!' WHERE `entry` = -1608019;
 UPDATE `script_texts` SET `content_loc8` = 'Меня не остановить!' WHERE `entry` = -1608020;
 UPDATE `script_texts` SET `content_loc8` = 'Вода может принять любую форму, занять любое пространство... смести любую преграду.' WHERE `entry` = -1608021;

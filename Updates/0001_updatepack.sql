@@ -44030,3 +44030,19 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 
 UPDATE `creature_template` SET `EquipmentTemplateId` = 2375 WHERE `Entry` = 16447;
 INSERT INTO `creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES (2375, 22213, 0, 0);
+
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 27358);
+DELETE FROM `creature` WHERE `guid` = 120997;
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
+(121001, 0, 0, 1, 0, 0, 0, NULL), (121004, 0, 0, 1, 0, 0, 0, NULL), (121006, 0, 0, 1, 0, 0, 0, NULL), (121007, 0, 0, 1, 0, 0, 0, NULL), (121009, 0, 0, 1, 0, 0, 0, NULL);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(82815, 27358, 571, 1, 1, 0, 0, 4589.27, 1709.63, 171.344, 5.70895, 600, 600, 7, 0, 8225, 7809, 0, 1),
+(121004, 27358, 571, 1, 1, 0, 0, 4497.34, 1892.62, 164.344, 5.96119, 600, 600, 5, 0, 8225, 7809, 0, 1),
+(121001, 27358, 571, 1, 1, 0, 0, 4523.16, 1832.34, 164.019, 3.5432, 600, 600, 7, 0, 8225, 7809, 0, 1),
+(121006, 27358, 571, 1, 1, 0, 0, 4623.31, 1751.64, 182.077, 4.00887, 600, 600, 7, 0, 8225, 7809, 0, 1),
+(82816, 27358, 571, 1, 1, 0, 0, 4575.15, 1736.79, 167.869, 6.04159, 600, 600, 7, 0, 8225, 7809, 0, 1),
+(82817, 27358, 571, 1, 1, 0, 0, 4493.88, 1741.73, 175.28, 6.11395, 600, 600, 5, 0, 8225, 7809, 0, 1),
+(121009, 27358, 571, 1, 1, 0, 0, 4433.38, 1789.67, 164.223, 4.72848, 600, 600, 7, 0, 8225, 7809, 0, 1),
+(121007, 27358, 571, 1, 1, 0, 0, 4491.65, 1765.98, 164.784, 3.39187, 600, 600, 5, 0, 8225, 7809, 0, 1);
+
+UPDATE `creature_template` SET `MinLevel` = 77, `MaxLevel` = 77, `MinLevelHealth` = 227580, `MaxLevelHealth` = 227580, `Armor` = 8822 WHERE `Entry` =32582;

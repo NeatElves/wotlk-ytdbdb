@@ -2269,14 +2269,6 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Добро пожаловать
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Используй Жгучий гнев, чтобы наносить врагам урон, и Маневр уклонения, если урон начнут наносить мне. Помни, что мне требуется совершать Обходные маневры, получая урон, для того, чтобы выполнять Маневр уклонения!' WHERE `entry` = -20538;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Используй похищающий жизнь яд. Он будет отравлять врагов и исцелять меня. Прикосновение кошмара – это очень мощное заклинание, но оно наносит мне урон. Так что используй его, только когда у меня будет достаточно много здоровья.' WHERE `entry` = -20539;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Уничтожь врагов Шоком времени! Если мы окажемся в беде, воспользуйся заклинанием остановки времени, заморозь всех врагов и ударь по ним Шоком времени, чтобы нанести им серьезный урон!' WHERE `entry` = -20540;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Похоже, за свободу придется заплатить кровью!' WHERE `entry` = -20541;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Ничего личного.' WHERE `entry` = -20542;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Договор заключен.' WHERE `entry` = -20543;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Прибыль!' WHERE `entry` = -20544;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Это... невозместимая... потеря.' WHERE `entry` = -20545;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Воздух просто пронизан энергией. Какой тут можно собрать урожай!' WHERE `entry` = -20546;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Так много полезных ресурсов... готовых к изъятию!' WHERE `entry` = -20547;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Интересно... Поблизости столько энергии тайной магии. Надо это разведать...' WHERE `entry` = -20548;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Уничтожить.' WHERE `entry` = -20549;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Больше... энергии.' WHERE `entry` = -20550;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Оставь надежду.' WHERE `entry` = -20551;
