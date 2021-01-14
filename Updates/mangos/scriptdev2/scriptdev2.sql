@@ -1735,12 +1735,9 @@ UPDATE creature_template SET ScriptName='mob_vrykul_skeleton' WHERE entry=23970;
 
 /* UTGARDE PINNACLE */
 UPDATE creature_template SET ScriptName='boss_gortok' WHERE entry=26687;
-UPDATE creature_template SET ScriptName='npc_gortok_subboss' WHERE entry IN (26683,26684,26685,26686);
 UPDATE creature_template SET ScriptName='boss_skadi' WHERE entry=26693;
 UPDATE creature_template SET ScriptName='npc_grauf' WHERE entry=26893;
-UPDATE creature_template SET ScriptName='npc_flame_breath_trigger' WHERE entry=28351;
 UPDATE creature_template SET ScriptName='boss_svala' WHERE entry=26668;
-UPDATE creature_template SET ScriptName='npc_ritual_target' WHERE entry=27327;
 UPDATE creature_template SET ScriptName='boss_ymiron' WHERE entry=26861;
 UPDATE instance_template SET ScriptName='instance_pinnacle' WHERE map=575;
 INSERT INTO scripted_areatrigger VALUES
@@ -5625,7 +5622,9 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1574021','%s casts Frost Tomb on $N','0','3','0','0','0','keleseth EMOTE_FROST_TOMB'),
 
 ('-1574022','%s roars!','0','3','0','0','0','ingvar EMOTE_ROAR'),
-('-1574023','Ingvar! Your pathetic failure will serve as a warning to all... you are damned! Arise and carry out the masters will!','13754','1','0','0','0','annhylde REZZ');
+('-1574023','Ingvar! Your pathetic failure will serve as a warning to all... you are damned! Arise and carry out the masters will!','13754','1','0','0','0','annhylde REZZ'),
+
+('-1574024','%s rises from the floor!','0','2','0','0','0','keleseth EMOTE_RISE_SKELETON');
 
 -- -1 575 000 UTGARDE PINNACLE
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES

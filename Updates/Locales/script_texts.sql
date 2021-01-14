@@ -3129,6 +3129,7 @@ UPDATE `script_texts` SET `content_loc8` = 'Скарвальд, некомпет
 UPDATE `script_texts` SET `content_loc8` = '%s накладывает Ледяную Могилу на $N' WHERE `entry` = -1574021;
 UPDATE `script_texts` SET `content_loc8` = '%s оглушительно ревет!' WHERE `entry` = -1574022;
 UPDATE `script_texts` SET `content_loc8` = 'Ингвар! Твой жалкий провал послужил предупреждением... будь ты проклят! Поднимись и осуществи волю хозяина!' WHERE `entry` = -1574023;
+UPDATE `script_texts` SET `content_loc8` = '%s поднимается с пола!' WHERE `entry` = -1574024;
 UPDATE `script_texts` SET `content_loc8` = 'Мой господин! Я сделала, как вы велели, и теперь молю вас о благословении!' WHERE `entry` = -1575000;
 UPDATE `script_texts` SET `content_loc8` = 'Твоя жертва является лучшим подтверждением твоей преданности. Воистину ты достойна этой ответственности. Восстань, отныне и вовеки веков ты будешь известна как Свала Вечноскорбящая!' WHERE `entry` = -1575001;
 UPDATE `script_texts` SET `content_loc8` = 'Эти ощущения... невозможно передать. Приказывай, мой король.' WHERE `entry` = -1575002;
