@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14026_01_mangos_power_regen required_14029_01_mangos_creature_template_spells_extension bit;

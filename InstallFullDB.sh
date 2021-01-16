@@ -8,9 +8,9 @@
 ####################################################################################################
 
 # need to be changed on each official DB/CORE release
-FULLDB_FILE_ZIP="YTDB_0.15.0_R662_cMaNGOS_R14017_RuDB_R70.sql.gz"
+FULLDB_FILE_ZIP="YTDB_0.15.1_R663_cMaNGOS_R14032_RuDB_R71.sql.gz"
 FULLDB_FILE=${FULLDB_FILE_ZIP%.gz}
-DB_TITLE="YTDB_0.15.0_R662"
+DB_TITLE="YTDB_0.15.1_R663"
 NEXT_MILESTONES="0.19 0.20"
 
 # internal use

@@ -1,2 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14029_01_mangos_creature_template_spells_extension required_14031_01_mangos_creature_spawn_data bit;
-
