@@ -44110,3 +44110,16 @@ UPDATE creature_template SET UnitFlags=32832 WHERE entry IN(21263,21251,21301,21
 UPDATE creature_template SET UnitFlags=32768 WHERE entry IN(21253,22035,22036);
 UPDATE creature_template SET UnitFlags=64 WHERE entry IN(21216,21212);
 UPDATE creature_template SET InhabitType=1 WHERE entry IN(21251);
+
+UPDATE `creature_template` SET `InhabitType` = 4, `SpeedWalk` = (2.5 / 2.5), `SpeedRun` = (20 / 2.5), `MovementType` = 0 WHERE `entry` = 15241;
+UPDATE `creature_template` SET `InhabitType` = 4, `SpeedWalk` = (7 / 2.5), `SpeedRun` = (18 / 2.5), `MovementType` = 0 WHERE `entry` = 15242;
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 12698;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(12698,0,17,39253,1,0,0,0,0x08,0,0,0,0,0,0,0,0,'remove source item');
+UPDATE quest_template SET CompleteScript = 12698 WHERE entry = 12698;
+
+DELETE FROM dbscripts_on_relay WHERE id=9002 AND delay=0 AND command=28;
+INSERT INTO dbscripts_on_relay (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+(9002, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'High Inquisitor Fairbanks - STATE_STAND');
+UPDATE creature_template_addon SET bytes1=0 WHERE entry=4542;
