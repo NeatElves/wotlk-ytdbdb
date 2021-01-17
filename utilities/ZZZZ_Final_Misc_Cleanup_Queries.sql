@@ -292,6 +292,29 @@ UPDATE `creature_ai_scripts` SET `event_param6` =3372 WHERE `event_type` =10 AND
 UPDATE `creature_ai_scripts` SET `event_param6` =3375 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20099;
 
 # Finall_Spell_UP
+-- Classic -> WOTLK UNIT_NPC_FLAGS
+UPDATE dbscripts_on_creature_death SET datalong = 82 WHERE datalong = 147 AND command IN (2,4,5);
+UPDATE dbscripts_on_creature_movement SET datalong = 82 WHERE datalong = 147 AND command IN (2,4,5);
+UPDATE dbscripts_on_event SET datalong = 82 WHERE datalong = 147 AND command IN (2,4,5);
+UPDATE dbscripts_on_go_use SET datalong = 82 WHERE datalong = 147 AND command IN (2,4,5);
+UPDATE dbscripts_on_go_template_use SET datalong = 82 WHERE datalong = 147 AND command IN (2,4,5);
+UPDATE dbscripts_on_gossip SET datalong = 82 WHERE datalong = 147 AND command IN (2,4,5);
+UPDATE dbscripts_on_quest_end SET datalong = 82 WHERE datalong = 147 AND command IN (2,4,5);
+UPDATE dbscripts_on_quest_start SET datalong = 82 WHERE datalong = 147 AND command IN (2,4,5);
+UPDATE dbscripts_on_spell SET datalong = 82 WHERE datalong = 147 AND command IN (2,4,5);
+UPDATE dbscripts_on_relay SET datalong = 82 WHERE datalong = 147 AND command IN (2,4,5);
+-- TBC -> WOTLK UNIT_NPC_FLAGS
+UPDATE dbscripts_on_creature_death SET datalong = 82 WHERE datalong = 168 AND command IN (2,4,5);
+UPDATE dbscripts_on_creature_movement SET datalong = 82 WHERE datalong = 168 AND command IN (2,4,5);
+UPDATE dbscripts_on_event SET datalong = 82 WHERE datalong = 168 AND command IN (2,4,5);
+UPDATE dbscripts_on_go_use SET datalong = 82 WHERE datalong = 168 AND command IN (2,4,5);
+UPDATE dbscripts_on_go_template_use SET datalong = 82 WHERE datalong = 168 AND command IN (2,4,5);
+UPDATE dbscripts_on_gossip SET datalong = 82 WHERE datalong = 168 AND command IN (2,4,5);
+UPDATE dbscripts_on_quest_end SET datalong = 82 WHERE datalong = 168 AND command IN (2,4,5);
+UPDATE dbscripts_on_quest_start SET datalong = 82 WHERE datalong = 168 AND command IN (2,4,5);
+UPDATE dbscripts_on_spell SET datalong = 82 WHERE datalong = 168 AND command IN (2,4,5);
+UPDATE dbscripts_on_relay SET datalong = 82 WHERE datalong = 168 AND command IN (2,4,5);
+-- Classic -> TBC -> WOTLK UNIT_FIELD_FLAGS
 UPDATE dbscripts_on_creature_death SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
 UPDATE dbscripts_on_creature_movement SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
 UPDATE dbscripts_on_event SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);

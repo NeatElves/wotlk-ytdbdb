@@ -1352,7 +1352,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 -- ======
 
 -- INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
--- INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipment_id`, `spell_start`, `spell_end`, `event`) VALUES
+INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipment_id`, `spell_start`, `spell_end`, `event`) VALUES
+(@CGUID+254, 0, 21934, 0, 0, 0, 2); -- Zul'jin (Feast of Winter Veil)
 
 INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 (@OGUID+4, 12), -- Sitting Skeleton 01 (Hallow's End)
