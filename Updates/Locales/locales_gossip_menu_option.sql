@@ -4523,7 +4523,7 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (10950, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ты можешь сделать что-нибудь с этим мечом?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (10950, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Темная Госпожа! Кажется, я слышу поступь Артаса. Чтобы вы ни задумали, поторопитесь!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (10963, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я готов идти к Солнечному Колодцу.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(10971, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Какие будут распоряжения, королева?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(10942, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Какие будут распоряжения, королева?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (10976, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Мне нужен еще один костюм для маскировки.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (10993, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я долго ждал, пока наступит этот день, герой. Готовы ли твои соратники свершить правосудие над Королем-личом? Мы бросимся в бой по твоему приказу!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (10996, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу посмотреть на ваши товары.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),

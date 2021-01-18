@@ -95,3 +95,11 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 (20511,0,32,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 28864 EAI: Pause'),
 (20511,1,25,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 28864 EAI: RUN ON'),
 (20511,2000,32,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of 28864 EAI: Unpause');
+
+UPDATE creature_template SET GossipMenuId=10942 WHERE entry IN (37596,37633);
+DELETE FROM gossip_menu WHERE entry IN (10942,10971);
+INSERT INTO gossip_menu (entry,text_id) VALUES (10942,15206);
+DELETE FROM gossip_menu_option WHERE menu_id IN (10942,10943,10971);
+INSERT INTO gossip_menu_option (menu_id, id, option_icon, option_text, option_id, npc_option_npcflag, action_script_id) VALUES
+(10942,0,0,'What would you have of me, Banshee Queen?',1,1,1094201),
+(10943,0,0,'What would you have of me, my lady?',1,1,1094301);
