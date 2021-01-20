@@ -190,3 +190,32 @@ INSERT INTO creature_movement_template (entry, pathId, point, position_x, positi
 (28906,4,4,1934.88,-5854.3,128.325,100,0,0),
 (28906,4,5,1868.49,-5900.39,120.756,100,0,0),
 (28906,4,6,1818.15,-5930,115.077,100,120000,20);
+
+UPDATE creature_template SET InhabitType = 4 WHERE entry = 28935;
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 12716;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(12716,0,0,0,0,0,0,0,0,2000001434,0,0,0,0,0,0,0,''),
+(12716,1000,15,52706,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast: Create Plague Cauldron'),
+(12716,2500,15,52707,0,0,0,0,6,0,0,0,0,0,0,0,0,'Player Cast: See Noth Invisibility');
+UPDATE dbscript_string SET sound = 8849 WHERE entry = 2000001434;
+DELETE FROM spell_area WHERE spell = 52707;
+INSERT INTO spell_area (spell, area, quest_start, quest_start_active, quest_end, condition_id, aura_spell, racemask, gender, autocast) VALUES (52707,4298,0,0,0,0,0,0,2,0);
+
+UPDATE quest_template SET PrevQuestId = 12714, NextQuestId = 0, NextQuestInChain = 12719 WHERE entry = 12715;
+UPDATE quest_template SET PrevQuestId = 12714, NextQuestId = 0, NextQuestInChain = 12717 WHERE entry = 12716;
+UPDATE quest_template SET PrevQuestId = 12716, NextQuestId = 0, ExclusiveGroup = 0, NextQuestInChain = 0 WHERE entry = 12717;
+UPDATE quest_template SET PrevQuestId = 12715, NextQuestId = 0, ExclusiveGroup = 0, NextQuestInChain = 0 WHERE entry = 12722;
+UPDATE quest_template SET PrevQuestId = 12719, NextQuestId = 0, ExclusiveGroup = 0, NextQuestInChain = 0 WHERE entry = 12720;
+UPDATE quest_template SET RequiredCondition = 3447, PrevQuestId = 0, NextQuestId = 0, ExclusiveGroup = 0, NextQuestInChain = 12724 WHERE entry = 12723;
+DELETE FROM conditions WHERE condition_entry BETWEEN 3444 AND 3447;
+INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4) VALUES
+(3444, 8, 12717,0,0,0), (3445, 8, 12719,0,0,0), (3446, 8, 12722,0,0,0), (3447, -1, 3444,3445,3446,0);
+
+UPDATE `gossip_menu_option` SET `action_script_id` = 1095001 WHERE `menu_id` =10950 AND `id` =0;
+UPDATE `gossip_menu_option` SET `action_script_id` = 1095002 WHERE `menu_id` =10950 AND `id` =1;
+UPDATE `gossip_menu_option` SET `action_script_id` = 1103101 WHERE `menu_id` =11031 AND `id` =0;
+UPDATE `gossip_menu_option` SET `action_script_id` = 1103102 WHERE `menu_id` =11031 AND `id` =1;
+DELETE FROM `dbscripts_on_gossip` WHERE `id` in (1095000,1103100);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (3722103,3722301,3758201);
+DELETE FROM `dbscript_string` WHERE entry BETWEEN 2000001632 AND 2000001673;

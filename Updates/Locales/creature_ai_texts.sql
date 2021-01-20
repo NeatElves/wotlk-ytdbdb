@@ -2723,6 +2723,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'За Хранителя Маг�
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Магия должна... быть ограничена...' WHERE `entry` = -21000;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Кирин-Тор нужно остановить!' WHERE `entry` = -21001;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Войну Нексуса не остановить!' WHERE `entry` = -21002;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21003;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
