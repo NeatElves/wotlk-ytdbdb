@@ -290,6 +290,7 @@ UPDATE `creature_ai_scripts` SET `event_param6` =3295 WHERE `event_type` =10 AND
 UPDATE `creature_ai_scripts` SET `event_param6` =3298 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20040;
 UPDATE `creature_ai_scripts` SET `event_param6` =3372 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20096;
 UPDATE `creature_ai_scripts` SET `event_param6` =3375 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20099;
+UPDATE `creature_ai_scripts` SET `event_param6` =3448 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20194;
 
 # Finall_Spell_UP
 -- Classic -> WOTLK UNIT_NPC_FLAGS

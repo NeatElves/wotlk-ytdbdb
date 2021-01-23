@@ -2269,6 +2269,14 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Добро пожаловать
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Используй Жгучий гнев, чтобы наносить врагам урон, и Маневр уклонения, если урон начнут наносить мне. Помни, что мне требуется совершать Обходные маневры, получая урон, для того, чтобы выполнять Маневр уклонения!' WHERE `entry` = -20538;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Используй похищающий жизнь яд. Он будет отравлять врагов и исцелять меня. Прикосновение кошмара – это очень мощное заклинание, но оно наносит мне урон. Так что используй его, только когда у меня будет достаточно много здоровья.' WHERE `entry` = -20539;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Уничтожь врагов Шоком времени! Если мы окажемся в беде, воспользуйся заклинанием остановки времени, заморозь всех врагов и ударь по ним Шоком времени, чтобы нанести им серьезный урон!' WHERE `entry` = -20540;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37263 WHERE `entry` = -20541;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37269 WHERE `entry` = -20542;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37268 WHERE `entry` = -20543;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37262 WHERE `entry` = -20544;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37264 WHERE `entry` = -20545;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37271 WHERE `entry` = -20546;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37285 WHERE `entry` = -20547;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37273 WHERE `entry` = -20548;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Уничтожить.' WHERE `entry` = -20549;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Больше... энергии.' WHERE `entry` = -20550;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Оставь надежду.' WHERE `entry` = -20551;
@@ -2724,6 +2732,21 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Магия должна... бы
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Кирин-Тор нужно остановить!' WHERE `entry` = -21001;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Войну Нексуса не остановить!' WHERE `entry` = -21002;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21003;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37267 WHERE `entry` = -21004;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37286 WHERE `entry` = -21005;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37275 WHERE `entry` = -21006;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37272 WHERE `entry` = -21007;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37293 WHERE `entry` = -21008;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37265 WHERE `entry` = -21009;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37266 WHERE `entry` = -21010;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37274 WHERE `entry` = -21011;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37264 WHERE `entry` = -21012;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37263 WHERE `entry` = -21013;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37267 WHERE `entry` = -21014;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37276 WHERE `entry` = -21015;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37288 WHERE `entry` = -21016;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 37287 WHERE `entry` = -21017;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21018;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
