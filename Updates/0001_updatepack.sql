@@ -15,6 +15,10 @@ INSERT INTO creature_equip_template (entry, equipentry1) VALUES (4182,49346);
 UPDATE creature_template SET EquipmentTemplateId=4182 WHERE entry IN (36494,37613);
 UPDATE creature_template SET faction=1771, MinLevel=80, MaxLevel=80, UnitFlags=UnitFlags|256 WHERE entry IN (36796,37657);
 UPDATE `creature_template` SET `MinLevelHealth` = 5342, `MaxLevelHealth` = 5342, `MinMeleeDmg` = 422, `MaxMeleeDmg` = 586, `MinRangedDmg` = 345, `MaxRangedDmg` = 509, `Armor` = 9729, `MeleeAttackPower` = 642 WHERE `Entry` =36796;
+UPDATE creature_template SET UnitFlags=33554496 WHERE entry IN (36938,36658);
+UPDATE creature_template SET MinLevel=82, MaxLevel=82, faction=14 WHERE entry IN (36731);
+UPDATE `creature_template` SET `MinLevelHealth` = 18199, `MaxLevelHealth` = 18199, `Armor` = 10356 WHERE `Entry` =36731;
+UPDATE creature_template SET MovementType=2 WHERE entry=37755;
 
 DELETE FROM `creature_movement_template` WHERE `entry`=28841;
 INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`position_x`,`position_y`,`position_z`,`orientation`,`waittime`,`script_id`) VALUES
@@ -194,6 +198,9 @@ INSERT INTO creature_movement_template (entry, pathId, point, position_x, positi
 (28906,4,4,1934.88,-5854.3,128.325,100,0,0),
 (28906,4,5,1868.49,-5900.39,120.756,100,0,0),
 (28906,4,6,1818.15,-5930,115.077,100,120000,20);
+DELETE FROM dbscripts_on_spell WHERE id = 48778;
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(48778,0,15,50772,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'');
 
 UPDATE creature_template SET InhabitType = 4 WHERE entry = 28935;
 
@@ -340,3 +347,9 @@ REPLACE INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_p
 (111008, 0, 0, 1, 0, 431, 0, NULL), (110994, 0, 0, 1, 0, 431, 0, NULL), (111001, 0, 0, 1, 0, 431, 0, NULL), (110996, 0, 0, 1, 0, 431, 0, NULL), (111004, 0, 0, 1, 0, 0, 0, NULL);
 
 UPDATE `gameobject` SET `position_x` = -991.671, `position_y` = -3710.49, `position_z` = 4.45864, `orientation` = 2.54818, `rotation2` = 0.956305, `rotation3` = 0.292372, `spawntimesecsmin` = 5, `spawntimesecsmax` = 5 WHERE `guid` =6576;
+
+UPDATE spell_area SET quest_end = 12757 WHERE spell = 53081;
+UPDATE dbscripts_on_quest_start SET data_flags = 4 WHERE id = 12757 AND delay = 3000;
+DELETE FROM dbscripts_on_spell WHERE id = 53098;
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(53098,1000,14,53081,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'remove aura from player');

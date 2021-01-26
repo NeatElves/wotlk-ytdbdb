@@ -1025,7 +1025,6 @@ UPDATE instance_template SET ScriptName='instance_pit_of_saron' WHERE map=658;
 UPDATE creature_template SET ScriptName='boss_forgemaster_garfrost' WHERE entry=36494;
 UPDATE creature_template SET ScriptName='boss_krick' WHERE entry=36477;
 UPDATE creature_template SET ScriptName='boss_ick' WHERE entry=36476;
-UPDATE creature_template SET ScriptName='npc_exploding_orb' WHERE entry=36610;
 UPDATE creature_template SET ScriptName='npc_collapsing_icicle' WHERE entry=36847;
 UPDATE creature_template SET ScriptName='boss_tyrannus' WHERE entry=36658;
 UPDATE creature_template SET ScriptName='boss_rimefang_pos' WHERE entry=36661;
@@ -1441,7 +1440,6 @@ INSERT INTO scripted_event_id VALUES
 (3098,'event_antalarion_statue_activation'),
 (3099,'event_antalarion_statue_activation'),
 (3100,'event_antalarion_statue_activation');
-UPDATE creature_template SET ScriptName='npc_shade_of_hakkar' WHERE entry=8440;
 UPDATE gameobject_template SET ScriptName='go_eternal_flame' WHERE entry IN (148418,148419,148420,148421);
 INSERT INTO scripted_event_id VALUES
 (8502,'event_avatar_of_hakkar');
@@ -6548,7 +6546,6 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1609012','REUSE ME','0','0','0','0','0','REUSE ME'),
 ('-1609013','REUSE ME','0','0','0','0','0','REUSE ME'),
 ('-1609014','REUSE ME','0','0','0','0','0','REUSE ME'),
-('-1609015','REUSE ME','0','0','0','0','0','REUSE ME'),
 
 ('-1609016','No potions!','0','0','0','0','0','dk_initiate SAY_DUEL_A'),
 ('-1609017','Remember this day, $n, for it is the day that you will be thoroughly owned.','0','0','0','0','0','dk_initiate SAY_DUEL_B'),
@@ -6560,9 +6557,9 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1609023','You''re going down!','0','0','0','0','0','dk_initiate SAY_DUEL_H'),
 ('-1609024','You don''t stand a chance, $n','0','0','0','0','0','dk_initiate SAY_DUEL_I'),
 
-('-1609025','Come to finish the job, have you?','0','0','0','1','0','special_surprise SAY_EXEC_START_1'),
-('-1609026','Come to finish the job, have ye?','0','0','0','1','0','special_surprise SAY_EXEC_START_2'),
-('-1609027','Come ta finish da job, mon?','0','0','0','1','0','special_surprise SAY_EXEC_START_3'),
+('-1609025','Come to finish the job, have you?','0','0','0','6','0','special_surprise SAY_EXEC_START_1'),
+('-1609026','Come to finish the job, have ye?','0','0','0','6','0','special_surprise SAY_EXEC_START_2'),
+('-1609027','Come ta finish da job, mon?','0','0','0','6','0','special_surprise SAY_EXEC_START_3'),
 
 ('-1609028','You''ll look me in the eyes when...','0','0','0','25','0','special_surprise SAY_EXEC_PROG_1'),
 ('-1609029','Well this son o'' Ironforge would like...','0','0','0','25','0','special_surprise SAY_EXEC_PROG_2'),
@@ -6572,41 +6569,43 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1609033','I want to die like an orc...','0','0','0','25','0','special_surprise SAY_EXEC_PROG_6'),
 ('-1609034','Dis troll gonna stand for da...','0','0','0','25','0','special_surprise SAY_EXEC_PROG_7'),
 
-('-1609035','$N?','0','0','0','1','0','special_surprise SAY_EXEC_NAME_1'),
-('-1609036','$N? Mon?','0','0','0','1','0','special_surprise SAY_EXEC_NAME_2'),
+('-1609035','$N?','0','0','0','6','0','special_surprise SAY_EXEC_NAME_1'),
+('-1609036','$N? Mon?','0','0','0','6','0','special_surprise SAY_EXEC_NAME_2'),
 
-('-1609037','$N, I''d recognize that face anywhere... What... What have they done to you, $N?','0','0','0','1','0','special_surprise SAY_EXEC_RECOG_1'),
-('-1609038','$N, I''d recognize those face tentacles anywhere... What... What have they done to you, $N?','0','0','0','1','0','special_surprise SAY_EXEC_RECOG_2'),
-('-1609039','$N, I''d recognize that face anywhere... What... What have they done to ye, $Glad:lass;?','0','0','0','1','0','special_surprise SAY_EXEC_RECOG_3'),
-('-1609040','$N, I''d recognize that decay anywhere... What... What have they done to you, $N?','0','0','0','1','0','special_surprise SAY_EXEC_RECOG_4'),
-('-1609041','$N, I''d recognize those horns anywhere... What have they done to you, $N?','0','0','0','1','0','special_surprise SAY_EXEC_RECOG_5'),
-('-1609042','$N, I''d recognize dem tusks anywhere... What... What have dey done ta you, mon?','0','0','0','1','0','special_surprise SAY_EXEC_RECOG_6'),
+('-1609037','$N, I''d recognize that face anywhere... What... What have they done to you, $N?','0','0','0','6','0','special_surprise SAY_EXEC_RECOG_1'),
+('-1609038','$N, I''d recognize those face tentacles anywhere... What... What have they done to you, $N?','0','0','0','6','0','special_surprise SAY_EXEC_RECOG_2'),
+('-1609039','$N, I''d recognize that face anywhere... What... What have they done to ye, $Glad:lass;?','0','0','0','6','0','special_surprise SAY_EXEC_RECOG_3'),
+('-1609040','$N, I''d recognize that decay anywhere... What... What have they done to you, $N?','0','0','0','6','0','special_surprise SAY_EXEC_RECOG_4'),
+('-1609041','$N, I''d recognize those horns anywhere... What have they done to you, $N?','0','0','0','6','0','special_surprise SAY_EXEC_RECOG_5'),
+('-1609042','$N, I''d recognize dem tusks anywhere... What... What have dey done ta you, mon?','0','0','0','6','0','special_surprise SAY_EXEC_RECOG_6'),
 
-('-1609043','You don''t remember me, do you? Blasted Scourge... They''ve tried to drain you of everything that made you a righteous force of reckoning. Every last ounce of good... Everything that made you a draenei!','0','0','0','1','0','special_surprise SAY_EXEC_NOREM_1'),
-('-1609044','Ye don''t remember me, do ye? Blasted Scourge... They''ve tried to drain ye o'' everything that made ye a righteous force o'' reckoning. Every last ounce o'' good... Everything that made you a $Gson:daughter; of Ironforge!','0','0','0','1','0','special_surprise SAY_EXEC_NOREM_2'),
-('-1609045','You don''t remember me, do you? We were humans once - long, long ago - until Lordaeron fell to the Scourge. Your transformation to a Scourge zombie came shortly after my own. Not long after that, our minds were freed by the Dark Lady.','0','0','0','1','0','special_surprise SAY_EXEC_NOREM_3'),
-('-1609046','You don''t remember me, do you? Blasted Scourge... They''ve tried to drain you of everything that made you a pint-sized force of reckoning. Every last ounce of good... Everything that made you a gnome!','0','0','0','1','0','special_surprise SAY_EXEC_NOREM_4'),
-('-1609047','You don''t remember me, do you? Blasted Scourge...They''ve tried to drain of everything that made you a righteous force of reckoning. Every last ounce of good...Everything that made you a human!','0','0','0','1','0','special_surprise SAY_EXEC_NOREM_5'),
-('-1609048','You don''t remember me? When you were a child your mother would leave you in my care while she served at the Temple of the Moon. I held you in my arms and fed you with honey and sheep''s milk to calm you until she would return. You were my little angel. Blasted Scourge... What have they done to you, $N?','0','0','0','1','0','special_surprise SAY_EXEC_NOREM_6'),
-('-1609049','You don''t recognize me, do you? Blasted Scourge... They''ve tried to drain you of everything that made you a righteous force of reckoning. Every last ounce of good... Everything that made you an orc!','0','0','0','1','0','special_surprise SAY_EXEC_NOREM_7'),
-('-1609050','You don''t remember me, do you? Blasted Scourge... They''ve tried to drain you of everything that made you a righteous force of reckoning. Every last ounce of good... Everything that made you a tauren!','0','0','0','1','0','special_surprise SAY_EXEC_NOREM_8'),
-('-1609051','You don''t remember me, mon? Damn da Scourge! Dey gone ta drain you of everytin dat made ya a mojo masta. Every last ounce of good... Everytin'' dat made ya a troll hero, mon!','0','0','0','1','0','special_surprise SAY_EXEC_NOREM_9'),
+('-1609043','You don''t remember me, do you? Blasted Scourge... They''ve tried to drain you of everything that made you a righteous force of reckoning. Every last ounce of good... Everything that made you a draenei!','0','0','0','6','0','special_surprise SAY_EXEC_NOREM_1'),
+('-1609044','Ye don''t remember me, do ye? Blasted Scourge... They''ve tried to drain ye o'' everything that made ye a righteous force o'' reckoning. Every last ounce o'' good... Everything that made you a $Gson:daughter; of Ironforge!','0','0','0','6','0','special_surprise SAY_EXEC_NOREM_2'),
+('-1609045','You don''t remember me, do you? We were humans once - long, long ago - until Lordaeron fell to the Scourge. Your transformation to a Scourge zombie came shortly after my own. Not long after that, our minds were freed by the Dark Lady.','0','0','0','6','0','special_surprise SAY_EXEC_NOREM_3'),
+('-1609046','You don''t remember me, do you? Blasted Scourge... They''ve tried to drain you of everything that made you a pint-sized force of reckoning. Every last ounce of good... Everything that made you a gnome!','0','0','0','6','0','special_surprise SAY_EXEC_NOREM_4'),
+('-1609047','You don''t remember me, do you? Blasted Scourge...They''ve tried to drain of everything that made you a righteous force of reckoning. Every last ounce of good...Everything that made you a human!','0','0','0','6','0','special_surprise SAY_EXEC_NOREM_5'),
+('-1609048','You don''t remember me? When you were a child your mother would leave you in my care while she served at the Temple of the Moon. I held you in my arms and fed you with honey and sheep''s milk to calm you until she would return. You were my little angel. Blasted Scourge... What have they done to you, $N?','0','0','0','6','0','special_surprise SAY_EXEC_NOREM_6'),
+('-1609049','You don''t recognize me, do you? Blasted Scourge... They''ve tried to drain you of everything that made you a righteous force of reckoning. Every last ounce of good... Everything that made you an orc!','0','0','0','6','0','special_surprise SAY_EXEC_NOREM_7'),
+('-1609050','You don''t remember me, do you? Blasted Scourge... They''ve tried to drain you of everything that made you a righteous force of reckoning. Every last ounce of good... Everything that made you a tauren!','0','0','0','6','0','special_surprise SAY_EXEC_NOREM_8'),
+('-1609051','You don''t remember me, mon? Damn da Scourge! Dey gone ta drain you of everytin dat made ya a mojo masta. Every last ounce of good... Everytin'' dat made ya a troll hero, mon!','0','0','0','6','0','special_surprise SAY_EXEC_NOREM_9'),
+
+('-1609015','You don''t remember me, do you? Blasted Scourge... They''ve tried to drain you of everything that made you a righteous force of reckoning. Every last ounce of good... Everything that made you a blood elf!','0','0','0','6','0','special_surprise SAY_EXEC_NOREM_10'),
 
 ('-1609052','A pact was made, $Gbrother:sister;! We vowed vengeance against the Lich King! For what he had done to us! We battled the Scourge as Forsaken, pushing them back into the plaguelands and freeing Tirisfal! You and I were champions of the Forsaken!','0','0','0','1','0','special_surprise SAY_EXEC_THINK_1'),
 ('-1609053','You must remember the splendor of life, $Gbrother:sister;. You were a champion of the Kaldorei once! This isn''t you!','0','0','0','1','0','special_surprise SAY_EXEC_THINK_2'),
-('-1609054','Think, $N. Think back. Try and remember the majestic halls of Silvermoon City, where you were born. Remember the splendor of life, $Gbrother:sister;. You were a champion of the sin''dorei once! This isn''t you.','0','0','0','6','0','special_surprise SAY_EXEC_THINK_3'),
-('-1609055','Think, $N. Think back. Try and remember the proud mountains of Argus, where you were born. Remember the splendor of life, $Gbrother:sister;. You were a champion of the draenei once! This isn''t you.','0','0','0','6','0','special_surprise SAY_EXEC_THINK_4'),
-('-1609056','Think, $N. Think back. Try and remember the snow capped mountains o'' Dun Morogh! Ye were born there, $Glad:lass;. Remember the splendor o'' life, $N! Ye were a champion o'' the dwarves once! This isn''t ye!','0','0','0','6','0','special_surprise SAY_EXEC_THINK_5'),
-('-1609057','Think, $N. Think back. Try and remember Gnomeregan before those damned troggs! Remember the feel of an [arclight spanner] $Gbrother:sister;. You were a champion of gnome-kind once! This isn''t you.','0','0','0','6','0','special_surprise SAY_EXEC_THINK_6'),
-('-1609058','Think, $N. Think back. Try and remember the hills and valleys of Elwynn, where you were born. Remember the splendor of life, $Gbrother:sister;. You were a champion of the Alliance once! This isn''t you.','0','0','0','6','0','special_surprise SAY_EXEC_THINK_7'),
-('-1609059','Think, $N. Think back. Try and remember Durotar, $Gbrother:sister;! Remember the sacrifices our heroes made so that we could be free of the blood curse. Harken back to the Valley of Trials, where we were reborn into a world without demonic influence. We found the splendor of life, $N. Together! This isn''t you. You were a champion of the Horde once!','0','0','0','6','0','special_surprise SAY_EXEC_THINK_8'),
-('-1609060','Think, $N. Think back. Try and remember the rolling plains of Mulgore, where you were born. Remember the splendor of life, $Gbrother:sister;. You were a champion of the tauren once! This isn''t you.','0','0','0','6','0','special_surprise SAY_EXEC_THINK_9'),
-('-1609061','TINK $N. Tink back, mon! We be Darkspear, mon! Bruddas and sistas! Remember when we fought the Zalazane and done took he head and freed da Echo Isles? MON! TINK! You was a champion of da Darkspear trolls!','0','0','0','6','0','special_surprise SAY_EXEC_THINK_10'),
+('-1609054','Think, $N. Think back. Try and remember the majestic halls of Silvermoon City, where you were born. Remember the splendor of life, $Gbrother:sister;. You were a champion of the sin''dorei once! This isn''t you.','0','0','0','1','0','special_surprise SAY_EXEC_THINK_3'),
+('-1609055','Think, $N. Think back. Try and remember the proud mountains of Argus, where you were born. Remember the splendor of life, $Gbrother:sister;. You were a champion of the draenei once! This isn''t you.','0','0','0','1','0','special_surprise SAY_EXEC_THINK_4'),
+('-1609056','Think, $N. Think back. Try and remember the snow capped mountains o'' Dun Morogh! Ye were born there, $Glad:lass;. Remember the splendor o'' life, $N! Ye were a champion o'' the dwarves once! This isn''t ye!','0','0','0','1','0','special_surprise SAY_EXEC_THINK_5'),
+('-1609057','Think, $N. Think back. Try and remember Gnomeregan before those damned troggs! Remember the feel of an [arclight spanner] $Gbrother:sister;. You were a champion of gnome-kind once! This isn''t you.','0','0','0','1','0','special_surprise SAY_EXEC_THINK_6'),
+('-1609058','Think, $N. Think back. Try and remember the hills and valleys of Elwynn, where you were born. Remember the splendor of life, $Gbrother:sister;. You were a champion of the Alliance once! This isn''t you.','0','0','0','1','0','special_surprise SAY_EXEC_THINK_7'),
+('-1609059','Think, $N. Think back. Try and remember Durotar, $Gbrother:sister;! Remember the sacrifices our heroes made so that we could be free of the blood curse. Harken back to the Valley of Trials, where we were reborn into a world without demonic influence. We found the splendor of life, $N. Together! This isn''t you. You were a champion of the Horde once!','0','0','0','1','0','special_surprise SAY_EXEC_THINK_8'),
+('-1609060','Think, $N. Think back. Try and remember the rolling plains of Mulgore, where you were born. Remember the splendor of life, $Gbrother:sister;. You were a champion of the tauren once! This isn''t you.','0','0','0','1','0','special_surprise SAY_EXEC_THINK_9'),
+('-1609061','TINK $N. Tink back, mon! We be Darkspear, mon! Bruddas and sistas! Remember when we fought the Zalazane and done took he head and freed da Echo Isles? MON! TINK! You was a champion of da Darkspear trolls!','0','0','0','1','0','special_surprise SAY_EXEC_THINK_10'),
 
-('-1609062','Listen to me, $N. You must fight against the Lich King''s control. He is a monster that wants to see this world - our world - in ruin. Don''t let him use you to accomplish his goals. You were once a hero and you can be again. Fight, damn you! Fight his control!','0','0','0','5','0','special_surprise SAY_EXEC_LISTEN_1'),
-('-1609063','Listen to me, $N Ye must fight against the Lich King''s control. He''s a monster that wants to see this world - our world - in ruin. Don''t let him use ye to accomplish his goals. Ye were once a hero and ye can be again. Fight, damn ye! Fight his control!','0','0','0','5','0','special_surprise SAY_EXEC_LISTEN_2'),
-('-1609064','Listen to me, $N. You must fight against the Lich King''s control. He is a monster that wants to see this world - our world - in ruin. Don''t let him use you to accomplish his goals AGAIN. You were once a hero and you can be again. Fight, damn you! Fight his control!','0','0','0','5','0','special_surprise SAY_EXEC_LISTEN_3'),
-('-1609065','Listen ta me, $Gbrudda:sista;. You must fight against da Lich King''s control. He be a monstar dat want ta see dis world - our world - be ruined. Don''t let he use you ta accomplish he goals. You be a hero once and you be a hero again! Fight it, mon! Fight he control!','0','0','0','5','0','special_surprise SAY_EXEC_LISTEN_4'),
+('-1609062','Listen to me, $N. You must fight against the Lich King''s control. He is a monster that wants to see this world - our world - in ruin. Don''t let him use you to accomplish his goals. You were once a hero and you can be again. Fight, damn you! Fight his control!','0','0','0','1','0','special_surprise SAY_EXEC_LISTEN_1'),
+('-1609063','Listen to me, $N Ye must fight against the Lich King''s control. He''s a monster that wants to see this world - our world - in ruin. Don''t let him use ye to accomplish his goals. Ye were once a hero and ye can be again. Fight, damn ye! Fight his control!','0','0','0','1','0','special_surprise SAY_EXEC_LISTEN_2'),
+('-1609064','Listen to me, $N. You must fight against the Lich King''s control. He is a monster that wants to see this world - our world - in ruin. Don''t let him use you to accomplish his goals AGAIN. You were once a hero and you can be again. Fight, damn you! Fight his control!','0','0','0','1','0','special_surprise SAY_EXEC_LISTEN_3'),
+('-1609065','Listen ta me, $Gbrudda:sista;. You must fight against da Lich King''s control. He be a monstar dat want ta see dis world - our world - be ruined. Don''t let he use you ta accomplish he goals. You be a hero once and you be a hero again! Fight it, mon! Fight he control!','0','0','0','1','0','special_surprise SAY_EXEC_LISTEN_4'),
 
 ('-1609066','What''s going on in there? What''s taking so long, $N?','0','1','0','0','0','special_surprise SAY_PLAGUEFIST'),
 
@@ -7342,7 +7341,7 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1658049','Rimefang! Trap them within the tunnel! Bury them alive!','16757','6','0','0','0','tyrannus SAY_GAUNTLET'),
 
 ('-1658050','Alas, brave, brave adventurers, your meddling has reached its end. Do you hear the clatter of bone and steel coming up the tunnel behind you? That is the sound of your impending demise.','16758','1','0','0','0','tyrannus SAY_PREFIGHT_1'),
-('-1658051','Heroes! We will hold off the undead as long as we can, even to our dying breath. Deal with the Scourgelord!','17148','1','0','0','0','victus SAY_VICTUS_TRASH'),
+('-1658051','REUSE ME','0','0','0','0','0','REUSE ME'),
 ('-1658052','Ha, such an amusing gesture from the rabble. When I have finished with you, my master''s blade will feast upon your souls. Die!','16759','1','0','0','0','tyrannus SAY_PREFIGHT_2'),
 ('-1658053','I shall not fail The Lich King! Come and meet your end!','16760','1','0','0','0','tyrannus SAY_AGGRO'),
 ('-1658054','Such a shameful display...','16761','1','0','0','0','tyrannus SAY_SLAY_1'),
@@ -7353,16 +7352,13 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1658059','The frostwyrm %s gazes at $N and readies an icy attack!','0','3','0','0','0','rimefang EMOTE_RIMEFANG_ICEBOLT'),
 ('-1658060','%s roars and swells with dark might!','0','3','0','0','0','tyrannus EMOTE_SMASH'),
 
-('-1658061','Brave champions, we owe you our lives, our freedom... Though it be a tiny gesture in the face of this enormous debt, I pledge that from this day forth, all will know of your deeds, and the blazing path of light you cut through the shadow of this dark citadel.','17149','1','0','0','0','victus SAY_VICTUS_OUTRO_1'),
-('-1658062','This day will stand as a testament not only to your valor, but to the fact that no foe, not even the Lich King himself, can stand when Alliance and Horde set aside their differences and ---','0','1','0','0','0','victus_or_ironskull SAY_GENERAL_OUTRO_2'),
+('-1658061','REUSE ME','0','0','0','0','0','REUSE ME'),
+('-1658062','REUSE ME','0','0','0','0','0','REUSE ME'),
 ('-1658063','Heroes, to me!','16614','0','0','5','0','jaina SAY_JAINA_OUTRO_1'),
 ('-1658064','Take cover behind me! Quickly!','17037','0','0','5','0','sylvanas SAY_SYLVANAS_OUTRO_1'),
 ('-1658065','The Frost Queen is gone. We must keep moving - our objective is near.','16615','0','0','0','0','jaina SAY_JAINA_OUTRO_2'),
 ('-1658066','I... I could not save them... Damn you, Arthas! DAMN YOU!','16616','0','0','0','0','jaina SAY_JAINA_OUTRO_3'),
-('-1658067','I thought he''d never shut up. At last, Sindragosa silenced that long-winded fool. To the Halls of Reflection, champions! Our objective is near... I can sense it.','17036','0','0','396','0','sylvanas SAY_SYLVANAS_OUTRO_2'),
-
-('-1658068','Heroes! We will hold off the undead as long as we can, even to our dying breath. Deal with the Scourgelord!','17150','1','0','0','0','ironskull SAY_IRONSKULL_TRASH'),
-('-1658069','Brave champions, we owe you our lives, our freedom... Though it be a tiny gesture in the face of this enormous debt, I pledge that from this day forth, all will know of your deeds, and the blazing path of light you cut through the shadow of this dark citadel.','17151','1','0','0','0','ironskull SAY_IRONSKULL_OUTRO_1');
+('-1658067','I thought he''d never shut up. At last, Sindragosa silenced that long-winded fool. To the Halls of Reflection, champions! Our objective is near... I can sense it.','17036','0','0','396','0','sylvanas SAY_SYLVANAS_OUTRO_2');
 
 -- -1 668 000 ICC: HALLS OF REFLECTION
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
