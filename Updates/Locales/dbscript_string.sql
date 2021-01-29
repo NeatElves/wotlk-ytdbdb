@@ -1084,8 +1084,7 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 6007 W
 UPDATE `dbscript_string` SET `content_loc8` = '428 000 градусов по Кракленгейту... Ну что, горячая штучка?!' WHERE `entry` = 2000001117;
 UPDATE `dbscript_string` SET `content_loc8` = 'Если мерить в градусах Кракленгейта, получается 428 000! Ай да Кракл!' WHERE `entry` = 2000001118;
 UPDATE `dbscript_string` SET `content_loc8` = 'О, приветствую тебя вновь!' WHERE `entry` = 2000001132;
-UPDATE `dbscript_string` SET `content_loc8` = 'Что ты нашел, мальчик?' WHERE `entry` = 2000001154;
-UPDATE `dbscript_string` SET `content_loc8` = 'Так не годится, Лохмач. Оставайся здесь и охраняй дом, мне нужно пойти и найти солдата.' WHERE `entry` = 2000001155;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 29876 WHERE `entry` = 2000001154;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1014 WHERE `entry` = 2000001162;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1015 WHERE `entry` = 2000001163;
 UPDATE `dbscript_string` SET `content_loc8` = 'Ха! Громовая пика моя! Умрите!' WHERE `entry` = 2000001164;

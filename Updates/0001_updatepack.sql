@@ -16,8 +16,10 @@ UPDATE creature_template SET EquipmentTemplateId=4182 WHERE entry IN (36494,3761
 UPDATE creature_template SET faction=1771, MinLevel=80, MaxLevel=80, UnitFlags=UnitFlags|256 WHERE entry IN (36796,37657);
 UPDATE `creature_template` SET `MinLevelHealth` = 5342, `MaxLevelHealth` = 5342, `MinMeleeDmg` = 422, `MaxMeleeDmg` = 586, `MinRangedDmg` = 345, `MaxRangedDmg` = 509, `Armor` = 9729, `MeleeAttackPower` = 642 WHERE `Entry` =36796;
 UPDATE creature_template SET UnitFlags=33554496 WHERE entry IN (36938,36658);
-UPDATE creature_template SET MinLevel=82, MaxLevel=82, faction=14 WHERE entry IN (36731);
-UPDATE `creature_template` SET `MinLevelHealth` = 18199, `MaxLevelHealth` = 18199, `Armor` = 10356 WHERE `Entry` =36731;
+UPDATE creature_template SET MinLevel=80, MaxLevel=80 WHERE entry IN (38189,38188);
+UPDATE creature_template SET UnitFlags=33088 WHERE entry=36990;
+UPDATE creature_template SET UnitFlags=320, faction=534 WHERE entry IN (37572,37616,37575,37617,37576,37615);
+UPDATE creature_template SET UnitFlags=320, faction=714 WHERE entry IN (37577,37620,37578,37621,37579,37619);
 UPDATE creature_template SET MovementType=2 WHERE entry=37755;
 
 DELETE FROM `creature_movement_template` WHERE `entry`=28841;
@@ -353,3 +355,50 @@ UPDATE dbscripts_on_quest_start SET data_flags = 4 WHERE id = 12757 AND delay = 
 DELETE FROM dbscripts_on_spell WHERE id = 53098;
 INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (53098,1000,14,53081,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'remove aura from player');
+
+UPDATE creature_template SET UnitFlags=32832 WHERE entry=30519;
+
+DELETE FROM dbscript_string WHERE entry = 2000001154;
+DELETE FROM dbscript_string WHERE entry = 2000001155;
+
+UPDATE creature_template SET RegenerateStats = 12, MinLevelHealth = 133525, MaxLevelHealth = 133525, MinLevelMana = 51360, MaxLevelMana = 51360, HealthMultiplier = 31, PowerMultiplier = 20 WHERE entry = 28670;
+UPDATE creature_template SET Detection = 50, VisibilityDistanceType = 3 WHERE entry = 29104;
+DELETE FROM dbscripts_on_relay WHERE id IN (20513,20514);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20513,10,34,3469,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Frostbrood Vanquisher EAI: area check'),
+(20513,100,15,51272,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Frostbrood Vanquisher EAI: cast 51272'),
+(20513,1000,0,0,0,0,0,0,0,2000001154,0,0,0,0,0,0,0,'Part of Frostbrood Vanquisher EAI: warning'),
+(20513,10000,34,3469,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Frostbrood Vanquisher EAI: area check'),
+(20513,10100,14,52196,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Frostbrood Vanquisher EAI: Player Drop'),
+(20514,100,31,28670,150,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Scarlet Ballista EAI: search for 28670'),
+(20514,200,26,0,0,0,28670,160,1,0,0,0,0,0,0,0,0,'Part of Scarlet Ballista EAI: search for 28670');
+DELETE FROM conditions WHERE condition_entry BETWEEN 3451 AND 3469;
+INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4) VALUES
+(3451, 4, 4356,0,0,0), (3452, 4, 4347,0,0,0), (3453, 4, 4349,0,0,0),
+(3454, 4, 4348,0,0,0), (3455, 4, 4350,0,0,0), (3456, 4, 4365,0,0,0),
+(3457, 4, 4355,0,0,0), (3458, 4, 4343,0,0,0), (3459, 4, 4346,0,0,0),
+(3460, 4, 4352,0,0,0), (3461, 4, 4345,0,0,0), (3462, 4, 4360,0,0,0),
+(3463, 4, 4351,0,0,0), (3464, 4, 4377,0,0,0),
+(3465, -2, 3464,3463,3462,3461), (3466, -2, 3460,3459,3458,3457), (3467, -2, 3456,3455,3454,3453),
+(3468, -2, 3467,3466,3465,3452), (3469, -2, 3468,3451,0,0);
+DELETE FROM dbscript_string WHERE entry = 2000001154;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001154,'Return to the field of battle or you will be dropped!',0,3,0,0,NULL);
+
+UPDATE `quest_template` SET `RequiredRaces` = 512 WHERE `entry` =9489;
+UPDATE `quest_template` SET `RequiredRaces` = 1024 WHERE `entry` =9586;
+UPDATE `quest_template` SET `RequiredRaces` = 16 WHERE `entry` =5651;
+UPDATE `quest_template` SET `RequiredRaces` = 16 WHERE `entry` =5650;
+UPDATE `quest_template` SET `RequiredRaces` = 128 WHERE `entry` =5649;
+UPDATE `quest_template` SET `RequiredRaces` = 128 WHERE `entry` =5648;
+UPDATE `quest_template` SET `RequiredRaces` = 1 WHERE `entry` =5623;
+UPDATE `quest_template` SET `RequiredRaces` = 1 WHERE `entry` =5624;
+UPDATE `quest_template` SET `RequiredRaces` = 4 WHERE `entry` =5626;
+UPDATE `quest_template` SET `RequiredRaces` = 4 WHERE `entry` =5625;
+UPDATE `quest_template` SET `ExclusiveGroup` = 0 WHERE `entry` IN (5622,5626);
+UPDATE `quest_template` SET `NextQuestId` = 0 WHERE `entry` IN (5622,5626,8564);
+
+DELETE FROM `creature` WHERE `guid` = 177767;
+DELETE FROM `creature` WHERE `guid` = 17767;
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(17767, 12428, 0, 1, 1, 0, 0, 2436.81, 359.072, 33.352, 0.122173, 60, 60, 0, 0, 110, 0, 0, 0);
