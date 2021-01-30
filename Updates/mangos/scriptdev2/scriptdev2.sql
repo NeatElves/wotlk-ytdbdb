@@ -1723,15 +1723,12 @@ UPDATE creature_template SET ScriptName='npc_lady_sylvanas_windrunner' WHERE ent
 /* UTGARDE KEEP */
 UPDATE instance_template SET ScriptName='instance_utgarde_keep' WHERE map=574;
 UPDATE creature_template SET ScriptName='mob_dragonflayer_forge_master' WHERE entry=24079;
-UPDATE creature_template SET ScriptName='boss_skarvald' WHERE entry=24200;
-UPDATE creature_template SET ScriptName='boss_dalronn' WHERE entry=24201;
 UPDATE creature_template SET ScriptName='boss_ingvar' WHERE entry=23954;
 UPDATE creature_template SET ScriptName='npc_annhylde' WHERE entry=24068;
 UPDATE creature_template SET ScriptName='boss_keleseth' WHERE entry=23953;
 UPDATE creature_template SET ScriptName='mob_vrykul_skeleton' WHERE entry=23970;
 
 /* UTGARDE PINNACLE */
-UPDATE creature_template SET ScriptName='boss_gortok' WHERE entry=26687;
 UPDATE creature_template SET ScriptName='boss_skadi' WHERE entry=26693;
 UPDATE creature_template SET ScriptName='npc_grauf' WHERE entry=26893;
 UPDATE creature_template SET ScriptName='boss_svala' WHERE entry=26668;
@@ -3610,11 +3607,15 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 
 ('-1109005','The shield be down! Rise up Atal''ai! Rise up!','5861','6','0','0','0','jammalan SAY_JAMMALAN_INTRO'),
 
-('-1109006','HAKKAR LIVES!','5870','1','0','0','0','avatar SAY_AVATAR_BRAZIER_1'),
-('-1109007','I TASTE THE BLOOD OF LIFE!','5868','1','0','0','0','avatar SAY_AVATAR_BRAZIER_2'),
-('-1109008','I DRAW CLOSER TO YOUR WORLD!','5867','1','0','0','0','avatar SAY_AVATAR_BRAZIER_3'),
-('-1109009','I AM NEAR!','5869','1','0','0','0','avatar SAY_AVATAR_BRAZIER_4'),
-('-1109010','I AM HERE!','0','1','0','0','0','avatar SAY_AVATAR_SPAWN');
+('-1109006','HAKKAR LIVES!','5870','1','0','0','6254','avatar SAY_AVATAR_BRAZIER_1'),
+('-1109007','I TASTE THE BLOOD OF LIFE!','5868','1','0','0','6252','avatar SAY_AVATAR_BRAZIER_2'),
+('-1109008','I DRAW CLOSER TO THIS WORLD!','5867','1','0','0','4543','avatar SAY_AVATAR_BRAZIER_3'),
+('-1109009','I AM NEAR!','5869','1','0','0','6253','avatar SAY_AVATAR_BRAZIER_4'),
+('-1109010','I AM HERE!','0','1','0','0','4545','avatar SAY_AVATAR_SPAWN'),
+('-1109011','You must not summon our god!','0','1','0','0','4530','Nightmare Suppressor SAY_SPAWN_1'),
+('-1109012','Stop!  Infidels!','0','1','0','0','4532','Nightmare Suppressor SAY_SPAWN_2'),
+('-1109013','No!  We cannot allow you to summon Hakkar!','0','1','0','0','4529','Nightmare Suppressor SAY_SPAWN_3'),
+('-1109014','You must not summon our god!','0','1','0','0','4531','Nightmare Suppressor SAY_SPAWN_4');
 
 -- -1 129 000 RAZORFEN DOWNS
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
@@ -5604,17 +5605,20 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1574009','Mjul orm agn gjor!','13212','1','0','0','0','ingvar SAY_KILL_FIRST'),
 ('-1574010','I am a warrior born!','13214','1','0','0','0','ingvar SAY_KILL_SECOND'),
 
-('-1574011','Dalronn! See if you can muster the nerve to join my attack!','13229','1','0','0','0','skarvald SAY_SKA_AGGRO'),
+('-1574011','REUSE ME','0','0','0','0','0','REUSE ME'),
+
 ('-1574012','Not... over... yet.','13230','1','0','0','0','skarvald SAY_SKA_DEATH'),
 ('-1574013','A warrior''s death.','13231','1','0','0','0','skarvald SAY_SKA_DEATH_REAL'),
-('-1574014','???','13232','1','0','0','0','skarvald SAY_SKA_KILL'),
-('-1574015','Pagh! What sort of necromancer lets death stop him? I knew you were worthless!','13233','1','0','0','0','skarvald SAY_SKA_DAL_DIES_REPLY'),
 
-('-1574016','By all means, don''t assess the situation, you halfwit! Just jump into the fray!','13199','1','0','0','0','dalronn SAY_DAL_AGGRO_REPLY'),
+('-1574014','REUSE ME','0','0','0','0','0','REUSE ME'),
+('-1574015','REUSE ME','0','0','0','0','0','REUSE ME'),
+('-1574016','REUSE ME','0','0','0','0','0','REUSE ME'),
+
 ('-1574017','See... you... soon.','13200','1','0','0','0','dalronn SAY_DAL_DEATH'),
-('-1574018','There''s no... greater... glory.','13201','1','0','0','0','dalronn SAY_DAL_DEATH_REAL'),
-('-1574019','You may serve me yet.','13202','1','0','0','0','dalronn SAY_DAL_KILL'),
-('-1574020','Skarvald, you incompetent slug! Return and make yourself useful!','13203','1','0','0','0','dalronn SAY_DAL_SKA_DIES_REPLY'),
+('-1574018','There\'s no... greater... glory.','13201','1','0','0','0','dalronn SAY_DAL_DEATH_REAL'),
+
+('-1574019','REUSE ME','0','0','0','0','0','REUSE ME'),
+('-1574020','REUSE ME','0','0','0','0','0','REUSE ME'),
 
 ('-1574021','%s casts Frost Tomb on $N','0','3','0','0','0','keleseth EMOTE_FROST_TOMB'),
 
@@ -5641,10 +5645,7 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1575013','Any last words?','13854','1','0','0','0','svala SAY_SACRIFICE_5'),
 ('-1575014','Nooo! I did not come this far... to...','13855','1','0','0','0','svala SAY_DEATH'),
 
-('-1575015','What this place? I will destroy you!','13464','1','0','0','0','gortok SAY_AGGRO'),
-('-1575016','You die! That what master wants!','13465','1','0','0','0','gortok SAY_SLAY_1'),
-('-1575017','An easy task!','13466','1','0','0','0','gortok SAY_SLAY_2'),
-('-1575018',' ','13467','1','0','0','0','gortok SAY_DEATH'),
+-- REUSE ME -1575015 to -1575018
 
 ('-1575019','What mongrels dare intrude here? Look alive, my brothers! A feast for the one that brings me their heads!','13497','1','0','22','0','skadi SAY_AGGRO'),
 ('-1575020','Sear them to the bone!','13498','1','0','0','0','skadi SAY_DRAKEBREATH_1'),

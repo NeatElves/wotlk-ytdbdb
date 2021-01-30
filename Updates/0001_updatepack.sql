@@ -367,11 +367,12 @@ DELETE FROM dbscripts_on_relay WHERE id IN (20513,20514);
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (20513,10,34,3469,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Frostbrood Vanquisher EAI: area check'),
 (20513,100,15,51272,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Frostbrood Vanquisher EAI: cast 51272'),
-(20513,1000,0,0,0,0,0,0,0,2000001154,0,0,0,0,0,0,0,'Part of Frostbrood Vanquisher EAI: warning'),
+(20513,1000,0,0,0,0,0,0,0,2000001154,0,0,0,0,0,0,0,'Part of Frostbrood Vanquisher EAI: Say warning'),
 (20513,10000,34,3469,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Frostbrood Vanquisher EAI: area check'),
+(20513,10010,35,5,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Frostbrood Vanquisher EAI: send AI Event A'),
 (20513,10100,14,52196,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Frostbrood Vanquisher EAI: Player Drop'),
 (20514,100,31,28670,150,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Scarlet Ballista EAI: search for 28670'),
-(20514,200,26,0,0,0,28670,160,1,0,0,0,0,0,0,0,0,'Part of Scarlet Ballista EAI: search for 28670');
+(20514,200,26,0,0,0,28670,160,1,0,0,0,0,0,0,0,0,'Part of Scarlet Ballista EAI: start attack target');
 DELETE FROM conditions WHERE condition_entry BETWEEN 3451 AND 3469;
 INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4) VALUES
 (3451, 4, 4356,0,0,0), (3452, 4, 4347,0,0,0), (3453, 4, 4349,0,0,0),
@@ -402,3 +403,42 @@ DELETE FROM `creature` WHERE `guid` = 177767;
 DELETE FROM `creature` WHERE `guid` = 17767;
 INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
 (17767, 12428, 0, 1, 1, 0, 0, 2436.81, 359.072, 33.352, 0.122173, 60, 60, 0, 0, 110, 0, 0, 0);
+
+DELETE FROM dbscripts_on_relay WHERE id IN (20515);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20515,100,31,28511,40,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Scarlet Crusader EAI: search for 28511'),
+(20515,200,26,0,0,0,28511,45,1,0,0,0,0,0,0,0,0,'Part of Scarlet Crusader EAI: start attack target');
+
+UPDATE spell_area SET quest_start = 0, quest_end = 0, condition_id = 3478 WHERE spell = 52598;
+DELETE FROM conditions WHERE condition_entry BETWEEN 3470 AND 3478;
+INSERT INTO conditions (condition_entry,type,value1,value2,value3,value4,flags) VALUE
+(3470,9,12706,0,0,0,0), (3471,8,12706,0,0,0,0), (3472,-2,3471,3470,0,0,0), (3473,8,12757,0,0,0,1),
+(3474,-1,3473,3472,0,0,0), (3475,1,53107,0,0,0,0), (3476,8,12779,0,0,0,1), (3477,-1,3476,3475,0,0,0),
+(3478,-2,3477,3474,0,0,0);
+
+UPDATE creature_template SET MovementType = 0 WHERE Entry = 29113;
+UPDATE creature SET MovementType = 0, spawndist = 0 WHERE id = 29113;
+DELETE FROM creature_movement_template WHERE entry = 29113;
+DELETE FROM dbscripts_on_creature_movement WHERE id = 2911301;
+DELETE FROM `dbscript_string` WHERE `entry` IN (2000003174,2000003175);
+
+UPDATE gameobject SET spawntimesecsmin=-30*60, spawntimesecsmax=-30*60 WHERE id=148998;
+UPDATE creature_template SET InhabitType=1 WHERE entry=24844;
+DELETE FROM `dbscripts_on_event` WHERE `id` = 16547;
+INSERT INTO `dbscripts_on_event` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(16547, 0, 0, 10, 24844, 600000, 0, 0, 0, 0, 0, 0, 0, 0, 209.912, -318.697, 14.005, 1.181, 0, '');
+
+DELETE FROM creature_movement_template WHERE entry=8497;
+INSERT INTO creature_movement_template (entry,pathId,point,position_x,position_y,position_z,orientation) VALUES
+(8497, 0, 1, -420.629, 276.682, -90.827, 3.1722),
+(8497, 0, 2, -446.197, 275.329, -90.674, 3.1722),
+(8497, 1, 1, -512.015, 276.134, -90.827, 6.2808),
+(8497, 1, 2, -489.960, 275.129, -90.751, 6.2808);
+UPDATE creature_movement_template SET waittime=1000, script_id=849701 WHERE entry=8497 AND point=2;
+DELETE FROM dbscripts_on_creature_movement WHERE id=849701;
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(849701, 0, 0, 20, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Nightmare Suppressor - Switch to idle movement'),
+(849701, 2000, 0, 15, 12623, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Nightmare Suppressor - Cast Suppression on Shade of Hakkar');
+
+DELETE FROM `item_required_target` WHERE `entry` = 23693;
+INSERT INTO `item_required_target` VALUES (23693,1,17226);
