@@ -3390,17 +3390,10 @@ UPDATE `script_texts` SET `content_loc8` = 'Одной помехой меньш
 UPDATE `script_texts` SET `content_loc8` = 'Ах! Будь ты проклят, Мал''Ганис! Отец... Джайна... Я подвел Лордерон...' WHERE `entry` = -1595040;
 UPDATE `script_texts` SET `content_loc8` = 'Моя работа здесь окончена!' WHERE `entry` = -1595041;
 UPDATE `script_texts` SET `content_loc8` = 'Мягкие, ненадёжные оболочки. Мимолётные, хрупкие жизни. Вы не можете избавиться от проклятия плоти!' WHERE `entry` = -1599000;
-UPDATE `script_texts` SET `content_loc8` = '???' WHERE `entry` = -1599001;
+UPDATE `script_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29583 WHERE `entry` = -1599001;
 UPDATE `script_texts` SET `content_loc8` = 'Плоть не сравнится с железом!' WHERE `entry` = -1599002;
 UPDATE `script_texts` SET `content_loc8` = 'Армии железа заполонят этот мир!' WHERE `entry` = -1599003;
 UPDATE `script_texts` SET `content_loc8` = 'Локен не отступится, пока кузня снова не будет захвачена. Вы ничего не измените!' WHERE `entry` = -1599004;
-UPDATE `script_texts` SET `content_loc8` = 'Вам не стоило приходить... теперь вы умрете!' WHERE `entry` = -1599005;
-UPDATE `script_texts` SET `content_loc8` = 'Нет, нет, нет.' WHERE `entry` = -1599006;
-UPDATE `script_texts` SET `content_loc8` = 'Нечистые мысли ведут к нечестивым поступкам.' WHERE `entry` = -1599007;
-UPDATE `script_texts` SET `content_loc8` = 'Моя ноша становится все тяжелее.' WHERE `entry` = -1599008;
-UPDATE `script_texts` SET `content_loc8` = 'Это твоя собственная ошибка!' WHERE `entry` = -1599009;
-UPDATE `script_texts` SET `content_loc8` = 'Потеряно так много времени... и вам его никогда не вернуть!' WHERE `entry` = -1599010;
-UPDATE `script_texts` SET `content_loc8` = 'Надеюсь, вы все сгниете! Я... этого... не хотела.' WHERE `entry` = -1599011;
 UPDATE `script_texts` SET `content_loc8` = 'Вы не зря едите свой хлеб!' WHERE `entry` = -1599012;
 UPDATE `script_texts` SET `content_loc8` = 'Поднажмите! Да, вот так!' WHERE `entry` = -1599013;
 UPDATE `script_texts` SET `content_loc8` = 'Продолжайте в том же духе. Смерти на всех хватит!' WHERE `entry` = -1599014;

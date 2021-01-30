@@ -104,6 +104,8 @@ UPDATE `gossip_texts` SET `content_loc8` = 'За Лордерон!' WHERE `entry
 UPDATE `gossip_texts` SET `content_loc8` = 'Я готов сразиться с Повелителем ужаса, сир.' WHERE `entry` = -3595013;
 UPDATE `gossip_texts` SET `content_loc8` = 'Бранн, это будет честью для нас!' WHERE `entry` = -3599000;
 UPDATE `gossip_texts` SET `content_loc8` = 'Давайте двигаться, Бранн, достаточно уроков истории!' WHERE `entry` = -3599001;
+UPDATE `gossip_texts` SET `content_loc8` = 'У нас будет уйма времени заняться этим позже, Бранн; нам нужно идти дальше!' WHERE `entry` = -3599002;
+UPDATE `gossip_texts` SET `content_loc8` = 'Мы с тобой, Бранн! Открывай!' WHERE `entry` = -3599003;
 UPDATE `gossip_texts` SET `content_loc8` = 'Портал к Главному лагерю экспедиции.' WHERE `entry` = -3603000;
 UPDATE `gossip_texts` SET `content_loc8` = 'Портал к Плацу.' WHERE `entry` = -3603001;
 UPDATE `gossip_texts` SET `content_loc8` = 'Портал к Гигантской кузне.' WHERE `entry` = -3603002;
