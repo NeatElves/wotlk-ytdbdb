@@ -3782,6 +3782,10 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Я не допущу этого, 
 UPDATE `dbscript_string` SET `content_loc8` = 'Мал''Ганис отправит своих прислужников из Плети навстречу нам. Опытные воины и маги, ступайте и уничтожьте врагов. Я возглавлю оставшиеся войска в деле очищения Стратхольма от заразы.' WHERE `entry` = 2000025875;
 UPDATE `dbscript_string` SET `content_loc8` = 'Светоносный...' WHERE `entry` = 2000025876;
 UPDATE `dbscript_string` SET `content_loc8` = 'Лорд Утер...' WHERE `entry` = 2000025877;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 31555 WHERE `entry` = 2000026000;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 28591 WHERE `entry` = 2000026001;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 30584 WHERE `entry` = 2000026002;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 30523 WHERE `entry` = 2000026003;
 UPDATE `dbscript_string` SET `content_loc8` = 'Что за битва! Ты видела, Ридиан?' WHERE `entry` = 2000026800;
 UPDATE `dbscript_string` SET `content_loc8` = 'Наши друзья отважно сражались, Бранн, но дело еще не закончено.' WHERE `entry` = 2000026801;
 UPDATE `dbscript_string` SET `content_loc8` = 'Может и так, но рано или поздно мы все равно пробьемся в Ульдуар. Вам не удалось найти способ переместиться внутрь?' WHERE `entry` = 2000026802;
@@ -3870,6 +3874,11 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 37237 
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 37320 WHERE `entry` = 2000029029;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 37320 WHERE `entry` = 2000029030;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 37321 WHERE `entry` = 2000029031;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 37479 WHERE `entry` = 2000029032;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 37540 WHERE `entry` = 2000029033;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 37478 WHERE `entry` = 2000029034;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 37480 WHERE `entry` = 2000029035;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 37541 WHERE `entry` = 2000029036;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 37174 WHERE `entry` = 2000029200;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 37175 WHERE `entry` = 2000029201;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 37176 WHERE `entry` = 2000029202;
