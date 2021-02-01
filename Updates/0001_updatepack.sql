@@ -422,7 +422,6 @@ DELETE FROM creature_movement_template WHERE entry = 29113;
 DELETE FROM dbscripts_on_creature_movement WHERE id = 2911301;
 DELETE FROM `dbscript_string` WHERE `entry` IN (2000003174,2000003175);
 
-UPDATE gameobject SET spawntimesecsmin=-30*60, spawntimesecsmax=-30*60 WHERE id=148998;
 UPDATE creature_template SET InhabitType=1 WHERE entry=24844;
 DELETE FROM `dbscripts_on_event` WHERE `id` = 16547;
 INSERT INTO `dbscripts_on_event` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
@@ -574,3 +573,6 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 (20517,150,26,0,0,0,31095,13,1,0,0,0,0,0,0,0,0,'Part of Knight of the Ebon Blade EAI: start attack target'),
 (20518,100,31,31099,10,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Knight of the Ebon Blade EAI: search for 31099'),
 (20518,150,26,0,0,0,31099,13,1,0,0,0,0,0,0,0,0,'Part of Knight of the Ebon Blade EAI: start attack target');
+
+UPDATE dbscripts_on_quest_end SET data_flags = 6 WHERE id = 13188 AND delay = 0;
+UPDATE dbscripts_on_quest_end SET data_flags = 6 WHERE id = 13189 AND delay = 0;

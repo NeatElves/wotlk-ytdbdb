@@ -226,6 +226,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 -- Wotlk
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (28728,'spell_feigh_death_pos_aura'),
+(41253,'spell_greater_invisibility_mob'),
 (42672,'spell_frost_tomb_aura'),
 (42912,'spell_summon_banshee'),
 (43768,'spell_flying_machine_controls'),
@@ -245,9 +246,11 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (47713,'spell_telestra_clone_dies_aura'),
 (47747,'spell_charge_rifts'),
 (47764,'spell_gravity_well_effect'),
+(47941,'spell_crystal_spike_aura'),
 (47958,'spell_crystal_spikes'),
 (48385,'spell_create_spirit_fount_beam_aura'),
 (48590,'spell_avenging_spirits'),
+(50442,'spell_crystal_spike_visual_aura'),
 (50546,'spell_ley_line_focus_item_trigger'),
 (50547,'spell_ley_line_focus_item_trigger'),
 (50548,'spell_ley_line_focus_item_trigger'),

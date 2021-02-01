@@ -250,7 +250,6 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Акумай мертв! Нак
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Во имя бороды Тауриссана убейте их!' WHERE `entry` = -576;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Король Гримлок – я!' WHERE `entry` = -577;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Умри! Умри!' WHERE `entry` = -578;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Нет! Вы не должны это делать!' WHERE `entry` = -579;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'УМРИТЕ, СМЕРТНЫЕ!' WHERE `entry` = -580;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Именем Света, покинь эту гробницу!' WHERE `entry` = -581;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Блестяшка знает, где спрятаны сокровища.' WHERE `entry` = -582;

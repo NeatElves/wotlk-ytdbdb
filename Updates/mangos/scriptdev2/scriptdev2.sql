@@ -1220,7 +1220,6 @@ INSERT INTO scripted_event_id VALUES
 UPDATE creature_template SET ScriptName='boss_anomalus' WHERE entry=26763;
 UPDATE creature_template SET ScriptName='boss_keristrasza' WHERE entry=26723;
 UPDATE creature_template SET ScriptName='boss_ormorok' WHERE entry=26794;
-UPDATE creature_template SET ScriptName='npc_crystal_spike_trigger' WHERE entry IN (27101, 27079);
 UPDATE creature_template SET ScriptName='boss_telestra' WHERE entry=26731;
 UPDATE gameobject_template SET ScriptName='go_containment_sphere' WHERE entry IN (188526, 188527, 188528);
 UPDATE instance_template SET ScriptName='instance_nexus' WHERE map=576;
@@ -3615,7 +3614,8 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1109011','You must not summon our god!','0','1','0','0','4530','Nightmare Suppressor SAY_SPAWN_1'),
 ('-1109012','Stop!  Infidels!','0','1','0','0','4532','Nightmare Suppressor SAY_SPAWN_2'),
 ('-1109013','No!  We cannot allow you to summon Hakkar!','0','1','0','0','4529','Nightmare Suppressor SAY_SPAWN_3'),
-('-1109014','You must not summon our god!','0','1','0','0','4531','Nightmare Suppressor SAY_SPAWN_4');
+('-1109014','You must not summon our god!','0','1','0','0','4531','Nightmare Suppressor SAY_SPAWN_4'),
+('-1109015','NOOOO!!','0','1','0','0','4544','avatar SAY_AVATAR_DESPAWN');
 
 -- -1 129 000 RAZORFEN DOWNS
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES

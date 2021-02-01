@@ -18,7 +18,7 @@ SET @PGUID := 45800; -- pools
 
 -- INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 
-DELETE FROM creature_movement_template WHERE entry IN (5708,5719,5722);
+DELETE FROM creature_movement_template WHERE entry IN (5708,5719,5722,8497);
 INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 (5708, 0, 1, -369.26, 94.5071, -148.802, 100, 0, 0),
 (5708, 0, 2, -375.62, 119.789, -148.802, 100, 0, 0),
@@ -44,7 +44,11 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (5722, 0, 2, -644.468, 135.471, -90.8296, 3.22119, 0, 0),
 (5722, 0, 3, -673.758, 133.936, -90.8296, 4.71017, 0, 0),
 (5722, 0, 4, -673.928, 57.2586, -90.8338, 6.27006, 0, 0),
-(5722, 0, 5, -643.802, 56.8631, -90.8338, 1.57403, 0, 0);
+(5722, 0, 5, -643.802, 56.8631, -90.8338, 1.57403, 0, 0),
+(8497, 0, 1, -420.629, 276.682, -90.827, 3.1722, 0, 0),
+(8497, 0, 2, -446.197, 275.329, -90.674, 3.1722, 1000, 849701),
+(8497, 1, 1, -512.015, 276.134, -90.827, 6.2808, 0, 0),
+(8497, 1, 2, -489.960, 275.129, -90.751, 6.2808, 1000, 849701);
 
 -- INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
 
@@ -597,17 +601,17 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 (@OGUID+23, 148937, 109, -492.192, 137.129, -173.643, -2.33874, 0, 0, 0, 1, -43200, -43200, 255, 1), -- Atal'ai Light BIG (DND)
 (@OGUID+24, 148937, 109, -516.554, 94.296, -173.651, -2.426, 0, 0, 0, 1, -43200, -43200, 255, 1), -- Atal'ai Light BIG (DND)
 (@OGUID+25, 148937, 109, -442.858, 52.5523, -173.662, 2.04204, 0, 0, 0, 1, -43200, -43200, 255, 1), -- Atal'ai Light BIG (DND)
-(@OGUID+26, 148998, 109, -451.389, 272.707, -90.8275, 2.49582, 0, 0, 0, 1, 180, 180, 255, 1), -- Evil God Summoning Circle
-(@OGUID+27, 148998, 109, -467.622, 290.573, -90.8275, 0.523598, 0, 0, 0, 1, 180, 180, 255, 1), -- Evil God Summoning Circle
-(@OGUID+28, 148998, 109, -477.915, 285.49, -90.8275, -1.97222, 0, 0, 0, 1, 180, 180, 255, 1), -- Evil God Summoning Circle
-(@OGUID+29, 148998, 109, -456.843, 261.305, -90.8275, 0.715585, 0, 0, 0, 1, 180, 180, 255, 1), -- Evil God Summoning Circle
-(@OGUID+30, 148998, 109, -467.861, 257.761, -90.8275, -3.12412, 0, 0, 0, 1, 180, 180, 255, 1), -- Evil God Summoning Circle
-(@OGUID+31, 148998, 109, -456.914, 286.912, -90.8275, 1.09956, 0, 0, 0, 1, 180, 180, 255, 1), -- Evil God Summoning Circle
-(@OGUID+32, 148998, 109, -482.814, 271.267, -90.8275, -0.017452, 0, 0, 0, 1, 180, 180, 255, 1), -- Evil God Summoning Circle
-(@OGUID+33, 148998, 109, -476.698, 260.68, -90.8275, -1.23918, 0, 0, 0, 1, 180, 180, 255, 1), -- Evil God Summoning Circle
+(@OGUID+26, 148998, 109, -451.389, 272.707, -90.8275, 2.49582, 0, 0, 0, 1, -1800, -1800, 255, 1), -- Evil God Summoning Circle
+(@OGUID+27, 148998, 109, -467.622, 290.573, -90.8275, 0.523598, 0, 0, 0, 1, -1800, -1800, 255, 1), -- Evil God Summoning Circle
+(@OGUID+28, 148998, 109, -477.915, 285.49, -90.8275, -1.97222, 0, 0, 0, 1, -1800, -1800, 255, 1), -- Evil God Summoning Circle
+(@OGUID+29, 148998, 109, -456.843, 261.305, -90.8275, 0.715585, 0, 0, 0, 1, -1800, -1800, 255, 1), -- Evil God Summoning Circle
+(@OGUID+30, 148998, 109, -467.861, 257.761, -90.8275, -3.12412, 0, 0, 0, 1, -1800, -1800, 255, 1), -- Evil God Summoning Circle
+(@OGUID+31, 148998, 109, -456.914, 286.912, -90.8275, 1.09956, 0, 0, 0, 1, -1800, -1800, 255, 1), -- Evil God Summoning Circle
+(@OGUID+32, 148998, 109, -482.814, 271.267, -90.8275, -0.017452, 0, 0, 0, 1, -1800, -1800, 255, 1), -- Evil God Summoning Circle
+(@OGUID+33, 148998, 109, -476.698, 260.68, -90.8275, -1.23918, 0, 0, 0, 1, -1800, -1800, 255, 1), -- Evil God Summoning Circle
 (@OGUID+34, 149431, 109, -518.154, -85.2353, -74.488, 3.14159, 0, 0, 1, 0, 180, 180, 255, 1), -- forcefield
-(@OGUID+35, 149432, 109, -518.381, 276.621, -90.8977, 3.14159, 0, 0, 1, 0, 180, 180, 255, 0), -- DOOR1
-(@OGUID+36, 149433, 109, -415.713, 276.621, -90.8977, 3.14159, 0, 0, 1, 0, 180, 180, 255, 0), -- DOOR2
+(@OGUID+35, 149432, 109, -518.381, 276.621, -90.8977, 3.14159, 0, 0, 1, 0, 180, 180, 100, 0), -- DOOR1
+(@OGUID+36, 149433, 109, -415.713, 276.621, -90.8977, 3.14159, 0, 0, 1, 0, 180, 180, 100, 0), -- DOOR2
 (@OGUID+37, 177484, 109, -515.0457, 95.14713, -148.74, 2.740162, 0, 0, 0, 0, 180, 180, 255, 1), -- Atal'ai Statue
 (@OGUID+38, 177484, 109, -420.1555, 94.37312, -148.7402, -2.321287, 0, 0, 0, 0, 180, 180, 255, 1), -- Atal'ai Statue
 (@OGUID+39, 177484, 109, -490.9691, 135.7142, -148.74, 0.2268925, 0, 0, 0, 0, 180, 180, 255, 1), -- Atal'ai Statue
@@ -681,7 +685,9 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 -- DBSCRIPTS
 -- =========
 
--- INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(849701, 0, 20, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Nightmare Suppressor - Switch to idle movement'),
+(849701, 2000, 15, 12623, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Nightmare Suppressor - Cast Suppression on Shade of Hakkar');
 -- INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
