@@ -46,6 +46,10 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 15387 
 UPDATE `dbscript_string` SET `content_loc8` = 'Выслушайте, жители Танариса! Позвольте представить известного $n являющегося превосходным членом Ордена Мифрила. Кузнец чести, преданности и бесконечного терпения. Три ура за $n!' WHERE `entry` = 2000000041;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 2184 WHERE `entry` = 2000000042;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1589 WHERE `entry` = 2000000043;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1540 WHERE `entry` = 2000000044;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1541 WHERE `entry` = 2000000045;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1542 WHERE `entry` = 2000000046;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1543 WHERE `entry` = 2000000047;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1239 WHERE `entry` = 2000000048;
 UPDATE `dbscript_string` SET `content_loc8` = 'Ещё раз спасибо, $N. Эта редкая земля будет очень полезна в моих экспериментах.' WHERE `entry` = 2000000049;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 17595 WHERE `entry` = 2000000050;

@@ -4566,14 +4566,6 @@ UPDATE `script_texts` SET `content_loc8` = 'Он слишком силен. Мы
 UPDATE `script_texts` SET `content_loc8` = 'Стой! Ни шагу дальше, пока с тобой этот меч!' WHERE `entry` = -1668009;
 UPDATE `script_texts` SET `content_loc8` = 'Спасите! Я под этим деревом. Мне нужна помощь!' WHERE `entry` = -1724000;
 UPDATE `script_texts` SET `content_loc8` = 'Твоя сила на исходе, древнейшая. Скоро ты присоединишься к своим друзьям.' WHERE `entry` = -1724001;
-UPDATE `script_texts` SET `content_loc8` = 'Спасибо! Без вас я бы долго не продержалась... Здесь произошли страшные события...' WHERE `entry` = -1724002;
-UPDATE `script_texts` SET `content_loc8` = 'Святилище считалось неприступным, но до сих пор оно не подвергалось такому штурму...' WHERE `entry` = -1724003;
-UPDATE `script_texts` SET `content_loc8` = 'Черные драконы явились из ниоткуда... Мы даже не успели понять, что происходит.' WHERE `entry` = -1724004;
-UPDATE `script_texts` SET `content_loc8` = 'Силы были неравны, мои братья гибли один за другим. А я спряталась здесь и запечатала вход.' WHERE `entry` = -1724005;
-UPDATE `script_texts` SET `content_loc8` = 'Нас убивали с расчетливой жестокостью, но основной целью врага была кладка яиц в святилище.' WHERE `entry` = -1724006;
-UPDATE `script_texts` SET `content_loc8` = 'Атакой руководил кровожадный Заритриан, но, боюсь, тут замешано и более могущественное зло.' WHERE `entry` = -1724007;
-UPDATE `script_texts` SET `content_loc8` = 'В самом начале я ощутила присутствие их настоящего лидера – огромного сумеречного дракона.' WHERE `entry` = -1724008;
-UPDATE `script_texts` SET `content_loc8` = 'Герои! Мне неведомо, чего добиваются эти захватчики, но одно я знаю точно: их нужно остановить!' WHERE `entry` = -1724009;
 UPDATE `script_texts` SET `content_loc8` = 'А-а-а, цирк приехал.' WHERE `entry` = -1724010;
 UPDATE `script_texts` SET `content_loc8` = 'Балтар не оставляет живых!' WHERE `entry` = -1724011;
 UPDATE `script_texts` SET `content_loc8` = 'В мире хватает героев и без тебя...' WHERE `entry` = -1724012;

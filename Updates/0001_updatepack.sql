@@ -576,3 +576,91 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 
 UPDATE dbscripts_on_quest_end SET data_flags = 6 WHERE id = 13188 AND delay = 0;
 UPDATE dbscripts_on_quest_end SET data_flags = 6 WHERE id = 13189 AND delay = 0;
+
+UPDATE dbscripts_on_quest_end SET data_flags = 4 WHERE id = 489 AND delay = 0;
+
+DELETE FROM dbscripts_on_gossip WHERE id = 132301;
+INSERT INTO dbscripts_on_gossip (id,delay,command,datalong,datalong2,datalong3,buddy_entry,search_radius,data_flags,dataint,dataint2,dataint3,dataint4,x,y,z,o,comments) VALUES
+(132301,0,15,12512,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Cast: Kalaran Conjures Torch'),
+(132301,2000,9,10766,180,0,0,0,0,0,0,0,0,0,0,0,0,'resp object'),
+(132301,3000,9,20889,178,0,0,0,0,0,0,0,0,0,0,0,0,'resp object');
+
+UPDATE `gameobject` SET `position_x` = -6679.93, `position_y` = -1189.67, `position_z` = 240.115, `orientation` = 3.08923, `rotation2` = 0.999657, `rotation3` = 0.0261783, `spawntimesecsmin` = 1, `spawntimesecsmax` = 1, `animprogress` = 100 WHERE `guid` =55177;
+DELETE FROM dbscripts_on_quest_end WHERE id = 3463 AND delay = 4000;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(3463,4000,40,0,0,0,149502,30,4,0,0,0,0,0,0,0,0,'reload object');
+
+UPDATE gameobject SET position_x=9554.557, position_y=1655.089, position_z=1297.832, orientation=3.141593, rotation0=0, rotation1=0, rotation2=-1, rotation3=0 WHERE id = 19551;
+
+UPDATE creature_template SET InhabitType=3 WHERE entry IN(21212);
+
+INSERT INTO spell_script_target VALUES (8202,0,63674,0);
+
+UPDATE `creature_template` SET `Detection` = 30 WHERE `entry` IN (3794,3795,17772,17852,17854,17919,17920,17921,17922,17928,17931,17932,17933,17934,17935,17936,17937,17943,17944,17945,17948,18487);
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 1191;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1191,1,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Zamek - Active'),
+(1191,5,29,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Zamek - NPCFlags Removed'),
+(1191,10,25,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Zamek - RUN ON'),
+(1191,15,20,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Zamek - waypoints');
+DELETE FROM creature_movement_template WHERE entry IN (4709,4720);
+INSERT INTO creature_movement_template (entry,point,position_x,position_y,position_z,orientation,waittime,script_id) VALUES
+(4709,1,-6237.13,-3911.58,-60.5103,100,0,0),
+(4709,2,-6257.43,-3879.56,-58.8595,100,0,0),
+(4709,3,-6267.61,-3850.91,-58.7503,100,0,0),
+(4709,4,-6266.24,-3846.35,-58.7503,100,5000,470901),
+(4709,5,-6267.61,-3850.91,-58.7503,100,0,0),
+(4709,6,-6257.43,-3879.56,-58.8595,100,0,0),
+(4709,7,-6237.13,-3911.58,-60.5103,100,0,0),
+(4709,8,-6226.13,-3944.94,-58.6251,100,1000,470902),
+(4720,1,-6243.39,-3845.91,-58.7498,100,100,472001),
+(4720,2,-6250.63,-3847.35,-58.7491,100,0,0),
+(4720,3,-6255.06,-3853.64,-58.7491,100,0,0),
+(4720,4,-6262.2, -3851.84,-58.7491,100,0,0),
+(4720,5,-6266.24,-3846.35,-58.7503,100,30000,472002),
+(4720,6,-6262.2, -3851.84,-58.7491,100,0,0),
+(4720,7,-6255.06,-3853.64,-58.7491,100,0,0),
+(4720,8,-6250.63,-3847.35,-58.7491,100,0,0),
+(4720,9,-6243.39,-3845.91,-58.7498,100,0,0),
+(4720,10,-6236.99,-3831.23,-58.1364,100,1000,472003);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (470901,470902,472001,472002,472003);
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(470901,1000,0,0,0,0,0,0,4,2000000044,0,0,0,0,0,0,0,''),
+(470901,3000,9,20,5,0,0,0,0,0,0,0,0,0,0,0,0,'respawn gobject'),
+(470901,5900,31,4720,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 4720'),
+(470901,5950,0,0,0,0,4720,100,7,2000000045,0,0,0,0,0,0,0,'4720 - say'),
+(470901,5950,25,1,0,0,4720,100,7,0,0,0,0,0,0,0,0,'4720 - RUN'),
+(470901,6000,20,2,0,0,4720,100,7,0,0,0,0,0,0,0,0,'4720 - waypoints'),
+(470902,100,29,2,1,0,0,0,0,0,0,0,0,0,0,0,0,'Zamek - NPCFlags Added'),
+(470902,200,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Zamek - Idle'),
+(470902,300,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Zamek - UnActive'),
+(472001,10,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Active'),
+(472001,100,9,13621,42,0,0,0,0,0,0,0,0,0,0,0,0,'respawn gameobject'),
+(472001,110,40,0,0,0,179888,100,7,0,0,0,0,0,0,0,0,'despawn gameobject'),
+(472002,1000,0,0,0,0,0,0,4,2000000046,0,0,0,0,0,0,0,''),
+(472002,27000,0,0,0,0,0,0,4,2000000047,0,0,0,0,0,0,0,''),
+(472003,10,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle'),
+(472003,100,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'UnActive');
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000000044 AND 2000000047;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000000044,'Hehehe! Things go boom!',0,0,0,0,NULL),
+(2000000045,'What was that!',0,0,0,5,NULL),
+(2000000046,'Bloody... Must have been the goblins... Let\'s see how bad the damage is.',0,0,0,0,NULL),
+(2000000047,'Guess there\'s nothing more to be done. Blast!',0,0,0,6,NULL);
+UPDATE quest_template SET RequiredCondition = 3481, PrevQuestId = 0 WHERE entry = 1191;
+DELETE FROM conditions WHERE condition_entry BETWEEN 3479 AND 3481;
+INSERT INTO conditions (condition_entry, type, value1, value2) VALUES (3479, 9, 1190, 0), (3480, 19, 1194, 0), (3481, -2, 3480, 3479);
+UPDATE gameobject SET spawntimesecsmin = 45, spawntimesecsmax = 45 WHERE id = 179888;
+UPDATE gameobject SET position_x=-6236.64, position_y=-3830.48, position_z=-58.1364, orientation=-0.907571, rotation0=0, rotation1=0, rotation2=-0.438371, rotation3=0.898794 WHERE id=20805;
+DELETE FROM gameobject WHERE guid = 129;
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(129,144065,1,1,1,-6266.46,-3845.4,-58.7498,0.550892,0,0,0.271976, 0.962304, -5, -5, 255, 1);
+
+UPDATE creature_template SET faction=21, armor=10356, MinLevel=82, MaxLevel=82 WHERE entry IN (38135,38395,38634,38635,38398,38630,38631,38009);
+UPDATE creature_template SET DamageMultiplier=7.5 WHERE entry IN (38135,38634,38635,38009,38630,38631);
+UPDATE creature_template SET DamageMultiplier=13 WHERE entry IN (38395,38398);
+UPDATE creature_template SET faction=21, armor=8340, MinLevel=82, MaxLevel=82 WHERE entry IN (38136,38396,38632,38633,38010,38397,39000,39001);
+UPDATE creature_template SET DamageMultiplier=7.5 WHERE entry IN (38136,38632,38633,38010,39000,39001);
+UPDATE creature_template SET DamageMultiplier=13 WHERE entry IN (38397,38396);
+UPDATE creature_template SET MovementType=0 WHERE entry IN (37200,37187);
