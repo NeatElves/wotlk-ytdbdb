@@ -132,6 +132,8 @@ UPDATE `gossip_texts` SET `content_loc8` = 'Перенестись на Чере
 UPDATE `gossip_texts` SET `content_loc8` = 'Перенестись на Подъем Смертоносного.' WHERE `entry` = -3631003;
 UPDATE `gossip_texts` SET `content_loc8` = 'Перенестись на верхний ярус.' WHERE `entry` = -3631004;
 UPDATE `gossip_texts` SET `content_loc8` = 'Перенестись в логово Синдрагосы.' WHERE `entry` = -3631005;
+UPDATE `gossip_texts` SET `content_loc8` = 'Мои герои готовы к бою, Саурфанг. Идем!' WHERE `entry` = -3631006;
+UPDATE `gossip_texts` SET `content_loc8` = 'Все на месте, Мурадин. Выдвигаемся!' WHERE `entry` = -3631007;
 UPDATE `gossip_texts` SET `content_loc8` = 'Да. Мы готовы к предстоящим соревнованиям.' WHERE `entry` = -3649000;
 UPDATE `gossip_texts` SET `content_loc8` = 'Сделать первый вызов!' WHERE `entry` = -3649001;
 UPDATE `gossip_texts` SET `content_loc8` = 'Мы хотим еще раз выстрелить в тех зверей!' WHERE `entry` = -3649002;
