@@ -684,5 +684,35 @@ INSERT INTO conditions (condition_entry,type,value1,comments) VALUES
 DELETE FROM npc_spellclick_spells WHERE npc_entry IN (36838,36839);
 INSERT INTO npc_spellclick_spells (npc_entry,spell_id,quest_start,cast_flags) VALUES (36839,70510,0,1), (36838,70510,0,1);
 DELETE FROM creature_template_spells WHERE entry IN (36838,36839);
-INSERT INTO creature_template_spells (entry,setId,spell1,spell2) VALUES (36838,0,69399,70175), (36839,0,69399,70175);
+INSERT INTO creature_template_spells (entry,setId,spell1,spell2) VALUES (36838,0,69399,69401), (36839,0,70172,70174);
+UPDATE creature_template SET RegenerateStats=0 WHERE entry IN (37540,37215);
 UPDATE creature_template SET EquipmentTemplateId=2023 WHERE entry=37920;
+DELETE FROM spell_script_target WHERE entry IN (70175,69400,70104,69705,70173);
+INSERT INTO spell_script_target (entry,type,targetEntry,inverseEffectMask) VALUES
+(69402,1,37215,5), (70175,1,37540,5), (69400,1,37215,5), (70173,1,37540,5), (69705,1,36838,0), (69705,1,36839,0);
+DELETE FROM spell_target_position WHERE id IN (72340);
+INSERT INTO spell_target_position VALUES (72340,631,-548.983,2211.24,539.29,0);
+UPDATE gameobject_template SET ExtraFlags=4096 WHERE entry IN (202235,202242,202243,202244,202245,202246,202190);
+
+DELETE FROM npc_text WHERE ID IN (2139, 2140);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (2139, 2140);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, Prob1, Prob2, Prob3, Prob4, Prob5, Prob6, Prob7, BroadcastTextId0, BroadcastTextId1, BroadcastTextId2, BroadcastTextId3, BroadcastTextId4, BroadcastTextId5, BroadcastTextId6, BroadcastTextId7) VALUES
+(2139, 1, 0, 0, 0, 0, 0, 0, 0, 4563, 0, 0, 0, 0, 0, 0, 0),
+(2140, 1, 0, 0, 0, 0, 0, 0, 0, 4565, 0, 0, 0, 0, 0, 0, 0);
+
+DELETE FROM creature_cooldowns WHERE entry IN(24697);
+INSERT INTO creature_cooldowns VALUES (24697,44547,11000,15000), (24697,44640,6000,10000);
+DELETE FROM creature_cooldowns WHERE entry IN(25563);
+INSERT INTO creature_cooldowns VALUES (25563,44547,11000,15000), (25563,44640,4500,6000);
+REPLACE INTO creature_cooldowns VALUES (24696,20299,10000,15000), (24696,17741,13000,19000), (24696,44639,3000,6000);
+REPLACE INTO creature_cooldowns VALUES (24689,44534,5000,10000), (24689,44505,32000,40000);
+REPLACE INTO creature_cooldowns VALUES (24690,44505,32000,40000);
+REPLACE INTO creature_cooldowns VALUES (24688,44505,32000,40000), (24688,44533,1,4000);
+REPLACE INTO creature_cooldowns VALUES (24686,44518,10000,10000), (24686,44519,6000,6000);
+REPLACE INTO creature_cooldowns VALUES (24684,44479,10000,10000), (24684,44480,20000,20000);
+REPLACE INTO creature_cooldowns VALUES (25568,44475,30000,30000), (25568,46028,11000,19000), (25565,46029,10000,10000), (25565,46030,20000,20000), (25572,46042,10000,10000),
+(25572,46043,6000,6000), (25570,46192,15000,15000), (25570,46046,10000,15000), (25575,44534,6000,10000), (25575,44505,20000,25000), (25577,44505,20000,25000), (25577,44533,1,4000),
+(25576,44505,20000,25000), (25547,46150,10000,15000), (25547,46151,14000,20000), (25547,44639,3000,6000);
+
+UPDATE `creature_template` SET `PickpocketLootId` = 0 WHERE `Entry` in (24697,25563);
+DELETE FROM `pickpocketing_loot_template` WHERE `entry` = 24697;
