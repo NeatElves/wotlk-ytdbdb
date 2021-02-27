@@ -2490,7 +2490,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Теперь ты встрети�
 UPDATE `dbscript_string` SET `content_loc8` = 'Моряк, разорви эту сухопутную крысу на куски!' WHERE `entry` = 2000002661;
 UPDATE `dbscript_string` SET `content_loc8` = 'Эй, ты, покажи этому насекомому всю мощь Квалдира!' WHERE `entry` = 2000002662;
 UPDATE `dbscript_string` SET `content_loc8` = 'Ребенок нашел новую игрушку! Эй, ты, выкинь ее!' WHERE `entry` = 2000002663;
-UPDATE `dbscript_string` SET `content_loc8` = 'Есть, капитан!' WHERE `entry` = 2000002664;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 24843 WHERE `entry` = 2000002664;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 20776 WHERE `entry` = 2000002665;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 20777 WHERE `entry` = 2000002666;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 20778 WHERE `entry` = 2000002667;
@@ -2499,17 +2499,17 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 20792 
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 20793 WHERE `entry` = 2000002670;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 20794 WHERE `entry` = 2000002671;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 20796 WHERE `entry` = 2000002672;
-UPDATE `dbscript_string` SET `content_loc8` = 'Что еще, Данат? Ты что, не видишь, что я и без этого завален работой?' WHERE `entry` = 2000002673;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12754 WHERE `entry` = 2000002673;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12763 WHERE `entry` = 2000002674;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12764 WHERE `entry` = 2000002675;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12765 WHERE `entry` = 2000002676;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12766 WHERE `entry` = 2000002677;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12768 WHERE `entry` = 2000002678;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12760 WHERE `entry` = 2000002679;
-UPDATE `dbscript_string` SET `content_loc8` = 'Что за дурацкая манера – открывать именно то, что мы должны закрыть?' WHERE `entry` = 2000002680;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12757 WHERE `entry` = 2000002680;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12761 WHERE `entry` = 2000002681;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12762 WHERE `entry` = 2000002682;
-UPDATE `dbscript_string` SET `content_loc8` = 'Я порву этот портал в клочья силой своего разума! Это возмутительно!' WHERE `entry` = 2000002683;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12758 WHERE `entry` = 2000002683;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12759 WHERE `entry` = 2000002684;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12746 WHERE `entry` = 2000002685;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12748 WHERE `entry` = 2000002686;
@@ -2517,7 +2517,7 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12745 
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12747 WHERE `entry` = 2000002688;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 18210 WHERE `entry` = 2000002689;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 18211 WHERE `entry` = 2000002690;
-UPDATE `dbscript_string` SET `content_loc8` = 'Не о нем я беспокоюсь. Меня тревожат эти новички тут повсюду – и эти ужасные фиолетовые эльфы, которых они притащили с собой. Они даже еще никак не проявили себя.' WHERE `entry` = 2000002691;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 18212 WHERE `entry` = 2000002691;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 18213 WHERE `entry` = 2000002692;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 18214 WHERE `entry` = 2000002693;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12798 WHERE `entry` = 2000002694;

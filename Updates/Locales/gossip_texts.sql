@@ -7,7 +7,7 @@
 
 UPDATE `gossip_texts` SET `content_loc8` = '[PH] SD2 Текст не найден!' WHERE `entry` = -3000000;
 UPDATE `gossip_texts` SET `content_loc8` = 'Тарук, отправь меня собирать все, что нужно тебе.' WHERE `entry` = -3000101;
-UPDATE `gossip_texts` SET `content_loc8` = 'Вот деньги.' WHERE `entry` = -3000102;
+UPDATE `gossip_texts` SET `content_loc8` = 'Плати по счетам, Гарри!' WHERE `entry` = -3000102;
 UPDATE `gossip_texts` SET `content_loc8` = 'Я готов отправиться в вашу деревню.' WHERE `entry` = -3000103;
 UPDATE `gossip_texts` SET `content_loc8` = '<Проверка пульса...>' WHERE `entry` = -3000104;
 UPDATE `gossip_texts` SET `content_loc8` = 'Иезекииль сказал, что ты мог припрятать кое-какую книгу...' WHERE `entry` = -3000105;
