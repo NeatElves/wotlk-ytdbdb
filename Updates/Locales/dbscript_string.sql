@@ -29,6 +29,8 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Ты приближаешься �
 UPDATE `dbscript_string` SET `content_loc8` = 'Прекрасная песня, не правда ли?' WHERE `entry` = 2000000021;
 UPDATE `dbscript_string` SET `content_loc8` = 'Думаю, я сама смогу добраться к Гиблотопи. Груз они отнесли на самый верх башни. Будь осторожен!' WHERE `entry` = 2000000022;
 UPDATE `dbscript_string` SET `content_loc8` = 'Что случилось с озером? От него веет странной силой.' WHERE `entry` = 2000000023;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 26350 WHERE `entry` = 2000000024;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 26351 WHERE `entry` = 2000000025;
 UPDATE `dbscript_string` SET `content_loc8` = 'Духи Воды, взываю к вам и молю вас о помощи. $n $gобратился:обратилась; к вам с просьбой – и я верю, что $gего:ее; намерения были благородны. Пожалуйста, помогите нам.' WHERE `entry` = 2000000026;
 UPDATE `dbscript_string` SET `content_loc8` = 'Вперед!' WHERE `entry` = 2000000027;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 198 WHERE `entry` = 2000000028;
