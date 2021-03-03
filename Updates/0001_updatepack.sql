@@ -2253,6 +2253,7 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid
 (7787, 853, 0, 1, 1, 0, 0, -6170.6, 393.397, 398.906, 3.54302, 300, 300, 0, 0, 11828, 0, 0, 0),
 (7831, 853, 0, 1, 1, 0, 0, -6115.09, 372.263, 395.626, 0.645772, 300, 300, 0, 0, 11828, 0, 0, 0),
 (9022, 853, 0, 1, 1, 0, 0, -6086.53, 390.964, 395.625, 3.57792, 300, 300, 0, 0, 11828, 0, 0, 0);
+DELETE FROM creature_movement WHERE id IN (7738,7742);
 INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
 (7738, 1, -6224.85, 347.284, 383.579, 0, 0, 0, NULL),
 (7738, 2, -6223.59, 352.337, 384.112, 0, 0, 0, NULL),
@@ -2695,3 +2696,70 @@ DELETE FROM dbscripts_on_spell WHERE id = 48321 AND delay = 1000;
 
 DELETE FROM creature WHERE guid IN (119604,119603,119602,119601,119600,119599,130649,130641,130640,130655,119605,119598,
 130644,130642,130650,130645,130652,119597,119606,130627,119607,119608,119609,119610,130646,119596,119611,119594,119595,119593,119592);
+
+UPDATE creature_template SET MinLevel=80, MaxLevel=80, Expansion=2, faction=14 WHERE entry=36568;
+UPDATE creature_template SET UnitFlags=33555200, Expansion=2, faction=14 WHERE entry=36710;
+UPDATE creature_template SET UnitFlags=33555200 WHERE entry=36530;
+UPDATE creature_template SET faction=190 WHERE entry=15108;
+DELETE FROM spell_script_target WHERE entry IN (69039,68644);
+INSERT INTO spell_script_target VALUES (69039,1,36530,0), (68644,1,36530,0);
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 3741;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(3741,0,31,8963,20,0,0,0,0,0,0,0,0,0,0,0,0,'search for 8963'),
+(3741,100,0,0,0,0,8963,30,7,2000000149,0,0,0,0,0,0,0,'buddy - text'),
+(3741,3000,0,0,0,0,0,0,0,2000000150,0,0,0,0,0,0,0,'');
+UPDATE quest_template SET CompleteScript = 3741 WHERE entry = 3741;
+DELETE FROM dbscript_string WHERE entry IN (2000000149,2000000150);
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000000149,'Meow!',0,0,0,0,NULL), (2000000150,'I know how to speak kitty, and Effsee said thank you.',0,0,0,0,NULL);
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 689;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(689,1,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'reset emote'),
+(689,1,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(689,10,29,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags removed'),
+(689,100,0,0,0,0,0,0,0,2000000183,0,0,0,0,0,0,0,''),
+(689,1000,20,2,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Set Path = 1'),
+(689,30000,0,0,0,0,0,0,0,2000000235,0,0,0,0,0,0,0,'');
+UPDATE quest_template SET CompleteScript = 689 WHERE entry = 689;
+DELETE FROM dbscript_string WHERE entry IN (2000000183,2000000228,2000000235);
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000000183,'I\'ll get to work right away, $n!',0,0,0,0,NULL),
+(2000000228,'There you have it! The King should be quite pleased, if I do say so myself.',0,0,0,0,NULL),
+(2000000235,'The King\'s guards should be along shortly to pick up the Memorial. In the meantime, come join me upstairs and let\'s finish our little chat, $n.',0,0,0,1,NULL);
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(901, 139852, 0, 1, 1, -5027.84, -1020.48, 502.209, 1.27409, 0, 0, 0.594823, 0.803857, 180, 180, 100, 1);
+UPDATE creature_template_addon SET emote = 0 WHERE entry = 2790;
+DELETE FROM creature_movement_template WHERE entry = 2790;
+INSERT INTO creature_movement_template (entry, pathId, point, position_x, position_y, position_z, orientation, waittime, script_id) VALUES
+(2790,0,1,-5033.81,-1022.23,508.876,3.86128,30000,279003),
+(2790,0,2,-5031.04,-1019.72,508.876,6.07218,0,0),
+(2790,0,3,-5028.21,-1020.5,508.876,5.89547,30000,279003),
+(2790,0,4,-5028.75,-1022.3,508.876,4.39929,30000,279003),
+(2790,0,5,-5031.95,-1021.62,508.876,3.63745,0,0),
+(2790,1,1,-5032.05,-1014.75,509.04242,100,0,0),
+(2790,1,2,-5030.37,-1009.28,505.265,100,0,0),
+(2790,1,3,-5028.67,-1007.62,505.264,100,0,0),
+(2790,1,4,-5023.85,-1009.02,502.209,100,0,0),
+(2790,1,5,-5022.68,-1009.96,502.209,100,0,0),
+(2790,1,6,-5027.2866,-1018.768,502.2091,4.34651,26000,279001),
+(2790,1,7,-5022.68,-1009.96,502.209,100,0,0),
+(2790,1,8,-5023.85,-1009.02,502.209,100,0,0),
+(2790,1,9,-5028.67,-1007.62,505.264,100,0,0),
+(2790,1,10,-5030.37,-1009.28,505.265,100,0,0),
+(2790,1,11,-5032.05,-1014.75,509.04242,100,20,279002);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (279001,279002,279003);
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(279001,0,13,0,0,0,139852,20,1,0,0,0,0,0,0,0,0,'activate object'),
+(279001,2000,1,233,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(279001,7950,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(279001,8000,1,25,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(279001,8200,0,0,0,0,0,0,0x04,2000000228,0,0,0,0,0,0,0,''),
+(279001,10000,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,1.26,''),
+(279001,16000,1,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(279002,0,20,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Set Path = 0'),
+(279002,10,29,2,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags added'),
+(279002,15,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive'),
+(279003,2000,1,233,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(279003,28000,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'');

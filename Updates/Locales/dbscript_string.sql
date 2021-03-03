@@ -153,6 +153,8 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 13573 
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 15999 WHERE `entry` = 2000000146;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1107 WHERE `entry` = 2000000147;
 UPDATE `dbscript_string` SET `content_loc8` = 'Хммм... данные гравиметрических искажений вроде бы стабилизировались. Мы это сделали!' WHERE `entry` = 2000000148;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 4627 WHERE `entry` = 2000000149;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 4628 WHERE `entry` = 2000000150;
 UPDATE `dbscript_string` SET `content_loc8` = 'Я ищу следы частиц хронитона. Хм, если мы используем обратный индуктор фазы, инвертируя нашу собственную хроносферу, то сможем устранить эти частицы. Конечно, это означает, что нам нужно построить хроносферу...' WHERE `entry` = 2000000151;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 17024 WHERE `entry` = 2000000152;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 16969 WHERE `entry` = 2000000153;
@@ -185,6 +187,7 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 66387 
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 157 WHERE `entry` = 2000000180;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 168 WHERE `entry` = 2000000181;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 167 WHERE `entry` = 2000000182;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 3501 WHERE `entry` = 2000000183;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 587 WHERE `entry` = 2000000184;
 UPDATE `dbscript_string` SET `content_loc8` = 'Конечно, Пейдж. Не спеши.' WHERE `entry` = 2000000185;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 590 WHERE `entry` = 2000000186;
@@ -229,12 +232,14 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 13575 
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 13576 WHERE `entry` = 2000000225;
 UPDATE `dbscript_string` SET `content_loc8` = 'Эй, вестник, как продвигается исследование? Ты получишь ультракинетический утюг Ваффеля, если поспешишь с результатами!' WHERE `entry` = 2000000226;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 16979 WHERE `entry` = 2000000227;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 3502 WHERE `entry` = 2000000228;
 UPDATE `dbscript_string` SET `content_loc8` = 'Билеты! Обменяйте свои Подарочные Билеты Ярмарки Новолуния здесь! Поразительные и экзотические призы ждут вас!' WHERE `entry` = 2000000229;
 UPDATE `dbscript_string` SET `content_loc8` = 'Нет страху! Во всем можно разглядеть удачу если ты знаешь свой путь.' WHERE `entry` = 2000000230;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 10145 WHERE `entry` = 2000000231;
 UPDATE `dbscript_string` SET `content_loc8` = 'Все наслаждаются сами собой? Великолепно! Добро пожаловать на Ярмарку Новолуния, самый большой показ во всем Запределье! Удостоверьтесь, что вы поговорили с Эббом и его друзьями здесь, в то время как вы осматриваете Причудливый Зоопарк Ярмарки от Неплебора.' WHERE `entry` = 2000000232;
 UPDATE `dbscript_string` SET `content_loc8` = 'Поздравляю друзья, и добро пожаловать на самое большое шоу в Азероте! $B$BПожалуйста, подходите ближе и возьмите все, что мы можем предложить. Ездите верхом и смотрите достопримечательности! Удивитесь чудесам, которые Ярмарка Новолуния предлагает вам в этом обширном и таинственном мире! Мы не поскупились на приготовление сюрпризов, которыми восхитятся дети всех возрастов!' WHERE `entry` = 2000000233;
 UPDATE `dbscript_string` SET `content_loc8` = 'Согласно этим надписям – нам нечего бояться. По крайней мере в ближайшем будущем. Нам нужно больше информации, чтобы знать наверняка.' WHERE `entry` = 2000000234;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 3503 WHERE `entry` = 2000000235;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 10125 WHERE `entry` = 2000000237;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12834 WHERE `entry` = 2000000238;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 10128 WHERE `entry` = 2000000240;
