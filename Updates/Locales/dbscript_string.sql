@@ -240,8 +240,10 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Все наслаждаются �
 UPDATE `dbscript_string` SET `content_loc8` = 'Поздравляю друзья, и добро пожаловать на самое большое шоу в Азероте! $B$BПожалуйста, подходите ближе и возьмите все, что мы можем предложить. Ездите верхом и смотрите достопримечательности! Удивитесь чудесам, которые Ярмарка Новолуния предлагает вам в этом обширном и таинственном мире! Мы не поскупились на приготовление сюрпризов, которыми восхитятся дети всех возрастов!' WHERE `entry` = 2000000233;
 UPDATE `dbscript_string` SET `content_loc8` = 'Согласно этим надписям – нам нечего бояться. По крайней мере в ближайшем будущем. Нам нужно больше информации, чтобы знать наверняка.' WHERE `entry` = 2000000234;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 3503 WHERE `entry` = 2000000235;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 860 WHERE `entry` = 2000000236;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 10125 WHERE `entry` = 2000000237;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12834 WHERE `entry` = 2000000238;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 793 WHERE `entry` = 2000000239;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 10128 WHERE `entry` = 2000000240;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1341 WHERE `entry` = 2000000241;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 12594 WHERE `entry` = 2000000242;
@@ -474,6 +476,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Мы любим деревья, �
 UPDATE `dbscript_string` SET `content_loc8` = 'Интересно, сколько еще отрядов подкрепления должно пострадать, прежде чем нам позволят спилить эти дурацкие деревья. Они стоят нам целое состояние в летучих мышах. Может быть, я оснащу сбруей одну-другую...' WHERE `entry` = 2000000469;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 278 WHERE `entry` = 2000000470;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 277 WHERE `entry` = 2000000471;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 2647 WHERE `entry` = 2000000472;
 UPDATE `dbscript_string` SET `content_loc8` = 'Будь $gосторожен:осторожна;, |3-6($c). Эти тролли убили своего собственного змеиного бога!' WHERE `entry` = 2000000473;
 UPDATE `dbscript_string` SET `content_loc8` = 'До встречи!' WHERE `entry` = 2000000474;
 UPDATE `dbscript_string` SET `content_loc8` = 'Хорошо. Тогда мне будет лучше вернуться к сержанту.' WHERE `entry` = 2000000475;
@@ -673,6 +676,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Вы слышите низкое 
 UPDATE `dbscript_string` SET `content_loc8` = 'Победа или смерть! За Орду!' WHERE `entry` = 2000000669;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 6013 WHERE `entry` = 2000000670;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 6014 WHERE `entry` = 2000000671;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 2648 WHERE `entry` = 2000000672;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 857 WHERE `entry` = 2000000673;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1480 WHERE `entry` = 2000000674;
 UPDATE `dbscript_string` SET `content_loc8` = 'Ха-ха! $n, а ты неплохой партнер!' WHERE `entry` = 2000000675;
@@ -877,6 +881,8 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 27109 
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 27110 WHERE `entry` = 2000000874;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 27111 WHERE `entry` = 2000000875;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 27112 WHERE `entry` = 2000000876;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 2681 WHERE `entry` = 2000000877;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 2682 WHERE `entry` = 2000000878;
 UPDATE `dbscript_string` SET `content_loc8` = 'Те, что питаются потерянными душами, никогда не утолят свой голод.' WHERE `entry` = 2000000880;
 UPDATE `dbscript_string` SET `content_loc8` = 'Вглядись в пустоту. Эта бесконечность – место их обитания.' WHERE `entry` = 2000000881;
 UPDATE `dbscript_string` SET `content_loc8` = 'Они пьют твой страх, ибо это кровь жизни.' WHERE `entry` = 2000000882;
