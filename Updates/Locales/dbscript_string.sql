@@ -883,6 +883,7 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 27111 
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 27112 WHERE `entry` = 2000000876;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 2681 WHERE `entry` = 2000000877;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 2682 WHERE `entry` = 2000000878;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1489 WHERE `entry` = 2000000879;
 UPDATE `dbscript_string` SET `content_loc8` = 'Те, что питаются потерянными душами, никогда не утолят свой голод.' WHERE `entry` = 2000000880;
 UPDATE `dbscript_string` SET `content_loc8` = 'Вглядись в пустоту. Эта бесконечность – место их обитания.' WHERE `entry` = 2000000881;
 UPDATE `dbscript_string` SET `content_loc8` = 'Они пьют твой страх, ибо это кровь жизни.' WHERE `entry` = 2000000882;
@@ -1032,6 +1033,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'И запомни, $n, крово
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 20460 WHERE `entry` = 2000001026;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 18410 WHERE `entry` = 2000001027;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 22438 WHERE `entry` = 2000001028;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1491 WHERE `entry` = 2000001029;
 UPDATE `dbscript_string` SET `content_loc8` = 'Обязательно входи в святилище и выходи через южный каньон. $N. Ты узнаешь каньоны, где идет битва, по охраняющим их поганищам...держись от них подальше.' WHERE `entry` = 2000001030;
 UPDATE `dbscript_string` SET `content_loc8` = 'Тррооллии Плеети поджжариваются...' WHERE `entry` = 2000001031;
 UPDATE `dbscript_string` SET `content_loc8` = '...на открытом пламени...' WHERE `entry` = 2000001032;
@@ -1102,6 +1104,18 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 20178 
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 20181 WHERE `entry` = 2000001097;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 20179 WHERE `entry` = 2000001098;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 20180 WHERE `entry` = 2000001099;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 1492 WHERE `entry` = 2000001100;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 8242 WHERE `entry` = 2000001101;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 8244 WHERE `entry` = 2000001102;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 563 WHERE `entry` = 2000001103;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 564 WHERE `entry` = 2000001104;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 885 WHERE `entry` = 2000001105;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 26719 WHERE `entry` = 2000001106;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 987 WHERE `entry` = 2000001107;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 989 WHERE `entry` = 2000001108;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 988 WHERE `entry` = 2000001109;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 990 WHERE `entry` = 2000001110;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 992 WHERE `entry` = 2000001111;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 5766 WHERE `entry` = 2000001113;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 5764 WHERE `entry` = 2000001114;
 UPDATE `dbscript_string` SET `content_loc8` = 'Ого! 3 градуса по Кракленгейту. Продолжай искать.' WHERE `entry` = 2000001115;

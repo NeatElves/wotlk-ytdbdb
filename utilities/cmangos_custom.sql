@@ -24,16 +24,17 @@
 -- ============================================================
 -- Classic section
 -- ============================================================
+
+-- Containment Coffer TRAP - make it invisible
+UPDATE gameobject_template SET displayId=0 WHERE entry=103575;
+
 -- Make Moonwell GO server-side (visible by GM only)
 UPDATE gameobject_template SET data3=1 WHERE entry=177272; 
 
 -- Make Incantion of Celebras Trap only visible by GM
 UPDATE gameobject_template SET data8=1 WHERE entry=178963;
 
--- Make Containment Coffer TRAP only visible by GM
-UPDATE gameobject_template SET data8=1 WHERE entry=103575;
-
--- Set radius of Supply Crate trap to zero to prevent trap from being triggered by nearby players (it should trigger on player usage of original GO)
+-- Set radius of Supply Crate trap to zero to prevent trap from triggering with coming by players (it should trigger on player usage of original GO)
 UPDATE gameobject_template SET data2=0 WHERE entry IN (175534, 175535, 175536, 175537);
 
 -- Make Dawn's Gambit Trap only visible by GM
