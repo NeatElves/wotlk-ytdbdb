@@ -28,6 +28,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (20038,'spell_explosion_razorgore'),
 (21651,'spell_opening_capping'),
 (23226,'spell_ritual_candle_aura'),
+(24693,'spell_hakkar_power_down'),
 (25684,'spell_summon_mana_fiends_moam'),
 (25937,'spell_viscidus_freeze'),
 (26009,'spell_cthun_periodic_rotate'),
@@ -50,7 +51,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (26686,'spell_aq_whirlwind'),
 (26767,'spell_cthun_tentacles_summon'),
 (26769,'spell_cthun_periodic_eye_trigger'),
-(28282,'spell_ashbringer_item');
+(28282,'spell_ashbringer_item'),
+(28441,'spell_ab_effect_000');
 
 -- TBC
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
@@ -255,6 +257,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (48385,'spell_create_spirit_fount_beam_aura'),
 (48590,'spell_avenging_spirits'),
 (50442,'spell_crystal_spike_visual_aura'),
+(50471,'spell_escape_from_silverbrook_credit_master'),
 (50546,'spell_ley_line_focus_item_trigger'),
 (50547,'spell_ley_line_focus_item_trigger'),
 (50548,'spell_ley_line_focus_item_trigger'),
