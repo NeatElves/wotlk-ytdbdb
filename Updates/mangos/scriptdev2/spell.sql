@@ -13,6 +13,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (794,'spell_initialize_images'),
 (802,'spell_mutate_bug'),
 (1121,'spell_entangle_fankriss'),
+(2400,'spell_anubisath_share_powers'),
 (3730,'spell_initialize_image'),
 (7054,'spell_forsaken_skill'),
 (12639,'spell_summon_hakkar'),
@@ -448,7 +449,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 -- Priest
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (10060,'spell_power_infusion'),
-(27827,'spell_spirit_of_redemption_heal');
+(27827,'spell_spirit_of_redemption_heal'),
+(34433,'spell_shadowfiend');
 
 -- Paladin
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
@@ -542,6 +544,9 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 
 -- Druid
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(5215,'spell_stealth'),
+(6783,'spell_stealth'),
+(9913,'spell_stealth'),
 (8936,'spell_regrowth'),
 (8938,'spell_regrowth'),
 (8939,'spell_regrowth'),
@@ -557,6 +562,10 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 
 -- Rogue
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(1784,'spell_stealth'),
+(1785,'spell_stealth'),
+(1786,'spell_stealth'),
+(1787,'spell_stealth'),
 (14185,'spell_preparation');
 
 -- Shaman
