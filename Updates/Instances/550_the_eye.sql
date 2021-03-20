@@ -508,6 +508,10 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (19514, 0, 7, 294.213, -32.4156, 43.6141, 100, 0, 0),
 (19514, 0, 8, 332.342, -47.5406, 43.6975, 100, 0, 0);
 
+DELETE FROM creature_spawn_data WHERE guid IN(@CGUID+3);
+INSERT INTO creature_spawn_data(Guid,Id) VALUES
+(@CGUID+3, 1);
+
 -- INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
 
 REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
@@ -742,7 +746,7 @@ REPLACE INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`
 INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `DeathState`, `MovementType`) VALUES
 (@CGUID+1, 18805, 550, 1, 432.7402, -373.6453, 18.01385, 1.396263, 604800, 604800, 0, 0, 0, 0), -- High Astromancer Solarian
 (@CGUID+2, 18928, 550, 1, 432.419, -373.063, 17.9609, 4.09901, 10800, 10800, 0, 0, 0, 0), -- Astromancer Solarian Spotlight
-(@CGUID+3, 19514, 550, 1, 370.328, -32.5953, 44.0863, 3.19012, 604800, 604800, 0, 0, 0, 2), -- Al'ar
+(@CGUID+3, 19514, 550, 1, 370.328, -32.5953, 44.0863, 3.19012, 604800, 604800, 0, 0, 0, 3), -- Al'ar
 (@CGUID+4, 19516, 550, 1, 424.2349, 403.4754, 14.97731, 4.991642, 604800, 604800, 0, 0, 0, 0), -- Void Reaver
 (@CGUID+5, 19622, 550, 1, 795.007, -0.460572, 48.7285, 3.08436, 604800, 604800, 0, 0, 0, 0), -- Kael'thas Sunstrider
 (@CGUID+6, 20031, 550, 1, 519.164, -157.407, 20.2431, 4.86057, 10800, 10800, 0, 0, 0, 0), -- Bloodwarder Legionnaire

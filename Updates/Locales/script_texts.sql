@@ -1382,6 +1382,7 @@ UPDATE `script_texts` SET `content_loc8` = 'Мой дирижабль прича
 UPDATE `script_texts` SET `content_loc8` = 'Только что прилетел дирижабль, который отправится в Лагерь Возмездия! Все на борт! Мы летим к Ревущему фьорду!' WHERE `entry` = -1020006;
 UPDATE `script_texts` SET `content_loc8` = 'Только что прилетел дирижабль, который отправится в крепость Песни Войны! Все на борт! Мы летим в Борейскую тундру!' WHERE `entry` = -1020007;
 UPDATE `script_texts` SET `content_loc8` = 'Наш дирижабль отправляется в Громовой Утес! Кто хочет прокатиться по Степям – добро пожаловать на борт!' WHERE `entry` = -1020008;
+UPDATE `script_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 25668 WHERE `entry` = -1020009;
 UPDATE `script_texts` SET `content_loc8` = 'Иди за мной. Я впущу тебя во внутренний двор.' WHERE `entry` = -1033000;
 UPDATE `script_texts` SET `content_loc8` = 'Я знаю как раз подходящее заклинание, чтобы открыть эту дверь. Жаль, что двери камер не были закрыты столь же бестолково.' WHERE `entry` = -1033001;
 UPDATE `script_texts` SET `content_loc8` = 'Вот! Открыто настежь. Удачи тебе в дальнейшем пути. А я должен немедленно доложить в Кирин-Тор!' WHERE `entry` = -1033002;

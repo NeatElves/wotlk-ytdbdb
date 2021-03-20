@@ -473,7 +473,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 (@OGUID+10, 183877, 557, 3, -355.2968, -64.47669, 0.437066, 3.857183, 0, 0, -0.9366713, 0.3502098, 7200, 7200, 255, 1), -- Ethereal Transporter Control Panel
 (@OGUID+11, 184193, 557, 2, 6.456772, 0.9883103, -0.9543309, 3.129874, 0, 0, 0.9999828, 0.005859375, 0, 0, 0, 0), -- Instance_Portal_Difficulty_1
 (@OGUID+12, 184194, 557, 1, 6.456772, 0.9883103, -0.9543309, 3.129874, 0, 0, 0.9999828, 0.005859375, 0, 0, 0, 0), -- Instance_Portal_Difficulty_0
--- RE-USE 13 - 14
+(@OGUID+13, 181557, 557, 3, -245.6427, -3.169594, 15.06843, 5.969027, 0, 0, -0.1564341, 0.9876884, 86400, 86400, 255, 1), -- Khorium Vein
+(@OGUID+14, 181557, 557, 3, -329.14605712890625, -161.168899536132812, 0.197860002517700195, 2.897245407104492187, 0, 0, 0.99254608154296875, 0.121869951486587524, 86400, 86400, 255, 1), -- Khorium Vein
 (@OGUID+15, 185460, 557, 2, 7.909665, -223.0374, -0.934313, 1.97222, 0, 0, 0.8338852, 0.5519379, 7200, 7200, 255, 1), -- Ethereum Prison Base Group (Global)
 (@OGUID+16, 185460, 557, 2, -235.8613, -12.97968, 17.05966, 1.553341, 0, 0, 0.7009087, 0.7132511, 600000, 600000, 255, 1), -- Ethereum Prison Base Group (Global)
 (@OGUID+17, 185519, 557, 2, 7.941054, -223.0367, -0.936042, 6.03884, 0, 0, -0.1218691, 0.9925462, 86400, 86400, 0, 1), -- Mana-Tombs Stasis Chamber
@@ -500,19 +501,19 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 (@OGUID+38, 181556, 557, 3, -245.6427, -3.169594, 15.06843, 5.969027, 0, 0, -0.1564341, 0.9876884, 86400, 86400, 255, 1), -- Adamantite Deposit
 (@OGUID+39, 181556, 557, 3, -329.1461, -161.1689, 0.19786, 2.897245, 0, 0, 0.9925461, 0.12187, 86400, 86400, 255, 1), -- Adamantite Deposit
 (@OGUID+40, 181556, 557, 3, -358.6431, -85.63693, 2.846204, 3.874631, 0, 0, -0.9335804, 0.358368, 86400, 86400, 255, 1), -- Adamantite Deposit
-(@OGUID+41, 181556, 557, 3, -390.549042, -86.106148, 2.8728, 0, 0, 0, 0, 0, 86400, 86400, 255, 1), -- Adamantite Deposit
+(@OGUID+41, 181556, 557, 3, -390.3648681640625, -85.07049560546875, 2.39504408836364746, 4.660029888153076171, 0, 0, -0.72537422180175781, 0.688354730606079101, 86400, 86400, 255, 1), -- Adamantite Deposit
 (@OGUID+42, 181556, 557, 3, -417.15, -77.53868, 1.158793, 0.1396245, 0, 0, 0.06975555, 0.9975641, 86400, 86400, 255, 1), -- Adamantite Deposit
 (@OGUID+43, 181556, 557, 3, -384.7737, -146.4997, 3.060746, 5.183629, 0, 0, -0.5224981, 0.8526405, 86400, 86400, 255, 1), -- Adamantite Deposit
-(@OGUID+44, 181556, 557, 3, -369.578796, -241.606308, -0.9563, 0, 0, 0, 0, 0, 86400, 86400, 255, 1), -- Adamantite Deposit
+(@OGUID+44, 181556, 557, 3, -369.378082275390625, -242.43310546875, 1.877009987831115722, 2.844882726669311523, 0, 0, 0.989015579223632812, 0.147811368107795715, 86400, 86400, 255, 1), -- Adamantite Deposit
 (@OGUID+45, 181556, 557, 3, -300.680054, -265.250977, -0.9956, 0, 0, 0, 0, 0, 86400, 86400, 255, 1), -- Adamantite Deposit
 (@OGUID+46, 181556, 557, 3, -306.768, 18.03365, 15.93403, 5.497789, 0, 0, -0.3826828, 0.9238798, 86400, 86400, 255, 1), -- Adamantite Deposit
-(@OGUID+47, 181556, 557, 3, -329.1461, -69.73901, 0.956257, 3.316144, 0, 0, -0.9961939, 0.08716504, 86400, 86400, 255, 1), -- Adamantite Deposit
+(@OGUID+47, 181556, 557, 3, -329.14605712890625, -161.168899536132812, 0.197860002517700195, 2.897245407104492187, 0, 0, 0.99254608154296875, 0.121869951486587524, 86400, 86400, 255, 1), -- Adamantite Deposit
 (@OGUID+48, 181569, 557, 3, -329.1461, -161.1689, 0.19786, 2.897245, 0, 0, 0.9925461, 0.12187, 86400, 86400, 255, 1), -- Rich Adamantite Deposit
 (@OGUID+49, 181569, 557, 3, -417.1501, -166.7938, 0.833513, 0.122173, 0, 0, 0.06104851, 0.9981348, 86400, 86400, 255, 1), -- Rich Adamantite Deposit
-(@OGUID+50, 181569, 557, 3, -329.1461, -69.73901, 0.956257, 3.316144, 0, 0, -0.9961939, 0.08716504, 86400, 86400, 255, 1), -- Rich Adamantite Deposit
+(@OGUID+50, 181569, 557, 3, -329.14605712890625, -161.168899536132812, 0.197860002517700195, 2.897245407104492187, 0, 0, 0.99254608154296875, 0.121869951486587524, 86400, 86400, 255, 1), -- Rich Adamantite Deposit
 (@OGUID+51, 181569, 557, 3, -306.768, 18.03365, 15.93403, 5.497789, 0, 0, -0.3826828, 0.9238798, 86400, 86400, 255, 1), -- Rich Adamantite Deposit
-(@OGUID+52, 181557, 557, 3, -269.0356, 42.94153, 30.25974, 5.846854, 0, 0, -0.2164392, 0.9762961, 86400, 86400, 255, 1), -- Khorium
-(@OGUID+53, 181557, 557, 3, -306.768, 18.03365, 15.93403, 5.497789, 0, 0, -0.3826828, 0.9238798, 86400, 86400, 255, 1), -- Khorium
+(@OGUID+52, 181557, 557, 3, -269.0356, 42.94153, 30.25974, 5.846854, 0, 0, -0.2164392, 0.9762961, 86400, 86400, 255, 1), -- Khorium Vein
+(@OGUID+53, 181557, 557, 3, -306.768, 18.03365, 15.93403, 5.497789, 0, 0, -0.3826828, 0.9238798, 86400, 86400, 255, 1), -- Khorium Vein
 (@OGUID+54, 181278, 557, 3, -379.9556, -41.42834, -0.967236, 4.084071, 0, 0, -0.8910065, 0.4539906, 86400, 86400, 100, 1), -- Ancient Lichen
 (@OGUID+55, 181278, 557, 3, -256.0322, -152.7793, -0.953339, 0.6457717, 0, 0, 0.3173046, 0.9483237, 86400, 86400, 100, 1), -- Ancient Lichen
 (@OGUID+56, 181278, 557, 3, -95.34675, -108.3567, -0.842384, 1.623156, 0, 0, 0.7253742, 0.6883547, 86400, 86400, 100, 1), -- Ancient Lichen
@@ -533,7 +534,10 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 (@OGUID+71, 184936, 557, 2, -227.9113, -225.7269, -0.952425, 0.2443456, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
 (@OGUID+72, 184937, 557, 2, -227.9113, -225.7269, -0.952425, 0.2443456, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
 (@OGUID+73, 184936, 557, 2, -393.554, -60.86067, -0.982428, 6.03884, 0, 0, -0.1218691, 0.9925462, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+74, 184937, 557, 2, -393.554, -60.86067, -0.982428, 6.03884, 0, 0, -0.1218691, 0.9925462, 86400, 86400, 100, 1); -- Solid Adamantite Chest
+(@OGUID+74, 184937, 557, 2, -393.554, -60.86067, -0.982428, 6.03884, 0, 0, -0.1218691, 0.9925462, 86400, 86400, 100, 1), -- Solid Adamantite Chest
+(@OGUID+75, 181569, 557, 3, -369.378082275390625, -242.43310546875, 1.877009987831115722, 2.844882726669311523, 0, 0, 0.989015579223632812, 0.147811368107795715, 86400, 86400, 255, 1), -- Rich Adamantite Deposit
+(@OGUID+76, 181569, 557, 3, -390.3648681640625, -85.07049560546875, 2.39504408836364746, 4.660029888153076171, 0, 0, -0.72537422180175781, 0.688354730606079101, 86400, 86400, 255, 1), -- Rich Adamantite Deposit
+(@OGUID+77, 181556, 557, 3, -329.14605712890625, -69.7390060424804687, 0.956256985664367675, 3.316144466400146484, 0, 0, -0.99619388580322265, 0.087165042757987976, 86400, 86400, 255, 1); -- Adamantite Deposit
 
 -- ======
 -- EVENTS
@@ -548,12 +552,14 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 -- =======
 
 INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALUES
+(@PGUID+21, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit - #8'),
 (@PGUID+23, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit / Khorium - #1'),
 (@PGUID+24, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit - #2'),
 (@PGUID+25, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit - #3'),
 (@PGUID+26, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit - #4'),
 (@PGUID+27, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit / Khorium - #5'),
 (@PGUID+28, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit - #6'),
+(@PGUID+29, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit - #7'),
 (@PGUID+31, @PGUID+30, 0, 'Mana-Tombs (Normal) - Bound / Solid Adamantite Chest #1'),
 (@PGUID+32, @PGUID+30, 0, 'Mana-Tombs (Normal) - Bound / Solid Adamantite Chest #2'),
 (@PGUID+33, @PGUID+30, 0, 'Mana-Tombs (Normal) - Bound / Solid Adamantite Chest #3'),
@@ -566,6 +572,7 @@ INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALU
 
 INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@PGUID+20, 4, 'Mana-Tombs - Ancient Lichen (181278)'),
+(@PGUID+21, 1, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit - #8'),
 (@PGUID+22, 3, 'Mana-Tombs - Master Mineral Pool'),
 (@PGUID+23, 1, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit / Khorium - #1'),
 (@PGUID+24, 1, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit - #2'),
@@ -573,6 +580,7 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@PGUID+26, 1, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit - #4'),
 (@PGUID+27, 1, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit / Khorium - #5'),
 (@PGUID+28, 1, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit - #6'),
+(@PGUID+29, 1, 'Mana-Tombs - Adamantite Deposit / Rich Adamantite Deposit - #7'),
 (@PGUID+30, 1, 'Mana-Tombs (Normal) - Master Chest Pool'),
 (@PGUID+31, 1, 'Mana-Tombs (Normal) - Bound / Solid Adamantite Chest #1'),
 (@PGUID+32, 1, 'Mana-Tombs (Normal) - Bound / Solid Adamantite Chest #2'),
@@ -615,17 +623,19 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (@OGUID+54, @PGUID+20, 0, 'Mana-Tombs - Ancient Lichen (181278)'),
 (@OGUID+55, @PGUID+20, 0, 'Mana-Tombs - Ancient Lichen (181278)'),
 (@OGUID+56, @PGUID+20, 0, 'Mana-Tombs - Ancient Lichen (181278)'),
+(@OGUID+41, @PGUID+21, 0, 'Mana-Tombs - Adamantite Deposit (181556) - #8'),
+(@OGUID+76, @PGUID+21, 0, 'Mana-Tombs - Rich Adamantite Deposit (181569) - #8'),
 (@OGUID+6, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit (181556)'),
 (@OGUID+40, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit (181556)'),
-(@OGUID+41, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit (181556)'),
 (@OGUID+42, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit (181556)'),
 (@OGUID+43, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit (181556)'),
-(@OGUID+44, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit (181556)'),
 (@OGUID+45, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit (181556)'),
+(@OGUID+77, @PGUID+22, 0, 'Mana-Tombs - Adamantite Deposit (181556)'),
 (@OGUID+5, @PGUID+23, 0, 'Mana-Tombs - Adamantite Deposit (181556) - #1'),
 (@OGUID+7, @PGUID+23, 0, 'Mana-Tombs - Rich Adamantite Deposit (181569) - #1'),
-(@OGUID+52, @PGUID+23, 0, 'Mana-Tombs - Khorium (181557) - #1'),
+(@OGUID+52, @PGUID+23, 0, 'Mana-Tombs - Khorium Vein (181557) - #1'),
 (@OGUID+8, @PGUID+24, 0, 'Mana-Tombs - Rich Adamantite Deposit (181569) - #2'),
+(@OGUID+13, @PGUID+24, 0, 'Mana-Tombs - Khorium Vein (181557) - #2'),
 (@OGUID+38, @PGUID+24, 0, 'Mana-Tombs - Adamantite Deposit (181556) - #2'),
 (@OGUID+37, @PGUID+25, 0, 'Mana-Tombs - Adamantite Deposit (181556) - #3'),
 (@OGUID+49, @PGUID+25, 0, 'Mana-Tombs - Rich Adamantite Deposit (181569) - #3'),
@@ -633,9 +643,12 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (@OGUID+48, @PGUID+26, 0, 'Mana-Tombs - Rich Adamantite Deposit (181569) - #4'),
 (@OGUID+46, @PGUID+27, 0, 'Mana-Tombs - Adamantite Deposit (181556) - #5'),
 (@OGUID+51, @PGUID+27, 0, 'Mana-Tombs - Rich Adamantite Deposit (181569) - #5'),
-(@OGUID+53, @PGUID+27, 0, 'Mana-Tombs - Khorium (181557) - #5'),
+(@OGUID+53, @PGUID+27, 0, 'Mana-Tombs - Khorium Vein (181557) - #5'),
+(@OGUID+14, @PGUID+28, 0, 'Mana-Tombs - Khorium Vein (181557) - #6'),
 (@OGUID+47, @PGUID+28, 0, 'Mana-Tombs - Adamantite Deposit (181556) - #6'),
 (@OGUID+50, @PGUID+28, 0, 'Mana-Tombs - Rich Adamantite Deposit (181569) - #6'),
+(@OGUID+44, @PGUID+29, 0, 'Mana-Tombs - Adamantite Deposit (181556) - #7'),
+(@OGUID+75, @PGUID+29, 0, 'Mana-Tombs - Rich Adamantite Deposit (181569) - #7'),
 (@OGUID+57, @PGUID+31, 0, 'Mana-Tombs (Normal) - Bound Fel Iron Chest (184934) - #1'),
 (@OGUID+58, @PGUID+31, 0, 'Mana-Tombs (Normal) - Solid Fel Iron Chest (184935) - #1'),
 (@OGUID+59, @PGUID+32, 0, 'Mana-Tombs (Normal) - Bound Fel Iron Chest (184934) - #2'),

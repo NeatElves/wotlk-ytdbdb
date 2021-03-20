@@ -3947,3 +3947,497 @@ DELETE FROM npc_vendor WHERE entry = 6776;
 UPDATE creature_template SET NpcFlags = 0 WHERE entry = 6776;
 DELETE FROM creature WHERE guid = 39500;
 UPDATE creature SET position_x = 2718.5, position_y = -106.26, position_z = 96.052, spawndist = 5, MovementType = 1 WHERE guid = 40965;
+
+# 14033_01_mangos_command.sql
+DELETE FROM command WHERE name IN ('combatstop', 'combat stop', 'gm', 'gm visible', 'gm chat', 'character deleted list', 'gm setview', 'movement movespeed', 'movement movegens', 'gm ingame', 'gm mountup');
+INSERT INTO `command`(`name`, `security`, `help`) VALUES
+('combat stop', 2, 'Syntax: .combatstop [$playername]\r\nStop combat for selected character. If selected non-player then command applied to self. If $playername provided then attempt applied to online player $playername.'),
+('gm', 3, 'Syntax: .gm [on/off]\r\n\r\nEnable or Disable in game GM MODE or show current state of on/off not provided.'),
+('gm visible', 3, 'Syntax: .gm visible on/off\r\n\r\nOutput current visibility state or make GM visible(on) and invisible(off) for other players.'),
+('gm chat', 3, 'Syntax: .gm chat [on/off]\r\n\r\nEnable or disable chat GM MODE (show gm badge in messages) or show current state of on/off not provided.'),
+('character deleted list', 4, 'Syntax: .character deleted list [#guid|$name]\r\n\r\nShows a list with all deleted characters.\r\nIf $name is supplied, only characters with that string in their name will be selected, if #guid is supplied, only the character with that GUID will be selected.'),
+('gm setview', 3, 'Syntax: .gm setview\r\n\r\nSet farsight view on selected unit. Select yourself to set view back.'),
+('movement movespeed', 2, 'Syntax: .movement movespeed  Show speed of selected creature.'),
+('movement movegens', 2, 'Syntax: .movement movegens  Show movement generators stack for selected creature or player.'),
+('gm ingame', 3, 'Syntax: .gm ingame\r\n\r\nDisplay a list of available in game Game Masters.'),
+('gm mountup', 3, 'Syntax: .gm mountup [fast|slow|#displayid|target]\r\n\r\nIf #displayid is provided, visually mounts your character on a provided creature likeness. If your target is a creature and corresponding arg is provided, visually mounts your character on the likeness of targeted creature. In other cases this command mounts your character on a random unusual land mount according to provided or omitted args.');
+
+DELETE FROM pet_levelstats WHERE creature_entry = 32663;
+INSERT INTO pet_levelstats (creature_entry, level, hp, mana, armor, str, agi, sta, inte, spi) VALUES
+(32663,1,42,0,7,0,0,0,0,0),
+(32663,2,55,0,8,0,0,0,0,0),
+(32663,3,71,0,33,0,0,0,0,0),
+(32663,4,86,0,68,0,0,0,0,0),
+(32663,5,102,0,111,0,0,0,0,0),
+(32663,6,120,0,165,0,0,0,0,0),
+(32663,7,137,0,230,0,0,0,0,0),
+(32663,8,156,0,306,0,0,0,0,0),
+(32663,9,176,0,387,0,0,0,0,0),
+(32663,10,198,0,463,0,0,0,0,0),
+(32663,11,222,0,528,0,0,0,0,0),
+(32663,12,247,0,562,0,0,0,0,0),
+(32663,13,273,0,596,0,0,0,0,0),
+(32663,14,300,0,630,0,0,0,0,0),
+(32663,15,328,0,665,0,0,0,0,0),
+(32663,16,356,0,700,0,0,0,0,0),
+(32663,17,386,0,734,0,0,0,0,0),
+(32663,18,417,0,768,0,0,0,0,0),
+(32663,19,449,0,802,0,0,0,0,0),
+(32663,20,484,0,836,0,0,0,0,0),
+(32663,21,521,0,872,0,0,0,0,0),
+(32663,22,562,0,906,0,0,0,0,0),
+(32663,23,605,0,940,0,0,0,0,0),
+(32663,24,651,0,975,0,0,0,0,0),
+(32663,25,699,0,1008,0,0,0,0,0),
+(32663,26,750,0,1043,0,0,0,0,0),
+(32663,27,800,0,1078,0,0,0,0,0),
+(32663,28,853,0,1111,0,0,0,0,0),
+(32663,29,905,0,1145,0,0,0,0,0),
+(32663,30,955,0,1179,0,0,0,0,0),
+(32663,31,1006,0,1213,0,0,0,0,0),
+(32663,32,1057,0,1249,0,0,0,0,0),
+(32663,33,1110,0,1281,0,0,0,0,0),
+(32663,34,1163,0,1317,0,0,0,0,0),
+(32663,35,1220,0,1349,0,0,0,0,0),
+(32663,36,1277,0,1456,0,0,0,0,0),
+(32663,37,1336,0,1568,0,0,0,0,0),
+(32663,38,1395,0,1684,0,0,0,0,0),
+(32663,39,1459,0,1808,0,0,0,0,0),
+(32663,40,1524,0,1938,0,0,0,0,0),
+(32663,41,1585,0,2074,0,0,0,0,0),
+(32663,42,1651,0,2218,0,0,0,0,0),
+(32663,43,1716,0,2369,0,0,0,0,0),
+(32663,44,1782,0,2528,0,0,0,0,0),
+(32663,45,1848,0,2695,0,0,0,0,0),
+(32663,46,1919,0,2750,0,0,0,0,0),
+(32663,47,1990,0,2804,0,0,0,0,0),
+(32663,48,2062,0,2857,0,0,0,0,0),
+(32663,49,2138,0,2912,0,0,0,0,0),
+(32663,50,2215,0,2966,0,0,0,0,0),
+(32663,51,2292,0,3018,0,0,0,0,0),
+(32663,52,2371,0,3074,0,0,0,0,0),
+(32663,53,2453,0,3128,0,0,0,0,0),
+(32663,54,2533,0,3180,0,0,0,0,0),
+(32663,55,2614,0,3234,0,0,0,0,0),
+(32663,56,2699,0,3289,0,0,0,0,0),
+(32663,57,2784,0,3342,0,0,0,0,0),
+(32663,58,3989,0,3396,0,0,0,0,0),
+(32663,59,4142,0,3449,0,0,0,0,0),
+(32663,60,4979,0,3750,0,0,0,0,0),
+(32663,61,5158,0,4047,0,0,0,0,0),
+(32663,62,5341,0,4344,0,0,0,0,0),
+(32663,63,5527,0,4641,0,0,0,0,0),
+(32663,64,5715,0,4937,0,0,0,0,0),
+(32663,65,5914,0,5234,0,0,0,0,0),
+(32663,66,6116,0,5531,0,0,0,0,0),
+(32663,67,6326,0,5829,0,0,0,0,0),
+(32663,68,6542,0,6126,0,0,0,0,0),
+(32663,69,6761,0,6423,0,0,0,0,0),
+(32663,70,6986,0,6719,0,0,0,0,0),
+(32663,71,7181,0,7018,0,0,0,0,0),
+(32663,72,7380,0,7318,0,0,0,0,0),
+(32663,73,7588,0,7618,0,0,0,0,0),
+(32663,74,7804,0,7918,0,0,0,0,0),
+(32663,75,8025,0,8219,0,0,0,0,0),
+(32663,76,8247,0,8520,226,84,339,62,102),
+(32663,77,8480,0,8822,249,91,344,62,104),
+(32663,78,8715,0,9124,0,0,0,0,0),
+(32663,79,8960,0,9426,0,0,0,0,0),
+(32663,80,9215,0,9729,0,0,0,0,0),
+(32663,81,9474,0,10033,0,0,0,0,0),
+(32663,82,9741,0,10356,0,0,0,0,0),
+(32663,83,10019,0,10673,0,0,0,0,0),
+(32663,84,10300,0,10990,0,0,0,0,0),
+(32663,85,10595,0,11307,0,0,0,0,0);
+DELETE FROM creature_template_spells WHERE entry = 32663;
+INSERT INTO creature_template_spells(entry, spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8) VALUES (32663,0,0,0,47031,0,0,0,0);
+
+DELETE FROM dbscripts_on_gossip WHERE id IN (930100);
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(930100,0,15,61545,0,0,0,0,0,0,0,0,0,0,0,0,0,'Summon Budd'),
+(930100,900,48,768,1,0,32663,50,7|0x20,0,0,0,0,0,0,0,0,'Budd - set correct UnitFlags'),
+(930100,1000,15,47014,0,0,32663,50,32,0,0,0,0,0,0,0,0,'Budd - Cast Budd\s Attention Span'),
+(930100,1100,15,47025,0,0,32663,50,7|0x20,0,0,0,0,0,0,0,0,'Budd - Cast Attention Span'),
+(930100,1300,15,47019,0,0,32663,50,7|0x20,0,0,0,0,0,0,0,0,'Budd - Cast Budd Pet Periodic Trigger'),
+(930100,1500,18,0,0,0,0,0,4,0,0,0,0,0,0,0,0,'despawn static Budd'),
+(930100,2000,0,0,0,0,32663,50,7|0x20,2000001144,0,0,0,0,0,0,0,'Budd - say');
+DELETE FROM spell_script_target WHERE entry IN (47035);
+INSERT INTO spell_script_target (entry,type,targetEntry,inverseEffectMask) VALUES (47035,1,26425,6), (47035,1,26447,6);
+DELETE FROM dbscripts_on_relay WHERE id = 20535;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20535,100,15,47035,0,0,32663,5,7|0x20,0,0,0,0,0,0,0,0,'Part of Drakkari Warrior/Shaman EAI: buddy Cast 47035');
+DELETE FROM dbscripts_on_spell WHERE id IN (47027);
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(47027,0,0,20222,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'32663 - Random OOC Texts');
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000001144 AND 2000001150;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001144,'Ey, mon! Take me to mah troll bruddas!',0,0,0,0,NULL),
+(2000001145,'Time to play some troll tag, mon!',0,0,0,0,NULL),
+(2000001146,'My troll bruddas be in for some real fun today, mon!',0,0,0,0,NULL),
+(2000001147,'Hee hee hee! Dis gunna be some fun, mon!',0,0,0,0,NULL),
+(2000001148,'You sure we be goin\' da right way, mon?',0,0,0,0,NULL),
+(2000001149,'<sniff, sniff> I can smell \'em, mon.',0,0,0,0,NULL),
+(2000001150,'Nuttin\' says luvin\' like a little tap on da noggin.',0,0,0,0,NULL);
+DELETE FROM dbscript_random_templates WHERE id = 20222;
+INSERT INTO dbscript_random_templates (id, type, target_id, chance, comments) VALUES
+(20222,0,2000001145,0,'32663 - Random OOC Texts'),
+(20222,0,2000001146,0,'32663 - Random OOC Texts'),
+(20222,0,2000001147,0,'32663 - Random OOC Texts'),
+(20222,0,2000001148,0,'32663 - Random OOC Texts'),
+(20222,0,2000001149,0,'32663 - Random OOC Texts'),
+(20222,0,2000001150,0,'32663 - Random OOC Texts');
+
+DELETE FROM dbscripts_on_quest_start WHERE id = 9539;
+INSERT INTO dbscripts_on_quest_start (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(9539,1,34,3519,0,0,0,0,6,0,0,0,0,0,0,0,0,'aura check - terminate if present on Player'),
+(9539,10,15,30437,0,0,0,0,6,0,0,0,0,0,0,0,0,'Cast: Stillpine Ancestor Akida TRIGGER');
+UPDATE quest_template SET StartScript = 9539 WHERE entry = 9539;
+DELETE FROM dbscripts_on_quest_end WHERE id = 9539;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(9539,0,14,30426,0,0,0,0,6,0,0,0,0,0,0,0,0,'Remove aura from Player');
+UPDATE quest_template SET CompleteScript = 9539 WHERE entry = 9539;
+DELETE FROM conditions WHERE condition_entry = 3519;
+INSERT INTO conditions (condition_entry, type, value1, value2, flags) VALUES (3519,1,30426,1,0);
+DELETE FROM dbscripts_on_relay WHERE id IN (19997);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(19997,1,21,1,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Akida 17379 EAI: Active'),
+(19997,500,25,1,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Akida 17379 EAI: RUN ON'),
+(19997,1000,36,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Akida 17379 EAI: face Player'),
+(19997,3000,0,0,0,0,0,0,2,2000001602,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Akida 17379 EAI: text'),
+(19997,4000,20,2,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Akida 17379 EAI: movement chenged to 2:waypoint');
+DELETE FROM creature_movement_template WHERE entry = 17379;
+INSERT INTO creature_movement_template (entry, pathId, point, position_x, position_y, position_z, orientation, waittime, script_id) VALUES
+(17379,0,1,-4156.91,-12516.1,45.0017,100,0,0),
+(17379,0,2,-4134.95,-12516.6,44.8959,100,0,0),
+(17379,0,3,-4123.49,-12517.2,44.8246,100,0,0),
+(17379,0,4,-4097.6,-12522.4,42.0019,100,0,0),
+(17379,0,5,-4077.12,-12530.6,43.7753,100,0,0),
+(17379,0,6,-4060.63,-12538.1,44.1549,100,0,0),
+(17379,0,7,-4050.65,-12546.2,42.2335,100,0,0),
+(17379,0,8,-4034.49,-12560.5,44.9926,100,0,0),
+(17379,0,9,-4016.73,-12579.5,49.464,100,0,0),
+(17379,0,10,-4003.06,-12595.4,53.3469,100,0,0),
+(17379,0,11,-3989.72,-12611.6,59.1497,100,0,0),
+(17379,0,12,-3970.6,-12636.3,64.4018,100,0,0),
+(17379,0,13,-3959.1,-12651.6,71.234,100,0,0),
+(17379,0,14,-3945.98,-12669.7,75.8562,100,0,0),
+(17379,0,15,-3937.34,-12685.6,81.0235,100,0,0),
+(17379,0,16,-3925.95,-12719,89.6782,100,0,0),
+(17379,0,17,-3915.91,-12743.4,98.6952,100,15000,1737901);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (1737901,1737902);
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1737901,2000,36,0,0,0,17361,50,1,0,0,0,0,0,0,0,0,'face Player'),
+(1737901,3000,0,0,0,0,0,0,0,2000001603,0,0,0,0,0,0,0,''),
+(1737901,8000,15,30428,0,0,0,0,4,0,0,0,0,0,0,0,0,''),
+(1737901,8100,21,0,0,0,0,0,4,0,0,0,0,0,0,0,0,'unactive'),
+(1737901,9000,18,0,0,0,0,0,4,0,0,0,0,0,0,0,0,'');
+DELETE FROM dbscripts_on_quest_start WHERE id = 9540;
+INSERT INTO dbscripts_on_quest_start (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(9540,1,34,3520,0,0,0,0,6,0,0,0,0,0,0,0,0,'aura check - terminate if present on Player'),
+(9540,10,15,30442,0,0,0,0,6,0,0,0,0,0,0,0,0,'Cast: Stillpine Ancestor Coo TRIGGER');
+UPDATE quest_template SET StartScript = 9540 WHERE entry = 9540;
+DELETE FROM dbscripts_on_quest_end WHERE id = 9540;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(9540,0,14,30429,0,0,0,0,6,0,0,0,0,0,0,0,0,'Remove aura from Player');
+UPDATE quest_template SET CompleteScript = 9540 WHERE entry = 9540;
+DELETE FROM conditions WHERE condition_entry = 3520;
+INSERT INTO conditions (condition_entry, type, value1, value2, flags) VALUES (3520,1,30429,1,0);
+DELETE FROM dbscripts_on_relay WHERE id IN (19996);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(19996,1,21,1,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Coo 17391 EAI: Active'),
+(19996,1000,36,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Coo 17391 EAI: face Player'),
+(19996,3000,0,0,0,0,0,0,2,2000001604,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Coo 17391 EAI: text'),
+(19996,6000,3,0,0,0,0,0,2,0,0,0,0,-3925.63,-12752,97.7171,4.78528,'Part of Stillpine Ancestor Coo 17391 EAI: move'),
+(19996,8000,3,0,0,0,0,0,2,0,0,0,0,-3925.8,-12755.8,99.4512,4.87481,'Part of Stillpine Ancestor Coo 17391 EAI: move'),
+(19996,10000,3,0,0,0,0,0,2,0,0,0,0,-3924.27,-12761.5,101.829,4.9861,'Part of Stillpine Ancestor Coo 17391 EAI: move'),
+(19996,13000,0,0,0,0,0,0,2,2000001605,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Coo 17391 EAI: text'),
+(19996,17000,15,30424,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Coo 17391 EAI: Player Cast 30424'),
+(19996,17100,20,2,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Coo 17391 EAI: movement chenged to 2:waypoint');
+DELETE FROM creature_movement_template WHERE entry = 17391;
+INSERT INTO creature_movement_template (entry, pathId, point, position_x, position_y, position_z, orientation, waittime, script_id) VALUES
+(17391,0,1,-3924.27,-12761.5,101.829,4.9861,7000,1739101),
+(17391,0,2,-3923.5,-12795,107.213,4.87004,0,0),
+(17391,0,3,-3923.5,-12795,107.213,4.87004,2000,1739102);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (1739101,1739102);
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1739101,2000,0,0,0,0,0,0,0x04,2000001606,0,0,0,0,0,0,0,''),
+(1739101,3000,0,0,0,0,0,0,0x04,2000001607,0,0,0,0,0,0,0,''),
+(1739101,4000,23,17019,0,0,0,0,0x04|0x08,0,0,0,0,0,0,0,0,'morph'),
+(1739101,5000,39,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1739102,100,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive'),
+(1739102,1000,18,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'despawn Self');
+DELETE FROM dbscripts_on_quest_start WHERE id = 9541;
+INSERT INTO dbscripts_on_quest_start (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(9541,1,34,3521,0,0,0,0,6,0,0,0,0,0,0,0,0,'aura check - terminate if present on Player'),
+(9541,10,15,30443,0,0,0,0,6,0,0,0,0,0,0,0,0,'Cast: Stillpine Ancestor Tikti TRIGGER');
+UPDATE quest_template SET StartScript = 9541 WHERE entry = 9541;
+DELETE FROM dbscripts_on_quest_end WHERE id = 9541;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(9541,0,14,30432,0,0,0,0,6,0,0,0,0,0,0,0,0,'Remove aura from Player');
+UPDATE quest_template SET CompleteScript = 9541 WHERE entry = 9541;
+DELETE FROM conditions WHERE condition_entry = 3521;
+INSERT INTO conditions (condition_entry, type, value1, value2, flags) VALUES (3521,1,30432,1,0);
+DELETE FROM dbscripts_on_relay WHERE id IN (19995);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(19995,1,21,1,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Tikti 17392 EAI: Active'),
+(19995,1000,36,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Tikti 17392 EAI: face Player'),
+(19995,2000,0,0,0,0,0,0,2,2000001608,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Tikti 17392 EAI: text'),
+(19995,3000,20,2,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Tikti 17392 EAI: movement chenged to 2:waypoint');
+DELETE FROM creature_movement_template WHERE entry = 17392;
+INSERT INTO creature_movement_template (entry, pathId, point, position_x, position_y, position_z, orientation, waittime, script_id) VALUES
+(17392,0,1,-3885.67,-13096.5,3.56423,1.65068,13000,1739201),
+(17392,0,2,-3913.36,-13055.2,-4.82595,100,0,0),
+(17392,0,3,-3951.4,-13033.9,-8.45508,100,2000,1739102);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (1739201);
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1739201,2000,0,0,0,0,0,0,0x04,2000001609,0,0,0,0,0,0,0,''),
+(1739201,7000,35,5,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Send Event AI 5'),
+(1739201,9000,0,0,0,0,0,0,0x04,2000001610,0,0,0,0,0,0,0,''),
+(1739201,11000,15,30431,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'');
+DELETE FROM dbscripts_on_quest_start WHERE id = 9542;
+INSERT INTO dbscripts_on_quest_start (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(9542,1,34,3522,0,0,0,0,6,0,0,0,0,0,0,0,0,'aura check - terminate if present on Player'),
+(9542,10,15,30444,0,0,0,0,6,0,0,0,0,0,0,0,0,'Cast: Stillpine Ancestor Yor TRIGGER');
+UPDATE quest_template SET StartScript = 9542 WHERE entry = 9542;
+DELETE FROM dbscripts_on_quest_end WHERE id = 9542;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(9542,0,14,30445,0,0,0,0,6,0,0,0,0,0,0,0,0,'Remove aura from Player');
+UPDATE quest_template SET CompleteScript = 9542 WHERE entry = 9542;
+DELETE FROM conditions WHERE condition_entry = 3522;
+INSERT INTO conditions (condition_entry, type, value1, value2, flags) VALUES (3522,1,30445,1,0);
+UPDATE creature_template SET SpeedWalk=2.5/2.5, SpeedRun=6/7 WHERE entry = 17393;
+DELETE FROM dbscripts_on_relay WHERE id IN (19994,19993);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(19994,1,21,1,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Yor 17393 EAI: Active'),
+(19994,1000,36,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Yor 17393 EAI: face Player'),
+(19994,2000,0,0,0,0,0,0,2,2000001611,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Yor 17393 EAI: text'),
+(19994,3000,20,2,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Tikti 17392 EAI: movement chenged to 2:waypoint'),
+(19993,0,0,0,0,0,0,0,2,2000001614,0,0,0,0,0,0,0,'Part of Stillpine Ancestor Yor 17393 EAI: text');
+DELETE FROM creature_movement_template WHERE entry = 17393;
+INSERT INTO creature_movement_template (entry, pathId, point, position_x, position_y, position_z, orientation, waittime, script_id) VALUES
+(17393,0,1,-4646.63,-13015.4,-1.38673,1.6751,4000,1739301),
+(17393,0,2,-4679.14,-12985,0.5803,1.93085,12000,1739302),
+(17393,0,3,-4679.14,-12985,0.5803,100,100,5),
+(17393,0,4,-4680.61,-12963.3,2.66436,100,0,0),
+(17393,0,5,-4681.2,-12949.7,5.54,100,0,0),
+(17393,0,6,-4682.73,-12929.5,3.47035,100,0,0),
+(17393,0,7,-4667.73,-12909.8,1.50962,100,0,0),
+(17393,0,8,-4647.96,-12887.9,2.97161,100,0,0),
+(17393,0,9,-4639.09,-12877.2,4.9471,100,0,0),
+(17393,0,10,-4630.71,-12855.1,4.28118,100,0,0),
+(17393,0,11,-4620.17,-12829.9,6.06746,100,0,0),
+(17393,0,12,-4612,-12814,7.12509,100,0,0),
+(17393,0,13,-4601.96,-12795.7,3.27105,100,0,0),
+(17393,0,14,-4588.53,-12774.2,7.44323,100,0,0),
+(17393,0,15,-4575.77,-12760.8,6.10979,100,0,0),
+(17393,0,16,-4563.73,-12744.2,9.99685,100,0,0),
+(17393,0,17,-4554.96,-12729,12.2105,100,0,0),
+(17393,0,18,-4547.41,-12712.1,9.81412,100,0,0),
+(17393,0,19,-4538.2,-12689.2,12.5838,100,0,0),
+(17393,0,20,-4533.22,-12668.1,16.8651,100,0,0),
+(17393,0,21,-4532.96,-12656.8,15.2664,100,0,0),
+(17393,0,22,-4532.78,-12637.9,16.5789,100,0,0),
+(17393,0,23,-4533.02,-12619.1,12.0263,100,0,0),
+(17393,0,24,-4532.77,-12592.5,14.642,100,0,0),
+(17393,0,25,-4535.16,-12572.5,11.9603,100,0,0),
+(17393,0,26,-4521.38,-12547.2,8.20642,100,0,0),
+(17393,0,27,-4506.74,-12520.5,2.71515,100,0,0),
+(17393,0,28,-4492.57,-12495.4,4.36968,100,0,0),
+(17393,0,29,-4476.92,-12469.2,2.26036,100,0,0),
+(17393,0,30,-4462.38,-12438.4,2.68436,100,0,0),
+(17393,0,31,-4430.42,-12442,2.38524,100,0,0),
+(17393,0,32,-4419.91,-12429.3,3.2091,100,0,0),
+(17393,0,33,-4408.61,-12400.1,5.02559,100,0,0),
+(17393,0,34,-4414.42,-12370.4,5.99229,100,0,0),
+(17393,0,35,-4423.44,-12345,8.29463,100,0,0),
+(17393,0,36,-4435.58,-12315.7,10.3162,100,0,0),
+(17393,0,37,-4457.19,-12304.2,12.3064,100,0,0),
+(17393,0,38,-4475.24,-12294,13.9122,100,0,0),
+(17393,0,39,-4490.89,-12279.7,15.2792,1.9232,0,0),
+(17393,0,40,-4503.42,-12249.6,16.3871,1.97033,0,0),
+(17393,0,41,-4510.15,-12229.8,17.1362,1.87215,0,0),
+(17393,0,42,-4513.27,-12209.5,16.9777,1.70329,0,0),
+(17393,0,43,-4513.64,-12189.1,16.9593,100,0,0),
+(17393,0,44,-4502.99,-12158,16.1291,100,0,0),
+(17393,0,45,-4508.94,-12122.7,16.9898,100,0,0),
+(17393,0,46,-4505.31,-12095.6,18.8873,100,0,0),
+(17393,0,47,-4500.36,-12071.2,21.4168,100,0,0),
+(17393,0,48,-4516.81,-12050.5,24.2492,100,0,0),
+(17393,0,49,-4528.22,-12037.5,26.0347,100,0,0),
+(17393,0,50,-4531.9,-12008.6,28.4037,100,0,0),
+(17393,0,51,-4538.61,-11984.4,29.7635,100,0,0),
+(17393,0,52,-4543.79,-11963.5,29.1954,100,0,0),
+(17393,0,53,-4537.48,-11934.2,27.0094,100,0,0),
+(17393,0,54,-4533.18,-11906.3,22.686,100,0,0),
+(17393,0,55,-4504.71,-11879,17.5661,100,0,0),
+(17393,0,56,-4500.36,-11845.7,15.0063,100,0,0),
+(17393,0,57,-4510.63,-11816.8,13.8306,100,0,0),
+(17393,0,58,-4531.7,-11786.6,15.5384,100,0,0),
+(17393,0,59,-4555.94,-11756.9,17.6289,100,0,0),
+(17393,0,60,-4546.7,-11735.9,19.533,100,0,0),
+(17393,0,61,-4535.96,-11712.4,18.2368,100,0,0),
+(17393,0,62,-4519.88,-11702.4,17.8815,100,0,0),
+(17393,0,63,-4507,-11694.5,13.2184,100,0,0),
+(17393,0,64,-4490.14,-11673,10.8723,100,0,0),
+(17393,0,65,-4486.34,-11658,10.6353,1.51827,10000,1739303);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (1739301,1739302,1739303);
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1739301,2000,15,30446,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1739302,2000,0,0,0,0,0,0,0x04,2000001612,0,0,0,0,0,0,0,''),
+(1739302,5000,15,30447,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1739302,5100,35,5,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Send Event AI 5'),
+(1739302,6000,25,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'RUN ON'),
+(1739302,7000,0,0,0,0,0,0,0x04,2000001613,0,0,0,0,0,0,0,''),
+(1739303,100,35,6,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Send Event AI 6'),
+(1739303,5000,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive'),
+(1739303,5500,18,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'despawn Self');
+
+DELETE FROM creature_movement_template WHERE entry=4627;
+INSERT INTO creature_movement_template VALUES
+(4627,0,1,-159.547,2178.11,128.944,0,0,0,'Arugal Voidwalker - top of stairs'),
+(4627,0,2,-171.113,2182.69,129.255,0,0,0,''),
+(4627,0,3,-177.613,2175.59,128.161,0,0,0,''),
+(4627,0,4,-185.396,2178.35,126.413,0,0,0,''),
+(4627,0,5,-184.004,2188.31,124.122,0,0,0,''),
+(4627,0,6,-172.781,2188.71,121.611,0,0,0,''),
+(4627,0,7,-173.245,2176.93,119.085,0,0,0,''),
+(4627,0,8,-183.145,2176.04,116.995,0,0,0,''),
+(4627,0,9,-185.551,2185.77,114.784,0,0,0,''),
+(4627,0,10,-177.502,2190.75,112.681,0,0,0,''),
+(4627,0,11,-171.218,2182.61,110.314,0,0,0,''),
+(4627,0,12,-173.857,2175.1,109.255,0,0,0,'Arugal Voidwalker - bottom of stairs'),
+(4627,0,13,-171.218,2182.61,110.314,0,0,0,''),
+(4627,0,14,-177.502,2190.75,112.681,0,0,0,''),
+(4627,0,15,-185.551,2185.77,114.784,0,0,0,''),
+(4627,0,16,-183.145,2176.04,116.995,0,0,0,''),
+(4627,0,17,-173.245,2176.93,119.085,0,0,0,''),
+(4627,0,18,-172.781,2188.71,121.611,0,0,0,''),
+(4627,0,19,-184.004,2188.31,124.122,0,0,0,''),
+(4627,0,20,-185.396,2178.35,126.413,0,0,0,''),
+(4627,0,21,-177.613,2175.59,128.161,0,0,0,''),
+(4627,0,22,-171.113,2182.69,129.255,0,0,0,''),
+(4627,0,23,-159.547,2178.11,128.944,0,0,0,'');
+
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (1450012);
+
+UPDATE creature_template SET UnitFlags=33554432 WHERE entry=14989;
+
+DELETE FROM dbscripts_on_event WHERE id = 3084; 
+INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(3084,1,31,8446,100,0,0,0,0x08,0,0,0,0,0,0,0,0,'search for 8446 - terminate if alive'),
+(3084,10,31,8392,100,0,0,0,0x08,0,0,0,0,0,0,0,0,'search for 8392 - terminate if alive'),
+(3084,1000,10,8446,300000,0,0,0,0x08,0,0,0,0,2232.997,-7296.536,23.60208,0.4773213,'summon: Xiggs Fuselighter\'s Flyingmachine'),
+(3084,29000,10,8392,300000,0,0,0,0x08,1,0,0,0,2250.676,-7222.611,14.00366,1.343904,'summon: Pilot Xiggs Fuselighter'),
+(3084,29900,31,8392,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 8392'),
+(3084,30000,0,0,0,0,8392,50,3,2000001131,0,0,0,0,0,0,0,'Pilot Xiggs Fuselighter: text');
+DELETE FROM dbscript_string WHERE entry = 2000001131;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001131,'Been waitin\' for ya, $n. Glad to see you\'ve come through. Do you have the shipment?',0,0,0,3,NULL);
+DELETE FROM creature WHERE guid IN (53469,78161);
+UPDATE creature_template SET UnitFlags = 33536 WHERE Entry =8446;
+UPDATE creature_template SET UnitFlags = 33280 WHERE Entry =8392;
+UPDATE creature_template SET InhabitType = 4, MovementType = 2 WHERE entry = 8446;
+DELETE FROM creature_movement_template WHERE entry = 8446;
+INSERT INTO creature_movement_template (entry, point, position_x, position_y, position_z, orientation, waittime, script_id) VALUES
+(8446,1,2256.533,-7223.155,15.21833,100,5000,3);
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 5154;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(5154,0,0,0,0,0,0,0,0,2000001151,0,0,0,0,0,0,0,''),
+(5154,100,15,17285,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Cast: Enchant Annals of Darrowshire'),
+(5154,5000,0,0,0,0,0,0,0,2000001152,0,0,0,0,0,0,0,'');
+UPDATE quest_template SET CompleteScript = 5154 WHERE entry = 5154;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000001151 AND 2000001152;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001151,'Let\'s find out the whole story.  That\'s going to take some magic...',0,0,0,0,NULL),
+(2000001152,'There, it is done.  The book has been enhanced...',0,0,0,0,NULL);
+UPDATE gameobject SET spawntimesecsmin = 60, spawntimesecsmax = 60 WHERE id = 176150;
+UPDATE gameobject SET spawntimesecsmin = 60, spawntimesecsmax = 60 WHERE id = 176151;
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 2939;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(2939,0,0,0,0,0,0,0,0,2000001235,0,0,0,0,0,0,0,'');
+UPDATE quest_template SET CompleteScript = 2939 WHERE entry = 2939;
+DELETE FROM dbscript_string WHERE entry = 2000001235;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001235,'Take a look around, $n. Perhaps you will find something that I have missed.',0,0,0,1,NULL);
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 927;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(927,0,0,0,0,0,0,0,0x04,2000001236,0,0,0,0,0,0,0,''),
+(927,3000,0,0,0,0,0,0,0,2000001153,0,0,0,0,0,0,0,'');
+UPDATE quest_template SET CompleteScript = 927 WHERE entry = 927;
+DELETE FROM dbscript_string WHERE entry IN (2000001236,2000001153);
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001236,'%s examines the Moss-twined Heart...',0,2,0,0,NULL),
+(2000001153,'$n, underneath the moss, this heart looks like a seed!',0,0,7,1,NULL);
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 5247;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(5247,0,29,3,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags removed'),
+(5247,10,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(5247,100,0,0,0,0,0,0,0,2000001155,0,0,0,0,0,0,0,''),
+(5247,200,3,0,0,0,0,0,0x04,0,0,0,0,3234.2898,-4260.3384,98.44359,100,''),
+(5247,5000,9,627,30,0,0,0,0,0,0,0,0,0,0,0,0,'Resp object (25 secs)'),
+(5247,7000,13,0,0,0,178229,30,1|0x08,0,0,0,0,0,0,0,0,''),
+(5247,8000,13,0,0,0,178229,30,1|0x08,0,0,0,0,0,0,0,0,''),
+(5247,9000,13,0,0,0,178229,30,1|0x08,0,0,0,0,0,0,0,0,''),
+(5247,10000,13,0,0,0,178229,30,1|0x08,0,0,0,0,0,0,0,0,''),
+(5247,10100,0,0,0,0,0,0,0,2000001156,0,0,0,0,0,0,0,''),
+(5247,11000,13,0,0,0,178229,30,1|0x08,0,0,0,0,0,0,0,0,''),
+(5247,12000,13,0,0,0,178229,30,1|0x08,0,0,0,0,0,0,0,0,''),
+(5247,13000,13,0,0,0,178229,30,1|0x08,0,0,0,0,0,0,0,0,''),
+(5247,14000,13,0,0,0,178229,30,1|0x08,0,0,0,0,0,0,0,0,''),
+(5247,15000,13,0,0,0,178229,30,1|0x08,0,0,0,0,0,0,0,0,''),
+(5247,16000,13,0,0,0,178229,30,1|0x08,0,0,0,0,0,0,0,0,''),
+(5247,17000,15,18953,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Cast: Ranshalla Waiting'),
+(5247,25000,14,18953,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(5247,27000,3,0,0,0,0,0,0x04,0,0,0,0,3232.2751,-4256.4795,98.139175,100,''),
+(5247,30000,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,3.787,''),
+(5247,30100,0,0,0,0,0,0,0,2000001157,0,0,0,0,0,0,0,''),
+(5247,30200,29,3,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags added'),
+(5247,30300,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+UPDATE quest_template SET CompleteScript = 5247 WHERE entry = 5247;
+UPDATE creature SET position_x = 3232.15, position_y = -4256.49, position_z = 98.206, orientation = 3.78736, spawntimesecsmin = 300, spawntimesecsmax = 300 WHERE guid =2757;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000001155 AND 2000001157;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001155,'Please wait while I attempt to bind the shards together so that they will be whole once again.',0,0,0,0,NULL),
+(2000001156,'Ishnu... Oshalan thara dormil... Anu\'dorin...',0,0,0,0,NULL),
+(2000001157,'Yes, I was able to reseal the relic, $N.',0,0,0,2,NULL);
+DELETE FROM gameobject WHERE guid = 627;
+DELETE FROM game_event_gameobject WHERE guid = 627;
+DELETE FROM gameobject_battleground WHERE guid = 627;
+INSERT INTO gameobject (guid, id, map, spawnMask, phaseMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, state) VALUES
+(627,178229,0,1,1,3235.7976,-4263.0615,100.51884,-0.6981315,0,0,-0.627202003,0.9396927,-30,-30,255,1);
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 1052;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1052,0,29,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags removed'),
+(1052,10,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(1052,100,0,0,0,0,0,0,0x04,2000001158,0,0,0,0,0,0,0,''),
+(1052,101,1,69,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1052,6000,0,0,0,0,0,0,0,2000001159,0,0,0,0,0,0,0,''),
+(1052,7900,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1052,8000,3,0,0,0,0,0,0x04,0,0,0,0,-848.237,-577.42706,18.545984,100,''),
+(1052,15000,0,0,0,0,0,0,0,2000001160,0,0,0,0,0,0,0,''),
+(1052,18000,9,646,20,0,0,0,0,0,0,0,0,0,0,0,0,'Resp object (20 secs)'),
+(1052,22000,42,0,0,0,0,0,0x04,1906,0,0,0,0,0,0,0,'temp equip'),
+(1052,22100,1,25,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1052,23000,13,0,0,0,19534,30,1,0,0,0,0,0,0,0,0,''),
+(1052,25000,3,0,0,0,0,0,0x04,0,0,0,0,-844.87805,-580.2844,18.545902,100,''),
+(1052,28000,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,2.391,''),
+(1052,30000,42,0,0,0,0,0,0x04,12883,12860,0,0,0,0,0,0,'equip'),
+(1052,30200,29,2,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags added'),
+(1052,30300,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+UPDATE quest_template SET CompleteScript = 1052 WHERE entry = 1052;
+UPDATE creature SET position_x = -844.878, position_y = -580.284, position_z = 18.5459, orientation = 2.3911, spawntimesecsmin = 300, spawntimesecsmax = 300 WHERE guid =12117;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000001158 AND 2000001160;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001158,'%s breaks the seal on Anton\'s letter and begins to read it.',0,2,0,0,NULL),
+(2000001159,'By the Light! This is not good. There\'s something you don\'t understand, $n.',0,0,0,0,NULL),
+(2000001160,'%s throws Anton\'s letter down on the table.',0,2,0,0,NULL);
+DELETE FROM gameobject WHERE guid = 646;
+DELETE FROM game_event_gameobject WHERE guid = 646;
+DELETE FROM gameobject_battleground WHERE guid = 646;
+INSERT INTO gameobject (guid, id, map, spawnMask, phaseMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, state) VALUES
+(646,19534,0,1,1,-848.559,-576.3889,19.670116,-0.31415844,0,0,-0.15643406,0.98768836,-20,-20,255,1);

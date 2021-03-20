@@ -84,6 +84,14 @@ UPDATE gameobject_template SET `faction`=1375 WHERE entry=179688; -- "Treasure" 
 -- SpellFocus radius reduced to 5 (sync with eff1 from spell:17016 that activates target there = 5y)
 UPDATE gameobject_template SET data1 = 5 WHERE entry BETWEEN 176094 AND 176097;
 
+-- Ritual Candle Aura
+UPDATE gameobject_template SET `data8`=1 WHERE entry=179688; -- add serverside attribute so that it's not visible to players
+UPDATE gameobject_template SET `faction`=1375 WHERE entry=179688; -- "Treasure" faction 1375 here is guessed based on when patch 1.4 was released, and the fact that it's hostile to Demon faction 90
+
+-- Musty Tome 176150/176151
+-- must despawn after used (has that flag set up.. but with restock timer it will never happen)
+UPDATE gameobject_template SET data2=0 WHERE entry IN (176150,176151);
+
 -- Make PX-238 Winter Wondervolt TRAP GO server-side (visible by GM only)
 UPDATE gameobject_template SET `data8`=1 WHERE entry=180797;
 
@@ -131,6 +139,9 @@ UPDATE gameobject_template SET data5 = 1 WHERE entry IN (193958,193960,193908);
 -- Coldwind Tree
 -- radius reduced to 2 - original 5 often did not trigger effect0 = player could spam credit.
 UPDATE gameobject_template SET data1 = 2 WHERE entry IN (188539);
+
+-- Wolfsbane Root 189313 - must despawn
+UPDATE gameobject_template SET data5 = 1 WHERE entry IN (189313);
 
 -- Dalaran book: make it despawnable on use with autoclose value (autoclose = autoCloseTime / IN_MILLISECONDS (prior to 3.0.3, conversion was / 0x10000))
 UPDATE gameobject_template SET data3=180000, data5=1 WHERE entry IN (192651,192652,192653,192706,192707,192708,192709,192710,192711,192713,192865,192866,192867,192868,192869,192870,192871,192872,192874,192880,192881,192882,192883,192884,192885,192886,192887,192888,192889,192890,192891,192894,192895,192896,192905);

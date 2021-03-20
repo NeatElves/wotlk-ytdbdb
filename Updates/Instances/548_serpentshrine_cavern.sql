@@ -486,7 +486,7 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (21253, 0,25,-165.536,-369.548,-1.62264,100,0,0),
 (21253, 0,26,-151.345,-388.268,-1.61304,100,0,0),
 (21253, 0,27,-143.414,-408.293,0.834221,100,0,0),
-(21253, 0,28,-147.303,-429.347,1.07458,100,100,1), -- despawn self
+(21253, 0,28,-147.303,-429.347,1.07458,100,1,1), -- despawn self
 -- Coilfang Guardian 1
 (21873, 0, 1, 106.962, -468.5177, -21.63681, 100, 0, 0),
 (21873, 0, 2, 91.57517, -454.056, -21.75797, 100, 0, 0),
@@ -1268,7 +1268,7 @@ UPDATE creature SET equipment_id=343 WHERE guid IN (@CGUID+119,@CGUID+95,@CGUID+
 
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
 (@OGUID+1, 183407, 548, 1, 50, -0.0071, 820.2, 3.15, 0, 0, 0, 0, 500, 500, 100, 1), -- Doodad_CF_elevatorPlatform01
-(@OGUID+2, 183490, 548, 1, -58.9, -98.7, -52.79, 3.13366, 0, 0, 0, 0, 500, 500, 100, 1), -- Doodad_CF_elevatorPlatform_small01
+(@OGUID+2, 183490, 548, 1, -59.1349906921386718, -98.7966156005859375, -52.9341926574707031, 3.141592741012573242, 0, 0, 0, 0, 500, 500, 100, 1), -- Doodad_CF_elevatorPlatform_small01
 (@OGUID+3, 184203, 548, 1, 26.3285, -654.495, 15.4742, 3.14159, 0, 0, 0, 0, 30, 30, 100, 1), -- Doodad_Coilfang_Raid_Bridge_Part01
 (@OGUID+4, 184204, 548, 1, 26.3285, -654.495, 15.4742, 3.14159, 0, 0, 0, 0, 30, 30, 100, 1), -- Doodad_Coilfang_Raid_Bridge_Part02
 (@OGUID+5, 184205, 548, 1, 26.3285, -654.495, 15.4742, 3.14159, 0, 0, 0, 0, 30, 30, 100, 1), -- Doodad_Coilfang_Raid_Bridge_Part03

@@ -858,7 +858,7 @@ DELETE FROM creature_movement_template WHERE entry IN (14500) AND `pathId`=1; --
 INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 -- Alzzin the Wildshaper
 (11492, 0, 1, 274.844, -427.251, -119.962, 0, 30000, 1149201),
-(11492, 0, 2, 262.298, -445.57, -119.962, 0, 100, 1149202),
+(11492, 0, 2, 262.298, -445.57, -119.962, 0, 1, 1149202),
 -- Hydrospawn
 (13280, 0, 1, 4.57887, -438.407, -59.954, 0, 0, 0),
 (13280, 0, 2, -33.6927, -415.93, -59.9502, 0, 0, 0),
@@ -940,7 +940,7 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (14325, 0, 22, 384.2351, 365.1471, 0.7192566, 100, 0, 0),
 (14325, 0, 23, 385.7366, 335.8043, 2.8715980, 100, 0, 0),
 (14325, 0, 24, 385.6665, 297.6332, 11.203720, 100, 0, 0),
-(14325, 0, 25, 384.4298, 255.9361, 11.439550, 100, 10, 1432501),
+(14325, 0, 25, 384.4298, 255.9361, 11.439550, 100, 1, 1432501),
 (14325, 0, 26, 384.4298, 255.9361, 11.439550, 100, 0, 0),
 -- Lethtendris
 (14327, 0, 1, -5.45062, -441.126, 16.4179, 0, 0, 0),
@@ -965,7 +965,7 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (14351, 0, 11, 546.671, 607.452, -4.75477, 100, 0, 0),
 (14351, 0, 12, 548.69, 592.682, -4.75477, 100, 0, 0),
 (14351, 0, 13, 557.799, 578.167, -4.75477, 100, 0, 0),
-(14351, 0, 14, 569.694, 583.972, -4.75477, 100, 10, 1435102),
+(14351, 0, 14, 569.694, 583.972, -4.75477, 100, 1, 1435102),
 -- Pusilin
 (14354, 0, 1, 86.1935, -197.888, -4.05657, 0, 1000, 1435401),
 (14354, 0, 2, 34.1275, -199.426, -4.13396, 0, 0, 0),
@@ -1058,7 +1058,7 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (14566, 0, 25, 3.1756, 283.9283, -8.517708, 100, 0, 0),
 (14566, 0, 26, 11.22802, 302.5964, -8.159986, 100, 0, 0),
 (14566, 0, 27, -18.00219, 278.0495, -8.436031, 100, 0, 0),
-(14566, 0, 29, -23.79626, 286.6538, -7.955163, 100, 100, 3); -- Waypoint Pause as incomplete
+(14566, 0, 29, -23.79626, 286.6538, -7.955163, 100, 1, 3); -- Waypoint Pause as incomplete
 
 INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
 (@CGUID+181, 0, 0, 0, 0, 400, 0, NULL);
@@ -2829,6 +2829,7 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (@OGUID+3, @PGUID+85, 0, 'DM East - Ghost Mushroom (142144)'),
 (@OGUID+4, @PGUID+85, 0, 'DM East - Ghost Mushroom (142144)'),
 (@OGUID+5, @PGUID+85, 0, 'DM East - Ghost Mushroom (142144)'),
+(@OGUID+13, @PGUID+85, 0, 'DM East - Ghost Mushroom (142144)'),
 (@OGUID+371, @PGUID+92, 0, 'DM East - Large Solid Chest (153464)'),
 (@OGUID+372, @PGUID+92, 0, 'DM East - Large Mithril Bound Chest (153469)'),
 (@OGUID+373, @PGUID+93, 0, 'DM East - Large Solid Chest (153464)'),
@@ -2864,7 +2865,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 (@OGUID+10, 142145, 429, -77.444, -438.764, -58.612, 2.79252, 0, 0, 0.984807, 0.173652, 7200, 7200, 255, 1), -- Gromsblood
 (@OGUID+11, 142145, 429, 39.6528, -322.045, -52.2932, 1.25664, 0, 0, 0.587786, 0.809016, 7200, 7200, 255, 1), -- Gromsblood
 (@OGUID+12, 142145, 429, 38.4777, -391.213, -58.6108, 1.32645, 0, 0, 0.615661, 0.788011, 7200, 7200, 255, 1), -- Gromsblood
--- 13 - 18
+(@OGUID+13, 142144, 429, 80.78429412841796875, -420.521392822265625, -4.21279096603393554, 2.897245407104492187, 0, 0, 0.99254608154296875, 0.121869951486587524, 7200, 7200, 255, 1), -- Ghost Mushroom
+-- 14 - 18
 (@OGUID+19, 175404, 429, 263.743, -266.911, -59.9769, 2.94959, 0, 0, 0.995396, 0.0958512, 7200, 7200, 255, 1), -- Rich Thorium Vein
 (@OGUID+20, 175404, 429, 255.189, -358.638, -107.365, 2.61799, 0, 0, 0.965925, 0.258821, 7200, 7200, 255, 1), -- Rich Thorium Vein
 (@OGUID+21, 175404, 429, 277.033, -348.927, -101.016, 0.750491, 0, 0, 0.366501, 0.930418, 7200, 7200, 255, 1), -- Rich Thorium Vein
@@ -3258,7 +3260,7 @@ INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`,
 -- INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
 DELETE FROM dbscripts_on_creature_movement WHERE id IN (1144401,1144801,1424101,1149201,1149202,1432501,1435301,1435307,1435308,1435401,1435402,1435101,1435102);
-DELETE FROM dbscripts_on_creature_movement WHERE id IN (1450004,1450005,1450006,1450007,1450008,1450012); -- 1450001-1450003 used in Scholomance file
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (1450004,1450005,1450006,1450007,1450008); -- 1450001-1450003 used in Scholomance file
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (1144401, 0, 1, 193, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gordok Mage-Lord - EMOTE_STATE_SPELLPRECAST'),
 (1144401, 0, 15, 21227, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gordok Mage-Lord - Cast Fire & Ice Channeling'),

@@ -19,6 +19,7 @@ SET @OGUID := 5340000; -- gameobjects
 -- All creature_template_addons go here:
 -- ----------------------------------
 REPLACE INTO creature_template_addon (entry, mount, bytes1, b2_0_sheath, b2_1_pvp_state, emote, moveflags, auras) VALUES
+(17772, 0, 0, 1, 16, 0, 0, '31745'), -- Lady Jaina Proudmoore
 (17818, 0, 0, 1, 16, 0, 0, ''), -- Towering Infernal -- Immolation added in Boss Script
 (17852, 0, 0, 1, 16, 0, 0, '31745'), -- Thrall
 (17864, 0, 0, 1, 16, 0, 0, '12787'), -- Lesser Doomguard
@@ -1418,7 +1419,7 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 -- TODO:
 -- * Add special paths for certain Ghouls in the Invasion event
 -- ******************************************************************************************************************************************************************** --
-DELETE FROM creature_movement_template WHERE entry IN(17899,17898,17895,17905,17897,17906,17907,17916,17767,17808,17888,17842);
+DELETE FROM creature_movement_template WHERE entry IN(17899,17898,17895,17905,17897,17906,17907,17908,17916,17767,17808,17888,17842);
 -- Ghouls
 INSERT INTO `creature_movement_template` (`entry`,`pathID`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
 (17895,1,1,4895.428,-1590.809,1332.106,0,0,100),
@@ -3517,6 +3518,10 @@ INSERT INTO `creature_movement_template` (`entry`,`pathID`,`point`,`position_x`,
 (17905,12,41,5536.944,-2639.985,1480.674,0,0,100),
 (17905,12,42,5546.523,-2637.094,1482.928,0,0,100);
 
+-- Giant Infernal
+INSERT INTO `creature_movement_template` (`entry`,`pathID`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
+(17908, 0, 1, 5450.54, -2723.97, 1485.59, 0, 0, 100);
+
 -- Fel Stalker
 INSERT INTO `creature_movement_template` (`entry`,`pathID`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
 (17916,7,1,5496.352,-2417.796,1463.525,0,0,100),
@@ -4169,7 +4174,6 @@ INSERT INTO `creature_movement_template` (`entry`,`pathID`,`point`,`position_x`,
 (17842,12,42,5546.523,-2637.094,1482.928,0,0,100);
 
 -- Frost Wyrm
-DELETE FROM creature_movement_template WHERE entry=17907;
 INSERT INTO `creature_movement_template` (`entry`,`pathID`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
 (17907,1,1,5730.103,-2705.805,1642.442,0,0,100), -- Spline waypoint to help our pathfinder get over the mountain
 (17907,1,2,5585.464,-2721.981,1521.024,0,0,100),
@@ -4182,16 +4186,15 @@ INSERT INTO `creature_movement_template` (`entry`,`pathID`,`point`,`position_x`,
 (17907,2,4,5488.03,-2706.118,1505.735,1000,7,100);
 
 -- Gargoyle
-DELETE FROM `creature_movement_template` WHERE `entry`=17906;
 INSERT INTO `creature_movement_template` (`entry`,`pathID`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
 (17906,1,1,5761.943,-2873.926,1644.555,0,0,100), -- Spline waypoint to help our pathfinder get over the mountain
-(17906,1,2,5626.645,-2820.905,1576.665,10,1790601,100),
+(17906,1,2,5626.645,-2820.905,1576.665,1,1790601,100),
 
 (17906,2,1,5789.409,-2929.644,1667.926,0,0,100), -- Spline waypoint to help our pathfinder get over the mountain
-(17906,2,2,5607.216,-2842.922,1568.01,10,1790601,100),
+(17906,2,2,5607.216,-2842.922,1568.01,1,1790601,100),
 
 (17906,3,1,5761.905,-2817.492,1623.476,0,0,100), -- Spline waypoint to help our pathfinder get over the mountain
-(17906,3,2,5576.506,-2892.396,1569.838,10,1790601,100),
+(17906,3,2,5576.506,-2892.396,1569.838,1,1790601,100),
 
 (17906,4,1,5579.018,-2822.33,1540.312,0,0,100),
 (17906,4,2,5527.651,-2853.762,1505.554,0,0,100),
@@ -4249,13 +4252,13 @@ INSERT INTO `creature_movement_template` (`entry`,`pathID`,`point`,`position_x`,
 (17906,6,16,5462.335,-2717.079,1484.29,0,0,100), -- Guesswork
 
 (17906,7,1,5464.784,-2556.556,1579.43,0,0,100), -- Spline waypoint to help our pathfinder get over the mountain
-(17906,7,2,5447.678,-2658.095,1543.18,10,1790602,100),
+(17906,7,2,5447.678,-2658.095,1543.18,1,1790602,100),
 
 (17906,8,1,5484.678,-2545.945,1564.767,0,0,100), -- Spline waypoint to help our pathfinder get over the mountain
-(17906,8,2,5501.87,-2624.719,1533.239,10,1790602,100),
+(17906,8,2,5501.87,-2624.719,1533.239,1,1790602,100),
 
 (17906,9,1,5442.282,-2569.378,1595.671,0,0,100), -- Spline waypoint to help our pathfinder get over the mountain
-(17906,9,2,5487.329,-2644.893,1555.142,10,1790602,100),
+(17906,9,2,5487.329,-2644.893,1555.142,1,1790602,100),
 
 (17906,10,1,5466.634,-2663.391,1503.264,0,0,100),
 (17906,10,2,5529.186,-2635.45,1481.337,0,0,100),
