@@ -4441,3 +4441,178 @@ DELETE FROM game_event_gameobject WHERE guid = 646;
 DELETE FROM gameobject_battleground WHERE guid = 646;
 INSERT INTO gameobject (guid, id, map, spawnMask, phaseMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, state) VALUES
 (646,19534,0,1,1,-848.559,-576.3889,19.670116,-0.31415844,0,0,-0.15643406,0.98768836,-20,-20,255,1);
+
+UPDATE creature SET position_x = 215.07, position_y = 1242.78, position_z = 197.284, orientation = 3.33358, spawntimesecsmin = 300, spawntimesecsmax = 300 WHERE guid =37484;
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 1692;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1692,0,29,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags removed'),
+(1692,10,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(1692,100,0,0,0,0,0,0,0x04,2000001175,0,0,0,0,0,0,0,''),
+(1692,4000,0,0,0,0,0,0,0,2000001176,0,0,0,0,0,0,0,''),
+(1692,4100,29,2,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags added'),
+(1692,4200,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+UPDATE quest_template SET CompleteScript = 1692 WHERE entry = 1692;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000001175 AND 2000001176;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001175,'%s begins crafting...',0,2,0,0,NULL),
+(2000001176,'It is done.  I have your weapon, $n.',0,0,0,1,NULL);
+UPDATE `creature` SET `position_x` = '9918.03', `position_y` = '2308.6', `position_z` = '1330.87', `orientation` = '1.71042', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =46611;
+UPDATE `creature` SET `position_x` = '9994.09', `position_y` = '2331.89', `position_z` = '1330.87', `orientation` = '3.14159', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =46705;
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 1007;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1007,0,29,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags removed'),
+(1007,10,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(1007,100,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0.174,''),
+(1007,101,28,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'stand state'),
+(1007,110,0,0,0,0,0,0,0x04,2000001161,0,0,0,0,0,0,0,''),
+(1007,2000,28,8,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'kneel state'),
+(1007,3000,9,668,20,0,0,0,0,0,0,0,0,0,0,0,0,'Resp object (20 secs)'),
+(1007,7000,0,0,0,0,0,0,0x04,2000001272,0,0,0,0,0,0,0,''),
+(1007,10000,1,15,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1007,11000,0,0,0,0,0,0,0x04,2000001177,0,0,0,0,0,0,0,''),
+(1007,14000,28,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'stand state'),
+(1007,17000,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'face Player'),
+(1007,19000,0,0,0,0,0,0,0,2000001273,0,0,0,0,0,0,0,''),
+(1007,21000,29,2,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags added'),
+(1007,22000,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,1.22,''),
+(1007,24000,28,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'sit state'),
+(1007,24500,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+UPDATE quest_template SET CompleteScript = 1007 WHERE entry = 1007;
+DELETE FROM dbscript_string WHERE entry IN (2000001161,2000001177,2000001272,2000001273);
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001161,'This statuette must hold a hidden compartment...',0,0,7,1,NULL),
+(2000001177,'It\'s locked!  NO!!',0,0,7,0,NULL),
+(2000001272,'%s searches the ancient statuette.',0,2,0,0,NULL),
+(2000001273,'$N, I am in need of your help once again.',0,0,7,1,NULL);
+UPDATE creature_template_addon SET b2_0_sheath = 0 WHERE entry = 3846;
+DELETE FROM gameobject WHERE guid = 668;
+DELETE FROM game_event_gameobject WHERE guid = 668;
+DELETE FROM gameobject_battleground WHERE guid = 668;
+INSERT INTO gameobject (guid, id, map, spawnMask, phaseMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, state) VALUES
+(668,18603,1,1,1,3471.955,847.0674,5.366816,0.90757024,0,0,0.4383707,0.89879423,-20,-20,255,1);
+UPDATE `creature` SET `position_x` = '3470.04', `position_y` = '847.092', `position_z` = '5.45882', `orientation` = '1.22173', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =41638;
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 346;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(346,110,0,0,0,0,0,0,0,2000001274,0,0,0,0,0,0,0,'');
+UPDATE quest_template SET CompleteScript = 346 WHERE entry = 346;
+DELETE FROM dbscript_string WHERE entry = 2000001274;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001274,'Thank you, $N.  May the Light bless you, $Gbrother:sister;, and guide your path.',0,0,7,1,NULL);
+UPDATE `creature` SET `position_x` = '-8623.24', `position_y` = '766.655', `position_z` = '97.4033', `orientation` = '0.837758' WHERE `guid` =6322;
+UPDATE `creature` SET `position_x` = '-8874.87', `position_y` = '-186.332', `position_z` = '82.1206', `orientation` = '1.309', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =6017;
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 1681;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1681,0,0,0,0,0,0,0,0x04,2000001315,0,0,0,0,0,0,0,''),
+(1681,100,1,173,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1681,5000,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1681,7000,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'face Player'),
+(1681,8000,1,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1681,8100,0,0,0,0,0,0,0,2000001316,0,0,0,0,0,0,0,''),
+(1681,12000,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,4.607,'');
+UPDATE quest_template SET CompleteScript = 1681 WHERE entry = 1681;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000001315 AND 2000001316;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001315,'%s begins to work...',0,2,0,0,NULL),
+(2000001316,'$N!  I\'m finished!',0,0,7,0,NULL);
+UPDATE `creature` SET `position_x` = '-4793.38', `position_y` = '-1098.17', `position_z` = '498.89', `orientation` = '4.60767', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =9566;
+UPDATE `quest_template` SET `NextQuestId` = '0' WHERE `entry` IN (1679,1681);
+UPDATE `quest_template` SET `NextQuestId` = '0' WHERE `entry` IN (1683,1692);
+
+UPDATE creature SET position_x = 8644.208, position_y = 853.2105, position_z = 22.355267, orientation = 1.50239, spawndist = 0, MovementType = 2 WHERE guid = 94694;
+DELETE FROM creature_movement WHERE id = 94694;
+INSERT INTO creature_movement (id,point,position_x,position_y,position_z,orientation,waittime,script_id) VALUES
+(94694,1,8647.808,868.63934,23.212633,100,0,0),
+(94694,2,8657.981,873.3514,22.37611,100,0,0),
+(94694,3,8670.864,876.9106,22.123152,100,0,0),
+(94694,4,8680.514,881.326,23.230516,100,0,0),
+(94694,5,8685.484,889.3323,22.422583,100,0,0),
+(94694,6,8686.014,904.0842,21.40408,100,0,0),
+(94694,7,8687.324,922.13214,16.083908,100,0,0),
+(94694,8,8689.776,930.66925,15.553102,100,0,0),
+(94694,9,8696.605,941.5968,13.781057,100,0,0),
+(94694,10,8696.757,949.54407,13.006399,100,0,0),
+(94694,11,8695.549,956.4781,12.202627,100,0,0),
+(94694,12,8691.133,966.0688,11.514212,100,0,0),
+(94694,13,8684.711,974.0922,10.755286,100,0,0),
+(94694,14,8676.798,984.3464,8.006629,100,0,0),
+(94694,15,8682.726,987.4831,9.514258,100,0,0),
+(94694,16,8689.632,988.9705,11.368621,100,0,0),
+(94694,17,8682.726,987.4831,9.514258,100,0,0),
+(94694,18,8676.798,984.3464,8.006629,100,0,0),
+(94694,19,8684.711,974.0922,10.755286,100,0,0),
+(94694,20,8691.133,966.0688,11.514212,100,0,0),
+(94694,21,8695.549,956.4781,12.202627,100,0,0),
+(94694,22,8696.757,949.54407,13.006399,100,0,0),
+(94694,23,8696.605,941.5968,13.781057,100,0,0),
+(94694,24,8689.776,930.66925,15.553102,100,0,0),
+(94694,25,8687.324,922.13214,16.083908,100,0,0),
+(94694,26,8686.014,904.0842,21.40408,100,0,0),
+(94694,27,8685.484,889.3323,22.422583,100,0,0),
+(94694,28,8680.514,881.326,23.230516,100,0,0),
+(94694,29,8670.864,876.9106,22.123152,100,0,0),
+(94694,30,8657.981,873.3514,22.37611,100,0,0),
+(94694,31,8647.808,868.63934,23.212633,100,0,0),
+(94694,32,8644.208,853.2105,22.355267,100,0,0);
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 1701;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1701,0,29,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags removed'),
+(1701,10,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(1701,100,3,0,0,0,0,0,0x04,0,0,0,0,-8426.77,605.469,95.0252,1.41756,''),
+(1701,3000,0,0,0,0,0,0,0x04,2000001317,0,0,0,0,0,0,0,''),
+(1701,3100,1,233,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1701,8000,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1701,10000,3,0,0,0,0,0,0x04,0,0,0,0,-8427,600.092,94.706,3.281,''),
+(1701,13000,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,3.281,''),
+(1701,13100,0,0,0,0,0,0,0x04,2000001318,0,0,0,0,0,0,0,''),
+(1701,13200,29,2,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags added'),
+(1701,13500,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+UPDATE quest_template SET CompleteScript = 1701 WHERE entry = 1701;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000001317 AND 2000001318;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001317,'%s begins to work...',0,2,0,0,NULL),
+(2000001318,'Finished!  And the results are amazing.  I must convey them to my associates Grimand, Mathiel and Klockmort!',0,0,7,1,NULL);
+
+DELETE FROM dbscripts_on_quest_start WHERE id = 1699;
+INSERT INTO dbscripts_on_quest_start (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1699,0,15,8554,0,0,0,0,0,0,0,0,0,0,0,0,0,'Cast: Drinking Barleybrew Scalder'),
+(1699,1000,0,0,0,0,0,0,0,2000001319,0,0,0,0,0,0,0,'');
+UPDATE quest_template SET StartScript = 1699 WHERE entry = 1699;
+DELETE FROM dbscripts_on_quest_end WHERE id = 1699;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1699,0,29,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags removed'),
+(1699,10,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(1699,110,0,0,0,0,0,0,0,2000001320,0,0,0,0,0,0,0,''),
+(1699,3000,0,0,0,0,0,0,0,2000001321,0,0,0,0,0,0,0,''),
+(1699,5000,0,0,0,0,0,0,0,2000001321,0,0,0,0,0,0,0,''),
+(1699,7000,0,0,0,0,0,0,0,2000001321,0,0,0,0,0,0,0,''),
+(1699,7100,29,2,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags added'),
+(1699,7200,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+UPDATE quest_template SET CompleteScript = 1699 WHERE entry = 1699;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000001319 AND 2000001321;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001319,'Good luck, $N!',0,0,7,4,NULL),
+(2000001320,'$N ran the Gauntlet!  Three cheers for $N!',0,1,7,22,NULL),
+(2000001321,'Hip hip, hoorah!',0,0,7,4,NULL);
+UPDATE `creature` SET `position_x` = '-9222.58', `position_y` = '-2147.87', `position_z` = '63.814', `orientation` = '3.92699', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =5552;
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 1961;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1961,10,29,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags removed'),
+(1961,100,0,0,0,0,0,0,0,2000001322,0,0,0,0,0,0,0,''),
+(1961,1000,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,4.78,''),
+(1961,2000,1,133,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1961,8500,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1961,9000,0,0,0,0,0,0,0,2000001323,0,0,0,0,0,0,0,''),
+(1961,9100,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0.458,''),
+(1961,9500,29,2,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags added');
+UPDATE quest_template SET CompleteScript = 1961 WHERE entry = 1961;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000001322 AND 2000001323;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001322,'One moment while I stitch this together..',0,0,1,1,NULL),
+(2000001323,'There.  I am finished with your robe, $N.',0,0,1,1,NULL);
+UPDATE `creature` SET `position_x` = '1681.49', `position_y` = '194.356', `position_z` = '-62.0865', `orientation` = '0.458519', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =15878;
