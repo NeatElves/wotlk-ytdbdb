@@ -99,8 +99,8 @@ UPDATE conditions SET comments=CONCAT('Player has no achievement ID: ',value1) W
 UPDATE conditions SET comments=CONCAT('Account has achievement ID: ',value1) WHERE type=21 AND value2=0 AND comments IS NULL;-- CONDITION_ACHIEVEMENT_REALM
 UPDATE conditions SET comments=CONCAT('Account has no achievement ID: ',value1) WHERE type=21 AND value2=1 AND comments IS NULL;-- CONDITION_ACHIEVEMENT_REALM
 UPDATE conditions SET comments=CONCAT('Quest ID ',value1,' NOT Taken AND NOT Rewarded') WHERE type=22 AND comments IS NULL; -- CONDITION_QUEST_NONE
-UPDATE conditions SET comments=CONCAT('Player Has ',value2,' or more of Item ID ',value1,' in Inventory/Bank') WHERE type=23 AND comments IS NULL; -- CONDITION_ITEM_WITH_BANK
-UPDATE conditions SET comments=CONCAT('Player Has Less Than ',value2,' of Item ID ',value1,' in Inventory/Bank') WHERE type=23 AND flags&1 AND comments IS NULL; -- CONDITION_ITEM_WITH_BANK &FLAG_REVERSE_RESULT
+UPDATE conditions SET comments=CONCAT('Player Has ',value2,' or more of Item ID ',value1,' in Inventory/Bank') WHERE type=23 AND flags=0 AND comments IS NULL; -- CONDITION_ITEM_WITH_BANK
+UPDATE conditions SET comments=CONCAT('Player Has Less Than ',value2,' of Item ID ',value1,' in Inventory/Bank') WHERE type=23 AND flags=1 AND comments IS NULL; -- CONDITION_ITEM_WITH_BANK &FLAG_REVERSE_RESULT
 UPDATE conditions SET comments=CONCAT('Holiday ',value1,' Active') WHERE type=26 AND flags=0 AND comments IS NULL; -- CONDITION_ACTIVE_HOLIDAY
 UPDATE conditions SET comments=CONCAT('Holiday ',value1,' NOT Active') WHERE type=26 AND flags=1 AND comments IS NULL; -- CONDITION_ACTIVE_HOLIDAY &FLAG_REVERSE_RESULT
 UPDATE conditions SET comments=CONCAT('Player can learn Ability from Spell ID: ',value1) WHERE type=28 AND value2=0 AND comments IS NULL; -- CONDITION_LEARNABLE_ABILITY
