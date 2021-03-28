@@ -29,7 +29,7 @@
 UPDATE gameobject_template SET displayId=0 WHERE entry=103575;
 
 -- Make Moonwell GO server-side (visible by GM only)
-UPDATE gameobject_template SET data3=1 WHERE entry=177272; 
+UPDATE gameobject_template SET data3=1 WHERE entry=177272;
 
 -- Make Incantion of Celebras Trap only visible by GM
 UPDATE gameobject_template SET data8=1 WHERE entry=178963;
@@ -94,6 +94,7 @@ UPDATE gameobject_template SET data2=0 WHERE entry IN (176150,176151);
 
 -- Make PX-238 Winter Wondervolt TRAP GO server-side (visible by GM only)
 UPDATE gameobject_template SET `data8`=1 WHERE entry=180797;
+
 
 -- ============================================================
 -- TBC section

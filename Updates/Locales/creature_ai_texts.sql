@@ -1727,6 +1727,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 1436
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 19094 WHERE `entry` = -11230;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 19095 WHERE `entry` = -11231;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 19096 WHERE `entry` = -11232;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 26303 WHERE `entry` = -11233;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 24856 WHERE `entry` = -19997;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 24857 WHERE `entry` = -19998;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 24858 WHERE `entry` = -19999;
