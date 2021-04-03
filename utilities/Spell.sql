@@ -42,8 +42,3 @@ INSERT INTO `spell_template` (`Id`, `Dispel`, `Mechanic`, `Attributes`, `Attribu
 (25936, 0, 0, 256, 0, 0, 0, 0, 0, 0, 0, 0, 0, 256, 1, 0, 0, 101, 0, 0, 0, 0, 0, 6, 0, -1, 0, 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 'Signet Ring of the Bronze Dragonflight TANK R5 DND');
 
 UPDATE `spell_template` SET `EffectMiscValue1` = 15795 WHERE `id` =34849;
-UPDATE `spell_template` SET `EffectTriggerSpell3` = 65414 WHERE `id` =65422;
-UPDATE `spell_template` SET `EffectTriggerSpell3` = 65410 WHERE `id` =65418;
-UPDATE `spell_template` SET `EffectTriggerSpell3` = 65412 WHERE `id` =65420;
-UPDATE `spell_template` SET `EffectTriggerSpell3` = 65415 WHERE `id` =65421;
-UPDATE `spell_template` SET `EffectTriggerSpell3` = 65416 WHERE `id` =65419;

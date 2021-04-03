@@ -2795,6 +2795,12 @@ UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 3859
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21071;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21072;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21073;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21074;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21075;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21076;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21077;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21078;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21079;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

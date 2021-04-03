@@ -37,7 +37,7 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (141, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу забыть все таланты.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (141, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу расспросить о двойной специализации.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (141, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '<Взять письмо>', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(161, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Мне нужен еще один набор воровских инструментов.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+#(161, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Мне нужен еще один набор воровских инструментов.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (230, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Поверните ключ, чтобы запустить механизм.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (231, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Скажите мне пароль от сейфа Тирта.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (262, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Где же ключ от этого замка?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -251,6 +251,12 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (1050, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Требуется карта данных высокого уровня', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1050, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Используйте инженерию для доступа скрытым схемам!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1053, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Продолжить.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(1061, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Какие обязанности вы исполняете?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(1062, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Что еще за Ульдумские пластины?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(1063, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Где Ульдумские пластины?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(1064, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Прошу прощенья? Нам "изменили время визита"? Что это вообще значит?!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(1065, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ну... и что же находится в Ульдуме?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(1066, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я вернусь, когда у меня будут Ульдумские пластины.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1120, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу кое-что у тебя купить.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1141, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Расскажи мне про уменьшение.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1142, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Выкладывай все, Трентон.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -479,6 +485,8 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (2187, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Заполните табличку.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2188, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'О каком Лар''корви вы говорите?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2189, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Где находится Кратер Ун''Горо?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2207, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Мне нужен маяк Кенария.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2207, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Какие растения Оскверненного леса подвержены порче?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2208, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Мне нужен маяк Кенария.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2208, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Какие растения Оскверненного леса подвержены порче?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2242, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу посмотреть на ваши товары.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -4645,14 +4653,7 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (50199, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу учиться.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (50199, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу забыть все таланты.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (50199, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу расспросить о двойной специализации.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(50199, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '<Взять письмо>', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(50413, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Мне нужен маяк Кенария.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(50413, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Какие растения Оскверненного леса подвержены порче?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(51003, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Какие обязанности вы исполняете?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(51004, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Что еще за Ульдумские пластины?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(51005, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Где Ульдумские пластины?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(51007, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ну... и что же находится в Ульдуме?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(51008, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я вернусь, когда у меня будут Ульдумские пластины.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(50199, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '<Взять письмо>', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

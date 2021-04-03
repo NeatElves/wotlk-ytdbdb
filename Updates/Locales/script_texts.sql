@@ -1256,6 +1256,8 @@ UPDATE `script_texts` SET `content_loc8` = 'Пресвятой Кракл! Те�
 #UPDATE `script_texts` SET `content_loc8` = '%s ощущает манящий запах очищенной еды.' WHERE `entry` = -1010027;
 #UPDATE `script_texts` SET `content_loc8` = '%s начинает жадно поглощать пищу.' WHERE `entry` = -1010028;
 #UPDATE `script_texts` SET `content_loc8` = 'Помогите! На нас напали! Черное Железо!' WHERE `entry` = -1010029;
+#UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1010030;
+#UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1010031;
 UPDATE `script_texts` SET `content_loc8` = '%s издает низкое горловое рычание.' WHERE `entry` = -1015001;
 UPDATE `script_texts` SET `content_loc8` = 'Ты никогда не получишь Сердце Ярости! Его сила принадлежит Иллидану!' WHERE `entry` = -1015002;
 UPDATE `script_texts` SET `content_loc8` = '%s достает Сердце Ярости.' WHERE `entry` = -1015003;
