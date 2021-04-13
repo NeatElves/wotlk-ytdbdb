@@ -6724,9 +6724,9 @@ REPLACE INTO creature_template_addon(entry, mount, bytes1, b2_0_sheath, b2_1_pvp
 DELETE FROM dbscripts_on_creature_movement WHERE id IN (2511501,2511502,2493801,2493802,2511503);
 INSERT INTO dbscripts_on_creature_movement (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
 (2511501, 0, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Warrior - Run on'),
-(2511501, 0, 0, 45, 0, 2511500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Warrior- Random Transform (Blood Elf)'),
+(2511501, 0, 0, 45, 0, 2511500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Warrior - Random Transform (Blood Elf)'),
 (2511502, 0, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Warrior - Run on'),
-(2511502, 0, 0, 45, 0, 2511501, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Warrior- Random Transform (Draenei)'),
+(2511502, 0, 0, 45, 0, 2511501, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Warrior - Random Transform (Draenei)'),
 (2493801, 0, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman - Run on'),
 (2493801, 0, 0, 45, 0, 2493800, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman - Random Transform (Blood Elf)'),
 (2493802, 0, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman - Run on'),
@@ -8913,3 +8913,209 @@ INSERT INTO creature_movement_template (entry, point, position_x, position_y, po
 (27622,9,-461.608,1493.39,17.1586,100,0,0);
 DELETE FROM spell_script_target WHERE entry IN(49129);
 INSERT INTO spell_script_target VALUES (49129,1,27622,0);
+
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(18992, 1727, 0, -1327.42, -1223.41, 38.791, 4.60767, 0, 0, -0.743144, 0.669131, 5, 5, 100, 1),
+(2602, 1727, 0, -1309.97, -1225.24, 22.9574, 2.09439, 0, 0, 0.866025, 0.500001, 5, 5, 100, 1),
+(2607, 1727, 0, -1331.36, -1238.03, 32.1244, 1.97222, 0, 0, 0.833885, 0.551938, 5, 5, 100, 1),
+(2610, 1727, 0, -1325.47, -1222.34, 32.1246, 5.53269, 0, 0, -0.366501, 0.930418, 5, 5, 100, 1),
+(2616, 1727, 0, -1308.41, -1259.48, 38.7909, 3.927, 0, 0, -0.923879, 0.382686, 5, 5, 100, 1),
+(2617, 1727, 0, -1302.09, -1251.33, 32.1241, 4.53786, 0, 0, -0.766044, 0.642789, 5, 5, 100, 1);
+INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES (1727, 1, 0, 'Hillsbrad Foothills - Dun Garok - Keg of Shindigger Stout (1727)');
+INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES (1, 1, 'Hillsbrad Foothills - Dun Garok - Keg of Shindigger Stout (1727)');
+
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(424, 1723, 0, -912.229, -1042.36, 30.3479, 2.30383, 0, 0, 0.913545, 0.406738, 2, 5, 100, 1),
+(836, 1723, 0, -895.925, -1028.62, 30.3479, 3.73501, 0, 0, -0.956305, 0.292372, 2, 5, 100, 1),
+(1065, 1723, 0, -922.704, -1002.16, 30.3479, 5.20108, 0, 0, -0.515038, 0.857168, 2, 5, 100, 1),
+(8274, 1723, 0, -942.5, -1009.07, 30.3479, 3.61284, 0, 0, -0.972369, 0.233448, 2, 5, 100, 1),
+(8769, 1723, 0, -904.673, -973.271, 30.3479, 3.7001, 0, 0, -0.961261, 0.27564, 2, 5, 100, 1),
+(10593, 1723, 0, -874.061, -979.79, 30.3477, 0.890117, 0, 0, 0.430511, 0.902586, 2, 5, 100, 1),
+(10594, 1723, 0, -879.271, -1003.03, 30.3479, 1.78023, 0, 0, 0.777145, 0.629321, 2, 5, 100, 1),
+(10595, 1723, 0, -897.239, -961.192, 30.3461, 1.46608, 0, 0, 0.66913, 0.743145, 2, 5, 100, 1),
+(11233, 1723, 0, -906.835, -1006.82, 30.3479, 1.98967, 0, 0, 0.83867, 0.54464, 2, 5, 100, 1),
+(12687, 1723, 0, -935.594, -985.062, 30.3479, 2.84488, 0, 0, 0.989016, 0.147811, 2, 5, 100, 1),
+(13378, 1723, 0, -916.097, -974.295, 30.3479, 5.74214, 0, 0, -0.267238, 0.963631, 2, 5, 100, 1),
+(13932, 1723, 0, -904.905, -950.066, 30.7902, 4.92183, 0, 0, -0.62932, 0.777146, 2, 5, 100, 1),
+(1200, 1723, 0, -910.739, -1026.56, 30.3479, 3.24635, 0, 0, -0.998629, 0.0523532, 2, 5, 100, 1),
+(1202, 1723, 0, -881.298, -985.348, 30.3479, 0.750491, 0, 0, 0.366501, 0.930418, 2, 5, 100, 1),
+(1227, 1723, 0, -925.706, -944.54, 31.2686, 2.3911, 0, 0, 0.930417, 0.366502, 2, 5, 100, 1),
+(1252, 1723, 0, -895.219, -1006.31, 30.3479, 2.3911, 0, 0, 0.930417, 0.366502, 2, 5, 100, 1),
+(1256, 1723, 0, -914.485, -987.068, 30.3479, 0.0174525, 0, 0, 0.00872612, 0.999962, 2, 5, 100, 1),
+(1269, 1723, 0, -933.914, -1017.14, 30.3479, 4.4855, 0, 0, -0.782608, 0.622515, 2, 5, 100, 1),
+(1278, 1723, 0, -906.771, -999.292, 30.3479, 3.83973, 0, 0, -0.939692, 0.34202, 2, 5, 100, 1),
+(1279, 1723, 0, -883.671, -1021.39, 30.3479, 1.58825, 0, 0, 0.71325, 0.70091, 2, 5, 100, 1),
+(1284, 1723, 0, -933.456, -964.13, 30.3479, 3.59538, 0, 0, -0.97437, 0.224951, 2, 5, 100, 1);
+
+DELETE FROM `creature_movement` WHERE `id`=68116 AND `point` IN (27,72,73);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(68116, 27, 12782.443, -6879.493, 23.201, 100, 1000, 1721301, 'teleport'),
+(68116, 72, 12790.9, -6894.31, 30.8982, 100, 0, 0, ''),
+(68116, 73, 12791.2, -6891.1, 31.4273, 100, 1000, 1721302, 'teleport');
+
+DELETE FROM creature_template_spells WHERE entry=24683;
+INSERT INTO creature_template_spells (entry, setId, spell1, spell2, spell3) VALUES (24683, 0, 2, 44475, 44478);
+DELETE FROM creature_cooldowns WHERE Entry=24683;
+INSERT INTO creature_cooldowns (Entry, SpellId, CooldownMin, CooldownMax) VALUES (24683, 44475, 30000, 30000), (24683, 44478, 12000, 20000);
+
+DELETE FROM spell_script_target WHERE entry IN (45219,45229,45233);
+INSERT INTO spell_script_target (entry, `type`, targetEntry, inverseEffectMask) VALUES (45219, 1, 25192, 0), (45229, 1, 25192, 0), (45233, 1, 25192, 0);
+UPDATE creature_movement SET script_id=2493804 WHERE script_id=2493801 AND `point`=1 AND id IN (100260,100264,100267,100271);
+DELETE FROM creature_movement WHERE id IN (100260,100264,100267,100271) AND `point` BETWEEN 2 AND 4;
+UPDATE creature_movement SET script_id=2493805 WHERE script_id=2493801 AND `point`=1 AND id IN (100259,100261,100265,100268);
+DELETE FROM creature_movement WHERE id IN (100259,100261,100265,100268) AND `point` BETWEEN 2 AND 4;
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (2493804,2493805);
+INSERT INTO dbscripts_on_creature_movement (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+(2493804, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman - Set Idle Movement'),
+(2493804, 0, 0, 35, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman - Send AI_EVENT_CUSTOM_A to Self'),
+(2493805, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman - Set Idle Movement'),
+(2493805, 0, 0, 35, 1001, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman - Send AI_EVENT_CUSTOM_B to Self');
+DELETE FROM creature_template_addon WHERE entry=24979;
+
+DELETE FROM dbscripts_on_relay WHERE id IN (10200,10201);
+INSERT INTO dbscripts_on_relay (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+(10200, 0, 0, 20, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman/Warrior - Set Movement Path 2'),
+(10201, 0, 0, 20, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman/Warrior - Set Movement Path 3');
+DELETE FROM dbscript_random_templates WHERE id=10200;
+INSERT INTO dbscript_random_templates (id, `type`, target_id, chance, comments) VALUES
+(10200, 1, 10200, 0, 'Shattered Sun Marksman/Warrior - Set Movement Path 2'),
+(10200, 1, 10201, 0, 'Shattered Sun Marksman/Warrior - Set Movement Path 3');
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (2493806,2493807,2493808);
+INSERT INTO dbscripts_on_creature_movement (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+(2493806, 0, 0, 20, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman/Warrior - Set Movement Path 1'),
+(2493806, 0, 0, 15, 34427, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman/Warrior - Cast Ethereal Teleport'),
+(2493807, 0, 0, 45, 0, 10200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman/Warrior - Start Random Relay Script (Randomize between movement path 2 & 3)'),
+(2493808, 0, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman/Warrior - STATE_USESTANDING'),
+(2493808, 3000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman/Warrior - ONESHOT_NONE'),
+(2493808, 0, 0, 18, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shattered Sun Marksman/Warrior - Delayed despawn');
+DELETE FROM `creature_movement_template` WHERE `entry`=24938;
+INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(24938, 1, 1, 12802.94, -6901.631, 40.31656, 100, 0, 0, ''),
+(24938, 1, 2, 12803.35, -6899.098, 40.29868, 100, 0, 0, ''),
+(24938, 1, 3, 12775.92, -6869.868, 40.29502, 100, 1, 2493807, 'Shattered Sun Marksman/Warrior - Random between path 2 and 3'),
+(24938, 1, 4, 12780.2, -6875.725, 40.30148, 100, 0, 0, ''),
+(24938, 2, 1, 12796.44, -6882.286, 34.20195, 100, 0, 0, ''),
+(24938, 2, 2, 12791.71, -6891.086, 31.35045, 100, 10000, 2493808, 'Shattered Sun Marksman/Warrior - Set emote state 69 and despawn 4 seconds later'),
+(24938, 3, 1, 12783, -6894.029785, 33.5065, 100, 0, 0, ''),
+(24938, 3, 2, 12790.61, -6890.366, 31.55473, 100, 10000, 2493808, 'Shattered Sun Marksman/Warrior - Set emote state 69 and despawn 4 seconds later');
+DELETE FROM creature_movement_template WHERE entry=25115;
+INSERT INTO creature_movement_template SELECT 25115 AS `entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment` FROM creature_movement_template WHERE entry=24938;
+DELETE FROM creature WHERE guid IN (47400,47401,47402,47403);
+INSERT INTO creature (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) VALUES
+(47400, 0, 530, 1, 12803.5, -6910.790039, 41.198601, 1.623156, 1, 45, 1, 2),
+(47401, 0, 530, 1, 12804.799805, -6908.089844, 41.198601, 1.815142, 1, 45, 1, 2),
+(47402, 0, 530, 1, 12805.700195, -6907.120117, 41.198601, 2.199115, 1, 45, 1, 2),
+(47403, 0, 530, 1, 12805.83, -6911.729, 41.28194, 2.191206, 1, 45, 1, 2);
+DELETE FROM `creature_movement` WHERE `id` IN (47400,47401,47402,47403);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(47400, 1, 12803.5, -6910.790039, 41.198601, 100, 1, 2493806, 'Shattered Sun Marksman/Warrior - Cast Ethereal Teleport and Set Movement Path 1'),
+(47401, 1, 12804.799805, -6908.089844, 41.198601, 100, 1, 2493806, 'Shattered Sun Marksman/Warrior - Cast Ethereal Teleport and Set Movement Path 1'),
+(47402, 1, 12805.700195, -6907.120117, 41.198601, 100, 1, 2493806, 'Shattered Sun Marksman/Warrior - Cast Ethereal Teleport and Set Movement Path 1'),
+(47403, 1, 12805.83, -6911.729, 41.28194, 100, 1, 2493806, 'Shattered Sun Marksman/Warrior - Cast Ethereal Teleport and Set Movement Path 1');
+DELETE FROM creature_spawn_entry WHERE guid IN (47400,47401,47402,47403);
+INSERT INTO creature_spawn_entry (guid, entry) VALUES (47400, 24938), (47400, 25115), (47401, 24938), (47401, 25115), (47402, 24938), (47402, 25115), (47403, 24938), (47403, 25115);
+
+DELETE FROM spell_bonus_data WHERE entry=33778;
+INSERT INTO spell_bonus_data (entry, direct_bonus, dot_bonus, ap_bonus, ap_dot_bonus, comments) VALUES (33778, 0, 0, 0, 0, 'Lifebloom');
+
+UPDATE spell_proc_event SET SpellFamilyMaskA0=128, SpellFamilyMaskA1=128, SpellFamilyMaskA2=128 WHERE entry=42370;
+
+UPDATE spell_proc_event SET procEx=65536 WHERE entry=324;
+UPDATE spell_proc_event SET procEx=65536 WHERE entry=52127;
+
+INSERT INTO spell_proc_event(entry,procEx) VALUES (5215,65536);
+
+UPDATE `creature_template` SET `InhabitType` = 4, `SpeedWalk` = (2.5 / 2.5), `SpeedRun` = (20 / 2.5), `MovementType` = 0 WHERE `entry` = 15241;
+UPDATE `creature_template` SET `InhabitType` = 4, `SpeedWalk` = (7 / 2.5), `SpeedRun` = (18 / 2.5), `MovementType` = 0 WHERE `entry` = 15242;
+
+UPDATE quest_template SET QuestLevel=-1 WHERE entry IN (7791,7792,7793,7794,7795,7798,7799,7800,7802,7803,7804,7805,7807,7808,7809,7811,7813,7814,7817,7818,7820,7821,7822,7823,7824,7826,7827,7831,7833,7834,7835,7836,10352,10354,10356,10357,10359,10360,10361,10362);
+UPDATE quest_template SET QuestLevel=-1 WHERE entry IN (7796,7801,7806,7812,7819,7825,7832,7837,10358,10363);
+
+DELETE FROM creature_addon WHERE guid IN (100481,100482,100483,100484,100485,100486);
+
+UPDATE creature_template SET InhabitType=3,UnitFlags=32768 WHERE entry IN(24558);
+
+UPDATE creature_template SET Detection=15 WHERE entry IN(24723,25562);
+
+UPDATE spell_target_position SET target_position_x=1704.311279,target_position_y=927.975281 WHERE id IN(46019);
+UPDATE spell_target_position SET target_position_x=1704.311279,target_position_y=927.975281 WHERE id IN(46020);
+
+UPDATE dbscripts_on_event SET x=165.9681,y=-408.1578,z=-11.50428,delay=60000 WHERE id = 16547;
+UPDATE creature_template SET InhabitType=1 WHERE entry=24844;
+
+INSERT INTO game_event_quest(quest, event) VALUES (11543,310), (11540,310);
+
+UPDATE creature_template SET SpeedWalk=6/2.5,SpeedRun=6/7 WHERE entry IN(25265);
+
+DELETE FROM spell_target_position WHERE id IN(46037,46040,46038,46039);
+INSERT INTO spell_target_position(id, target_map, target_position_x, target_position_y, target_position_z, target_orientation) VALUES
+(46037, 580, 1726.47, 709.432, 71.27368, 5.585053), (46038, 580, 1725.76, 709.81, 71.27368, 5.585053),
+(46039, 580, 1907.09, 547.703, 71.3737, 5.585053), (46040, 580, 1908.77, 550.668, 71.3737, 5.585053);
+
+UPDATE creature_template SET ExtraFlags=0 WHERE entry IN(24891);
+
+DELETE FROM creature_template_spells WHERE entry IN(25824);
+INSERT INTO creature_template_spells(entry, setId, spell1) VALUES (25824, 0, 46082);
+DELETE FROM creature_cooldowns WHERE entry IN(25824);
+INSERT INTO creature_cooldowns VALUES (25824, 46082, 5000, 5000);
+
+DELETE FROM creature_template_spells WHERE entry IN(11859);
+INSERT INTO creature_template_spells(entry, setId, spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8, spell9, spell10) VALUES
+(11859, 0, 19474, 19482, 89, 21949, 0, 0, 0, 0, 0, 0);
+
+DELETE FROM spell_script_target WHERE entry IN(46650);
+INSERT INTO spell_script_target VALUES (46650, 3, 5800060, 0), (46650, 3, 5800052, 0), (46650, 3, 5800057, 0), (46650, 3, 5800047, 0);
+
+UPDATE gameobject SET spawntimesecsmin=-180,spawntimesecsmax=-180 WHERE guid IN(12125,10205,13076);
+
+UPDATE creature_template SET UnitFlags=0x00008000|0x02000000 WHERE entry IN(25214);
+
+UPDATE creature_template SET ExtraFlags=ExtraFlags|4194304, MechanicImmuneMask=MechanicImmuneMask|33554432 WHERE Entry IN (11949,22605);
+UPDATE creature_template SET MechanicImmuneMask=MechanicImmuneMask|131072 WHERE Entry=25040;
+
+UPDATE creature_template SET InhabitType=7 WHERE entry IN(26251);
+UPDATE creature_template SET UnitFlags=33555200 WHERE entry IN(26057);
+
+UPDATE `npc_vendor` SET `maxcount` = 0, `incrtime` = 0 WHERE `entry` = 9499 AND `item` = 13483;
+UPDATE `item_template` SET `BuyCount` = 5 WHERE `entry` = 38428;
+
+REPLACE INTO `spell_proc_event` (`entry`,`SchoolMask`,`ppmRate`,`Cooldown`) VALUES (43730, 127, 5, 8);
+
+DELETE FROM creature_template_spells WHERE entry IN(24697);
+INSERT INTO creature_template_spells(entry, setId, spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8, spell9, spell10) VALUES
+(24697, 0, 2, 44547, 44640, 0, 0, 0, 0, 0, 0, 0);
+DELETE FROM creature_template_spells WHERE entry IN(25563);
+INSERT INTO creature_template_spells(entry, setId, spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8, spell9, spell10) VALUES
+(25563, 0, 2, 44547, 44640, 0, 0, 0, 0, 0, 0, 0);
+REPLACE INTO creature_template_spells(entry, setId, spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8, spell9, spell10) VALUES
+(24684, 0, 2, 44479, 44480, 44482, 0, 0, 0, 0, 0, 0),
+(24686, 0, 2, 44518, 44519, 44520, 0, 0, 0, 0, 0, 0),
+(24688, 0, 2, 44505, 44533, 0, 0, 0, 0, 0, 0, 0),
+(24690, 0, 2, 44503, 44504, 44505, 0, 0, 0, 0, 0, 0),
+(24689, 0, 2, 44534, 44505, 0, 0, 0, 0, 0, 0, 0),
+(24696, 0, 2, 35946, 20299, 17741, 44639, 0, 0, 0, 0, 0);
+REPLACE INTO creature_template_spells(entry, setId, spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8, spell9, spell10) VALUES
+(25568, 0, 2, 44475, 46028, 0, 0, 0, 0, 0, 0, 0),
+(25565, 0, 2, 46029, 46030, 46033, 0, 0, 0, 0, 0, 0),
+(25572, 0, 2, 46042, 46043, 44520, 0, 0, 0, 0, 0, 0),
+(25570, 0, 2, 46192, 46046, 0, 0, 0, 0, 0, 0, 0),
+(25575, 0, 2, 44534, 44505, 0, 0, 0, 0, 0, 0, 0),
+(25577, 0, 2, 44505, 44533, 0, 0, 0, 0, 0, 0, 0),
+(25576, 0, 2, 44503, 44504, 44505, 0, 0, 0, 0, 0, 0),
+(25547, 0, 2, 22907, 46150, 46151, 44639, 0, 0, 0, 0, 0);
+
+#UPDATE creature_template SET Scale=1 WHERE entry IN (16164,29825);
+#UPDATE `dbscripts_on_relay` SET `priority` = 1 WHERE `id` = 10124 AND `priority` = 0 AND (`datalong` > 0 AND `datalong` != 42660);
+
+DELETE FROM gossip_menu WHERE entry IN(1401);
+INSERT INTO gossip_menu(entry,text_id) VALUES (1401,2033);
+DELETE FROM gossip_menu WHERE entry IN(1402);
+INSERT INTO gossip_menu(entry,text_id) VALUES (1402,2036);
+
+UPDATE creature_template SET EquipmentTemplateId = 968 WHERE `entry` = 15184;
+UPDATE creature SET spawndist = 0, MovementType = 0 WHERE guid IN (68395);
+DELETE FROM creature_movement WHERE id IN (68395);
+DELETE FROM creature_linking WHERE master_guid IN (66114);
+INSERT INTO creature_linking (guid,master_guid,flag)VALUES (68395,66114,1+2+515);
+
+UPDATE `creature` SET `position_x` = '-4386.08', `position_y` = '173.278', `position_z` = '25.8706', `orientation` = '4.91319', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =52545;

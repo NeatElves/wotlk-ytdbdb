@@ -207,8 +207,8 @@ UPDATE `script_texts` SET `content_loc8` = 'Щелк! Сенсоры засек�
 UPDATE `script_texts` SET `content_loc8` = 'Никто не победит Кочевников Пустыни - даже роботизированные цыпленки! АТАКА!' WHERE `entry` = -1000291;
 UPDATE `script_texts` SET `content_loc8` = 'Активация системы полета! ЩЕЛК! Готовимся к отправке в Пиратскую Бухту!' WHERE `entry` = -1000292;
 UPDATE `script_texts` SET `content_loc8` = 'К дому! Держитесь ближе ко мне, что бы ни случилось! У меня там ружье и патроны!' WHERE `entry` = -1000293;
-UPDATE `script_texts` SET `content_loc8` = 'Как мы его, а?!' WHERE `entry` = -1000294;
-UPDATE `script_texts` SET `content_loc8` = 'Одним меньше!' WHERE `entry` = -1000295;
+#UPDATE `script_texts` SET `content_loc8` = 'Как мы его, а?!' WHERE `entry` = -1000294;
+#UPDATE `script_texts` SET `content_loc8` = 'Одним меньше!' WHERE `entry` = -1000295;
 UPDATE `script_texts` SET `content_loc8` = 'Мы это сделали! Мы победили!' WHERE `entry` = -1000296;
 UPDATE `script_texts` SET `content_loc8` = 'Ждите меня внизу, у сада – мне нужно только убрать ружье.' WHERE `entry` = -1000297;
 UPDATE `script_texts` SET `content_loc8` = 'Ладно, ладно, я думаю, я смогу разобраться, как это работает...' WHERE `entry` = -1000298;
