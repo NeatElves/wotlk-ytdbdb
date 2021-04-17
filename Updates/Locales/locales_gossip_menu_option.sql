@@ -1844,7 +1844,6 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (6343, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Покажите мне свои фейерверки.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (6381, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Давай меняться, Рин''вошо. Покажи мне, что у тебя за товары!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (6443, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'На этой табличке приведены схемы и заклинания, необходимые для создания амулета безумия Гурубаши.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6445, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу посмотреть на ваши товары.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (6459, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу отправиться на поле боя.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (6460, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу отправиться на поле боя.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (6461, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу отправиться на поле боя.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
