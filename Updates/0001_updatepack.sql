@@ -9631,3 +9631,45 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `positi
 DELETE FROM `creature_movement_template` WHERE `entry` = 448;
 INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES ('448', '4', '0', 'Elwynn Forest - Forest\'s Edge - Hogger (448)');
 INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES ('4', '1', 'Elwynn Forest - Forest\'s Edge - Hogger (448)');
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 11998;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(11998,0,0,0,0,0,0,0,0,2000001215,0,0,0,0,0,0,0,''),
+(11998,4000,0,0,0,0,0,0,0,2000001216,0,0,0,0,0,0,0,'');
+UPDATE quest_template SET CompleteScript = 11998 WHERE entry = 11998;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000001215 AND 2000001216;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001215,'He wants me to do WHAT?',0,0,0,5,NULL),
+(2000001216,'Well, he\'d better keep the moonshine flowing if he wants my men to stop their research to serve the military\'s purposes!',0,0,0,1,NULL);
+
+DELETE FROM dbscripts_on_relay WHERE id = 20564;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20564,0,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Hugh Glass 26484 EAI: Active'),
+(20564,10,0,0,0,0,0,0,0x04,2000003857,0,0,0,0,0,0,0,'Part of Hugh Glass 26484 EAI: say'),
+(20564,6000,0,0,0,0,0,0,0x04,2000003858,0,0,0,0,0,0,0,'Part of Hugh Glass 26484 EAI: say'),
+(20564,12000,0,0,0,0,0,0,0x04,2000003859,0,0,0,0,0,0,0,'Part of Hugh Glass 26484 EAI: say'),
+(20564,17000,0,0,0,0,0,0,0x04,2000003860,0,0,0,0,0,0,0,'Part of Hugh Glass 26484 EAI: say'),
+(20564,22000,0,0,0,0,0,0,0x04,2000003861,0,0,0,0,0,0,0,'Part of Hugh Glass 26484 EAI: say'),
+(20564,23000,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Hugh Glass 26484 EAI: unactive');
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000003857 AND 2000003861;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000003857,'Wake up, Griselda. Here, girl.',0,0,0,22,NULL),
+(2000003858,'They\'ll never find us here, will they? We won\'t let them get us like they got Limpy Joe and Flannel McGee!',0,0,0,5,NULL),
+(2000003859,'No, we escaped from those monsters! They\'re nothing like us, Griselda.',0,0,0,1,NULL),
+(2000003860,'We\'re hunters, you and I. No wolfmen here, no ma\'am.',0,0,0,274,NULL),
+(2000003861,'Keep an eye out for them, girl! Don\'t let them get us!',0,0,0,25,NULL);
+
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(25164, 4630, 1, 1, 1, 0, 0, -6192.6, -3961.18, -58.6667, 3.4383, 300, 300, 0, 0, 1003, 0, 0, 0),
+(25118, 4709, 1, 1, 1, 0, 0, -6226.13, -3944.94, -58.6251, 5.48331, 300, 300, 0, 0, 1003, 0, 0, 0);
+DELETE FROM `gameobject` WHERE `guid` = 38574;
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(70880, 179888, 1, 1, 1, -6236.64, -3830.48, -58.1364, -0.907571, 0, 0, -0.438371, 0.898794, 45, 45, 100, 1);
+DELETE FROM `creature_loot_template` WHERE `entry` = 5841 AND `item` = 1206;
+DELETE FROM `creature_loot_template` WHERE `entry` = 5841 AND `item` = 1210;
+UPDATE `creature_linking` SET `flag` = `flag`&~(1+2) WHERE `master_guid` = (SELECT guid from creature where id = 5841);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = 1.5 WHERE `entry` = 5841 AND `item` = 858;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = 2 WHERE `entry` = 5841 AND `item` = 1179;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = 4 WHERE `entry` = 5841 AND `item` = 2287;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = 0.5 WHERE `entry` = 5841 AND `item` = 2455;
+UPDATE creature_template SET UnitFlags=33554944 WHERE entry IN(25735);
