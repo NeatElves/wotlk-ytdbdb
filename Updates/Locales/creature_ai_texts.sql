@@ -2068,9 +2068,9 @@ UPDATE `creature_ai_texts` SET `content_loc8` = 'Стой... СТОЙ! Что т
 UPDATE `creature_ai_texts` SET `content_loc8` = 'О... НЕТ! Мы так и знали, что ты крадешь у нас броню и оружие вместе с лошадьми!' WHERE `entry` = -20330;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Мы знаем... что вы не знаете... почему у нас есть иммунитет... к вашей так называемой гнили. Верховный адмирал Вествинд как-то отдал верховному аббату этот молитвенник. Прошу... не надо больше... пожалуйста!!!' WHERE `entry` = -20331;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'А-А-А! Пожалуйста... мы знаем... что у вас... есть шпион... замаскированный... под одного из нас! Вот... это все, что я знаю. Пожалуйста... пощадите... ХВАТИТ!' WHERE `entry` = -20332;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'За тана! За Локена!' WHERE `entry` = -20333;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'В битву, мои дети! Никакой пощады нашим врагам!' WHERE `entry` = -20334;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Големы, защитите столицу любой ценой!' WHERE `entry` = -20335;
+#UPDATE `creature_ai_texts` SET `content_loc8` = 'За тана! За Локена!' WHERE `entry` = -20333;
+#UPDATE `creature_ai_texts` SET `content_loc8` = 'В битву, мои дети! Никакой пощады нашим врагам!' WHERE `entry` = -20334;
+#UPDATE `creature_ai_texts` SET `content_loc8` = 'Големы, защитите столицу любой ценой!' WHERE `entry` = -20335;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Шур''наб... шур''наб... Йогг-Сарон!' WHERE `entry` = -20336;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Ух... так-то лучше.' WHERE `entry` = -20337;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Ух ты – еще бы чуть-чуть, и... Спасибо тебе, |3-6($r)!' WHERE `entry` = -20338;
@@ -2817,6 +2817,10 @@ UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 3859
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21089;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21090;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21091;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21092;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21093;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21094;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21095;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
