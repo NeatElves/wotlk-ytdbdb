@@ -10505,3 +10505,194 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid
 (108568, 26857, 571, 1, 1, 0, 0, 3969.44, -4999.99, 75.0138, 3.10669, 300, 300, 0, 0, 42, 60, 0, 0);
 
 UPDATE `creature` SET `position_x` = '287.265', `position_y` = '-4724.88', `position_z` = '13.2142', `orientation` = '5.2709', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =37622;
+
+UPDATE `creature_template` SET `DamageSchool` = 5 WHERE `Entry` = 3470;
+
+DELETE FROM spell_script_target WHERE entry = 26585;
+INSERT INTO spell_script_target (entry, type, targetEntry, inverseEffectMask) VALUES (26585, 1, 15925, 0);
+
+UPDATE creature_template SET RegenerateStats=0 WHERE entry IN(25653);
+
+UPDATE creature_template SET InhabitType=4 WHERE entry IN(25315);
+
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `mincountOrRef` = '2', `maxcount` = '3' WHERE `entry` IN (2843,2844,2845,2847,2849,106318,106319) AND `item` =118;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `maxcount` = '2' WHERE `entry` IN (2843,2844,2845,2847,2849,106318,106319) AND `item` =858;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `maxcount` = '2' WHERE `entry` IN (2843,2844,2845,2847,2849,106318,106319) AND `item` IN (2455,3385);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1' WHERE `entry` IN (2843,2844,2845,2847,2849,106318,106319) AND `item` in (929,1710,3827);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '2' WHERE `entry` IN (2843,2844,2845,2847,2849,106318,106319) AND `item` IN (117,159,414,1179,1205,1707,4539,4542,4606,422,3770,4607,4544,3771,4538,1708,2070,2287,4536,4537,4540,4541,4604,4605);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '3' WHERE `entry` IN (2843,2844,2845,2847,2849,106318,106319) AND `item` IN (783,4234,4306,2838,4232,2318,2997,2589,2592,2835,2836,2319,2996);
+DELETE FROM `gameobject_loot_template` WHERE `entry` IN (2843,2844,2845,2847,2849,106318,106319) AND `item` = 774;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '3', `groupid` = '4' WHERE `entry` IN (2843,2844,2845,2847,2849,106318,106319) AND `item` = 2842;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2', `groupid` = '4' WHERE `entry` IN (2843,2844,2845,2847,2849,106318,106319) AND `item` = 3577;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '5', `groupid` = '4' WHERE `entry` IN (2843,2844,2845,2847,2849,106318,106319) AND `item` = 6037;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '4', `groupid` = '4' WHERE `entry` IN (2843,2844,2845,2847,2849,106318,106319) AND `item` = 1705;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '7', `groupid` = '4' WHERE `entry` IN (2843,2844,2845,2847,2849,106318,106319) AND `item` = 1529;
+
+DELETE FROM dbscripts_on_gossip WHERE id = 948500;
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(948500,0,0,0,0,0,0,0,0,2000000078,0,0,0,0,0,0,0,''),
+(948500,100,1,35,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(948500,4000,0,0,0,0,0,0,0,2000000080,0,0,0,0,0,0,0,''),
+(948500,4100,1,35,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(948500,10000,0,0,0,0,0,0,0,2000000081,0,0,0,0,0,0,0,''),
+(948500,10100,1,35,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(948500,10500,0,15,47683,0,0,0,0,0,0,0,0,0,0,0,0,'');
+REPLACE INTO `dbscript_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
+(2000000078, 'Ah, yes. Loken is well known to me.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL),
+(2000000080, 'It is he who commands the sons of iron in their war against us.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL),
+(2000000081, 'From his hiding place, he oversees their preparations for war with the goal of exterminating the stone giants!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL);
+
+DELETE FROM dbscript_random_templates WHERE id = 20232;
+INSERT INTO dbscript_random_templates (id, type, target_id, chance, comments) VALUES
+(20232,1,20571,65,'Part of Runed Giant 26417 EAI: - Random Script - 1'),
+(20232,1,20572,35,'Part of Runed Giant 26417 EAI: - Random Script - 2');
+DELETE FROM dbscripts_on_relay WHERE id BETWEEN 20571 AND 20572;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20571,5,35,5,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Runed Giant 26417 EAI: - Send Event AI 5'),
+(20571,10,44,26872,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Runed Giant 26417 EAI: - morph'),
+(20571,500,0,0,0,0,0,0,6,2000001219,0,0,0,0,0,0,0,'Part of Runed Giant 26417 EAI: - Say'),
+(20572,10,44,26783,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Runed Giant 26417 EAI: - morph'),
+(20572,108,8,26783,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Runed Giant 26417 EAI: - credit'),
+(20572,500,0,0,0,0,0,0,6,2000001220,2000001221,2000002421,2000002422,0,0,0,0,'Part of Runed Giant 26417 EAI: - Random Say'),
+(20572,600,18,5000,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Runed Giant 26417 EAI: - despawn');
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000001219 AND 2000001221;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000002421 AND 2000002422;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001219,'The Runebreaker fails to free the Runed Giant, weakening it and causing it to attack!',0,2,0,0,NULL),
+(2000001220,'Thank you, small one.',0,0,0,35,NULL),
+(2000001221,'You have my gratitude.',0,0,0,35,NULL),
+(2000002421,'I never thought I\'d be free from that terrible spell!',0,0,0,35,NULL),
+(2000002422,'I thought I was doomed. Thank you for freeing me.',0,0,0,35,NULL);
+
+REPLACE INTO `dbscript_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
+(2000000082, 'He''s out to get me, too! I''d be careful around here if I was you, traveler. You never know which tree he''s hiding behind!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL),
+(2000000083, 'That''s not something Limpy Joe would ask! But yeah, I know Loken.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, NULL);
+
+DELETE FROM dbscripts_on_creature_movement WHERE id = 825604;
+DELETE FROM dbscripts_on_quest_end WHERE id = 3182;
+UPDATE quest_template SET CompleteScript = 0 WHERE entry =3182;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000002963 AND 2000002967;
+DELETE FROM creature_movement_template WHERE entry = 8256 AND pathId = 1;
+
+REPLACE INTO `dbscript_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
+(2000001011, '%s tries opening Maury''s Clubbed Foot...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, 744, NULL),
+(2000001010, 'Bah!  $N, this foot won''t budge!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 745, NULL);
+
+DELETE FROM dbscripts_on_quest_start WHERE id = 10879;
+UPDATE quest_template SET StartScript = 0 WHERE entry =10879;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000000118 AND 2000000121;
+
+DELETE FROM dbscripts_on_gossip WHERE id IN (1046400,1046500,1046600,1046700,1046800,1046900,1047000,1047100,1047200,1047300);
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000000449 AND 2000000451;
+UPDATE gossip_menu_option SET action_script_id = 0 WHERE menu_id IN (10464,10465,10466,10467,10468,10469,10470,10471,10472,10473) AND id = 0;
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 11510;
+UPDATE quest_template SET CompleteScript = 0 WHERE entry =11510;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000000482 AND 2000000485;
+
+UPDATE `dbscript_string` SET `content_default` = '%s looks around nervously.' WHERE `entry` =2000001017;
+UPDATE `dbscript_string` SET `content_default` = 'Are you sure you weren''t followed here? I have a very bad feeling all of a sudden...', `emote` = 6 WHERE `entry` =2000001018;
+UPDATE `dbscript_string` SET `content_default` = 'Be on your guard!', `emote` = 5 WHERE `entry` =2000001019;
+
+UPDATE  `creature` SET `position_x` = '1816.21', `position_y` = '-4530.52', `position_z` = '19.9835', `orientation` = '0.014587', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =39955;
+DELETE FROM creature_movement WHERE id = 39955;
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(39955, 1, 1803, -4530.86, 21.0921, 0, 0, 0, NULL),
+(39955, 2, 1784.31, -4532.12, 22.9669, 0, 0, 0, NULL),
+(39955, 3, 1765.56, -4527.78, 25.2562, 0, 0, 0, NULL),
+(39955, 4, 1748.77, -4513.4, 26.8206, 0, 0, 0, NULL),
+(39955, 5, 1729.17, -4494.43, 29.7479, 0, 0, 0, NULL),
+(39955, 6, 1728.55, -4478.56, 32.2001, 0, 0, 0, NULL),
+(39955, 7, 1735.88, -4454.27, 36.5354, 0, 0, 0, NULL),
+(39955, 8, 1740.4, -4438.16, 37.6698, 0, 0, 0, NULL),
+(39955, 9, 1738.91, -4422.33, 36.2972, 0, 0, 0, NULL),
+(39955, 10, 1731.5, -4410.8, 37.33, 0, 0, 0, NULL),
+(39955, 11, 1726.38, -4402.12, 34.8505, 0, 0, 0, NULL),
+(39955, 12, 1724.52, -4393.48, 33.044, 0, 0, 0, NULL),
+(39955, 13, 1732.98, -4400.57, 35.3481, 0, 0, 0, NULL),
+(39955, 14, 1736.95, -4408.59, 37.3315, 0, 0, 0, NULL),
+(39955, 15, 1740.18, -4418.71, 36.0068, 0, 0, 0, NULL),
+(39955, 16, 1742.44, -4433.92, 37.4477, 0, 0, 0, NULL),
+(39955, 17, 1735.48, -4454.83, 36.4228, 0, 0, 0, NULL),
+(39955, 18, 1726.27, -4473.05, 33.5312, 0, 0, 0, NULL),
+(39955, 19, 1734.05, -4493.82, 28.9639, 0, 0, 0, NULL),
+(39955, 20, 1746.9, -4512.48, 26.8319, 0, 0, 0, NULL),
+(39955, 21, 1767.28, -4527.67, 25.1314, 0, 0, 0, NULL),
+(39955, 22, 1793.5, -4529.26, 21.526, 0, 0, 0, NULL),
+(39955, 23, 1821.7, -4527.14, 19.9747, 0, 0, 0, NULL),
+(39955, 24, 1843.81, -4537.46, 21.7675, 0, 0, 0, NULL),
+(39955, 25, 1867.94, -4530.81, 24.821, 0, 0, 0, NULL),
+(39955, 26, 1890.24, -4527.16, 27.7801, 0, 0, 0, NULL),
+(39955, 27, 1894.29, -4522.6, 28.1139, 0, 0, 0, NULL),
+(39955, 28, 1905.18, -4510.14, 25.4155, 0, 0, 0, NULL),
+(39955, 29, 1920, -4487.4, 23.2976, 0, 0, 0, NULL),
+(39955, 30, 1934.57, -4459.5, 23.5419, 0, 0, 0, NULL),
+(39955, 31, 1942.72, -4437.36, 22.8148, 0, 0, 0, NULL),
+(39955, 32, 1940.63, -4410.57, 22.206, 0, 0, 0, NULL),
+(39955, 33, 1935.92, -4379.43, 20.4046, 0, 0, 0, NULL),
+(39955, 34, 1934.68, -4369, 21.3851, 0, 0, 0, NULL),
+(39955, 35, 1933.47, -4358.57, 20.0374, 0, 0, 0, NULL),
+(39955, 36, 1931.3, -4332.95, 19.6014, 0, 0, 0, NULL),
+(39955, 37, 1933.61, -4356.89, 19.6656, 0, 0, 0, NULL),
+(39955, 38, 1934.93, -4367.26, 21.6332, 0, 0, 0, NULL),
+(39955, 39, 1936.24, -4377.68, 20.4291, 0, 0, 0, NULL),
+(39955, 40, 1937.67, -4389.21, 20.5293, 0, 0, 0, NULL),
+(39955, 41, 1938.97, -4399.63, 21.4445, 0, 0, 0, NULL),
+(39955, 42, 1941.29, -4428.58, 22.6333, 0, 0, 0, NULL),
+(39955, 43, 1935.57, -4458.41, 23.6231, 0, 0, 0, NULL),
+(39955, 44, 1916.89, -4483.51, 22.6517, 0, 0, 0, NULL),
+(39955, 45, 1902.39, -4485.72, 21.5451, 0, 0, 0, NULL),
+(39955, 46, 1887.2, -4476.53, 19.602, 0, 0, 0, NULL),
+(39955, 47, 1873.61, -4481.63, 19.2869, 0, 0, 0, NULL),
+(39955, 48, 1864.1, -4486.01, 20.0404, 0, 0, 0, NULL),
+(39955, 49, 1846.47, -4502.97, 20.4641, 0, 0, 0, NULL),
+(39955, 50, 1831.85, -4512.27, 20.5851, 0, 0, 0, NULL),
+(39955, 51, 1822.25, -4531.01, 19.829, 0, 0, 0, NULL);
+DELETE FROM dbscripts_on_creature_movement WHERE id = 336701;
+DELETE FROM dbscript_string WHERE entry in (2000000135,2000000221);
+
+UPDATE `dbscript_string` SET `content_default` = '%s is chasing you. Run!' WHERE `entry` =2000000887;
+UPDATE `dbscript_string` SET `content_default` = 'Very interesting!' WHERE `entry` =2000000069;
+UPDATE `dbscript_string` SET `content_default` = 'Mack belches loudly...' WHERE `entry` =2000001033;
+UPDATE `dbscript_string` SET `content_default` = 'Gods of old, we beseech you. What must we do? How can we save the gods of this land?' WHERE `entry` =2000001035;
+
+UPDATE `creature` SET `position_x` = '10126', `position_y` = '2582.53', `position_z` = '1325.97', `orientation` = '5.35273', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =46836;
+DELETE FROM creature_movement WHERE id = 46836;
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(46836, 1, 10126, 2582.53, 1325.97, 5.35273, 0, 0, NULL),
+(46836, 2, 10132.5, 2573.71, 1323.42, 5.35273, 0, 0, NULL),
+(46836, 3, 10139, 2565.42, 1322.01, 5.37629, 0, 0, NULL),
+(46836, 4, 10142.9, 2551.64, 1321.72, 4.98359, 0, 0, NULL),
+(46836, 5, 10131.6, 2546.08, 1321.79, 3.58559, 0, 0, NULL),
+(46836, 6, 10119.4, 2540.75, 1321.52, 3.56595, 0, 0, NULL),
+(46836, 7, 10101, 2538.54, 1319.55, 3.24786, 0, 0, NULL),
+(46836, 8, 10088.4, 2529.86, 1317.56, 3.80157, 0, 0, NULL),
+(46836, 9, 10094.6, 2516.65, 1317.67, 5.15245, 0, 0, NULL),
+(46836, 10, 10104.1, 2498.36, 1317.6, 5.1878, 0, 0, NULL),
+(46836, 11, 10108.1, 2484.09, 1317.46, 4.97574, 0, 0, NULL),
+(46836, 12, 10105, 2470.59, 1317.16, 4.37099, 0, 0, NULL),
+(46836, 13, 10098.4, 2460.89, 1317.88, 3.833, 0, 0, NULL),
+(46836, 14, 10086.9, 2454.49, 1318.06, 3.60916, 0, 0, NULL),
+(46836, 15, 10074.6, 2448.79, 1317.34, 3.57774, 0, 0, NULL),
+(46836, 16, 10090.9, 2456.54, 1318.14, 0.45186, 0, 0, NULL),
+(46836, 17, 10102, 2463.36, 1317.59, 0.663917, 0, 0, NULL),
+(46836, 18, 10108.3, 2480.45, 1317.32, 1.25297, 0, 0, NULL),
+(46836, 19, 10106.2, 2493.46, 1317.56, 1.72421, 0, 0, NULL),
+(46836, 20, 10088, 2529.08, 1317.56, 2.04229, 0, 0, NULL),
+(46836, 21, 10098.2, 2536.91, 1319.19, 0.56967, 0, 0, NULL),
+(46836, 22, 10118.8, 2541.91, 1321.45, 0.224094, 0, 0, NULL),
+(46836, 23, 10141.5, 2550.47, 1321.72, 0.377247, 0, 0, NULL),
+(46836, 24, 10139.5, 2564.52, 1321.96, 1.74777, 0, 0, NULL);
+DELETE FROM dbscripts_on_creature_movement WHERE id = 416701;
+DELETE FROM dbscript_string WHERE entry = 2000000139;
+
+# spell for visual effect only (don''t forget Q12627)
+UPDATE `creature_template` SET `UnitFlags` = 33024 WHERE `Entry` IN (33007,33008);
+DELETE FROM dbscripts_on_event WHERE id IN (18681,18682,18683,18684);
+INSERT INTO `dbscripts_on_event` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(18681, 10, 0, 15, 11815, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'cast Disturbed Cauldron'),
+(18682, 10, 0, 15, 11815, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'cast Disturbed Cauldron'),
+(18683, 10, 0, 15, 11815, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'cast Disturbed Cauldron'),
+(18684, 10, 0, 15, 11815, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'cast Disturbed Cauldron');
+
+UPDATE creature_template SET UnitFlags=33554432 WHERE entry IN(26046);
