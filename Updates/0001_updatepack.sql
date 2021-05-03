@@ -12579,3 +12579,140 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (1264, 14, -11361.009765625, -2763.385009765625, 6.321872234344482421, 100, 0, 0),
 (1264, 15, -11341.1474609375, -2745.006591796875, 8.124607086181640625, 100, 0, 0),
 (1264, 16, -11317.1865234375, -2727.569580078125, 8.259693145751953125, 100, 0, 0);
+
+UPDATE `creature` SET `position_x` = '3215.31', `position_y` = '-2498.81', `position_z` = '52.8002', `orientation` = '5.3058', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =119612;
+DELETE FROM creature_template_addon WHERE entry IN (27120);
+INSERT INTO creature_template_addon (entry, mount, bytes1, b2_0_sheath, b2_1_pvp_state, emote, moveflags, auras) VALUES (27120,14334,0,1,1,0,0,NULL);
+
+DELETE FROM `creature_loot_template` WHERE `item` IN (29573,23923,29518,25874,29574,29577,30506,30507,30508,30509);
+
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `mincountOrRef` = '2', `maxcount` = '3' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` =118;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `maxcount` = '2' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` =858;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `maxcount` = '2' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` IN (2455,3385);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` in (929,1710,3827,6149,3928,13444,13446,22829,22832);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '2' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` IN (117,159,414,1179,1205,1707,4539,4542,4606,422,3770,4607,4544,3771,4538,1708,2070,2287,4235,4536,4537,4540,4541,4604,4605,8953);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '2' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` IN (8952,8950,3927,4599,8948,4601,4602,4608,1645,8766,18300,8932,27854,27855,27856,27857,30458,27859);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '3' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` IN (783,4234,4306,2838,4232,2318,2997,2589,4339,4338,2592,2835,2836,2319,8169,2996,4304,7912,3671,4305,9355,9356,9357,9358,9359,21840);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '3' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` IN (21877,23445,23446,23447,23449,25649,29573,29574,29577,23922,23923,29518,25874);
+DELETE FROM `gameobject_loot_template` WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` in (774,4632,15313,14157,14126);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '3', `groupid` = '4' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` = 2842;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2', `groupid` = '4' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` IN (3577,7909,1206,1210);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '5', `groupid` = '4' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` IN (6037,3864);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '4', `groupid` = '4' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` = 1705;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '7', `groupid` = '4' WHERE `entry` IN (2846,2850,2852,2855,2857,3715,4096,4149,105579,111095,142184,153451,153453,153454,181665,181798,181800,181802,181804) AND `item` = 1529;
+INSERT INTO `reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES ('4694', '15313', '0', '1', '1', '1', '0', ''), ('4694', '14157', '0', '1', '1', '1', '0', ''), ('4694', '14126', '0', '1', '1', '1', '0', '');
+UPDATE `reference_loot_template` SET `entry` = '4694' WHERE `entry` =1751 AND `item` =15505;
+
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `mincountOrRef` = '2', `maxcount` = '3' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` =118;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `maxcount` = '2' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` =858;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `maxcount` = '2' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` IN (2455,3385);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` in (929,1710,3827,6149,3928,13444,13446,22829,22832);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '2' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` IN (117,159,414,1179,1205,1707,4539,4542,4606,422,3770,4607,4544,3771,4538,1708,2070,2287,4235,4536,4537,4540,4541,4604,4605,8953);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '2' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` IN (8952,8950,3927,4599,8948,4601,4602,4608,1645,8766,18300,8932,27854,27855,27856,27857,30458,27859);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '3' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` IN (783,4234,4306,2838,4232,2318,2997,2589,4339,4338,2592,2835,2836,2319,8169,2996,4304,7912,3671,4305,9355,9356,9357,9358,9359,21840);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '3' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` IN (21877,23445,23446,23447,23449,25649,29573,29574,29577,23922,23923,29518,25874);
+DELETE FROM `gameobject_loot_template` WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` in (774,4632,15313,14157,14126,1270,1299,1297,1300,9242,9243,8151);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '3', `groupid` = '4' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` = 2842;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2', `groupid` = '4' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` IN (3577,7909,1206,1210);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '5', `groupid` = '4' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` IN (6037,3864);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '4', `groupid` = '4' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` = 1705;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '7', `groupid` = '4' WHERE `entry` IN (74447,74448,75293,75295,75296,75297,75298,75299,75300,123329,131978,131979,141596,153464,153468,153469,176944,184930,184933,184935,184937,184939,184941) AND `item` = 1529;
+DELETE FROM `gameobject_loot_template` WHERE `entry` IN (184930,184931,184935) AND `item` in (24605,24606,24607,24608,24609,24610,24611,24612,24717,24718,24719,24720,24721,24722,24723,24724,24830,24831,24832,24833,24834,24835,24836,24837,24942,24943,24944,24945,24946,24947,24948,24949,25033,25047,25061,25075,25089,25103,25117,25131,25187,25201,25215,25229,25243,25257,25299,25313,25327);
+INSERT INTO `gameobject_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES (184930, 24662, 5, 0, -24662, 1, 0, ''), (184935, 24662, 5, 0, -24662, 1, 0, ''), (184931, 24662, 5, 0, -24662, 1, 0, '');
+
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1' WHERE `entry` =20708 AND `item` IN (858,2455);
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '3' WHERE `entry` =20708 AND `item` IN (2318,2319,2996,2997);
+DELETE FROM `item_loot_template` WHERE `item` = 3213;
+
+UPDATE `gameobject_loot_template` SET `groupid` = '3' WHERE `entry` =2039 AND `item` IN (3766,3767,3769);
+
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `mincountOrRef` = '2', `maxcount` = '3' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` =118;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `maxcount` = '2' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` =858;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `maxcount` = '2' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` IN (2455,3385);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` in (929,1710,3827,6149,3928,13444,13446,22829,22832);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '2' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` IN (117,159,414,1179,1205,1707,4539,4542,4606,422,3770,4607,4544,3771,4538,1708,2070,2287,4235,4536,4537,4540,4541,4604,4605,8953);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '2' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` IN (8952,8950,3927,4599,8948,4601,4602,4608,1645,8766,18300,8932,27854,27855,27856,27857,30458,27859,27858,27860);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '3' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` IN (783,4234,4306,2838,4232,2318,2997,2589,4339,4338,2592,2835,2836,2319,8169,2996,4304,7912,3671,4305,9355,9356,9357,9358,9359,21840);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '3' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` IN (21877,23445,23446,23447,23449,25649,29573,29574,29577,23922,23923,29518,25874,30506,30507,30508,30509,17057,17058);
+DELETE FROM `gameobject_loot_template` WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` in (774,4632,15313,14157,14126);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '3', `groupid` = '4' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` = 2842;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2', `groupid` = '4' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` IN (3577,7909,1206,1210);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '5', `groupid` = '4' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` IN (6037,3864);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '4', `groupid` = '4' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` = 1705;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '7', `groupid` = '4' WHERE `entry` IN (153462,105581,184793,3714,4095,105570,105578,153462,153463,176224,179490,184716,184931,184936,184940) AND `item` = 1529;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 184931 AND `item` = 25271;
+
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '3' WHERE `entry` =193402 AND `item` IN (22829,33444,33449);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '4' WHERE `entry` =193402 AND `item` IN (44464,44468);
+
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(1115, 2039, 0, 1, 1, 496.922, 190.678, 41.9056, -0.366518, 0, 0, -0.182235, 0.983255, 3600, 3600, 100, 1),
+(1116, 2039, 0, 1, 1, 444.879, 196.229, 43.7402, -2.89724, 0, 0, -0.992546, 0.121873, 3600, 3600, 100, 1);
+
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '25', `groupid` = '0' WHERE `entry` =2039 AND `item` =2589;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1' WHERE  `entry` =2039 AND `item` IN (4536,3384,1710);
+
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '2' WHERE `entry` =2884 AND `item` IN (159,4540,2070,4536);
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 591;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(591,100,0,0,0,0,0,0,0x04,2000001012,0,0,0,0,0,0,0,''),
+(591,3000,15,3660,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(591,10000,0,0,0,0,0,0,0,2000001013,0,0,0,0,0,0,0,'');
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000001012 AND 2000001013;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000001012,'%s presents the Mind\'s Eye and the Singing Crystals before him...',0,2,0,0,NULL),
+(2000001013,'I have fashioned Yenniku\'s Soul Gem, $N...',0,0,0,0,NULL);
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 12054;
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(12054,0,29,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags removed'),
+(12054,1,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(12054,1000,9,23283,30,0,0,0,0,0,0,0,0,0,0,0,0,'Resp object (30 secs)'),
+(12054,2000,0,0,0,0,0,0,0,2000003876,0,0,0,0,0,0,0,''),
+(12054,4000,28,8,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'kneel'),
+(12054,5000,9,23284,25,0,0,0,0,0,0,0,0,0,0,0,0,'Resp object (25 secs)'),
+(12054,6000,1,25,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(12054,6200,13,0,0,0,188444,20,1,0,0,0,0,0,0,0,0,'use object'),
+(12054,9000,0,0,0,0,0,0,0,2000003877,0,0,0,0,0,0,0,''),
+(12054,15000,0,0,0,0,0,0,0,2000003878,0,0,0,0,0,0,0,''),
+(12054,21000,0,0,0,0,0,0,0,2000003879,0,0,0,0,0,0,0,''),
+(12054,26000,28,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'stand'),
+(12054,27000,0,0,0,0,0,0,0,2000003880,0,0,0,0,0,0,0,''),
+(12054,27100,29,2,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'NPCFlags added'),
+(12054,27200,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+UPDATE quest_template SET CompleteScript = 12054 WHERE entry = 12054;
+DELETE FROM dbscript_string WHERE entry BETWEEN 2000003876 AND 2000003880;
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000003876,'Let us see what this journal reveals.',0,0,0,0,NULL),
+(2000003877,'Scout Vor\'takh\'s hunch was correct. Brann Bronzebeard visited Thor Modan recently and this journal records his findings.',0,0,0,1,NULL),
+(2000003878,'He managed to explore the ruins before the battle began, discovering three runic plates inscribed with prophecies.',0,0,0,1,NULL),
+(2000003879,'Brann doesn\'t record the translations, but it says he committed them to memory before fleeing the battle.',0,0,0,1,NULL),
+(2000003880,'If you can translate those plates, we can find and capture Brann.',0,0,0,1,NULL);
+UPDATE gameobject SET spawntimesecsmin = -30, spawntimesecsmax = -30 WHERE id = 188443;
+UPDATE gameobject SET spawntimesecsmin = -25, spawntimesecsmax = -25 WHERE id = 188444;
+
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 73939 AND `item` IN (1529,1705,3864);
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '5', `groupid` = '0', `mincountOrRef` = '-7909', `comments` = NULL WHERE `entry` =73939 AND `item` =7909;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 141979 AND `item` = 3864;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '5', `groupid` = '0', `mincountOrRef` = '-7909', `comments` = NULL WHERE `entry` =141979 AND `item` =7909;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '5', `groupid` = '0', `mincountOrRef` = '-7909', `comments` = NULL WHERE `entry` =160845 AND `item` =7909;
+
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `mincountOrRef` = '2', `maxcount` = '3' WHERE `entry` IN (6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` =118;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `maxcount` = '2' WHERE `entry` IN (6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` =858;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1', `maxcount` = '2' WHERE `entry` IN (6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` IN (2455,3385);
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1' WHERE `entry` IN (6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` in (929,1710,3827,6149,3928,13444,13446,22829,22832);
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '2' WHERE `entry` IN (6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` IN (117,159,414,1179,1205,1707,4539,4542,4606,422,3770,4607,4544,3771,4538,1708,2070,2287,4235,4536,4537,4540,4541,4604,4605,8953);
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '2' WHERE `entry` IN (6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` IN (8952,8950,3927,4599,8948,4601,4602,4608,1645,8766,18300,8932,27854,27855,27856,27857,30458,27859,27858,27860);
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '3' WHERE `entry` IN (6355,6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` IN (783,4234,4306,2838,4232,2318,2997,2589,4339,4338,2592,2835,2836,2319,8169,2996,4304,7912,3671,4305,9355,9356,9357,9358,9359,21840);
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '3' WHERE `entry` IN (6355,6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` IN (21877,23445,23446,23447,23449,25649,29573,29574,29577,23922,23923,29518,25874,8170,14048,2771,2772,3357,3818,3356,2453,3358,3355);
+DELETE FROM `item_loot_template` WHERE `entry` IN (6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` in (774);
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '3', `groupid` = '4' WHERE `entry` IN (6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` = 2842;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '2', `groupid` = '4' WHERE `entry` IN (6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` IN (3577,7909,7910,1206,1210,2776);
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '5', `groupid` = '4' WHERE `entry` IN (6827,8484,9539,1056919035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` IN (6037,3864);
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '4', `groupid` = '4' WHERE `entry` IN (6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` IN (1705,2775);
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '7', `groupid` = '4' WHERE `entry` IN (6827,8484,9539,10569,19035,19425,20601,20602,20603,20767,20768,21150,21228) AND `item` IN (1529,3864);
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '90', `mincountOrRef` = '-3787' WHERE `entry` =10569 AND `item` =3787;
+DELETE FROM `item_loot_template` WHERE `entry` = 10569 AND `item` IN (3778,3779,3780,3781,3782,3783,3784,3785,3786,3792,3793,3794,3795,3796,3797,3798,3799,3800,3801,3802,3803,3804,3805,3806,3807,3808,3809,3810,3811,3812,3813,3814,3815,3816,3817,8746,8747,8748);
+
+UPDATE creature_template SET Detection=40 WHERE entry IN(25588);

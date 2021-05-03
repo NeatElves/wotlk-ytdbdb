@@ -1017,7 +1017,7 @@ UPDATE `dbscript_string` SET `content_loc8` = 'Я, конечно, могу на
 #UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000001010;
 #UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000001011;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 742 WHERE `entry` = 2000001012;
-UPDATE `dbscript_string` SET `content_loc8` = 'Камень души Йеннику готов, $N...' WHERE `entry` = 2000001013;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 743 WHERE `entry` = 2000001013;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 33092 WHERE `entry` = 2000001014;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 5288 WHERE `entry` = 2000001015;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 5289 WHERE `entry` = 2000001016;
@@ -3874,6 +3874,11 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 25886 
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 25887 WHERE `entry` = 2000003873;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 25672 WHERE `entry` = 2000003874;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 25673 WHERE `entry` = 2000003875;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 25911 WHERE `entry` = 2000003876;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 25901 WHERE `entry` = 2000003877;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 25902 WHERE `entry` = 2000003878;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 25903 WHERE `entry` = 2000003879;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 25904 WHERE `entry` = 2000003880;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 19143 WHERE `entry` = 2000005164;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 19141 WHERE `entry` = 2000005165;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 19254 WHERE `entry` = 2000005166;
