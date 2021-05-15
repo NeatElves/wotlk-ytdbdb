@@ -13341,3 +13341,71 @@ UPDATE `creature` SET `spawntimesecsmin` = '300', `spawntimesecsmax` = '300', `s
 
 # 14034_01_mangos_column_fix.sql
 ALTER TABLE creature_spawn_data_template MODIFY CurHealth INT UNSIGNED NOT NULL DEFAULT '0';
+
+DELETE FROM spell_target_position WHERE id=47506;
+INSERT INTO spell_target_position (id, target_map, target_position_x, target_position_y, target_position_z, target_orientation) VALUES (47506, 600, -369, -601, 2, 0);
+DELETE FROM spell_script_target WHERE entry IN (48597,48605,51825);
+INSERT INTO spell_script_target VALUES (48597, 1, 26620, 0), (48605, 1, 26620, 0), (51825, 1, 28016, 0);
+UPDATE creature_template SET UnitFlags = 0 WHERE entry = 26620;
+UPDATE creature_template SET ExtraFlags = 16384 WHERE entry = 26674;
+UPDATE creature_template SET UnitFlags = 64, InhabitType = 1 WHERE entry = 26638;
+DELETE FROM creature_spawn_data_template WHERE Entry = 20006;
+INSERT INTO creature_spawn_data_template (Entry, UnitFlags, Faction, ModelId, EquipmentId, CurHealth, CurMana, SpawnFlags) VALUES (20006,33554496,0,0,0,0,0,1);
+DELETE FROM dbscripts_on_spell WHERE id IN (49960);
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(49960,0,15,49958,0,0,0,0,0,49959,0,0,0,0,0,0,0,'Random spell');
+UPDATE creature_template SET MovementType = 2 WHERE entry = 27431;
+UPDATE creature_template SET Faction = 190, UnitFlags = 33024, MovementType = 2 WHERE entry = 28016;
+UPDATE creature_template SET MinLevelHealth = 13945000, MaxLevelHealth = 13945000, HealthMultiplier = 1000 WHERE entry = 28498;
+
+DELETE FROM gossip_menu_option WHERE menu_id = 10668 AND id = 5;
+INSERT INTO gossip_menu_option(menu_id, id, option_icon, option_text, option_id, npc_option_npcflag, action_menu_id, action_poi_id, action_script_id, box_coded, box_money, box_text, condition_id) VALUES
+(10668,5,0,'Underground...',1,1,-1,0,1066805,0,0,NULL,2106);
+DELETE FROM dbscripts_on_gossip WHERE id = 1066805;
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1066805,0,15,68081,0,0,0,0,6,0,0,0,0,0,0,0,0,'');
+DELETE FROM dbscripts_on_gossip WHERE id = 1066800;
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1066800,0,15,67834,0,0,0,0,6,0,0,0,0,0,0,0,0,'wormhole - borean tundra');
+DELETE FROM spell_target_position WHERE id IN (68081);
+INSERT INTO spell_target_position (id, target_map, target_position_x, target_position_y, target_position_z, target_orientation) VALUES (68081,571,5859.35,516.3,599.818,3.25774);
+UPDATE npc_vendor SET condition_id = 2106 WHERE entry = 35826;
+UPDATE gossip_menu_option SET condition_id = 2106 WHERE menu_id =10668 AND id != 5;
+
+UPDATE creature_template SET Detection = 5 WHERE entry = 25026;
+UPDATE creature SET MovementType=2, spawndist=0 WHERE guid IN (5940066,5940068);
+DELETE FROM `creature_movement` WHERE id IN (5940066,5940068);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
+(5940066,1,18.687862,-7.642696,14.724797,100,0,0),
+(5940066,2,16.599606,0.394560,14.738153,100,0,0),
+(5940066,3,18.695742,6.778407,14.737458,100,0,0),
+(5940066,4,5.230544,7.850276,14.107260,100,0,0),
+(5940066,5,10.579289,4.469806,14.400600,100,0,0),
+(5940066,6,10.0313130,-4.859585,14.372320,100,0,0),
+(5940066,7,5.481131,-8.600012,14.099172,100,0,0),
+(5940066,8,10.153079,-7.62989521,14.296471,100,0,0),
+(5940068,1,29.717529,4.005461,19.660505,1.62,0,0),
+(5940068,2,29.675438,-1.8581197,19.68169975,4.64,0,0);
+UPDATE creature SET position_x=27.975333, position_y=6.056054, position_z=19.281612, orientation = 1.47, MovementType=0, spawndist=0 WHERE guid=5940049;
+UPDATE creature SET MovementType=2, spawndist=0 WHERE guid IN (5940034);
+DELETE FROM `creature_movement` WHERE id IN (5940034);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
+(5940034,1,-21.434692,1.9769058,5.47157526,3.12,100,5),
+(5940034,2,-13.856879,1.811385,8.605638,100,0,0),
+(5940034,3,-3.471096,-5.016453,8.726841,100,0,0),
+(5940034,4,2.665297,-5.283883,14.083339,100,0,0),
+(5940034,5,19.731867,-5.814472,14.779340,100,0,0),
+(5940034,6,24.157352,-5.453389,18.540447,100,1000,0),
+(5940034,7,19.731867,-5.814472,14.779340,100,0,0),
+(5940034,8,2.665297,-5.283883,14.083339,100,0,0),
+(5940034,9,-3.471096,-5.016453,8.726841,100,0,0),
+(5940034,10,-13.856879,1.811385,8.605638,100,0,0);
+
+DELETE FROM dbscripts_on_relay WHERE id = 19989;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(19989,0,31,15420,30,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Ley-Keeper Caidanis 15405 EAI: search for 15420'),
+(19989,10,0,0,0,0,15420,35,7,2000003790,0,0,0,0,0,0,0,'Part of Ley-Keeper Caidanis 15405 EAI: buddy say'),
+(19989,5000,0,0,0,0,0,0,0x04,2000003890,0,0,0,0,0,0,0,'Part of Ley-Keeper Caidanis 15405 EAI: say');
+INSERT INTO dbscript_string (entry, content_default, sound, type, language, emote, comment) VALUES
+(2000003790,'These arcane sanctums of yours are quite... interesting Mr. Caidanis.  I appreciate the information you have given me today.',0,0,0,1,NULL),
+(2000003890,'It\'s been a pleasure, Mr. Anvilward.  I must say your enthusiastic interest in our operations is most... unexpected.',0,0,0,1,NULL);
