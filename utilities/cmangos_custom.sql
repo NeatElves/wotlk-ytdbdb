@@ -6,13 +6,13 @@
 -- These updates are applied to ensure expected functionning from a gameplay point of view
 -- (aka "Blizzlike") when using CMaNGOS core.
 --
--- These updates SHOULD NOT be part of a full DB dump (like for DB release) or inserted in a regular 
+-- These updates SHOULD NOT be part of a full DB dump (like for DB release) or inserted into a regular
 -- SQL update file as we need to keep DB data as "pure" as possible to analyse them and
 -- deduce proper core behaviour from them.
 -- 
 -- Possible but non-exhaustive reasons for these updates to be needed:
 --	- CMaNGOS core does not properly handle the data these updates are fixing (yet)
---	- Official/sniff data are from a different expansion/patch and where possibly changed since Classic
+--	- Official/sniff data are from a different expansion/patch and were possibly changed since Classic
 --	- Official/sniff data from client are different from what they are server-side
 --	- Data or their parsing were wrong
 
@@ -34,13 +34,13 @@ UPDATE gameobject_template SET data3=1 WHERE entry=177272;
 -- Make Incantion of Celebras Trap only visible by GM
 UPDATE gameobject_template SET data8=1 WHERE entry=178963;
 
--- Set radius of Supply Crate trap to zero to prevent trap from triggering with coming by players (it should trigger on player usage of original GO)
+-- Set radius of Supply Crate trap to zero to prevent trap from being triggered by nearby players (it should trigger on player usage of original GO)
 UPDATE gameobject_template SET data2=0 WHERE entry IN (175534, 175535, 175536, 175537);
 
 -- Make Dawn's Gambit Trap only visible by GM
 UPDATE gameobject_template SET data2=5, data3=0, data8=0 WHERE entry=176110;
 -- Dawn's Gambit: add data from GO trap 176110 until we are able to trigger trap GOs without spells
-UPDATE gameobject_template SET data2=5, data3=18110, data4=1, data8=1 WHERE entry=177304; 
+UPDATE gameobject_template SET data2=5, data3=18110, data4=1, data8=1 WHERE entry=177304;
 
 -- The Demon Seed GO: make it despawnable on use with short autoclose value (autoclose = autoCloseTime / IN_MILLISECONDS (prior to 3.0.3, conversion was / 0x10000))
 UPDATE gameobject_template SET data3=1000, data5=1 WHERE entry=3524;

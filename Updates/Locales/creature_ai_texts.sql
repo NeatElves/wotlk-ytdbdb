@@ -24,6 +24,9 @@ UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 59 W
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 60 WHERE `entry` = -16;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 9489 WHERE `entry` = -17;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 6178 WHERE `entry` = -18;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -19;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -20;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 5619 WHERE `entry` = -22;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 318 WHERE `entry` = -23;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 319 WHERE `entry` = -24;
