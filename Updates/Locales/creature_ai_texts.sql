@@ -2843,6 +2843,23 @@ UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 3859
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21112;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21113;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21114;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21115;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21116;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21117;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21118;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21119;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21120;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21121;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21122;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21123;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21124;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21125;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21126;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21127;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21128;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21129;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21130;
+#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -21131;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

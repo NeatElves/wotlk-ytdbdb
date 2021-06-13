@@ -3904,6 +3904,7 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 28505 
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 28511 WHERE `entry` = 2000003897;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 28512 WHERE `entry` = 2000003898;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 28509 WHERE `entry` = 2000003899;
+UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 30599 WHERE `entry` = 2000003900;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 19143 WHERE `entry` = 2000005164;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 19141 WHERE `entry` = 2000005165;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 19254 WHERE `entry` = 2000005166;
