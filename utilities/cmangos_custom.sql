@@ -12,7 +12,7 @@
 -- 
 -- Possible but non-exhaustive reasons for these updates to be needed:
 --	- CMaNGOS core does not properly handle the data these updates are fixing (yet)
---	- Official/sniff data are from a different expansion/patch and were possibly changed since Classic
+--	- Official/sniff data are from a different expansion/patch and where possibly changed since Classic
 --	- Official/sniff data from client are different from what they are server-side
 --	- Data or their parsing were wrong
 
@@ -24,17 +24,28 @@
 -- ============================================================
 -- Classic section
 -- ============================================================
-
--- Containment Coffer TRAP - make it invisible
-UPDATE gameobject_template SET displayId=0 WHERE entry=103575;
-
 -- Make Moonwell GO server-side (visible by GM only)
 UPDATE gameobject_template SET data3=1 WHERE entry=177272;
 
 -- Make Incantion of Celebras Trap only visible by GM
 UPDATE gameobject_template SET data8=1 WHERE entry=178963;
 
--- Set radius of Supply Crate trap to zero to prevent trap from being triggered by nearby players (it should trigger on player usage of original GO)
+-- Make some trap GO only visible by GM
+UPDATE gameobject_template SET data8=1 WHERE entry=103575; -- Containment Coffer TRAP
+UPDATE gameobject_template SET data8=1 WHERE entry=128972; -- Shallow Grave TRAP
+UPDATE gameobject_template SET data8=1 WHERE entry=176592; -- Shellfish Trap
+UPDATE gameobject_template SET data8=1 WHERE entry=176750; -- Kodo Bones
+UPDATE gameobject_template SET data8=1 WHERE entry=177493; -- Fire of Elune (Trap
+UPDATE gameobject_template SET data8=1 WHERE entry=177529; -- Altar of Elune (Trap
+UPDATE gameobject_template SET data8=1 WHERE entry=178124; -- Resonite Crystal (Trap
+UPDATE gameobject_template SET data8=1 WHERE entry=178248; -- Naga Brazier (trap
+UPDATE gameobject_template SET data8=1 WHERE entry=171941; -- Blackrock Keg Trap
+UPDATE gameobject_template SET data8=1 WHERE entry=180391; -- Heart of Hakkar Spell Emitter
+UPDATE gameobject_template SET data8=1 WHERE entry=181214; -- Necropolis critter spawner
+UPDATE gameobject_template SET data8=1 WHERE entry=179324; -- Frostwolf Landmine
+UPDATE gameobject_template SET data8=1 WHERE entry=179325; -- Stormpike Landmine
+
+-- Set radius of Supply Crate trap to zero to prevent trap from triggering with coming by players (it should trigger on player usage of original GO)
 UPDATE gameobject_template SET data2=0 WHERE entry IN (175534, 175535, 175536, 175537);
 
 -- Make Dawn's Gambit Trap only visible by GM
@@ -59,10 +70,11 @@ UPDATE gameobject_template SET data2=70 WHERE entry=178088;
 -- Set 20 yards radius to Suppression Device GO and cooldown because it needs to be triggered by SD2 script otherwise (and said script does not exist yet because GO spell casting in not implemented)
 UPDATE gameobject_template SET data2=20 WHERE entry=179784;
 
+
 -- Currently the core cannot make a GO usable for a specific quest if the items it holds are not objectives of the quest
 
 -- Link Hive'Ashi Pod GO to quest 1126 so it is usable by players on the quest
-UPDATE gameobject_template SET data8=1126 WHERE entry=178553; 
+UPDATE gameobject_template SET data8=1126 WHERE entry=178553;
 
 -- Link Azsharite GOs to quest 3602 so they are usable by players on the quest
 UPDATE gameobject_template SET data8=3602 WHERE entry IN (152620, 152621, 152622, 152631);
@@ -84,10 +96,6 @@ UPDATE gameobject_template SET `faction`=1375 WHERE entry=179688; -- "Treasure" 
 -- SpellFocus radius reduced to 5 (sync with eff1 from spell:17016 that activates target there = 5y)
 UPDATE gameobject_template SET data1 = 5 WHERE entry BETWEEN 176094 AND 176097;
 
--- Ritual Candle Aura
-UPDATE gameobject_template SET `data8`=1 WHERE entry=179688; -- add serverside attribute so that it's not visible to players
-UPDATE gameobject_template SET `faction`=1375 WHERE entry=179688; -- "Treasure" faction 1375 here is guessed based on when patch 1.4 was released, and the fact that it's hostile to Demon faction 90
-
 -- Musty Tome 176150/176151
 -- must despawn after used (has that flag set up.. but with restock timer it will never happen)
 UPDATE gameobject_template SET data2=0 WHERE entry IN (176150,176151);
@@ -95,9 +103,14 @@ UPDATE gameobject_template SET data2=0 WHERE entry IN (176150,176151);
 -- Make PX-238 Winter Wondervolt TRAP GO server-side (visible by GM only)
 UPDATE gameobject_template SET `data8`=1 WHERE entry=180797;
 
+-- Temporary fix data6 for GO 178559 (Larva Spewer) in prevision of coming core update
+UPDATE gameobject_template SET data6=0 WHERE entry=178559;
+
+-- Drek'Thar's Scrolls 179004 - seemingly never used
+UPDATE `gameobject_template` SET `data1` = 0 WHERE `entry` = 179004;
+
 -- Verigan's Fist: must despawn during scripted quest
 UPDATE gameobject_template SET `data3`=0, `data5`=1 WHERE entry=102413;
-
 
 -- ============================================================
 -- TBC section
@@ -113,6 +126,10 @@ UPDATE gameobject_template SET data3=0, data8=1 WHERE entry=178673; -- 21650, 0
 
 -- Zul'Aman - Tanzar's Trunk - Is not subject to group loot per blizzlike data but all the other chests are. Confirmed data in sniff to be 0, however no such issues reported on retail. Confirmation that blizz sends unfixed GO template data???
 UPDATE gameobject_template SET data15=1 WHERE entry IN(186648);
+
+-- Make some trap GO only visible by GM
+UPDATE gameobject_template SET data8=1 WHERE entry=184718; -- Cauldron Summoner
+UPDATE gameobject_template SET data8=1 WHERE entry=184722; -- Cauldron Bug Summoner
 
 -- -------------------------------
 -- Item custom changes
