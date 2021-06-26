@@ -12,7 +12,7 @@
 -- 
 -- Possible but non-exhaustive reasons for these updates to be needed:
 --	- CMaNGOS core does not properly handle the data these updates are fixing (yet)
---	- Official/sniff data are from a different expansion/patch and where possibly changed since Classic
+--	- Official/sniff data are from a different expansion/patch and were possibly changed since Classic
 --	- Official/sniff data from client are different from what they are server-side
 --	- Data or their parsing were wrong
 
@@ -45,7 +45,7 @@ UPDATE gameobject_template SET data8=1 WHERE entry=181214; -- Necropolis critter
 UPDATE gameobject_template SET data8=1 WHERE entry=179324; -- Frostwolf Landmine
 UPDATE gameobject_template SET data8=1 WHERE entry=179325; -- Stormpike Landmine
 
--- Set radius of Supply Crate trap to zero to prevent trap from triggering with coming by players (it should trigger on player usage of original GO)
+-- Set radius of Supply Crate trap to zero to prevent trap from being triggered by nearby players (it should trigger on player usage of original GO)
 UPDATE gameobject_template SET data2=0 WHERE entry IN (175534, 175535, 175536, 175537);
 
 -- Make Dawn's Gambit Trap only visible by GM
@@ -96,10 +96,6 @@ UPDATE gameobject_template SET `faction`=1375 WHERE entry=179688; -- "Treasure" 
 -- SpellFocus radius reduced to 5 (sync with eff1 from spell:17016 that activates target there = 5y)
 UPDATE gameobject_template SET data1 = 5 WHERE entry BETWEEN 176094 AND 176097;
 
--- Musty Tome 176150/176151
--- must despawn after used (has that flag set up.. but with restock timer it will never happen)
-UPDATE gameobject_template SET data2=0 WHERE entry IN (176150,176151);
-
 -- Make PX-238 Winter Wondervolt TRAP GO server-side (visible by GM only)
 UPDATE gameobject_template SET `data8`=1 WHERE entry=180797;
 
@@ -108,6 +104,10 @@ UPDATE gameobject_template SET data6=0 WHERE entry=178559;
 
 -- Drek'Thar's Scrolls 179004 - seemingly never used
 UPDATE `gameobject_template` SET `data1` = 0 WHERE `entry` = 179004;
+
+-- Musty Tome 176150/176151
+-- must despawn after used (has that flag set up.. but with restock timer it will never happen)
+UPDATE gameobject_template SET data2=0 WHERE entry IN (176150,176151);
 
 -- Verigan's Fist: must despawn during scripted quest
 UPDATE gameobject_template SET `data3`=0, `data5`=1 WHERE entry=102413;

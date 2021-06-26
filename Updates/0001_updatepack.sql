@@ -19641,3 +19641,65 @@ INSERT INTO conditions VALUES (3547, -3, 733, 0, 0, 0, 0, '');
 
 UPDATE `creature_template` SET `UnitFlags` = 32832, `MeleeBaseAttackTime` = 2000, `RangedBaseAttackTime` = 2000 WHERE `entry` = 10996;
 REPLACE INTO `creature_template_addon` (`entry`, `b2_0_sheath`, `b2_1_pvp_state`) VALUES (10996, 1, 16);
+
+UPDATE creature_template SET SpeedWalk = (2.5 / 2.5), MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE entry=5400;
+
+UPDATE `creature_template` SET `scale` = 1.25 WHERE `entry` = 7725;
+UPDATE `creature_template` SET `scale` = 1.35 WHERE `entry` = 7726;
+UPDATE `creature_template` SET `scale` = 1.35 WHERE `entry` = 7727;
+
+UPDATE `creature_template` SET `SpeedWalk` = (3 / 2.5) WHERE `entry` = 12818;
+
+UPDATE creature_template SET MeleeBaseAttackTime=2000, RangedBaseAttackTime=2000 WHERE Entry=14369;
+
+UPDATE `creature_template` SET `Detection` = 40 where `entry` = 15339;
+
+UPDATE `creature_template` SET `Faction` = 1275 WHERE `Entry` = 10981;
+
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|65536 WHERE `entry` IN (223,1498,2050,2055,2227,2308,2458,2459,2492,2799,2802,2934,4486,4549,4550,4552,4553,4554,4555,4556,4557,4558,4559,4560,4561,4562,4563,4564,4565,4566,4567,4568,4569,4570,4571,4572,4573,4574,4575,4576,4577,4578,4580,4581,4582,4584,4585,4586,4587,4588,4589,4590,4591,4592,4593,4594,4595,4596,4597,4598,4599,4600,4601,4602,4603,4604,4605,4606,4607,4609,4610,4611,4612,4613,4614,4615,4616,4617,4775,5052,5190,5204,5651,5662,5663,5664,5665,5666,5668,5669,5670,5675,5693,5696,5698,5699,5700,5701,5702,5703,5704,5705,5706,5707,
+5732,5733,5734,5744,5747,5753,5754,5819,5820,5821,6293,6395,6411,6467,6522,6566,7087,7297,7683,7825,8390,8403,8672,8721,10053,10136,10781,10879,11031,11044,11048,11049,11067,11750,11870,13429,14402,14403,14404,14729,15007,15675,15676,15682,15683,15684,15686,277,279,297,331,332,338,340,376,461,466,482,483,656,914,928,957,1141,1212,1257,1275,1285,1286,1287,1289,1291,1292,1294,1295,1297,1298,1299,1300,1301,1302,1303,1304,1305,1307,1308,1309,1310,1311,1312,1313,1314,1315,1316,1317,1318,1319,1320,1321,1323,1324,1325,1326,1327,1328,1333,1339,1341,1346,1347,1348,1349,1350,1351,1395,1402,1405,1413,1414,
+1415,1416,1419,1427,1428,1429,1431,1432,1433,1435,1439,1440,1444,1472,1477,1478,1646,1721,1747,1750,1751,1752,2198,2285,2327,2330,2331,2439,2455,2456,2457,2485,2504,2795,2879,3513,3518,3520,3626,3627,3628,3629,4078,4959,4960,4974,4981,4984,5081,5193,5384,5386,5413,5479,5480,5482,5483,5484,5489,5491,5492,5493,5494,5495,5496,5497,5498,5499,5500,5502,5503,5504,5505,5506,5509,5510,5511,5512,5513,5514,5515,5516,5517,5518,5519,5520,5564,5565,5566,5567,5694,6089,6122,6171,6173,6174,6267,6579,6946,7207,7232,7295,7766,7798,7917,8118,8383,8670,8719,9584,9977,10782,11026,11068,11069,11096,11397,11827,11828,11867,11916,12336,12480,12481,12778,12779,12780,12781,12783,12784,12785,12786,12787,14423,14438,14439,14450,14481,14497,14722,14981,15008,15659,15708,15766,16002,16005,16105,16106,17804);
+
+DELETE FROM spell_proc_event WHERE entry IN (1784,5215);
+
+UPDATE creature_template SET InhabitType = 4 WHERE entry IN (20845,21025);
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 11142;
+INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(11142, 0, 0, 29, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remove Npc Flag'),
+(11142, 0, 100, 0, 0, 0, 0, 0, 0, 0, 2000001014, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(11142, 500, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Orientation'),
+(11142, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 2000001000, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(11142, 5000, 0, 0, 0, 0, 0, 0, 0, 0, 2000001001, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(11142, 10000, 0, 0, 0, 0, 0, 0, 0, 0, 2000001002, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(11142, 15000, 0, 0, 0, 0, 0, 0, 0, 0, 2000001003, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(11142, 20000, 0, 0, 0, 0, 0, 0, 0, 0, 2000001004, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(11142, 20100, 0, 1, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(11142, 20500, 0, 29, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Add Npc Flag');
+
+DELETE FROM dbscripts_on_quest_start WHERE id = 804 AND command =29;
+INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(804, 500, 0, 29, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remove Npc Flag'),
+(804, 7500, 0, 29, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Add Npc Flag');
+UPDATE `creature` SET `position_x` = '-397.761', `position_y` = '-4108.99', `position_z` = '50.2876', `orientation` = '1.41372' WHERE `guid` =35774;
+UPDATE `creature` SET `position_x` = '-600.132', `position_y` = '-4186.19', `position_z` = '41.2663', `orientation` = '4.15388' WHERE `guid` =52278;
+UPDATE `creature` SET `position_x` = '-625.296', `position_y` = '-4210.17', `position_z` = '38.2966', `orientation` = '0.802851', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35197;
+UPDATE `creature` SET `position_x` = '-630.02', `position_y` = '-4204.55', `position_z` = '38.2173', `orientation` = '5.44543' WHERE `guid` =35177;
+UPDATE `creature` SET `position_x` = '-624.024', `position_y` = '-4214.41', `position_z` = '38.2173', `orientation` = '5.61996', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35201;
+UPDATE `creature` SET `position_x` = '-623.939', `position_y` = '-4203.88', `position_z` = '38.4285', `orientation` = '5.48033', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35198;
+UPDATE `creature` SET `position_x` = '-617.395', `position_y` = '-4202.4', `position_z` = '38.2966', `orientation` = '4.86947', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35228;
+UPDATE `creature` SET `position_x` = '-607.434', `position_y` = '-4251.33', `position_z` = '39.0393', `orientation` = '3.28122', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35272;
+UPDATE `creature` SET `position_x` = '-638.159', `position_y` = '-4237.94', `position_z` = '38.2173', `orientation` = '0.017453' WHERE `guid` =35162;
+UPDATE `creature` SET `position_x` = '-639.344', `position_y` = '-4230.19', `position_z` = '38.5605', `orientation` = '5.72468', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35155;
+UPDATE `creature` SET `position_x` = '-635.462', `position_y` = '-4227.52', `position_z` = '38.371', `orientation` = '5.09636', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35168;
+UPDATE `creature` SET `position_x` = '-629.052', `position_y` = '-4228.06', `position_z` = '38.2334', `orientation` = '5.0091', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35185;
+UPDATE `creature` SET `position_x` = '-611.587', `position_y` = '-4322.08', `position_z` = '40.0927', `orientation` = '1.16937' WHERE `guid` =35255;
+UPDATE `creature` SET `position_x` = '-561.628', `position_y` = '-4221.8', `position_z` = '41.6737', `orientation` = '3.03687' WHERE `guid` =35397;
+UPDATE `creature` SET `position_x` = '-560.125', `position_y` = '-4217.2', `position_z` = '41.6737', `orientation` = '3.33358', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35411;
+UPDATE `creature` SET `position_x` = '-565.428', `position_y` = '-4214.2', `position_z` = '41.6737', `orientation` = '5.18363', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35398;
+UPDATE `creature` SET `position_x` = '-581.734', `position_y` = '-4109.51', `position_z` = '43.6077', `orientation` = '3.75246', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35359;
+UPDATE `creature` SET `position_x` = '-582.434', `position_y` = '-4102.68', `position_z` = '42.7049', `orientation` = '4.01426', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35345;
+UPDATE `creature` SET `position_x` = '-588.829', `position_y` = '-4102.27', `position_z` = '43.5465', `orientation` = '4.67748', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35316;
+UPDATE `creature` SET `position_x` = '-604.013', `position_y` = '-4107.27', `position_z` = '43.5945', `orientation` = '5.60251' WHERE `guid` =35281;
+UPDATE `creature` SET `position_x` = '-606.874', `position_y` = '-4111.87', `position_z` = '43.028', `orientation` = '0.244346', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35274;
+UPDATE `creature` SET `position_x` = '-588.703', `position_y` = '-4144.94', `position_z` = '41.1033', `orientation` = '3.63029', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35315;
