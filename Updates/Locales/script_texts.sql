@@ -1722,8 +1722,8 @@ UPDATE `script_texts` SET `content_loc8` = 'Глупцы, вы думаете, �
 UPDATE `script_texts` SET `content_loc8` = 'Будьте вы прокляты, смертные! Все мои планы реванша, вся моя ненависть... Ничего, за меня отомстят...' WHERE `entry` = -1329018;
 UPDATE `script_texts` SET `content_loc8` = 'Обо мне не беспокойтесь! Убейте это чудовище и избавьте, наконец, мир от его скверны!' WHERE `entry` = -1329019;
 UPDATE `script_texts` SET `content_loc8` = 'Моя смерть ничего не значит... свет... победит!' WHERE `entry` = -1329020;
-UPDATE `script_texts` SET `content_loc8` = 'Ривендер! Я пришел за тобой!' WHERE `entry` = -1329021;
-UPDATE `script_texts` SET `content_loc8` = 'Гр-р-р!' WHERE `entry` = -1329022;
+#UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1329021;
+#UPDATE `script_texts` SET `content_loc8` = NULL WHERE `entry` = -1329022;
 UPDATE `script_texts` SET `content_loc8` = 'Назад, держать строй! Мы не можем проиграть, иначе все будет потеряно!' WHERE `entry` = -1329023;
 UPDATE `script_texts` SET `content_loc8` = 'На защиту лестниц!' WHERE `entry` = -1329024;
 UPDATE `script_texts` SET `content_loc8` = 'Плеть ворвалась в бастион! Удвойте усилия! Не сдаваться!' WHERE `entry` = -1329025;

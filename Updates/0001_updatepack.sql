@@ -19703,3 +19703,5 @@ UPDATE `creature` SET `position_x` = '-588.829', `position_y` = '-4102.27', `pos
 UPDATE `creature` SET `position_x` = '-604.013', `position_y` = '-4107.27', `position_z` = '43.5945', `orientation` = '5.60251' WHERE `guid` =35281;
 UPDATE `creature` SET `position_x` = '-606.874', `position_y` = '-4111.87', `position_z` = '43.028', `orientation` = '0.244346', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35274;
 UPDATE `creature` SET `position_x` = '-588.703', `position_y` = '-4144.94', `position_z` = '41.1033', `orientation` = '3.63029', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =35315;
+
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|4096 WHERE `entry` IN (10676,10682);
