@@ -43,10 +43,37 @@ REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_in
 (3322401, 33224, 22, 0, 100, 1, 58, 2878, 0, 0, 0, 0, 41, 0, 0, 0, 12, 33220, 0, 30000, 28, 6, 62574, 0, 'YTDB - Q. A Blade Fit For A Champion'),
 (3322402, 33224, 22, 0, 100, 1, 58, 2879, 0, 0, 0, 0, 11, 62581, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Q. A Blade Fit For A Champion');
 
+-- Midsummer Fire Festival
+REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
+('2596201','25962','1','0','100','1','30000','45000','30000','45000','0','0','53','-12009','0','0','0','0','0','0','0','0','0','0','YTDB - Fire Eater - Start Random Relay Script on Timer OOC'),
+('2599401','25994','1','0','100','1','30000','45000','30000','45000','0','0','53','-12009','0','0','0','0','0','0','0','0','0','0','YTDB - Flame Eater - Start Random Relay Script on Timer OOC');
+-- Fire/Flame Eater has no equipment by default, handled via script instead
+UPDATE creature_template SET EquipmentTemplateId=0 WHERE Entry IN (25962,25994);
+UPDATE creature_template_addon SET auras=NULL WHERE entry IN (25962,25994);
+-- Camp Pavilion seems to be visible from very long distance - add far view flag
+UPDATE gameobject_template SET ExtraFlags=ExtraFlags|0x00040000 WHERE entry=188021;
+DELETE FROM dbscripts_on_relay WHERE id IN (10202,10203,10204);
+INSERT INTO dbscripts_on_relay (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+(10202, 1000, 0, 42, 0, 0, 0, 0, 0, 0, 2200, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Fire/Flame Eater - Equip Monster - Item, Potion Green'),
+(10202, 4000, 0, 1, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Fire/Flame Eater - Emote OneShotEatNoSheathe'),
+(10202, 7000, 0, 15, 46332, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Fire/Flame Eater - Cast Midsummer Flame Breath'),
+(10202, 13000, 0, 15, 46332, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Fire/Flame Eater - Cast Midsummer Flame Breath'),
+(10202, 19000, 0, 15, 46332, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Fire/Flame Eater - Cast Midsummer Flame Breath'),
+(10202, 23000, 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Fire/Flame Eater - Remove Equipment'),
+(10202, 24000, 0, 15, 45407, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Fire/Flame Eater - Cast Reveler - Applause/Cheer'),
+(10203, 1000, 0, 42, 0, 0, 0, 0, 0, 0, 1906, 2081, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Fire/Flame Eater - Equip Monster - Torch and Monster - Torch, Offhand'),
+(10203, 4000, 0, 15, 46322, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Fire/Flame Eater - Cast NPC Juggle Torch (Juggling)'),
+(10203, 20000, 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Fire/Flame Eater - Remove Equipment'),
+(10203, 21000, 0, 15, 45407, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Fire/Flame Eater - Cast Reveler - Applause/Cheer'),
+(10204, 3000, 0, 36, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Fire/Flame Eater and Midsummer Celebrant - Reset Orientation');
+DELETE FROM `dbscript_random_templates` WHERE `id` = 12009;
+INSERT INTO dbscript_random_templates (id, type, target_id, chance, comments) VALUES
+(12009,1,10202,0,'YTDB - 25962/25994 - Fire Breathing Script'), (12009,1,10203,0,'YTDB - 25962/25994 - Torch Juggling Script');
+
 INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`language`,`emote`,`broadcast_text_id`,`comment`) VALUES
 (-10042,'You''ve sealed your fate, Akama. The Master will learn of your betrayal!','0','1','0','0','20745','YTDB(TBCDB) - Vagath');
 
 REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (2286501, 22865, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 11, 39663, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Illidan''s Presence - Cast Summon Cosmetic Fel Fire on Spawn');
 
-UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,20666,21025,22865,22990,30366,32838,33211,33224);
+UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,20666,21025,22865,22990,25962,25994,30366,32838,33211,33224);

@@ -46,6 +46,15 @@ There are also options that you can enable/disable in `InstallFullDB.config` to 
 
 For a full installation guide, please refer to [CMaNGOS installation instructions][14].
 
+And if something goes wrong?
+----------------------------
+To submit an issue for anything related to wow-world (creatures, objects, movement, events etc), please use: [Forum YTDB database:][1].
+
+To submit an issue for Core mechanicks (spells, Boss scripts, etc), Please use: [Issue Tracker:][2].
+
+
+[1]: http://ytdb.ru/ "Forum YTDB database"
+[2]: https://github.com/cmangos/issues/issues/ "Issue Tracker"
 [10]: https://github.com/cmangos/mangos-wotlk "CMaNGOS-WOTLK"
 [11]: http://cmangos.net/ "CMaNGOS Project"
 [14]: https://github.com/cmangos/issues/wiki/Installation-Instructions "CMaNGOS installation instructions"
