@@ -24514,7 +24514,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (45811, 20, -9552.15, -732.295, 90.4276, 0.695839, 0, 0, NULL),
 (45811, 21, -9549.66, -730.218, 90.4276, 0.695839, 0, 0, NULL);
 UPDATE `creature_template` SET `SpeedWalk` = (2.5 / 2.5) WHERE `entry` = 1364;
-UPDATE `creature` SET `position_x` = -3649.492, `position_y` = -727.488, `position_z` = 10.7234, `orientation` = 0.1889552, `spawndist` = 1, `MovementType` = 1 WHERE `id` = 5405;
+UPDATE `creature` SET `position_x` = -3649.492, `position_y` = -727.488, `position_z` = 10.7234, `orientation` = 0.1889552, `spawndist` = 1, `MovementType` = 1 WHERE `guid` = 27294 AND `id` = 5405;
 UPDATE `creature` SET `position_x` = -3839.476, `position_y` = -837.3205, `position_z` = 16.94844, `orientation` = 5.579004, `spawndist` = 1, `MovementType` = 1 WHERE `id` = 3181;
 UPDATE `creature` SET `position_x` = -9435.269, `position_y` = -3078.537, `position_z` = 136.72, `orientation` = 2.391101 WHERE `id` = 486;
 UPDATE `creature` SET `position_x` = -10559.5, `position_y` = -1152.25, `position_z` = 28.07649, `orientation` = 4.712389, `spawndist` = 1, `MovementType` = 1 WHERE `id` = 264;
@@ -24547,7 +24547,6 @@ UPDATE `creature` SET `position_x` = -8634.219, `position_y` = 886.7424, `positi
 UPDATE `creature` SET `position_x` = -8520.597, `position_y` = 796.2466, `position_z` = 106.602, `orientation` = 0.715585 WHERE `id` = 1351;
 UPDATE `creature` SET `position_x` = -8961.837, `position_y` = 809.2073, `position_z` = 109.6296, `orientation` = 2.076942 WHERE `id` = 1429;
 UPDATE `creature` SET `position_x` = -8345.721, `position_y` = 383.7659, `position_z` = 122.3577, `orientation` = 2.129302 WHERE `id` = 1440;
-UPDATE `creature` SET `position_x` = -5049.987, `position_y` = -1270.264, `position_z` = 510.4077, `orientation` = 0.03490658 WHERE `id` = 15351;
 UPDATE `creature` SET `position_x` = -8469.34, `position_y` = 582.9312, `position_z` = 96.05196, `orientation` = 5.375614 WHERE `id` = 1472;
 UPDATE `creature` SET `position_x` = -9010.778, `position_y` = 876.5748, `position_z` = 148.7018, `orientation` = 4.869469 WHERE `id` = 5694;
 UPDATE `creature` SET `position_x` = -8958.817, `position_y` = 816.4159, `position_z` = 109.5296, `orientation` = 3.787364 WHERE `id` = 5567;
@@ -24565,7 +24564,7 @@ UPDATE `creature` SET `position_x` = -8989.699, `position_y` = 861.8811, `positi
 UPDATE `creature` SET `position_x` = -8564.393, `position_y` = 880.634, `position_z` = 106.602, `orientation` = 3.822271 WHERE `id` = 5492;
 UPDATE `creature` SET `position_x` = -8573.129, `position_y` = 861.0734, `position_z` = 106.602, `orientation` = 0.715585 WHERE `id` = 5491;
 UPDATE `creature` SET `position_x` = -8519.56, `position_y` = 862.8282, `position_z` = 109.911, `orientation` = 4.642576 WHERE `id` = 5489;
-UPDATE `creature` SET `position_x` = -8850.787, `position_y` = 829.8005, `position_z` = 104.7796, `orientation` = 2.495821 WHERE `id` = 5387;
+#UPDATE `creature` SET `position_x` = -8850.787, `position_y` = 829.8005, `position_z` = 104.7796, `orientation` = 2.495821 WHERE `id` = 5387;
 UPDATE `creature` SET `position_x` = -8681.224, `position_y` = 432.526, `position_z` = 99.30119, `orientation` = 1.658063 WHERE `id` = 4961;
 UPDATE `creature` SET `position_x` = -8512.399, `position_y` = 862.3635, `position_z` = 109.9274, `orientation` = 3.822271 WHERE `id` = 376;
 UPDATE `creature` SET `position_x` = -8855.714, `position_y` = 822.8125, `position_z` = 98.40005, `orientation` = 6.213372 WHERE `id` = 338;
@@ -24655,3 +24654,109 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 UPDATE `quest_template` SET `OfferRewardText` = 'Ah, and what is this?  Such a delightful aroma!  I am sure it will burn with a flame pure and bright!$b$bTake this blossom, $n.  Take it, and leave me be... I must attend to this precious fuel...' WHERE `entry` =11964;
 UPDATE gameobject SET position_x=-2551.446, position_y=4278.528, position_z=21.06705, rotation2=0.9935713, rotation3=0.1132084 WHERE id=187970;
 INSERT INTO `game_event_creature` (`guid`, `event`) VALUES ('13850', '-1');
+
+UPDATE `creature_template` SET `Faction` = 14 WHERE `entry` = 7527;
+
+UPDATE `creature` SET `position_x` = -1824.977, `position_y` = 5709.866, `position_z` = 129.2245, `orientation` = 0.2792527 WHERE `guid` = 75005 AND `id` = 19142;
+UPDATE `creature` SET `position_x` = -1813.859, `position_y` = 5690.279, `position_z` = 129.2244, `orientation` = 0.122173 WHERE `guid` = 66102 AND `id` = 19142;
+UPDATE `creature` SET `position_x` = -1903.794, `position_y` = 5765.7, `position_z` = 131.2956, `orientation` = 0.3490658 WHERE `id` = 19046;
+UPDATE `creature` SET `position_x` = -3901.595, `position_y` = -11678.82, `position_z` = -302.6535, `orientation` = 1.291544 WHERE `id` = 17538;
+UPDATE `creature` SET `position_x` = -1733.222, `position_y` = 5148.642, `position_z` = -37.20493, `orientation` = 6.038839 WHERE `id` = 23079;
+UPDATE `creature` SET `position_x` = -2488.285, `position_y` = 7234.91, `position_z` = 16.32101, `orientation` = 5.5676 WHERE `id` = 23268;
+UPDATE `creature` SET `position_x` = -1702.615, `position_y` = 5518.226, `position_z` = -9.716126, `orientation` = 3.595378 WHERE `id` = 23270;
+UPDATE `creature` SET `position_x` = 748.8289, `position_y` = 6883.973, `position_z` = -63.84576, `orientation` = 3.560472 WHERE `id` = 23373;
+UPDATE `creature` SET `position_x` = -1701.203, `position_y` = 5514, `position_z` = -8.439033, `orientation` = 3.473205 WHERE `id` = 23484;
+UPDATE `creature` SET `position_x` = -1765.329, `position_y` = 5151.883, `position_z` = -37.12158, `orientation` = 3.246312 WHERE `id` = 23948;
+UPDATE `creature` SET `position_x` = -1460.62, `position_y` = 4992.52, `position_z` = -8.977667, `orientation` = 5.532694 WHERE `guid` = 96761 AND `id` = 25580;
+UPDATE `creature` SET `position_x` = -1747.737, `position_y` = 5159.73, `position_z` = -37.12158, `orientation` = 6.213372 WHERE `guid` = 94504 AND `id` = 25967;
+UPDATE `creature` SET `position_x` = -1965.914, `position_y` = 5178.114, `position_z` = -37.77653, `orientation` = 6.091199 WHERE `guid` = 100742 AND `id` = 25992;
+UPDATE `creature` SET `position_x` = -1960.772, `position_y` = 5169.979, `position_z` = -37.72693, `orientation` = 1.32645 WHERE `guid` = 100741 AND `id` = 25992;
+UPDATE `creature` SET `position_x` = -1961.82, `position_y` = 5177.224, `position_z` = -37.77653, `orientation` = 0.8203048 WHERE `id` = 25991;
+UPDATE `creature` SET `position_x` = -1967.273, `position_y` = 5259.948, `position_z` = -38.76418, `orientation` = 4.08407 WHERE `guid` = 78520 AND `id` = 15350;
+UPDATE `creature` SET `position_x` = -5049.987, `position_y` = -1270.264, `position_z` = 510.4077, `orientation` = 0.03490658 WHERE `guid` = 83378 AND `id` = 15351;
+UPDATE `creature` SET `position_x` = -1768.172, `position_y` = 5255.358, `position_z` = -38.76394, `orientation` = 5.201081 WHERE `guid` = 78521 AND `id` = 15351;
+UPDATE `creature` SET `spawntimesecsmin` = 30, `spawntimesecsmax` = 60 WHERE `id` = 17243;
+UPDATE `creature` SET `spawntimesecsmin` = 60, `spawntimesecsmax` = 180 WHERE `id` = 17298;
+UPDATE `creature` SET `spawntimesecsmin` = 60, `spawntimesecsmax` = 180 WHERE `id` = 17448;
+UPDATE `creature` SET `spawntimesecsmin` = 60, `spawntimesecsmax` = 180 WHERE `id` = 17447;
+UPDATE `creature` SET `spawntimesecsmin` = 60, `spawntimesecsmax` = 180 WHERE `id` = 17701;
+UPDATE `creature` SET `spawntimesecsmin` = 120, `spawntimesecsmax` = 300 WHERE `id` = 19298;
+DELETE FROM `creature` WHERE `guid` = 74137;
+DELETE FROM `creature` WHERE `guid` = 59041;
+DELETE FROM `creature` WHERE `guid` = 129972;
+UPDATE `creature` SET `position_x` = 2720.478, `position_y` = 7118.483, `position_z` = 387.2623, `orientation` = 3.857178 WHERE `id` = 23310;
+UPDATE `creature` SET `position_x` = -1959.985, `position_y` = 5173.551, `position_z` = -37.77652, `orientation` = 0.2443461 WHERE `id` = 21235;
+UPDATE `creature` SET `position_x` = -1847.711, `position_y` = 5506.608, `position_z` = -12.34465, `orientation` = 5.061455 WHERE `id` = 27667;
+UPDATE `creature` SET `position_x` = -1680.545, `position_y` = 5368.528, `position_z` = -41.5874, `orientation` = 1.298535, `spawndist` = 2, `MovementType` = 1 WHERE `guid` = 66016 AND `id` = 19665;
+UPDATE `creature` SET `position_x` = -1672.689, `position_y` = 5367.936, `position_z` = -45.06813, `orientation` = 1.51942, `spawndist` = 2, `MovementType` = 1 WHERE `guid` = 72485 AND `id` = 19665;
+UPDATE `creature` SET `position_x` = -2101.301, `position_y` = 5298.427, `position_z` = -37.32356, `orientation` = 0.2725592, `spawndist` = 2, `MovementType` = 1 WHERE `id` = 19662;
+UPDATE `creature` SET `position_x` = -1852.219, `position_y` = 5127.299, `position_z` = -38.8590, `orientation` = 3.14678, `spawndist` = 2, `MovementType` = 1 WHERE `guid` = 148865 AND `id` = 19684;
+UPDATE `creature` SET `position_x` = -1900.051, `position_y` = 5150.22, `position_z` = -38.48259, `orientation` = 1.32645 WHERE `id` = 19033;
+UPDATE `creature` SET `position_x` = -2646.304, `position_y` = 4451.693, `position_z` = 36.21844, `orientation` = 4.786 WHERE `id` = 18676;
+UPDATE `creature` SET `position_x` = 1039.270, `position_y` = 8479.968, `position_z` = 58.6215, `orientation` = 5.20379, `spawndist` = 3, `MovementType` = 1 WHERE `id` = 18992;
+UPDATE `creature` SET `position_x` = -1741.395, `position_y` = 5146.635, `position_z` = -37.20493, `orientation` = 4.165379, `spawndist` = 3, `MovementType` = 1 WHERE `id` = 18762;
+UPDATE `creature` SET `position_x` = -1605.481, `position_y` = 5293.01, `position_z` = -38.57783, `orientation` = 2.775074 WHERE `id` = 18597;
+UPDATE `creature` SET `position_x` = -1116.191, `position_y` = 5415.862, `position_z` = 21.9265, `orientation` = 1.02448, `spawndist` = 5, `MovementType` = 1 WHERE `id` = 18586;
+UPDATE `creature` SET `position_x` = -1961.829, `position_y` = 5257.825, `position_z` = -38.76482, `orientation` = 4.607669 WHERE `id` = 20274;
+UPDATE `creature` SET `position_x` = -1763.743, `position_y` = 5258.888, `position_z` = -38.76442, `orientation` = 5.67232 WHERE `id` = 20273;
+UPDATE `creature` SET `position_x` = -1764.617, `position_y` = 5260.412, `position_z` = -38.75949, `orientation` = 0.7679449 WHERE `id` = 20395;
+UPDATE `creature` SET `position_x` = -1778.401, `position_y` = 5255.866, `position_z` = -38.76427, `orientation` = 4.29351 WHERE `id` = 20272;
+UPDATE `creature` SET `position_x` = -1773.77, `position_y` = 5253.855, `position_z` = -38.76466, `orientation` = 4.660029 WHERE `id` = 20271;
+UPDATE `creature` SET `position_x` = -1971.889, `position_y` = 5269.038, `position_z` = -38.76439, `orientation` = 3.071779 WHERE `id` = 20269;
+UPDATE `creature` SET `position_x` = -3327.946, `position_y` = 4937.75, `position_z` = -99.35809, `orientation` = 0.7330383 WHERE `id` = 22831;
+UPDATE `creature` SET `position_x` = -1841.982, `position_y` = 5471.095, `position_z` = 1.018264, `orientation` = 4.39823 WHERE `id` = 18525;
+UPDATE `creature` SET `position_x` = -1956.328, `position_y` = 5259.417, `position_z` = -38.76451, `orientation` = 4.904375 WHERE `id` = 20384;
+UPDATE `creature` SET `position_x` = -1762.303, `position_y` = 5264.354, `position_z` = -38.76448, `orientation` = 5.864306 WHERE `id` = 20362;
+UPDATE `creature` SET `position_x` = -1762.725, `position_y` = 5260.019, `position_z` = -38.76609, `orientation` = 6.126106 WHERE `id` = 20339;
+UPDATE `creature` SET `position_x` = -1971.357, `position_y` = 5264.006, `position_z` = -38.76496, `orientation` = 3.595378 WHERE `id` = 20276;
+UPDATE `creature` SET `position_x` = -5044.243, `position_y` = -1277.168, `position_z` = 510.4078, `orientation` = 1.466077 WHERE `id` = 19915;
+UPDATE `creature` SET `position_x` = -2934.594, `position_y` = 4069.812, `position_z` = 3.75512, `orientation` = 3.717551 WHERE `id` = 24885;
+UPDATE `creature` SET `position_x` = -530.684, `position_y` = 4867.858, `position_z` = 34.206795, `orientation` = 2.356194496154785156 WHERE `id` = 20679;
+UPDATE `creature` SET `position_x` = -541.78754, `position_y` = 4734.3203, `position_z` = 38.79606, `orientation` = 1.466076612472534179 WHERE `id` = 20678;
+UPDATE `creature` SET `position_x` = -620.888, `position_y` = 4861.6294, `position_z` = 41.500984, `orientation` = 0.366519153118133544 WHERE `id` = 20677;
+UPDATE `creature` SET `position_x` = -1747.361, `position_y` = 5155.645, `position_z` = -37.12157, `orientation` = 0.5585054 WHERE `id` = 18585;
+UPDATE `creature` SET `position_x` = 374.3947, `position_y` = 6230.078, `position_z` = 22.83506, `orientation` = 0.5934119 WHERE `id` = 18581;
+UPDATE `creature` SET `position_x` = -393.7951, `position_y` = 7257.781, `position_z` = 54.61576, `orientation` = 6.230825 WHERE `id` = 18197;
+UPDATE `creature` SET `position_x` = -1836.192, `position_y` = 5472.105, `position_z` = 1.297971, `orientation` = 5.550147 WHERE `guid` = 65953 AND `id` = 20331;
+UPDATE `creature` SET `position_x` = -1846.477, `position_y` = 5470.347, `position_z` = 0.9404423, `orientation` = 2.740167 WHERE `guid` = 65920 AND `id` = 20331;
+UPDATE `creature` SET `position_x` = -1844.292, `position_y` = 5475.244, `position_z` = 0.9404713, `orientation` = 1.396263 WHERE `guid` = 65970 AND `id` = 20331;
+UPDATE `creature` SET `position_x` = -1838.961, `position_y` = 5466.958, `position_z` = 1.244302, `orientation` = 3.909538 WHERE `guid` = 65919 AND `id` = 20331;
+UPDATE `creature` SET `position_x` = 1015.196, `position_y` = 8262.731, `position_z` = 57.64731, `orientation` = 5.460427, `spawndist` = 0, `MovementType` = 0 WHERE `guid` = 63136;
+UPDATE `creature` SET `position_x` = 1035.889, `position_y` = 8251.036, `position_z` = 57.6533, `orientation` = 3.643799, `spawndist` = 0, `MovementType` = 0 WHERE `guid` = 63141;
+DELETE FROM `creature` WHERE `guid` = 64290;
+DELETE FROM `creature` WHERE `guid` = 64666;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(72396, 18922, 530, 1, 0, 0, 225.118, 6053.65, 148.395, 2.72271, 300, 300, 0, 0, 59140, 0, 0, 0),
+(64667, 18922, 530, 1, 0, 0, 228.736, 6065.35, 148.395, 2.77507, 300, 300, 0, 0, 59140, 0, 0, 0),
+(64695, 18922, 530, 1, 0, 0, 246.776, 6011.9, 21.6035, 2.46091, 300, 300, 0, 0, 59140, 0, 0, 0),
+(64692, 18922, 530, 1, 0, 0, 251.146, 6031.97, 44.3767, 4.10107, 300, 300, 5, 0, 59140, 0, 0, 1),
+(64693, 18922, 530, 1, 0, 0, 251.167, 6020.14, 21.5993, 2.47837, 300, 300, 0, 0, 59140, 0, 0, 0),
+(72401, 18922, 530, 1, 0, 0, 266.628, 6009.81, 44.2864, 3.32733, 300, 300, 5, 0, 59140, 0, 0, 1),
+(64696, 18922, 530, 1, 0, 0, 273.689, 5975.17, 22.3513, 1.46608, 300, 300, 0, 0, 59140, 0, 0, 0),
+(72408, 18922, 530, 1, 0, 0, 277.188, 5959.85, 149.789, 4.79965, 300, 300, 0, 0, 59140, 0, 0, 0),
+(64698, 18922, 530, 1, 0, 0, 288.313, 5960.04, 149.792, 4.41568, 300, 300, 0, 0, 59140, 0, 0, 0),
+(64690, 18922, 530, 1, 0, 0, 290.854, 5975.65, 22.3513, 1.46608, 300, 300, 0, 0, 59140, 0, 0, 0);
+UPDATE `creature` SET `position_x` = 2975.72, `position_y` = 5073.99, `position_z` = 265.5773 WHERE `guid` = 60705 AND `id` = 21124;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(81475, 18450, 530, 1, 0, 0, -1966.02, 3833.79, 1.19915, 1.5708, 300, 300, 0, 0, 3800, 2568, 0, 0),
+(81476, 18450, 530, 1, 0, 0, -1880.35, 3874.79, 1.79258, 2.26893, 300, 300, 0, 0, 3800, 2568, 0, 0),
+(57021, 18450, 530, 1, 0, 0, -1886.7, 3923.51, -0.192347, 1.81514, 300, 300, 0, 0, 3800, 2568, 0, 0),
+(45886, 18450, 530, 1, 0, 0, -1789.14, 3918.73, 9.8336, 2.9147, 300, 300, 0, 0, 3800, 2568, 0, 0),
+(45909, 18450, 530, 1, 0, 0, -1872.15, 3993.08, 0.55687, 3.45575, 300, 300, 0, 0, 3800, 2568, 0, 0),
+(45910, 18450, 530, 1, 0, 0, -1877.51, 3954.49, -0.045407, 5.75959, 300, 300, 0, 0, 3800, 2568, 0, 0),
+(45916, 18450, 530, 1, 0, 0, -1889.93, 3933.96, -0.192352, 5.06145, 300, 300, 0, 0, 3800, 2568, 0, 0),
+(45918, 18450, 530, 1, 0, 0, -1677.54, 4384.87, 22.1696, 6.02139, 300, 300, 0, 0, 3800, 2568, 0, 0),
+(45926, 18450, 530, 1, 0, 0, -1618.17, 4439.22, 24.6506, 2.87979, 300, 300, 0, 0, 3800, 2568, 0, 0),
+(45957, 18450, 530, 1, 0, 0, -1533.55, 4419.16, 43.53, 6.14356, 300, 300, 0, 0, 3800, 2568, 0, 0),
+(45934, 18450, 530, 1, 0, 0, -1511.01, 4416.53, 43.954, 1.91986, 300, 300, 0, 0, 3800, 2568, 0, 0),
+(45962, 18450, 530, 1, 0, 0, -1595.71, 4337.35, 39.1905, 4.10152, 300, 300, 0, 0, 3800, 2568, 0, 0);
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
+(45918, 0, 0, 1, 16, 0, 0, NULL), (45926, 0, 0, 1, 16, 0, 0, NULL), (45934, 0, 0, 1, 16, 0, 0, NULL);
+DELETE FROM `creature` WHERE `id` = 17524;
+DELETE FROM `creature_addon` WHERE `guid` IN (59041,64290);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(75186, 17524, 530, 1, 0, 0, -2481.5, -11259.1, 31.97, 5.3, 600, 600, 0, 0, 250, 264, 0, 0),
+(75187, 17524, 530, 1, 0, 0, -2446.6, -11133.6, 12, 0.1, 600, 600, 5, 0, 250, 264, 0, 1);
+UPDATE `creature` SET `position_x` = 863.79, `position_y` = 2294.04, `position_z` = 292.9122 WHERE `guid` = 23093 AND `id` = 22323;
+
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|2 WHERE `entry` IN (24734,24735,24736,24737,24738,24739);
