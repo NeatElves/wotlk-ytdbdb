@@ -3920,6 +3920,8 @@ UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 30599 
 #UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000003913;
 #UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000003914;
 #UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000003915;
+#UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000003916;
+#UPDATE `dbscript_string` SET `content_loc8` = NULL WHERE `entry` = 2000003917;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 19143 WHERE `entry` = 2000005164;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 19141 WHERE `entry` = 2000005165;
 UPDATE `dbscript_string` SET `content_loc8` = NULL, `broadcast_text_id` = 19254 WHERE `entry` = 2000005166;
