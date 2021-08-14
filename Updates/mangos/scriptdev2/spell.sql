@@ -64,6 +64,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 
 -- TBC
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(38048,'spell_curse_of_pain'),
 (42144,'spell_horseman_create_water_bucket'),
 (42074,'spell_horseman_fire'),
 (43885,'spell_horseman_maniacal_laugh'),
@@ -93,6 +94,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (29883,'spell_blink_arcane_anomaly'),
 (29907,'spell_astral_bite'),
 (29690,'spell_inebriate_removal'),
+(29448,'spell_moroes_vanish'),
 (30115,'spell_sacrifice'),
 (31702,'spell_someone_grab_me'),
 (31703,'spell_magnetic_pull'),
@@ -115,6 +117,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (32264,'spell_shirrak_inhibit_magic'),
 (33332,'spell_suppression_blast'),
 (32830,'spell_auchenai_possess'),
+(32756,'spell_shadowy_disguise'),
 (36557,'spell_cursed_scarab_periodic'),
 (36560,'spell_cursed_scarab_despawn_periodic'),
 (34874,'spell_despawn_underbog_mushrooms'),
@@ -142,6 +145,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (38606,'spell_exorcism_feather'),
 (38640,'spell_koi_koi_death'),
 (38915,'spell_mental_interference'),
+(38544,'spell_coax_marmot'),
 (40309,'spell_possess_demon_shartuul'),
 (40222,'spell_smash_shield'),
 (40503,'spell_possession_transfer'),
@@ -183,6 +187,10 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (33045,'spell_wota_dot'),
 (33048,'spell_wota_search'),
 (33229,'spell_wota_remove'),
+(36812,'spell_soaring'),
+(37910,'spell_soaring'),
+(37962,'spell_soaring'),
+(37968,'spell_soaring'),
 (42783,'spell_wrath_of_the_astromancer'),
 (45043,'spell_power_circle'),
 (44006,'spell_teleport_self_akilzon'),
@@ -217,10 +225,17 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (40573,'spell_ogrila_flasks'),
 (40575,'spell_ogrila_flasks'),
 (40576,'spell_ogrila_flasks'),
+(41608,'spell_ogrila_flasks'),
+(41609,'spell_ogrila_flasks'),
+(41610,'spell_ogrila_flasks'),
+(41611,'spell_ogrila_flasks'),
+(46837,'spell_ogrila_flasks'),
+(46839,'spell_ogrila_flasks'),
 (40887,'spell_assist_bt'),
 (40892,'spell_fixate_bt'),
 (39581,'spell_storm_blink'),
 (34630,'spell_scrap_reaver_spell'),
+(41476,'spell_veras_vanish'),
 (44935,'spell_razorthorn_root'),
 (44881,'spell_charm_ravager'),
 (44948,'spell_living_flare_detonator'),
@@ -234,7 +249,10 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (41951,'spell_supremus_random_target'),
 (34438,'spell_unstable_affliction'),
 (34439,'spell_unstable_affliction'),
-(35183,'spell_unstable_affliction');
+(35183,'spell_unstable_affliction'),
+(42399,'spell_send_head'),
+(43101,'spell_head_requests_body'),
+(35831,'spell_ring_of_flame');
 
 -- Wotlk
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
@@ -457,12 +475,15 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 -- Hunter
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (34026,'spell_kill_command'),
-(34477,'spell_misdirection');
+(34477,'spell_misdirection'),
+(34501,'spell_expose_weakness');
 
 -- Priest
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (10060,'spell_power_infusion'),
 (27827,'spell_spirit_of_redemption_heal'),
+(33076,'spell_prayer_of_mending'),
+(33206,'spell_pain_suppression'),
 (34433,'spell_shadowfiend');
 
 -- Paladin
