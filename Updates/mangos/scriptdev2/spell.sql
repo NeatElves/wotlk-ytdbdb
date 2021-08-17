@@ -194,6 +194,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (42783,'spell_wrath_of_the_astromancer'),
 (45043,'spell_power_circle'),
 (44006,'spell_teleport_self_akilzon'),
+(43359,'spell_call_of_the_beast'),
 (43681,'spell_inactive'),
 (40084,'spell_harpooners_mark'),
 (31258,'spell_winterchill_death_and_decay'),
@@ -252,7 +253,10 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (35183,'spell_unstable_affliction'),
 (42399,'spell_send_head'),
 (43101,'spell_head_requests_body'),
-(35831,'spell_ring_of_flame');
+(35831,'spell_ring_of_flame'),
+(41914,'spell_parasitic_shadowfiend'),
+(41917,'spell_parasitic_shadowfiend'),
+(40647,'spell_shadow_prison');
 
 -- Wotlk
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
