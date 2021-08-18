@@ -28218,3 +28218,25 @@ REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posi
 
 UPDATE `creature_linking_template` SET `flag` = `flag`|16|1024 WHERE `master_entry` = 8666;
 UPDATE `creature` SET `spawntimesecsmin` = 5400, `spawntimesecsmax` = 10800 WHERE `id` IN (7386,8666);
+
+# 14036_01_mangos_creature_immunity.sql
+DROP TABLE IF EXISTS creature_immunities;
+CREATE TABLE creature_immunities(
+`Entry` INT UNSIGNED NOT NULL COMMENT 'creature_template entry',
+`SetId` INT UNSIGNED NOT NULL DEFAULT '0' COMMENT 'immunity set ID',
+`Type` TINYINT UNSIGNED NOT NULL COMMENT 'enum SpellImmunity',
+`Value` INT UNSIGNED NOT NULL COMMENT 'value depending on type',
+PRIMARY KEY(`Entry`,`SetId`,`Type`,`Value`)
+);
+
+
+-- taunt effect and aura
+INSERT INTO creature_immunities SELECT entry, 0, 0, 114 FROM creature_template WHERE ExtraFlags&0x00000100;
+INSERT INTO creature_immunities SELECT entry, 0, 1, 11 FROM creature_template WHERE ExtraFlags&0x00000100;
+UPDATE creature_template SET ExtraFlags=ExtraFlags&~0x00000100 WHERE ExtraFlags&0x00000100;
+-- haste auras
+INSERT INTO creature_immunities SELECT entry, 0, 1, 216 FROM creature_template WHERE ExtraFlags&0x00400000;
+UPDATE creature_template SET ExtraFlags=ExtraFlags&~0x00400000 WHERE ExtraFlags&0x00400000;
+-- poison auras
+INSERT INTO creature_immunities SELECT entry, 0, 4, 4 FROM creature_template WHERE ExtraFlags&0x01000000;
+UPDATE creature_template SET ExtraFlags=ExtraFlags&~0x01000000 WHERE ExtraFlags&0x01000000;

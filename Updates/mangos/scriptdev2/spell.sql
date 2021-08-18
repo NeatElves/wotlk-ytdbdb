@@ -65,6 +65,19 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 -- TBC
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (38048,'spell_curse_of_pain'),
+(430,'spell_drink'),
+(431,'spell_drink'),
+(432,'spell_drink'),
+(1133,'spell_drink'),
+(1135,'spell_drink'),
+(1137,'spell_drink'),
+(10250,'spell_drink'),
+(22734,'spell_drink'),
+(27089,'spell_drink'),
+(34291,'spell_drink'),
+(43706,'spell_drink'),
+(46755,'spell_drink'),
+(49472,'spell_drink'),
 (42144,'spell_horseman_create_water_bucket'),
 (42074,'spell_horseman_fire'),
 (43885,'spell_horseman_maniacal_laugh'),
@@ -251,15 +264,26 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (34438,'spell_unstable_affliction'),
 (34439,'spell_unstable_affliction'),
 (35183,'spell_unstable_affliction'),
+(43723,'spell_demon_broiled_surprise'),
 (42399,'spell_send_head'),
 (43101,'spell_head_requests_body'),
 (35831,'spell_ring_of_flame'),
 (41914,'spell_parasitic_shadowfiend'),
 (41917,'spell_parasitic_shadowfiend'),
-(40647,'spell_shadow_prison');
+(40647,'spell_shadow_prison'),
+(33499,'spell_shape_of_the_beast'),
+(40848,'spell_dragonmaw_knockdown_the_aggro_check'),
+(40985,'spell_dragonmaw_knockdown_the_aggro_check'),
+(40993,'spell_dragonmaw_knockdown_the_aggro_check'),
+(41007,'spell_dragonmaw_knockdown_the_aggro_check'),
+(41015,'spell_dragonmaw_knockdown_the_aggro_check'),
+(41022,'spell_dragonmaw_knockdown_the_aggro_check');
 
 -- Wotlk
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(57073,'spell_drink'),
+(61830,'spell_drink'),
+(72623,'spell_drink'),
 (28728,'spell_feigh_death_pos_aura'),
 (41253,'spell_greater_invisibility_mob'),
 (42672,'spell_frost_tomb_aura'),
@@ -480,7 +504,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (34026,'spell_kill_command'),
 (34477,'spell_misdirection'),
-(34501,'spell_expose_weakness');
+(34501,'spell_expose_weakness'),
+(781,'Disengage');
 
 -- Priest
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
@@ -492,6 +517,13 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 
 -- Paladin
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(21082,'spell_seal_of_the_crusader'),
+(20162,'spell_seal_of_the_crusader'),
+(20305,'spell_seal_of_the_crusader'),
+(20306,'spell_seal_of_the_crusader'),
+(20307,'spell_seal_of_the_crusader'),
+(20308,'spell_seal_of_the_crusader'),
+(27158,'spell_seal_of_the_crusader'),
 (31789,'spell_righteous_defense');
 
 -- Warlock
