@@ -20,6 +20,12 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (12948,'spell_hakkar_summoned'),
 (13278,'spell_gdr_channel'),
 (13493,'spell_gdr_periodic'),
+(11886,'spell_capture_wildkin'),
+(11887,'spell_capture_hippogryph'),
+(11888,'spell_capture_faerie_dragon'),
+(11885,'spell_capture_treant'),
+(11889,'spell_capture_mountain_giant'),
+(11610,'spell_gammerita_turtle_camera'),
 (16380,'spell_greater_invisibility_mob'),
 (17016,'spell_placing_beacon_torch'),
 (17244,'spell_anastari_possess'),
@@ -141,6 +147,9 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (31624,'spell_raise_dead_hyjal'),
 (31625,'spell_raise_dead_hyjal'),
 (38028,'spell_watery_grave'),
+(30610,'spell_wrath_of_the_titans_stacker'),
+(30554,'spell_wrath_of_the_titans_proc_aura'),
+(39601,'spell_grasp_of_the_emerald_dream'),
 (34231,'spell_increased_holy_light_healing'),
 (33793,'spell_vazruden_liquid_fire_script'),
 (33794,'spell_vazruden_liquid_fire_script'),
@@ -228,6 +237,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (39497,'spell_remove_weapons'),
 (31298,'spell_anetheron_sleep'),
 (41910,'spell_alar_phoenix_ember_blast'),
+(30632,'spell_magtheridon_debris'),
+(32286,'spell_focus_target_visual'),
 (33985,'spell_use_corpse'),
 (34011,'spell_raise_dead'),
 (34012,'spell_raise_dead'),
@@ -272,12 +283,34 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (41917,'spell_parasitic_shadowfiend'),
 (40647,'spell_shadow_prison'),
 (33499,'spell_shape_of_the_beast'),
+(44329,'spell_fel_crystal_dummy'),
+(44320,'spell_mana_rage_selin'),
+(40657,'spell_terokk_ancient_flames'),
 (40848,'spell_dragonmaw_knockdown_the_aggro_check'),
 (40985,'spell_dragonmaw_knockdown_the_aggro_check'),
 (40993,'spell_dragonmaw_knockdown_the_aggro_check'),
 (41007,'spell_dragonmaw_knockdown_the_aggro_check'),
 (41015,'spell_dragonmaw_knockdown_the_aggro_check'),
-(41022,'spell_dragonmaw_knockdown_the_aggro_check');
+(41022,'spell_dragonmaw_knockdown_the_aggro_check'),
+(45219,'spell_shattered_sun_marksman_shoot'),
+(45223,'spell_shattered_sun_marksman_shoot'),
+(45229,'spell_shattered_sun_marksman_shoot'),
+(45233,'spell_shattered_sun_marksman_shoot'),
+(32863,'spell_seed_of_corruption_npc'),
+(36123,'spell_seed_of_corruption_npc'),
+(38252,'spell_seed_of_corruption_npc'),
+(39367,'spell_seed_of_corruption_npc'),
+(44141,'spell_seed_of_corruption_npc'),
+(70388,'spell_seed_of_corruption_npc'),
+(45091,'spell_spar_auras'),
+(45092,'spell_spar_auras'),
+(47108,'spell_clear_energy_feedback'),
+(44224,'spell_gravity_lapse_mgt'),
+(44232,'spell_clear_flight_mgt'),
+(34480,'spell_gravity_lapse_knockup'),
+(44226,'spell_gravity_lapse_knockup'),
+(49887,'spell_gravity_lapse_knockup'),
+(32727,'spell_arena_preparation');
 
 -- Wotlk
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
@@ -524,10 +557,20 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (20307,'spell_seal_of_the_crusader'),
 (20308,'spell_seal_of_the_crusader'),
 (27158,'spell_seal_of_the_crusader'),
-(31789,'spell_righteous_defense');
+(53407,'spell_judgement'),
+(20271,'spell_judgement'),
+(57774,'spell_judgement'),
+(53408,'spell_judgement'),
+(31789,'spell_righteous_defense'),
+(40470,'spell_paladin_tier_6_trinket');
 
 -- Warlock
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(126,'spell_eye_of_kilrogg'),
+(603,'spell_curse_of_doom'),
+(30910,'spell_curse_of_doom'),
+(47867,'spell_curse_of_doom'),
+(18662,'spell_curse_of_doom_effect'),
 (980,'spell_curse_of_agony'),
 (1014,'spell_curse_of_agony'),
 (6217,'spell_curse_of_agony'),
@@ -543,12 +586,24 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (11689,'spell_life_tap'),
 (27222,'spell_life_tap'),
 (57946,'spell_life_tap'),
+(27243,'spell_seed_of_corruption'),
+(47835,'spell_seed_of_corruption'),
+(47836,'spell_seed_of_corruption'),
+(27285,'spell_seed_of_corruption_damage'),
+(47833,'spell_seed_of_corruption_damage'),
+(47834,'spell_seed_of_corruption_damage'),
 (35696,'spell_demonic_knowledge'),
 (30108,'spell_unstable_affliction'),
 (30404,'spell_unstable_affliction'),
 (30405,'spell_unstable_affliction'),
 (32379,'spell_shadow_word_death'),
-(32996,'spell_shadow_word_death');
+(32996,'spell_shadow_word_death'),
+(19505,'spell_devour_magic'),
+(19731,'spell_devour_magic'),
+(19734,'spell_devour_magic'),
+(19736,'spell_devour_magic'),
+(27276,'spell_devour_magic'),
+(27277,'spell_devour_magic');
 
 -- Pet Scaling
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
@@ -628,7 +683,11 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (9858,'spell_regrowth'),
 (26980,'spell_regrowth'),
 (48442,'spell_regrowth'),
-(48443,'spell_regrowth');
+(48443,'spell_regrowth'),
+(1178,'spell_druid_form_scaling_ap_auras'),
+(3025,'spell_druid_form_scaling_ap_auras'),
+(9635,'spell_druid_form_scaling_ap_auras'),
+(24905,'spell_druid_form_scaling_ap_auras');
 
 -- Rogue
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
@@ -648,7 +707,28 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (32594,'spell_earth_shield'),
 (49283,'spell_earth_shield'),
 (49284,'spell_earth_shield'),
-(70811,'spell_item_shaman_t10_elemental_2p_bonus');
+(70811,'spell_item_shaman_t10_elemental_2p_bonus'),
+(324,'spell_damage_trigger_shield'),
+(325,'spell_damage_trigger_shield'),
+(905,'spell_damage_trigger_shield'),
+(945,'spell_damage_trigger_shield'),
+(8134,'spell_damage_trigger_shield'),
+(8788,'spell_damage_trigger_shield'),
+(10431,'spell_damage_trigger_shield'),
+(10432,'spell_damage_trigger_shield'),
+(24398,'spell_damage_trigger_shield'),
+(25469,'spell_damage_trigger_shield'),
+(25472,'spell_damage_trigger_shield'),
+(33736,'spell_damage_trigger_shield'),
+(49280,'spell_damage_trigger_shield'),
+(49281,'spell_damage_trigger_shield'),
+(52127,'spell_damage_trigger_shield'),
+(52129,'spell_damage_trigger_shield'),
+(52131,'spell_damage_trigger_shield'),
+(52134,'spell_damage_trigger_shield'),
+(52136,'spell_damage_trigger_shield'),
+(52138,'spell_damage_trigger_shield'),
+(57960,'spell_damage_trigger_shield');
 
 -- Battleground and Outdoor PvP
 INSERT INTO spell_scripts(Id, ScriptName) VALUES

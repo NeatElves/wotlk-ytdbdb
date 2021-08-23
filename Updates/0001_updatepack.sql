@@ -19718,12 +19718,11 @@ UPDATE `creature` SET `position_x` = '-588.703', `position_y` = '-4144.94', `pos
 
 UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|4096 WHERE `entry` IN (10676,10682);
 
-# no taxi spell in DBC WOTLK
-#UPDATE `dbscripts_on_gossip` SET `command`=15,`datalong`='30058' WHERE `id`=404100;
-#UPDATE `dbscripts_on_gossip` SET `command`=15,`datalong`='30059' WHERE `id`=404200;
-#UPDATE `dbscripts_on_gossip` SET `command`=15,`datalong`='29931' WHERE `id`=737900;
-#UPDATE `dbscripts_on_gossip` SET `command`=15,`datalong`='29934' WHERE `id`=737901;
-#UPDATE `dbscripts_on_gossip` SET `command`=15,`datalong`='29994' WHERE `id`=737902;
+UPDATE `dbscripts_on_gossip` SET `command`=15,`datalong`='30058' WHERE `id`=404100;
+UPDATE `dbscripts_on_gossip` SET `command`=15,`datalong`='30059' WHERE `id`=404200;
+UPDATE `dbscripts_on_gossip` SET `command`=15,`datalong`='29931' WHERE `id`=737900;
+UPDATE `dbscripts_on_gossip` SET `command`=15,`datalong`='29934' WHERE `id`=737901;
+UPDATE `dbscripts_on_gossip` SET `command`=15,`datalong`='29994' WHERE `id`=737902;
 
 INSERT INTO `game_event` (`entry`, `schedule_type`, `occurence`, `length`, `holiday`, `linkedTo`, `EventGroup`, `description`) VALUES (89, 1, 525600, 1440, 62, 0, 0, 'Fireworks Spectacular');
 INSERT INTO `game_event_time` (`entry`, `start_time`, `end_time`) VALUES (89, '2010-07-04 10:00:00', '2050-12-31 09:00:00');
@@ -31571,3 +31570,17 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 (7168, 185497, 530, 1, 74.3626, 7149.38, 104.988, 1.65806, 0, 0, 0.737276, 0.675591, 180, 180, 255, 1),
 (7169, 185497, 530, 1, 240.789, 6555.64, 64.7314, 3.14159, 0, 0, 1, 0.00000126759, 180, 180, 255, 1),
 (7174, 185497, 530, 1, 70.854, 6976.38, 135.507, -0.680679, 0, 0, -0.333807, 0.942641, 180, 180, 255, 1);
+
+# 14037_01_mangos_corpse_decay.sql
+ALTER TABLE creature_template ADD COLUMN CorpseDecay INT UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Time before corpse despawns' AFTER VisibilityDistanceType;
+
+UPDATE creature_template SET CorpseDecay=5 WHERE entry IN(25598,25708);
+UPDATE creature_template SET ExtraFlags=ExtraFlags|0x00100000 WHERE entry IN(23188);
+
+# 14038_01_mangos_gameobject_spawn_entry.sql
+DROP TABLE IF EXISTS gameobject_spawn_entry;
+CREATE TABLE gameobject_spawn_entry(
+`guid` INT UNSIGNED NOT NULL COMMENT 'Gameobject table guid',
+`entry` MEDIUMINT UNSIGNED NOT NULL COMMENT 'Gameobject Template entry',
+PRIMARY KEY(`guid`,`entry`)
+);

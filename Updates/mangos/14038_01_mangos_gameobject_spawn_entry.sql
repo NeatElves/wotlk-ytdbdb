@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14037_01_mangos_corpse_decay required_14038_01_mangos_gameobject_spawn_entry bit;
