@@ -500,10 +500,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+1018, 5, 886.578, -174.768, -42.9623, 0.319856, 0, 0),
 (@CGUID+1018, 6, 888.454, -177.985, -42.9623, 5.24823, 0, 0);
 
--- TBC+ only
--- (@CGUID+1313, 1, 847.823, -181.144, -49.6707, 1.85005, 1440000, 9839501);
-
-DELETE FROM creature_movement_template WHERE entry IN (8891,8923,9022,9025,9056,9500,9679);
+DELETE FROM `creature_movement_template` WHERE entry IN (8891,8923,9022,9025,9056,9500,9679);
 INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 (8891, 0, 1, 685.89, -279.73, -43.1944, 0.471239, 10, 889101),
 (8891, 0, 2, 685.89, -279.73, -43.1944, 0.471239, 10800000, 0),
@@ -610,6 +607,11 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (9679, 0, 3, 533.59, -249.38, -67.04, 0, 0, 0),
 (9679, 0, 4, 519.44, -217.02, -59.34, 0, 0, 0),
 (9679, 0, 5, 506.55, -153.49, -62.34, 0, 1, 967901);
+
+-- TBC only
+DELETE FROM `creature_movement_template` WHERE entry IN (28206);
+INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
+(28206, 0, 1, 847.823, -181.144, -49.6707, 1.85005, 1440000, 9839501);
 
 INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
 (@CGUID+1, 0, 0, 1, 16, 0, 0, '13589'), -- Anvilrage Overseer
@@ -2206,27 +2208,32 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+1119, 15549, 230, 592.67, -190.145, -54.0991, 0.222688, 25, 25, 0, 0, 0, 0), -- Elder Morndeep
 (@CGUID+1120, 16079, 230, 590.631, -181.061, -53.9102, 3.97935, 7200, 7200, 0, 0, 0, 0), -- Theldren Trigger
 
--- TBC+ only (The Tauren Chieftans, Brewfest, and Arena NPCs)
--- (@CGUID+1300, 23619, 230, 851.272, -177.126, -49.6712, 2.16421, 180, 180, 0, 0, 0, 0), -- Bergrisst
--- (@CGUID+1301, 23623, 230, 847.839, -181.115, -49.6707, 1.8675, 180, 180, 0, 0, 0, 0), -- Chief Thunder-Skins
--- (@CGUID+1302, 23624, 230, 842.715, -181.571, -49.67, 2.04204, 180, 180, 0, 0, 0, 0), -- Mai'Kyl
--- (@CGUID+1303, 23625, 230, 847.674, -175.869, -49.6706, 2.11185, 180, 180, 0, 0, 0, 0), -- Samuro
--- (@CGUID+1304, 23626, 230, 843.456, -178.145, -49.67, 2.05949, 180, 180, 0, 0, 0, 0), -- Sig Nicious
--- (@CGUID+1305, 23830, 230, 846.565, -178.954, -49.6705, 2.07694, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC FX Controller
--- (@CGUID+1306, 23845, 230, 851.301, -177.158, -49.6712, 2.14675, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC Bergrisst Controller
--- (@CGUID+1307, 23850, 230, 846.044, -177.73, -49.6704, 2.11185, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC Concert Controller
--- (@CGUID+1308, 23852, 230, 842.718, -181.561, -49.67, 1.93731, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC Mai'Kyl Controller
--- (@CGUID+1309, 23853, 230, 847.645, -175.846, -49.6706, 2.07694, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC Samuro Controller
--- (@CGUID+1310, 23854, 230, 843.406, -178.133, -49.67, 2.04204, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC Sig Controller
--- (@CGUID+1311, 23855, 230, 847.554, -180.631, -49.6707, 2.04204, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC Chief Thunder-Skins Controller
-(@CGUID+1312, 23872, 230, 891.839, -129.183, -49.6599, 5.25344, 86400, 86400, 0, 0, 0, 0), -- Coren Direbrew
--- (@CGUID+1313, 28206, 230, 847.823, -181.144, -49.6707, 1.85005, 180, 180, 0, 0, 0, 2), -- [DND] L70ETC Drums
+-- TBC+ (The Tauren Chieftans, Brewfest, and Arena NPCs)
+(@CGUID+1300, 23619, 230, 851.272, -177.126, -49.6712, 2.16421, 180, 180, 0, 0, 0, 0), -- Bergrisst
+(@CGUID+1301, 23623, 230, 847.839, -181.115, -49.6707, 1.8675, 180, 180, 0, 0, 0, 0), -- Chief Thunder-Skins
+(@CGUID+1302, 23624, 230, 842.715, -181.571, -49.67, 2.04204, 180, 180, 0, 0, 0, 0), -- Mai'Kyl
+(@CGUID+1303, 23625, 230, 847.674, -175.869, -49.6706, 2.11185, 180, 180, 0, 0, 0, 0), -- Samuro
+(@CGUID+1304, 23626, 230, 843.456, -178.145, -49.67, 2.05949, 180, 180, 0, 0, 0, 0), -- Sig Nicious
+(@CGUID+1305, 23830, 230, 846.565, -178.954, -49.6705, 2.07694, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC FX Controller
+(@CGUID+1306, 23845, 230, 851.301, -177.158, -49.6712, 2.14675, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC Bergrisst Controller
+(@CGUID+1307, 23850, 230, 846.044, -177.73, -49.6704, 2.11185, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC Concert Controller
+(@CGUID+1308, 23852, 230, 842.718, -181.561, -49.67, 1.93731, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC Mai'Kyl Controller
+(@CGUID+1309, 23853, 230, 847.645, -175.846, -49.6706, 2.07694, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC Samuro Controller
+(@CGUID+1310, 23854, 230, 843.406, -178.133, -49.67, 2.04204, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC Sig Controller
+(@CGUID+1311, 23855, 230, 847.554, -180.631, -49.6707, 2.04204, 180, 180, 0, 0, 0, 0), -- [DNT] L70ETC Chief Thunder-Skins Controller
+(@CGUID+1312, 23872, 230, 891.839, -129.183, -49.6599, 5.25344, 604800, 604800, 0, 0, 0, 0), -- Coren Direbrew
+(@CGUID+1313, 28206, 230, 847.823, -181.144, -49.6707, 1.85005, 180, 180, 0, 0, 0, 2), -- [DND] L70ETC Drums
 (@CGUID+1314, 28209, 230, 849.49, -179.317, -49.671, 4.10152, 180, 180, 0, 0, 0, 0), -- Mizli Crankwheel
 (@CGUID+1315, 28210, 230, 845.881, -182.203, -49.6705, 1.18682, 180, 180, 0, 0, 0, 0), -- Ognip Blastbolt
 (@CGUID+1316, 28225, 230, 872.331, -135.744, -49.7576, 3.84395, 180, 180, 0, 0, 0, 0), -- Griz Gutshank
 (@CGUID+1317, 28226, 230, 870.685, -139.139, -49.7589, 3.64473, 180, 180, 0, 0, 0, 0), -- Snaggletooth
 (@CGUID+1318, 28227, 230, 868.815, -135.761, -49.759, 3.67615, 180, 180, 0, 0, 0, 0), -- Slobbermouth
 (@CGUID+1319, 26719, 230, 885.674, -162.749, -49.759, 1.86371, 180, 180, 0, 0, 0, 0); -- Brewfest Spy
+
+-- WOTLK ONLY
+UPDATE `creature` SET `spawnmask` = 0 WHERE `guid` BETWEEN @CGUID+1300 AND @CGUID+1311; -- Grim Guzzler - L70ETC Concert
+UPDATE `creature` SET `spawnmask` = 0 WHERE `guid` BETWEEN @CGUID+1313 AND @CGUID+1315; -- Grim Guzzler - L70ETC Pre-Concert
+UPDATE `creature` SET `spawnmask` = 0 WHERE `guid` BETWEEN @CGUID+1316 AND @CGUID+1318; -- Arena PvP Season 4
 
 -- ===========
 -- GAMEOBJECTS
@@ -2777,20 +2784,7 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
 (@CGUID+1119, 7), -- Elder Morndeep (Lunar Festival)
 
--- TBC+ only
--- Grim Guzzler - L70ETC Concert
--- (@CGUID+1300, 62),
--- (@CGUID+1301, 62),
--- (@CGUID+1302, 62),
--- (@CGUID+1303, 62),
--- (@CGUID+1304, 62),
--- (@CGUID+1305, 62),
--- Grim Guzzler - L70ETC Pre-Concert
--- (@CGUID+1313, 61),
--- Arena PvP Season 4
--- (@CGUID+1316, 56),
--- (@CGUID+1317, 56),
--- (@CGUID+1318, 56);
+-- TBC+
 -- Brewfest
 (@CGUID+1312, 26),
 (@CGUID+1319, 26);
@@ -3077,10 +3071,10 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (905602, 13000, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Fineous Darkvire - oneshot_none'),
 (905603, 1000, 1, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Fineous Darkvire - oneshot_kneel'),
 (905604, 0, 20, 1, 3, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Fineous Darkvire - movementtype_random'),
-(905604, 90000, 20, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Fineous Darkvire - movementtype_waypoint');
+(905604, 90000, 20, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Fineous Darkvire - movementtype_waypoint'),
 
--- TBC+ only
--- (9839501, 0, 18, 744000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '[DND] L70ETC Drums - Grim Guzzler Despawn Drums on Drummer Spawn');
+-- TBC+
+(9839501, 0, 18, 744000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '[DND] L70ETC Drums - Grim Guzzler Despawn Drums on Drummer Spawn');
 
 -- INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES

@@ -32151,9 +32151,9 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 DELETE FROM conditions WHERE condition_entry=10333;
 INSERT INTO conditions (condition_entry, `type`, value1, value2, value3, value4, flags, comments) VALUES
 (10333, -2, 10316, 10317, 10318, 0, 0, 'Event ID 316 Active OR Event ID 317 Active OR Event ID 318 Active');
-UPDATE `quest_template` SET `RequiredCondition` = '10316', `SpecialFlags` = '1' WHERE `entry` =11551;
-UPDATE `quest_template` SET `RequiredCondition` = '10317', `SpecialFlags` = '1' WHERE `entry` =11552;
-UPDATE `quest_template` SET `RequiredCondition` = '10318', `SpecialFlags` = '1' WHERE `entry` =11553;
+UPDATE `quest_template` SET `Method` = '2', `RequiredCondition` = '10316', `SpecialFlags` = '1' WHERE `entry` =11551;
+UPDATE `quest_template` SET `Method` = '2', `RequiredCondition` = '10317', `SpecialFlags` = '1' WHERE `entry` =11552;
+UPDATE `quest_template` SET `Method` = '2', `RequiredCondition` = '10318', `SpecialFlags` = '1' WHERE `entry` =11553;
 UPDATE quest_template SET Details="Archmage Ne'thul asked you to bring the Essence of the Immortals that will be used to deactivate Agamath, The First Gate",
 RequestItemsText="The first barrier lies just beyond the path of destruction, where the fiendish Brutallus stands. The gateway, Agamath, prevents passage beyond the Dead Scar.$B$B<Ne'thul points to the magical replica of the Sunwell.>$B$BBring to me the essence of immortals, found only on the most powerful beings of this world! With the essence in hand, my mages will be able to dismantle Agamath, ultimately collapsing the gateway and unlocking the way further into the sunwell.",
 Objectives="Bring to me the essence of immortals, found only on the most powerful beings of this world! With the essence in hand, my mages will be able to dismantle Agamath, ultimately collapsing the gateway and unlocking the way further into the sunwell.",
@@ -32802,3 +32802,5 @@ INSERT INTO `creature_movement_template` (`entry`, `point`, `position_x`, `posit
 (302, 3, -10786, -1381, 39.7193, 0.006667, 30000, 0);
 DELETE FROM `creature_movement_template` WHERE `entry` = 495;
 UPDATE `creature` SET `movementtype` = 1, `spawndist` = 1 WHERE `guid` = 2763;
+
+UPDATE gameobject_template SET ExtraFlags=ExtraFlags|0x00000002 WHERE entry IN(188114,188115,188116,187869);
