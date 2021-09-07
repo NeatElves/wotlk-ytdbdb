@@ -109,6 +109,9 @@ UPDATE gameobject_template SET data6=0 WHERE entry=178559;
 -- Drek'Thar's Scrolls 179004 - seemingly never used
 UPDATE `gameobject_template` SET `data1` = 0 WHERE `entry` = 179004;
 
+-- Inconspicuous Landmark 142189 - consumable, despawn on s.11462 expire
+UPDATE `gameobject_template` SET `data5` = 1 WHERE `entry` = 142189; -- 19660800 / 65536 = 300sec
+
 -- Musty Tome 176150/176151
 -- must despawn after used (has that flag set up.. but with restock timer it will never happen)
 UPDATE gameobject_template SET data2=0 WHERE entry IN (176150,176151);
