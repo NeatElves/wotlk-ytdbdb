@@ -36291,7 +36291,7 @@ UPDATE `creature` SET `spawndist` = 5, `movementtype` = 1 WHERE `guid` NOT IN (5
 
 UPDATE `gossip_menu` SET `text_id` = '10753' WHERE `entry` =8576 AND `text_id` =10752;
 INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (7336, 10790, 0, 0);
-DELETE FROM `gossip_menu_option` WHERE `menu_id` IN (5262,5222,5265,5268,7337,7336,8611,5271,5270,5273,5272,5277,5276,5275,5274,8591,8590);
+DELETE FROM `gossip_menu_option` WHERE `menu_id` IN (5262,5222,5265,5268,7337,7336,8611,5270,5272,5276,5274,8590);
 INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
 (5262, 0, 0, 'Sword', 20589, 1, 1, 8609, 0, 0, 0, 0, '', 0, 0),
 (5262, 1, 0, 'Mace', 20586, 1, 1, 8607, 0, 0, 0, 0, '', 0, 0),
@@ -36798,3 +36798,44 @@ REPLACE INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES (14406
 REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 187670 FROM `gameobject` WHERE `gameobject`.`id` = 187670;
 REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 187671 FROM `gameobject` WHERE `gameobject`.`id` = 187670;
 UPDATE `gameobject` SET `id` = 0 WHERE `id` = 187670;
+
+UPDATE creature_template SET GossipMenuId=6803 WHERE Entry=15731;
+DELETE FROM npc_text WHERE id=8126;
+DELETE FROM npc_text_broadcast_text WHERE Id=8126;
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES (8126, 0, 11415);
+UPDATE creature_template SET GossipMenuId=6806 WHERE Entry=15735;
+DELETE FROM npc_text WHERE id=8130;
+DELETE FROM npc_text_broadcast_text WHERE Id=8130;
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES (8130, 0, 11418);
+UPDATE creature_template SET GossipMenuId=6805 WHERE Entry=15734;
+DELETE FROM npc_text WHERE id=8129;
+DELETE FROM npc_text_broadcast_text WHERE Id=8129;
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES (8129, 0, 11417);
+UPDATE creature_template SET GossipMenuId=6804 WHERE Entry=15733;
+DELETE FROM npc_text WHERE id=8128;
+DELETE FROM npc_text_broadcast_text WHERE Id=8128;
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES (8128, 0, 11416);
+UPDATE creature_template SET GossipMenuId=6810 WHERE Entry=15738;
+DELETE FROM gossip_menu WHERE entry=6810;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES (6810, 8133, 0, 0);
+DELETE FROM npc_text WHERE id=8133;
+DELETE FROM npc_text_broadcast_text WHERE Id=8133;
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES (8133, 0, 11422);
+UPDATE creature_template SET GossipMenuId=6809 WHERE Entry=15739;
+DELETE FROM gossip_menu WHERE entry=6809;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES (6809, 8132, 0, 0);
+DELETE FROM npc_text WHERE id=8132;
+DELETE FROM npc_text_broadcast_text WHERE Id=8132;
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES (8132, 0, 11421);
+UPDATE creature_template SET GossipMenuId=6808 WHERE Entry=15736;
+DELETE FROM gossip_menu WHERE entry=6808;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES (6808, 8131, 0, 0);
+DELETE FROM npc_text WHERE id=8131;
+DELETE FROM npc_text_broadcast_text WHERE Id=8131;
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES (8131, 0, 11419);
+UPDATE creature_template SET GossipMenuId=6807 WHERE Entry=15737;
+DELETE FROM gossip_menu WHERE entry=6807;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES (6807, 8127, 0, 0);
+DELETE FROM npc_text WHERE id=8127;
+DELETE FROM npc_text_broadcast_text WHERE Id=8127;
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES (8127, 0, 11420);
