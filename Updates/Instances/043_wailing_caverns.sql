@@ -881,7 +881,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+270, 5761, 43, -112.501, -104.253, -75.2744, 0.855211, 7200, 7200, 2, 0, 0, 1), -- Deviate Shambler
 (@CGUID+271, 5761, 43, -120.675, -129.028, -66.9905, 0.405046, 7200, 7200, 2, 0, 0, 1), -- Deviate Shambler
 (@CGUID+272, 5761, 43, -102.971, -160.908, -67.5989, 3.61124, 7200, 7200, 5, 0, 0, 1), -- Deviate Shambler
-(@CGUID+273, 5761, 43, -69.5251, -144.688, -81.6552, 5.11381, 7200, 7200, 5, 0, 0, 1), -- Deviate Shambler
+(@CGUID+273, 5761, 43, -69.5251, -144.688, -79.2877, 5.11381, 7200, 7200, 5, 0, 0, 1), -- Deviate Shambler
 (@CGUID+274, 5761, 43, -57.3268, -123.082, -69.3712, 3.53947, 7200, 7200, 10, 0, 0, 1), -- Deviate Shambler
 (@CGUID+275, 5761, 43, -61.5681, -152.878, -78.7219, 6.12289, 7200, 7200, 0, 0, 0, 0), -- Deviate Shambler
 (@CGUID+276, 5761, 43, -37.4441, -48.2186, -65.3351, 0.700297, 7200, 7200, 5, 0, 0, 1), -- Deviate Shambler
@@ -1043,7 +1043,6 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 -- INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
--- INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 
 

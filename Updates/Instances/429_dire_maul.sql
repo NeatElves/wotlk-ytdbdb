@@ -2341,7 +2341,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+1070, 13160, 429, 468.5847, 294.3693, 2.852882, 0.662907, 7200, 7200, 2, 0, 0, 1), -- Carrion Swarmer
 (@CGUID+1071, 13160, 429, 468.7993, 280.4746, 2.852868, 3.095573, 7200, 7200, 2, 0, 0, 1), -- Carrion Swarmer
 (@CGUID+1072, 13160, 429, 476.467, 291.735, 2.852862, 4.770678, 7200, 7200, 2, 0, 0, 1), -- Carrion Swarmer
-(@CGUID+1073, 13160, 429, 472.4048, 295.3147, 2.852875, 4.433242, 7200, 7200, 2, 0, 0, 1); -- Carrion Swarmer
+(@CGUID+1073, 13160, 429, 472.4048, 295.3147, 2.852875, 4.433242, 7200, 7200, 2, 0, 0, 1), -- Carrion Swarmer
+(@CGUID+1074, 14690, 429, -112.776, 583.823, -3.47887, 5.60251, 604800, 604800, 0, 0, 0, 0); -- Revanchion
 
 -- =======
 -- POOLING
@@ -3312,7 +3313,8 @@ INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 (@OGUID+364, 1), -- Midsummer Bonfire (Midsummer Fire Festival)
 (@OGUID+365, 1); -- Flame of Dire Maul (Midsummer Fire Festival)
 
--- INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
+INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
+(@CGUID+1074, 89); -- Revanchion
 
 INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipment_id`, `spell_start`, `spell_end`, `event`) VALUES
 (@CGUID+556, 0, 15734, 0, 0, 0, 2); -- Prince Tortheldrin (Feast of Winter Veil)
@@ -3355,12 +3357,12 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (1432501, 0, 48, 33554432, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - Remove UNIT_FLAG_NOT_SELECTABLE'),
 (1432501, 0, 29, 3, 0x01, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - npcFlags added'),
 (1432501, 0, 22, 45, 0x01, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - Change faction to Ogre'),
-(1432501, 0, 0, 0, 0, 0, 0, 0, 0, 2000002872, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - 2st yell'),
+(1432501, 0, 0, 0, 0, 0, 0, 0, 0, 9424, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - 2st yell'),
 
-(1435301, 1000, 0, 0, 0, 0, 0, 0, 0, 2000001422, 0, 0, 0, 0, 0, 0, 0, 'Mizzle - say new king 1'),
+(1435301, 1000, 0, 0, 0, 0, 0, 0, 0, 9348, 0, 0, 0, 0, 0, 0, 0, 'Mizzle - say new king 1'),
 
 (1435307, 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Mizzle - pause WP Movement'),
-(1435307, 0, 0, 0, 0, 0, 0, 0, 0, 2000001423, 0, 0, 0, 0, 0, 0, 0, 'Mizzle - say new king 2'),
+(1435307, 0, 0, 0, 0, 0, 0, 0, 0, 9411, 0, 0, 0, 0, 0, 0, 0, 'Mizzle - say new king 2'),
 (1435307, 0, 29, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Mizzle - npc_flag added'),
 
 (1435308, 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Mizzle - pause WP Movement'),
@@ -3377,24 +3379,24 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 
 (1448201, 0, 20, 1, 20, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Xorothian Imp/Dread Guard - Start random movement around current position'),
 
-(1450004, 2000, 0, 0, 0, 0, 0, 0, 0, 2000002082, 0, 0, 0, 0, 0, 0, 0, 'J''eevee yell on spawn'),
-(1450004, 7000, 0, 0, 0, 0, 0, 0, 0, 2000002083, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 1'),
+(1450004, 2000, 0, 0, 0, 0, 0, 0, 0, 9705, 0, 0, 0, 0, 0, 0, 0, 'J''eevee yell on spawn'),
+(1450004, 7000, 0, 0, 0, 0, 0, 0, 0, 9702, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 1'),
 
 (1450005, 1000, 15, 23140, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee cast summon object'),
 (1450005, 3000, 9, @OGUID+344, 410, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn Bell of Dethmoora'),
 (1450005, 4000, 13, 0, 0, 0, 179674, 40, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Activate Bell of Dethmoora'),
-(1450005, 5000, 0, 0, 0, 0, 0, 0, 0, 2000002084, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 2'),
+(1450005, 5000, 0, 0, 0, 0, 0, 0, 0, 9703, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 2'),
 
 (1450006, 1000, 15, 23140, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee cast summon object'),
 (1450006, 3000, 9, @OGUID+342, 900, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn Wheel of the Black March'),
 (1450006, 4000, 13, 0, 0, 0, 179672, 40, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Activate Wheel of the Black March'),
-(1450006, 5000, 0, 0, 0, 0, 0, 0, 0, 2000002085, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 3'),
+(1450006, 5000, 0, 0, 0, 0, 0, 0, 0, 9704, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 3'),
 
 (1450007, 1000, 15, 23140, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee cast summon object'),
 (1450007, 3000, 9, @OGUID+343, 900, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn Doomsday Candle'),
 (1450007, 4000, 13, 0, 0, 0, 179673, 40, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Activate Doomsday Candle'),
 
--- (1450008, 1000, 0, 0, 0, 0, 0, 0, 0, 2000002086, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 4'), -- handled in event script because we need to target player...
+-- (1450008, 1000, 0, 0, 0, 0, 0, 0, 0, 9706, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 4'), -- handled in event script because we need to target player...
 (1450008, 5000, 15, 17680, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee cast Spirit Spawn-out'),
 (1450008, 6000, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee forced despawn');
 
@@ -3550,7 +3552,7 @@ INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalon
 (8175, 0, 20, 2, 0, 0, 14351, 500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gordok Bushwacker - set WP movement'),
 (8175, 5000, 10, 14351, 900000, 0, 0, 0, 0, 0, 0, 0, 0, 545.955, 535.318, 25.501, 0.00616291, 'Spawn Gordok Bushwacker'),
 -- Warlock ritual event start 8420 - partially handled in SD2 with event_spells_warlock_dreadsteed and npc_warlock_ritual_mob
-(8420, 40000, 0, 0, 0, 0, 14500, 40, 3, 2000002086, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 4'),
+(8420, 40000, 0, 0, 0, 0, 14500, 40, 3, 9706, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 4'),
 (8420, 41000, 36, 0, 0, 0, 14500, 40, 3, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee face player'),
 -- Dreadsteed boss event - partially handled in SD2 with event_spells_warlock_dreadsteed
 (8428, 0, 31, 14502, 150, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Terminate event if Xorothian Dreadsteed is already spawned'),
@@ -3566,23 +3568,23 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalo
 -- Pusilin chase event
 (570901, 0, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'npc_flag removed'),
 (570901, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'UNPAUSE'),
-(570901, 1000, 0, 0, 0, 0, 0, 0, 0, 2000000950, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 1'),
+(570901, 1000, 0, 0, 0, 0, 0, 0, 0, 9349, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 1'),
 (570901, 1000, 21, 1, 0, 0, 0, 0, 0x04, 0, 0, 0, 0, 0, 0, 0, 0, 'active'),
 
 (570902, 0, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'npc_flag removed'),
 (570902, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'UNPAUSE'),
-(570902, 1000, 0, 0, 0, 0, 0, 0, 0, 2000000951, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 2'),
+(570902, 1000, 0, 0, 0, 0, 0, 0, 0, 9353, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 2'),
 
 (570903, 0, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'npc_flag removed'),
 (570903, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'UNPAUSE'),
-(570903, 1000, 0, 0, 0, 0, 0, 0, 0, 2000000952, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 3'),
+(570903, 1000, 0, 0, 0, 0, 0, 0, 0, 9357, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 3'),
 
 (570904, 0, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'npc_flag removed'),
 (570904, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'UNPAUSE'),
-(570904, 1000, 0, 0, 0, 0, 0, 0, 0, 2000000953, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 4'),
+(570904, 1000, 0, 0, 0, 0, 0, 0, 0, 9360, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 4'),
 
 (570905, 0, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'npc_flag removed'),
-(570905, 1000, 0, 0, 0, 0, 0, 0, 0, 2000000954, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 5'),
+(570905, 1000, 0, 0, 0, 0, 0, 0, 0, 9363, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 5'),
 (570905, 4000, 15, 22735, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'TRANSFORM'),
 (570905, 3000, 10, 13276, 120000, 0, 0, 0, 0, 0, 0, 0, 0, 14.7965, -696.322, -12.6426, 4.4823, 'summon - Wildspawn Imp'),
 (570905, 3000, 10, 13276, 120000, 0, 0, 0, 0, 0, 0, 0, 0, 18.8891, -697.389, -12.6426, 4.35271, 'summon - Wildspawn Imp'),
@@ -3591,7 +3593,7 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalo
 (570905, 4000, 22, 90, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'set DemonFaction'),
 
 (573801, 0, 15, 8599, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - cast Enrage'),
-(573801, 0, 0, 0, 0, 0, 0, 0, 0, 2000002871, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - 1st yell'),
+(573801, 0, 0, 0, 0, 0, 0, 0, 0, 9416, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - 1st yell'),
 (573801, 0, 48, 33554432, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - Add UNIT_FLAG_NOT_SELECTABLE'),
 (573801, 1000, 21, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - set active'),
 (573801, 1000, 29, 3, 0x02, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - npcFlags removed'),
@@ -3604,15 +3606,15 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalo
 
 (574301, 0, 7, 7482, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
 (574301, 2000, 3, 0, 0, 0, 14368, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0.7, ''),
-(574301, 4000, 0, 0, 0, 0, 14368, 20, 0, 2000001382, 0, 0, 0, 0, 0, 0, 0, ''),
-(574301, 7000, 0, 0, 0, 0, 14368, 20, 0, 2000001383, 0, 0, 0, 0, 0, 0, 0, ''),
-(574301, 13000, 0, 0, 0, 0, 14368, 20, 0, 2000001384, 0, 0, 0, 0, 0, 0, 0, ''),
+(574301, 4000, 0, 0, 0, 0, 14368, 20, 0, 9446, 0, 0, 0, 0, 0, 0, 0, 'Lorekeeper Lydros 14368 - Say 1 (q. 7481 & 7482)'),
+(574301, 7000, 0, 0, 0, 0, 14368, 20, 0, 9447, 0, 0, 0, 0, 0, 0, 0, 'Lorekeeper Lydros 14368 - Say 2 (q. 7481 & 7482)'),
+(574301, 13000, 0, 0, 0, 0, 14368, 20, 0, 9448, 0, 0, 0, 0, 0, 0, 0, 'Lorekeeper Lydros 14368 - Say 3 (q. 7481 & 7482)'),
 (574301, 20000, 3, 0, 0, 0, 14368, 20, 0, 0, 0, 0, 0, 0, 0, 0, 3.07178, ''),
 (574302, 0, 7, 7481, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
 (574302, 2000, 3, 0, 0, 0, 14368, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0.7, ''),
-(574302, 4000, 0, 0, 0, 0, 14368, 20, 0, 2000001382, 0, 0, 0, 0, 0, 0, 0, ''),
-(574302, 7000, 0, 0, 0, 0, 14368, 20, 0, 2000001383, 0, 0, 0, 0, 0, 0, 0, ''),
-(574302, 13000, 0, 0, 0, 0, 14368, 20, 0, 2000001384, 0, 0, 0, 0, 0, 0, 0, ''),
+(574302, 4000, 0, 0, 0, 0, 14368, 20, 0, 9446, 0, 0, 0, 0, 0, 0, 0, 'Lorekeeper Lydros 14368 - Say 1 (q. 7481 & 7482)'),
+(574302, 7000, 0, 0, 0, 0, 14368, 20, 0, 9447, 0, 0, 0, 0, 0, 0, 0, 'Lorekeeper Lydros 14368 - Say 2 (q. 7481 & 7482)'),
+(574302, 13000, 0, 0, 0, 0, 14368, 20, 0, 9448, 0, 0, 0, 0, 0, 0, 0, 'Lorekeeper Lydros 14368 - Say 3 (q. 7481 & 7482)'),
 (574302, 20000, 3, 0, 0, 0, 14368, 20, 0, 0, 0, 0, 0, 0, 0, 0, 3.07178, ''),
 
 (570801, 0, 15, 22799, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Mizzle - cast King of the Gordok');
@@ -3624,38 +3626,13 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `dat
 -- A Broken Trap
 (1193, 0, 9, @OGUID+40, 3600, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'spawn Fixed trap'),
 -- Free Knot!
-(5525, 0, 0, 0, 0, 0, 0, 0, 0, 2000001513, 0, 0, 0, 0, 0, 0, 0, ''),
+(5525, 0, 0, 0, 0, 0, 0, 0, 0, 9346, 0, 0, 0, 0, 0, 0, 0, 'Knot Thimblejack'),
 (5525, 0, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'remove flag'),
 (5525, 1000, 9, @OGUID+42, 43200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'spawn cache'),
 (5525, 2000, 13, 0, 0, 0, 179511, 10, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'remove ball and chains'),
 (5525, 4000, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'run on'),
 (5525, 6000, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 500.42, 540.966, -25.3846, 2.72271, 'WP movement'),
 (5525, 15000, 18, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'despawn');
-
-DELETE FROM `dbscript_string` WHERE `entry` IN (2000002871,2000002872,2000001382,2000001383,2000001384,2000001513,2000002082,2000002083,2000002084,2000002085,2000002086,2000001422,2000001423,2000000950,2000000951,2000000952,2000000953,2000000954);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
-(2000002871, 'Hey, who Fengus callin\' a gnoll lover?!  Take da prisoners to da king; you smart to bring them with their weapons and show da king that they a threat.  I\'ll go see if Fengus talk smack when I give him da beatdown!  HAR!', 0, 6, 0, 0, 9416, 'Captain Kromcrush - Yell Fengus 1'),
-(2000002872, 'OK Fengus, where you at?!  You come call me a gnoll lover while I give you da hammer upside da head!', 0, 6, 0, 0, 9424, 'Captain Kromcrush - Yell Fengus 2'),
-
-(2000001382, 'I very much doubt that he will have anything to say, stranger...', 0, 0, 0, 1, 9446, 'Lorekeeper Lydros 14368 - Say 1 (q. 7481 & 7482)'),
-(2000001383, 'I personally didn''t mind him. It was the Prince who took exception to a high elf in his domain. Alas, I am not one to question the Prince. In his defense, he did not incinerate Master Winthalus immediately.', 0, 0, 0, 1, 9447, 'Lorekeeper Lydros 14368 - Say 2 (q. 7481 & 7482)'),
-(2000001384, 'We most definitely do not need anymore attention drawn to us, stranger. Return to those that sent you in search of the lost master and tell them that nothing could be found. When this is done - and I will know when it is so - return and I shall reveal the secrets of the deceased.', 0, 0, 0, 1, 9448, 'Lorekeeper Lydros 14368 - Say 3 (q. 7481 & 7482)'),
-
-(2000001513, '$N, I''ll make sure all my friends in the Cartel know that you''ve saved my life today.  Here - I''m going to need to be able to travel light, so please help yourself to my cache of tailoring and leatherworking supplies!  Thanks again - see ya!', 0, 0, 0, 4, 9346, 'Knot Thimblejack'),
-(2000002082, 'Ah, freedom!  Although brief, so sweet it is...', 0, 1, 0, 0, 9705, 'J''eevee yell on spawn'),
-(2000002083, 'Well duties call, yes?  First, the bell... to give you vigor!', 0, 0, 0, 0, 9702, 'J''eevee say 1'),
-(2000002084, 'Next, I''ll place the wheel... to protect you from harm.', 0, 0, 0, 0, 9703, 'J''eevee say 2'),
-(2000002085, 'And finally the candle... to burn those who would thwart you!', 0, 0, 0, 0, 9704, 'J''eevee say 3'),
-(2000002086, '$N, my duties are complete and I shall now take my leave.  Luck to you my $gfellow:lady;, and remember to keep the Bell, Wheel and Candle working!', 0, 0, 0, 0, 9706, 'J''eevee say 4'),
-
-(2000001422, 'OH NOES!  Da king is dead!  Uh... hail to da new king!  Yeah!', 0, 1, 0, 0, 9348, 'mizzle the crafty - new king 1'),
-(2000001423, 'Yar, he''s dead all right.  That makes you da new king... well, all of you!  Gordok is yours now, boss!  You should talk to me so you can learn everything there is about being da king!  I was... is his assistant!  Yeah, that''s why I''m called da crafty one!', 0, 0, 0, 0, 9411, 'mizzle the crafty - new king 2'),
-
-(2000000950, 'If you want the key, you''ll have to catch me!', 0, 0, 0, 0, 9349, 'Pusilin 1'),
-(2000000951, 'Chase me if you dare! I run without a care!', 0, 0, 0, 0, 9353, 'Pusilin 2'),
-(2000000952, 'Why would you ever want to harm me!? Come. Friends we can be!', 0, 0, 0, 0, 9357, 'Pusilin 3'),
-(2000000953, 'DIE?! You make Pusillin cry!', 0, 0, 0, 0, 9360, 'Pusilin 4'),
-(2000000954, 'Say hello to my little friends!', 0, 0, 0, 0, 9363, 'Pusilin 5');
 
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 

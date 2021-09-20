@@ -27,6 +27,7 @@ DATABASE=""
 USERNAME=""
 PASSWORD=""
 MYSQL=""
+LOCALES="YES"
 DEV_UPDATES="NO"
 FORCE_WAIT="YES"
 AHBOT="NO"
@@ -173,7 +174,7 @@ if [ "$COUNT" != 0 ]
 then
   echo "  $COUNT DB updates applied successfully"
 else
-  echo "  Did not found any new DB update to apply"
+  echo "  Did not find any new DB update to apply"
 fi
 echo
 echo
@@ -347,20 +348,28 @@ echo
 echo
 
 # locales
-echo "> Trying to apply ${ADDITIONAL_PATH}Updates/Locales ..."
-for f in "${ADDITIONAL_PATH}Updates/Locales/"*.sql
-do
-  echo "    Appending Locales file update `basename $f` to database $DATABASE"
-  $MYSQL_COMMAND < $f
-  if [[ $? != 0 ]]
-  then
-    echo "ERROR: cannot apply $f"
-    exit 1
-  fi
-done
-echo "  Locales datas successfully applied"
-echo
-echo
+if [ "$LOCALES" == "YES" ]
+then
+  echo "> Trying to apply locales data..."
+  for UPDATEFILE in ${ADDITIONAL_PATH}Locales/*.sql
+  do
+    if [ -e "$UPDATEFILE" ]
+    then
+        for UPDATE in ${ADDITIONAL_PATH}Locales/*.sql
+        do
+            echo "    process update $UPDATE"
+            $MYSQL_COMMAND < $UPDATE
+            [[ $? != 0 ]] && exit 1
+        done
+        echo "  Locales data applied"
+    else
+        echo "  No locales data to process"
+    fi
+    break
+  done
+  echo
+  echo
+fi
 
 #    DEVELOPERS UPDATES
 if [ "$DEV_UPDATES" == "YES" ]
@@ -680,20 +689,28 @@ echo
 echo
 
 # locales
-echo "> Trying to apply ${ADDITIONAL_PATH}Updates/Locales ..."
-for f in "${ADDITIONAL_PATH}Updates/Locales/"*.sql
-do
-  echo "    Appending Locales file update `basename $f` to database $DATABASE"
-  $MYSQL_COMMAND < $f
-  if [[ $? != 0 ]]
-  then
-    echo "ERROR: cannot apply $f"
-    exit 1
-  fi
-done
-echo "  Locales datas successfully applied"
-echo
-echo
+if [ "$LOCALES" == "YES" ]
+then
+  echo "> Trying to apply locales data..."
+  for UPDATEFILE in ${ADDITIONAL_PATH}Locales/*.sql
+  do
+    if [ -e "$UPDATEFILE" ]
+    then
+        for UPDATE in ${ADDITIONAL_PATH}Locales/*.sql
+        do
+            echo "    process update $UPDATE"
+            $MYSQL_COMMAND < $UPDATE
+            [[ $? != 0 ]] && exit 1
+        done
+        echo "  Locales data applied"
+    else
+        echo "  No locales data to process"
+    fi
+    break
+  done
+  echo
+  echo
+fi
 
 #    DEVELOPERS UPDATES
 if [ "$DEV_UPDATES" == "YES" ]
