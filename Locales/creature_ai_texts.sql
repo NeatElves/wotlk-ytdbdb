@@ -172,8 +172,8 @@ UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 448 
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 434 WHERE `entry` = -373;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 1935 WHERE `entry` = -374;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 637 WHERE `entry` = -375;
-UPDATE `creature_ai_texts` SET `content_loc8` = '[Орочий] Огг каз ко зугас кил мог Товноказ Кагг' WHERE `entry` = -376;
-UPDATE `creature_ai_texts` SET `content_loc8` = '[Орочий] Таго мог регас ги мог Товноказ Кагг' WHERE `entry` = -377;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 1874 WHERE `entry` = -376;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 1875 WHERE `entry` = -377;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -388;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 9589 WHERE `entry` = -404;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 907 WHERE `entry` = -405;
@@ -373,6 +373,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 1393
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 1390 WHERE `entry` = -1045;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 8915 WHERE `entry` = -1046;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 8916 WHERE `entry` = -1047;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 11700 WHERE `entry` = -1048;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 10147 WHERE `entry` = -1049;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 10146 WHERE `entry` = -1050;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 10145 WHERE `entry` = -1051;
@@ -778,7 +779,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 1519
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 15162 WHERE `entry` = -10260;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 15158 WHERE `entry` = -10261;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 15161 WHERE `entry` = -10262;
-#UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -10263;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 15157 WHERE `entry` = -10263;
 #UPDATE `creature_ai_texts` SET `content_loc8` = NULL WHERE `entry` = -10264;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 15159 WHERE `entry` = -10265;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 15160 WHERE `entry` = -10266;
