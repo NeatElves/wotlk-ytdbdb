@@ -36882,3 +36882,1487 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (15701, 0, 14, -4925.470215, -1241.599976, 501.658997, 100, 0, 0),
 (15701, 0, 15, -4931.609863, -1229.829956, 501.652008, 100, 0, 0),
 (15701, 0, 16, -4945.870117, -1210.979980, 501.644012, 100, 0, 0);
+
+UPDATE `gameobject` SET `spawntimesecsmin` = '-60', `spawntimesecsmax` = '-60' WHERE `guid` =677;
+UPDATE `gameobject` SET `spawntimesecsmin` = '-60', `spawntimesecsmax` = '-60' WHERE `guid` =679;
+
+UPDATE creature SET position_x=-5176.9, position_y=-624.369, position_z=397.947, orientation=0.715585 WHERE id=23710;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(22234, 23511, 530, 1, 1, 0, 0, -1906.3, 5569.85, -12.3448, 4.97419, 600, 600, 0, 0, 2215, 0, 0, 0),
+(22231, 24501, 530, 1, 1, 0, 0, -1926.79, 5562.97, -12.3448, 5.06145, 600, 600, 0, 0, 2215, 0, 0, 0),
+(127242, 24545, 530, 1, 1, 0, 0, -1882.76, 5575.42, -12.3448, 4.67748, 600, 600, 0, 0, 2215, 0, 0, 0);
+INSERT INTO game_event_creature (guid, `event`) VALUES (22231, 26), (22234, 26);
+UPDATE creature SET position_x=-5606.95, position_y=-456.357, position_z=405.166, orientation=5.07891 WHERE id=27584;
+UPDATE creature SET position_x=833.6, position_y=-4514.69, position_z=6.00353, orientation=6.12611 WHERE id=28329;
+UPDATE creature_template SET UnitFlags=33554432 WHERE Entry IN (27890,26774,26775);
+UPDATE quest_template SET StartScript=11318 WHERE entry IN (11318,11293,11294,11409,11407,11408);
+DELETE FROM dbscripts_on_quest_start WHERE id=11318;
+INSERT INTO dbscripts_on_quest_start (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+(11318, 0, 0, 15, 42149, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Trigger Brewfest Racing Ram');
+UPDATE quest_template SET StartScript=11122 WHERE entry IN (11122,11412);
+DELETE FROM dbscripts_on_quest_start WHERE id=11122;
+INSERT INTO dbscripts_on_quest_start (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+(11122, 0, 0, 15, 43720, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Trigger Brewfest Racing Ram - Relay Race - Intro');
+DELETE FROM spell_script_target WHERE entry=49858;
+INSERT INTO spell_script_target (entry, `type`, targetEntry, inverseEffectMask) VALUES (49858, 1, 27890, 0);
+DELETE FROM spell_target_position WHERE id=47673;
+INSERT INTO spell_target_position (id, target_map, target_position_x, target_position_y, target_position_z, target_orientation) VALUES (47673, 230, 824.809, -176.166, -49.7551, 0.479868);
+DELETE FROM spell_target_position WHERE id=47523;
+INSERT INTO spell_target_position (id, target_map, target_position_x, target_position_y, target_position_z, target_orientation) VALUES (47523, 230, 901.068, -143.939, -49.755, 0.436332);
+UPDATE creature_template SET UnitFlags=33554432 WHERE Entry=26834;
+DELETE FROM gossip_menu_option WHERE menu_id=9454;
+INSERT INTO gossip_menu_option (menu_id, id, option_icon, option_text, option_broadcast_text, option_id, npc_option_npcflag, action_menu_id, action_poi_id, action_script_id, box_coded, box_money, box_text, box_broadcast_text, condition_id) VALUES
+('9454', '0', '0', 'Pull the console''s levers.', '26084', '1', '1', '-1', '0', '945401', '0', '0', NULL, '0', '0');
+DELETE FROM dbscripts_on_gossip WHERE id=945401;
+INSERT INTO dbscripts_on_gossip (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+(945401, 0, 0, 15, 47512, 1, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Summon Mole Machine PoV Bunny');
+UPDATE `quest_template` SET `RequiredRaces` = '690' WHERE `entry` =11120;
+UPDATE `quest_template` SET `RequiredRaces` = '1101' WHERE `entry` =11118;
+INSERT INTO creature (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, spawndist, MovementType) VALUES
+(48310, 23894, 0, 1, -5185.22, -571.238, 397.264, 3.40339, 0, 0),
+(48311, 23894, 0, 1, -5174.79, -575.339, 397.422, 2.07694, 0, 0),
+(48312, 23894, 0, 1, -5180.45, -582.974, 397.854, 1.58825, 0, 0),
+(48313, 23894, 0, 1, -5166.21, -579.182, 397.285, 2.1293, 0, 0),
+(48314, 23894, 0, 1, -5180.45, -582.974, 397.854, 1.58825, 0, 0),
+(48315, 23894, 0, 1, -5136.89, -609.955, 397.718, 1.90241, 5, 1),
+(48316, 23894, 0, 1, -5143.15, -589.13, 397.306, 2.02458, 0, 0),
+(48317, 23894, 0, 1, -5166.21, -579.182, 397.285, 2.1293, 0, 0),
+(48318, 23894, 0, 1, -5159.99, -597.016, 398.187, 0.0698132, 0, 0),
+(48319, 23894, 0, 1, -5135.09, -596.353, 397.369, 2.21657, 5, 1),
+(48320, 23894, 0, 1, -5143.85, -617.721, 397.956, 2.44346, 0, 0),
+(48321, 23894, 0, 1, -5151.16, -610.857, 398.621, 5.39307, 0, 0),
+(48322, 23894, 0, 1, -5169.62, -588.142, 397.98, 2.44346, 0, 0),
+(48323, 23894, 0, 1, -5157.72, -581.05, 397.26, 2.40855, 5, 1),
+(48324, 23894, 0, 1, -5185.22, -571.238, 397.264, 3.40339, 0, 0),
+(48325, 23894, 0, 1, -5140.27, -599.968, 397.882, 1.85005, 0, 0),
+(48326, 23894, 0, 1, -5150.87, -588.753, 397.427, 2.77507, 0, 0),
+(48327, 23894, 0, 1, -5159.71, -606.657, 398.217, 2.6529, 5, 1),
+(48328, 23894, 0, 1, -5174.79, -575.339, 397.422, 2.07694, 5, 1),
+(48329, 23894, 0, 1, -5168.71, -617.211, 397.364, 2.11185, 0, 0),
+(48330, 23894, 0, 1, -5176.47, -590.352, 397.805, 2.26893, 0, 0),
+(48331, 23894, 0, 1, -5169.52, -608.45, 397.445, 2.14675, 0, 0),
+(48332, 23894, 0, 1, -5170.46, -597.917, 398.077, 2.35619, 0, 0),
+(48333, 23894, 0, 1, -5159.14, -588.562, 397.652, 2.05949, 0, 0),
+(48334, 23894, 0, 1, -5144.65, -608.685, 398.363, 2.33874, 5, 1),
+(48335, 23894, 0, 1, -5151.18, -598.83, 398.031, 5.58505, 5, 1),
+(48336, 23894, 0, 1, -5159.81, -616.635, 397.946, 2.70526, 5, 1),
+(48337, 23894, 0, 1, -5150.43, -620.648, 398.043, 6.07375, 0, 0),
+(48338, 23894, 0, 1, -5140.27, -599.968, 397.882, 1.85005, 5, 1),
+(48339, 23894, 0, 1, -5150.87, -588.753, 397.427, 2.77507, 0, 0),
+(48340, 23894, 0, 1, -5143.85, -617.721, 397.956, 2.44346, 5, 1),
+(48341, 23894, 0, 1, -5151.16, -610.857, 398.621, 5.39307, 0, 0),
+(48342, 23894, 0, 1, -5174.79, -575.339, 397.422, 2.07694, 0, 0),
+(48343, 23894, 0, 1, -5169.52, -608.45, 397.445, 2.14675, 0, 0),
+(48344, 23894, 0, 1, -5170.46, -597.917, 398.077, 2.35619, 0, 0),
+(48345, 23894, 0, 1, -5159.14, -588.562, 397.652, 2.05949, 0, 0),
+(48346, 23894, 0, 1, -5159.71, -606.657, 398.217, 2.6529, 0, 0),
+(48347, 23894, 0, 1, -5144.65, -608.685, 398.363, 2.33874, 0, 0),
+(48348, 23894, 0, 1, -5168.71, -617.211, 397.364, 2.11185, 5, 1),
+(48349, 23894, 0, 1, -5176.47, -590.352, 397.805, 2.26893, 5, 1),
+(48350, 23894, 0, 1, -5150.43, -620.648, 398.043, 6.07375, 0, 0),
+(48351, 23894, 0, 1, -5180.45, -582.974, 397.854, 1.58825, 0, 0),
+(48352, 23894, 0, 1, -5143.15, -589.13, 397.306, 2.02458, 0, 0),
+(48353, 23894, 0, 1, -5166.21, -579.182, 397.285, 2.1293, 0, 0),
+(48354, 23894, 0, 1, -5159.99, -597.016, 398.187, 0.0698132, 0, 0),
+(48355, 23894, 0, 1, -5151.18, -598.83, 398.031, 5.58505, 5, 1),
+(48356, 23894, 0, 1, -5159.81, -616.635, 397.946, 2.70526, 0, 0),
+(48357, 23894, 0, 1, -5135.09, -596.353, 397.369, 2.21657, 0, 0),
+(48358, 23894, 0, 1, -5136.89, -609.955, 397.718, 1.90241, 5, 1),
+(48359, 23894, 0, 1, -5169.62, -588.142, 397.98, 2.44346, 5, 1),
+(48360, 23894, 0, 1, -5157.72, -581.05, 397.26, 2.40855, 5, 1),
+(48361, 23894, 0, 1, -5185.22, -571.238, 397.264, 3.40339, 5, 1),
+(48362, 23894, 1, 1, 1216.22, -4317.01, 21.2761, 2.44346, 0, 0),
+(48363, 23894, 1, 1, 1213.87, -4328.47, 21.275, 2.70526, 5, 1),
+(48364, 23894, 1, 1, 1208.68, -4322.27, 21.2876, 2.6529, 5, 1),
+(48365, 23894, 1, 1, 1204.06, -4330.97, 21.3787, 2.07694, 5, 1),
+(48366, 23894, 1, 1, 1204.33, -4315.41, 21.3754, 4.97419, 0, 0),
+(48367, 23894, 1, 1, 1198.8, -4323.04, 21.3794, 2.35619, 0, 0),
+(48368, 23894, 1, 1, 1209.89, -4310.15, 21.2896, 5.58505, 5, 1),
+(48369, 23894, 1, 1, 1196.57, -4307.76, 21.364, 2.1293, 0, 0),
+(48370, 23894, 1, 1, 1202.69, -4307.33, 21.2916, 5.39307, 0, 0),
+(48371, 23894, 1, 1, 1209.58, -4299.56, 21.275, 2.77507, 0, 0),
+(48372, 23894, 1, 1, 1202.77, -4300.24, 21.3636, 1.58825, 0, 0),
+(48373, 23894, 1, 1, 1197.32, -4315.78, 21.3793, 0.0698132, 0, 0),
+(48374, 23894, 1, 1, 1195.19, -4300.47, 21.5307, 2.26893, 5, 1),
+(48375, 23894, 1, 1, 1206.82, -4291.73, 21.275, 2.44346, 0, 0),
+(48376, 23894, 1, 1, 1192.68, -4292.9, 21.3046, 4.2586, 5, 1),
+(48377, 23894, 1, 1, 1206.42, -4282.68, 21.2753, 4.69494, 0, 0),
+(48378, 23894, 1, 1, 1199.25, -4285.99, 21.2806, 1.90241, 0, 0),
+(48379, 23894, 1, 1, 1203.91, -4275.25, 21.2753, 2.11185, 0, 0),
+(48380, 23894, 1, 1, 1192.42, -4284.9, 21.275, 2.21657, 0, 0),
+(48381, 23894, 1, 1, 1185.89, -4293.42, 21.2887, 2.33874, 0, 0),
+(48382, 23894, 1, 1, 1178.17, -4290.69, 21.2557, 1.85005, 0, 0),
+(48383, 23894, 1, 1, 1196.84, -4277.9, 21.1771, 4.34587, 5, 1),
+(48384, 23894, 1, 1, 1185.17, -4285.06, 21.275, 3.40339, 0, 0),
+(48385, 23894, 1, 1, 1203.91, -4275.25, 21.2753, 2.11185, 0, 0),
+(48386, 23894, 1, 1, 1204.06, -4330.97, 21.3787, 2.07694, 5, 1),
+(48387, 23894, 1, 1, 1204.33, -4315.41, 21.3754, 4.97419, 0, 0),
+(48388, 23894, 1, 1, 1206.82, -4291.73, 21.275, 2.44346, 0, 0),
+(48389, 23894, 1, 1, 1192.42, -4284.9, 21.275, 2.21657, 0, 0),
+(48390, 23894, 1, 1, 1198.8, -4323.04, 21.3794, 2.35619, 5, 1),
+(48391, 23894, 1, 1, 1192.68, -4292.9, 21.3046, 4.2586, 0, 0),
+(48392, 23894, 1, 1, 1185.89, -4293.42, 21.2887, 2.33874, 0, 0),
+(48393, 23894, 1, 1, 1216.22, -4317.01, 21.2761, 2.44346, 5, 1),
+(48394, 23894, 1, 1, 1187.18, -4301.42, 21.3434, 6.07375, 0, 0),
+(48395, 23894, 1, 1, 1178.17, -4290.69, 21.2557, 1.85005, 5, 1),
+(48396, 23894, 1, 1, 1196.57, -4307.76, 21.364, 2.1293, 0, 0),
+(48397, 23894, 1, 1, 1202.69, -4307.33, 21.2916, 5.39307, 5, 1),
+(48398, 23894, 1, 1, 1213.87, -4328.47, 21.275, 2.70526, 0, 0),
+(48399, 23894, 1, 1, 1206.42, -4282.68, 21.2753, 4.69494, 0, 0),
+(48400, 23894, 1, 1, 1209.89, -4310.15, 21.2896, 5.58505, 5, 1),
+(48401, 23894, 1, 1, 1196.84, -4277.9, 21.1771, 4.34587, 0, 0),
+(48402, 23894, 1, 1, 1185.17, -4285.06, 21.275, 3.40339, 5, 1),
+(48403, 23894, 1, 1, 1208.68, -4322.27, 21.2876, 2.6529, 0, 0),
+(48404, 23894, 1, 1, 1209.58, -4299.56, 21.275, 2.77507, 0, 0),
+(48405, 23894, 1, 1, 1199.25, -4285.99, 21.2806, 1.90241, 0, 0),
+(48406, 23894, 1, 1, 1202.77, -4300.24, 21.3636, 1.58825, 5, 1),
+(48407, 23894, 1, 1, 1197.32, -4315.78, 21.3793, 0.0698132, 5, 1),
+(48408, 23894, 1, 1, 1195.19, -4300.47, 21.5307, 2.26893, 0, 0),
+(48409, 23894, 1, 1, 1187.18, -4301.42, 21.3434, 6.07375, 0, 0);
+INSERT INTO game_event_creature (guid, `event`) SELECT guid, 26 FROM creature WHERE guid BETWEEN 48310 AND 48409;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(22257, 23703, 0, 1, 1, 0, 0, -5115.21, -612.475, 402.23, 2.23402, 120, 120, 0, 0, 260000, 0, 0, 0),
+(22260, 23703, 0, 1, 1, 0, 0, -5116.33, -616.3, 402.837, 1.55334, 120, 120, 0, 0, 260000, 0, 0, 0),
+(22283, 23703, 1, 1, 1, 0, 0, 1195.84, -4296.19, 21.4236, 2.23402, 120, 120, 0, 0, 260000, 0, 0, 0),
+(22304, 23703, 1, 1, 1, 0, 0, 1199.55, -4296.6, 21.4128, 1.55334, 120, 120, 0, 0, 260000, 0, 0, 0),
+(22305, 24536, 0, 1, 1, 0, 0, -5151.64, -605.771, 398.586, 1.91986, 120, 120, 0, 0, 1, 0, 0, 0),
+(86870, 23703, 0, 1, 1, 0, 0, -5152.34, -604.997, 398.523, 5.60251, 120, 120, 0, 0, 260000, 0, 0, 0),
+(86952, 23703, 1, 1, 1, 0, 0, 1199.71, -4293.62, 21.2836, 5.60251, 120, 120, 0, 0, 260000, 0, 0, 0),
+(86960, 23808, 1, 1, 1, 0, 0, 1184.4, -4311.58, 21.3166, 3.19826, 120, 120, 0, 0, 260000, 0, 0, 0),
+(86971, 23808, 1, 1, 1, 0, 0, 1184.43, -4275.28, 21.2707, 3.13497, 120, 120, 0, 0, 260000, 0, 0, 0),
+(87749, 23808, 1, 1, 1, 0, 0, 1220.12, -4295.97, 21.3166, 5.1018, 120, 120, 0, 0, 260000, 0, 0, 0),
+(88195, 27707, 1, 1, 1, 0, 0, 1290.48, -4431.36, 27.0603, 0.10016, 120, 120, 0, 0, 42, 0, 0, 0),
+(94502, 23808, 0, 1, 1, 0, 0, -5183.85, -599.806, 397.301, 2.46844, 120, 120, 0, 0, 260000, 0, 0, 0),
+(94503, 23808, 0, 1, 1, 0, 0, -5158.17, -628.813, 397.349, 5.18785, 120, 120, 0, 0, 260000, 0, 0, 0),
+(94504, 23808, 0, 1, 1, 0, 0, -5148.59, -578.905, 397.301, 5.2203, 120, 120, 0, 0, 260000, 0, 0, 0),
+(102399, 27817, 0, 1, 1, 0, 0, -4845.83, -861.923, 501.997, 4.46804, 120, 120, 0, 0, 2215, 0, 0, 0);
+INSERT INTO game_event_creature (guid, `event`) SELECT guid, 26 FROM creature WHERE guid in (22257,22260,22283,22304,22305);
+
+DELETE FROM creature_template_addon WHERE entry=8532;
+DELETE FROM creature_template_addon WHERE entry=8538;
+DELETE FROM creature_template_addon WHERE entry=8539;
+DELETE FROM creature_template_addon WHERE entry=8553;
+DELETE FROM creature_template_addon WHERE entry=712;
+
+DELETE FROM dbscripts_on_quest_end WHERE id=492 AND delay=1000;
+INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(492, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 576, 0, 0, 0, 0, 0, 0, 0, 'Captured Mountainer says');
+
+UPDATE creature_template SET NpcFlags=4736 WHERE Entry=14371;
+
+REPLACE INTO `creature_movement_template` (`entry`,`pathId`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
+(25949,0,1,4196.1,1172.44,6.68073,120000,2594901,0.688985);
+UPDATE creature_template SET MovementType=2 WHERE entry IN(25949);
+UPDATE `creature` SET `position_x` = '4196.1', `position_y` = '1172.44', `position_z` = '6.68073', `orientation` = '0.688985', `MovementType` = '2' WHERE `guid` =58064;
+INSERT INTO dbscripts_on_creature_movement(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+('2594901', '0', '0', '0', '0', '0', '0', '0', '0', '0', '25123', '0', '0', '0', '0', '0', '0', '0', '0', 'An Innocent Disguise SAY 1'),
+('2594901', '6000', '0', '0', '0', '0', '0', '25951', '20', '0', '25124', '0', '0', '0', '0', '0', '0', '0', '0', 'An Innocent Disguise SAY 2'),
+('2594901', '12000', '0', '0', '0', '0', '0', '0', '0', '0', '25126', '0', '0', '0', '0', '0', '0', '0', '0', 'An Innocent Disguise SAY 3'),
+('2594901', '18000', '0', '0', '0', '0', '0', '25951', '20', '0', '25127', '0', '0', '0', '0', '0', '0', '0', '0', 'An Innocent Disguise SAY 4'),
+('2594901', '25000', '0', '0', '0', '0', '0', '0', '0', '0', '25128', '0', '0', '0', '0', '0', '0', '0', '0', 'An Innocent Disguise SAY 5'),
+('2594901', '25000', '0', '15', '46375', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'An Innocent Disguise - Cast Credit');
+INSERT INTO dbscripts_on_quest_end(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+('11966', '0', '0', '15', '47107', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling CAST Give Summer Scorchling Incense'),
+('11966', '500', '0', '0', '0', '0', '0', '0', '0', '0', '25699', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling SAY 1'),
+('11966', '2000', '0', '0', '0', '0', '0', '0', '0', '0', '25717', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling SAY 2'),
+('11966', '3000', '0', '0', '0', '0', '0', '0', '0', '0', '25718', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling SAY 3'),
+('11966', '3100', '0', '15', '47114', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling CAST Scorchling Grow'),
+('11966', '5400', '0', '15', '47114', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling CAST Scorchling Grow'),
+('11966', '5500', '0', '0', '0', '0', '0', '0', '0', '0', '25719', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling SAY 4'),
+('11966', '7800', '0', '15', '47114', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling CAST Scorchling Grow'),
+('11966', '8000', '0', '0', '0', '0', '0', '0', '0', '0', '25730', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling SAY 5'),
+('11966', '9200', '0', '0', '0', '0', '0', '0', '0', '0', '25720', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling SAY 6'),
+('11966', '10300', '0', '15', '47114', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling CAST Scorchling Grow'),
+('11966', '10300', '0', '15', '47114', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling CAST Scorchling Grow'),
+('11966', '10400', '0', '0', '0', '0', '0', '0', '0', '0', '25721', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling SAY 7'),
+('11966', '12700', '0', '15', '47114', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling CAST Scorchling Grow'),
+('11966', '12700', '0', '15', '47114', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling CAST Scorchling Grow'),
+('11966', '12700', '0', '15', '47120', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling CAST Summon Wisp of Ragnaros'),
+('11966', '12800', '0', '0', '0', '0', '0', '0', '0', '0', '25722', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling SAY 8'),
+('11966', '13900', '0', '1', '15', '0', '0', '26502', '10', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Wisp of Ragnaros EMOTE Roar'),
+('11966', '15100', '0', '18', '0', '0', '0', '26502', '10', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Wisp of Ragnaros DESPAWN SELF'),
+('11966', '16200', '0', '14', '47114', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling REMOVE AURA Scorchling Grow'),
+('11966', '16300', '0', '0', '0', '0', '0', '0', '0', '0', '25723', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling SAY 9'),
+('11966', '19800', '0', '0', '0', '0', '0', '0', '0', '0', '25724', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling SAY 10'),
+('11966', '21000', '0', '0', '0', '0', '0', '0', '0', '0', '25725', '0', '0', '0', '0', '0', '0', '0', '0', 'Scorchling SAY 11');
+UPDATE quest_template SET CompleteScript=11966,RewSpellCast=0 WHERE entry IN(11966,11964);
+INSERT INTO spell_script_target VALUES ('45407', '1', '16781', '0');
+UPDATE creature_template SET Faction=1998 WHERE entry IN(25757,26341);
+UPDATE `creature_template` SET `UnitFlags` = 33554432 WHERE `entry` = 16606;
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(4030, 188129, 530, 1, 9802.68, -7253.88, 26.2013, 6.2397, 0, 0, 0.0217389, -0.999764, 25, 25, 100, 1),
+(4541, 188128, 530, 1, -3793.16, -11506.3, -134.746, 6.27191, 0, 0, 0.00563705, -0.999984, 25, 25, 100, 1);
+INSERT INTO spell_script_target VALUES ('45732', '1', '25535', '0'), ('46054', '1', '25535', '0'), ('45907', '1', '25535', '0');
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(88607, 25535, 1, 1, 0, 0, 8716.72, 936.368, 15.5168, 4.92183, 120, 120, 0, 0, 1, 0, 0, 0),
+(88608, 25535, 1, 1, 0, 0, 8722, 933.625, 16.7696, 3.82227, 120, 120, 0, 0, 1, 0, 0, 0),
+(88609, 25535, 1, 1, 0, 0, 8721.14, 923.811, 17.3029, 2.61799, 120, 120, 0, 0, 1, 0, 0, 0),
+(88610, 25535, 1, 1, 0, 0, 8717.23, 920.036, 15.6727, 3.14159, 120, 120, 0, 0, 1, 0, 0, 0),
+(88611, 25535, 1, 1, 0, 0, 8716.8, 928.821, 16.1683, 4.34587, 120, 120, 0, 0, 1, 0, 0, 0),
+(48410, 25535, 0, 1, 0, 0, -8816.22, 854.917, 100.761, 2.51327, 120, 120, 0, 0, 1, 0, 0, 0),
+(48411, 25535, 0, 1, 0, 0, -8821.53, 862.878, 100.686, 4.92183, 120, 120, 0, 0, 1, 0, 0, 0),
+(48412, 25535, 0, 1, 0, 0, -8819.54, 848.562, 100.829, 2.54818, 120, 120, 0, 0, 1, 0, 0, 0),
+(48413, 25535, 0, 1, 0, 0, -8825.81, 845.633, 100.721, 2.61799, 120, 120, 0, 0, 1, 0, 0, 0),
+(48414, 25535, 0, 1, 0, 0, -8817.78, 859.743, 100.936, 4.34587, 120, 120, 0, 0, 1, 0, 0, 0),
+(48415, 25535, 0, 1, 0, 0, -4685.86, -1219.04, 503.361, 4.92183, 120, 120, 0, 0, 1, 0, 0, 0),
+(48416, 25535, 0, 1, 0, 0, 1840.97, 216.172, 61.8509, 5.70723, 120, 120, 0, 0, 1, 0, 0, 0),
+(48417, 25535, 0, 1, 0, 0, 1837.11, 225.575, 61.9962, 3.68264, 120, 120, 0, 0, 1, 0, 0, 0),
+(48418, 25535, 0, 1, 0, 0, 1840.16, 222.559, 61.9884, 4.34587, 120, 120, 0, 0, 1, 0, 0, 0),
+(48419, 25535, 0, 1, 0, 0, 1838.25, 218.972, 61.9281, 2.51327, 120, 120, 0, 0, 1, 0, 0, 0),
+(48420, 25535, 0, 1, 0, 0, 1837.25, 213.059, 62.0698, 3.63028, 120, 120, 0, 0, 1, 0, 0, 0),
+(48421, 25535, 530, 1, 0, 0, -3812.05, -11492.4, -136.653, 5.67232, 120, 120, 0, 0, 1, 0, 0, 0),
+(48422, 25535, 530, 1, 0, 0, -3810.84, -11496.9, -136.652, 6.16101, 120, 120, 0, 0, 1, 0, 0, 0),
+(48423, 25535, 530, 1, 0, 0, -3804.29, -11485.4, -136.533, 5.27089, 120, 120, 0, 0, 1, 0, 0, 0),
+(48424, 25535, 530, 1, 0, 0, -3807.57, -11490.8, -136.608, 5.77704, 120, 120, 0, 0, 1, 0, 0, 0),
+(48425, 25535, 530, 1, 0, 0, -3808.43, -11486.3, -136.544, 5.70723, 120, 120, 0, 0, 1, 0, 0, 0),
+(48426, 25535, 530, 1, 0, 0, 9804.1, -7214.45, 28.4953, 4.50295, 120, 120, 0, 0, 1, 0, 0, 0),
+(48427, 25535, 530, 1, 0, 0, 9799.37, -7217.6, 28.4873, 5.28835, 120, 120, 0, 0, 1, 0, 0, 0),
+(48428, 25535, 530, 1, 0, 0, 9794.51, -7221.35, 28.4597, 5.60251, 120, 120, 0, 0, 1, 0, 0, 0),
+(48429, 25535, 530, 1, 0, 0, 9804.03, -7219.89, 27.821, 4.34587, 120, 120, 0, 0, 1, 0, 0, 0),
+(48430, 25535, 530, 1, 0, 0, 9799.37, -7222.61, 27.7769, 5.81195, 120, 120, 0, 0, 1, 0, 0, 0),
+(48431, 25535, 1, 1, 0, 0, -1048.85, 299.991, 136.202, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48432, 25535, 1, 1, 0, 0, -1049.06, 306.612, 134.733, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48433, 25535, 1, 1, 0, 0, -1042.59, 306.597, 136.243, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48434, 25535, 1, 1, 0, 0, -1041.57, 313.124, 135.073, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48435, 25535, 1, 1, 0, 0, -1035.84, 312.571, 136.455, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48436, 25535, 1, 1, 0, 0, 1915.7, -4320.43, 23.6215, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48437, 25535, 1, 1, 0, 0, 1918.05, -4314.79, 24.6562, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48438, 25535, 1, 1, 0, 0, 1920.34, -4319.12, 23.6321, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48439, 25535, 1, 1, 0, 0, 1923.91, -4315.28, 24.2867, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48440, 25535, 1, 1, 0, 0, 1925.28, -4321.31, 23.4577, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48441, 25535, 0, 1, 0, 0, -4683.96, -1232.55, 503.46, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48442, 25535, 0, 1, 0, 0, -4677.29, -1229.75, 503.46, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48443, 25535, 0, 1, 0, 0, -4675.42, -1224.7, 503.455, 0, 120, 120, 0, 0, 1, 0, 0, 0),
+(48444, 25535, 0, 1, 0, 0, -4678.74, -1219.32, 503.455, 0, 120, 120, 0, 0, 1, 0, 0, 0);
+REPLACE INTO game_event_creature (guid, `event`) SELECT guid, 1 FROM creature WHERE guid in (SELECT guid FROM creature WHERE id =25535);
+UPDATE creature_template_addon SET Auras='45390' WHERE entry IN(17066);
+UPDATE creature_template SET MovementType=0 WHERE entry IN(17066);
+UPDATE quest_template SET SrcSpell=45716,LimitTime=40 WHERE entry IN(11922,11731);
+UPDATE quest_template SET SrcSpell=46630,LimitTime=90 WHERE entry IN(11926,11921);
+DELETE FROM `creature_questrelation` WHERE `id` = 26113 AND `quest` = 11921;
+UPDATE quest_template SET PrevQuestId=11657 WHERE entry IN(11921);
+UPDATE quest_template SET PrevQuestId=11923 WHERE entry IN(11926);
+UPDATE quest_template SET OfferRewardText='Wow, you did it!  You are great!  Maybe next year you can apply for a job at the festival!' WHERE entry IN(11926,11921);
+UPDATE quest_template SET OfferRewardText='Well done!  You''ll be a fire juggler faster than the fuse on a ground flower!  Now gird yourself!  The next test is when things really heat up...' WHERE entry IN(11922,11731);
+UPDATE quest_template SET OfferRewardText='Did you get burned?  If you did, then maybe you''ll think twice before playing with fire...$B$BJust kidding!  Well done!  It''s official.  You''re a bona fide fire juggler.  Now get out there and have some fun!' WHERE entry IN(11923,11657);
+UPDATE quest_template SET OfferRewardText='How''s that arm doing, $N?  You looked great out there.  A real juggling master!' WHERE entry IN(11925,11924);
+UPDATE gameobject_template SET Faction=1735 WHERE name like 'Alliance Bonfire' AND type=2;
+UPDATE gameobject_template SET Faction=1732 WHERE name like 'Horde Bonfire' AND type=2;
+UPDATE creature_template SET MovementType=0 WHERE entry IN(16606,16592);
+DELETE FROM spell_script_target WHERE entry = 28806 AND targetEntry=181288;
+DELETE FROM spell_script_target WHERE entry IN(29437,46904,46903,45437,29831);
+INSERT INTO spell_script_target VALUES (29831,1,26258,0), (29831,1,26355,0);
+INSERT INTO spell_script_target SELECT 29437, 0, entry, 0 FROM gameobject_template WHERE name like 'Flame of %' AND entry >= 181332;
+INSERT INTO spell_script_target SELECT 46904, 0, entry, 0 FROM gameobject_template WHERE name like 'Flame of %' AND entry >= 181332;
+INSERT INTO spell_script_target SELECT 46903, 0, entry, 0 FROM gameobject_template WHERE name like 'Flame of %' AND entry >= 181332;
+INSERT INTO spell_script_target SELECT 45437, 0, entry, 0 FROM gameobject_template WHERE name like 'Flame of %' AND entry >= 181332;
+INSERT INTO spell_script_target SELECT 29437, 0, entry, 0 FROM gameobject_template WHERE name like 'Alliance Bonfire';
+INSERT INTO spell_script_target SELECT 46904, 0, entry, 0 FROM gameobject_template WHERE name like 'Alliance Bonfire';
+INSERT INTO spell_script_target SELECT 46903, 0, entry, 0 FROM gameobject_template WHERE name like 'Alliance Bonfire';
+INSERT INTO spell_script_target SELECT 45437, 0, entry, 0 FROM gameobject_template WHERE name like 'Alliance Bonfire';
+INSERT INTO spell_script_target SELECT 29437, 0, entry, 0 FROM gameobject_template WHERE name like 'Horde Bonfire';
+INSERT INTO spell_script_target SELECT 46904, 0, entry, 0 FROM gameobject_template WHERE name like 'Horde Bonfire';
+INSERT INTO spell_script_target SELECT 46903, 0, entry, 0 FROM gameobject_template WHERE name like 'Horde Bonfire';
+INSERT INTO spell_script_target SELECT 45437, 0, entry, 0 FROM gameobject_template WHERE name like 'Horde Bonfire';
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(88613, 26188, 1, 1, 0, 0, 8687.6, 971.462, 11.0922, 3.35103, 120, 120, 0, 0, 1, 0, 0, 0),
+(22330, 26188, 0, 1, 0, 0, -8814.53, 876.836, 98.8215, 3.9619, 120, 120, 0, 0, 1, 0, 0, 0),
+(22336, 26188, 0, 1, 0, 0, -4716.79, -1203.85, 501.743, 3.01942, 120, 120, 0, 0, 1, 0, 0, 0),
+(22347, 26188, 0, 1, 0, 0, 1826.76, 254.811, 59.9133, 0.680678, 120, 120, 0, 0, 1, 0, 0, 0),
+(22350, 26188, 530, 1, 0, 0, 9816.4, -7269.1, 26.3151, 4.4855, 120, 120, 0, 0, 1, 0, 0, 0),
+(22355, 26188, 530, 1, 0, 0, -3769, -11506.2, -134.381, 3.33358, 120, 120, 0, 0, 1, 0, 0, 0);
+INSERT INTO spell_script_target VALUES ('46747', '1', '26188', '0');
+REPLACE INTO game_event_creature (guid, `event`) SELECT guid, 1 FROM creature WHERE guid in (SELECT guid FROM creature WHERE id =22347);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(88612, 25536, 1, 1, 0, 0, 8700.31, 932.395, 15.3937, 1.51844, 120, 120, 0, 0, 1, 0, 0, 0),
+(22361, 25536, 0, 1, 0, 0, -8834.66, 860.41, 98.9212, 1.51844, 120, 120, 0, 0, 1, 0, 0, 0),
+(22404, 25536, 0, 1, 0, 0, -4699.92, -1223.14, 501.743, 1.51844, 120, 120, 0, 0, 1, 0, 0, 0),
+(22405, 25536, 0, 1, 0, 0, 1821.8, 219.026, 60.3553, 1.51844, 120, 120, 0, 0, 1, 0, 0, 0),
+(22411, 25536, 530, 1, 0, 0, 9805.51, -7239.36, 26.129, 1.51844, 120, 120, 0, 0, 1, 0, 0, 0),
+(22421, 25536, 530, 1, 0, 0, -3794.29, -11503.7, -134.666, 1.51844, 120, 120, 0, 0, 1, 0, 0, 0);
+REPLACE INTO game_event_creature (guid, `event`) SELECT guid, 1 FROM creature WHERE guid in (SELECT guid FROM creature WHERE id =25536);
+UPDATE gameobject_template SET data1=30 WHERE entry IN(181371);
+UPDATE creature_template SET NpcFlags=3,UnitFlags=37632 WHERE name like '%Flame Keeper' AND entry>=25884;
+UPDATE creature_template SET NpcFlags=3,UnitFlags=37632 WHERE name like '%Flame Warden' AND entry>=25883;
+UPDATE quest_template SET SpecialFlags=0 WHERE entry IN(11964,11966);
+DELETE FROM `creature` WHERE `guid` = 93583;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(78212, 25866, 1, 1, 0, 0, 3886.6, 771.658, 5.00204, 3.78625, 300, 300, 30, 0, 0, 0, 0, 1),
+(78213, 25866, 1, 1, 0, 0, 3873.34, 786.567, 3.15877, 1.19364, 300, 300, 30, 0, 0, 0, 0, 1),
+(78211, 25866, 1, 1, 0, 0, 3886.25, 820.325, 1.23753, 1.74656, 300, 300, 30, 0, 0, 0, 0, 1),
+(93585, 25866, 1, 1, 0, 0, 3922.2, 795.453, 9.05771, 3.07546, 300, 300, 30, 0, 0, 0, 0, 1),
+(66045, 25866, 1, 1, 0, 0, 3956.09, 767.42, 7.88992, 5.17483, 300, 300, 30, 0, 0, 0, 0, 1),
+(78214, 25866, 1, 1, 0, 0, 3988.96, 790.529, 6.19678, 0.208762, 300, 300, 30, 0, 0, 0, 0, 1),
+(66006, 25866, 1, 1, 0, 0, 3899.13, 764.193, 6.01616, 5.62487, 300, 300, 30, 0, 0, 0, 0, 1),
+(66018, 25866, 1, 1, 0, 0, 3923.53, 840.173, 2.29151, 2.07879, 300, 300, 30, 0, 0, 0, 0, 1),
+(78217, 25866, 1, 1, 0, 0, 3900.86, 799.587, 7.80664, 1.37978, 300, 300, 30, 0, 0, 0, 0, 1),
+(78218, 25866, 1, 1, 0, 0, 3950.07, 846.313, 7.9843, 4.16433, 300, 300, 30, 0, 0, 0, 0, 1),
+(78215, 25866, 1, 1, 0, 0, 3982.71, 816.306, 8.04045, 4.0481, 300, 300, 30, 0, 0, 0, 0, 1),
+(78216, 25866, 1, 1, 0, 0, 3918.32, 760.473, 7.77712, 1.94087, 300, 300, 30, 0, 0, 0, 0, 1);
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 25866 FROM `creature` WHERE `creature`.`id` = 25866;
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 25863 FROM `creature` WHERE `creature`.`id` = 25866;
+UPDATE `creature` SET `id` = 0 WHERE `id` = 25866;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(81615, 26222, 530, 1, 0, 0, -139.914, 1220.76, 39.7349, 0.445922, 300, 300, 5, 0, 0, 0, 0, 1),
+(81613, 26222, 530, 1, 0, 0, -143.968, 1176.46, 41.5142, 2.20426, 300, 300, 5, 0, 0, 0, 0, 1),
+(81614, 26222, 530, 1, 0, 0, -112.623, 1217.24, 44.3797, 2.18088, 300, 300, 5, 0, 0, 0, 0, 1),
+(81612, 26222, 530, 1, 0, 0, -145.754, 1203.62, 40.9849, 0.75617, 300, 300, 5, 0, 0, 0, 0, 1),
+(81611, 26222, 530, 1, 0, 0, -129.072, 1152.14, 41.4548, 5.19023, 300, 300, 5, 0, 0, 0, 0, 1),
+(81610, 26222, 530, 1, 0, 0, -157.42, 1128.98, 43.9913, 0.782341, 300, 300, 5, 0, 0, 0, 0, 1),
+(81618, 26222, 530, 1, 0, 0, -128.594, 1205.7, 42.0048, 3.5249, 300, 300, 5, 0, 0, 0, 0, 1),
+(81617, 26222, 530, 1, 0, 0, -125, 1178.12, 41.2596, 3.92746, 300, 300, 5, 0, 0, 0, 0, 1),
+(81616, 26222, 530, 1, 0, 0, -152.836, 1152.89, 41.6034, 6.15855, 300, 300, 5, 0, 0, 0, 0, 1),
+(81619, 26222, 530, 1, 0, 0, -121.744, 1136.89, 41.5798, 5.49131, 300, 300, 5, 0, 0, 0, 0, 1),
+(81620, 26222, 530, 1, 0, 0, -169.809, 1103.4, 42.0628, 5.73304, 300, 300, 5, 0, 0, 0, 0, 1),
+(81621, 26222, 530, 1, 0, 0, -144.845, 1138.8, 41.6034, 3.82217, 300, 300, 5, 0, 0, 0, 0, 1),
+(93583, 26222, 530, 1, 0, 0, -153.971, 1189.31, 41.3892, 5.76704, 300, 300, 5, 0, 0, 0, 0, 1),
+(22422, 26222, 530, 1, 0, 0, -172.91, 1205.8, 40.9606, 4.66013, 300, 300, 5, 0, 0, 0, 0, 1),
+(22424, 26222, 530, 1, 0, 0, -357.383, 1135.48, 41.6245, 2.04735, 300, 300, 30, 0, 0, 0, 0, 1),
+(22444, 26222, 530, 1, 0, 0, -368.085, 1156.21, 43.6638, 2.04735, 300, 300, 30, 0, 0, 0, 0, 1),
+(22449, 26222, 530, 1, 0, 0, -368.382, 1184.77, 42.1961, 0.422359, 300, 300, 30, 0, 0, 0, 0, 1),
+(22462, 26222, 530, 1, 0, 0, -343.397, 1204.57, 40.4944, 3.76894, 300, 300, 30, 0, 0, 0, 0, 1),
+(22463, 26222, 530, 1, 0, 0, -371.037, 1107.27, 47.9595, 0.709027, 300, 300, 30, 0, 0, 0, 0, 1),
+(22511, 26222, 530, 1, 0, 0, -368.17, 1110.18, 46.4436, 3.85612, 300, 300, 30, 0, 0, 0, 0, 1),
+(22533, 26222, 530, 1, 0, 0, -353.873, 1148.84, 41.5226, 4.61717, 300, 300, 30, 0, 0, 0, 0, 1),
+(22538, 26222, 530, 1, 0, 0, -367.485, 1169.15, 43.1463, 4.74676, 300, 300, 30, 0, 0, 0, 0, 1),
+(22544, 26222, 530, 1, 0, 0, -360.011, 1195.66, 41.1995, 4.1043, 300, 300, 30, 0, 0, 0, 0, 1),
+(22558, 26222, 530, 1, 0, 0, -348.858, 1207.35, 40.1246, 5.18501, 300, 300, 30, 0, 0, 0, 0, 1);
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 26222 FROM `creature` WHERE `creature`.`id` = 26222;
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 26223 FROM `creature` WHERE `creature`.`id` = 26222;
+UPDATE `creature` SET `id` = 0 WHERE `id` = 26222;
+
+INSERT INTO `game_event` (`entry`, `schedule_type`, `occurence`, `length`, `holiday`, `linkedTo`, `EventGroup`, `description`) VALUES
+(120, 0, 525600, 0, 0, 22, 0, 'AQ War Effort Phase 1 Item collection'),
+(121, 0, 525600, 0, 0, 22, 0, 'AQ War Effort Phase 2 Transportation'),
+(122, 0, 525600, 0, 0, 22, 0, 'AQ War Effort Phase 3 Gong'),
+(123, 0, 525600, 0, 0, 22, 0, 'AQ War Effort Phase 4 10 Hour War'),
+(124, 0, 525600, 0, 0, 22, 0, 'AQ War Effort Phase 5 Done'),
+(131, 0, 525600, 0, 0, 22, 0, 'AQ War Effort Phase 1'),
+(132, 0, 525600, 0, 0, 22, 0, 'AQ War Effort Phase 2'),
+(133, 0, 525600, 0, 0, 22, 0, 'AQ War Effort Phase 3'),
+(134, 0, 525600, 0, 0, 22, 0, 'AQ War Effort Phase 4'),
+(135, 0, 525600, 0, 0, 22, 0, 'AQ War Effort Phase 5');
+DELETE FROM `game_event_gameobject` WHERE `guid` IN (70493,70494,70495,70496,72012,72013,72014,72015,72016,72017) AND `event` = 22;
+SET @OGUID := 26842;
+REPLACE INTO `gameobject` (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, `state`) VALUES
+(70494,180681,0,1,-4958.52,-1179.33,501.660,2.26893,0,0,0.906307,0.422619,120,120,255,1),
+(70493,180598,0,1,-4971.55,-1148.57,501.650,2.29000,0,0,0.909960,0.414694,120,120,255,1),
+(70495,180680,0,1,-4913.85,-1226.00,501.651,2.25147,0,0,0.902585,0.430512,120,120,255,1),
+(70496,180679,0,1,-4937.29,-1282.74,501.672,2.26893,0,0,0.906307,0.422619,120,120,255,1);
+REPLACE INTO `gameobject` (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, `state`) VALUES
+(@OGUID+10,180692,0,0,-4958.52,-1179.33,501.660,2.26893,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+11,180674,0,0,-4968.33,-1152.89,501.930,2.27000,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+12,180780,0,0,-4913.85,-1226.00,501.651,2.25147,0,0,0.902585,0.430512,120,120,255,1),
+(@OGUID+13,180800,0,0,-4937.29,-1282.74,501.672,2.26893,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+14,180801,0,0,-4935.58,-1284.82,501.671,2.25147,0,0,0.902585,0.430512,120,120,255,1);
+REPLACE INTO `gameobject` (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, `state`) VALUES
+(@OGUID+20,180693,0,1,-4958.52,-1179.33,501.660,2.26893,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+21,180675,0,1,-4969.21,-1143.84,509.250,2.20000,0,0,0.909961,0.414694,120,120,255,1),
+(@OGUID+22,180781,0,1,-4913.85,-1226.00,501.651,2.25147,0,0,0.902585,0.430512,120,120,255,1),
+(@OGUID+23,180806,0,1,-4937.29,-1282.74,501.672,2.26893,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+24,180802,0,1,-4935.58,-1284.82,501.671,2.25147,0,0,0.902585,0.430512,120,120,255,1);
+REPLACE INTO `gameobject` (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, `state`) VALUES
+(@OGUID+30,180694,0,1,-4958.52,-1179.33,501.660,2.26893,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+31,180676,0,1,-4983.00,-1136.22,501.670,2.30000,0,0,0.913545,0.406738,120,120,255,1),
+(@OGUID+32,180782,0,1,-4913.85,-1226.00,501.651,2.25147,0,0,0.902585,0.430512,120,120,255,1),
+(@OGUID+33,180807,0,1,-4937.29,-1282.74,501.672,2.26893,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+34,180803,0,1,-4935.58,-1284.82,501.671,2.25147,0,0,0.902585,0.430512,120,120,255,1);
+REPLACE INTO `gameobject` (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, `state`) VALUES
+(@OGUID+40,180695,0,1,-4958.52,-1179.33,501.660,2.26893,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+41,180677,0,1,-4975.60,-1147.33,509.250,2.27000,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+42,180783,0,1,-4913.85,-1226.00,501.651,2.25147,0,0,0.902585,0.430512,120,120,255,1),
+(@OGUID+43,180808,0,1,-4937.29,-1282.74,501.672,2.26893,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+44,180804,0,1,-4935.58,-1284.82,501.671,2.25147,0,0,0.902585,0.430512,120,120,255,1);
+REPLACE INTO `gameobject` (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, `state`) VALUES
+(@OGUID+50,180696,0,1,-4958.52,-1179.33,501.660,2.26893,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+51,180678,0,1,-4974.11,-1148.40,510.850,2.27000,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+52,180784,0,1,-4913.85,-1226.00,501.651,2.25147,0,0,0.902585,0.430512,120,120,255,1),
+(@OGUID+53,180809,0,1,-4937.29,-1282.74,501.672,2.26893,0,0,0.906307,0.422619,120,120,255,1),
+(@OGUID+54,180805,0,1,-4935.58,-1284.82,501.671,2.25147,0,0,0.902585,0.430512,120,120,255,1);
+REPLACE INTO `game_event_gameobject` (guid, `event`) VALUES
+(70495, 120), (70496, 120), (70494, 120), (70493, 120), (@OGUID+10, 131), (@OGUID+11, 131), (@OGUID+12, 131), (@OGUID+13, 131), (@OGUID+14, 131), (@OGUID+20, 132), (@OGUID+21, 132),
+(@OGUID+22, 132), (@OGUID+23, 132), (@OGUID+24, 132), (@OGUID+30, 133), (@OGUID+31, 133), (@OGUID+32, 133), (@OGUID+33, 133), (@OGUID+34, 133), (@OGUID+40, 134), (@OGUID+41, 134),
+(@OGUID+42, 134), (@OGUID+43, 134), (@OGUID+44, 134), (@OGUID+50, 135), (@OGUID+51, 135), (@OGUID+52, 135), (@OGUID+53, 135), (@OGUID+54, 135);
+SET @OGUID := 28905;
+REPLACE INTO `gameobject` (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, `state`) VALUES
+(72012,180812,1,1,1590.82,-4155.33,36.2926,3.70010,0,0,-0.961261,0.275640,120,120,255,1),
+(72013,180818,1,1,1637.11,-4147.21,36.0414,3.73501,0,0,-0.956305,0.292372,120,120,255,1),
+(72014,180826,1,1,1579.35,-4109.25,34.5417,3.75246,0,0,-0.953716,0.300708,120,120,255,1),
+(72015,180832,1,1,1619.83,-4092.43,34.5107,3.70010,0,0,-0.961261,0.275640,120,120,255,1),
+(72016,180838,1,1,1683.11,-4134.35,39.5419,3.71755,0,0,-0.958819,0.284016,120,120,255,1);
+REPLACE INTO `gameobject` (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, `state`) VALUES
+(@OGUID+10,180813,1,1,1590.88,-4155.33,36.2980,3.68265,0,0,-0.963630,0.267241,120,120,255,1),
+(@OGUID+11,180819,1,1,1637.10,-4147.25,36.0531,3.73501,0,0,-0.956305,0.292372,120,120,255,1),
+(@OGUID+12,180827,1,1,1579.33,-4109.25,34.5487,3.71755,0,0,-0.958819,0.284016,120,120,255,1),
+(@OGUID+13,180833,1,1,1619.80,-4092.53,34.4888,3.70010,0,0,-0.961261,0.275640,120,120,255,1),
+(72017,180839,1,1,1683.10,-4134.31,39.5390,3.73501,0,0,-0.956305,0.292372,120,120,255,1);
+REPLACE INTO `gameobject` (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, `state`) VALUES
+(@OGUID+20,180814,1,1,1590.88,-4155.33,36.2980,3.68265,0,0,-0.963630,0.267241,120,120,255,1),
+(@OGUID+21,180820,1,1,1637.10,-4147.25,36.0531,3.73501,0,0,-0.956305,0.292372,120,120,255,1),
+(@OGUID+22,180828,1,1,1579.33,-4109.25,34.5487,3.71755,0,0,-0.958819,0.284016,120,120,255,1),
+(@OGUID+23,180834,1,1,1619.80,-4092.53,34.4888,3.70010,0,0,-0.961261,0.275640,120,120,255,1),
+(@OGUID+24,180840,1,1,1683.10,-4134.31,39.5390,3.73501,0,0,-0.956305,0.292372,120,120,255,1);
+REPLACE INTO `gameobject` (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, `state`) VALUES
+(@OGUID+30,180815,1,1,1590.88,-4155.33,36.2980,3.68265,0,0,-0.963630,0.267241,120,120,255,1),
+(@OGUID+31,180821,1,1,1637.10,-4147.25,36.0531,3.73501,0,0,-0.956305,0.292372,120,120,255,1),
+(@OGUID+32,180829,1,1,1579.33,-4109.25,34.5487,3.71755,0,0,-0.958819,0.284016,120,120,255,1),
+(@OGUID+33,180835,1,1,1619.80,-4092.53,34.4888,3.70010,0,0,-0.961261,0.275640,120,120,255,1),
+(@OGUID+34,180841,1,1,1683.10,-4134.31,39.5390,3.73501,0,0,-0.956305,0.292372,120,120,255,1);
+REPLACE INTO `gameobject` (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, `state`) VALUES
+(@OGUID+40,180816,1,1,1590.88,-4155.33,36.2980,3.68265,0,0,-0.963630,0.267241,120,120,255,1),
+(@OGUID+41,180822,1,1,1637.10,-4147.25,36.0531,3.73501,0,0,-0.956305,0.292372,120,120,255,1),
+(@OGUID+42,180830,1,1,1579.33,-4109.25,34.5487,3.71755,0,0,-0.958819,0.284016,120,120,255,1),
+(@OGUID+43,180836,1,1,1619.80,-4092.53,34.4888,3.70010,0,0,-0.961261,0.275640,120,120,255,1),
+(@OGUID+44,180842,1,1,1683.10,-4134.31,39.5390,3.73501,0,0,-0.956305,0.292372,120,120,255,1);
+REPLACE INTO `gameobject` (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax, animprogress, `state`) VALUES
+(@OGUID+50,180817,1,1,1590.88,-4155.33,36.2980,3.68265,0,0,-0.963630,0.267241,120,120,255,1),
+(@OGUID+51,180823,1,1,1637.10,-4147.25,36.0531,3.73501,0,0,-0.956305,0.292372,120,120,255,1),
+(@OGUID+52,180831,1,1,1579.33,-4109.25,34.5487,3.71755,0,0,-0.958819,0.284016,120,120,255,1),
+(@OGUID+53,180837,1,1,1619.80,-4092.53,34.4888,3.70010,0,0,-0.961261,0.275640,120,120,255,1),
+(@OGUID+54,180843,1,1,1683.10,-4134.31,39.5390,3.73501,0,0,-0.956305,0.292372,120,120,255,1);
+REPLACE INTO `game_event_gameobject` (guid, `event`) VALUES
+(72012, 120), (72013, 120), (72014, 120), (72015, 120), (72016, 120), (@OGUID+10, 131), (@OGUID+11, 131), (@OGUID+12, 131), (@OGUID+13, 131), (72017, 131), (@OGUID+20, 132),
+(@OGUID+21, 132), (@OGUID+22, 132), (@OGUID+23, 132), (@OGUID+24, 132), (@OGUID+30, 133), (@OGUID+31, 133), (@OGUID+32, 133), (@OGUID+33, 133), (@OGUID+34, 133), (@OGUID+40, 134),
+(@OGUID+41, 134), (@OGUID+42, 134), (@OGUID+43, 134), (@OGUID+44, 134), (@OGUID+50, 135), (@OGUID+51, 135), (@OGUID+52, 135), (@OGUID+53, 135), (@OGUID+54, 135);
+REPLACE INTO `creature` (guid, id, map, spawnMask, modelid, equipment_id, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, currentwaypoint, curhealth, curmana, MovementType) VALUES
+(102445,15707,0,1,0,0,-4956.09,-931.133,503.347,5.37561,120,120,0,0,400,0,0),
+(124529,15453,0,1,0,0,-4979.93,-1142.17,501.743,3.68264,120,120,0,0,130,0,0),
+(49335,15663,0,1,0,0,-4974.57,-1142.62,501.651,3.67119,120,120,0,0,8900,0,0),
+(124527,15451,0,1,0,0,-4971.57,-1151.56,501.739,3.56047,120,120,0,0,80,0,0),
+(124528,15452,0,1,0,0,-4979.12,-1149.51,501.733,3.36849,120,120,0,0,2700,0,0),
+(124524,15446,0,1,0,0,-4972.2,-1169.06,501.72,3.28122,120,120,0,0,1300,0,0),
+(49336,15663,0,1,0,0,-4974.02,-1173.49,501.644,2.75801,120,120,0,0,8900,0,0),
+(124590,15701,0,1,0,0,-5014.82,-1177.38,501.665,3.94934,120,120,0,0,2900,0,0),
+(124525,15448,0,1,0,0,-4966.09,-1176.06,501.743,3.29867,120,120,0,0,3400,0,0),
+(124526,15450,0,1,0,0,-4969.46,-1180.24,501.743,3.24631,120,120,0,0,45,0,0),
+(126866,15733,0,1,0,0,-4952.53,-1176.97,501.639,5.39307,120,120,0,0,789,0,0),
+(126813,15734,0,1,0,0,-4975.34,-1196.76,501.746,1.88496,120,120,0,0,2400,0,0),
+(126788,15539,0,1,0,0,-4981.25,-1218.38,501.756,3.80482,120,120,0,0,1800,0,0),
+(126814,15731,0,1,0,0,-4935.17,-1197.7,501.622,2.46091,120,120,0,0,6400,0,0),
+(49337,5595,0,1,0,0,-4980.02,-1219.98,501.756,3.82227,120,120,0,0,15952,0,0),
+(49338,5595,0,1,0,0,-4982.47,-1216.81,501.756,3.87463,120,120,0,0,15952,0,0),
+(124520,15432,0,1,0,0,-4930.29,-1218.75,501.719,3.75246,120,120,0,0,10000,0,0),
+(126812,15735,0,1,0,0,-4934.99,-1214.31,501.718,3.33358,120,120,0,0,5500,0,0),
+(124518,15383,0,1,0,0,-4924.37,-1222.73,501.718,3.92699,120,120,0,0,80,0,0),
+(124519,15431,0,1,0,0,-4914.17,-1227.49,501.733,3.59538,120,120,0,0,2000,0,0),
+(49339,15663,0,1,0,0,-4903.87,-1225.96,501.654,1.06236,120,120,0,0,8900,0,0),
+(124521,15434,0,1,0,0,-4952.25,-1274.45,501.757,1.79769,120,120,0,0,6100,0,0),
+(124523,15445,0,1,0,0,-4948.33,-1273.8,501.755,1.06465,120,120,0,0,3900,0,0),
+(49340,15663,0,1,0,0,-4944.85,-1277.7,501.756,4.31096,120,120,0,0,8900,0,0),
+(124530,15455,0,1,0,0,-4938,-1275.12,501.752,2.46091,120,120,0,0,8900,0,0),
+(124531,15456,0,1,0,0,-4940.39,-1277.7,501.754,1.98968,120,120,0,0,80,0,0),
+(124522,15437,0,1,0,0,-4945.42,-1282.02,501.758,1.02974,120,120,0,0,2000,0,0),
+(49341,15663,0,1,0,0,-4937.83,-1280.14,501.671,1.45902,120,120,0,0,8900,0,0),
+(124532,15457,0,1,0,0,-4933.8,-1279.16,501.749,2.42601,120,120,0,0,80,0,0),
+(54543,15708,0,1,0,0,-8813.75,654.07,96.160,4.83456,120,120,0,0,660,0,0),
+(126815,15709,1,1,0,0,9945.22,2495.37,1317.553,3.61825,120,120,0,0,15000,0,0);
+DELETE FROM `game_event_creature` WHERE `event` = 22 AND `guid` in (102445,124529,124527,124528,124524,124590,124525,124526,126866,126813,126788,126814,124520,126812,124518,124519,124521,124523,124530,124531,124522,124532,54543,126815);
+REPLACE INTO `game_event_creature` (guid, `event`) VALUES
+(102445, 120), (124529, 120), (49335, 120), (124527, 120), (124528, 120), (124524, 120), (49336, 120), (124590, 120), (124525, 120), (124526, 120), (126866, 120), (126813, 120),
+(126788, 120), (126814, 120), (49337, 120), (49338, 120), (124520, 120), (126812, 120), (124518, 120), (124519, 120), (49339, 120), (124521, 120), (124523, 120), (49340, 120),
+(124530, 120), (124531, 120), (124522, 120), (49341, 120), (124532, 120), (54543, 120), (126815, 120);
+UPDATE creature_template SET Faction=64 WHERE entry=15707;
+REPLACE INTO `creature` (guid, id, map, spawnMask, modelid, equipment_id, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, currentwaypoint, curhealth, curmana, MovementType) VALUES
+(124539,15515,1,1,0,0,1588.17,-4179.9,39.9849,2.89725,120,120,0,0,380,0,0),
+(124541,15525,1,1,0,0,1595.76,-4174.4,39.7667,2.72271,120,120,0,0,7200,0,0),
+(119865,15739,1,1,0,0,1603.89,-4142.9,33.7818,2.44346,120,120,0,0,3000,0,0),
+(124536,15477,1,1,0,0,1615.01,-4145.53,35.132,1.37881,120,120,0,0,300,0,0),
+(124537,15508,1,1,0,0,1625.95,-4149.42,36.3958,1.90241,120,120,0,0,300,0,0),
+(124540,15522,1,1,0,0,1593.27,-4159.44,36.9024,2.94961,120,120,0,0,6960,0,0),
+(49342,15696,1,1,0,0,1592.02,-4164.73,37.6085,4.83162,120,120,0,0,3000,0,0),
+(49343,15696,1,1,0,0,1564.18,-4128.9,37.5756,2.1293,120,120,0,0,3000,0,0),
+(124542,15528,1,1,0,0,1580.17,-4116.11,34.4158,5.60251,120,120,0,0,6720,0,0),
+(124543,15529,1,1,0,0,1571.15,-4118.66,36.5842,5.02655,120,120,0,0,6960,0,0),
+(49344,15696,1,1,0,0,1629.61,-4143.04,34.7991,5.00909,120,120,0,0,3000,0,0),
+(124544,15532,1,1,0,0,1565.07,-4123.99,37.4408,0,120,120,0,0,540,0,0),
+(126811,15736,1,1,0,0,1584.77,-4112.94,33.3777,5.41052,120,120,0,0,1100,0,0),
+(124538,15512,1,1,0,0,1633.26,-4142.12,34.7099,2.11185,120,120,0,0,7200,0,0),
+(49345,3296,1,1,0,0,1628.96,-4119.18,31.2441,2.0944,120,120,0,0,16402,0,0),
+(49346,3296,1,1,0,0,1632.31,-4117.6,31.2935,2.04204,120,120,0,0,16402,0,0),
+(49347,15737,1,1,0,0,1618.44,-4101.76,32.9524,5.23599,120,120,0,0,1900,0,0),
+(54455,15458,1,1,0,0,1630.69,-4118.46,31.2658,1.97222,120,120,0,0,910,0,0),
+(124533,15459,1,1,0,0,1650.33,-4124.29,31.4523,2.6529,120,120,0,0,80,0,0),
+(49348,15534,1,1,0,0,1629.79,-4089.15,35.6329,5.25344,120,120,0,0,80,0,0),
+(124547,15535,1,1,0,0,1634.12,-4084.99,36.5257,5.21853,120,120,0,0,80,0,0),
+(125602,15700,1,1,0,0,1643.9,-4098.41,33.2929,3.441,120,120,0,0,3400,0,0),
+(126810,15738,1,1,0,0,1660.36,-4107.45,34.6203,2.05949,120,120,0,0,789,0,0),
+(124535,15469,1,1,0,0,1655.77,-4119.16,32.6951,1.32645,120,120,0,0,51,0,0),
+(49350,15696,1,1,0,0,1639.42,-4082.15,37.4822,2.1293,120,120,0,0,3000,0,0),
+(124545,15533,1,1,0,0,1643.43,-4085.09,37.3372,4.67748,120,120,0,0,80,0,0),
+(124534,15460,1,1,0,0,1665.76,-4117.5,34.3746,2.44346,120,120,0,0,80,0,0),
+(49351,15696,1,1,0,0,1666.04,-4107.46,35.2114,1.46712,120,120,0,0,3000,0,0),
+(126816,15704,1,1,0,0,1653.07,-4403.81,18.5819,4.45059,120,120,0,0,510,0,0),
+(74379,15703,0,1,0,0,1572.50,273.03,-43.103,4.89163,120,120,0,0,1700,0,0),
+(126817,15702,1,1,0,0,-1209.41,99.88,134.640,3.29459,120,120,0,0,4120,0,0);
+DELETE FROM `game_event_creature` WHERE `event` = 22 AND `guid` in (124539,124541,119865,124536,124537,124540,124542,124543,124544,126811,124538,124547,54455,124533,125602,126810,124535,124545,124534,49351, 126816,74379,126817);
+REPLACE INTO `game_event_creature` (guid, `event`) VALUES
+(124539, 120), (124541, 120), (119865, 120), (124536, 120), (124537, 120), (124540, 120), (49342, 120), (49343, 120), (124542, 120), (124543, 120), (49344, 120), (124544, 120),
+(126811, 120), (124538, 120), (49345, 120), (49346, 120), (49347, 120), (54455, 120), (124533, 120), (49348, 120), (124547, 120), (125602, 120), (126810, 120), (124535, 120),
+(49350, 120), (124545, 120), (124534, 120), (49350, 120), (126816, 120), (74379, 120), (126817, 120);
+UPDATE creature_template SET UnitFlags=33554496 WHERE entry IN(15769,15770,15771,15804,15805);
+UPDATE gameobject_template SET `type`=8 WHERE entry = 180810;
+UPDATE gameobject_template SET `type`=6 WHERE entry = 180811;
+REPLACE INTO creature_questrelation (id, quest) VALUES
+(15738, 8817), (15738, 8826), (15737, 8816), (15737, 8824), (15736, 8815), (15736, 8823), (15739, 8818), (15739, 8825), (15700, 8851), (15700, 8852), (15700, 8853), (15700, 8854),
+(15700, 8855), (15702, 8792), (15703, 8793), (15704, 8794);
+REPLACE INTO creature_questrelation (id, quest) VALUES
+(15733, 8812), (15733, 8820), (15731, 8811), (15731, 8819), (15735, 8814), (15735, 8822), (15734, 8813), (15734, 8821), (15701, 8848), (15701, 8846), (15701, 8847), (15701, 8850),
+(15701, 8849), (15708, 8796), (15707, 8795), (15709, 8797);
+DELETE FROM game_event_quest WHERE quest IN (8857,8858,8859,8743);
+INSERT INTO game_event_quest VALUES (8857,123), (8858,123), (8859,123), (8743,122), (8743,123);
+SET @OGUID := 18750;
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(@OGUID+1, 180810, 1, 1, -784.85382080078125, -2784.091552734375, 93.9261474609375, 0.296705186367034912, 0, 0, 0.147809028625488281, 0.989015936851501464, 7200, 7200, 100, 1),
+(@OGUID+2, 180810, 1, 1, -151.529251098632812, -2217.197998046875, 93.19226837158203125, 0.296705186367034912, 0, 0, 0.147809028625488281, 0.989015936851501464, 7200, 7200, 100, 1),
+(@OGUID+3, 180810, 1, 1, -4389.79541015625, 234.7724151611328125, 25.41332817077636718, 4.852017402648925781, 0, 0, -0.65605831146240234, 0.754710197448730468, 7200, 7200, 100, 1),
+(@OGUID+4, 180810, 1, 1, -5299.21484375, -1801.2080078125, -55.0768013000488281, 4.48549652099609375, 0, 0, -0.7826080322265625, 0.622514784336090087, 7200, 7200, 100, 1),
+(@OGUID+5, 180810, 1, 1, -5547.0712890625, -2573.66748046875, -56.9618606567382812, 4.48549652099609375, 0, 0, -0.7826080322265625, 0.622514784336090087, 7200, 7200, 100, 1),
+(@OGUID+6, 180810, 1, 1, -5505.51123046875, -3272.310546875, -37.8578376770019531, 4.48549652099609375, 0, 0, -0.7826080322265625, 0.622514784336090087, 7200, 7200, 100, 1),
+(@OGUID+7, 180810, 1, 1, -5755.12744140625, -3509.98193359375, -58.3238525390625, 4.48549652099609375, 0, 0, -0.7826080322265625, 0.622514784336090087, 7200, 7200, 100, 1),
+(@OGUID+8, 180810, 1, 1, -6111.70166015625, -3950.40625, -58.7500076293945312, 4.48549652099609375, 0, 0, -0.7826080322265625, 0.622514784336090087, 7200, 7200, 100, 1),
+(@OGUID+9, 180810, 1, 1, -6578.681640625, -3657.219970703125, -58.7499542236328125, 4.48549652099609375, 0, 0, -0.7826080322265625, 0.622514784336090087, 7200, 7200, 100, 1),
+(@OGUID+10, 180810, 1, 1, -7179.62109375, -3776.963134765625, 8.513767242431640625, 2.652894020080566406, 0, 0, 0.970294952392578125, 0.241925001144409179, 7200, 7200, 100, 1),
+(@OGUID+11, 180810, 1, 1, -7366.1494140625, -4012.264892578125, 9.620676040649414062, 2.652894020080566406, 0, 0, 0.970294952392578125, 0.241925001144409179, 7200, 7200, 100, 1),
+(@OGUID+12, 180810, 1, 1, -7568.90380859375, -4508.11572265625, 9.618767738342285156, 2.652894020080566406, 0, 0, 0.970294952392578125, 0.241925001144409179, 7200, 7200, 100, 1),
+(@OGUID+13, 180810, 1, 1, -8640.0673828125, -3784.345458984375, 21.43636322021484375, 2.652894020080566406, 0, 0, 0.970294952392578125, 0.241925001144409179, 7200, 7200, 100, 1),
+(@OGUID+14, 180810, 1, 1, -8509.15234375, -2551.646484375, 43.70940017700195312, 2.652894020080566406, 0, 0, 0.970294952392578125, 0.241925001144409179, 7200, 7200, 100, 1),
+(@OGUID+15, 180810, 1, 1, -7319.48779296875, -3199.294921875, 11.41134262084960937, 2.652894020080566406, 0, 0, 0.970294952392578125, 0.241925001144409179, 7200, 7200, 100, 1),
+(@OGUID+16, 180810, 1, 1, -7389.5224609375, -3649.8984375, 10.04873371124267578, 2.652894020080566406, 0, 0, 0.970294952392578125, 0.241925001144409179, 7200, 7200, 100, 1),
+(@OGUID+17, 180810, 1, 1, -7809.1083984375, -3325.490966796875, 59.96866226196289062, 2.652894020080566406, 0, 0, 0.970294952392578125, 0.241925001144409179, 7200, 7200, 100, 1),
+(@OGUID+18, 180810, 1, 1, -6850.60595703125, 183.6371612548828125, 1.118237018585205078, 3.577930212020874023, 0, 0, -0.97629547119140625, 0.216442063450813293, 7200, 7200, 100, 1),
+(@OGUID+19, 180810, 1, 1, -4108.0380859375, -1921.974853515625, 94.608001708984375, 4.363324165344238281, 0, 0, -0.81915187835693359, 0.573576688766479492, 7200, 7200, 100, 1),
+(@OGUID+20, 180810, 1, 1, -3816.973876953125, -2213.9365234375, 92.49057769775390625, 4.363324165344238281, 0, 0, -0.81915187835693359, 0.573576688766479492, 7200, 7200, 100, 1),
+(@OGUID+21, 180810, 1, 1, -3283.38916015625, -2151.914306640625, 93.2244415283203125, 4.363324165344238281, 0, 0, -0.81915187835693359, 0.573576688766479492, 7200, 7200, 100, 1);
+REPLACE INTO game_event_gameobject SELECT guid, 123 FROM gameobject WHERE guid BETWEEN 18751 AND 18771;
+SET @CGUID := 48445;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `DeathState`, `MovementType`) VALUES
+(@CGUID+1, 15769, 1, 1, -5297.80419921875, -1808.358154296875, -55.2550277709960937, 0.366519153118133544, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+2, 15769, 1, 1, -5547.27001953125, -2576.876220703125, -56.5728492736816406, 0.366519153118133544, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+3, 15769, 1, 1, -5511.123046875, -3270.021240234375, -38.3257217407226562, 0.366519153118133544, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+4, 15770, 1, 1, -5752.86572265625, -3508.636962890625, -58.196075439453125, 0.366519153118133544, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+5, 15770, 1, 1, -6110.93994140625, -3953.747802734375, -58.6666603088378906, 0.366519153118133544, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+6, 15770, 1, 1, -6574.66748046875, -3651.53125, -58.6666069030761718, 5.475795269012451171, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+7, 15771, 1, 1, -4392.78271484375, 231.7254791259765625, 25.49722099304199218, 2.627256155014038085, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+8, 15771, 1, 1, -7178.646484375, -3779.15625, 8.466841697692871093, 5.207928180694580078, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+9, 15771, 1, 1, -7365.859375, -4015.01220703125, 9.742092132568359375, 5.570057392120361328, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+10, 15771, 1, 1, -7570.94970703125, -4508.0400390625, 9.835427284240722656, 5.234058380126953125, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+11, 15771, 1, 1, -8506.68359375, -2554.55517578125, 43.36404037475585937, 1.474461674690246582, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+12, 15771, 1, 1, -7321.24853515625, -3197.9775390625, 11.76454448699951171, 5.218534469604492187, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+13, 15771, 1, 1, -7391.74072265625, -3650.536376953125, 10.30735397338867187, 5.223543167114257812, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+14, 15771, 1, 1, -7810.96875, -3326.784912109375, 60.58126449584960937, 2.162371635437011718, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+15, 15771, 1, 1, -6850.34521484375, 182.708770751953125, 1.185373425483703613, 3.730226993560791015, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+16, 15804, 1, 1, -4108.10693359375, -1927.1810302734375, 94.61756134033203125, 2.042035102844238281, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+17, 15804, 1, 1, -3819.91455078125, -2212.400146484375, 92.1140594482421875, 2.042035102844238281, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+18, 15804, 1, 1, -3284.11669921875, -2153.786376953125, 93.442779541015625, 2.042035102844238281, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+19, 15805, 1, 1, -850.4393310546875, -3217.165283203125, 92.09395599365234375, 5.672319889068603515, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+20, 15805, 1, 1, -786.23968505859375, -2783.926513671875, 94.01892852783203125, 5.672319889068603515, 7200, 7200, 0, 0, 0, 0),
+(@CGUID+21, 15805, 1, 1, -149.894744873046875, -2217.504150390625, 93.15654754638671875, 5.672319889068603515, 7200, 7200, 0, 0, 0, 0),
+(123710, 15797, 1, 0, -6826.1064453125, 813.5706787109375, 51.644378662109375, 5.497786998748779296, 7200, 7200, 0, 0, 0, 0),
+(123709, 15798, 1, 0, -6824.03271484375, 813.16961669921875, 51.44177627563476562, 3.525565147399902343, 7200, 7200, 0, 0, 0, 0),
+(123651, 15799, 1, 0, -6825.0078125, 811.38873291015625, 51.84661483764648437, 1.675516128540039062, 7200, 7200, 0, 0, 0, 0);
+REPLACE INTO game_event_creature SELECT guid, 123 FROM creature WHERE guid BETWEEN @CGUID + 1 AND @CGUID + 21;
+DELETE FROM `game_event_creature` WHERE `event` = 22 AND `guid` in (123710,123709,123651);
+DELETE FROM `game_event_creature` WHERE `event` = 120 AND `guid` in (124546);
+UPDATE `game_event_creature` SET `event` = 120 WHERE `guid` IN (74374,126773) AND `event` =22;
+REPLACE INTO game_event_creature SELECT guid, 123 FROM creature WHERE guid in (123710,123709,123651);
+REPLACE INTO game_event_creature SELECT guid, 121 FROM game_event_creature WHERE `event`=120;
+REPLACE INTO game_event_gameobject SELECT guid, 121 FROM game_event_gameobject WHERE `event`=120;
+REPLACE INTO `creature_questrelation` (`id`, `quest`) VALUES
+(15383, 8492), (15383, 8493), (15431, 8494), (15431, 8495), (15432, 8499), (15432, 8500), (15434, 8503), (15434, 8504), (15437, 8505), (15437, 8506), (15445, 8509), (15445, 8510),
+(15446, 8511), (15446, 8512), (15448, 8513), (15448, 8514), (15450, 8515), (15450, 8516), (15451, 8517), (15451, 8518), (15452, 8520), (15452, 8521), (15453, 8522), (15453, 8523),
+(15455, 8524), (15455, 8525), (15456, 8526), (15456, 8527), (15457, 8528), (15457, 8529), (21156, 10501), (21155, 10500);
+UPDATE `creature_involvedrelation` SET `id` = 15437 WHERE `id` =15445 AND `quest` =8506;
+UPDATE creature_template SET NpcFlags=2 WHERE entry IN (15707,15709,21155,15703,15704,15702,21156);
+UPDATE creature_template SET NpcFlags=3 WHERE entry IN (15708);
+REPLACE INTO `creature_questrelation` (`id`, `quest`) VALUES
+(15459, 8532), (15459, 8533), (15460, 8542), (15460, 8543), (15469, 8545), (15469, 8546), (15477, 8549), (15477, 8550), (15508, 8580), (15508, 8581), (15512, 8582), (15512, 8583),
+(15515, 8588), (15515, 8589), (15522, 8590), (15522, 8591), (15525, 8600), (15525, 8601), (15528, 8604), (15528, 8605), (15529, 8607), (15529, 8608), (15532, 8609), (15532, 8610),
+(15533, 8611), (15533, 8612), (15534, 8613), (15534, 8614), (15535, 8615), (15535, 8616);
+REPLACE INTO `creature_involvedrelation` (`id`, `quest`) VALUES (15701, 8847), (15701, 8848), (15701, 8849), (15701, 8850), (15700, 8851), (15700, 8852), (15700, 8853), (15700, 8854), (15700, 8855);
+# NPC 15761-15768, 15866-15870, 17082, 21969-21971
+DELETE FROM conditions WHERE condition_entry BETWEEN 3569 AND 3678;
+INSERT INTO conditions (condition_entry, `type`, value1, value2, value3, value4, flags, comments) VALUES
+(3569, 12, 120, 0, 0, 0, 0, 'Game Event 120 Active'),
+(3570, 12, 121, 0, 0, 0, 0, 'Game Event 121 Active'),
+(3571, 40, 3644, 0, 0, 0, 0, 'War Effort Days Left Value = 0'),
+(3572, -1, 3570, 3571, 0, 0, 0, 'War Effort Days Left Value = 0 AND Game Event 121 Active'),
+(3573, 40, 3600, 0, 0, 0, 0, 'All Heavy Leather Collected'),
+(3574, -1, 3573, 3569, 0, 0, 0, 'All Heavy Leather Collected AND Game Event 120 Active'),
+(3575, -3, 3573, 0, 0, 0, 0, 'NOT All Heavy Leather Collected'),
+(3576, 40, 2011, 0, 0, 0, 0, 'All Thorium Bars Collected'),
+(3577, -1, 3576, 3569, 0, 0, 0, 'All Thorium Bars Collected AND Game Event 120 Active'),
+(3578, -3, 3576, 0, 0, 0, 0, 'NOT All Thorium Bars Collected'),
+(3579, 40, 1997, 0, 0, 0, 0, 'All Copper Bars Collected'),
+(3580, -1, 3579, 3569, 0, 0, 0, 'All Copper Bars Collected AND Game Event 120 Active'),
+(3581, -3, 3579, 0, 0, 0, 0, 'NOT All Copper Bars Collected'),
+(3582, 40, 2002, 0, 0, 0, 0, 'All Iron Bars Collected'),
+(3583, -1, 3582, 3569, 0, 0, 0, 'All Iron Bars Collected AND Game Event 120 Active'),
+(3584, -3, 3582, 0, 0, 0, 0, 'NOT All Iron Bars Collected'),
+(3585, 40, 3626, 0, 0, 0, 0, 'All Rainbow Fin Albacore Collected'),
+(3586, -1, 3585, 3569, 0, 0, 0, 'All Rainbow Fin Albacore Collected AND Game Event 120 Active'),
+(3587, -3, 3585, 0, 0, 0, 0, 'NOT All Rainbow Fin Albacore Collected'),
+(3588, 40, 2101, 0, 0, 0, 0, 'All Spotted Yellowtail Collected'),
+(3589, -1, 3588, 3569, 0, 0, 0, 'All Spotted Yellowtail Collected AND Game Event 120 Active'),
+(3590, -3, 3588, 0, 0, 0, 0, 'NOT All Spotted Yellowtail Collected'),
+(3591, 40, 3632, 0, 0, 0, 0, 'All Roast Raptor Collected'),
+(3592, -1, 3591, 3569, 0, 0, 0, 'All Roast Raptor Collected AND Game Event 120 Active'),
+(3593, -3, 3591, 0, 0, 0, 0, 'NOT All Roast Raptor Collected'),
+(3594, 40, 3587, 0, 0, 0, 0, 'All Purple Lotus Collected'),
+(3595, -1, 3594, 3569, 0, 0, 0, 'All Purple Lotus Collected AND Game Event 120 Active'),
+(3596, -3, 3594, 0, 0, 0, 0, 'NOT All Purple Lotus Collected'),
+(3597, 40, 3591, 0, 0, 0, 0, 'All Arthas'' Tears Collected'),
+(3598, -1, 3597, 3569, 0, 0, 0, 'All Arthas'' Tears Collected AND Game Event 120 Active'),
+(3599, -3, 3597, 0, 0, 0, 0, 'NOT All Arthas'' Tears Collected'),
+(3600, 40, 3581, 0, 0, 0, 0, 'All Stranglekelp Collected'),
+(3601, -1, 3600, 3569, 0, 0, 0, 'All Stranglekelp Collected AND Game Event 120 Active'),
+(3602, -3, 3600, 0, 0, 0, 0, 'NOT All Stranglekelp Collected'),
+(3603, 40, 3622, 0, 0, 0, 0, 'All Runecloth Bandages Collected'),
+(3604, -1, 3603, 3569, 0, 0, 0, 'All Runecloth Bandages Collected AND Game Event 120 Active'),
+(3605, -3, 3603, 0, 0, 0, 0, 'NOT All Runecloth Bandages Collected'),
+(3606, 40, 3616, 0, 0, 0, 0, 'All Silk Bandages Collected'),
+(3607, -1, 3606, 3569, 0, 0, 0, 'All Silk Bandages Collected AND Game Event 120 Active'),
+(3608, -3, 3606, 0, 0, 0, 0, 'NOT All Silk Bandages Collected'),
+(3609, 40, 3610, 0, 0, 0, 0, 'All Linen Bandages Collected'),
+(3610, -1, 3609, 3569, 0, 0, 0, 'All Linen Bandages Collected AND Game Event 120 Active'),
+(3611, -3, 3609, 0, 0, 0, 0, 'NOT All Linen Bandages Collected'),
+(3612, 40, 3594, 0, 0, 0, 0, 'All Light Leather Collected'),
+(3613, -1, 3612, 3569, 0, 0, 0, 'All Light Leather Collected AND Game Event 120 Active'),
+(3614, -3, 3612, 0, 0, 0, 0, 'NOT All Light Leather Collected'),
+(3615, 40, 3597, 0, 0, 0, 0, 'All Medium Leather Collected'),
+(3616, -1, 3615, 3569, 0, 0, 0, 'All Medium Leather Collected AND Game Event 120 Active'),
+(3617, -3, 3615, 0, 0, 0, 0, 'NOT All Medium Leather Collected'),
+(3618, 40, 3603, 0, 0, 0, 0, 'All Thick Leather Collected'),
+(3619, -1, 3618, 3569, 0, 0, 0, 'All Thick Leather Collected AND Game Event 120 Active'),
+(3620, -3, 3618, 0, 0, 0, 0, 'NOT All Thick Leather Collected'),
+(3621, 40, 2005, 0, 0, 0, 0, 'All Tin Bars Collected'),
+(3622, -1, 3621, 3569, 0, 0, 0, 'All Tin Bars Collected AND Game Event 120 Active'),
+(3623, -3, 3621, 0, 0, 0, 0, 'NOT All Tin Bars Collected'),
+(3624, 40, 2008, 0, 0, 0, 0, 'All Mithril Bars Collected'),
+(3625, -1, 3624, 3569, 0, 0, 0, 'All Mithril Bars Collected AND Game Event 120 Active'),
+(3626, -3, 3624, 0, 0, 0, 0, 'NOT All Mithril Bars Collected'),
+(3627, 40, 2018, 0, 0, 0, 0, 'All Copper Bars Collected'),
+(3628, -1, 3627, 3569, 0, 0, 0, 'All Copper Bars Collected AND Game Event 120 Active'),
+(3629, -3, 3627, 0, 0, 0, 0, 'NOT All Copper Bars Collected'),
+(3630, 40, 3588, 0, 0, 0, 0, 'All Purple Lotus Collected'),
+(3631, -1, 3630, 3569, 0, 0, 0, 'All Purple Lotus Collected AND Game Event 120 Active'),
+(3632, -3, 3630, 0, 0, 0, 0, 'NOT All Purple Lotus Collected'),
+(3635, 40, 3584, 0, 0, 0, 0, 'All Firebloom Collected'),
+(3636, -1, 3635, 3569, 0, 0, 0, 'All Firebloom Collected AND Game Event 120 Active'),
+(3637, -3, 3635, 0, 0, 0, 0, 'NOT All Firebloom Collected'),
+(3638, 40, 2021, 0, 0, 0, 0, 'All Peacebloom Collected'),
+(3639, -1, 3638, 3569, 0, 0, 0, 'All Peacebloom Collected AND Game Event 120 Active'),
+(3640, -3, 3638, 0, 0, 0, 0, 'NOT All Peacebloom Collected'),
+(3641, 40, 3604, 0, 0, 0, 0, 'All Thick Leather Collected'),
+(3642, -1, 3641, 3569, 0, 0, 0, 'All Thick Leather Collected AND Game Event 120 Active'),
+(3643, -3, 3641, 0, 0, 0, 0, 'NOT All Thick Leather Collected'),
+(3644, 40, 3607, 0, 0, 0, 0, 'All Rugged Leather Collected'),
+(3645, -1, 3644, 3569, 0, 0, 0, 'All Rugged Leather Collected AND Game Event 120 Active'),
+(3646, -3, 3644, 0, 0, 0, 0, 'NOT All Rugged Leather Collected'),
+(3647, 40, 3623, 0, 0, 0, 0, 'All Runecloth Bandages Collected'),
+(3648, -1, 3647, 3569, 0, 0, 0, 'All Runecloth Bandages Collected AND Game Event 120 Active'),
+(3649, -3, 3647, 0, 0, 0, 0, 'NOT All Runecloth Bandages Collected'),
+(3650, 40, 3619, 0, 0, 0, 0, 'All Mageweave Bandages Collected'),
+(3651, -1, 3650, 3569, 0, 0, 0, 'All Mageweave Bandages Collected AND Game Event 120 Active'),
+(3652, -3, 3650, 0, 0, 0, 0, 'NOT All Mageweave Bandages Collected'),
+(3653, 40, 3613, 0, 0, 0, 0, 'All Wool Bandages Collected'),
+(3654, -1, 3653, 3569, 0, 0, 0, 'All Wool Bandages Collected AND Game Event 120 Active'),
+(3655, -3, 3653, 0, 0, 0, 0, 'NOT All Wool Bandages Collected'),
+(3656, 40, 2102, 0, 0, 0, 0, 'All Spotted Yellowtail Collected'),
+(3657, -1, 3656, 3569, 0, 0, 0, 'All Spotted Yellowtail Collected AND Game Event 120 Active'),
+(3658, -3, 3656, 0, 0, 0, 0, 'NOT All Spotted Yellowtail Collected'),
+(3659, 40, 3636, 0, 0, 0, 0, 'All Baked Salmon Collected'),
+(3660, -1, 3659, 3569, 0, 0, 0, 'All Baked Salmon Collected AND Game Event 120 Active'),
+(3661, -3, 3659, 0, 0, 0, 0, 'NOT All Baked Salmon Collected'),
+(3662, 40, 3629, 0, 0, 0, 0, 'All Lean Wolf Steaks Collected'),
+(3663, -1, 3662, 3569, 0, 0, 0, 'All Lean Wolf Steaks Collected AND Game Event 120 Active'),
+(3664, -3, 3662, 0, 0, 0, 0, 'NOT All Lean Wolf Steaks Collected'),
+(3665, -1, 3577, 3580, 3583, 3586, 0, ''),
+(3666, -1, 3589, 3592, 3595, 3598, 0, ''),
+(3667, -1, 3601, 3604, 3607, 3610, 0, ''),
+(3668, -1, 3613, 3616, 3619, 0, 0, ''),
+(3669, -1, 3668, 3667, 3666, 3665, 0, 'All Alliance Resources Collected'),
+(3670, -1, 3574, 3622, 3625, 3628, 0, ''),
+(3671, -1, 3631, 3636, 3639, 3642, 0, ''),
+(3672, -1, 3645, 3648, 3651, 3654, 0, ''),
+(3673, -1, 3657, 3660, 3663, 0, 0, ''),
+(3674, -1, 3673, 3672, 3671, 3670, 0, 'All Horde Resources Collected'),
+(3675, -3, 3669, 0, 0, 0, 0, 'NOT All Alliance Resources Collected'),
+(3676, -1, 3569, 3675, 0, 0, 0, 'Game Event 120 Active AND NOT All Alliance Resources Collected'),
+(3677, -3, 3674, 0, 0, 0, 0, 'NOT All Horde Resources Collected'),
+(3678, -1, 3569, 3677, 0, 0, 0, 'Game Event 120 Active AND NOT All Horde Resources Collected');
+UPDATE creature_template SET GossipMenuId=6603 WHERE Entry=15432;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6603 AND text_id=7831;
+DELETE FROM gossip_menu WHERE entry=6603 AND text_id IN (7832,60027,7962,7974);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6603, 7832, 0, 3577),
+(6603, 60027, 0, 3669),
+(6603, 7962, 0, 3570),
+(6603, 7974, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7831,7832,60027,7962,7974);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7831,7832,60027,7962,7974);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7831, 0, 10938),
+(7832, 0, 10939),
+(60027, 0, 11150),
+(7962, 0, 11151),
+(7974, 0, 11165);
+UPDATE quest_template SET RequiredCondition=3578 WHERE entry IN (8499,8500);
+UPDATE creature_template SET GossipMenuId=6599 WHERE Entry=15383;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6599 AND text_id=7824;
+DELETE FROM gossip_menu WHERE entry=6599 AND text_id IN (7823,60028,7958,7972);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6599, 7823, 0, 3580),
+(6599, 60028, 0, 3669),
+(6599, 7958, 0, 3570),
+(6599, 7972, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7824,7823,60028,7958,7972);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7824,7823,60028,7958,7972);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7824, 0, 10892),
+(7823, 0, 10891),
+(60028, 0, 11146),
+(7958, 0, 11147),
+(7972, 0, 11163);
+UPDATE quest_template SET RequiredCondition=3581 WHERE entry IN (8492,8493);
+UPDATE creature_template SET GossipMenuId=6602 WHERE Entry=15431;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6602 AND text_id=7829;
+DELETE FROM gossip_menu WHERE entry=6602 AND text_id IN (7830,60029,7960,7973);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6602, 7830, 0, 3583),
+(6602, 60029, 0, 3669),
+(6602, 7960, 0, 3570),
+(6602, 7973, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7829,7830,60029,7960,7973);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7829,7830,60029,7960,7973);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7829, 0, 10936),
+(7830, 0, 10937),
+(60029, 0, 11148),
+(7960, 0, 11149),
+(7973, 0, 11164);
+UPDATE quest_template SET RequiredCondition=3584 WHERE entry IN (8494,8495);
+UPDATE creature_template SET GossipMenuId=6614 WHERE Entry=15455;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6614 AND text_id=7856;
+DELETE FROM gossip_menu WHERE entry=6614 AND text_id IN (7857,60030,7997,7996);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6614, 7857, 0, 3586),
+(6614, 60030, 0, 3669),
+(6614, 7997, 0, 3570),
+(6614, 7996, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7856,7857,60030,7997,7996);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7856,7857,60030,7997,7996);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7856, 0, 10983),
+(7857, 0, 10984),
+(60030, 0, 11190),
+(7997, 0, 11189),
+(7996, 0, 11188);
+UPDATE quest_template SET RequiredCondition=3587 WHERE entry IN (8524,8525);
+UPDATE creature_template SET GossipMenuId=6616 WHERE Entry=15457;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6616 AND text_id=7861;
+DELETE FROM gossip_menu WHERE entry=6616 AND text_id IN (7862,60031,8003,8002);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6616, 7862, 0, 3589),
+(6616, 60031, 0, 3669),
+(6616, 8003, 0, 3570),
+(6616, 8002, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7861,7862,60031,8003,8002);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7861,7862,60031,8003,8002);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7861, 0, 10990),
+(7862, 0, 10991),
+(60031, 0, 11202),
+(8003, 0, 11201),
+(8002, 0, 11200);
+UPDATE quest_template SET RequiredCondition=3590 WHERE entry IN (8528,8529);
+UPDATE creature_template SET GossipMenuId=6615 WHERE Entry=15456;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6615 AND text_id=7859;
+DELETE FROM gossip_menu WHERE entry=6615 AND text_id IN (7860,60032,8000,7999);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6615, 7860, 0, 3592),
+(6615, 60032, 0, 3669),
+(6615, 8000, 0, 3570),
+(6615, 7999, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7859,7860,60032,8000,7999);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7859,7860,60032,8000,7999);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7859, 0, 10988),
+(7860, 0, 10989),
+(60032, 0, 11199),
+(8000, 0, 11198),
+(7999, 0, 11197);
+UPDATE quest_template SET RequiredCondition=3593 WHERE entry IN (8526,8527);
+UPDATE creature_template SET GossipMenuId=6605 WHERE Entry=15437;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6605 AND text_id=7835;
+DELETE FROM gossip_menu WHERE entry=6605 AND text_id IN (7836,60033,7967,7976);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6605, 7836, 0, 3595),
+(6605, 60033, 0, 3669),
+(6605, 7967, 0, 3570),
+(6605, 7976, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7835,7836,60033,7967,7976);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7835,7836,60033,7967,7976);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7835, 0, 10942),
+(7836, 0, 10943),
+(60033, 0, 11155),
+(7967, 0, 11156),
+(7976, 0, 11167);
+UPDATE quest_template SET RequiredCondition=3596 WHERE entry IN (8505,8506);
+UPDATE creature_template SET GossipMenuId=6606 WHERE Entry=15445;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6606 AND text_id=7837;
+DELETE FROM gossip_menu WHERE entry=6606 AND text_id IN (7838,60034,7969,7977);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6606, 7838, 0, 3598),
+(6606, 60034, 0, 3669),
+(6606, 7969, 0, 3570),
+(6606, 7977, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7837,7838,60034,7969,7977);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7837,7838,60034,7969,7977);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7837, 0, 10944),
+(7838, 0, 10945),
+(60034, 0, 11157),
+(7969, 0, 11158),
+(7977, 0, 11168);
+UPDATE quest_template SET RequiredCondition=3599 WHERE entry IN (8509,8510);
+UPDATE creature_template SET GossipMenuId=6604 WHERE Entry=15434;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6604 AND text_id=7833;
+DELETE FROM gossip_menu WHERE entry=6604 AND text_id IN (7834,60035,7964,7975);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6604, 7834, 0, 3601),
+(6604, 60035, 0, 3669),
+(6604, 7964, 0, 3570),
+(6604, 7975, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7833,7834,60035,7964,7975);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7833,7834,60035,7964,7975);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7833, 0, 10940),
+(7834, 0, 10941),
+(60035, 0, 11152),
+(7964, 0, 11153),
+(7975, 0, 11166);
+UPDATE quest_template SET RequiredCondition=3602 WHERE entry IN (8503,8504);
+UPDATE creature_template SET GossipMenuId=6665 WHERE Entry=15539;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6665 AND text_id=7942;
+DELETE FROM gossip_menu WHERE entry=6665 AND text_id IN (60060,8006,8005);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6665, 60060, 0, 3674),
+(6665, 8006, 0, 3570),
+(6665, 8005, 0, 3572);
+UPDATE gossip_menu_option SET condition_id=3678 WHERE menu_id=6665 AND id>=1;
+UPDATE gossip_menu_option SET option_broadcast_text=11120 WHERE menu_id=6665 AND id=0;
+UPDATE gossip_menu_option SET option_broadcast_text=11122 WHERE menu_id=6665 AND id=1;
+UPDATE gossip_menu_option SET option_broadcast_text=11124 WHERE menu_id=6665 AND id=2;
+UPDATE gossip_menu_option SET option_broadcast_text=11126 WHERE menu_id=6665 AND id=3;
+UPDATE gossip_menu_option SET option_broadcast_text=11128 WHERE menu_id=6665 AND id=4;
+UPDATE gossip_menu_option SET option_broadcast_text=11130 WHERE menu_id=6665 AND id=5;
+DELETE FROM npc_text WHERE id IN (7942,60060,8006,8005);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7942,60060,8006,8005);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7942, 0, 11119),
+(60060, 0, 11205),
+(8006, 0, 11204),
+(8005, 0, 11203);
+DELETE FROM npc_text WHERE id IN (7944,7945,7946,7947,7948,8209);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7944,7945,7946,7947,7948,8209);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7944, 0, 11123),
+(7945, 0, 11125),
+(7946, 0, 11127),
+(7947, 0, 11129),
+(7948, 0, 11131),
+(8209, 0, 11652);
+UPDATE creature_template SET SpeedWalk=(2.5/2.5), SpeedRun=(9.7/7), GossipMenuId=6772 WHERE Entry=15701;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6772 AND text_id=8082;
+DELETE FROM gossip_menu WHERE entry=6772 AND text_id IN (60059,8084,60009);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6772, 60059, 0, 3669),
+(6772, 8084, 0, 3570),
+(6772, 60009, 0, 3572);
+DELETE FROM npc_text WHERE id IN (8082,60059,8084,60009);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (8082,60059,8084,60009);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(8082, 0, 11361),
+(60059, 0, 11364),
+(8084, 0, 11363),
+(60009, 0, 11362);
+UPDATE gossip_menu_option SET condition_id=3676 WHERE menu_id=6772 AND id>=1;
+UPDATE gossip_menu_option SET option_broadcast_text=11120 WHERE menu_id=6772 AND id=0;
+UPDATE gossip_menu_option SET option_broadcast_text=11135 WHERE menu_id=6772 AND id=1;
+UPDATE gossip_menu_option SET option_broadcast_text=11137 WHERE menu_id=6772 AND id=2;
+UPDATE gossip_menu_option SET option_broadcast_text=11139 WHERE menu_id=6772 AND id=3;
+UPDATE gossip_menu_option SET option_broadcast_text=11141 WHERE menu_id=6772 AND id=4;
+UPDATE gossip_menu_option SET option_broadcast_text=11143 WHERE menu_id=6772 AND id=5;
+UPDATE gossip_menu_option SET option_broadcast_text=11132 WHERE menu_id=6771;
+DELETE FROM npc_text WHERE id IN (8071,8087,8088,8089,8090,8091);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (8071,8087,8088,8089,8090,8091);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(8071, 0, 11338),
+(8087, 0, 11365),
+(8088, 0, 11366),
+(8089, 0, 11367),
+(8090, 0, 11368),
+(8091, 0, 11369);
+UPDATE creature_template SET GossipMenuId=6613 WHERE Entry=15453;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6613 AND text_id=7853;
+DELETE FROM gossip_menu WHERE entry=6613 AND text_id IN (7854,60036,7994,7993);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6613, 7854, 0, 3604),
+(6613, 60036, 0, 3669),
+(6613, 7994, 0, 3570),
+(6613, 7993, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7853,7854,60036,7994,7993);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7853,7854,60036,7994,7993);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7853, 0, 10979),
+(7854, 0, 10980),
+(60036, 0, 11187),
+(7994, 0, 11186),
+(7993, 0, 11185);
+UPDATE quest_template SET RequiredCondition=3605 WHERE entry IN (8522,8523);
+UPDATE creature_template SET GossipMenuId=6612 WHERE Entry=15452;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6612 AND text_id=7851;
+DELETE FROM gossip_menu WHERE entry=6612 AND text_id IN (7852,60037,7991,7990);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6612, 7852, 0, 3607),
+(6612, 60037, 0, 3669),
+(6612, 7991, 0, 3570),
+(6612, 7990, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7851,7852,60037,7991,7990);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7851,7852,60037,7991,7990);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7851, 0, 10977),
+(7852, 0, 10978),
+(60037, 0, 11184),
+(7991, 0, 11183),
+(7990, 0, 11182);
+UPDATE quest_template SET RequiredCondition=3608 WHERE entry IN (8520,8521);
+UPDATE creature_template SET GossipMenuId=6610 WHERE Entry=15451;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6610 AND text_id=7847;
+DELETE FROM gossip_menu WHERE entry=6610 AND text_id IN (7848,60038,7988,7987);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6610, 7848, 0, 3610),
+(6610, 60038, 0, 3669),
+(6610, 7988, 0, 3570),
+(6610, 7987, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7847,7848,60038,7988,7987);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7847,7848,60038,7988,7987);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7847, 0, 10962),
+(7848, 0, 10963),
+(60038, 0, 11181),
+(7988, 0, 11180),
+(7987, 0, 11179);
+UPDATE quest_template SET RequiredCondition=3611 WHERE entry IN (8517,8518);
+UPDATE creature_template SET GossipMenuId=6607 WHERE Entry=15446;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6607 AND text_id=7847;
+DELETE FROM gossip_menu WHERE entry=6607 AND text_id IN (7842,60039,7971,7979);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6607, 7842, 0, 3613),
+(6607, 60039, 0, 3669),
+(6607, 7971, 0, 3570),
+(6607, 7979, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7840,7842,60039,7971,7979);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7840,7842,60039,7971,7979);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7840, 0, 10947),
+(7842, 0, 10956),
+(60039, 0, 11161),
+(7971, 0, 11162),
+(7979, 0, 11169);
+UPDATE quest_template SET RequiredCondition=3614 WHERE entry IN (8511,8512);
+UPDATE creature_template SET GossipMenuId=6608 WHERE Entry=15448;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6608 AND text_id=7847;
+DELETE FROM gossip_menu WHERE entry=6608 AND text_id IN (7844,60040,7971,7982);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6608, 7844, 0, 3616),
+(6608, 60040, 0, 3669),
+(6608, 7971, 0, 3570),
+(6608, 7982, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7843,7844,60040,7981,7982);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7843,7844,60040,7981,7982);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7843, 0, 10957),
+(7844, 0, 10958),
+(60040, 0, 11170),
+(7981, 0, 11171),
+(7982, 0, 11172);
+UPDATE quest_template SET RequiredCondition=3617 WHERE entry IN (8513,8514);
+UPDATE creature_template SET GossipMenuId=6609 WHERE Entry=15450;
+UPDATE gossip_menu SET condition_id=3569 WHERE entry=6609 AND text_id=7845;
+DELETE FROM gossip_menu WHERE entry=6609 AND text_id IN (7846,60041,7984,7983);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6609, 7846, 0, 3619),
+(6609, 60041, 0, 3669),
+(6609, 7984, 0, 3570),
+(6609, 7983, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7845,7846,60041,7984,7983);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7845,7846,60041,7984,7983);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7845, 0, 10959),
+(7846, 0, 10960),
+(60041, 0, 11175),
+(7984, 0, 11174),
+(7983, 0, 11173);
+UPDATE quest_template SET RequiredCondition=3620 WHERE entry IN (8515,8516);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6619 WHERE Entry=15460;
+DELETE FROM gossip_menu WHERE entry=6619;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6619, 7870, 0, 3569),
+(6619, 7871, 0, 3622),
+(6619, 60042, 0, 3674),
+(6619, 8013, 0, 3570),
+(6619, 60010, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7870,7871,60042,8013,60010);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7870,7871,60042,8013,60010);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7870, 0, 11001),
+(7871, 0, 11002),
+(60042, 0, 11213),
+(8013, 0, 11212),
+(60010, 0, 11211);
+UPDATE quest_template SET RequiredCondition=3623 WHERE entry IN (8542,8543);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6624 WHERE Entry=15469;
+DELETE FROM gossip_menu WHERE entry=6624;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6624, 7876, 0, 3569),
+(6624, 7877, 0, 3625),
+(6624, 60043, 0, 3674),
+(6624, 8016, 0, 3570),
+(6624, 60011, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7876,7877,60043,8016,60011);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7876,7877,60043,8016,60011);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7876, 0, 11010),
+(7877, 0, 11011),
+(60043, 0, 11222),
+(8016, 0, 11221),
+(60011, 0, 11220);
+UPDATE quest_template SET RequiredCondition=3626 WHERE entry IN (8545,8546);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6618 WHERE Entry=15459;
+DELETE FROM gossip_menu WHERE entry=6618;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6618, 7866, 0, 3569),
+(6618, 7867, 0, 3628),
+(6618, 60044, 0, 3674),
+(6618, 8010, 0, 3570),
+(6618, 60012, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7866,7867,60044,8010,60012);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7866,7867,60044,8010,60012);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7866, 0, 10997),
+(7867, 0, 10998),
+(60044, 0, 11210),
+(8010, 0, 11209),
+(60012, 0, 11208);
+UPDATE quest_template SET RequiredCondition=3629 WHERE entry IN (8532,8533);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6653 WHERE Entry=15512;
+DELETE FROM gossip_menu WHERE entry=6653;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6653, 7907, 0, 3569),
+(6653, 7908, 0, 3631),
+(6653, 60045, 0, 3674),
+(6653, 8025, 0, 3570),
+(6653, 60013, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7907,7908,60045,8025,60013);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7907,7908,60045,8025,60013);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7907, 0, 11077),
+(7908, 0, 11078),
+(60045, 0, 11234),
+(8025, 0, 11233),
+(60013, 0, 11232);
+UPDATE quest_template SET RequiredCondition=3632 WHERE entry IN (8582,8583);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6651 WHERE Entry=15508;
+DELETE FROM gossip_menu WHERE entry=6651;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6651, 7905, 0, 3569),
+(6651, 7906, 0, 3636),
+(6651, 60046, 0, 3674),
+(6651, 8022, 0, 3570),
+(6651, 60014, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7905,7906,60046,8022,60014);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7905,7906,60046,8022,60014);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7905, 0, 11075),
+(7906, 0, 11076),
+(60046, 0, 3674),
+(8022, 0, 11227),
+(60014, 0, 11226);
+UPDATE quest_template SET RequiredCondition=3637 WHERE entry IN (8580,8581);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6625 WHERE Entry=15477;
+DELETE FROM gossip_menu WHERE entry=6625;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6625, 7878, 0, 3569),
+(6625, 7879, 0, 3639),
+(6625, 60047, 0, 3674),
+(6625, 8019, 0, 3570),
+(6625, 60015, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7878,7879,60047,8019,60015);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7878,7879,60047,8019,60015);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7878, 0, 11013),
+(7879, 0, 11014),
+(60047, 0, 11225),
+(8019, 0, 11224),
+(60015, 0, 11223);
+UPDATE quest_template SET RequiredCondition=3640 WHERE entry IN (8549,8550);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6656 WHERE Entry=15522;
+DELETE FROM gossip_menu WHERE entry=6656;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6656, 7912, 0, 3569),
+(6656, 7913, 0, 3642),
+(6656, 60048, 0, 3674),
+(6656, 8031, 0, 3570),
+(6656, 60016, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7912,7913,60048,8031,60016);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7912,7913,60048,8031,60016);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7912, 0, 11082),
+(7913, 0, 11083),
+(60048, 0, 11240),
+(8031, 0, 11239),
+(60016, 0, 11238);
+UPDATE quest_template SET RequiredCondition=3643 WHERE entry IN (8590,8591);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6657 WHERE Entry=15525;
+DELETE FROM gossip_menu WHERE entry=6657;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6657, 7914, 0, 3569),
+(6657, 7915, 0, 3645),
+(6657, 60049, 0, 3674),
+(6657, 8034, 0, 3570),
+(6657, 60017, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7914,7915,60049,8034,60017);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7914,7915,60049,8034,60017);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7914, 0, 11084),
+(7915, 0, 11085),
+(60049, 0, 11243),
+(8034, 0, 11242),
+(60017, 0, 11241);
+UPDATE quest_template SET RequiredCondition=3646 WHERE entry IN (8600,8601);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6654 WHERE Entry=15515;
+DELETE FROM gossip_menu WHERE entry=6654;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6654, 7909, 0, 3569),
+(6654, 7910, 0, 3574),
+(6654, 60050, 0, 3674),
+(6654, 8028, 0, 3570),
+(6654, 60018, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7909,7910,60050,8028,60018);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7909,7910,60050,8028,60018);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7909, 0, 11079),
+(7910, 0, 11080),
+(60050, 0, 11237),
+(8028, 0, 11236),
+(60018, 0, 11235);
+UPDATE quest_template SET RequiredCondition=3575 WHERE entry IN (8588,8589);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6661 WHERE Entry=15532;
+DELETE FROM gossip_menu WHERE entry=6661;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6661, 7923, 0, 3569),
+(6661, 7924, 0, 3648),
+(6661, 60051, 0, 3674),
+(6661, 8043, 0, 3570),
+(6661, 60019, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7923,7924,60051,8043,60019);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7923,7924,60051,8043,60019);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7923, 0, 11095),
+(7924, 0, 11096),
+(60051, 0, 11252),
+(8043, 0, 11251),
+(60019, 0, 11250);
+UPDATE quest_template SET RequiredCondition=3649 WHERE entry IN (8609,8610);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6660 WHERE Entry=15529;
+DELETE FROM gossip_menu WHERE entry=6660;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6660, 7920, 0, 3569),
+(6660, 7921, 0, 3651),
+(6660, 60052, 0, 3674),
+(6660, 8040, 0, 3570),
+(6660, 60020, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7920,7921,60052,8040,60020);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7920,7921,60052,8040,60020);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7920, 0, 11092),
+(7921, 0, 11093),
+(60052, 0, 11249),
+(8040, 0, 11248),
+(60020, 0, 11247);
+UPDATE quest_template SET RequiredCondition=3652 WHERE entry IN (8607,8608);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6659 WHERE Entry=15528;
+DELETE FROM gossip_menu WHERE entry=6659;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6659, 7918, 0, 3569),
+(6659, 7919, 0, 3654),
+(6659, 60053, 0, 3674),
+(6659, 8037, 0, 3570),
+(6659, 60021, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7918,7919,60053,8037,60021);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7918,7919,60053,8037,60021);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7918, 0, 11090),
+(7919, 0, 11091),
+(60053, 0, 11246),
+(8037, 0, 11245),
+(60021, 0, 11244);
+UPDATE quest_template SET RequiredCondition=3655 WHERE entry IN (8604,8605);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6663 WHERE Entry=15534;
+DELETE FROM gossip_menu WHERE entry=6663;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6663, 7927, 0, 3569),
+(6663, 7928, 0, 3657),
+(6663, 60054, 0, 3674),
+(6663, 8049, 0, 3570),
+(6663, 60022, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7927,7928,60054,8049,60022);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7927,7928,60054,8049,60022);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7927, 0, 11099),
+(7928, 0, 11100),
+(60054, 0, 11258),
+(8049, 0, 11257),
+(60022, 0, 11256);
+UPDATE quest_template SET RequiredCondition=3658 WHERE entry IN (8613,8614);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6664 WHERE Entry=15535;
+DELETE FROM gossip_menu WHERE entry=6664;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6664, 7929, 0, 3569),
+(6664, 7930, 0, 3660),
+(6664, 60055, 0, 3674),
+(6664, 8052, 0, 3570),
+(6664, 60023, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7929,7930,60055,8052,60023);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7929,7930,60055,8052,60023);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7929, 0, 11101),
+(7930, 0, 11102),
+(60055, 0, 11261),
+(8052, 0, 11260),
+(60023, 0, 11259);
+UPDATE quest_template SET RequiredCondition=3661 WHERE entry IN (8615,8616);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6662 WHERE Entry=15533;
+DELETE FROM gossip_menu WHERE entry=6662;
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6662, 7925, 0, 3569),
+(6662, 7926, 0, 3663),
+(6662, 60056, 0, 3674),
+(6662, 8046, 0, 3570),
+(6662, 60024, 0, 3572);
+DELETE FROM npc_text WHERE id IN (7925,7926,60056,8046,60024);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7925,7926,60056,8046,60024);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7925, 0, 11097),
+(7926, 0, 11098),
+(60056, 0, 11255),
+(8046, 0, 11254),
+(60024, 0, 11253);
+UPDATE quest_template SET RequiredCondition=3664 WHERE entry IN (8611,8612);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6678 WHERE Entry=15458;
+DELETE FROM gossip_menu WHERE entry IN (6678,6679,6680,6681,6682,6683,6759);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6678, 7949, 0, 3569),
+(6678, 60057, 0, 3669),
+(6678, 8055, 0, 3570),
+(6678, 60025, 0, 3572),
+(6679, 7951, 0, 0),
+(6680, 7952, 0, 0),
+(6681, 7953, 0, 0),
+(6682, 7954, 0, 0),
+(6683, 7955, 0, 0),
+(6759, 8071, 0, 0);
+DELETE FROM npc_text WHERE id IN (7949,60057,7951,7952,7953,7954,7955,8055,60025,8071);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (7949,60057,7951,7952,7953,7954,7955,8055,60025,8071);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(7949, 0, 11133),
+(60057, 0, 11264),
+(7951, 0, 11136),
+(7952, 0, 11138),
+(7953, 0, 11140),
+(7954, 0, 11142),
+(7955, 0, 11144),
+(8055, 0, 11263),
+(60025, 0, 11262),
+(8071, 0, 11338);
+DELETE FROM gossip_menu_option WHERE menu_id IN (6678,6679,6680,6681,6682,6683,6759);
+INSERT INTO gossip_menu_option (menu_id, id, option_icon, option_text, option_broadcast_text, option_id, npc_option_npcflag, action_menu_id, action_poi_id, action_script_id, box_coded, box_money, box_text, box_broadcast_text, condition_id) VALUES
+(6678, 0, 0, 'What is the Ahn''Qiraj war effort?', 11120, 1, 1, 6759, 0, 0, 0, 0, '', 0, 0),
+(6678, 1, 0, 'How many metal bars have the Alliance collected so far?', 11135, 1, 1, 6679, 0, 0, 0, 0, '', 0, 3676),
+(6678, 2, 0, 'How many herbs have the Alliance collected so far?', 11137, 1, 1, 6680, 0, 0, 0, 0, '', 0, 3676),
+(6678, 3, 0, 'How many leather skins have the Alliance collected so far?', 11139, 1, 1, 6681, 0, 0, 0, 0, '', 0, 3676),
+(6678, 4, 0, 'How many bandages have the Alliance collected so far?', 11141, 1, 1, 6682, 0, 0, 0, 0, '', 0, 3676),
+(6678, 5, 0, 'How many cooked goods have the Alliance collected so far?', 11143, 1, 1, 6683, 0, 0, 0, 0, '', 0, 3676),
+(6679, 0, 0, 'I want to ask you about something else.', 11132, 1, 1, 6678, 0, 0, 0, 0, '', 0, 0),
+(6680, 0, 0, 'I want to ask you about something else.', 11132, 1, 1, 6678, 0, 0, 0, 0, '', 0, 0),
+(6681, 0, 0, 'I want to ask you about something else.', 11132, 1, 1, 6678, 0, 0, 0, 0, '', 0, 0),
+(6682, 0, 0, 'I want to ask you about something else.', 11132, 1, 1, 6678, 0, 0, 0, 0, '', 0, 0),
+(6683, 0, 0, 'I want to ask you about something else.', 11132, 1, 1, 6678, 0, 0, 0, 0, '', 0, 0),
+(6759, 0, 0, 'I want to ask you about something else.', 11132, 1, 1, 6678, 0, 0, 0, 0, '', 0, 0);
+UPDATE creature_template SET NpcFlags=3, GossipMenuId=6778, SpeedWalk=(2.5/2.5), SpeedRun=(7/7) WHERE Entry=15700;
+DELETE FROM gossip_menu WHERE entry IN (6778,6779,6780,6781,6782,6783,6784);
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES
+(6778, 8092, 0, 3569),
+(6778, 60058, 0, 3674),
+(6778, 8094, 0, 3570),
+(6778, 60026, 0, 3572),
+(6779, 8209, 0, 0),
+(6780, 8096, 0, 0),
+(6781, 8097, 0, 0),
+(6782, 8098, 0, 0),
+(6783, 8099, 0, 0),
+(6784, 8100, 0, 0);
+DELETE FROM npc_text WHERE id IN (8092,60058,8094,60026,8096,8097,8098,8099,8100,8209);
+DELETE FROM npc_text_broadcast_text WHERE Id IN (8092,60058,8094,60026,8096,8097,8098,8099,8100,8209);
+INSERT INTO npc_text_broadcast_text (Id, Prob0, BroadcastTextId0) VALUES
+(8092, 0, 11370),
+(60058, 0, 11373),
+(8094, 0, 11372),
+(60026, 0, 11371),
+(8096, 0, 11374),
+(8097, 0, 11375),
+(8098, 0, 11376),
+(8099, 0, 11377),
+(8100, 0, 11378),
+(8209, 0, 11652);
+DELETE FROM gossip_menu_option WHERE menu_id IN (6778,6779,6780,6781,6782,6783,6784);
+INSERT INTO gossip_menu_option (menu_id, id, option_icon, option_text, option_broadcast_text, option_id, npc_option_npcflag, action_menu_id, action_poi_id, action_script_id, box_coded, box_money, box_text, box_broadcast_text, condition_id) VALUES
+(6778, 0, 0, 'What is the Ahn''Qiraj war effort?', 11120, 1, 1, 6779, 0, 0, 0, 0, '', 0, 0),
+(6778, 1, 0, 'How many metal bars have the Horde collected so far?', 11122, 1, 1, 6780, 0, 0, 0, 0, '', 0, 3678),
+(6778, 2, 0, 'How many herbs have the Horde collected so far?', 11124, 1, 1, 6781, 0, 0, 0, 0, '', 0, 3678),
+(6778, 3, 0, 'How many leather skins have the Horde collected so far?', 11126, 1, 1, 6782, 0, 0, 0, 0, '', 0, 3678),
+(6778, 4, 0, 'How many bandages have the Horde collected so far?', 11128, 1, 1, 6783, 0, 0, 0, 0, '', 0, 3678),
+(6778, 5, 0, 'How many cooked goods have the Horde collected so far?', 11130, 1, 1, 6784, 0, 0, 0, 0, '', 0, 3678),
+(6779, 0, 0, 'I want to ask you about something else.', 11132, 1, 1, 6778, 0, 0, 0, 0, '', 0, 0),
+(6780, 0, 0, 'I want to ask you about something else.', 11132, 1, 1, 6778, 0, 0, 0, 0, '', 0, 0),
+(6781, 0, 0, 'I want to ask you about something else.', 11132, 1, 1, 6778, 0, 0, 0, 0, '', 0, 0),
+(6782, 0, 0, 'I want to ask you about something else.', 11132, 1, 1, 6778, 0, 0, 0, 0, '', 0, 0),
+(6783, 0, 0, 'I want to ask you about something else.', 11132, 1, 1, 6778, 0, 0, 0, 0, '', 0, 0),
+(6784, 0, 0, 'I want to ask you about something else.', 11132, 1, 1, 6778, 0, 0, 0, 0, '', 0, 0);
+UPDATE creature SET position_x=1591.380005, position_y=-4166.160156, position_z=37.830200, MovementType=2 WHERE guid=49342;
+UPDATE creature SET position_x=1626.250000, position_y=-4143.089844, position_z=34.724201, MovementType=2 WHERE guid=49343;
+UPDATE creature SET position_x=1570.180054, position_y=-4126.890137, position_z=36.713699, MovementType=2 WHERE guid=49344;
+UPDATE creature SET position_x=1666.250000, position_y=-4109.439941, position_z=35.004601, MovementType=2 WHERE guid=49350;
+UPDATE creature SET position_x=1637.839966, position_y=-4087.949951, position_z=36.098400, MovementType=2 WHERE guid=49351;
+UPDATE creature_template SET SpeedWalk=(2.5/2.5) WHERE entry=15696;
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (15550601,15550602,15551001,15551002,15550701,15550702,15552701,15552702,15552401,15552402);
+INSERT INTO dbscripts_on_creature_movement (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+(15550601, 5000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - EMOTE_STATE_USESTANDING'),
+(15550601, 22000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - Stop emote'),
+(15550602, 6000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - EMOTE_STATE_USESTANDING'),
+(15550602, 27000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - Stop emote'),
+(15551001, 5000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - EMOTE_STATE_USESTANDING'),
+(15551001, 27000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - Stop emote'),
+(15551002, 7000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - EMOTE_STATE_USESTANDING'),
+(15551002, 21000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - Stop emote'),
+(15550701, 10000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - EMOTE_STATE_USESTANDING'),
+(15550701, 21000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - Stop emote'),
+(15550702, 5000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - EMOTE_STATE_USESTANDING'),
+(15550702, 21000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - Stop emote'),
+(15552701, 5000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - EMOTE_STATE_USESTANDING'),
+(15552701, 19000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - Stop emote'),
+(15552702, 6000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - EMOTE_STATE_USESTANDING'),
+(15552702, 22000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - Stop emote'),
+(15552401, 11000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - EMOTE_STATE_USESTANDING'),
+(15552401, 21000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - Stop emote'),
+(15552402, 5000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - EMOTE_STATE_USESTANDING'),
+(15552402, 22000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Recruit - Stop emote');
+DELETE FROM creature_movement WHERE id IN (49342, 49343, 49344, 49350, 49351);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
+(49342, 1, 1591.380005, -4166.160156, 37.830200, 100, 0, 0),
+(49342, 2, 1591.859985, -4162.740234, 37.333500, 100, 0, 0),
+(49342, 3, 1591.859985, -4162.740234, 37.333500, 0.680678, 31000, 15550601),
+(49342, 4, 1593.880005, -4171.140137, 38.861000, 100, 0, 0),
+(49342, 5, 1596.630005, -4171.540039, 39.235699, 100, 31000, 15550602),
+(49343, 1, 1626.250000, -4143.089844, 34.724201, 100, 0, 0),
+(49343, 2, 1629.609985, -4143.040039, 34.799099, 100, 0, 0),
+(49343, 3, 1629.609985, -4143.040039, 34.799099, 5.009100, 39000, 15551001),
+(49343, 4, 1620.819946, -4146.700195, 35.492401, 100, 0, 0),
+(49343, 5, 1619.310059, -4150.620117, 36.440399, 100, 0, 0),
+(49343, 6, 1619.310059, -4150.620117, 36.440399, 5.166170, 29000, 15551002),
+(49344, 1, 1570.180054, -4126.890137, 36.713699, 100, 0, 0),
+(49344, 2, 1575.439941, -4123.120117, 35.339802, 100, 0, 0),
+(49344, 3, 1576.189941, -4118.649902, 35.187000, 100, 30000, 15550701),
+(49344, 4, 1568.040039, -4127.640137, 36.995701, 100, 0, 0),
+(49344, 5, 1564.189941, -4128.899902, 37.575600, 100, 0, 0),
+(49344, 6, 1564.189941, -4128.899902, 37.575600, 2.129300, 28000, 15550702),
+(49350, 1, 1666.250000, -4109.439941, 35.004601, 100, 0, 0),
+(49350, 2, 1666.250000, -4109.439941, 35.004601, 5.829400, 28000, 15552701),
+(49350, 3, 1669.170044, -4102.660156, 36.146099, 100, 0, 0),
+(49350, 4, 1673.719971, -4102.890137, 36.660500, 100, 0, 0),
+(49350, 5, 1677.030029, -4109.200195, 37.263100, 100, 0, 0),
+(49350, 6, 1677.030029, -4109.200195, 37.263100, 4.537860, 31000, 15552702),
+(49350, 7, 1673.520020, -4102.770020, 36.650902, 100, 0, 0),
+(49350, 8, 1669.739990, -4102.399902, 36.245098, 100, 0, 0),
+(49350, 9, 1665.829956, -4105.580078, 35.407600, 100, 0, 0),
+(49351, 1, 1637.839966, -4087.949951, 36.098400, 100, 0, 0),
+(49351, 2, 1627.699951, -4095.449951, 33.966900, 100, 28000, 15552401),
+(49351, 3, 1637.770020, -4089.270020, 35.898800, 100, 0, 0),
+(49351, 4, 1639.420044, -4082.149902, 37.482201, 100, 0, 0),
+(49351, 5, 1639.420044, -4082.149902, 37.482201, 2.129300, 30000, 15552402);
+DELETE FROM `creature` WHERE `guid` = 102440;
+DELETE FROM `creature` WHERE `guid` = 102441;
+DELETE FROM `creature` WHERE `guid` = 102442;
+DELETE FROM `creature` WHERE `guid` = 102443;
+DELETE FROM `creature` WHERE `guid` = 102444;
+
+UPDATE creature SET position_x=-4911.080078, position_y=-1233.900024, position_z=501.656006, MovementType=2 WHERE guid=49339;
+UPDATE creature SET MovementType=2 WHERE guid=49340;
+UPDATE creature SET position_x=-4933.209961, position_y=-1287.540039, position_z=501.670990, MovementType=2 WHERE guid=49341;
+UPDATE creature SET MovementType=2 WHERE guid=49336;
+UPDATE creature SET position_x=-4983.459961, position_y=-1147.410034, position_z=501.649994, MovementType=2 WHERE guid=49335;
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (15502001,15502301,15502302,15502701,15502702,15500601,15500602,15500201,15500202);
+INSERT INTO dbscripts_on_creature_movement (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
+(15502001, 9000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - EMOTE_STATE_USESTANDING'),
+(15502001, 29000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - Stop emote'),
+(15502301, 5000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - EMOTE_STATE_USESTANDING'),
+(15502301, 27000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - Stop emote'),
+(15502302, 0, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - EMOTE_STATE_USESTANDING'),
+(15502302, 20000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - Stop emote'),
+(15502701, 8000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - EMOTE_STATE_USESTANDING'),
+(15502701, 22000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - Stop emote'),
+(15502702, 8000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - EMOTE_STATE_USESTANDING'),
+(15502702, 30000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - Stop emote'),
+(15500601, 8000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - EMOTE_STATE_USESTANDING'),
+(15500601, 24000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - Stop emote'),
+(15500602, 8000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - EMOTE_STATE_USESTANDING'),
+(15500602, 29000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - Stop emote'),
+(15500201, 9000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - EMOTE_STATE_USESTANDING'),
+(15500201, 21000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - Stop emote'),
+(15500202, 10000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - EMOTE_STATE_USESTANDING'),
+(15500202, 21000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'War Effort Volunteer - Stop emote');
+DELETE FROM creature_movement WHERE id IN (49339, 49340, 49341, 49336, 49335);
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
+(49339, 1, -4911.080078, -1233.900024, 501.656006, 100, 0, 0),
+(49339, 2, -4916.959961, -1231.780029, 501.652008, 100, 0, 0),
+(49339, 3, -4919.319824, -1227.910034, 501.645996, 100, 0, 0),
+(49339, 4, -4917.509766, -1225.000000, 501.647003, 100, 36000, 15502001),
+(49339, 5, -4916.129883, -1232.810059, 501.653992, 100, 0, 0),
+(49339, 6, -4910.310059, -1234.089966, 501.656006, 100, 0, 0),
+(49339, 7, -4906.629883, -1230.910034, 501.654999, 100, 0, 0),
+(49339, 8, -4903.870117, -1225.959961, 501.653992, 100, 36000, 15502001),
+(49340, 1, -4944.850098, -1277.699951, 501.756012, 3.211410, 39000, 15502301),
+(49340, 2, -4944.850098, -1277.699951, 501.756012, 4.310960, 22000, 15502302),
+(49341, 1, -4933.209961, -1287.540039, 501.670990, 100, 0, 0),
+(49341, 2, -4929.560059, -1292.349976, 501.671997, 100, 23000, 15502701),
+(49341, 3, -4936.040039, -1284.670044, 501.670990, 100, 0, 0),
+(49341, 4, -4937.830078, -1280.140015, 501.670990, 100, 39000, 15502702),
+(49336, 1, -4974.049805, -1173.479980, 501.644012, 100, 0, 0),
+(49336, 2, -4974.979980, -1169.449951, 501.641998, 100, 0, 0),
+(49336, 3, -4972.430176, -1166.339966, 501.639008, 100, 0, 0),
+(49336, 4, -4969.640137, -1166.739990, 501.635986, 100, 31000, 15500601),
+(49336, 5, -4974.740234, -1170.770020, 501.643005, 100, 0, 0),
+(49336, 6, -4972.330078, -1174.339966, 501.640991, 100, 0, 0),
+(49336, 7, -4968.890137, -1174.689941, 501.645996, 100, 0, 0),
+(49336, 8, -4966.450195, -1173.949951, 501.647003, 100, 37000, 15500602),
+(49335, 1, -4983.459961, -1147.410034, 501.649994, 100, 0, 0),
+(49335, 2, -4979.819824, -1143.939941, 501.652008, 100, 0, 0),
+(49335, 3, -4974.569824, -1142.619995, 501.651001, 100, 28000, 15500201),
+(49335, 4, -4981.270020, -1144.500000, 501.652008, 100, 0, 0),
+(49335, 5, -4982.970215, -1149.140015, 501.651001, 100, 0, 0),
+(49335, 6, -4979.709961, -1153.260010, 501.656006, 100, 0, 0),
+(49335, 7, -4975.330078, -1153.589966, 501.654999, 100, 30000, 15500202),
+(49335, 8, -4981.879883, -1151.739990, 501.651001, 100, 0, 0);
+UPDATE `gameobject_template` SET `data2` = '180811' WHERE `entry` =180810;
