@@ -25,7 +25,7 @@
 -- Classic section
 -- ============================================================
 -- Make Moonwell GO server-side (visible by GM only)
-UPDATE gameobject_template SET data3=1 WHERE entry=177272;
+UPDATE gameobject_template SET data3=1 WHERE entry IN (177272, 177273, 177274, 177275, 177276, 177277, 177278, 177279, 177280, 177281);
 
 -- Make Incantion of Celebras Trap only visible by GM
 UPDATE gameobject_template SET data8=1 WHERE entry=178963;
@@ -44,6 +44,7 @@ UPDATE gameobject_template SET data8=1 WHERE entry=180391; -- Heart of Hakkar Sp
 UPDATE gameobject_template SET data8=1 WHERE entry=181214; -- Necropolis critter spawner
 UPDATE gameobject_template SET data8=1 WHERE entry=179324; -- Frostwolf Landmine
 UPDATE gameobject_template SET data8=1 WHERE entry=179325; -- Stormpike Landmine
+UPDATE gameobject_template SET data8=1 WHERE entry=160842; -- Gor'tesh's Lopped Off Head
 
 -- Set radius of Supply Crate trap to zero to prevent trap from being triggered by nearby players (it should trigger on player usage of original GO)
 UPDATE gameobject_template SET data2=0 WHERE entry IN (175534, 175535, 175536, 175537);
@@ -151,10 +152,17 @@ UPDATE `gameobject_template` SET `data5` = 1 WHERE `entry` IN (185497,185500);
 -- Creature custom changes
 -- -------------------------------
 
--- not blizzlike but how it actually should work - Brutallus Death Cloud - should always use 11686 ingame
-UPDATE creature_template SET ModelId1=169,ModelId2=11686 WHERE entry IN(25703);
-UPDATE creature_template SET ModelId1=1126,ModelId2=11686 WHERE entry IN(25267);
-UPDATE creature_template SET ModelId1=1126,ModelId2=11686 WHERE entry IN(25265);
+-- modelids with probability = 0
+UPDATE creature_template SET `modelid2` = 0 WHERE `entry` IN (
+17734, -- Underbog Lord
+17459, -- Chess Waiting Room (DND)
+18095, -- Doomfire
+18104, -- Doomfire Targeting
+20155, -- Hillsbrad Internment Lodge Quest Trigger
+25265, -- Demonic Vapor
+25267, -- Demonic Vapor (Trail)
+25703 -- Brutallus Death Cloud
+);
 
 -- -------------------------------
 -- Quest custom changes

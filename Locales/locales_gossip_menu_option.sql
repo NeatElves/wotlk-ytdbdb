@@ -2256,7 +2256,7 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (7104, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Привет, Райн. Что понадобилось Кругу Кенария в Чумных землях?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (7106, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Продолжай, пожалуйста.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (7107, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Что-то еще?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(7111, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Продолжай, пожалуйста.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+#(7111, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Продолжай, пожалуйста.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (7113, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Продолжай, пожалуйста.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (7114, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Продолжай, пожалуйста.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (7118, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'И что же привело тебя в часовню Последней Надежды?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
