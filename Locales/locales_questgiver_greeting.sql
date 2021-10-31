@@ -50,6 +50,7 @@ INSERT INTO `locales_questgiver_greeting` (`Entry`, `Type`, `Text_loc1`, `Text_l
 (5767, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Единственная наша надежда - извлечь хоть что-нибудь хорошее из имеющейся отвратительной ситуации.'),
 (5887, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Приветствую тебя, $n.'),
 (7876, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Некоторые люди задаются вопросом, что мы делаем здесь, в пустыне. Что ж... Если я расскажу тебе, то ты останешься и лишишь нас прибыли!'),
+(22292, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Свет ещё не воссиял над Скеттисом.'),
 (186420, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Эта коллекция свитков содержит различную логистическую и стратегическую информацию, а также закодированную корреспонденцию.');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

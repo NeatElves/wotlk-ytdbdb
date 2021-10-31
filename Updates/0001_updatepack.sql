@@ -50048,3 +50048,4 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 
 UPDATE creature_template SET DynamicFlags=DynamicFlags&~32 WHERE DynamicFlags&32=32;
 UPDATE creature_template SET UnitFlags=UnitFlags&~536870912 WHERE UnitFlags&536870912=536870912;
+UPDATE creature_template SET DynamicFlags=DynamicFlags|32 WHERE Entry in (17849,18490,19224,20663,21846,21859,24808,25030,25546);
