@@ -836,3 +836,4 @@ UPDATE `broadcast_text` SET `emoteid1`=5 WHERE `id`=10334;
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (10315,10321,10329,10332,10335,10336);
 UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `ID` IN (4707, 4708, 4709, 4711, 4712);
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` = 14365;
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` = 2077;
