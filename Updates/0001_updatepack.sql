@@ -44750,6 +44750,18 @@ INSERT INTO `creature_movement_template` (`entry`, `point`, `position_x`, `posit
 (464, 9, -9589.5, -1899.4, 60.7739, 100, 0, 0),
 (464, 10, -9596.89, -1879.37, 58.5883, 100, 0, 0);
 
+# 14040_01_mangos_dbscript_data_flags_widening.sql
+ALTER TABLE dbscripts_on_creature_death MODIFY data_flags INT UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE dbscripts_on_creature_movement MODIFY data_flags INT UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE dbscripts_on_event MODIFY data_flags INT UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE dbscripts_on_gossip MODIFY data_flags INT UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE dbscripts_on_go_template_use MODIFY data_flags INT UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE dbscripts_on_go_use MODIFY data_flags INT UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE dbscripts_on_quest_end MODIFY data_flags INT UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE dbscripts_on_quest_start MODIFY data_flags INT UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE dbscripts_on_relay MODIFY data_flags INT UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE dbscripts_on_spell MODIFY data_flags INT UNSIGNED NOT NULL DEFAULT '0';
+
 INSERT INTO game_event(entry, schedule_type, occurence, length, holiday, linkedTo, EventGroup, description) VALUES
 ('113', '1', '30', '15', '0', '26', '0', 'Brewfest: Dark Iron Attack'),
 ('114', '1', '1440', '15', '0', '26', '0', 'Brewfest: Keg tapping');
@@ -45689,14 +45701,14 @@ REPLACE INTO dbscripts_on_creature_movement VALUES
 ('1054003', '121000', '0', '0', '0', '0', '0', '0', '109988', '17', '22021', '0', '0', '0', '0', '0', '0', '0', '0', 'Voljin say 7'),
 ('1054003', '124000', '0', '15', '42138', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Voljin Cast 6634 on everyone'),
 ('1054003', '124000', '0', '1', '92', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Voljin play emote'),
-#('1054003', '124500', '0', '36', '0', '0', '0', '24484', '50', 0x203, '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Revelers turn to voljin'),
-#('1054003', '127000', '0', '1', '92', '0', '0', '24484', '50', 0x203, '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Revelers emote'),
+('1054003', '124500', '0', '36', '0', '0', '0', '24484', '50', 0x203, '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Revelers turn to voljin'),
+('1054003', '127000', '0', '1', '92', '0', '0', '24484', '50', 0x203, '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Revelers emote'),
 ('1054003', '127500', '0', '1', '253', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Voljin play emote'),
-#('1054003', '132000', '0', '1', '92', '0', '0', '24484', '50', 0x203, '153', '21', '22', '71', '0', '0', '0', '0', '0', 'Revelers emote'),
+('1054003', '132000', '0', '1', '92', '0', '0', '24484', '50', 0x203, '153', '21', '22', '71', '0', '0', '0', '0', '0', 'Revelers emote'),
 ('1054003', '132500', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Voljin play emote'),
 ('1054003', '132500', '1', '1', '92', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Voljin play emote'),
 ('1054003', '143000', '0', '1', '71', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Voljin play emote'),
-#('1054003', '159000', '0', '36', '1', '0', '0', '24484', '50', 0x203, '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Revelers reset orientation'),
+('1054003', '159000', '0', '36', '1', '0', '0', '24484', '50', 0x203, '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Revelers reset orientation'),
 ('1054004', '0', '0', '24', '12346', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Voljin mount and change speed'),
 ('1054004', '0', '1', '25', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Voljin set run'),
 ('1054005', '0', '0', '24', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Voljin dismount and change speed'),
@@ -46920,12 +46932,12 @@ REPLACE INTO dbscripts_on_creature_movement VALUES
 ('793703', '147500', '0', '0', '0', '0', '0', '0', '110004', '17', '22001', '0', '0', '0', '0', '0', '0', '0', '0', 'Mekkatorque say 9'),
 ('793703', '150500', '0', '15', '42138', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Mekkatorque Cast 6634 on everyone'),
 ('793703', '150500', '0', '1', '92', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Mekkatorque play emote'),
-#('793703', '151000', '0', '36', '0', '0', '0', '24484', '50', 0x203, '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Revelers turn to Mekkatorque'),
-#('793703', '153500', '0', '1', '92', '0', '0', '24484', '50', 0x203, '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Revelers emote'),
+('793703', '151000', '0', '36', '0', '0', '0', '24484', '50', 0x203, '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Revelers turn to Mekkatorque'),
+('793703', '153500', '0', '1', '92', '0', '0', '24484', '50', 0x203, '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Revelers emote'),
 ('793703', '153500', '0', '1', '253', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Mekkatorque play emote'),
 ('793703', '158500', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Mekkatorque clear emote'),
 ('793703', '158500', '0', '1', '6', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Mekkatorque play emote'),
-#('793703', '158500', '0', '1', '92', '0', '0', '24484', '50', 0x203, '153', '21', '22', '71', '0', '0', '0', '0', '0', 'Revelers emote'),
+('793703', '158500', '0', '1', '92', '0', '0', '24484', '50', 0x203, '153', '21', '22', '71', '0', '0', '0', '0', '0', 'Revelers emote'),
 ('793703', '170500', '0', '1', '153', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Mekkatorque play emote'),
 ('793704', '0', '0', '24', '12346', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Mekkatorque mount and change speed'),
 ('793704', '0', '1', '25', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Mekkatorque set run'),
@@ -50906,3 +50918,235 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (127295, 11, -8878.29, -410.994, 65.6802, 4.63836, 5000, 3801, NULL);
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
 (3801, 0, 0, 20, 1, 7, 24000, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, '(temp) randommovement on curent location');
+
+# 14041_01_mangos_creature_spell_lists.sql
+DROP TABLE IF EXISTS creature_spell_list_entry;
+CREATE TABLE creature_spell_list_entry (
+Id INT NOT NULL COMMENT 'List ID',
+Name VARCHAR(200) NOT NULL COMMENT 'Description of usage',
+ChanceSupportAction INT NOT NULL COMMENT 'Chance of support action per tick',
+ChanceRangedAttack INT NOT NULL COMMENT 'Chance of ranged attack per tick',
+PRIMARY KEY(Id)
+);
+
+DROP TABLE IF EXISTS creature_spell_list;
+CREATE TABLE creature_spell_list (
+Id INT NOT NULL COMMENT 'List ID',
+Position INT NOT NULL COMMENT 'Position on list',
+SpellId INT NOT NULL COMMENT 'Spell ID',
+Flags INT NOT NULL COMMENT 'Spell Flags',
+TargetId INT NOT NULL COMMENT 'Targeting ID',
+ScriptId INT NOT NULL COMMENT 'Dbscript to be launched on success',
+Availability INT NOT NULL COMMENT 'Chance on spawn for spell to be included',
+Probability INT NOT NULL COMMENT 'Weight of spell when multiple are available',
+InitialMin INT NOT NULL COMMENT 'Initial delay minimum',
+InitialMax INT NOT NULL COMMENT 'Initial delay maximum',
+RepeatMin INT NOT NULL COMMENT 'Repeated delay minimum',
+RepeatMax INT NOT NULL COMMENT 'Repeated delay maximum',
+Comments VARCHAR(255) NOT NULL COMMENT 'Description of spell use',
+PRIMARY KEY(Id, Position)
+);
+
+DROP TABLE IF EXISTS creature_spell_targeting;
+CREATE TABLE creature_spell_targeting (
+Id INT NOT NULL COMMENT 'Targeting ID',
+Type INT NOT NULL COMMENT 'Type of targeting ID',
+Param1 INT NOT NULL COMMENT 'First parameter',
+Param2 INT NOT NULL COMMENT 'Second parameter',
+Param3 INT NOT NULL COMMENT 'Third parameter',
+Comments VARCHAR(255) NOT NULL COMMENT 'Description of target',
+PRIMARY KEY(Id)
+);
+
+ALTER TABLE creature_template ADD COLUMN SpellList INT NOT NULL DEFAULT '0' COMMENT 'creature_spell_list_entry' AFTER CorpseDecay;
+
+REPLACE INTO creature_spell_targeting(Id, Type, Param1, Param2, Param3, Comments) VALUES
+(0, 0, 0, 0, 0, 'Hardcoded - none'),
+(1, 0, 0, 0, 0, 'Hardcoded - current'),
+(2, 0, 0, 0, 0, 'Hardcoded - self'),
+(3, 0, 0, 0, 0, 'Hardcoded - eligible friendly dispel'),
+(4, 0, 0, 0, 0, 'Hardcoded - eligible friendly dispel - skip self'),
+(100, 1, 0, 0, 0x0002, 'Attack - random player');
+
+REPLACE INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(589, 'Westfall - Defias Pillager', 0, 75);
+
+REPLACE INTO creature_spell_list(Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(589, 3, 20793, 2, 1, 0, 100, 0, '0','0','0','0', 'Defias Pillager - Fireball on Current');
+
+UPDATE creature_template SET SpellList=589 WHERE entry IN(589);
+
+REPLACE INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(595, 'STV - Bloodscalp Hunter', 0, 75);
+
+REPLACE INTO creature_spell_list(Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(595, 3, 6533, 0, 1, 0, 100, 0, '1700','10700','18400','29800', 'Bloodscalp Hunter - Net on Current'),
+(595, 4, 6660, 2, 1, 0, 100, 0, '0','0','2300','3900', 'Bloodscalp Hunter - Shoot on Current');
+
+UPDATE creature_template SET SpellList=595 WHERE entry IN(595);
+
+REPLACE INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1450701, 'ZG - High Priest Venoxis Phase 1', 0, 0),
+(1450702, 'ZG - High Priest Venoxis Phase 2', 0, 0),
+(1450703, 'ZG - High Priest Venoxis Phase 3', 0, 0);
+
+REPLACE INTO creature_spell_list(Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1450701, 0, 23859, 0, 4, 0, 100, 1, '35000','35000','15000','30000', 'High Priest Venoxis Phase 1 - Dispel on Friendly dispellable'),
+(1450701, 1, 23895, 0, 2, 0, 100, 1, '30000','30000','20000','30000', 'High Priest Venoxis Phase 1 - Renew on Self'),
+(1450701, 2, 23979, 0, 1, 0, 100, 1, '40000','40000','15000','25000', 'High Priest Venoxis Phase 1 - Holy Wrath on Current'),
+(1450701, 3, 23858, 0, 0, 0, 100, 1, '15000','20000','10000','15000', 'High Priest Venoxis Phase 1 - Holy Nova on None'),
+(1450701, 4, 23860, 0, 100, 0, 100, 1, '10000','15000','20000','30000', 'High Priest Venoxis Phase 1 - Holy Fire on Random'),
+(1450701, 5, 3391, 0, 1, 0, 100, 1, '4000','6000','10000','20000', 'High Priest Venoxis Phase 1 - Thrash on Current');
+
+REPLACE INTO creature_spell_list(Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1450702, 0, 23861, 0, 0, 0, 100, 1, '2000','2000','15000','15000', 'High Priest Venoxis Phase 2 - Poison Cloud on None'),
+(1450702, 1, 23862, 0, 100, 0, 100, 1, '5500','5500','15000','20000', 'High Priest Venoxis Phase 2 - Venomspit on Random'),
+(1450702, 5, 3391, 0, 1, 0, 100, 1, '4000','6000','10000','20000', 'High Priest Venoxis Phase 2 - Thrash on Current');
+
+REPLACE INTO creature_spell_list(Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1450703, 0, 23861, 0, 0, 0, 100, 1, '0','0','15000','15000', 'High Priest Venoxis Phase 3 - Poison Cloud on None'),
+(1450703, 1, 23862, 0, 100, 0, 100, 1, '0','0','15000','20000', 'High Priest Venoxis Phase 3 - Venomspit on Random'),
+(1450703, 2, 23867, 0, 100, 0, 100, 1, '0','0','15000','20000', 'High Priest Venoxis Phase 3 - Parasitic Serpent on Random'),
+(1450703, 5, 3391, 0, 1, 0, 100, 1, '0','0','10000','20000', 'High Priest Venoxis Phase 3 - Thrash on Current');
+
+UPDATE creature_template SET SpellList=1450701 WHERE entry IN(14507);
+
+DELETE FROM creature_template_addon WHERE entry IN (18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102));
+DELETE FROM game_event_creature WHERE guid IN (SELECT guid FROM creature WHERE id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102));
+DELETE FROM game_event_creature_data WHERE guid IN (SELECT guid FROM creature WHERE id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102));
+
+DELETE FROM `creature` WHERE `guid` IN (138036,138042,138048,138054,138136,138142,138208,138209,138210,138211,138212,138213,138214,138067,138068,138069,
+138070,138071,138097,138098,138011,138010,138008,138009,121131,138109,138110,138035,138041,138047,138053,138135,138141,138201,138202,138203,138204,
+138205,138206,138207,138012,138013,138014,138015,138113,138114,138077,138078,138079,138080,138081,138101,138102,138020,138021,138022,138023,138117,
+138118,138087,138088,138089,138090,138091,138105,138106,138082,138083,138084,138085,138086,138103,138104,138016,138017,138018,138019,138115,138116,
+138037,138043,138049,138055,138137,138143,138215,138216,138217,138218,138219,138220,138221,138166,138167,138168,138169,138170,138171,138172,
+138030,138125,138126,130841,138034,138040,138046,138052,138134,138140,138194,138195,138196,138197,138198,138199,138200,138159,93846,93848,
+138160,138161,138162,138163,138164,138165,126530,130822,138031,138127,138128,130827,130828,130829,138028,138121,138122,138180,138181,
+138182,138183,138184,138185,138186,138173,138174,138175,138176,138177,138178,138179,130823,130824,130825,130826,138029,138123,138124,93879,130871,138038,138044,
+138050,138056,138138,138144,138222,138223,138224,138225,138226,138227,138228,138072,138073,138074,138075,138076,138099,138100,93862,138058,138060,138062,138064,
+138066,138111,138112,138059,138061,138063,138065,138131,138132,138145,138146,138147,138148,138149,138150,138151,138187,138188,138189,138190,138191,
+138192,138193,130869,138033,138039,138045,138051,138133,138139,138032,138129,138130,138152,138153,138154,138155,138156,138157,
+138158,138024,138025,138026,138027,138119,138120,138092,138093,138094,138095,138096,138107,138108);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(56098, 18927, 0, 1, 0, 0, -8838.41, 552.492, 96.0094, 6.01564, 300, 300, 0, 0, 42, 0, 0, 0),
+(93858, 18927, 0, 1, 0, 0, -8837.52, 553.727, 95.8031, 5.28364, 300, 300, 0, 0, 42, 0, 0, 0),
+(93825, 18927, 0, 1, 0, 0, -8854.78, 649.83, 96.7417, 1.43117, 300, 300, 0, 0, 42, 0, 0, 0),
+(93827, 18927, 0, 1, 0, 0, -8855.72, 651.851, 96.6895, 5.70723, 300, 300, 0, 0, 42, 0, 0, 0),
+(78738, 18927, 0, 1, 0, 0, -8837.9, 553.154, 95.9797, 0.15708, 300, 300, 0, 0, 42, 0, 0, 0),
+(93857, 18927, 0, 1, 0, 0, -8837.23, 554.917, 95.7154, 5.044, 300, 300, 0, 0, 42, 0, 0, 0),
+(78739, 19148, 0, 1, 0, 0, -4900.87, -957.314, 501.541, 4.17134, 300, 300, 0, 0, 42, 0, 0, 0),
+(93833, 19148, 0, 1, 0, 0, -4901.8, -958.955, 501.543, 1.01229, 300, 300, 0, 0, 42, 0, 0, 0),
+(68802, 19169, 530, 1, 0, 0, 9663.51, -7117.01, 14.4069, 2.53073, 300, 300, 0, 0, 42, 0, 0, 0),
+(93837, 19169, 530, 1, 0, 0, 9690.43, -7493.95, 15.8579, 2.33874, 300, 300, 0, 0, 42, 0, 0, 0),
+(93835, 19169, 530, 1, 0, 0, 9662.28, -7116.19, 14.4064, 5.44543, 300, 300, 0, 0, 42, 0, 0, 0),
+(66759, 19169, 530, 1, 0, 0, 9689.07, -7493.1, 15.861, 6.19592, 300, 300, 0, 0, 42, 0, 0, 0),
+(130870, 19169, 530, 1, 0, 0, 9375.07, -7157.06, 9.25588, 1.6057, 300, 300, 0, 0, 42, 0, 0, 0),
+(93859, 19169, 530, 1, 0, 0, 9374.67, -7155.09, 9.33675, 4.95674, 300, 300, 0, 0, 42, 0, 0, 0),
+(74752, 19169, 530, 1, 0, 0, 9374.67, -7155.09, 9.33675, 4.95674, 300, 300, 0, 0, 42, 0, 0, 0),
+(93850, 19169, 530, 1, 0, 0, 9689.33, -7345.39, 11.9144, 4.20624, 300, 300, 0, 0, 42, 0, 0, 0),
+(93856, 19169, 530, 1, 0, 0, 9687.96, -7346.09, 11.956, 1.50098, 300, 300, 0, 0, 42, 0, 0, 0),
+(88604, 19171, 530, 1, 0, 0, -3811.42, -11709.2, -106.409, 4.64258, 300, 300, 0, 0, 42, 0, 0, 0),
+(84744, 19171, 530, 1, 0, 0, -3809.49, -11712.9, -106.485, 2.07128, 300, 300, 0, 0, 42, 0, 0, 0),
+(93842, 19171, 530, 1, 0, 0, -3910.78, -11615.7, -138.115, 0.820305, 300, 300, 0, 0, 42, 0, 0, 0),
+(93844, 19171, 530, 1, 0, 0, -3909.22, -11614.8, -138.101, 3.1765, 300, 300, 0, 0, 42, 0, 0, 0),
+(93843, 19171, 530, 1, 0, 0, -4044.45, -11786, 9.11559, 2.53073, 300, 300, 0, 0, 42, 0, 0, 0),
+(93854, 19171, 530, 1, 0, 0, -4045.58, -11785, 9.10616, 5.60251, 300, 300, 0, 0, 42, 0, 0, 0),
+(93860, 19171, 530, 1, 0, 0, -4269.71, -11336.5, 5.80931, 1.69297, 300, 300, 0, 0, 42, 0, 0, 0),
+(93855, 19171, 530, 1, 0, 0, -4270.06, -11333.1, 5.57545, 4.67748, 300, 300, 0, 0, 42, 0, 0, 0),
+(93849, 19171, 530, 1, 0, 0, -3810.52, -11710.6, -106.411, 2.28638, 300, 300, 0, 0, 42, 0, 0, 0),
+(68114, 19171, 1, 1, 0, 0, -3955.85, -11701.5, -138.82, 5.72468, 300, 300, 0, 0, 42, 0, 0, 0),
+(93832, 19171, 1, 1, 0, 0, -3954.31, -11702.2, -138.799, 2.6529, 300, 300, 0, 0, 42, 0, 0, 0),
+(69142, 19172, 0, 1, 0, 0, -4829.88, -1173.25, 502.277, 2.49582, 300, 300, 0, 0, 42, 0, 0, 0),
+(93839, 19172, 0, 1, 0, 0, -4831.74, -1172.58, 502.278, 6.19592, 300, 300, 0, 0, 42, 0, 0, 0),
+(93881, 19173, 1, 1, 0, 0, 9922.97, 2498.76, 1317.86, 2.44346, 300, 300, 0, 0, 42, 0, 0, 0),
+(93845, 19173, 1, 1, 0, 0, 9921.56, 2499.58, 1317.77, 5.61996, 300, 300, 0, 0, 42, 0, 0, 0),
+(93868, 19175, 1, 1, 0, 0, 1625, -4402.88, 13.1966, 2.60054, 300, 300, 0, 0, 42, 0, 0, 0),
+(93864, 19175, 1, 1, 0, 0, 1623.41, -4402.24, 12.7889, 5.68977, 300, 300, 0, 0, 42, 0, 0, 0),
+(93836, 19176, 530, 1, 0, 0, 9568, -7153.87, 14.2386, 3.84202, 300, 300, 0, 0, 42, 0, 0, 0),
+(93838, 19176, 530, 1, 0, 0, 9706.29, -7276.05, 16.4981, 1.47118, 300, 300, 0, 0, 42, 0, 0, 0),
+(76656, 19176, 530, 1, 0, 0, 9706.9, -7273.98, 16.5705, 4.06928, 300, 300, 0, 0, 42, 0, 0, 0),
+(76657, 19176, 1, 1, 0, 0, -1240.55, 90.6357, 129.002, 4.83456, 300, 300, 0, 0, 42, 0, 0, 0),
+(93861, 19176, 1, 1, 0, 0, -1240.74, 88.4645, 129.187, 2.23402, 300, 300, 0, 0, 42, 0, 0, 0),
+(93874, 19177, 1, 1, 0, 0, 1693.4, -4334.83, 61.9237, 3.03687, 300, 300, 0, 0, 42, 0, 0, 0),
+(93872, 19177, 1, 1, 0, 0, 1689.75, -4334.92, 61.7469, 0.15708, 300, 300, 0, 0, 42, 0, 0, 0),
+(93882, 19178, 0, 1, 0, 0, 1574.55, 267.583, -43.0193, 3.76991, 300, 300, 0, 0, 42, 0, 0, 0),
+(93891, 19178, 0, 1, 0, 0, 1627.8, 224.57, -43.0193, 4.15388, 300, 300, 0, 0, 42, 0, 0, 0),
+(93840, 19178, 0, 1, 0, 0, 1573.04, 265.955, -43.0193, 0.593412, 300, 300, 0, 0, 42, 0, 0, 0),
+(93876, 19178, 0, 1, 0, 0, 1626.7, 222.7, -43.0193, 1.01229, 300, 300, 0, 0, 42, 0, 0, 0),
+(68148, 20102, 1, 1, 0, 0, -897.124, -3763.23, 11.9882, 4.32842, 300, 300, 0, 0, 42, 0, 0, 0),
+(67312, 20102, 1, 1, 0, 0, -1031.03, -3676.2, 23.1851, 4.69494, 300, 300, 0, 0, 42, 0, 0, 0),
+(67287, 20102, 1, 1, 0, 0, -1030.97, -3678.41, 23.2479, 1.62316, 300, 300, 0, 0, 42, 0, 0, 0),
+(93886, 20102, 1, 1, 0, 0, -7147.06, -3830.22, 8.51396, 6.05629, 300, 300, 0, 0, 42, 0, 0, 0),
+(93884, 20102, 1, 1, 0, 0, -924.099, -3718, 9.18514, 1.69297, 300, 300, 0, 0, 42, 0, 0, 0),
+(93853, 20102, 1, 1, 0, 0, -898.024, -3765.59, 11.868, 1.25664, 300, 300, 0, 0, 42, 0, 0, 0),
+(93889, 20102, 1, 1, 0, 0, -924.656, -3715.91, 9.13173, 5.06145, 300, 300, 0, 0, 42, 0, 0, 0),
+(92815, 20102, 1, 1, 0, 0, -7053.62, -3777.21, 10.2047, 5.25344, 300, 300, 0, 0, 42, 0, 0, 0),
+(93893, 20102, 1, 1, 0, 0, -7053, -3779.9, 10.1478, 1.53589, 300, 300, 0, 0, 42, 0, 0, 0),
+(93890, 20102, 530, 1, 0, 0, -1818.99, 5305.67, -12.3448, 4.03171, 300, 300, 0, 0, 42, 0, 0, 0),
+(93878, 20102, 530, 1, 0, 0, -1821.12, 5303.35, -12.3448, 0.767945, 300, 300, 0, 0, 42, 0, 0, 0),
+(93873, 20102, 530, 1, 0, 0, -1748.08, 5493.86, -12.3448, 4.2586, 300, 300, 0, 0, 42, 0, 0, 0),
+(93834, 20102, 530, 1, 0, 0, -1747.9, 5492.11, -12.3448, 1.3439, 300, 300, 0, 0, 42, 0, 0, 0),
+(93870, 20102, 530, 1, 0, 0, -1978.82, 5365.21, -12.3448, 3.63029, 300, 300, 0, 0, 42, 0, 0, 0),
+(93830, 20102, 530, 1, 0, 0, -1980.72, 5364.88, -12.3225, 0.226893, 300, 300, 0, 0, 42, 0, 0, 0),
+(93866, 20102, 530, 1, 0, 0, -1875.93, 5376.2, -12.3448, 0.820305, 300, 300, 0, 0, 42, 0, 0, 0),
+(93885, 20102, 530, 1, 0, 0, -1875.06, 5378.04, -12.3448, 4.36332, 300, 300, 0, 0, 42, 0, 0, 0),
+(93852, 20102, 530, 1, 0, 0, -2175.76, 5414.62, 50.3112, 5.60251, 300, 300, 0, 0, 42, 0, 0, 0),
+(93888, 20102, 530, 1, 0, 0, -2174.14, 5413.06, 50.3112, 2.56563, 300, 300, 0, 0, 42, 0, 0, 0),
+(93863, 20102, 530, 1, 0, 0, -1808.36, 5417.01, -12.3448, 2.32129, 300, 300, 0, 0, 42, 0, 0, 0),
+(93847, 20102, 530, 1, 0, 0, -1917.81, 5441.85, -12.3448, 2.35619, 300, 300, 0, 0, 42, 0, 0, 0),
+(93883, 20102, 530, 1, 0, 0, -1920.17, 5443.52, -12.3448, 5.86431, 300, 300, 0, 0, 42, 0, 0, 0),
+(93896, 20102, 530, 1, 0, 0, -1883.61, 5769.28, 129.641, 4.15388, 300, 300, 0, 0, 42, 0, 0, 0),
+(93880, 20102, 530, 1, 0, 0, -1884.14, 5766.55, 129.641, 1.309, 300, 300, 0, 0, 42, 0, 0, 0),
+(93829, 20102, 0, 1, 0, 0, -14440.2, 510.301, 26.2619, 5.07891, 300, 300, 0, 0, 42, 0, 0, 0),
+(93865, 20102, 0, 1, 0, 0, -14440.1, 509.034, 26.2717, 1.3439, 300, 300, 0, 0, 42, 0, 0, 0),
+(93875, 20102, 0, 1, 0, 0, -14469.6, 462.223, 36.9248, 0.279253, 300, 300, 0, 0, 42, 0, 0, 0),
+(93895, 20102, 0, 1, 0, 0, -14468.7, 463.642, 36.9241, 4.13643, 300, 300, 0, 0, 42, 0, 0, 0),
+(93867, 20102, 0, 1, 0, 0, -14313.5, 508.853, 8.69121, 4.27606, 300, 300, 0, 0, 42, 0, 0, 0),
+(93869, 20102, 0, 1, 0, 0, -14314, 507.109, 8.68829, 1.22173, 300, 300, 0, 0, 42, 0, 0, 0),
+(93871, 20102, 530, 1, 0, 0, -1809.93, 5418.64, -12.3448, 5.55015, 300, 300, 0, 0, 42, 0, 0, 0),
+(93851, 20102, 1, 1, 0, 0, -7217.57, -3735.16, 8.45314, 2.28638, 300, 300, 0, 0, 42, 0, 0, 0),
+(93887, 20102, 1, 1, 0, 0, -7219.66, -3731.91, 8.4635, 5.13127, 300, 300, 0, 0, 42, 0, 0, 0),
+(93894, 20102, 1, 1, 0, 0, -7185.2, -3809.25, 9.01346, 5.51524, 300, 300, 0, 0, 42, 0, 0, 0),
+(93892, 20102, 1, 1, 0, 0, -7144.12, -3830.95, 8.50543, 3.26377, 300, 300, 0, 0, 42, 0, 0, 0),
+(93841, 20102, 1, 1, 0, 0, -7182.97, -3811.81, 8.80395, 2.3911, 300, 300, 0, 0, 42, 0, 0, 0),
+(93877, 20102, 1, 1, 0, 0, 6791.34, -4747.01, 701.617, 2.21657, 300, 300, 0, 0, 42, 0, 0, 0);
+# GOSSIP_EVENT_MIDSUMMER
+REPLACE INTO game_event_creature SELECT guid, 1 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
+# GOSSIP_EVENT_WINTER_VEIL
+REPLACE INTO game_event_creature SELECT guid, 2 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
+# GOSSIP_EVENT_LUNAR_FESTIVAL
+REPLACE INTO game_event_creature SELECT guid, 7 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
+# GOSSIP_EVENT_HALLOWS_END
+REPLACE INTO game_event_creature SELECT guid, 12 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
+# GOSSIP_EVENT_BREWFEST
+REPLACE INTO game_event_creature SELECT guid, 26 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
+# GOSSIP_EVENT_PIRATES_DAY
+REPLACE INTO game_event_creature SELECT guid, 32 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
+# GOSSIP_EVENT_DARK_PORTAL
+REPLACE INTO game_event_creature SELECT guid, 100 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
+# GOSSIP_EVENT_SPIRIT_OF_COMPETITION
+REPLACE INTO game_event_creature SELECT guid, 112 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
+# core not support (Noblegarden, Day of the Dead, Pilgrims Bounty)
+REPLACE INTO game_event_creature SELECT guid, 9 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
+REPLACE INTO game_event_creature SELECT guid, 40 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
+REPLACE INTO game_event_creature SELECT guid, 41 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
+
+UPDATE `creature` SET `spawndist` = 3 WHERE `guid` IN (13096,53118);
+UPDATE `creature` SET `orientation` = '3.1' WHERE `guid` =12851;
+UPDATE `creature` SET `position_x` = -328.9885, `position_y` = 1531.251, `position_z` = 18.00105, `orientation` = 4.031711, `MovementType` = 2 WHERE `id` = 3530;
+DELETE FROM `creature_movement_template` WHERE `entry` = 3530;
+INSERT INTO `creature_movement_template` (`entry`, `pathid`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`) VALUES
+(3530, 0, 1, -331.5994, 1512.646, 17.06103, 100, 0),
+(3530, 0, 2, -338.3188, 1509.113, 18.79338, 100, 0),
+(3530, 0, 3, -345.9572, 1504.301, 18.79903, 100, 0),
+(3530, 0, 4, -354.1824, 1497.598, 18.80909, 100, 0),
+(3530, 0, 5, -360.7778, 1495.355, 17.22692, 100, 10000),
+(3530, 0, 6, -354.1824, 1497.598, 18.80909, 100, 0),
+(3530, 0, 7, -345.9572, 1504.301, 18.79903, 100, 0),
+(3530, 0, 8, -338.3188, 1509.113, 18.79338, 100, 0),
+(3530, 0, 9, -331.5994, 1512.646, 17.06103, 100, 0),
+(3530, 0, 10, -328.9885, 1531.251, 18.00105, 4.031711, 60000);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(37312, 1895, 0, 1, 0, 0, -397.475, 1543.61, 17.1712, 3.0459, 600, 600, 5, 0, 276, 295, 0, 1),
+(12838, 2106, 0, 1, 0, 0, -387.331, 1648.79, 24.3721, 1.5708, 600, 600, 1, 0, 356, 0, 0, 1);

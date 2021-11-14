@@ -188,6 +188,7 @@ UPDATE creature_template SET ScriptName='npc_headless_horseman_fire' WHERE entry
 UPDATE creature_template SET ScriptName='npc_child_tbc' WHERE entry IN(22817,22818);
 UPDATE creature_template SET ScriptName='npc_advanced_target_dummy' WHERE entry IN (2674); -- Advanced Target Dummy
 UPDATE creature_template SET ScriptName='npc_imp_in_a_ball' WHERE entry IN (23224,23229);
+UPDATE creature_template SET ScriptName='npc_gossip_npc' WHERE entry IN (18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
 
 /*Quest (quest scripts which are not in one zone)*/
 UPDATE creature_template SET ScriptName='npc_quest_attunement' WHERE entry IN(22421,18528,19935);
@@ -258,6 +259,37 @@ entry IN(15383,15431,15432,15434,15437,15445,15446,15448,15450,15451,15452,15453
 /*Midsummer*/
 UPDATE gameobject_template SET ScriptName='go_midsummer_bonfire' WHERE entry IN(187946,187945,187944,187943,187942,187941,187940,187939,187938,187937,187936,187935,187934,187933,187932,187931,187930,187929,187928,187927,187926,187925,187924,187923,187922,187921,187920,187919,187917,187916,187914,187564,187971,187973,187952,187963,187950,187961,187959,187957,187968,187948,187953,187970,187966,187975,187969,187951,187956,187954,187947,187972,187964,187559,187965,187949,187955,187967,187958,187974,187960,187962,181332,181333,181334,181335,181336,181337,188128,188129);
 UPDATE creature_template SET ScriptName='npc_torch_tossing_bunny_controller' WHERE entry IN(25536);
+
+/* Brewfest */
+UPDATE creature_template SET ScriptName='npc_brewfest_barker' WHERE entry IN (23683,23684,23685,23710,24492,24493,24495,24710,24711); -- Maeve Barleybrew, Ita Thunderbrew, Gordok Brew Barker, Belbi Quikswitch, Drohn's Distillery Barker, T'chali's Voodoo Brewery Barker, Blix Fixwidget, Ipfelkofer Ironkeg, Tapper Swindlekeg
+INSERT INTO scripted_areatrigger VALUES
+(4712,'at_brewfest_barker'), -- Ita Thunderbrew
+(4715,'at_brewfest_barker'), -- Maeve Barleybrew
+(4716,'at_brewfest_barker'), -- Gordok Brew Barker (Alliance)
+(4718,'at_brewfest_barker'), -- Belbi Quikswitch
+(4797,'at_brewfest_barker'), -- Gordok Brew Barker (Horde)
+(4798,'at_brewfest_barker'), -- Drohn's Distillery Barker
+(4799,'at_brewfest_barker'), -- T'chali's Voodoo Brewery Barker
+(4800,'at_brewfest_barker'), -- Blix Fixwidget
+(4820,'at_brewfest_barker'), -- Ipfelkofer Ironkeg
+(4829,'at_brewfest_barker'); -- Tapper Swindlekeg
+INSERT INTO scripted_areatrigger VALUES
+(4769,'at_brewfest_quest_barking'),
+(4770,'at_brewfest_quest_barking'),
+(4772,'at_brewfest_quest_barking'),
+(4774,'at_brewfest_quest_barking'),
+(4801,'at_brewfest_quest_barking'),
+(4802,'at_brewfest_quest_barking'),
+(4803,'at_brewfest_quest_barking'),
+(4804,'at_brewfest_quest_barking');
+-- Horde
+INSERT INTO scripted_areatrigger VALUES
+(4807,'at_brewfest_receive_keg'),
+(4808,'at_brewfest_send_keg');
+-- Alliance
+INSERT INTO scripted_areatrigger VALUES
+(4786,'at_brewfest_receive_keg'),
+(4787,'at_brewfest_send_keg');
 
 /*  */
 /* ZONE */
@@ -788,9 +820,6 @@ UPDATE creature_template SET ScriptName='boss_trollgore' WHERE entry=26630;
 UPDATE instance_template SET ScriptName='instance_draktharon_keep' WHERE map=600;
 
 /* DUN MOROGH */
-UPDATE creature_template SET ScriptName='npc_belbi_quikswitch' WHERE entry=23710;
-INSERT INTO scripted_areatrigger VALUES
-(4718,'at_belbi_quikswitch');
 
 /* DUROTAR */
 UPDATE creature_template SET ScriptName='npc_lazy_peon' WHERE entry=10556;
