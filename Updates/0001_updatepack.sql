@@ -4713,6 +4713,9 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 DELETE FROM creature_template_spells WHERE entry = 18794;
 INSERT INTO creature_template_spells (entry,setId,spell1,spell2,spell3,spell4,spell5,spell6) VALUES
 (18794,0,0,0,0,0,12540,0), (18794,1,0,0,0,9574,20795,0), (18794,2,0,0,0,15497,15532,0), (18794,3,0,0,0,33487,33832,0);
+DELETE FROM creature_cooldowns WHERE entry=18794;
+INSERT INTO creature_cooldowns (Entry, SpellId, CooldownMin, CooldownMax) VALUES
+(18794, 9574, 3872, 6613), (18794, 12540, 12132, 14812), (18794, 15532, 13237, 18536), (18794, 20795, 8135, 12351), (18794, 33487, 2164, 4928);
 
 DELETE FROM dbscripts_on_quest_end WHERE id = 1220;
 INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
@@ -44620,122 +44623,6 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment
 (78725, 25994, 1, 1, 0, 0, 140.061, -4733.57, 15.639, 5.14437, 300, 300, 0, 0, 2371, 0, 0, 0);
 REPLACE INTO game_event_creature SELECT guid, 1 FROM creature WHERE id IN(25994);
 
-# Remove table dbscript_string
-#
-#DELETE FROM `dbscript_string` WHERE `entry` = 2000002246;
-#DELETE FROM `dbscript_string` WHERE `entry` = 2000002248;
-#DELETE FROM `dbscript_string` WHERE `entry` = 2000002250;
-#DELETE FROM `dbscript_string` WHERE `entry` = 2000002252;
-#DELETE FROM `dbscript_string` WHERE `entry` = 2000002256;
-#DELETE FROM `dbscript_string` WHERE `entry` = 2000002258;
-#DELETE FROM `dbscript_random_templates` WHERE `id` = 20002 AND `type` = 0 AND `target_id` = 2000002246;
-#DELETE FROM `dbscript_random_templates` WHERE `id` = 20002 AND `type` = 0 AND `target_id` = 2000002248;
-#DELETE FROM `dbscript_random_templates` WHERE `id` = 20002 AND `type` = 0 AND `target_id` = 2000002250;
-#DELETE FROM `dbscript_random_templates` WHERE `id` = 20002 AND `type` = 0 AND `target_id` = 2000002252;
-#DELETE FROM `dbscript_random_templates` WHERE `id` = 20002 AND `type` = 0 AND `target_id` = 2000002256;
-#DELETE FROM `dbscript_random_templates` WHERE `id` = 20002 AND `type` = 0 AND `target_id` = 2000002258;
-#
-#UPDATE dbscripts_on_creature_death JOIN dbscript_string ON dataint=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_creature_death JOIN dbscript_string ON dataint2=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint2=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_creature_death JOIN dbscript_string ON dataint3=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint3=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_creature_death JOIN dbscript_string ON dataint4=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint4=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#
-#UPDATE dbscripts_on_creature_movement JOIN dbscript_string ON dataint=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_creature_movement JOIN dbscript_string ON dataint2=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint2=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_creature_movement JOIN dbscript_string ON dataint3=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint3=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_creature_movement JOIN dbscript_string ON dataint4=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint4=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#
-#UPDATE dbscripts_on_quest_start JOIN dbscript_string ON dataint=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_quest_start JOIN dbscript_string ON dataint2=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint2=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_quest_start JOIN dbscript_string ON dataint3=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint3=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_quest_start JOIN dbscript_string ON dataint4=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint4=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#
-#UPDATE dbscripts_on_quest_end JOIN dbscript_string ON dataint=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_quest_end JOIN dbscript_string ON dataint2=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint2=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_quest_end JOIN dbscript_string ON dataint3=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint3=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_quest_end JOIN dbscript_string ON dataint4=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint4=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#
-#UPDATE dbscripts_on_go_use JOIN dbscript_string ON dataint=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_go_use JOIN dbscript_string ON dataint2=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint2=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_go_use JOIN dbscript_string ON dataint3=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint3=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_go_use JOIN dbscript_string ON dataint4=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint4=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#
-#UPDATE dbscripts_on_go_template_use JOIN dbscript_string ON dataint=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_go_template_use JOIN dbscript_string ON dataint2=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint2=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_go_template_use JOIN dbscript_string ON dataint3=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint3=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_go_template_use JOIN dbscript_string ON dataint4=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint4=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#
-#UPDATE dbscripts_on_event JOIN dbscript_string ON dataint=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_event JOIN dbscript_string ON dataint2=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint2=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_event JOIN dbscript_string ON dataint3=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint3=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_event JOIN dbscript_string ON dataint4=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint4=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#
-#UPDATE dbscripts_on_gossip JOIN dbscript_string ON dataint=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_gossip JOIN dbscript_string ON dataint2=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint2=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_gossip JOIN dbscript_string ON dataint3=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint3=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_gossip JOIN dbscript_string ON dataint4=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint4=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#
-#UPDATE dbscripts_on_relay JOIN dbscript_string ON dataint=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_relay JOIN dbscript_string ON dataint2=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint2=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_relay JOIN dbscript_string ON dataint3=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint3=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_relay JOIN dbscript_string ON dataint4=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint4=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#
-#UPDATE dbscripts_on_spell JOIN dbscript_string ON dataint=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_spell JOIN dbscript_string ON dataint2=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint2=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_spell JOIN dbscript_string ON dataint3=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint3=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#UPDATE dbscripts_on_spell JOIN dbscript_string ON dataint4=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET dataint4=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#
-#UPDATE dbscript_random_templates JOIN dbscript_string ON target_id=entry JOIN broadcast_text ON dbscript_string.broadcast_text_id=broadcast_text.id
-#SET target_id=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
-#
-#Not found text id 2000003180, 2000003187 in script dbscripts_on_creature_movement id 2911205
-#
-#DROP TABLE dbscript_string;
-
-# Remove table creature_ai_texts
-#
-#DROP TABLE creature_ai_texts;
-
 UPDATE `creature` SET `position_x` = -9609.64, `position_y` = -1902.4, `position_z` = 59.823, `orientation` = 4.08447 WHERE `id` = 464;
 DELETE FROM `creature_movement_template` WHERE `entry` = 464;
 INSERT INTO `creature_movement_template` (`entry`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
@@ -47624,7 +47511,7 @@ UPDATE `creature_template` SET `DamageSchool` = 2 WHERE `entry` = 10757;
 UPDATE `creature_template` SET `DamageSchool` = 5 WHERE `entry` = 11284;
 UPDATE `creature_template` SET `SchoolImmuneMask` = `SchoolImmuneMask`|8 WHERE `entry` = 12201;
 UPDATE `creature_template` SET `DamageSchool` = 3 WHERE `entry` = 13696;
-## UPDATE `creature_template` SET `DamageSchool` = 3 WHERE `entry` = 13736; -- Noxxious Essence (couldnt confirm this one)
+#UPDATE `creature_template` SET `DamageSchool` = 3 WHERE `entry` = 13736; -- Noxxious Essence (couldnt confirm this one)
 UPDATE `creature_template` SET `DamageSchool` = 5 WHERE `entry` = 14389;
 UPDATE `creature_template` SET `DamageSchool` = 5 WHERE `entry` = 21941;
 UPDATE `creature_template` SET `SchoolImmuneMask` = 16 WHERE `entry` = 17155;
@@ -51150,3 +51037,129 @@ INSERT INTO `creature_movement_template` (`entry`, `pathid`, `point`, `position_
 REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
 (37312, 1895, 0, 1, 0, 0, -397.475, 1543.61, 17.1712, 3.0459, 600, 600, 5, 0, 276, 295, 0, 1),
 (12838, 2106, 0, 1, 0, 0, -387.331, 1648.79, 24.3721, 1.5708, 600, 600, 1, 0, 356, 0, 0, 1);
+
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`&~65536 WHERE `entry` IN (
+1021,1747,1750,1751,1752,2748,5699,6173,7917,9016,9938,11658,11659,11988,12203,12206,12778,12779,12780,12781,12783,12784,12785,12786,12787,14363,
+14365,14367,14375,14376,14377,14378,14379,14380,14402,14403,14404,14423,14438,14439,14440,14441,14442,14981,15007,15008,18147,18507);
+UPDATE `creature_template` SET `Faction` = 12 WHERE `entry` IN (12423,15708,16106);
+UPDATE `creature_template` SET `Faction` = 29 WHERE `entry` IN (12430,15700,15460,15533,15736);
+UPDATE `creature_template` SET `Faction` = 55 WHERE `entry` IN (12427,6030);
+UPDATE `creature_template` SET `Faction` = 68 WHERE `entry` IN (12428,15193,15459,15703,16004,16108,16109);
+UPDATE `creature_template` SET `Faction` = 80 WHERE `entry` IN (12429,16001);
+UPDATE `creature_template` SET `Faction` = 104 WHERE `entry` IN (15477,15535,16008,15528);
+UPDATE `creature_template` SET `Faction` = 126 WHERE `entry` IN (15508,15737,15704);
+UPDATE `creature_template` SET `Faction` = 150 WHERE `entry` = 4947;
+UPDATE `creature_template` SET `Faction` = 875 WHERE `entry` = 15707;
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|65536 WHERE `entry` IN (900,1448,
+54,66,74,78,152,190,196,198,244,246,248,250,251,253,258,261,263,266,267,268,270,271,272,274,276,278,295,302,313,325,328,343,344,346,372,375,377,379,383,384,459,465,514,523,633,661,777,
+789,793,823,851,894,896,906,911,913,915,917,918,925,951,952,955,956,958,959,960,963,1103,1182,1213,1215,1218,1239,1249,1250,1284,1296,1322,1430,1451,1457,1459,1460,1462,1463,1632,1645,
+1650,1651,1672,1673,1719,2046,2094,2329,2365,2668,2669,2697,2700,2708,2808,3085,3086,3087,3088,3089,3090,3091,3138,3178,3179,3298,3546,3935,4455,4732,4963,4996,5042,5082,5508,5620,6121,
+6175,6181,6295,6306,6367,6373,6374,6727,6740,6774,6778,6790,7779,7852,7868,8150,9296,11072,11260,11824,11825,11940,11979,11994,12960,13283,15199,15431,15445,15448,15452,15735,
+980,981,982,983,984,985,986,987,988,989,1068,1147,1381,1382,1383,1385,1386,1407,1442,1443,1775,2229,2465,2792,2818,2819,2820,2821,2855,2856,2857,2908,3139,3142,3143,3144,3145,3147,3149,3150,
+3153,3155,3156,3157,3158,3159,3160,3161,3163,3164,3165,3166,3167,3168,3169,3170,3171,3172,3173,3174,3175,3191,3193,3208,3216,3294,3312,3313,3314,3315,3316,3317,3319,3321,3323,3324,
+3325,3326,3327,3328,3329,3330,3331,3332,3333,3334,3335,3336,3342,3344,3345,3346,3347,3348,3349,3350,3351,3352,3353,3354,3355,3356,3357,3358,3359,3360,3361,3362,3363,3364,3365,3366,
+3368,3369,3370,3373,3403,3406,3407,3408,3409,3410,3412,3413,3421,3430,3433,3443,3620,3621,3622,3682,3708,3881,3882,3995,4043,4047,4485,4501,4502,4544,4752,4875,4879,4883,4884,4954,
+5188,5591,5640,5641,5765,5811,5812,5814,5815,5816,5817,5882,5883,5885,5907,5943,5958,5994,6014,6018,6027,6567,6574,6586,6747,6786,6928,6929,6930,6986,7088,7230,7231,7294,7485,7623,
+7643,7714,7737,7790,7792,7871,8176,8177,8306,9082,9501,9552,9555,9796,9976,9986,9988,10049,10050,10054,10088,10176,10266,10361,10556,11017,11025,11046,11066,11074,11378,
+11821,11868,11943,12136,12137,12196,12430,12724,12776,12807,13445,13476,14498,15131,15460,15522,15533,15696,15700,15736,15765,16007,16094,
+2983,13431,13432,15745,
+5385,
+167,222,658,713,829,895,912,916,926,945,954,1071,1075,1089,1090,1091,1092,1093,1104,1105,1153,1154,1155,1187,1214,1217,1226,1229,1231,1232,1234,1237,1238,1240,1241,
+1243,1246,1247,1252,1254,1255,1256,1261,1265,1267,1273,1274,1340,1343,1344,1345,1355,1356,1362,1365,1374,1375,1376,1377,1378,1441,1450,1452,1453,1456,1458,1461,1465,1466,
+1469,1470,1471,1473,1474,1681,1682,1683,1684,1685,1686,1687,1690,1691,1692,1694,1697,1698,1699,1701,1702,1703,1872,1901,1963,1965,1977,2086,2092,2097,2104,2111,2326,
+2460,2461,2489,2679,2695,2737,2786,2790,2911,2912,2916,2918,3162,3177,3182,3545,3842,3948,3979,4254,4256,4258,4259,4772,4889,5049,5099,5101,5102,5103,5106,5107,5108,5109,5110,5111,5112,5113,
+5115,5116,5117,5119,5120,5121,5122,5123,5124,5125,5126,5128,5129,5130,5133,5137,5138,5140,5141,5142,5143,5146,5147,5148,5149,5150,5153,5154,5155,5156,5159,5160,5161,5164,5165,5166,
+5170,5171,5173,5174,5387,5388,5392,5570,6030,6031,6114,6178,6179,6241,6291,6294,6569,6734,6806,7208,7292,7298,7976,8022,8256,8517,8671,8720,8879,9177,9540,9859,9980,9984,9989,
+10090,10216,10276,10277,10930,11065,11807,11865,11941,12427,13084,14121,15383,15432,15446,15663,15701,15734,15764,
+714,786,836,837,1354,3836,6577,6886,12738,
+1266,
+3666,4941,6782,7937,7944,8856,9616,
+1497,1499,1500,1515,1518,1521,1560,1568,1569,1570,1652,1661,1937,1938,1950,1951,1952,2113,2114,2115,2116,2117,2118,2119,2121,2122,2123,2124,2126,2127,2128,2129,2130,2131,2132,
+2135,2136,2137,2140,2216,2307,2315,2388,2390,2391,2393,2397,2399,2401,2410,2418,2419,2437,3044,3045,3046,3047,3048,3049,3419,3522,3523,3548,3551,3552,3553,3554,3555,3556,3557,
+3982,4488,4498,4583,4608,4731,4773,5543,5655,5656,5657,5658,5659,5660,5688,5695,5748,5749,5750,5759,5886,5957,6389,6739,6741,6784,6785,9553,9979,10055,10057,11945,
+12428,12722,15193,15197,15459,15512,15525,15529,15703,15738,15768,16004,16108,16109,
+3339,3391,3442,3446,3453,3491,3492,3493,3494,3495,3496,3497,3498,3499,3572,3658,3665,3683,3684,6791,7161,7166,8119,8496,8738,9558,10063,16227,
+1695,2077,2078,2081,2083,2084,2303,2796,2803,3306,3515,3517,3561,3562,3567,3598,3599,3600,3601,3602,3603,3604,3605,3608,3609,3610,3611,3612,3613,3614,3649,3657,
+3693,3700,3701,3702,3779,3880,3885,3901,3936,3951,3955,3956,3960,3963,3964,3965,4087,4088,4089,4090,4091,4138,4146,4156,4159,4160,4161,4163,4164,4167,4168,4169,4170,4171,4172,4173,
+4175,4177,4180,4181,4182,4183,4185,4186,4189,4191,4193,4203,4204,4205,4208,4210,4211,4212,4213,4214,4215,4216,4217,4218,4219,4220,4221,4222,4223,4225,4226,4228,4229,4230,
+4231,4232,4233,4234,4235,4236,4240,4241,4265,4266,4320,4521,4730,4753,5047,5191,5501,5782,6034,6094,6142,6286,6287,6288,6292,6297,6298,6299,6300,6301,6576,6735,6736,6781,
+7296,7313,7315,7317,7736,7740,7764,7870,7877,7878,7879,7880,7900,7907,8026,8157,8665,8669,8723,8997,9465,10051,10056,10059,10089,10293,11041,11042,11050,11070,11081,11083,
+11103,11104,11181,11700,11709,11866,11942,12429,14301,15315,15437,15451,15453,15457,15678,15679,15709,15731,15762,16001,16458,
+2080,2107,3514,3519,3587,3588,3589,3590,3591,3592,3593,3594,3595,3596,3597,3606,3650,6091,8583,8584,
+2947,2987,3387,3441,4926,4943,5087,5412,5599,5639,5667,5724,5770,5810,5875,5905,5908,5909,5910,6393,6394,6410,6446,9077,9078,9083,9084,9085,9086,11407,
+1156,
+2798,2806,2948,2981,2982,2984,2985,2986,2993,2996,2997,2998,2999,3001,3002,3003,3004,3005,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,
+3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3036,3037,3038,3039,3040,3041,3042,3043,3050,3052,3054,3055,3059,3060,3061,3062,3063,3064,3065,3066,3067,3069,3072,3073,3074,3075,
+3076,3077,3078,3079,3080,3081,3092,3093,3095,3233,3447,3500,3685,3688,3689,3690,3703,3704,3705,3883,3884,3978,4046,4451,4489,4722,4876,4877,4878,5054,5189,5390,5769,5888,5906,5938,
+5939,5940,5944,6028,6290,6387,6746,6775,6776,7089,7776,7793,7854,8142,8143,8144,8145,8146,8152,8153,8158,8159,8356,8357,8358,8359,8360,8362,8363,8364,8385,8398,8401,8664,8674,8722,
+8878,9548,9550,9551,9636,9983,10086,10278,10378,10379,10380,11047,11051,11071,11084,11098,11105,11106,11116,11117,11720,11833,11869,11944,12696,12723,13417,15477,15528,15532,15535,
+15702,15739,15767,16008,
+9079,
+737,773,908,1411,2482,2486,2487,2488,2490,2491,2493,2494,2495,2496,2498,2499,2500,2501,2502,2542,2594,2622,2625,2626,2627,2663,2664,2670,2685,2699,2832,2834,2836,2837,2838,
+2839,2840,2842,2843,2844,2845,2846,2847,2848,2849,3134,3945,4631,6807,7406,7794,7853,8123,8305,8417,9559,9858,10060,15677,15681,
+5637,5638,6166,8507,
+5393,5396,5752,10616,
+3585,3616,5642,7957,7999,8397,
+2771,2772,3389,4791,5395,5899,8021,8582,8587,9080,9081,10306,
+11702,15508,15704,15737,
+4921,4947,
+4456,
+6707,6768,6777,6779,7323,7324,7325,8309,
+4708,5411,5594,6568,7564,7583,7733,7799,7804,7881,8124,8125,8126,8128,8129,8131,8137,8139,8579,8661,8736,9985,10460,10583,11756,11757,14743,15165,
+7408,7724,7876,7882,
+13698,16091,
+4782,5635,5636,7744,7778,8160,8161,9660,11097,11810,11812,11813,
+1253,4787,16256,16284,
+4783,4784,4786,
+9857,10307,10978,11118,11182,11183,11184,11185,11186,11187,11188,11189,11191,11192,11193,11753,11754,13917,14742,
+374,460,944,1228,1268,1269,1454,1676,2682,3181,3290,5100,5114,5127,5132,5144,5145,5151,5152,5157,5158,5162,5163,5167,5169,5172,5175,5177,5178,5569,5612,
+6119,6120,6169,6328,6376,6382,6826,7312,7950,7954,7955,7978,8416,8681,9099,10455,10456,11028,11029,11037,13000,15434,15450,15455,15456,15707,15733,15763,
+2704,8659,
+4794,4885,4886,4888,4890,4891,4892,4893,4894,4896,4897,4898,4899,4900,4902,4964,5083,6272,6732,8140,8141,10047,11052,
+4184,7940,12019,12021,12022,12023,12024,12025,12026,12029,12042,15419,
+9620,
+3230,
+4895,4948,
+11401,
+4944,4965,4967,
+12425,12481,
+4968,
+14731,14736,14737,14738,14739,14740,14741,17598,
+14733
+);
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|65536 WHERE `entry` IN (
+269,1198,1373,1464,1480,1484,1700,1733,1740,1776,1777,2112,2150,2155,2309,2310,2402,2616,2787,2980,3024,3318,3371,3372,4924,4951,5090,5095,5096,5199,5200,5597,5603,5605,
+5606,5609,5610,5611,5614,5661,5679,5917,6251,6252,6253,6254,6266,6787,6887,7407,7763,7826,8178,8393,8396,8666,8673,8724,9047,9076,9087,9317,9856,10182,10204,10303,10305,
+10599,0600,10618,10619,10637,10877,11022,11023,11033,11034,11035,11036,11038,11039,11053,11055,11056,11057,11079,11119,11145,11146,11176,11177,11178,11198,11219,11276,11406,
+11536,11546,11548,11554,11615,11616,11703,11708,11715,11716,11717,11749,11755,11758,11811,11817,11819,11823,11829,11835,11863,11874,12757,12863,12877,12920,12939,12941,12942,
+12943,12944,13085,13217,13444,13699,13737,13817,13841,13842,13843,14182,14183,14355,14373,14374,14392,14394,14451,14480,14567,14622,14624,14625,14626,14627,14628,14634,
+14718,14720,14721,14723,14724,14725,14726,14728,14734,14842,14843,14875,14876,14902,14903,14904,14905,14910,14911,14912,14921,14990,14991,15011,15012,15070,15076,15080,
+15102,15103,15105,15106,15116,15119,15169,15174,15175,15176,15179,15180,15181,15183,15187,15191,15270,15282,15303,15306,15350,15351,15353,15354,15395,15458,15498,15499,
+15722,15797,15798,15799,16003,16009,16113,16114,16115,16116,16131,16132,16133,16134,16135,16283,16376,17079,1076,1077,1078,1960,2316,2683,2698,2805,2917,2943,3661,3698,
+3916,4305,5757,5758,5878,5900,6667,6731,7007,7024,7867,7951,8308,8320,10993,11696,11808,14481,16287,16288,17080,17092,17093,17094,17097,17098,17099,17100,17103,17104,
+17105,17106,17109,17127,17218,17223,17287,17291,17303,17355,17406,17409,17412,17531,17541,17613,18165,18221,18253,18255,19855,19861,19905,19906,19907,19908,19910,19912,
+19914,19918,19932,19933,19934,19935,19936,19950,19951,19959,20055,20069,20080,20081,20082,20130,20131,20142,20406,20407,21643,22013,22015,22834,22837,22936,22985,23050,
+23103,23127,23128,23131,23566,23568,23569,23570,23571,23572,23573,23635,23704,23713,23797,23835,23892,23896,23905,23949,23950,23951,23995,24005,24006,24007,24208,24729,
+24734,24735,24736,25109,27398,27399,27703,27704,27705,29093,29095,15278,15279,15280,15281,15283,15284,15285,15287,15289,15291,15292,15295,15296,15297,15301,15397,15398,
+15399,15400,15401,15402,15403,15404,15405,15416,15417,15418,15420,15433,15493,15494,15501,15513,15939,15940,15941,15942,15945,15946,15970,15971,15991,16160,16161,16185,
+16186,16187,16191,16213,16217,16219,16224,16237,16257,16258,16259,16260,16261,16262,16263,16264,16265,16266,16267,16268,16269,16270,16271,16272,16273,16274,16275,16276,
+16277,16278,16279,16280,16291,16362,16366,16367,16397,16442,16443,16444,16462,16463,16464,16475,16476,16477,16483,16499,16500,16501,16502,16503,16514,16535,16542,16546,
+16551,16553,16554,16568,16574,16575,16576,16577,16578,16579,16583,16584,16585,16586,16588,16589,16590,16591,16598,16601,16602,16603,16610,16611,16612,16613,16614,16615,
+16616,16617,16618,16619,16620,16621,16622,16623,16624,16625,16626,16627,16628,16629,16630,16631,16632,16633,16634,16635,16636,16637,16638,16639,16640,16641,16642,16643,
+16644,16645,16646,16647,16648,16649,16650,16651,16652,16653,16654,16655,16656,16657,16658,16659,16660,16661,16662,16663,16664,16665,16666,16667,16668,16669,16670,16671,
+16672,16673,16674,16675,16676,16677,16678,16679,16680,16681,16682,16683,16684,16685,16686,16687,16688,16689,16690,16691,16692,16693,16694,16695,16696,16702,16703,16705,
+16706,16707,16708,16709,16710,16711,16712,16713,16714,16715,16716,16718,16719,16720,16721,16722,16723,16724,16725,16726,16727,16728,16729,16731,16732,16735,16736,16737,
+16738,16739,16740,16741,16742,16743,16744,16745,16746,16747,16748,16749,16750,16751,16752,16753,16754,16755,16756,16757,16758,16759,16761,16762,16763,16764,16765,16766,
+16767,16768,16771,16773,16774,16780,16782,16789,16790,16791,16792,16793,16794,16796,16797,16798,16804,16819,16821,16823,16824,16825,16826,16827,16828,16829,16832,16834,
+16835,16839,16840,16841,19254,16849,16850,16851,16852,16853,16856,16858,16860,16862,16865,16866,16884,16885,16886,16887,16888,16889,16890,16892,16893,16894,16895,16897,
+16898,16899,16917,16918,16919,16920,16923,16924,16971,16976,16991,16994);
+UPDATE `creature_template` SET `NpcFlags` = `NpcFlags`&~8192 WHERE `entry` IN (353,1574,1575);
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|65536
+WHERE `SubName` LIKE '%Bat Handler%'
+OR `SubName` LIKE '%Dragonhawk Master%'
+OR `SubName` LIKE '%Emerald Circle Flight Master%'
+OR `SubName` LIKE '%Flight Master%'
+OR `SubName` LIKE '%Gryphon Master%'
+OR `SubName` LIKE '%Hippogryph Master%'
+OR `SubName` LIKE '%Wind Rider Master%';
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|64 WHERE `Entry` IN (20234,27046,28037,28574,17555);
