@@ -51012,7 +51012,7 @@ REPLACE INTO game_event_creature SELECT guid, 26 FROM creature WHERE Id IN(18927
 REPLACE INTO game_event_creature SELECT guid, 32 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
 # GOSSIP_EVENT_DARK_PORTAL
 REPLACE INTO game_event_creature SELECT guid, 100 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
-# GOSSIP_EVENT_SPIRIT_OF_COMPETITION
+# GOSSIP_EVENT_SPIRIT_OF_COMPETITION (not work, hardcoded id in core = 85)
 REPLACE INTO game_event_creature SELECT guid, 112 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
 # core not support (Noblegarden, Day of the Dead, Pilgrims Bounty)
 REPLACE INTO game_event_creature SELECT guid, 9 FROM creature WHERE Id IN(18927,19148,19171,19172,19173,19169,19175,19176,19177,19178,20102);
@@ -51163,3 +51163,71 @@ OR `SubName` LIKE '%Gryphon Master%'
 OR `SubName` LIKE '%Hippogryph Master%'
 OR `SubName` LIKE '%Wind Rider Master%';
 UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|64 WHERE `Entry` IN (20234,27046,28037,28574,17555);
+
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT guid from creature where id = 4506);
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 4506);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(6, 4506, 0, 1, 1, 0, 0, -14976.1, 273.198, 13.0175, 2.09121, 300, 300, 2, 0, 1902, 0, 0, 1),
+(13, 4506, 0, 1, 1, 0, 0, -14973, 342.602, 13.1349, 5.59355, 300, 300, 2, 0, 1902, 0, 0, 1),
+(14, 4506, 0, 1, 1, 0, 0, -14927.6, 89.3276, 12.7946, 4.05538, 300, 300, 2, 0, 1902, 0, 0, 1),
+(45, 4506, 0, 1, 1, 0, 0, -14926.8, 113.699, 12.5743, 5.01759, 300, 300, 0, 0, 1902, 0, 0, 0),
+(39, 4506, 0, 1, 1, 0, 0, -14916.5, 113.326, 12.5743, 1.51444, 300, 300, 0, 0, 1902, 0, 0, 0),
+(43, 4506, 0, 1, 1, 0, 0, -14924, 104.887, 0.16385, 4.94076, 300, 300, 0, 0, 1902, 0, 0, 0),
+(30, 4506, 0, 1, 1, 0, 0, -14917.3, 99.6151, 0.199658, 2.75565, 300, 300, 0, 0, 1902, 0, 0, 0);
+
+UPDATE `creature` SET `position_x` = -13184.48, `position_y` = 332.67175, `position_z` = 40.331055, `orientation` = 4.415682792663574218, `MovementType` = 0 WHERE `id` = 14508;
+DELETE FROM `creature_addon` WHERE `guid` = 334;
+UPDATE `game_event_time` SET `start_time` = '2007-08-04 14:58:23' WHERE `entry`= 16;
+UPDATE `game_event` SET `length` = 3 WHERE `entry`= 16;
+DELETE FROM `game_event_creature` WHERE `guid` = 334;
+UPDATE `gameobject` SET `position_x` = -13202.887, `position_y` = 276.757, `position_z` = 21.85707, `orientation` = 2.775068521499633789, `rotation2` = 0.98325443, `rotation3` = 0.18223801 WHERE `id` = 179697;
+UPDATE `gameobject_template` SET `Faction` = 94 WHERE `entry` = 179697;
+DELETE FROM `gameobject` WHERE `id` = 179697;
+DELETE FROM `game_event_gameobject` WHERE `guid` = 18970;
+DELETE FROM `dbscripts_on_creature_movement` WHERE `id` BETWEEN 1450801 AND 1450810;
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(1450801, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9730, 0, 0, 0, 0, 0, 0, 0, 0, 'Short John Mithril - "Arrr, Me Hearties!"'),
+(1450801, 0, 0, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Short John Mithril - Remove UNIT_NPC_FLAG_GOSSIP + UNIT_NPC_FLAG_QUESTGIVER'),
+(1450802, 0, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Short John Mithril - Run On'),
+(1450802, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 9731, 0, 0, 0, 0, 0, 0, 0, 0, 'Short John Mithril - "Let the Bloodletting Begin!"'),
+(1450802, 4000, 0, 15, 23176, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Short John Mithril - Cast Summon Pirate Booty (DND)'),
+(1450803, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Short John Mithril - Run Off'),
+(1450803, 0, 0, 29, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Short John Mithril - Add UNIT_NPC_FLAG_GOSSIP'),
+(1450803, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Short John Mithril - MovementType 0');
+DELETE FROM `creature_movement_template` WHERE `entry` = 14508;
+INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`, `comment`) VALUES
+(14508, 0, 1, -13184.48, 332.67175, 40.331055, 100, 0, 1450801, 'Short John Mithril - Remove UNIT_NPC_FLAG_GOSSIP + UNIT_NPC_FLAG_QUESTGIVER, Yell 1'),
+(14508, 0, 2, -13188.292, 320.0762, 33.23245, 100, 0, 0, NULL),
+(14508, 0, 3, -13215.96, 322.76013, 33.237198, 100, 0, 0, NULL),
+(14508, 0, 4, -13233.884, 314.27533, 33.222992, 100, 0, 0, NULL),
+(14508, 0, 5, -13248.911, 298.44604, 33.24138, 100, 0, 0, NULL),
+(14508, 0, 6, -13255.286, 282.62775, 33.242878, 100, 0, 0, NULL),
+(14508, 0, 7, -13255.246, 264.03906, 33.2372, 100, 0, 0, NULL),
+(14508, 0, 8, -13250.132, 249.0726, 33.232872, 100, 0, 0, NULL),
+(14508, 0, 9, -13241.162, 235.3221, 33.25688, 100, 0, 0, NULL),
+(14508, 0, 10, -13237.547, 232.77611, 33.24159, 100, 0, 0, NULL),
+(14508, 0, 11, -13233.844, 234.07092, 33.23136, 100, 0, 0, NULL),
+(14508, 0, 12, -13233.624, 238.16022, 33.324505, 100, 0, 0, NULL),
+(14508, 0, 13, -13239.028, 245.37144, 29.237274, 100, 0, 0, NULL),
+(14508, 0, 14, -13243.419, 254.91138, 23.886831, 100, 0, 0, NULL),
+(14508, 0, 15, -13241.24, 261.3496, 21.932966, 100, 0, 0, NULL),
+(14508, 0, 16, -13204.083, 277.1676, 21.98207, 100, 5000, 1450802, 'Short John Mithril - Run On, Spawn Arena Treasure Chest 179697 (guid 12029), Yell 2'),
+(14508, 0, 17, -13219.237, 275.45132, 21.98207, 100, 0, 0, NULL),
+(14508, 0, 18, -13240.614, 268.92096, 21.932976, 100, 0, 0, NULL),
+(14508, 0, 19, -13244.044, 261.8775, 21.932966, 100, 0, 0, NULL),
+(14508, 0, 20, -13243.419, 254.91138, 23.886831, 100, 0, 0, NULL),
+(14508, 0, 21, -13239.028, 245.37144, 29.237274, 100, 0, 0, NULL),
+(14508, 0, 22, -13233.624, 238.16022, 33.324505, 100, 0, 0, NULL),
+(14508, 0, 23, -13233.844, 234.07092, 33.23136, 100, 0, 0, NULL),
+(14508, 0, 24, -13237.547, 232.77611, 33.24159, 100, 0, 0, NULL),
+(14508, 0, 25, -13241.162, 235.3221, 33.25688, 100, 0, 0, NULL),
+(14508, 0, 26, -13250.132, 249.0726, 33.232872, 100, 0, 0, NULL),
+(14508, 0, 27, -13255.246, 264.03906, 33.2372, 100, 0, 0, NULL),
+(14508, 0, 28, -13255.286, 282.62775, 33.242878, 100, 0, 0, NULL),
+(14508, 0, 29, -13248.911, 298.44604, 33.24138, 100, 0, 0, NULL),
+(14508, 0, 30, -13233.884, 314.27533, 33.222992, 100, 0, 0, NULL),
+(14508, 0, 31, -13215.96, 322.76013, 33.237198, 100, 0, 0, NULL),
+(14508, 0, 32, -13199.613, 323.39047, 33.242554, 100, 0, 0, NULL),
+(14508, 0, 33, -13188.292, 320.0762, 33.23245, 100, 0, 0, NULL),
+(14508, 0, 34, -13184.816, 329.8859, 37.955925, 100, 0, 0, NULL),
+(14508, 0, 35, -13184.48, 332.67175, 40.331055, 4.415682792663574218, 1000, 1450803, 'Short John Mithril - Run Off, Add UNIT_NPC_FLAG_GOSSIP, MovementType 0');

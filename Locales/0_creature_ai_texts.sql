@@ -2158,7 +2158,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 3014
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 32624 WHERE `entry` = -20423;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 30223 WHERE `entry` = -20424;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 30242 WHERE `entry` = -20425;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Ты $gпришел:пришла; за чертежами доктора! Смерть – это все, что ты здесь получишь!', `broadcast_text_id` = 0 WHERE `entry` = -20426;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 31119 WHERE `entry` = -20426;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 31090 WHERE `entry` = -20427;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29932 WHERE `entry` = -20428;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 27893 WHERE `entry` = -20429;
@@ -2187,7 +2187,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 2925
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29256 WHERE `entry` = -20452;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29271 WHERE `entry` = -20453;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29273 WHERE `entry` = -20454;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'НЕТ! Вам меня не победить!', `broadcast_text_id` = 0 WHERE `entry` = -20455;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29275 WHERE `entry` = -20455;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29269 WHERE `entry` = -20456;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29272 WHERE `entry` = -20457;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29274 WHERE `entry` = -20458;
@@ -2244,7 +2244,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 2962
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 68681 WHERE `entry` = -20519;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29622 WHERE `entry` = -20520;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29623 WHERE `entry` = -20521;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Аааа...', `broadcast_text_id` = 0 WHERE `entry` = -20522;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29624 WHERE `entry` = -20522;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 31793 WHERE `entry` = -20523;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 31797 WHERE `entry` = -20524;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 31798 WHERE `entry` = -20525;
@@ -2284,7 +2284,7 @@ UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 3172
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 31727 WHERE `entry` = -20559;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 31728 WHERE `entry` = -20560;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29556 WHERE `entry` = -20561;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Сломать... всех...', `broadcast_text_id` = 0 WHERE `entry` = -20562;
+UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29558 WHERE `entry` = -20562;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 29560 WHERE `entry` = -20563;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 23530 WHERE `entry` = -20564;
 UPDATE `creature_ai_texts` SET `content_loc8` = NULL, `broadcast_text_id` = 34123 WHERE `entry` = -20565;
