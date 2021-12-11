@@ -105,6 +105,8 @@ UPDATE dbscript_random_templates JOIN dbscript_string ON target_id=entry JOIN br
 SET target_id=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`type`, broadcast_text.SoundEntriesID1=CASE WHEN broadcast_text.SoundEntriesID1 > 0 THEN broadcast_text.SoundEntriesID1 ELSE dbscript_string.sound END, broadcast_text.EmoteID1=CASE WHEN broadcast_text.EmoteID1 > 0 THEN broadcast_text.EmoteID1 ELSE dbscript_string.emote END;
 
 # Not found text id 2000003180, 2000003187 in script dbscripts_on_creature_movement id 2911205
+DELETE FROM `dbscripts_on_creature_movement` WHERE `id` = 2911205;
+UPDATE `creature_movement_template` SET `script_id` = '2911201' WHERE `entry` =29112 AND `pathId` =0 AND `point` =5;
 
 # Remove table dbscript_string
 # DROP TABLE dbscript_string;

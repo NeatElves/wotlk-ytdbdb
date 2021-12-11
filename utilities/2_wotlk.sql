@@ -96,3 +96,7 @@ UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,7207,2
 DELETE FROM creature_ai_scripts WHERE Id IN(58905);
 DELETE FROM creature_ai_scripts WHERE Id IN(59503);
 DELETE FROM creature_ai_scripts WHERE Id IN(59504);
+
+UPDATE `creature_ai_scripts` SET `action2_param1` = '1879401' WHERE `id` =1804607;
+UPDATE `creature_ai_scripts` SET `action2_param1` = '1879402' WHERE `id` =1804612;
+UPDATE `creature_ai_scripts` SET `action2_param1` = '1879403' WHERE `id` =1804616;
