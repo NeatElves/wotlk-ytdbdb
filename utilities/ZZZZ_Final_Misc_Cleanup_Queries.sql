@@ -300,6 +300,7 @@ UPDATE `creature_ai_scripts` SET `event_param6` =3448 WHERE `event_type` =10 AND
 UPDATE `creature_ai_scripts` SET `event_param6` =3517 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20264;
 UPDATE `creature_ai_scripts` SET `event_param6` =3539 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20287;
 UPDATE `creature_ai_scripts` SET `event_param2` =3555 WHERE `event_type` =22 AND `event_param2` =9011 AND `event_param3` =0;
+#UPDATE `creature_ai_scripts` SET `event_param6` =3695 WHERE `event_type` =10 AND `event_param5` =0 AND `event_param6` =772;
 
 
 # Finall_Spell_UP

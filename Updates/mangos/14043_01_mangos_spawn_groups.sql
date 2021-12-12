@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14042_01_mangos_spawn_data_template_relay required_14043_01_mangos_spawn_groups bit;
