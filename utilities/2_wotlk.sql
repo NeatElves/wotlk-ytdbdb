@@ -100,3 +100,4 @@ DELETE FROM creature_ai_scripts WHERE Id IN(59504);
 UPDATE `creature_ai_scripts` SET `action2_param1` = '1879401' WHERE `id` =1879407;
 UPDATE `creature_ai_scripts` SET `action2_param1` = '1879402' WHERE `id` =1879412;
 UPDATE `creature_ai_scripts` SET `action2_param1` = '1879403' WHERE `id` =1879416;
+UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2307802;
