@@ -352,8 +352,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+108, 17271, 543, 3, -1155.26, 1464.11, 68.407, 3.40466, 7200, 7200, 0, 0, 0, 0); -- Bonechewer Destroyer
 
 -- Worker Equipment
-UPDATE `creature` SET `equipment_id` = 2512 WHERE `guid` IN (@CGUID+16,@CGUID+17); -- Bonechewer Hungerer 17259
-UPDATE `creature` SET `equipment_id` = 4286 WHERE `guid` IN (@CGUID+24,@CGUID+25); -- Bonechewer Ravener 17264
+UPDATE `creature` SET `equipment_id` = 52512 WHERE `guid` IN (@CGUID+16,@CGUID+17); -- Bonechewer Hungerer 17259
+UPDATE `creature` SET `equipment_id` = 52513 WHERE `guid` IN (@CGUID+24,@CGUID+25); -- Bonechewer Ravener 17264
 
 -- ===========
 -- GAMEOBJECTS

@@ -101,6 +101,8 @@ UPDATE `creature_ai_scripts` SET `action2_param1` = '1879401' WHERE `id` =187940
 UPDATE `creature_ai_scripts` SET `action2_param1` = '1879402' WHERE `id` =1879412;
 UPDATE `creature_ai_scripts` SET `action2_param1` = '1879403' WHERE `id` =1879416;
 UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2307802;
+UPDATE `creature_ai_scripts` SET `action2_param1` = '-46' WHERE `id` =1468202;
+
 
 -- ==================================
 -- |   Special Game Event Scripts   |

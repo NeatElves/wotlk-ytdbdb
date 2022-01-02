@@ -1258,9 +1258,9 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+290, 21212, 548, 1, 29.99015, -922.4088, 42.98521, 1.396263, 604800, 604800, 0, 0, 0, 0); -- Lady Vashj
 
 -- Greyheart Skulker - 1 dagger and 1 hammer
-UPDATE creature SET equipment_id=4774 WHERE guid IN (@CGUID+138,@CGUID+135,@CGUID+134,@CGUID+131);
+UPDATE creature SET equipment_id=2123201 WHERE guid IN (@CGUID+138,@CGUID+135,@CGUID+134,@CGUID+131);
 -- Greyheart Nether-Mage/Tidecaller - 1 hammer
-UPDATE creature SET equipment_id=343 WHERE guid IN (@CGUID+119,@CGUID+95,@CGUID+93,@CGUID+110,@CGUID+108);
+UPDATE creature SET equipment_id=50130 WHERE guid IN (@CGUID+119,@CGUID+95,@CGUID+93,@CGUID+110,@CGUID+108);
 
 -- ===========
 -- GAMEOBJECTS

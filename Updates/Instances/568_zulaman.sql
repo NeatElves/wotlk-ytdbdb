@@ -542,7 +542,7 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (24858, 4, 39, 364.2945, 1429.232, 99.35547, 100, 0, 0),
 (24858, 4, 40, 385.5457, 1429.076, 97.52219, 100, 0, 0);
 
-UPDATE creature SET equipment_id=132 WHERE guid=@CGUID+104; -- Amanishi Guardian (starts holding a spear for gong event RP script)
+UPDATE creature SET equipment_id=5592 WHERE guid=@CGUID+104; -- Amanishi Guardian (starts holding a spear for gong event RP script)
 
 INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
 -- (@CGUID+23, 0, 0, 1, 0, 0, '46750'), -- World Trigger (Not Immune PC)
@@ -1522,37 +1522,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 -- ======
 
 -- INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
-INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipment_id`, `spell_start`, `spell_end`, `event`) VALUES
-(@CGUID+254, 0, 21934, 0, 0, 0, 2); -- Zul'jin (Feast of Winter Veil)
-
-INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
-(@OGUID+4, 12), -- Sitting Skeleton 01 (Hallow's End)
-(@OGUID+5, 12), -- Sitting Skeleton 01 (Hallow's End)
-(@OGUID+6, 12), -- Sitting Skeleton 01 (Hallow's End)
-(@OGUID+7, 12), -- Sitting Skeleton 01 (Hallow's End)
-(@OGUID+8, 12), -- Sitting Skeleton 01 (Hallow's End)
-(@OGUID+9, 12), -- Sitting Skeleton 01 (Hallow's End)
-(@OGUID+10, 12), -- Sitting Skeleton 01 (Hallow's End)
-(@OGUID+11, 12), -- Sitting Skeleton 04 (Hallow's End)
-(@OGUID+12, 12), -- Sitting Skeleton 04 (Hallow's End)
-(@OGUID+13, 12), -- Laying Skeleton 02 (Hallow's End)
-(@OGUID+14, 12), -- Laying Skeleton 02 (Hallow's End)
-(@OGUID+15, 12), -- Laying Skeleton 02 (Hallow's End)
-(@OGUID+16, 12), -- Laying Skeleton 02 (Hallow's End)
-(@OGUID+17, 12), -- Laying Skeleton 02 (Hallow's End)
-(@OGUID+18, 12), -- Laying Skeleton 02 (Hallow's End)
-(@OGUID+19, 12), -- Laying Skeleton 02 (Hallow's End)
-(@OGUID+20, 12), -- Laying Skeleton 02 (Hallow's End)
-(@OGUID+21, 12), -- Laying Skeleton 02 (Hallow's End)
-(@OGUID+22, 12), -- Laying Skeleton 02 (Hallow's End)
-(@OGUID+23, 12), -- Laying Skeleton 03 (Hallow's End)
-(@OGUID+24, 12), -- Laying Skeleton 03 (Hallow's End)
-(@OGUID+25, 12), -- Laying Skeleton 03 (Hallow's End)
-(@OGUID+26, 12), -- Laying Skeleton 03 (Hallow's End)
-(@OGUID+27, 12), -- Laying Skeleton 03 (Hallow's End)
-(@OGUID+28, 12), -- Laying Skeleton 03 (Hallow's End)
-(@OGUID+29, 12), -- Laying Skeleton 03 (Hallow's End)
-(@OGUID+30, 12); -- Laying Skeleton 03 (Hallow's End)
+-- INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipment_id`, `spell_start`, `spell_end`, `event`) VALUES
+-- INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 
 -- =======
 -- POOLING

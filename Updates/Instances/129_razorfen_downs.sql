@@ -1,7 +1,7 @@
 /* DBScriptData
 DBName: Razorfen Downs
 DBScriptName: instance_razorfen_downs
-DB%Complete: 80
+DB%Complete: 81
 DBComment:
 EndDBScriptData */
 
@@ -263,7 +263,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+87, 7329, 129, 2534.37, 750.769, 53.8997, 0.0245, 7200, 7200, 0, 0, 0, 0), -- Withered Quilguard
 (@CGUID+88, 7329, 129, 2467.68, 761.222, 46.0943, 5.77056, 7200, 7200, 0, 0, 0, 0), -- Withered Quilguard
 (@CGUID+89, 7332, 129, 2578.18, 1024.74, 50.9252, 3.6748, 7200, 7200, 0, 0, 0, 0), -- Withered Spearhide
-(@CGUID+90, 7332, 129, 2587.02, 1033.18, 50.4908, 3.7001, 7200, 7200, 0, 1, 0, 2), -- Withered Spearhide
+(@CGUID+90, 7332, 129, 2587.02, 1033.18, 50.4908, 3.7001, 7200, 7200, 0, 0, 0, 2), -- Withered Spearhide
 (@CGUID+91, 7332, 129, 2593.87, 1071.76, 54.9835, 1.50789, 7200, 7200, 2, 0, 0, 1), -- Withered Spearhide
 (@CGUID+92, 7332, 129, 2553.51, 1003.7, 52.2661, 3.24463, 7200, 7200, 5, 0, 0, 1), -- Withered Spearhide
 (@CGUID+93, 7332, 129, 2569.79, 971.022, 50.7828, 3.1765, 7200, 7200, 1, 0, 0, 1), -- Withered Spearhide
@@ -277,8 +277,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+101, 7333, 129, 2588.1, 952.199, 52.6562, 4.35363, 7200, 7200, 1, 0, 0, 1), -- Withered Battle Boar
 (@CGUID+102, 7333, 129, 2585.71, 958.797, 52.1868, 0.226893, 7200, 7200, 1, 0, 0, 1), -- Withered Battle Boar
 (@CGUID+103, 7333, 129, 2592.22, 960.386, 51.8804, 1.88311, 7200, 7200, 1, 0, 0, 1), -- Withered Battle Boar
-(@CGUID+104, 7334, 129, 2546.41, 885.836, 47.6967, 5.68062, 7200, 7200, 0, 1, 0, 2), -- Battle Boar Horror
-(@CGUID+105, 7334, 129, 2530.19, 803.431, 45.5162, 5.32644, 7200, 7200, 0, 1, 0, 2), -- Battle Boar Horror
+(@CGUID+104, 7334, 129, 2546.41, 885.836, 47.6967, 5.68062, 7200, 7200, 0, 0, 0, 2), -- Battle Boar Horror
+(@CGUID+105, 7334, 129, 2530.19, 803.431, 45.5162, 5.32644, 7200, 7200, 0, 0, 0, 2), -- Battle Boar Horror
 (@CGUID+106, 7335, 129, 2599.11, 1050.83, 53.7546, 0.693344, 7200, 7200, 1, 0, 0, 1), -- Death's Head Geomancer
 (@CGUID+107, 7335, 129, 2560.64, 1006.14, 52.2147, 3.93116, 7200, 7200, 0, 0, 0, 0), -- Death's Head Geomancer
 (@CGUID+108, 7335, 129, 2583.86, 994.162, 54.0854, 2.33696, 7200, 7200, 1, 0, 0, 1), -- Death's Head Geomancer
@@ -294,10 +294,10 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+118, 7337, 129, 2526.72, 786.105, 46.1426, 2.0424, 7200, 7200, 0, 0, 0, 0), -- Death's Head Necromancer
 (@CGUID+119, 7337, 129, 2474.61, 763.829, 46.1014, 4.97067, 7200, 7200, 1, 0, 0, 1), -- Death's Head Necromancer
 (@CGUID+120, 7337, 129, 2544.26, 746.635, 54.4936, 4.11696, 7200, 7200, 0, 0, 0, 0), -- Death's Head Necromancer
-(@CGUID+121, 7341, 129, 2480.11, 939.406, 23.4132, 4.81941, 7200, 7200, 0, 1, 0, 2), -- Skeletal Frostweaver
+(@CGUID+121, 7341, 129, 2480.11, 939.406, 23.4132, 4.81941, 7200, 7200, 0, 0, 0, 2), -- Skeletal Frostweaver
 (@CGUID+122, 7341, 129, 2465, 890.982, 28.7014, 1.41227, 7200, 7200, 0, 0, 0, 0), -- Skeletal Frostweaver
 (@CGUID+123, 7341, 129, 2446.91, 1026.77, 25.6188, 3.33788, 7200, 7200, 0, 0, 0, 0), -- Skeletal Frostweaver
-(@CGUID+124, 7341, 129, 2462.37, 1019.99, 24.4924, 2.46252, 7200, 7200, 0, 1, 0, 2), -- Skeletal Frostweaver
+(@CGUID+124, 7341, 129, 2462.37, 1019.99, 24.4924, 2.46252, 7200, 7200, 0, 0, 0, 2), -- Skeletal Frostweaver
 (@CGUID+125, 7341, 129, 2327.36, 962.132, 26.6932, 3.50811, 7200, 7200, 0, 0, 0, 0), -- Skeletal Frostweaver
 (@CGUID+126, 7341, 129, 2348.68, 934.699, 28.4524, 4.76254, 7200, 7200, 0, 0, 0, 0), -- Skeletal Frostweaver
 (@CGUID+127, 7342, 129, 2565.01, 1053.82, 52.6331, 3.80795, 7200, 7200, 0, 0, 0, 0), -- Skeletal Summoner
@@ -306,8 +306,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+130, 7342, 129, 2410.84, 1016.89, 37.1664, 4.52994, 7200, 7200, 0, 0, 0, 0), -- Skeletal Summoner
 (@CGUID+131, 7342, 129, 2377.71, 988.825, 54.5183, 0.833919, 7200, 7200, 0, 0, 0, 0), -- Skeletal Summoner
 (@CGUID+132, 7342, 129, 2361.95, 979.992, 38.9008, 5.19039, 7200, 7200, 0, 0, 0, 0), -- Skeletal Summoner
-(@CGUID+133, 7343, 129, 2463.37, 1015.05, 24.3318, 5.16063, 7200, 7200, 0, 1, 0, 2), -- Splinterbone Skeleton
-(@CGUID+134, 7343, 129, 2464.93, 1016.69, 24.3579, 5.19069, 7200, 7200, 0, 1, 0, 2), -- Splinterbone Skeleton
+(@CGUID+133, 7343, 129, 2463.37, 1015.05, 24.3318, 5.16063, 7200, 7200, 0, 0, 0, 2), -- Splinterbone Skeleton
+(@CGUID+134, 7343, 129, 2464.93, 1016.69, 24.3579, 5.19069, 7200, 7200, 0, 0, 0, 2), -- Splinterbone Skeleton
 (@CGUID+135, 7343, 129, 2485.14, 686.107, 53.9602, 3.83972, 7200, 7200, 0, 0, 0, 0), -- Splinterbone Skeleton
 (@CGUID+136, 7343, 129, 2492.55, 663.143, 53.8691, 2.84489, 7200, 7200, 0, 0, 0, 0), -- Splinterbone Skeleton
 (@CGUID+137, 7343, 129, 2488.2, 671.234, 54.487, 3.19395, 7200, 7200, 0, 0, 0, 0), -- Splinterbone Skeleton
@@ -332,8 +332,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+156, 7343, 129, 2469, 649.315, 54.6841, 1.5708, 7200, 7200, 0, 0, 0, 0), -- Splinterbone Skeleton
 (@CGUID+157, 7343, 129, 2378.48, 908.439, 28.8267, 5.67051, 7200, 7200, 0, 0, 0, 0), -- Splinterbone Skeleton
 (@CGUID+158, 7343, 129, 2378.29, 911.018, 29.2085, 5.81243, 7200, 7200, 0, 0, 0, 0), -- Splinterbone Skeleton
-(@CGUID+159, 7343, 129, 2450.35, 987.236, 36.5326, 1.28796, 7200, 7200, 0, 1, 0, 2), -- Splinterbone Skeleton
-(@CGUID+160, 7343, 129, 2443.19, 954.093, 35.91, 1.28839, 7200, 7200, 0, 1, 0, 2), -- Splinterbone Skeleton
+(@CGUID+159, 7343, 129, 2450.35, 987.236, 36.5326, 1.28796, 7200, 7200, 0, 0, 0, 2), -- Splinterbone Skeleton
+(@CGUID+160, 7343, 129, 2443.19, 954.093, 35.91, 1.28839, 7200, 7200, 0, 0, 0, 2), -- Splinterbone Skeleton
 (@CGUID+161, 7344, 129, 2481.96, 995.563, 23.798, 2.49086, 7200, 7200, 0, 0, 0, 0), -- Splinterbone Warrior
 (@CGUID+162, 7344, 129, 2472.65, 986.829, 23.6995, 5.35144, 7200, 7200, 0, 0, 0, 0), -- Splinterbone Warrior
 (@CGUID+163, 7344, 129, 2464.48, 920.529, 26.0583, 3.2304, 7200, 7200, 0, 0, 0, 0), -- Splinterbone Warrior
@@ -392,7 +392,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+216, 7347, 129, 2451.44, 967.506, 36.062, 4.30387, 7200, 7200, 0, 0, 0, 0), -- Boneflayer Ghoul
 (@CGUID+217, 7347, 129, 2454.7, 977.548, 35.7163, 4.43857, 7200, 7200, 0, 0, 0, 0), -- Boneflayer Ghoul
 (@CGUID+218, 7347, 129, 2429.22, 979.017, 48.1471, 5.62966, 7200, 7200, 0, 0, 0, 0), -- Boneflayer Ghoul
-(@CGUID+219, 7347, 129, 2392.3, 996.693, 53.4884, 4.48944, 7200, 7200, 0, 1, 0, 2), -- Boneflayer Ghoul
+(@CGUID+219, 7347, 129, 2392.3, 996.693, 53.4884, 4.48944, 7200, 7200, 0, 0, 0, 2), -- Boneflayer Ghoul
 (@CGUID+220, 7347, 129, 2438.43, 1011.83, 38.1357, 3.60922, 7200, 7200, 0, 0, 0, 0), -- Boneflayer Ghoul
 (@CGUID+221, 7347, 129, 2433.58, 1013.44, 37.3792, 3.92188, 7200, 7200, 0, 0, 0, 0), -- Boneflayer Ghoul
 (@CGUID+222, 7347, 129, 2398.27, 1017.29, 37.4545, 3.09463, 7200, 7200, 0, 0, 0, 0), -- Boneflayer Ghoul
@@ -409,12 +409,12 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+233, 7348, 129, 2379.5, 902.078, 29.1142, 6.26162, 7200, 7200, 0, 0, 0, 0), -- Thorn Eater Ghoul
 (@CGUID+234, 7348, 129, 2442.37, 1031.18, 25.3254, 0.052807, 7200, 7200, 0, 0, 0, 0), -- Thorn Eater Ghoul
 (@CGUID+235, 7348, 129, 2453.93, 1036.68, 24.7171, 5.48754, 7200, 7200, 0, 0, 0, 0), -- Thorn Eater Ghoul
-(@CGUID+236, 7348, 129, 2460.89, 1018.88, 24.5396, 2.44461, 7200, 7200, 0, 1, 0, 2), -- Thorn Eater Ghoul
+(@CGUID+236, 7348, 129, 2460.89, 1018.88, 24.5396, 2.44461, 7200, 7200, 0, 0, 0, 2), -- Thorn Eater Ghoul
 (@CGUID+237, 7348, 129, 2349.16, 1021.62, 25.3076, 3.54302, 7200, 7200, 0, 0, 0, 0), -- Thorn Eater Ghoul
 (@CGUID+238, 7348, 129, 2322.84, 968.958, 26.6545, 4.58991, 7200, 7200, 0, 0, 0, 0), -- Thorn Eater Ghoul
 (@CGUID+239, 7348, 129, 2342.49, 930.757, 27.9854, 2.31183, 7200, 7200, 0, 0, 0, 0), -- Thorn Eater Ghoul
 (@CGUID+240, 7352, 129, 2480.73, 989.421, 23.7133, 4.44082, 7200, 7200, 0, 0, 0, 0), -- Frozen Soul
-(@CGUID+241, 7352, 129, 2478.47, 940.218, 23.2707, 4.81938, 7200, 7200, 0, 1, 0, 2), -- Frozen Soul
+(@CGUID+241, 7352, 129, 2478.47, 940.218, 23.2707, 4.81938, 7200, 7200, 0, 0, 0, 2), -- Frozen Soul
 (@CGUID+242, 7352, 129, 2470.12, 913.654, 26.6391, 1.6057, 7200, 7200, 0, 0, 0, 0), -- Frozen Soul
 (@CGUID+243, 7352, 129, 2467.07, 891.052, 28.4543, 1.44223, 7200, 7200, 0, 0, 0, 0), -- Frozen Soul
 (@CGUID+244, 7352, 129, 2446.11, 938.189, 35.1279, 0.437342, 7200, 7200, 0, 0, 0, 0), -- Frozen Soul
@@ -424,7 +424,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+248, 7353, 129, 2559.09, 1052.18, 51.5293, 3.18938, 7200, 7200, 0, 0, 0, 0), -- Freezing Spirit
 (@CGUID+249, 7353, 129, 2561.93, 1058.15, 52.8307, 5.28222, 7200, 7200, 0, 0, 0, 0), -- Freezing Spirit
 (@CGUID+250, 7353, 129, 2495.63, 1062.68, 47.5377, 4.14281, 7200, 7200, 0, 0, 0, 0), -- Freezing Spirit
-(@CGUID+251, 7353, 129, 2392.46, 933.458, 42.46, 4.48956, 7200, 7200, 0, 1, 0, 2), -- Freezing Spirit
+(@CGUID+251, 7353, 129, 2392.46, 933.458, 42.46, 4.48956, 7200, 7200, 0, 0, 0, 2), -- Freezing Spirit
 (@CGUID+252, 7353, 129, 2473.98, 1058.94, 48.3419, 1.13317, 7200, 7200, 0, 0, 0, 0), -- Freezing Spirit
 (@CGUID+253, 7353, 129, 2475.05, 1073.15, 47.6738, 5.15106, 7200, 7200, 0, 0, 0, 0), -- Freezing Spirit
 (@CGUID+254, 7353, 129, 2397.34, 1102.37, 31.602, 6.2712, 7200, 7200, 0, 0, 0, 0), -- Freezing Spirit
@@ -432,7 +432,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+256, 7357, 129, 2466.62, 671.443, 63.4694, 5.55015, 36000, 36000, 0, 0, 0, 0), -- Mordresh Fire Eye
 (@CGUID+257, 7358, 129, 2403.37, 960.93, 55.1437, 2.33874, 36000, 36000, 0, 0, 0, 0), -- Amnennar the Coldbringer
 (@CGUID+258, 8516, 129, 2610.66, 730.583, 54.6521, 3.4383, 7200, 7200, 0, 0, 0, 0), -- Belnistrasz
-(@CGUID+259, 8567, 129, 2468.71, 1006.83, 23.7573, 6.11095, 36000, 36000, 0, 1, 0, 2), -- Glutton
+(@CGUID+259, 8567, 129, 2468.71, 1006.83, 23.7573, 6.11095, 36000, 36000, 0, 0, 0, 2), -- Glutton
 (@CGUID+260, 8662, 129, 2581.81, 942.588, 62.2902, 0.820305, 7200, 7200, 0, 0, 0, 0), -- Idol Oven Fire Target
 (@CGUID+261, 8696, 129, 2603.03, 705.568, 54.9087, 2.04204, 7200, 7200, 0, 0, 0, 0), -- Henry Stern
 (@CGUID+262, 8767, 129, 2567.37, 686.373, 55.2735, 2.23402, 7200, 7200, 0, 0, 0, 0), -- Sah'rhee
@@ -450,21 +450,33 @@ INSERT INTO gameobject_spawn_entry (guid, entry) VALUES
 (@OGUID+81, 75297), (@OGUID+81, 75300); -- Large Iron Bound Chest, Large Solid Chest
 
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
-(@OGUID+1, 1628, 129, 2422, 982.551, 48.5452, -0.20944, 0, 0, -0.104529, 0.994522, 7200, 7200, 100, 1), -- Grave Moss
-(@OGUID+2, 1628, 129, 2599.42, 701.18, 55.4969, 1.3439, 0, 0, 0.622513, 0.782609, 7200, 7200, 100, 1), -- Grave Moss
-(@OGUID+3, 1628, 129, 2501.06, 666.093, 53.2512, 0.314159, 0, 0, 0.156434, 0.987688, 7200, 7200, 100, 1), -- Grave Moss
-(@OGUID+4, 1628, 129, 2459.58, 673.032, 63.7238, 0.349066, 0, 0, 0.173648, 0.984808, 7200, 7200, 100, 1), -- Grave Moss
-(@OGUID+5, 2046, 129, 2413.38, 939.964, 45.2382, -0.663225, 0, 0, -0.325568, 0.945519, 7200, 7200, 100, 1), -- Goldthorn
-(@OGUID+6, 2046, 129, 2582.36, 693.47, 56.6378, -0.645772, 0, 0, -0.317305, 0.948324, 7200, 7200, 100, 1), -- Goldthorn
--- 7-32
-(@OGUID+33, 40198, 129, 2409.97, 954.724, 54.7089, 3.14159, 0, 0, 1, 0, 5400, 5400, 100, 1), -- Fire
-(@OGUID+34, 40199, 129, 2394.63, 886.028, 55.4499, 3.14159, 0, 0, 1, 0, 5400, 5400, 100, 1), -- Fire
-(@OGUID+35, 40200, 129, 2399.8, 893.103, 39.144, 3.14159, 0, 0, 1, 0, 5400, 5400, 100, 1), -- Fire
-(@OGUID+36, 40201, 129, 2361.76, 965.172, 39.826, 3.14159, 0, 0, 1, 0, 5400, 5400, 100, 1), -- Fire
--- 37 - 38
-(@OGUID+39, 142141, 129, 2479.97, 1006.34, 24.0507, -2.32129, 0, 0, -0.91706, 0.398748, 7200, 7200, 100, 1), -- Arthas' Tears
-(@OGUID+40, 142141, 129, 2536.55, 736.053, 53.7239, 3.05433, 0, 0, 0.999048, 0.0436174, 7200, 7200, 100, 1), -- Arthas' Tears
-(@OGUID+41, 142141, 129, 2423.88, 1027.32, 38.2242, -2.3911, 0, 0, -0.930417, 0.366502, 7200, 7200, 100, 1), -- Arthas' Tears
+(@OGUID+1, 1628, 129, 2422, 982.551, 48.5452, -0.20944, 0, 0, -0.104529, 0.994522, 86400, 86400, 100, 1), -- Grave Moss
+(@OGUID+2, 1628, 129, 2599.42, 701.18, 55.4969, 1.3439, 0, 0, 0.622513, 0.782609, 86400, 86400, 100, 1), -- Grave Moss
+(@OGUID+3, 1628, 129, 2501.06, 666.093, 53.2512, 0.314159, 0, 0, 0.156434, 0.987688, 86400, 86400, 100, 1), -- Grave Moss
+(@OGUID+4, 1628, 129, 2459.58, 673.032, 63.7238, 0.349066, 0, 0, 0.173648, 0.984808, 86400, 86400, 100, 1), -- Grave Moss
+(@OGUID+5, 1628, 129, 2565.25, 770.484, 55.8443, 1.91986, 0, 0, 0.819152, 0.573577, 86400, 86400, 100, 1), -- Grave Moss
+(@OGUID+6, 1628, 129, 2464.41, 674.253, 63.8792, 0.85521, 0, 0, 0.414693, 0.909962, 86400, 86400, 100, 1), -- Grave Moss
+(@OGUID+7, 1628, 129, 2613.1, 732.625, 54.4634, 1.41372, 0, 0, 0.649447, 0.760406, 86400, 86400, 100, 1), -- Grave Moss
+-- 1628
+(@OGUID+11, 2046, 129, 2413.38, 939.964, 45.2382, -0.663225, 0, 0, -0.325568, 0.945519, 86400, 86400, 100, 1), -- Goldthorn
+(@OGUID+12, 2046, 129, 2582.36, 693.47, 56.6378, -0.645772, 0, 0, -0.317305, 0.948324, 86400, 86400, 100, 1), -- Goldthorn
+(@OGUID+13, 2046, 129, 2515.09, 882.079, 46.5672, 4.34587, 0, 0, -0.824126, 0.566406, 86400, 86400, 100, 1), -- Goldthorn
+(@OGUID+14, 2046, 129, 2413.05, 978.766, 57.781, 3.99681, 0, 0, -0.909961, 0.414694, 86400, 86400, 100, 1), -- Goldthorn
+(@OGUID+15, 2046, 129, 2596.79, 764.006, 53.793, 0.994837, 0, 0, 0.477158, 0.878817, 86400, 86400, 100, 1), -- Goldthorn
+(@OGUID+16, 2046, 129, 2492.94, 854.192, 49.0885, 5.06146, 0, 0, -0.573576, 0.819152, 86400, 86400, 100, 1), -- Goldthorn
+-- 2046
+(@OGUID+21, 142141, 129, 2479.97, 1006.34, 24.0507, -2.32129, 0, 0, -0.91706, 0.398748, 86400, 86400, 100, 1), -- Arthas' Tears
+(@OGUID+22, 142141, 129, 2536.55, 736.053, 53.7239, 3.05433, 0, 0, 0.999048, 0.0436174, 86400, 86400, 100, 1), -- Arthas' Tears
+(@OGUID+23, 142141, 129, 2423.88, 1027.32, 38.2242, -2.3911, 0, 0, -0.930417, 0.366502, 86400, 86400, 100, 1), -- Arthas' Tears
+(@OGUID+24, 142141, 129, 2485.72, 782.397, 46.0727, 0.872664, 0, 0, 0.422618, 0.906308, 86400, 86400, 100, 1), -- Arthas' Tears
+(@OGUID+25, 142141, 129, 2459.53, 661.903, 56.6654, 2.35619, 0, 0, 0.92388, 0.382683, 86400, 86400, 100, 1), -- Arthas' Tears
+(@OGUID+26, 142141, 129, 2366.41, 968.678, 40.2011, 4.29351, 0, 0, -0.83867, 0.54464, 86400, 86400, 100, 1), -- Arthas' Tears
+(@OGUID+27, 142141, 129, 2532.19, 804.245, 46.0493, 1.95477, 0, 0, 0.829038, 0.559193, 86400, 86400, 100, 1), -- Arthas' Tears
+-- 142141
+(@OGUID+38, 40198, 129, 2409.97, 954.724, 54.7089, 3.14159, 0, 0, 1, 0, 5400, 5400, 100, 1), -- Fire
+(@OGUID+39, 40199, 129, 2394.63, 886.028, 55.4499, 3.14159, 0, 0, 1, 0, 5400, 5400, 100, 1), -- Fire
+(@OGUID+40, 40200, 129, 2399.8, 893.103, 39.144, 3.14159, 0, 0, 1, 0, 5400, 5400, 100, 1), -- Fire
+(@OGUID+41, 40201, 129, 2361.76, 965.172, 39.826, 3.14159, 0, 0, 1, 0, 5400, 5400, 100, 1), -- Fire
 (@OGUID+42, 148843, 129, 2436.99, 1058.62, 59.6726, 3.14159, 0, 0, 1, 0, 5400, 5400, 100, 1), -- Fire
 (@OGUID+43, 148844, 129, 2427.53, 1051.77, 40.9434, 3.14159, 0, 0, 1, 0, 5400, 5400, 100, 1), -- Fire
 (@OGUID+44, 148845, 129, 2416.99, 1032.8, 39.0779, 3.13659, -0.024268, -0.079424, 0.996545, 0.000572, 5400, 5400, 100, 1), -- Fire
@@ -527,6 +539,9 @@ INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALU
 
 INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@PGUID+1, 1, 'Razorfen Downs - Ragglesnout (7354)'),
+(@PGUID+51, 4, 'Razorfen Downs - Grave Moss (1628)'),
+(@PGUID+52, 2, 'Razorfen Downs - Goldthorn (2046)'),
+(@PGUID+53, 3, 'Razorfen Downs - Arthas'' Tears (142141)'),
 (@PGUID+90, 2, 'Razorfen Downs - Master Chest Pool'),
 (@PGUID+91, 1, 'Razorfen Downs (Spiral of Thorns) - Chest Pool'),
 (@PGUID+92, 1, 'Razorfen Downs (The Murder Pens) - Chest Pool');
@@ -538,6 +553,26 @@ INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALU
 -- INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
 
 INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
+(@OGUID+1, @PGUID+51, 0, 'Razorfen Downs - Grave Moss (1628)'),
+(@OGUID+2, @PGUID+51, 0, 'Razorfen Downs - Grave Moss (1628)'),
+(@OGUID+3, @PGUID+51, 0, 'Razorfen Downs - Grave Moss (1628)'),
+(@OGUID+4, @PGUID+51, 0, 'Razorfen Downs - Grave Moss (1628)'),
+(@OGUID+5, @PGUID+51, 0, 'Razorfen Downs - Grave Moss (1628)'),
+(@OGUID+6, @PGUID+51, 0, 'Razorfen Downs - Grave Moss (1628)'),
+(@OGUID+7, @PGUID+51, 0, 'Razorfen Downs - Grave Moss (1628)'),
+(@OGUID+11, @PGUID+52, 0, 'Razorfen Downs - Goldthorn (2046)'),
+(@OGUID+12, @PGUID+52, 0, 'Razorfen Downs - Goldthorn (2046)'),
+(@OGUID+13, @PGUID+52, 0, 'Razorfen Downs - Goldthorn (2046)'),
+(@OGUID+14, @PGUID+52, 0, 'Razorfen Downs - Goldthorn (2046)'),
+(@OGUID+15, @PGUID+52, 0, 'Razorfen Downs - Goldthorn (2046)'),
+(@OGUID+16, @PGUID+52, 0, 'Razorfen Downs - Goldthorn (2046)'),
+(@OGUID+21, @PGUID+53, 0, 'Razorfen Downs - Arthas'' Tears (142141)'),
+(@OGUID+22, @PGUID+53, 0, 'Razorfen Downs - Arthas'' Tears (142141)'),
+(@OGUID+23, @PGUID+53, 0, 'Razorfen Downs - Arthas'' Tears (142141)'),
+(@OGUID+24, @PGUID+53, 0, 'Razorfen Downs - Arthas'' Tears (142141)'),
+(@OGUID+25, @PGUID+53, 0, 'Razorfen Downs - Arthas'' Tears (142141)'),
+(@OGUID+26, @PGUID+53, 0, 'Razorfen Downs - Arthas'' Tears (142141)'),
+(@OGUID+27, @PGUID+53, 0, 'Razorfen Downs - Arthas'' Tears (142141)'),
 (@OGUID+75, @PGUID+91, 0, 'Razorfen Downs (Spiral of Thorns) - Large Iron Bound Chest, Large Solid Chest (75297,75300)'),
 (@OGUID+76, @PGUID+91, 0, 'Razorfen Downs (Spiral of Thorns) - Large Iron Bound Chest, Large Solid Chest (75297,75300)'),
 (@OGUID+77, @PGUID+91, 0, 'Razorfen Downs (Spiral of Thorns) - Large Iron Bound Chest, Large Solid Chest (75297,75300)'),
@@ -553,7 +588,13 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 -- INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
--- INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+
+DELETE FROM `dbscripts_on_go_template_use` WHERE `id` IN (157819);
+INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(157819, 0, 0, 14, 28533, 0, 0, 14686, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Holding Pen - Lady Falther''ess 14686 - Remove Transform 28533'),
+(157819, 0, 1, 22, 21, 0, 0, 14686, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Holding Pen - Lady Falther''ess 14686 - Set Faction 21'),
+(157819, 0, 2, 0, 0, 0, 0, 14686, 20, 0, 12429, 0, 0, 0, 0, 0, 0, 0, 0, 'Holding Pen - Lady Falther''ess 14686 - Yell');
+
 -- INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_spell` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES

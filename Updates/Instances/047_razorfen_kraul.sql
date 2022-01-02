@@ -1,9 +1,8 @@
 /* DBScriptData
 DBName: Razorfen Kraul
 DBScriptName: instance_razorfen_kraul
-DB%Complete: 75
+DB%Complete: 81
 DBComment:
-Add Pooling for ore/herbs when more spawn variations are known
 EndDBScriptData */
 
 SET @CGUID := 4700000; -- creatures
@@ -568,7 +567,7 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `DeathState`, `MovementType`) VALUES
 (@CGUID+1, 4420, 47, 2203.13, 1640.05, 85.9022, 4.7822, 36000, 36000, 0, 0, 0, 0), -- Overlord Ramtusk
 (@CGUID+2, 4421, 47, 2190.4, 1864.29, 79.1389, 1.37881, 36000, 36000, 0, 0, 0, 0), -- Charlga Razorflank
-(@CGUID+3, 4422, 47, 1994.4, 1976.44, 63.292, 0.750492, 36000, 36000, 0, 1, 0, 2), -- Agathelos the Raging
+(@CGUID+3, 4422, 47, 1994.4, 1976.44, 63.292, 0.750492, 36000, 36000, 0, 0, 0, 2), -- Agathelos the Raging
 (@CGUID+4, 4424, 47, 2082.31, 1463.54, 73.1789, 5.46288, 36000, 36000, 0, 0, 0, 0), -- Aggem Thorncurse
 (@CGUID+5, 4425, 47, 2200.76, 1978.19, 56.7228, 3.735, 3600, 86400, 0, 0, 0, 0), -- Blind Hunter
 (@CGUID+6, 4427, 47, 2067.27, 1999.35, 64.9261, 5.72468, 7200, 7200, 0, 0, 0, 0), -- Ward Guardian
@@ -587,7 +586,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+19, 4436, 47, 2044.06, 1648.99, 81.998, 2.6529, 7200, 7200, 0, 0, 0, 0), -- Razorfen Quilguard
 (@CGUID+20, 4436, 47, 2048.13, 1655.96, 81.6141, 2.96706, 7200, 7200, 0, 0, 0, 0), -- Razorfen Quilguard
 (@CGUID+21, 4437, 47, 2184.15, 1806.62, 64.4971, 1.43117, 7200, 7200, 0, 0, 0, 0), -- Razorfen Warden
-(@CGUID+22, 4437, 47, 2162.25, 1857.61, 56.9991, 2.76155, 7200, 7200, 0, 1, 0, 2), -- Razorfen Warden
+(@CGUID+22, 4437, 47, 2162.25, 1857.61, 56.9991, 2.76155, 7200, 7200, 0, 0, 0, 2), -- Razorfen Warden
 (@CGUID+23, 4437, 47, 2196.63, 1805.74, 64.9593, 2.14675, 7200, 7200, 0, 0, 0, 0), -- Razorfen Warden
 (@CGUID+24, 4437, 47, 2195.43, 1817.05, 62.2787, 3.32956, 7200, 7200, 2, 0, 0, 1), -- Razorfen Warden
 (@CGUID+25, 4437, 47, 2185.42, 1828.12, 60.8356, 4.73733, 7200, 7200, 2, 0, 0, 1), -- Razorfen Warden
@@ -605,7 +604,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+37, 4442, 47, 2132.31, 1584.01, 81.5, 0.791037, 7200, 7200, 0, 0, 0, 0), -- Razorfen Defender
 (@CGUID+38, 4442, 47, 2107.421, 1597.128, 81.6817, 4.40274, 7200, 7200, 0, 0, 0, 2), -- Razorfen Defender
 (@CGUID+39, 4442, 47, 2030.6, 1498.11, 72.9933, 2.33874, 7200, 7200, 6, 0, 0, 1), -- Razorfen Defender
-(@CGUID+40, 4442, 47, 2137.49, 1506.01, 72.6925, 4.3872, 7200, 7200, 0, 1, 0, 2), -- Razorfen Defender
+(@CGUID+40, 4442, 47, 2137.49, 1506.01, 72.6925, 4.3872, 7200, 7200, 0, 0, 0, 2), -- Razorfen Defender
 (@CGUID+41, 4442, 47, 2152.14, 1525.3, 72.9292, 4.19474, 7200, 7200, 2, 0, 0, 1), -- Razorfen Defender
 (@CGUID+42, 4442, 47, 2036.76, 1475.77, 67.6265, 2.25853, 7200, 7200, 0, 0, 0, 0), -- Razorfen Defender
 (@CGUID+43, 4442, 47, 2169.8, 1522.93, 71.2909, 0.226893, 7200, 7200, 0, 0, 0, 0), -- Razorfen Defender
@@ -613,9 +612,9 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+45, 4442, 47, 2157.61, 1508.76, 67.4724, 0.852833, 7200, 7200, 0, 0, 0, 0), -- Razorfen Defender
 (@CGUID+46, 4442, 47, 2182.08, 1526.04, 71.5105, 3.31613, 7200, 7200, 0, 0, 0, 0), -- Razorfen Defender
 (@CGUID+47, 4442, 47, 2152.56, 1474.26, 67.0982, 2.98618, 7200, 7200, 2, 0, 0, 1), -- Razorfen Defender
-(@CGUID+48, 4442, 47, 2178.74, 1496.08, 73.0912, 4.17241, 7200, 7200, 0, 1, 0, 2), -- Razorfen Defender
+(@CGUID+48, 4442, 47, 2178.74, 1496.08, 73.0912, 4.17241, 7200, 7200, 0, 0, 0, 2), -- Razorfen Defender
 (@CGUID+49, 4442, 47, 2194.78, 1501.7, 73.3301, 1.8675, 7200, 7200, 0, 0, 0, 0), -- Razorfen Defender
-(@CGUID+50, 4442, 47, 2116.94, 1439.54, 64.0232, 4.485, 7200, 7200, 0, 1, 0, 2), -- Razorfen Defender
+(@CGUID+50, 4442, 47, 2116.94, 1439.54, 64.0232, 4.485, 7200, 7200, 0, 0, 0, 2), -- Razorfen Defender
 (@CGUID+51, 4442, 47, 2124.19, 1434.84, 64.4478, 2.3911, 7200, 7200, 0, 0, 0, 0), -- Razorfen Defender
 (@CGUID+52, 4442, 47, 2119.56, 1430.03, 64.191, 2.51327, 7200, 7200, 0, 0, 0, 0), -- Razorfen Defender
 (@CGUID+53, 4508, 47, 2194.38, 1791.69, 65.5727, 2.11185, 7200, 7200, 0, 0, 0, 0), -- Willix the Importer
@@ -660,7 +659,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+92, 4516, 47, 2121.33, 1569.75, 80.5072, 1.95454, 7200, 7200, 5, 0, 0, 1), -- Death's Head Adept
 (@CGUID+93, 4516, 47, 2111.93, 1550.17, 81.6238, 0.545883, 7200, 7200, 1, 0, 0, 1), -- Death's Head Adept
 (@CGUID+94, 4516, 47, 2139.5, 1588.47, 80.7736, 3.82997, 7200, 7200, 1, 0, 0, 1), -- Death's Head Adept
-(@CGUID+95, 4516, 47, 2155.97, 1500.49, 67.5142, 3.82223, 7200, 7200, 0, 1, 0, 2), -- Death's Head Adept
+(@CGUID+95, 4516, 47, 2155.97, 1500.49, 67.5142, 3.82223, 7200, 7200, 0, 0, 0, 2), -- Death's Head Adept
 (@CGUID+96, 4516, 47, 2064.3, 1459.09, 67.4689, 0.511291, 7200, 7200, 2, 0, 0, 1), -- Death's Head Adept
 (@CGUID+97, 4516, 47, 2132.69, 1461.15, 66.3519, 5.21432, 7200, 7200, 2, 0, 0, 1), -- Death's Head Adept
 (@CGUID+98, 4516, 47, 2099.47, 1436.66, 63.6857, 2.69286, 7200, 7200, 2, 0, 0, 1), -- Death's Head Adept
@@ -680,8 +679,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+112, 4519, 47, 2106.03, 1551.15, 81.6238, 2.23835, 7200, 7200, 1, 0, 0, 1), -- Death's Head Seer
 (@CGUID+113, 4519, 47, 2098.684, 1540.76, 85.16721, 6.11408, 7200, 7200, 0, 0, 0, 2), -- Death's Head Seer
 (@CGUID+114, 4519, 47, 2071.89, 2004.52, 63.3572, 5.44543, 7200, 7200, 0, 0, 0, 0), -- Death's Head Seer
-(@CGUID+115, 4520, 47, 2019.37, 1510.51, 78.6182, 0.962607, 7200, 7200, 0, 1, 0, 2), -- Razorfen Geomancer
-(@CGUID+116, 4520, 47, 2007.13, 1643.03, 80.3822, 2.57618, 7200, 7200, 0, 1, 0, 2), -- Razorfen Geomancer
+(@CGUID+115, 4520, 47, 2019.37, 1510.51, 78.6182, 0.962607, 7200, 7200, 0, 0, 0, 2), -- Razorfen Geomancer
+(@CGUID+116, 4520, 47, 2007.13, 1643.03, 80.3822, 2.57618, 7200, 7200, 0, 0, 0, 2), -- Razorfen Geomancer
 (@CGUID+117, 4520, 47, 2019.32, 1660.39, 82.7042, 4.57276, 7200, 7200, 1, 0, 0, 1), -- Razorfen Geomancer
 (@CGUID+118, 4520, 47, 2183.96, 1480.54, 72.9076, 5.19729, 7200, 7200, 0, 0, 0, 0), -- Razorfen Geomancer
 (@CGUID+119, 4522, 47, 2122.21, 1485.49, 73.082, 4.21812, 7200, 7200, 0, 0, 0, 0), -- Razorfen Dustweaver
@@ -728,10 +727,10 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+160, 4539, 47, 2131.13, 2006.93, 64.8492, 4.33878, 7200, 7200, 3, 0, 0, 1), -- Greater Kraul Bat
 (@CGUID+161, 4539, 47, 2143.74, 2012.88, 65.5523, 2.77843, 7200, 7200, 5, 0, 0, 1), -- Greater Kraul Bat
 (@CGUID+162, 4539, 47, 2200.76, 1978.19, 56.7228, 2.77843, 7200, 7200, 3, 0, 0, 1), -- Greater Kraul Bat
-(@CGUID+163, 4541, 47, 2061.45, 1646.19, 61.9304, 0.259645, 7200, 7200, 0, 1, 0, 2), -- Blood of Agamaggan
+(@CGUID+163, 4541, 47, 2061.45, 1646.19, 61.9304, 0.259645, 7200, 7200, 0, 0, 0, 2), -- Blood of Agamaggan
 (@CGUID+164, 4541, 47, 2130.472, 1848.927, 49.23372, 6.1975, 7200, 7200, 0, 0, 0, 2), -- Blood of Agamaggan
 (@CGUID+165, 4541, 47, 2090.525, 1707.353, 56.40569, 4.32145, 7200, 7200, 0, 0, 0, 2), -- Blood of Agamaggan
-(@CGUID+166, 4541, 47, 2070.68, 1846.22, 55.0831, 0.164225, 7200, 7200, 0, 1, 0, 2), -- Blood of Agamaggan
+(@CGUID+166, 4541, 47, 2070.68, 1846.22, 55.0831, 0.164225, 7200, 7200, 0, 0, 0, 2), -- Blood of Agamaggan
 (@CGUID+167, 4623, 47, 2132.34, 1657.14, 82.0877, 4.72984, 7200, 7200, 0, 0, 0, 0), -- Quilguard Champion
 (@CGUID+168, 4623, 47, 2125.63, 1658.24, 82.385, 5.96903, 7200, 7200, 0, 0, 0, 0), -- Quilguard Champion
 (@CGUID+169, 4623, 47, 2161.15, 1628.09, 81.7039, 1.72788, 7200, 7200, 0, 0, 0, 0), -- Quilguard Champion
@@ -742,8 +741,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+174, 4623, 47, 2174.52, 1571.72, 75.023, 4.5204, 7200, 7200, 0, 0, 0, 0), -- Quilguard Champion
 (@CGUID+175, 4623, 47, 2091.51, 1747.41, 77.6711, 3.87463, 7200, 7200, 0, 0, 0, 0), -- Quilguard Champion
 (@CGUID+176, 4623, 47, 2088.14, 1753.08, 77.7836, 3.38594, 7200, 7200, 0, 0, 0, 0), -- Quilguard Champion
-(@CGUID+177, 4623, 47, 2094.39, 1773.56, 78.3322, 4.41863, 7200, 7200, 0, 1, 0, 2), -- Quilguard Champion
-(@CGUID+178, 4623, 47, 2090.83, 1774.64, 78.2311, 4.41864, 7200, 7200, 0, 1, 0, 2), -- Quilguard Champion
+(@CGUID+177, 4623, 47, 2094.39, 1773.56, 78.3322, 4.41863, 7200, 7200, 0, 0, 0, 2), -- Quilguard Champion
+(@CGUID+178, 4623, 47, 2090.83, 1774.64, 78.2311, 4.41864, 7200, 7200, 0, 0, 0, 2), -- Quilguard Champion
 (@CGUID+179, 4623, 47, 2112.36, 1822.53, 80.5358, 4.01426, 7200, 7200, 0, 0, 0, 0), -- Quilguard Champion
 (@CGUID+180, 4623, 47, 2105.5, 1822.47, 79.8917, 4.76475, 7200, 7200, 0, 0, 0, 0), -- Quilguard Champion
 (@CGUID+181, 4623, 47, 2110.01, 1886.77, 72.0235, 5.044, 7200, 7200, 0, 0, 0, 0), -- Quilguard Champion
@@ -759,9 +758,9 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+191, 6168, 47, 2142.99, 1581.57, 80.3842, 3.08923, 36000, 36000, 0, 0, 0, 0), -- Roogug
 (@CGUID+192, 4541, 47, 2164.323, 1691.301, 56.84164, 2.93215, 7200, 7200, 0, 0, 0, 2); -- Blood of Agamaggan
 
---
+-- ===========
 -- GAMEOBJECTS
---
+-- ===========
 
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
 (@OGUID+1, 1621, 47, 2073.56, 1600.3, 63.6955, -1.62316, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Briarthorn
@@ -770,16 +769,29 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 (@OGUID+4, 1621, 47, 2097.27, 1746.72, 78.7565, -1.93731, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Briarthorn
 (@OGUID+5, 1621, 47, 2026.93, 1858.32, 56.4944, 0.715585, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Briarthorn
 (@OGUID+6, 1621, 47, 2210.56, 1881.96, 71.2617, -2.37365, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Briarthorn
-(@OGUID+7, 1734, 47, 2175.92, 1714.05, 55.2663, -1.81514, 0, 0, 0, 0, 86400, 86400, 255, 1), -- Gold Vein
-(@OGUID+8, 1735, 47, 2097.83, 1864.54, 52.5586, 0.680678, 0, 0, 0, 0, 86400, 86400, 255, 1), -- Iron Deposit
-(@OGUID+9, 1735, 47, 2128.49, 1922.27, 68.3568, -2.72271, 0, 0, 0, 0, 86400, 86400, 255, 1), -- Iron Deposit
-(@OGUID+10, 1735, 47, 2166.68, 1998.86, 62.0029, -0.977384, 0, 0, 0, 0, 86400, 86400, 255, 1), -- Iron Deposit
-(@OGUID+11, 2042, 47, 2035.23, 1525.38, 80.6839, 1.16937, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Fadeleaf
-(@OGUID+12, 2042, 47, 2039.44, 1700.29, 61.0109, -2.49582, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Fadeleaf
-(@OGUID+13, 1734, 47, 2111.859, 1703.266, 81.62446, 4.468043, 0, 0, -0.7880106, 0.6156617, 86400, 86400, 255, 1), -- Gold Vein
-(@OGUID+14, 1735, 47, 2170.717, 1882.292, 73.03286, 0.2712798, 0, 0, 0.1352243, 0.990815, 86400, 86400, 255, 1), -- Iron Deposit
-(@OGUID+15, 1735, 47, 2128.257, 2016.687, 65.90177, 5.707228, 0, 0, -0.2840147, 0.9588199, 86400, 86400, 255, 1), -- Iron Deposit
--- 16-33
+(@OGUID+7, 1621, 47, 2030.7, 1554.6, 64.5662, 5.23599, 0, 0, -0.5, 0.866025, 86400, 86400, 100, 1), -- Briarthorn
+(@OGUID+8, 1621, 47, 2009.76, 1657.79, 80.9566, 6.0912, 0, 0, -0.0958452, 0.995396, 86400, 86400, 100, 1), -- Briarthorn
+(@OGUID+9, 1621, 47, 2055.53, 1735.47, 77.149, 3.94445, 0, 0, -0.920505, 0.390732, 86400, 86400, 100, 1), -- Briarthorn
+(@OGUID+10, 1621, 47, 2137.35, 1791.76, 48.6783, 5.98648, 0, 0, -0.147809, 0.989016, 86400, 86400, 100, 1), -- Briarthorn
+(@OGUID+11, 1621, 47, 2174.52, 1893.2, 71.3412, 6.26573, 0, 0, -0.00872612, 0.999962, 86400, 86400, 100, 1), -- Briarthorn
+-- 1621
+(@OGUID+15, 2042, 47, 2035.23, 1525.38, 80.6839, 1.16937, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Fadeleaf
+(@OGUID+16, 2042, 47, 2039.44, 1700.29, 61.0109, -2.49582, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Fadeleaf
+(@OGUID+17, 2042, 47, 2143.84, 1501.71, 72.8711, 3.10665, 0, 0, 0.999847, 0.0174693, 86400, 86400, 100, 1), -- Fadeleaf
+(@OGUID+18, 2042, 47, 2207.17, 1846.86, 60.9423, 2.33874, 0, 0, 0.920505, 0.390732, 86400, 86400, 100, 1), -- Fadeleaf
+-- 2042
+(@OGUID+21, 1734, 47, 2175.92, 1714.05, 55.2663, -1.81514, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Gold Vein
+(@OGUID+22, 1734, 47, 2111.859, 1703.266, 81.62446, 4.468043, 0, 0, -0.7880106, 0.6156617, 86400, 86400, 100, 1), -- Gold Vein
+-- 1734
+(@OGUID+25, 1735, 47, 2097.83, 1864.54, 52.5586, 0.680678, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Iron Deposit
+(@OGUID+26, 1735, 47, 2128.49, 1922.27, 68.3568, -2.72271, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Iron Deposit
+(@OGUID+27, 1735, 47, 2166.68, 1998.86, 62.0029, -0.977384, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Iron Deposit
+(@OGUID+28, 1735, 47, 2170.717, 1882.292, 73.03286, 0.2712798, 0, 0, 0.1352243, 0.990815, 86400, 86400, 100, 1), -- Iron Deposit
+(@OGUID+29, 1735, 47, 2128.257, 2016.687, 65.90177, 5.707228, 0, 0, -0.2840147, 0.9588199, 86400, 86400, 100, 1), -- Iron Deposit
+(@OGUID+30, 1735, 47, 2120.08, 1781.03, 49.4096, 1.29154, 0, 0, 0.601814, 0.798636, 86400, 86400, 100, 1), -- Iron Deposit
+(@OGUID+31, 1735, 47, 2036.34, 1845.86, 56.4932, 5.16618, 0, 0, -0.529919, 0.848048, 86400, 86400, 100, 1), -- Iron Deposit
+(@OGUID+32, 1735, 47, 2170.38, 1883.71, 73.6948, 5.32326, 0, 0, -0.461748, 0.887011, 86400, 86400, 100, 1), -- Iron Deposit
+-- 1735
 (@OGUID+34, 11898, 47, 1734.57, 1372.33, 85.4053, 0.061086, 0, 0, 0, 0, 3600, 3600, 100, 1), -- Mesa Elevator
 (@OGUID+35, 11899, 47, 1729.23, 1350.39, -44.1443, -0.18326, 0, 0, 0, 0, 3600, 3600, 100, 1), -- Mesa Elevator
 (@OGUID+36, 20920, 47, 2082.74, 1671.82, 61.2396, 3.66079, 0, 0, 0, 0, -43200, -43200, 100, 1), -- Blueleaf Tuber
@@ -841,14 +853,14 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 (@OGUID+95, 20919, 47, 2072.84, 1582.57, 82.14, 0, 0, 0, 0, 0, 180, 180, 0, 1), -- Tuber Node
 (@OGUID+96, 74447, 47, 2111.45, 1613.83, 81.1889, -1.98968, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Large Iron Bound Chest
 (@OGUID+97, 74448, 47, 2111.45, 1613.83, 81.1889, -1.98968, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Large Solid Chest
-(@OGUID+98, 74447, 47, 2090.24, 1465.26, 73.8674, -1.27409, 0, 0, -0.594823, 0.803857, 86400, 86400, 255, 1), -- Large Iron Bound Chest
-(@OGUID+99, 74448, 47, 2090.24, 1465.26, 73.8674, -1.27409, 0, 0, -0.594823, 0.803857, 86400, 86400, 255, 1), -- Large Solid Chest
+(@OGUID+98, 74447, 47, 2090.24, 1465.26, 73.8674, -1.27409, 0, 0, -0.594823, 0.803857, 86400, 86400, 100, 1), -- Large Iron Bound Chest
+(@OGUID+99, 74448, 47, 2090.24, 1465.26, 73.8674, -1.27409, 0, 0, -0.594823, 0.803857, 86400, 86400, 100, 1), -- Large Solid Chest
 (@OGUID+100, 74447, 47, 2199.22, 1654.65, 86.1542, -1.37881, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Large Iron Bound Chest
 (@OGUID+101, 74448, 47, 2199.22, 1654.65, 86.1542, -1.37881, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Large Solid Chest
 (@OGUID+102, 74447, 47, 2127.73, 1607.64, 81.4757, 1.309, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Large Iron Bound Chest
 (@OGUID+103, 74448, 47, 2127.73, 1607.64, 81.4757, 1.309, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Large Solid Chest
-(@OGUID+104, 74447, 47, 2133.86, 1709.01, 80.5036, 4.0, 0, 0, 0, 0, 86400, 86400, 255, 1), -- Large Iron Bound Chest		// xyz guessed
-(@OGUID+105, 74448, 47, 2133.86, 1709.01, 80.5036, 4.0, 0, 0, 0, 0, 86400, 86400, 255, 1), -- Large Solid Chest		// xyz guessed
+(@OGUID+104, 74447, 47, 2133.86, 1709.01, 80.5036, 4.0, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Large Iron Bound Chest		// xyz guessed
+(@OGUID+105, 74448, 47, 2133.86, 1709.01, 80.5036, 4.0, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Large Solid Chest		// xyz guessed
 (@OGUID+106, 74447, 47, 2193.35, 1985.04, 56.3458, -2.19912, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Large Iron Bound Chest
 (@OGUID+107, 74448, 47, 2193.35, 1985.04, 56.3458, -2.19912, 0, 0, 0, 0, 86400, 86400, 100, 1); -- Large Solid Chest
 
@@ -857,9 +869,7 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 -- ======
 
 -- INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
-
 -- INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipment_id`, `spell_start`, `spell_end`, `event`) VALUES
-
 -- INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 
 -- =======
@@ -877,6 +887,11 @@ INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALU
 INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@PGUID+1, 1, 'Razorfen Kraul - Earthcaller Halmgar (4842)'),
 (@PGUID+2, 1, 'Razorfen Kraul - Blind Hunter (4425)'),
+-- gameobjects
+(@PGUID+51, 6, 'Razorfen Kraul - Briarthorn (1621)'),
+(@PGUID+52, 2, 'Razorfen Kraul - Fadeleaf (2042)'),
+(@PGUID+61, 1, 'Razorfen Kraul - Gold Vein (1734)'),
+(@PGUID+62, 3, 'Razorfen Kraul - Iron Deposit (1735)'),
 (@PGUID+90, 2, 'Razorfen Kraul - Master Chest Pool'),
 (@PGUID+91, 1, 'Razorfen Kraul - Large Iron Bound/Solid Chest #1'),
 (@PGUID+92, 1, 'Razorfen Kraul - Large Iron Bound/Solid Chest #2'),
@@ -894,6 +909,31 @@ INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALU
 -- INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
 
 INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
+(@OGUID+1, @PGUID+51, 0, 'Razorfen Kraul - Briarthorn (1621)'),
+(@OGUID+2, @PGUID+51, 0, 'Razorfen Kraul - Briarthorn (1621)'),
+(@OGUID+3, @PGUID+51, 0, 'Razorfen Kraul - Briarthorn (1621)'),
+(@OGUID+4, @PGUID+51, 0, 'Razorfen Kraul - Briarthorn (1621)'),
+(@OGUID+5, @PGUID+51, 0, 'Razorfen Kraul - Briarthorn (1621)'),
+(@OGUID+6, @PGUID+51, 0, 'Razorfen Kraul - Briarthorn (1621)'),
+(@OGUID+7, @PGUID+51, 0, 'Razorfen Kraul - Briarthorn (1621)'),
+(@OGUID+8, @PGUID+51, 0, 'Razorfen Kraul - Briarthorn (1621)'),
+(@OGUID+9, @PGUID+51, 0, 'Razorfen Kraul - Briarthorn (1621)'),
+(@OGUID+10, @PGUID+51, 0, 'Razorfen Kraul - Briarthorn (1621)'),
+(@OGUID+11, @PGUID+51, 0, 'Razorfen Kraul - Briarthorn (1621)'),
+(@OGUID+15, @PGUID+52, 0, 'Razorfen Kraul - Fadeleaf (2042)'),
+(@OGUID+16, @PGUID+52, 0, 'Razorfen Kraul - Fadeleaf (2042)'),
+(@OGUID+17, @PGUID+52, 0, 'Razorfen Kraul - Fadeleaf (2042)'),
+(@OGUID+18, @PGUID+52, 0, 'Razorfen Kraul - Fadeleaf (2042)'),
+(@OGUID+21, @PGUID+61, 0, 'Razorfen Kraul - Gold Vein (1734)'),
+(@OGUID+22, @PGUID+61, 0, 'Razorfen Kraul - Gold Vein (1734)'),
+(@OGUID+25, @PGUID+62, 0, 'Razorfen Kraul - Iron Deposit (1735)'),
+(@OGUID+26, @PGUID+62, 0, 'Razorfen Kraul - Iron Deposit (1735)'),
+(@OGUID+27, @PGUID+62, 0, 'Razorfen Kraul - Iron Deposit (1735)'),
+(@OGUID+28, @PGUID+62, 0, 'Razorfen Kraul - Iron Deposit (1735)'),
+(@OGUID+29, @PGUID+62, 0, 'Razorfen Kraul - Iron Deposit (1735)'),
+(@OGUID+30, @PGUID+62, 0, 'Razorfen Kraul - Iron Deposit (1735)'),
+(@OGUID+31, @PGUID+62, 0, 'Razorfen Kraul - Iron Deposit (1735)'),
+(@OGUID+32, @PGUID+62, 0, 'Razorfen Kraul - Iron Deposit (1735)'),
 (@OGUID+96, @PGUID+91, 0, 'Razorfen Kraul - Large Iron Bound Chest (74447)'),
 (@OGUID+97, @PGUID+91, 0, 'Razorfen Kraul - Large Solid Chest (74448)'),
 (@OGUID+98, @PGUID+92, 0, 'Razorfen Kraul - Large Iron Bound Chest (74447)'),
