@@ -632,15 +632,15 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 
 -- Hex Lord Malacrass
 (@CGUID+368, @CGUID+369, 1167), -- Amani'shi Berserker -> Amani'shi Berserker
-(@CGUID+369, @CGUID+366, 1024), -- Amani'shi Berserker -> Hex Lord Malacrass (Speech Trigger)
+(@CGUID+369, @CGUID+333, 1024), -- Amani'shi Berserker -> Hex Lord Malacrass
 
 (@CGUID+54, @CGUID+406, 1167), -- Amani'shi Medicine Man -> Amani'shi Tempest
 (@CGUID+409, @CGUID+406, 1167), -- Amani'shi Flame Caster -> Amani'shi Tempest
 (@CGUID+437, @CGUID+406, 1167), -- creature_spawn_entry -> Amani'shi Tempest
-(@CGUID+406, @CGUID+366, 1024), -- Amani'shi Tempest -> Hex Lord Malacrass (Speech Trigger)
+(@CGUID+406, @CGUID+333, 1024), -- Amani'shi Tempest -> Hex Lord Malacrass
 
 (@CGUID+370, @CGUID+371, 1167), -- Amani'shi Berserker -> Amani'shi Berserker
-(@CGUID+371, @CGUID+366, 1024), -- Amani'shi Berserker -> Hex Lord Malacrass (Speech Trigger)
+(@CGUID+371, @CGUID+333, 1024), -- Amani'shi Berserker -> Hex Lord Malacrass
 
 -- Nalorakk
 (@CGUID+326, @CGUID+50, 1679), -- Amani'shi Wind Walker -> Amani'shi Medicine Man
@@ -1223,7 +1223,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+330, 23834, 568, 1, -194.592, 1151.05, 0.124147, 5.97311, 7200, 7200, 3, 0, 0, 1), -- Amani Dragonhawk
 (@CGUID+331, 23834, 568, 1, -201.899, 1110.36, 0.223543, 5.9804, 7200, 7200, 3, 0, 0, 1), -- Amani Dragonhawk
 (@CGUID+332, 23834, 568, 1, -219.674, 1112.36, -0.475973, 4.45835, 7200, 7200, 3, 0, 0, 1), -- Amani Dragonhawk
--- @CGUID+333
+(@CGUID+333, 24239, 568, 1, 117.3631, 923.5686, 33.97257, 1.58825, 259200, 259200, 0, 0, 0, 0), -- Malacrass
 (@CGUID+334, 24312, 568, 1, -204.928, 1136.49, 0.388893, 6.00393, 7200, 7200, 0, 0, 0, 0), -- Dragonhawk Egg
 (@CGUID+335, 24312, 568, 1, -222.574, 1124.88, -0.057337, 1.32645, 7200, 7200, 0, 0, 0, 0), -- Dragonhawk Egg
 (@CGUID+336, 24312, 568, 1, -208.865, 1116.26, 0.377559, 1.20428, 7200, 7200, 0, 0, 0, 0), -- Dragonhawk Egg
@@ -1535,6 +1535,18 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 -- INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
 -- INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
 -- INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
+
+-- ============
+-- SPAWN GROUPS
+-- ============
+
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES
+(56801, 'Malacrass', 0, 0, 10000, 0); -- spawns after custom worldstate after all 4 bosses are dead
+
+-- INSERT INTO `spawn_group_entry` (`Id`, `Entry`, `MinCount`, `MaxCount`, `Chance`) VALUES
+
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`) VALUES
+(56801, @CGUID+333);
 
 -- =========
 -- DBSCRIPTS
