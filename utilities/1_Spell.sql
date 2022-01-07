@@ -42,7 +42,3 @@ INSERT INTO `spell_template` (`Id`, `Dispel`, `Mechanic`, `Attributes`, `Attribu
 (25936, 0, 0, 256, 0, 0, 0, 0, 0, 0, 0, 0, 0, 256, 1, 0, 0, 101, 0, 0, 0, 0, 0, 6, 0, -1, 0, 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 'Signet Ring of the Bronze Dragonflight TANK R5 DND');
 
 UPDATE `spell_template` SET `EffectMiscValue1` = 15795 WHERE `id` =34849;
-
-# instances file clean
-UPDATE `creature` SET `equipment_id` = 0 WHERE `guid` IN (5330736,5330737,5330738,5330739,5330740,5330741,5330754,5330755,5330756,5330757,5330758,5330759,5330760,5330761,
-5330762,5330763,6030090,6030093,6031116,6031117,6031118,6031119);
