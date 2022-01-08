@@ -102,6 +102,12 @@ UPDATE `creature_ai_scripts` SET `action2_param1` = '1879402' WHERE `id` =187941
 UPDATE `creature_ai_scripts` SET `action2_param1` = '1879403' WHERE `id` =1879416;
 UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2307802;
 UPDATE `creature_ai_scripts` SET `action2_param1` = '-46' WHERE `id` =1468202;
+UPDATE `creature_ai_scripts` SET `action1_param1` = '-50000' WHERE `id` =1771601;
+INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
+('-50000', 'Defend yourself, youngling! We''ll see if there''s a Blood Knight in you, yet.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '0', '0', '14365', 'YTDB - fix error startup');
+UPDATE `creature_ai_scripts` SET `event_type` = '0' WHERE `id` =1504702;
+UPDATE `creature_ai_scripts` SET `event_type` = '0' WHERE `id` =1504703;
+UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2246102;
 
 
 -- ==================================
