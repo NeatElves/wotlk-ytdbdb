@@ -109,6 +109,12 @@ UPDATE `creature_ai_scripts` SET `event_type` = '0' WHERE `id` =1504702;
 UPDATE `creature_ai_scripts` SET `event_type` = '0' WHERE `id` =1504703;
 UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2246102;
 
+DELETE FROM `creature_ai_scripts` WHERE `id` = 292201;
+DELETE FROM `creature_ai_scripts` WHERE `id` = 292202;
+DELETE FROM `creature_ai_scripts` WHERE `id` = 292203;
+DELETE FROM `creature_ai_texts` WHERE `entry` IN (-192, -193, -194, -195, -196, -197);
+UPDATE `creature_template` SET `AIName` = '' WHERE `Entry` IN (2922);
+
 
 -- ==================================
 -- |   Special Game Event Scripts   |

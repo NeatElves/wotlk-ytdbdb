@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14046_01_mangos_groups_formation required_14047_01_mangos_artkits bit;

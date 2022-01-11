@@ -85,7 +85,7 @@ optimize table locales_creature;
 optimize table locales_gameobject;
 optimize table locales_gossip_menu_option;
 optimize table locales_item;
-optimize table locales_npc_text;
+# optimize table locales_npc_text;
 optimize table locales_page_text;
 optimize table locales_points_of_interest;
 optimize table locales_quest;

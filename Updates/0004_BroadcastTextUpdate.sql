@@ -854,3 +854,5 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 1, `SoundEntriesID1` = 9276 WHERE `Id
 UPDATE `broadcast_text` SET `ChatTypeID` = 1, `SoundEntriesID1` = 9277 WHERE `Id` = 15153;
 UPDATE `broadcast_text` SET `ChatTypeID` = 1, `SoundEntriesID1` = 9278 WHERE `Id` = 14213;
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `id` = 1296;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 4664;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2, `EmoteID1` = 11 WHERE `Id` = 4669;
