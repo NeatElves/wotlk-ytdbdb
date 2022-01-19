@@ -41,6 +41,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (16380,'spell_greater_invisibility_mob'),
 (17016,'spell_placing_beacon_torch'),
 (17244,'spell_anastari_possess'),
+(16739,'spell_orb_of_deception'),
 (19832,'spell_possess_razorgore'),
 (19872,'spell_calm_dragonkin'),
 (19873,'spell_destroy_egg'),
@@ -180,6 +181,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (30926,'spell_vazruden_liquid_fire_script'),
 (36921,'spell_vazruden_liquid_fire_script'),
 (30700,'spell_face_highest_threat'),
+(34877,'spell_prevent_spell_if_same_aura_on_caster'),
+(35679,'spell_prevent_spell_if_same_aura_on_caster'),
 (36153,'spell_soulbind'),
 (35181,'spell_dive_bomb'),
 (36460,'spell_ultra_deconsolodation_zapper'),
@@ -299,6 +302,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (43364,'spell_getting_sleepy_aura'),
 (37156,'spell_tk_dive'),
 (41951,'spell_supremus_random_target'),
+(41925,'spell_hateful_strike_primer'),
 (34438,'spell_unstable_affliction'),
 (34439,'spell_unstable_affliction'),
 (35183,'spell_unstable_affliction'),
@@ -786,11 +790,15 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (34902,'spell_hunter_pet_scaling_1'),
 (34903,'spell_hunter_pet_scaling_2'),
 (34904,'spell_hunter_pet_scaling_3'),
+(61017,'spell_hunter_pet_scaling_4'),
+
+(62915,'spell_hunter_snake_trap_scaling_1'),
 
 (34947,'spell_warlock_pet_scaling_1'),
 (34956,'spell_warlock_pet_scaling_2'),
 (34957,'spell_warlock_pet_scaling_3'),
 (34958,'spell_warlock_pet_scaling_4'),
+(61013,'spell_warlock_pet_scaling_5'),
 
 (35657,'spell_mage_pet_scaling_1'),
 (35658,'spell_mage_pet_scaling_2'),
@@ -812,14 +820,27 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (35671,'spell_druid_pet_scaling_3'),
 (35672,'spell_druid_pet_scaling_4'),
 
-(35674,'spell_enhancement_pet_scaling_1'),
-(35675,'spell_enhancement_pet_scaling_2'),
-(35676,'spell_enhancement_pet_scaling_3'),
+(35674,'spell_feral_spirit_pet_scaling_1'),
+(35675,'spell_feral_spirit_pet_scaling_2'),
+(35676,'spell_feral_spirit_pet_scaling_3'),
+(61783,'spell_feral_spirit_pet_scaling_4'),
+
+(65225,'spell_earth_elemental_pet_scaling_1'),
+(65226,'spell_earth_elemental_pet_scaling_2'),
+(65227,'spell_earth_elemental_pet_scaling_3'),
+(65228,'spell_earth_elemental_pet_scaling_4'),
 
 (36186,'spell_infernal_pet_scaling_1'),
 (36188,'spell_infernal_pet_scaling_2'),
 (36189,'spell_infernal_pet_scaling_3'),
-(36190,'spell_infernal_pet_scaling_4');
+(36190,'spell_infernal_pet_scaling_4'),
+
+(54566,'spell_death_knight_pet_scaling_1'),
+(51996,'spell_death_knight_pet_scaling_2'),
+(61697,'spell_death_knight_pet_scaling_3'),
+
+(51905,'spell_death_knight_rune_weapon_scaling_1'),
+(51906,'spell_death_knight_rune_weapon_scaling_2');
 
 -- Warrior
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
@@ -861,6 +882,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (26980,'spell_regrowth'),
 (48442,'spell_regrowth'),
 (48443,'spell_regrowth'),
+(33831,'spell_force_of_nature_summon'),
+(41929,'spell_guardian_aggro_spell'),
 (1178,'spell_druid_form_scaling_ap_auras'),
 (3025,'spell_druid_form_scaling_ap_auras'),
 (9635,'spell_druid_form_scaling_ap_auras'),
