@@ -106,7 +106,7 @@ SET target_id=broadcast_text_id, broadcast_text.`ChatTypeID`=dbscript_string.`ty
 
 # Not found text id 2000003180, 2000003187 in script dbscripts_on_creature_movement id 2911205
 DELETE FROM `dbscripts_on_creature_movement` WHERE `id` = 2911205;
-UPDATE `creature_movement_template` SET `script_id` = '2911201' WHERE `entry` =29112 AND `pathId` =0 AND `point` =5;
+UPDATE `creature_movement_template` SET `ScriptId` = '2911201' WHERE `Entry` =29112 AND `PathId` =0 AND `Point` =5;
 
 # Remove table dbscript_string
 # DROP TABLE dbscript_string;

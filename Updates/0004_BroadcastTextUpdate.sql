@@ -856,3 +856,6 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 1, `SoundEntriesID1` = 9278 WHERE `Id
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `id` = 1296;
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 4664;
 UPDATE `broadcast_text` SET `ChatTypeID` = 2, `EmoteID1` = 11 WHERE `Id` = 4669;
+UPDATE broadcast_text SET ChatTypeID=4 WHERE Id IN (14706,14712,14713,14714);
+UPDATE broadcast_text SET ChatTypeID=1 WHERE Id = 10449;
+UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN(10453);
