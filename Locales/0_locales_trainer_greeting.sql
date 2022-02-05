@@ -96,7 +96,7 @@ INSERT INTO `locales_trainer_greeting` (`Entry`, `Text_loc1`, `Text_loc2`, `Text
 (2492, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Добро пожаловать!'),
 (2627, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Привет! Я могу научить тебя превращать найденную ткань в тканевую броню.'),
 (2798, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Подойди, я покажу тебе, как перевязывать раны.'),
-(2818, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Хочешь, я научу тебя, как приготовить из пойманной дичи роскошное блюдо?'),
+#(2818, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Хочешь, я научу тебя, как приготовить из пойманной дичи роскошное блюдо?'),
 (2834, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я могу научить тебя ловить рыбу.'),
 (2836, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Здравствуй! Хочешь, я научу тебя, как из найденной руды делать оружие и доспехи?'),
 (2837, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'С помощью алхимии ты можешь превратить найденные травы в  зелья. '),

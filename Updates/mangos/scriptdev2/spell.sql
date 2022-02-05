@@ -27,6 +27,10 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (4132,'spell_banish_exile'),
 (6467,'spell_unarmed_woodcutter'),
 (7054,'spell_forsaken_skill'),
+(8603,'spell_tribal_death'),
+(8655,'spell_tribal_death'),
+(8894,'spell_tribal_death'),
+(9144,'spell_tribal_death'),
 (12639,'spell_summon_hakkar'),
 (12948,'spell_hakkar_summoned'),
 (13278,'spell_gdr_channel'),
@@ -613,6 +617,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (59858,'spell_summon_malformed_ooze_aura'),
 (59859,'spell_summon_iron_trogg_aura'),
 (59860,'spell_summon_iron_dwarf_aura'),
+(59906,'spell_swift_hand_of_justice'),
+(59915,'spell_discerning_eye_of_the_beast'),
 (60211,'spell_cauterize'),
 (61071,'spell_vortex_aura'),
 (61072,'spell_vortex_aura'),
@@ -712,6 +718,26 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 -- Death Knight
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (46584,'spell_dk_raise_dead'),
+(47541,'spell_dk_death_coil'),
+(49892,'spell_dk_death_coil'),
+(49893,'spell_dk_death_coil'),
+(49894,'spell_dk_death_coil'),
+(49895,'spell_dk_death_coil'),
+(49194,'spell_dk_unholy_blight'),
+(49018,'spell_sudden_doom'),
+(49529,'spell_sudden_doom'),
+(49530,'spell_sudden_doom'),
+(49208,'spell_death_rune_dk'),
+(49467,'spell_death_rune_dk'),
+(50033,'spell_death_rune_dk'),
+(50034,'spell_death_rune_dk'),
+(54637,'spell_death_rune_dk'),
+(54638,'spell_death_rune_dk'),
+(54639,'spell_death_rune_dk'),
+(56834,'spell_death_rune_dk'),
+(56835,'spell_death_rune_dk'),
+(50452,'spell_bloodworm'),
+(50453,'spell_health_leech_passive'),
 (55090,'spell_scourge_strike'),
 (55265,'spell_scourge_strike'),
 (55270,'spell_scourge_strike'),
@@ -722,6 +748,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (34026,'spell_kill_command'),
 (34477,'spell_misdirection'),
 (34501,'spell_expose_weakness'),
+(53480,'spell_roar_of_sacrifice'),
 (781,'Disengage');
 
 -- Priest
@@ -754,6 +781,9 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (20271,'spell_judgement'),
 (57774,'spell_judgement'),
 (53408,'spell_judgement'),
+(53385,'spell_divine_storm'),
+(54171,'spell_divine_storm_heal'),
+(70769,'spell_divine_storm_cooldown'),
 (31789,'spell_righteous_defense'),
 (40470,'spell_paladin_tier_6_trinket');
 
@@ -867,6 +897,11 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (25236,'spell_warrior_execute'),
 (47470,'spell_warrior_execute'),
 (47471,'spell_warrior_execute'),
+(20243,'spell_warrior_devastate'),
+(30016,'spell_warrior_devastate'),
+(30022,'spell_warrior_devastate'),
+(47497,'spell_warrior_devastate'),
+(47498,'spell_warrior_devastate'),
 (20647,'spell_warrior_execute_damage'),
 (34428,'spell_warrior_victory_rush'),
 (58567,'spell_sunder_armor');
@@ -878,6 +913,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (12575,'spell_arcane_concentration'),
 (12576,'spell_arcane_concentration'),
 (12577,'spell_arcane_concentration'),
+(12654,'spell_mage_ignite'),
 (59638,'spell_mirror_image_frostbolt');
 
 -- Druid
