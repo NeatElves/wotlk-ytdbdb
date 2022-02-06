@@ -1,6 +1,3 @@
-# 090_gnomeregan.sql
-# GUID NPC and GO not 9000000 -> 900000
-
 # 109_sunken_temple.sql
 SET @OGUID := 1090000; -- gameobjects
 DELETE FROM `dbscripts_on_gossip` WHERE `id` = 1288;
