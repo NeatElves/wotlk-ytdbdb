@@ -1,6 +1,6 @@
 REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 ('2315202','23152','2','2','100','0','2','0','0','0','0','0','53','10136','0','0','22','2','0','0','0','0','0','0','YTDB(TBCDB) - Vagath - Start Relay Script and Set Phase 2 at 1% HP (Phase 0)'),
-('2315204','23152','6','0','100','0','0','0','0','0','0','0','1','-10042','0','0','53','10134','0','0','0','0','0','0','YTDB(TBCDB) - Vagath - Yell and Start Relay Script on Death');
+('2315204','23152','6','0','100','0','0','0','0','0','0','0','1','20745','0','0','53','10134','0','0','0','0','0','0','YTDB(TBCDB) - Vagath - Yell and Start Relay Script on Death');
 
 REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (88801, 888, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 18, 512, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Watcher Dodds - Set UnitFlag IMMUNE_TO_NPC on Spawn'),
@@ -77,21 +77,18 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 ('1686704','16867','1','3','100','1','2000','2000','2000','2000','0','0','5','66','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - OneShotSalute OOC (Phase 2)'),
 ('1686705','16867','1','3','100','1','3500','3500','3500','3500','0','0','53','10182','0','0','22','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Set Waypoint Movement and Set Phase 0 OOC (Phase 2)'),
 ('1686706','16867','6','0','10','0','0','0','0','0','0','0','11','38879','1','7','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Cast Soul Burden on Death'),
-('1686707','16867','2','0','100','0','15','0','0','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Flee at 15% HP'),
+('1686707','16867','2','0','100','0','15','0','0','0','0','0','25','0','0','0','1','1150','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Flee at 15% HP'),
 ('1686708','16867','0','0','100','1025','4200','6700','15600','20700','0','0','11','11976','1','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Cast Strike'),
 ('1686709','16867','0','0','40','1025','8500','12500','10000','14000','0','0','11','11978','1','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Cast Kick');
 
 REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 ('720701','7207','22','0','100','1','61','9011','0','0','0','0','53','9003','0','0','15','2608','6','0','0','0','0','0','YTDB(TBCDB) - Doc Mixilpixil - Start Relay Script and Quest Complete (2608) on Receive Emote');
 
-INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`language`,`emote`,`broadcast_text_id`,`comment`) VALUES
-(-10042,'You''ve sealed your fate, Akama. The Master will learn of your betrayal!','0','1','0','0','20745','YTDB(TBCDB) - Vagath');
-
 REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (2286501, 22865, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 11, 39663, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Illidan''s Presence - Cast Summon Cosmetic Fel Fire on Spawn');
 
 REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
-('340101','3401','22','0','100','1','78','2460','0','0','0','0','53','3401','0','0','15','2460','6','0','0','0','0','0','Shenthul - OnReceive EMOTE_SALUTE - complete quest and start relay Script');
+('340101','3401','22','0','100','1','78','2460','0','0','0','0','53','3401','0','0','15','2460','6','0','0','0','0','0','YTDB(TBCDB) - Shenthul - OnReceive EMOTE_SALUTE - complete quest and start relay Script');
 INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
 (3401, 0, 0, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Quest - The Shattered Salute'),
 (3401, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 3287, 0, 0, 0, 0, 0, 0, 0, 0, 'Quest - The Shattered Salute');
@@ -107,10 +104,6 @@ UPDATE `creature_ai_scripts` SET `action2_param1` = '1879401' WHERE `id` =180460
 UPDATE `creature_ai_scripts` SET `action2_param1` = '1879402' WHERE `id` =1804612;
 UPDATE `creature_ai_scripts` SET `action2_param1` = '1879403' WHERE `id` =1804616;
 UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2307802;
-UPDATE `creature_ai_scripts` SET `action2_param1` = '-46' WHERE `id` =1468202;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '-50000' WHERE `id` =1771601;
-INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
-('-50000', 'Defend yourself, youngling! We''ll see if there''s a Blood Knight in you, yet.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '0', '0', '14365', 'YTDB - fix error startup');
 UPDATE `creature_ai_scripts` SET `event_type` = '0' WHERE `id` =1504702;
 UPDATE `creature_ai_scripts` SET `event_type` = '0' WHERE `id` =1504703;
 UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2246102;
@@ -118,7 +111,6 @@ UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2246102;
 DELETE FROM `creature_ai_scripts` WHERE `id` = 292201;
 DELETE FROM `creature_ai_scripts` WHERE `id` = 292202;
 DELETE FROM `creature_ai_scripts` WHERE `id` = 292203;
-DELETE FROM `creature_ai_texts` WHERE `entry` IN (-192, -193, -194, -195, -196, -197);
 UPDATE `creature_template` SET `AIName` = '' WHERE `Entry` IN (2922);
 
 
@@ -136,7 +128,7 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Argent Recruiter 16241
 -- Argent Scout 16255
 -- Argent Medic 16284
-#('1628401','16284','2','0','100','0','15','0','0','0','0','0','25','0','0','0','1','1150','0','0','0','0','0','0','Argent Medic - Flee at 15% HP'),
+('1628401','16284','2','0','100','0','15','0','0','0','0','0','25','0','0','0','1','1150','0','0','0','0','0','0','Argent Medic - Flee at 15% HP'),
 -- Argent Emissary 16285
 -- Argent Messenger 16359
 -- Argent Sentry 16378
@@ -222,23 +214,7 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Skeletal Trooper 16438 - Recheck Timers
 ('1643801','16438','0','0','100','1025','0','0','5000','10000','0','0','11','28265','1','0','0','0','0','0','0','0','0','0','Skeletal Trooper - Cast Scourge Strike'),
 ('1643802','16438','0','0','100','1025','1000','9000','9000','18000','0','0','11','589','1','32','0','0','0','0','0','0','0','0','Skeletal Trooper - Cast Shadow Word: Pain (Rank 1)');
-INSERT INTO dbscript_random_templates (id, `type`, target_id, chance, comments) VALUES
-(17, 0, 12355, 0, 'Horde Scourge Invasion Random OOC LOS Texts'),
-(17, 0, 12356, 0, 'Horde Scourge Invasion Random OOC LOS Texts'),
-(17, 0, 12357, 0, 'Horde Scourge Invasion Random OOC LOS Texts'),
-(17, 0, 12358, 0, 'Horde Scourge Invasion Random OOC LOS Texts'),
-(17, 0, 12359, 0, 'Horde Scourge Invasion Random OOC LOS Texts'),
-(17, 0, 12360, 0, 'Horde Scourge Invasion Random OOC LOS Texts'),
-(17, 0, 12361, 0, 'Horde Scourge Invasion Random OOC LOS Texts'),
-(17, 0, 12362, 0, 'Horde Scourge Invasion Random OOC LOS Texts'),
-(18, 0, 12366, 0, 'Alliance Scourge Invasion Random OOC LOS Texts'),
-(18, 0, 12367, 0, 'Alliance Scourge Invasion Random OOC LOS Texts'),
-(18, 0, 12368, 0, 'Alliance Scourge Invasion Random OOC LOS Texts'),
-(18, 0, 12369, 0, 'Alliance Scourge Invasion Random OOC LOS Texts'),
-(18, 0, 12370, 0, 'Alliance Scourge Invasion Random OOC LOS Texts'),
-(18, 0, 12371, 0, 'Alliance Scourge Invasion Random OOC LOS Texts'),
-(18, 0, 12372, 0, 'Alliance Scourge Invasion Random OOC LOS Texts'),
-(18, 0, 12373, 0, 'Alliance Scourge Invasion Random OOC LOS Texts');
+
 UPDATE creature_template SET SpellList = 4543 WHERE entry = 4543;
 UPDATE creature_template SET SpellList = 14682 WHERE entry = 14682;
 UPDATE creature_template SET SpellList = 14686 WHERE entry = 14686;

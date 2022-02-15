@@ -31,6 +31,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (8655,'spell_tribal_death'),
 (8894,'spell_tribal_death'),
 (9144,'spell_tribal_death'),
+(10255,'spell_stoned'),
 (12639,'spell_summon_hakkar'),
 (12948,'spell_hakkar_summoned'),
 (13278,'spell_gdr_channel'),
@@ -51,6 +52,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (19873,'spell_destroy_egg'),
 (20038,'spell_explosion_razorgore'),
 (21651,'spell_opening_capping'),
+(22858,'spell_retaliation_creature'),
 (23226,'spell_ritual_candle_aura'),
 (24228,'spell_arlokk_vanish'),
 (24314,'spell_threatening_gaze'),
@@ -613,6 +615,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (57669,'spell_replenishment'),
 (58418,'spell_portal_to_capital_city'),
 (58420,'spell_portal_to_capital_city'),
+(58984,'spell_shadowmeld'),
 (59275,'spell_summon_gauntlet_mobs_periodic_aura'),
 (59317,'spell_teleporting_dalaran'),
 (59331,'spell_poisoned_spear'),
@@ -638,6 +641,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (62138,'spell_teleport_inside_violet_hold'),
 (63482,'spell_lightning_whirl_heroic'),
 (65869,'spell_disengage'),
+(65932,'spell_retaliation_dummy_creature'),
 (66118,'spell_leeching_swarm_aura'),
 (66312,'spell_light_ball_passive'),
 (66314,'spell_dark_ball_passive'),
@@ -722,7 +726,12 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 
 -- Death Knight
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(42650,'spell_army_of_the_dead'),
+(42651,'spell_army_of_the_dead_ghoul'),
 (46584,'spell_dk_raise_dead'),
+(49028,'spell_dancing_rune_weapon'),
+(49812,'spell_fake_aggro_radius_8yd'),
+(49813,'spell_aggro_radius_8yd'),
 (47541,'spell_dk_death_coil'),
 (49892,'spell_dk_death_coil'),
 (49893,'spell_dk_death_coil'),
@@ -747,8 +756,20 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (54639,'spell_death_rune_dk'),
 (56834,'spell_death_rune_dk'),
 (56835,'spell_death_rune_dk'),
+(49206,'spell_summon_gargoyle'),
+(44543,'spell_fingers_of_frost_proc'),
+(44545,'spell_fingers_of_frost_proc'),
+(44544,'spell_fingers_of_frost_ignore'),
+(74396,'spell_fingers_of_frost_dummy'),
+(44572,'spell_deep_freeze_immunity_state'),
+(52284,'spell_will_of_the_necropolis'),
+(52285,'spell_will_of_the_necropolis'),
+(52286,'spell_will_of_the_necropolis'),
 (50452,'spell_bloodworm'),
 (50453,'spell_health_leech_passive'),
+(55078,'spell_death_knight_disease'),
+(55095,'spell_death_knight_disease'),
+(65142,'spell_crypt_fever_serverside'),
 (51052,'spell_anti_magic_zone'),
 (55090,'spell_scourge_strike'),
 (55265,'spell_scourge_strike'),
@@ -761,6 +782,10 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (34477,'spell_misdirection'),
 (34501,'spell_expose_weakness'),
 (53480,'spell_roar_of_sacrifice'),
+(56654,'spell_rapid_recuperation_periodic'),
+(58882,'spell_rapid_recuperation_periodic'),
+(35098,'spell_rapid_killing'),
+(35099,'spell_rapid_killing'),
 (781,'Disengage');
 
 -- Priest
@@ -793,6 +818,10 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (20271,'spell_judgement'),
 (57774,'spell_judgement'),
 (53408,'spell_judgement'),
+(31876,'spell_judgements_of_the_wise'),
+(31877,'spell_judgements_of_the_wise'),
+(31878,'spell_judgements_of_the_wise'),
+(31930,'spell_judgements_of_the_wise_energize'),
 (53385,'spell_divine_storm'),
 (54171,'spell_divine_storm_heal'),
 (70769,'spell_divine_storm_cooldown'),
@@ -896,7 +925,11 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (61697,'spell_death_knight_pet_scaling_3'),
 
 (51905,'spell_death_knight_rune_weapon_scaling_1'),
-(51906,'spell_death_knight_rune_weapon_scaling_2');
+(51906,'spell_death_knight_rune_weapon_scaling_2'),
+
+(67561,'spell_death_knight_army_of_the_dead_1'),
+
+(52001,'spell_death_knight_blood_parasite_pet_scaling');
 
 -- Warrior
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
@@ -914,6 +947,11 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (30022,'spell_warrior_devastate'),
 (47497,'spell_warrior_devastate'),
 (47498,'spell_warrior_devastate'),
+(29707,'spell_heroic_strike'),
+(30324,'spell_heroic_strike'),
+(47449,'spell_heroic_strike'),
+(47450,'spell_heroic_strike'),
+(20230,'spell_retaliation_warrior'),
 (20647,'spell_warrior_execute_damage'),
 (34428,'spell_warrior_victory_rush'),
 (58567,'spell_sunder_armor');
@@ -974,6 +1012,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (32594,'spell_earth_shield'),
 (49283,'spell_earth_shield'),
 (49284,'spell_earth_shield'),
+(2484,'spell_earthbind_totem'),
 (70811,'spell_item_shaman_t10_elemental_2p_bonus'),
 (52759,'spell_ancestral_awakening');
 

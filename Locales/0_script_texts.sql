@@ -12,14 +12,14 @@ UPDATE `script_texts` SET `content_loc8` = NULL,`broadcast_text_id` = 38630 WHER
 UPDATE `script_texts` SET `content_loc8` = NULL,`broadcast_text_id` = 2384 WHERE `entry` = -1000006;
 #UPDATE `script_texts` SET `content_loc8` = NULL,`broadcast_text_id` = 1150 WHERE `entry` = -1000007;
 UPDATE `script_texts` SET `content_loc8` = NULL,`broadcast_text_id` = 9071 WHERE `entry` = -1000100;
-UPDATE `script_texts` SET `content_loc8` = 'Иди за мной, $n. Я отведу тебя в Убежище Братства Справедливости. Только ты меня защищай, а то я долго не протяну.' WHERE `entry` = -1000101;
-UPDATE `script_texts` SET `content_loc8` = 'Проход спрятан в Луноречье. Не спускайте своих глаз с воров. Они хотят моей смерти.' WHERE `entry` = -1000102;
+UPDATE `script_texts` SET `content_loc8` = NULL,`broadcast_text_id` = 9 WHERE `entry` = -1000101;
+UPDATE `script_texts` SET `content_loc8` = NULL,`broadcast_text_id` = 10 WHERE `entry` = -1000102;
 UPDATE `script_texts` SET `content_loc8` = NULL,`broadcast_text_id` = 11 WHERE `entry` = -1000103;
 UPDATE `script_texts` SET `content_loc8` = '$N, быстрее, ко мне! Сражайся!' WHERE `entry` = -1000104;
 UPDATE `script_texts` SET `content_loc8` = NULL,`broadcast_text_id` = 63668 WHERE `entry` = -1000105;
 UPDATE `script_texts` SET `content_loc8` = NULL,`broadcast_text_id` = 8284 WHERE `entry` = -1000106;
 UPDATE `script_texts` SET `content_loc8` = 'Хорошо, выдвигаемся!' WHERE `entry` = -1000107;
-UPDATE `script_texts` SET `content_loc8` = 'Готовьтесь. Среброкрылые будут в бешенстве.' WHERE `entry` = -1000108;
+UPDATE `script_texts` SET `content_loc8` = NULL,`broadcast_text_id` = 8282 WHERE `entry` = -1000108;
 UPDATE `script_texts` SET `content_loc8` = NULL,`broadcast_text_id` = 8280 WHERE `entry` = -1000109;
 UPDATE `script_texts` SET `content_loc8` = 'Отправляйся с докладом в захвате заставы. Мы останемся здесь.' WHERE `entry` = -1000110;
 UPDATE `script_texts` SET `content_loc8` = NULL,`broadcast_text_id` = 13744 WHERE `entry` = -1000111;
