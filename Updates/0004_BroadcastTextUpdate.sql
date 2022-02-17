@@ -1380,3 +1380,4 @@ UPDATE broadcast_text SET ChatTypeID=4 WHERE Id IN (14706,14712,14713,14714);
 UPDATE broadcast_text SET ChatTypeID=1 WHERE Id = 10449;
 UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN(10453);
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` = 3081;
+UPDATE broadcast_text SET EmoteID1=5 WHERE Id IN (19743,19698);

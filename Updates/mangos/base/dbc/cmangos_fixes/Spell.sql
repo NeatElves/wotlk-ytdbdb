@@ -1694,9 +1694,6 @@ UPDATE `spell_template` SET `InterruptFlags` = `InterruptFlags`&~0x00000010 WHER
 35394 -- Spore Cloud
 );
 
-UPDATE spell_template SET Attributes=320 WHERE id=28282; -- This makes Ashbringer passive aura icon invisible
-UPDATE spell_template SET AttributesEx=32, AttributesEx3=131072 WHERE id=28441; -- AB Effect 000, critters/neutral no longer attack
-
 -- Osmosis - child spell should not be categorized as channel
 UPDATE `spell_template` SET `AttributesEx`=AttributesEx&~0x00004004 WHERE `Id` IN(35342);
 
@@ -2893,6 +2890,12 @@ INSERT INTO spell_template(Id, Category, Dispel, Mechanic, Attributes, Attribute
 
 -- Rapid Recuperation - Hunter talent
 UPDATE spell_template SET EffectSpellClassMask1_1=0x00000020 WHERE Id IN(53228,53232);
+
+-- Lock and Load - Hunter talent
+UPDATE spell_template SET EffectSpellClassMask1_1=0x00000018,EffectSpellClassMask1_2=0x08000000,EffectSpellClassMask1_3=0x00024000 WHERE Id IN(56342,56343,56344);
+
+-- Freezing Trap and Freezing Arrow - should be able to proc - same way the others do
+UPDATE spell_template SET AttributesEx3=AttributesEx3|0x00000200 WHERE Id IN(3355,14308,14309,60210);
 
 -- ============================================================
 -- Missing WotLK Achievement Spells

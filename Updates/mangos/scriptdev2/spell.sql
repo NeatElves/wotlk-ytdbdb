@@ -692,6 +692,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (70636,'spell_call_of_sylvanas'),
 (70826,'spell_bone_spike_graveyard'),
 (70842,'spell_mana_barrier_aura'),
+(70845,'spell_stoicism'),
 (70895,'spell_dark_transformation'),
 (70896,'spell_dark_empowerment'),
 (70897,'spell_dark_martyrdom'),
@@ -778,6 +779,9 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 
 -- Hunter
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(19185,'spell_entrapment'),
+(19387,'spell_entrapment'),
+(19388,'spell_entrapment'),
 (34026,'spell_kill_command'),
 (34477,'spell_misdirection'),
 (34501,'spell_expose_weakness'),
@@ -786,6 +790,14 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (58882,'spell_rapid_recuperation_periodic'),
 (35098,'spell_rapid_killing'),
 (35099,'spell_rapid_killing'),
+(56342,'spell_lock_and_load'),
+(56343,'spell_lock_and_load'),
+(56344,'spell_lock_and_load'),
+(56453,'spell_lock_and_load_trigger'),
+(53301,'spell_explosive_shot'),
+(60051,'spell_explosive_shot'),
+(60052,'spell_explosive_shot'),
+(60053,'spell_explosive_shot'),
 (781,'Disengage');
 
 -- Priest
@@ -797,6 +809,20 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (34433,'spell_shadowfiend'),
 (64844,'spell_divine_hymn'),
 (64904,'spell_hymn_of_hope'),
+(17,'spell_power_word_shield'),
+(592,'spell_power_word_shield'),
+(600,'spell_power_word_shield'),
+(3747,'spell_power_word_shield'),
+(6065,'spell_power_word_shield'),
+(6066,'spell_power_word_shield'),
+(10898,'spell_power_word_shield'),
+(10899,'spell_power_word_shield'),
+(10900,'spell_power_word_shield'),
+(10901,'spell_power_word_shield'),
+(25217,'spell_power_word_shield'),
+(25218,'spell_power_word_shield'),
+(48065,'spell_power_word_shield'),
+(48066,'spell_power_word_shield'),
 (34861,'spell_circle_of_healing'),
 (34863,'spell_circle_of_healing'),
 (34864,'spell_circle_of_healing'),
@@ -964,6 +990,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (12576,'spell_arcane_concentration'),
 (12577,'spell_arcane_concentration'),
 (12654,'spell_mage_ignite'),
+(58838,'spell_inherit_masters_threat_list'),
 (59638,'spell_mirror_image_frostbolt');
 
 -- Druid
@@ -1007,14 +1034,19 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 
 -- Shaman
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(6495,'spell_sentry_totem'),
 (974,'spell_earth_shield'),
 (32593,'spell_earth_shield'),
 (32594,'spell_earth_shield'),
 (49283,'spell_earth_shield'),
 (49284,'spell_earth_shield'),
 (2484,'spell_earthbind_totem'),
-(70811,'spell_item_shaman_t10_elemental_2p_bonus'),
-(52759,'spell_ancestral_awakening');
+(60103,'spell_lava_lash'),
+(51556,'spell_ancestral_awakening'),
+(51557,'spell_ancestral_awakening'),
+(51558,'spell_ancestral_awakening'),
+(52759,'spell_ancestral_awakening_search'),
+(70811,'spell_item_shaman_t10_elemental_2p_bonus');
 
 -- Food and Drink
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
