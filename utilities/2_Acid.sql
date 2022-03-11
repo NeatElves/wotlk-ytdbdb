@@ -155,6 +155,8 @@ INSERT INTO dbscript_random_templates (id, `type`, target_id, chance, comments) 
 DELETE FROM `creature_ai_scripts` WHERE `id` = 327203;
 DELETE FROM `creature_ai_scripts` WHERE `id` = 327204;
 
+UPDATE `creature_ai_scripts` SET `event_param1` = '0', `event_param2` = '0' WHERE `id` =1146001;
+
 DELETE FROM `creature_ai_scripts` WHERE `id` = 292201;
 DELETE FROM `creature_ai_scripts` WHERE `id` = 292202;
 DELETE FROM `creature_ai_scripts` WHERE `id` = 292203;
