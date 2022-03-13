@@ -504,6 +504,7 @@ WHERE
 # UPDATE creature_template_addon SET moveflags=moveflags &~ 0x00200000;
 # UPDATE creature_template_addon SET moveflags=moveflags &~ 0x08000000;
 # UPDATE `creature_template` SET `ScriptName` = '' WHERE `AIName` = 'EventAI' AND `ScriptName` = 'generic_creature';
+UPDATE `creature` SET `spawndist` = 0 WHERE `MovementType` = 2;
 UPDATE `creature_template` SET NpcFlags = NpcFlags|1 WHERE `GossipMenuId` > 0 AND `Entry` NOT IN (22423);
 UPDATE `gossip_menu_option` SET `action_menu_id` = '-1' WHERE `action_menu_id` =0 AND `action_script_id` >0;
 # UPDATE quest_template SET SpecialFlags=SpecialFlags|1 WHERE SpecialFlags=4;
