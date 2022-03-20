@@ -1,8 +1,8 @@
 -- ==============================
 -- Creature Health and Mana Fixes
 -- ==============================
-#UPDATE creature SET curhealth=0;
-#UPDATE creature SET curmana=0;
+UPDATE creature SET curhealth=0;
+UPDATE creature SET curmana=0;
 
 -- =========================================================================================================================================================
 -- =================                    APPLY LATEST ITEM NAMES AND REFERENCE NAMES TO LOOT / REFERENCE / VENDOR TABLES                    ================= 
