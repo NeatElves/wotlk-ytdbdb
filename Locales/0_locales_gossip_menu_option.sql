@@ -17,7 +17,6 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 (7210, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'У меня еще один вопрос.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (7212, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'У меня еще один вопрос.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (7213, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'У меня еще один вопрос.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(7422, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Хорошо, тогда я попробую.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (7571, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Пожалуйста, научи меня, как получить навык мастера зелий, Лауранна.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (7571, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу отказаться от знания навыка мастера зелий.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Вы действительно хотите, забыть вашу алхимическую специальность и потерять все связанные с ней рецепты?'),
 (8530, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Позволь мне забыть все, что я знаю о шитье из луноткани.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Вы действительно хотите, забыть вашу портняжную специальность и потерять все связанные с ней рецепты?'),

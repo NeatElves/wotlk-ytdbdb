@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14051_01_mangos_creature_addon required_14052_01_mangos_creature_spawn_data_template bit;
