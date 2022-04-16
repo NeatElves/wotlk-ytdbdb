@@ -46,8 +46,8 @@ UPDATE gameobject_template SET data8=1 WHERE entry=179324; -- Frostwolf Landmine
 UPDATE gameobject_template SET data8=1 WHERE entry=179325; -- Stormpike Landmine
 UPDATE gameobject_template SET data8=1 WHERE entry=160842; -- Gor'tesh's Lopped Off Head
 
--- Set radius of Supply Crate trap to zero to prevent trap from being triggered by nearby players (it should trigger on player usage of original GO)
-UPDATE gameobject_template SET data2=0 WHERE entry IN (175534, 175535, 175536, 175537);
+-- Make Supply Crate trap GO only visible by GM
+ UPDATE gameobject_template SET data8=1 WHERE entry IN (175534, 175535, 175536, 175537);
 
 -- Make Dawn's Gambit Trap only visible by GM
 UPDATE gameobject_template SET data2=5, data3=0, data8=0 WHERE entry=176110;
@@ -116,6 +116,9 @@ UPDATE `gameobject_template` SET `data5` = 1 WHERE `entry` = 142189; -- 19660800
 -- Musty Tome 176150/176151
 -- must despawn after used (has that flag set up.. but with restock timer it will never happen)
 UPDATE gameobject_template SET data2=0 WHERE entry IN (176150,176151);
+
+-- Cannonball: set radius to zero so it is only triggered through spell
+UPDATE gameobject_template SET data2=0 WHERE entry=176211;
 
 -- Verigan's Fist: must despawn during scripted quest
 UPDATE gameobject_template SET `data3`=0, `data5`=1 WHERE entry=102413;

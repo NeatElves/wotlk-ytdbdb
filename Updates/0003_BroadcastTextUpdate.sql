@@ -1394,3 +1394,4 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 4 WHERE `Id` = 6274;
 UPDATE `broadcast_text` SET `ChatTypeID` = 0 WHERE `Id` = 2231;
 UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id` IN (5522, 5523);
 UPDATE `broadcast_text` SET `ChatTypeID`=2 WHERE `Id`=979;
+UPDATE `broadcast_text` SET `ChatTypeId` = 0 WHERE `Id` = 1017;

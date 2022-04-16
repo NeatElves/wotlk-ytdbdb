@@ -27,25 +27,6 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `priority`, `command`
 (180327, 5000, 0, 10, 15084, 259200, 0, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, 3693, 'Zul''Gurub - Brazier of Madness - Edge of Madness (Renataki)'),
 (180327, 5000, 0, 10, 15085, 259200, 0, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, 3694, 'Zul''Gurub - Brazier of Madness - Edge of Madness (Wushoolay)');
 
-# 534_hyjal_summit.sql
-SET @CEGUID := 5340000; -- creatures Entrance Room
-SET @CSGUID := 5341000; -- creatures Scourge Base
-SET @CAGUID := 5342000; -- creatures Alliance Base
-SET @CHGUID := 5343000; -- creatures Horde Base
-SET @CNGUID := 5344000; -- creatures Nightelf Base
-UPDATE `creature` SET `curhealth` = 5715 WHERE `guid` IN (@CEGUID+1);
-UPDATE `creature` SET `curhealth` = 6986 WHERE `guid` IN (@CEGUID+2);
-UPDATE `creature` SET `curhealth` = 86071 WHERE `guid` IN (@CSGUID+1,@CSGUID+2,@CSGUID+3,@CSGUID+4,@CSGUID+5,@CSGUID+6);
-UPDATE `creature` SET `curhealth` = 125668 WHERE `guid` IN (@CSGUID+7,@CSGUID+8,@CSGUID+9,@CSGUID+10,@CSGUID+11,@CSGUID+12,@CSGUID+13,@CSGUID+14);
-UPDATE `creature` SET `curhealth` = 97804 WHERE `guid` IN (@CSGUID+15,@CSGUID+16,@CSGUID+17,@CSGUID+18,@CSGUID+19);
-UPDATE `creature` SET `curhealth` = 97804 WHERE `guid` IN (@CSGUID+20,@CSGUID+21,@CSGUID+22,@CSGUID+23,@CSGUID+24);
-UPDATE `creature` SET `curhealth` = 97804 WHERE `guid` IN (@CSGUID+25,@CSGUID+26,@CSGUID+27);
-UPDATE `creature` SET `curhealth` = 97804 WHERE `guid` IN (@CSGUID+28,@CSGUID+29,@CSGUID+30);
-UPDATE `creature` SET `curhealth` = 6986 WHERE `guid` IN (@CAGUID+35,@CAGUID+36,@CAGUID+37,@CAGUID+38,@CAGUID+39,@CAGUID+40);
-UPDATE `creature` SET `curhealth` = 455250 WHERE `guid` IN (@CHGUID+1);
-UPDATE `creature` SET `curhealth` = 50805 WHERE `guid` IN (@CNGUID+38);
-UPDATE `creature` SET `curhealth` = 7588 WHERE `guid` IN (@CNGUID+57);
-
 # 543_hellfire_ramparts.sql
 SET @CGUID := 5430000; -- creatures
 -- Worker Equipment
@@ -136,26 +117,3 @@ INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 # 580_sunwell_plateau.sql
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
 (72796, 201794, 580, 1, 1, 1694.95, 604.023, 28.1494, 5.95759, 0, 0, 0.162079, -0.986778, -30, -30, 100, 1);
-
-# 600_draktharon_keep.sql
-SET @CGUID := 6000000; -- creatures
-UPDATE `creature` SET `curhealth` = 0 WHERE `guid` IN (@CGUID+107,@CGUID+108,@CGUID+116,@CGUID+117);
-
-# 619_ahn_kahet.sql
-SET @CGUID := 6190000; -- creatures
-UPDATE `creature` SET `curhealth` = 63000 WHERE `guid` IN (@CGUID+259,@CGUID+260);
-
-# 631_icecrown_citadel.sql
-SET @CGUID := 6310000; -- creatures
-SET @CAGUID := 6720000; -- creatures
-SET @CHGUID := 6730000; -- creatures
-UPDATE `creature` SET `curmana` = 425800 WHERE `guid` IN (@CGUID+352);
-UPDATE `creature` SET `curmana` = 4258000 WHERE `guid` IN (@CGUID+412);
-UPDATE `creature` SET `curhealth` = 13033 WHERE `guid` IN (@CAGUID+16,@CAGUID+17,@CAGUID+18,@CAGUID+19,@CAGUID+20,@CAGUID+21,@CAGUID+22,@CAGUID+23,@CAGUID+24,@CAGUID+25);
-UPDATE `creature` SET `curhealth` = 690000 WHERE `guid` IN (@CAGUID+28);
-UPDATE `creature` SET `curhealth` = 13033 WHERE `guid` IN (@CHGUID+5,@CHGUID+6,@CHGUID+7,@CHGUID+8,@CHGUID+9,@CHGUID+10,@CHGUID+11,@CHGUID+12,@CHGUID+13,@CHGUID+14);
-UPDATE `creature` SET `curhealth` = 690000 WHERE `guid` IN (@CHGUID+29);
-
-# instances file clean
-UPDATE `creature` SET `equipment_id` = 0 WHERE `guid` IN (5330736,5330737,5330738,5330739,5330740,5330741,5330754,5330755,5330756,5330757,5330758,5330759,5330760,5330761,
-5330762,5330763,6030090,6030093,6031116,6031117,6031118,6031119);
