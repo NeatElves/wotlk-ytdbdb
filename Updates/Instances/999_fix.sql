@@ -1,4 +1,5 @@
 # 109_sunken_temple.sql
+# Gossip ID YTDB
 SET @OGUID := 1090000; -- gameobjects
 DELETE FROM `dbscripts_on_gossip` WHERE `id` = 1288;
 DELETE FROM `dbscripts_on_gossip` WHERE `id` = 128801;
@@ -11,6 +12,7 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalo
 (128801, 55000, 9, @OGUID+19, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'AtalarionStatues NE');
 
 # 189_scarlet_monastery.sql
+# condition ID YTDB
 DELETE FROM `dbscripts_on_creature_death` WHERE `id` IN (4543);
 INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
 (4543, 1000, 0, 10, 14693, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1798.01, 1223.17, 18.274, 4.71161, 3712, 'Bloodmage Thalnos - Spawn Scorn on Death (Event 89');
@@ -20,6 +22,7 @@ SET @OGUID := 2300000; -- gameobjects
 DELETE FROM `gameobject` WHERE `guid` = @OGUID+457;
 
 # 309_zulgurub.sql
+# condition ID YTDB
 DELETE FROM `dbscripts_on_go_template_use` WHERE `id` = 180327;
 INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
 (180327, 5000, 0, 10, 15082, 259200, 0, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, 3691, 'Zul''Gurub - Brazier of Madness - Edge of Madness (Gri''lek)'),
@@ -28,17 +31,20 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `priority`, `command`
 (180327, 5000, 0, 10, 15085, 259200, 0, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, 3694, 'Zul''Gurub - Brazier of Madness - Edge of Madness (Wushoolay)');
 
 # 543_hellfire_ramparts.sql
+# Equipment ID YTDB
 SET @CGUID := 5430000; -- creatures
 -- Worker Equipment
 UPDATE `creature` SET `equipment_id` = 2512 WHERE `guid` IN (@CGUID+16,@CGUID+17); -- Bonechewer Hungerer 17259
 UPDATE `creature` SET `equipment_id` = 4286 WHERE `guid` IN (@CGUID+24,@CGUID+25); -- Bonechewer Ravener 17264
 
 # 545_steamvault.sql
+# Equipment ID YTDB
 SET @CGUID := 5450000; -- creatures
 -- Using nondefault weapon
 UPDATE `creature` SET `equipment_id` = 35 WHERE `guid` IN (@CGUID+21,@CGUID+22);
 
 # 547_slave_pens.sql
+# Gossip ID YTDB
 DELETE FROM dbscripts_on_gossip WHERE id IN(7540,7520);
 DELETE FROM dbscripts_on_gossip WHERE id IN(754001,752001);
 INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
@@ -55,6 +61,7 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalo
 ('754001', '0', '15', '34906', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Cast Mark of Bite');
 
 # 548_serpentshrine_cavern.sql
+# Equipment ID YTDB
 SET @CGUID := 5480000; -- creatures
 -- Greyheart Skulker - 1 dagger and 1 hammer
 UPDATE creature SET equipment_id=4774 WHERE guid IN (@CGUID+138,@CGUID+135,@CGUID+134,@CGUID+131);
@@ -62,6 +69,7 @@ UPDATE creature SET equipment_id=4774 WHERE guid IN (@CGUID+138,@CGUID+135,@CGUI
 UPDATE creature SET equipment_id=343 WHERE guid IN (@CGUID+119,@CGUID+95,@CGUID+93,@CGUID+110,@CGUID+108);
 
 # 556_sethekk_halls.sql
+# Gossip ID YTDB
 SET @CGUID := 5560000; -- creatures
 DELETE FROM dbscripts_on_gossip WHERE id=7868;
 DELETE FROM dbscripts_on_gossip WHERE id=786801;
@@ -80,6 +88,8 @@ SET @OGUID := 5600000; -- gameobjects
 DELETE FROM `gameobject` WHERE `guid` = @OGUID+186;
 
 # 568_zulaman.sql
+# Equipment ID YTDB
+# Event data YTDB
 SET @CGUID := 5680000; -- creatures
 SET @OGUID := 5680000; -- gameobjects
 UPDATE creature SET equipment_id=132 WHERE guid=@CGUID+104; -- Amanishi Guardian (starts holding a spear for gong event RP script)

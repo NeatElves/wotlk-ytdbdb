@@ -107,52 +107,7 @@ UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2307802;
 UPDATE `creature_ai_scripts` SET `event_type` = '0' WHERE `id` =1504702;
 UPDATE `creature_ai_scripts` SET `event_type` = '0' WHERE `id` =1504703;
 UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2246102;
-
 UPDATE `creature_ai_scripts` SET `action1_param3` = '105' WHERE `id` =1696401;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '10172' WHERE `id` IN (1763601,1957101,1957201,1957301,1957401,1957501,1957601,1961001,1961201,1964502,1970901,1973701,1988001,2149301,2175101);
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20101' WHERE `id` IN (2366305,2366404,2366505,2366604);
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20055' WHERE `id` IN (2367404,2406203,2644805,2751802);
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20040' WHERE `id` IN (2401501,2432201,2432301);
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20053' WHERE `id` IN (2408102,2486403,2655005,2655307,2655409,2669404,2815701,2836807);
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20060' WHERE `id` =2384408;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20104' WHERE `id` =2401505;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20051' WHERE `id` =2404401;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20026' WHERE `id` =2617403;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20232' WHERE `id` =2641703;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20129' WHERE `id` =2649603;
-UPDATE `creature_ai_scripts` SET `action2_param1` = '20029' WHERE `id` =2656101;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20133' WHERE `id` =2656801;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20137' WHERE `id` =2657203;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20138' WHERE `id` =2658001;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20223' WHERE `id` =2659104;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20220' WHERE `id` =2686901;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20028' WHERE `id` =2697102;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20186' WHERE `id` =2716001;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20221' WHERE `id` =2726008;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20187' WHERE `id` =2735901;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20163' WHERE `id` =2757205;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20164' WHERE `id` =2757206;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20165' WHERE `id` =2757207;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20169' WHERE `id` =2758905;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20170' WHERE `id` =2758906;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20166' WHERE `id` =2776301;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20106' WHERE `id` =2927701;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20236' WHERE `id` =2945101;
-UPDATE `creature_ai_scripts` SET `action2_param1` = '20233' WHERE `id` =2965404;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20185' WHERE `id` =3135804;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20205' WHERE `id` =3164901;
-UPDATE `creature_ai_scripts` SET `action2_param1` = '20203' WHERE `id` =3165201;
-UPDATE `creature_ai_scripts` SET `action1_param1` = '20204' WHERE `id` =3237601;
-INSERT INTO dbscript_random_templates (id, `type`, target_id, chance, comments) VALUES
-(10032,1,10045,0,'Warmaul Chef Bufferlo - Random OOC Events'),
-(10032,1,10046,0,'Warmaul Chef Bufferlo - Random OOC Events'),
-(10032,1,10047,0,'Warmaul Chef Bufferlo - Random OOC Events'),
-(20015,0,24840,0,'32576 - Random Texts'),
-(20015,0,24841,0,'32576 - Random Texts'),
-(20015,0,24842,0,'32576 - Random Texts'),
-(20015,0,24845,0,'32576 - Random Texts');
-
-UPDATE `creature_ai_scripts` SET `event_param1` = '0', `event_param2` = '0' WHERE `id` =1146001;
 
 DELETE FROM `creature_ai_scripts` WHERE `id` = 292201;
 DELETE FROM `creature_ai_scripts` WHERE `id` = 292202;
