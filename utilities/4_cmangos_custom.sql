@@ -17,13 +17,14 @@
 --	- Data or their parsing were wrong
 
 
+-- ============================================================
+-- Classic section
+-- ============================================================
+
 -- -------------------------------
 -- Gameobject custom changes
 -- -------------------------------
 
--- ============================================================
--- Classic section
--- ============================================================
 -- Make Moonwell GO server-side (visible by GM only)
 UPDATE gameobject_template SET data3=1 WHERE entry IN (177272, 177273, 177274, 177275, 177276, 177277, 177278, 177279, 177280, 177281);
 
@@ -93,6 +94,9 @@ UPDATE gameobject_template SET data4=1 WHERE entry=181444;
 UPDATE gameobject_template SET `data8`=1 WHERE entry=179688; -- add serverside attribute so that it's not visible to players
 UPDATE gameobject_template SET `faction`=1375 WHERE entry=179688; -- "Treasure" faction 1375 here is guessed based on when patch 1.4 was released, and the fact that it's hostile to Demon faction 90
 
+-- Make PX-238 Winter Wondervolt TRAP GO server-side (visible by GM only)
+UPDATE gameobject_template SET `data8`=1 WHERE entry=180797;
+
 -- Andorhal Tower
 -- SpellFocus radius reduced to 5 (sync with eff1 from spell:17016 that activates target there = 5y)
 UPDATE gameobject_template SET data1 = 5 WHERE entry BETWEEN 176094 AND 176097;
@@ -100,9 +104,6 @@ UPDATE gameobject_template SET data1 = 5 WHERE entry BETWEEN 176094 AND 176097;
 
 -- Cannonball: set radius to zero so it is only triggered through spell
 UPDATE gameobject_template SET data2=0 WHERE entry=176211;
-
--- Make PX-238 Winter Wondervolt TRAP GO server-side (visible by GM only)
-UPDATE gameobject_template SET `data8`=1 WHERE entry=180797;
 
 -- Temporary fix data6 for GO 178559 (Larva Spewer) in prevision of coming core update
 UPDATE gameobject_template SET data6=0 WHERE entry=178559;
@@ -126,6 +127,11 @@ UPDATE gameobject_template SET `data3`=0, `data5`=1 WHERE entry=102413;
 -- ============================================================
 -- TBC section
 -- ============================================================
+
+-- -------------------------------
+-- Gameobject custom changes
+-- -------------------------------
+
 -- Hellfire Hot Spot Spreader
 UPDATE gameobject_template SET data8=1 WHERE entry=183929; -- set serverside so that it's not visible to players
 -- Sealed Tome traps
@@ -149,7 +155,6 @@ UPDATE `gameobject_template` SET `data5` = 1 WHERE `entry` IN (185497,185500);
 -- Item custom changes
 -- -------------------------------
 
--- None
 
 -- -------------------------------
 -- Creature custom changes

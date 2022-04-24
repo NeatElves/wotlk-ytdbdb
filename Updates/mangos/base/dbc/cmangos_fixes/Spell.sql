@@ -2574,7 +2574,6 @@ UPDATE `spell_template` SET `MaxAffectedTargets` = 1 WHERE `Id` IN (
 43711, -- Headless Horseman - Start Fire Target Test (Guard)
 44869, -- SWP - Kalecgos - Spectral blast - 1 target
 44978,45001,45002,45004,45006,45010, -- Kalecgos - Wild Magic
-45027, -- SWP - Kalecgos - Revitalize - 1 target
 45032,45034, -- Curse of Boundless Agony
 45391, -- Summon Demonic Vapor (SWP, Felmyst)
 45680, -- KJ - Shield Orb - Shadow Bolt - only one target
@@ -2601,6 +2600,7 @@ UPDATE `spell_template` SET `MaxAffectedTargets` = 3 WHERE `Id` IN (
 40869, -- Fatal Attraction (BT, Mother Shahraz)
 41303, -- Soul Drain (BT, Reliquary of Souls)
 41357, -- Promenade Sentinel - L1 Arcane Charge should only hit 3 targets
+45027, -- SWP - Kalecgos - Revitalize - 3 targets
 41376 -- Spite (BT, Reliquary of Souls)
 );
 
@@ -3001,6 +3001,10 @@ UPDATE spell_template SET EffectSpellClassMask1_1=0 WHERE Id IN(54278);
 
 -- Killing Spree - SPELL_ATTR_EX_REQUIRE_ALL_TARGETS
 UPDATE spell_template SET AttributesEx=AttributesEx|0x04000000 WHERE Id IN(51690);
+
+-- missing summon spell found in tbc
+INSERT INTO `spell_template` (`Id`, `SchoolMask`, `Category`, `Dispel`, `Mechanic`, `Attributes`, `AttributesEx`, `AttributesEx2`, `AttributesEx3`, `AttributesEx4`, `AttributesEx5`, `Stances`, `StancesNot`, `Targets`, `TargetCreatureType`, `RequiresSpellFocus`, `CasterAuraState`, `TargetAuraState`, `CasterAuraStateNot`, `TargetAuraStateNot`, `CastingTimeIndex`, `RecoveryTime`, `CategoryRecoveryTime`, `InterruptFlags`, `AuraInterruptFlags`, `ChannelInterruptFlags`, `procFlags`, `procChance`, `procCharges`, `maxLevel`, `baseLevel`, `spellLevel`, `DurationIndex`, `powerType`, `manaCost`, `manaCostPerLevel`, `manaPerSecond`, `manaPerSecondPerLevel`, `rangeIndex`, `speed`, `StackAmount`, `Totem1`, `Totem2`, `Reagent1`, `Reagent2`, `Reagent3`, `Reagent4`, `Reagent5`, `Reagent6`, `Reagent7`, `Reagent8`, `ReagentCount1`, `ReagentCount2`, `ReagentCount3`, `ReagentCount4`, `ReagentCount5`, `ReagentCount6`, `ReagentCount7`, `ReagentCount8`, `EquippedItemClass`, `EquippedItemSubClassMask`, `EquippedItemInventoryTypeMask`, `Effect1`, `Effect2`, `Effect3`, `EffectDieSides1`, `EffectDieSides2`, `EffectDieSides3`, `EffectRealPointsPerLevel1`, `EffectRealPointsPerLevel2`, `EffectRealPointsPerLevel3`, `EffectBaseDice1`, `EffectBaseDice2`, `EffectBaseDice3`, `EffectMechanic1`, `EffectMechanic2`, `EffectMechanic3`, `EffectImplicitTargetA1`, `EffectImplicitTargetA2`, `EffectImplicitTargetA3`, `EffectImplicitTargetB1`, `EffectImplicitTargetB2`, `EffectImplicitTargetB3`, `EffectRadiusIndex1`, `EffectRadiusIndex2`, `EffectRadiusIndex3`, `EffectApplyAuraName1`, `EffectApplyAuraName2`, `EffectApplyAuraName3`, `EffectAmplitude1`, `EffectAmplitude2`, `EffectAmplitude3`, `EffectMultipleValue1`, `EffectMultipleValue2`, `EffectMultipleValue3`, `EffectChainTarget1`, `EffectChainTarget2`, `EffectChainTarget3`, `EffectItemType1`, `EffectItemType2`, `EffectItemType3`, `EffectMiscValue1`, `EffectMiscValue2`, `EffectMiscValue3`, `EffectMiscValueB1`, `EffectMiscValueB2`, `EffectMiscValueB3`, `EffectTriggerSpell1`, `EffectTriggerSpell2`, `EffectTriggerSpell3`, `EffectPointsPerComboPoint1`, `EffectPointsPerComboPoint2`, `EffectPointsPerComboPoint3`, `SpellVisual`, `SpellIconID`, `activeIconID`, `spellPriority`, `SpellName`, `SpellName2`, `SpellName3`, `SpellName4`, `SpellName5`, `SpellName6`, `SpellName7`, `SpellName8`, `ManaCostPercentage`, `StartRecoveryCategory`, `StartRecoveryTime`, `MaxTargetLevel`, `SpellFamilyName`, `SpellFamilyFlags`, `MaxAffectedTargets`, `DmgClass`, `PreventionType`, `DmgMultiplier1`, `DmgMultiplier2`, `DmgMultiplier3`, `TotemCategory1`, `TotemCategory2`, `AreaId`) VALUES
+('21727','1','0','0','0','0','0','4','256','0','0','0','0','0','0','0','0','0','0','0','1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','13','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','-1','0','0','43','0','0','1','0','0','0','0','0','0','0','0','0','0','0','6','0','0','47','0','0','8','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1','0','0','Summon Player','','','','','','','','0','0','0','0','0','0','0','0','0','1','0','0','0','0','0');
 
 -- ============================================================
 -- Missing WotLK Achievement Spells
