@@ -30,6 +30,21 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `priority`, `command`
 (180327, 5000, 0, 10, 15084, 259200, 0, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, 3693, 'Zul''Gurub - Brazier of Madness - Edge of Madness (Renataki)'),
 (180327, 5000, 0, 10, 15085, 259200, 0, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, 3694, 'Zul''Gurub - Brazier of Madness - Edge of Madness (Wushoolay)');
 
+# 531_temple_of_ahnqiraj.sql
+# condition ID YTDB
+DELETE FROM worldstate_name WHERE Id=71101;
+INSERT INTO worldstate_name(Id, Name) VALUES (71101,'AQ40 - Battleguard Sartura - Alive');
+DELETE FROM conditions WHERE condition_entry=12002 AND type=42;
+INSERT INTO conditions(condition_entry,type,value1,value2,value3) VALUES (12002, 42, 71101, 0, 1);
+
+-- Prevent Battleguard Sartura trash mobs from respawning once she is defeated
+INSERT INTO spawn_group (Id, Name, Type, MaxCount, WorldState, Flags) VALUES
+(5310014, 'Temple of Ahn\'Qiraj - Battleguard Sartura - Trash mobs', 0, 0, 12002, 0);
+INSERT INTO spawn_group_spawn (Id, Guid) SELECT 5310014, guid AS guid FROM creature WHERE id=15233; -- Vekniss Guardian
+INSERT INTO spawn_group_spawn (Id, Guid) SELECT 5310014, guid AS guid FROM creature WHERE id=15247; -- Qiraji Brainwasher
+-- Remove now deprecated creature_linking_template that don't work with current Sartura spawn_group_formation
+DELETE FROM creature_linking_template WHERE master_entry=15516;
+
 # 543_hellfire_ramparts.sql
 # Equipment ID YTDB
 SET @CGUID := 5430000; -- creatures

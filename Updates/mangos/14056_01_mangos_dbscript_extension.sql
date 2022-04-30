@@ -1,0 +1,4 @@
+ALTER TABLE db_version CHANGE COLUMN required_14055_01_mangos_worldstate_name required_14056_01_mangos_dbscript_extension bit;
+
+
+

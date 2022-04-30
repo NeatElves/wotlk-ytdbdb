@@ -43,44 +43,6 @@ REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_in
 (3322401, 33224, 22, 0, 100, 1, 58, 2878, 0, 0, 0, 0, 41, 0, 0, 0, 12, 33220, 0, 30000, 28, 6, 62574, 0, 'YTDB - Q. A Blade Fit For A Champion'),
 (3322402, 33224, 22, 0, 100, 1, 58, 2879, 0, 0, 0, 0, 11, 62581, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Q. A Blade Fit For A Champion');
 
--- Midsummer Fire Festival
-REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
-('2596201','25962','1','0','100','1','30000','45000','30000','45000','0','0','53','-12009','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Fire Eater - Start Random Relay Script on Timer OOC'),
-('2599401','25994','1','0','100','1','30000','45000','30000','45000','0','0','53','-12009','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Flame Eater - Start Random Relay Script on Timer OOC');
--- Fire/Flame Eater has no equipment by default, handled via script instead
-UPDATE creature_template SET EquipmentTemplateId=0 WHERE Entry IN (25962,25994);
-UPDATE creature_template_addon SET auras=NULL WHERE entry IN (25962,25994);
--- Camp Pavilion seems to be visible from very long distance - add far view flag
-UPDATE gameobject_template SET ExtraFlags=ExtraFlags|0x00040000 WHERE entry=188021;
-DELETE FROM dbscripts_on_relay WHERE id IN (10202,10203,10204);
-INSERT INTO dbscripts_on_relay (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, condition_id, comments) VALUES
-(10202, 1000, 0, 42, 0, 0, 0, 0, 0, 0, 2200, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Fire/Flame Eater - Equip Monster - Item, Potion Green'),
-(10202, 4000, 0, 1, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Fire/Flame Eater - Emote OneShotEatNoSheathe'),
-(10202, 7000, 0, 15, 46332, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Fire/Flame Eater - Cast Midsummer Flame Breath'),
-(10202, 13000, 0, 15, 46332, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Fire/Flame Eater - Cast Midsummer Flame Breath'),
-(10202, 19000, 0, 15, 46332, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Fire/Flame Eater - Cast Midsummer Flame Breath'),
-(10202, 23000, 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Fire/Flame Eater - Remove Equipment'),
-(10202, 24000, 0, 15, 45407, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB (TBCDB)- Fire/Flame Eater - Cast Reveler - Applause/Cheer'),
-(10203, 1000, 0, 42, 0, 0, 0, 0, 0, 0, 1906, 2081, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Fire/Flame Eater - Equip Monster - Torch and Monster - Torch, Offhand'),
-(10203, 4000, 0, 15, 46322, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Fire/Flame Eater - Cast NPC Juggle Torch (Juggling)'),
-(10203, 20000, 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Fire/Flame Eater - Remove Equipment'),
-(10203, 21000, 0, 15, 45407, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Fire/Flame Eater - Cast Reveler - Applause/Cheer'),
-(10204, 3000, 0, 36, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Fire/Flame Eater and Midsummer Celebrant - Reset Orientation');
-DELETE FROM `dbscript_random_templates` WHERE `id` = 12009;
-INSERT INTO dbscript_random_templates (id, type, target_id, chance, comments) VALUES
-(12009,1,10202,0,'YTDB(TBCDB) - 25962/25994 - Fire Breathing Script'), (12009,1,10203,0,'YTDB(TBCDB) - 25962/25994 - Torch Juggling Script');
-
-REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
-('1686701','16867','30','0','100','1','5','16867','0','0','0','0','22','1','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Set Phase 1 on Receive AI Event 5 (A)'),
-('1686702','16867','1','5','100','1','2500','2500','2500','2500','0','0','10','36','60','39','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Random Emote OOC (Phase 1)'),
-('1686703','16867','1','5','100','1','8000','8000','8000','8000','0','0','22','2','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Random Emote OOC (Phase 1)'),
-('1686704','16867','1','3','100','1','2000','2000','2000','2000','0','0','5','66','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - OneShotSalute OOC (Phase 2)'),
-('1686705','16867','1','3','100','1','3500','3500','3500','3500','0','0','53','10182','0','0','22','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Set Waypoint Movement and Set Phase 0 OOC (Phase 2)'),
-('1686706','16867','6','0','10','0','0','0','0','0','0','0','11','38879','1','7','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Cast Soul Burden on Death'),
-('1686707','16867','2','0','100','0','15','0','0','0','0','0','25','0','0','0','1','1150','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Flee at 15% HP'),
-('1686708','16867','0','0','100','1025','4200','6700','15600','20700','0','0','11','11976','1','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Cast Strike'),
-('1686709','16867','0','0','40','1025','8500','12500','10000','14000','0','0','11','11978','1','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Shattered Hand Grunt - Cast Kick');
-
 REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 ('720701','7207','22','0','100','1','61','9011','0','0','0','0','53','9003','0','0','15','2608','6','0','0','0','0','0','YTDB(TBCDB) - Doc Mixilpixil - Start Relay Script and Quest Complete (2608) on Receive Emote');
 
@@ -93,7 +55,7 @@ INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalon
 (3401, 0, 0, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Quest - The Shattered Salute'),
 (3401, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 3287, 0, 0, 0, 0, 0, 0, 0, 0, 'Quest - The Shattered Salute');
 
-UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,3401,7207,20666,21025,22865,22990,25962,25994,30366,32838,33211,33224);
+UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,3401,7207,20666,21025,22865,22990,30366,32838,33211,33224);
 
 # ACID tbc for 14041_01_mangos_creature_spell_lists.sql
 DELETE FROM creature_ai_scripts WHERE Id IN(58905);
@@ -106,7 +68,6 @@ UPDATE `creature_ai_scripts` SET `action2_param1` = '1879403' WHERE `id` =180461
 UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2307802;
 UPDATE `creature_ai_scripts` SET `event_type` = '0' WHERE `id` =1504702;
 UPDATE `creature_ai_scripts` SET `event_type` = '0' WHERE `id` =1504703;
-UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2246102;
 UPDATE `creature_ai_scripts` SET `action1_param3` = '105' WHERE `id` =1696401;
 
 DELETE FROM `creature_ai_scripts` WHERE `id` = 292201;
