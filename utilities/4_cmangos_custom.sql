@@ -101,9 +101,16 @@ UPDATE gameobject_template SET `data8`=1 WHERE entry=180797;
 -- SpellFocus radius reduced to 5 (sync with eff1 from spell:17016 that activates target there = 5y)
 UPDATE gameobject_template SET data1 = 5 WHERE entry BETWEEN 176094 AND 176097;
 
+-- Musty Tome 176150/176151
+-- must despawn after used (has that flag set up.. but with restock timer it will never happen)
+UPDATE gameobject_template SET data2=0 WHERE entry IN (176150,176151);
 
 -- Cannonball: set radius to zero so it is only triggered through spell
 UPDATE gameobject_template SET data2=0 WHERE entry=176211;
+
+-- Verigan's Fist: must despawn during scripted quest
+UPDATE gameobject_template SET `data3`=0, `data5`=1 WHERE entry=102413;
+
 
 -- Temporary fix data6 for GO 178559 (Larva Spewer) in prevision of coming core update
 UPDATE gameobject_template SET data6=0 WHERE entry=178559;
@@ -114,15 +121,6 @@ UPDATE `gameobject_template` SET `data1` = 0 WHERE `entry` = 179004;
 -- Inconspicuous Landmark 142189 - consumable, despawn on s.11462 expire
 UPDATE `gameobject_template` SET `data5` = 1 WHERE `entry` = 142189; -- 19660800 / 65536 = 300sec
 
--- Musty Tome 176150/176151
--- must despawn after used (has that flag set up.. but with restock timer it will never happen)
-UPDATE gameobject_template SET data2=0 WHERE entry IN (176150,176151);
-
--- Cannonball: set radius to zero so it is only triggered through spell
-UPDATE gameobject_template SET data2=0 WHERE entry=176211;
-
--- Verigan's Fist: must despawn during scripted quest
-UPDATE gameobject_template SET `data3`=0, `data5`=1 WHERE entry=102413;
 
 -- ============================================================
 -- TBC section
@@ -150,6 +148,9 @@ UPDATE gameobject_template SET data8=1 WHERE entry=184722; -- Cauldron Bug Summo
 
 -- Bogblossom 185497,185500 - consumable
 UPDATE `gameobject_template` SET `data5` = 1 WHERE `entry` IN (185497,185500);
+
+UPDATE gameobject_template SET data5=1 WHERE entry=184906; -- Power Converter (consumable)
+UPDATE gameobject_template SET data8=1 WHERE entry=184910; -- Power Converter (serverside)
 
 -- -------------------------------
 -- Item custom changes
@@ -192,9 +193,6 @@ UPDATE gameobject_template SET data1 = 2 WHERE entry IN (188539);
 
 -- Wolfsbane Root 189313 - must despawn
 UPDATE gameobject_template SET data5 = 1 WHERE entry IN (189313);
-
--- Power Converter 184906 - consumable
-UPDATE gameobject_template SET data5 = 1 WHERE entry IN (184906);
 
 -- Dalaran book: make it despawnable on use with autoclose value (autoclose = autoCloseTime / IN_MILLISECONDS (prior to 3.0.3, conversion was / 0x10000))
 UPDATE gameobject_template SET data3=180000, data5=1 WHERE entry IN (192651,192652,192653,192706,192707,192708,192709,192710,192711,192713,192865,192866,192867,192868,192869,192870,192871,192872,192874,192880,192881,192882,192883,192884,192885,192886,192887,192888,192889,192890,192891,192894,192895,192896,192905);

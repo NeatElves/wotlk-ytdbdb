@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14056_01_mangos_dbscript_extension required_14057_01_mangos_spawn_group_chanced_spawns bit;
