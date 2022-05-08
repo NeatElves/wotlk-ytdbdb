@@ -138,9 +138,7 @@ INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 (@OGUID+28, 12), -- Laying Skeleton 03 (Hallow's End)
 (@OGUID+29, 12), -- Laying Skeleton 03 (Hallow's End)
 (@OGUID+30, 12); -- Laying Skeleton 03 (Hallow's End)
-UPDATE `spawn_group` SET `WorldState` = '12000' WHERE `Id` =5680001;
 
 # 580_sunwell_plateau.sql
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
 (72796, 201794, 580, 1, 1, 1694.95, 604.023, 28.1494, 5.95759, 0, 0, 0.162079, -0.986778, -30, -30, 100, 1);
-UPDATE `spawn_group` SET `WorldState` = '12001' WHERE `Id` =5800001;

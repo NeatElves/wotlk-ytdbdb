@@ -49,26 +49,15 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (2286501, 22865, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 11, 39663, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Illidan''s Presence - Cast Summon Cosmetic Fel Fire on Spawn');
 
-REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
-('340101','3401','22','0','100','1','78','2460','0','0','0','0','53','3401','0','0','15','2460','6','0','0','0','0','0','YTDB(TBCDB) - Shenthul - OnReceive EMOTE_SALUTE - complete quest and start relay Script');
-INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
-(3401, 0, 0, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Quest - The Shattered Salute'),
-(3401, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 3287, 0, 0, 0, 0, 0, 0, 0, 0, 'Quest - The Shattered Salute');
-
-UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,3401,7207,20666,21025,22865,22990,30366,32838,33211,33224);
+UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,7207,20666,21025,22865,22990,30366,32838,33211,33224);
 
 # ACID tbc for 14041_01_mangos_creature_spell_lists.sql
 DELETE FROM creature_ai_scripts WHERE Id IN(58905);
 DELETE FROM creature_ai_scripts WHERE Id IN(59503);
 DELETE FROM creature_ai_scripts WHERE Id IN(59504);
 
-UPDATE `creature_ai_scripts` SET `action2_param1` = '1879401' WHERE `id` =1804607;
-UPDATE `creature_ai_scripts` SET `action2_param1` = '1879402' WHERE `id` =1804612;
-UPDATE `creature_ai_scripts` SET `action2_param1` = '1879403' WHERE `id` =1804616;
-UPDATE `creature_ai_scripts` SET `action1_param3` = '256' WHERE `id` =2307802;
 UPDATE `creature_ai_scripts` SET `event_type` = '0' WHERE `id` =1504702;
 UPDATE `creature_ai_scripts` SET `event_type` = '0' WHERE `id` =1504703;
-UPDATE `creature_ai_scripts` SET `action1_param3` = '105' WHERE `id` =1696401;
 
 DELETE FROM `creature_ai_scripts` WHERE `id` = 292201;
 DELETE FROM `creature_ai_scripts` WHERE `id` = 292202;

@@ -490,7 +490,7 @@ UPDATE `mangos_string` SET `content_loc8` = '   Неизвестный гене�
 UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 539;
 UPDATE `mangos_string` SET `content_loc8` = 'Уровень: %u.' WHERE `entry` = 540;
 UPDATE `mangos_string` SET `content_loc8` = 'Здоровье (базовое): %u. (максимум): %u. (текущее): %u.' WHERE `entry` = 541;
-UPDATE `mangos_string` SET `content_loc8` = 'Флаг цели: %u. Динамический флаг: %u.фракция: %u.' WHERE `entry` = 542;
+UPDATE `mangos_string` SET `content_loc8` = 'Флаг цели: %u | Дин. флаг: %u | Доп. флаг: %u' WHERE `entry` = 542;
 UPDATE `mangos_string` SET `content_loc8` = 'Лут: %u Карманный лут: %u Снятие шкур: %u' WHERE `entry` = 543;
 UPDATE `mangos_string` SET `content_loc8` = 'Позиция: %f %f %f.' WHERE `entry` = 544;
 UPDATE `mangos_string` SET `content_loc8` = '*** Это продавец!' WHERE `entry` = 545;
