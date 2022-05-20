@@ -278,8 +278,6 @@ UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions)
 # Final_Fix
 UPDATE `creature_ai_scripts` SET `event_param1` =1544 WHERE `event_type` =6 AND `event_param1` =1409 AND `event_param2` =0;
 UPDATE `creature_ai_scripts` SET `event_param2` =1544 WHERE `event_type` =22 AND `event_param2` =1409 AND `event_param3` =0;
-UPDATE `creature_ai_scripts` SET `event_param2` =340 WHERE `event_type` =22 AND `event_param2` =22 AND `event_param3` =0;
-UPDATE `creature_ai_scripts` SET `event_param2` =273 WHERE `event_type` =22 AND `event_param2` =21 AND `event_param3` =0;
 UPDATE `creature_ai_scripts` SET `event_param2` =2756 WHERE `event_type` =22 AND `event_param2` =1545 AND `event_param3` =0;
 UPDATE `creature_ai_scripts` SET `event_param2` =2757 WHERE `event_type` =22 AND `event_param2` =1546 AND `event_param3` =0;
 UPDATE `creature_ai_scripts` SET `event_param2` =2758 WHERE `event_type` =22 AND `event_param2` =1547 AND `event_param3` =0;
@@ -302,6 +300,13 @@ UPDATE `creature_ai_scripts` SET `event_param6` =3517 WHERE `event_type` =10 AND
 UPDATE `creature_ai_scripts` SET `event_param6` =3539 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20287;
 UPDATE `creature_ai_scripts` SET `event_param2` =3555 WHERE `event_type` =22 AND `event_param2` =9011 AND `event_param3` =0;
 UPDATE `creature_ai_scripts` SET `event_param2` =2373 WHERE `event_type` =22 AND `event_param2` =2460 AND `event_param3` =0;
+# cond UDB type 6
+UPDATE `creature_ai_scripts` SET `event_param2` =340 WHERE `event_type` =22 AND `event_param2` =22 AND `event_param3` =0;
+UPDATE `creature_ai_scripts` SET `event_param2` =273 WHERE `event_type` =22 AND `event_param2` =21 AND `event_param3` =0;
+# cond TBC type 6
+UPDATE `creature_ai_scripts` SET `event_param2` =340 WHERE `event_type` =22 AND `event_param2` =4 AND `event_param3` =0;
+UPDATE `creature_ai_scripts` SET `event_param2` =273 WHERE `event_type` =22 AND `event_param2` =3 AND `event_param3` =0;
+#
 #UPDATE `creature_ai_scripts` SET `event_param6` =3695 WHERE `event_type` =10 AND `event_param5` =0 AND `event_param6` =772;
 
 
