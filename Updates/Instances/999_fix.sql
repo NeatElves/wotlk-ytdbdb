@@ -50,23 +50,6 @@ SET @CGUID := 5450000; -- creatures
 -- Using nondefault weapon
 UPDATE `creature` SET `equipment_id` = 35 WHERE `guid` IN (@CGUID+21,@CGUID+22);
 
-# 547_slave_pens.sql
-# Gossip ID YTDB
-DELETE FROM dbscripts_on_gossip WHERE id IN(7540,7520);
-DELETE FROM dbscripts_on_gossip WHERE id IN(754001,752001);
-INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-('752001', '0', '8', '17893', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Give Kill Credit to Group'),
-('752001', '0', '13', '0', '0', '0', '182094', '5', '1', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Open cage'),
-('752001', '0', '48', '256', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Remove UNIT_FLAG_IMMUNE_TO_PLAYER'),
-('752001', '0', '48', '512', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Remove UNIT_FLAG_IMMUNE_TO_NPC'),
-('752001', '0', '22', '113', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Change faction'),
-('752001', '0', '29', '1', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Remove NPC Gossip flag'),
-('752001', '0', '20', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Move Waypoint'),
-('752001', '0', '10', '17957', '300000', '1', '0', '0', '8', '1', '0', '0', '0', '-97.29962', '-744.0187', '34.83808', '3.476041', 'Naturalist Bite - Spawn Coilfang Champion'),
-('752001', '0', '10', '17960', '300000', '1', '0', '0', '8', '1', '0', '0', '0', '-93.89555', '-741.5464', '35.76108', '3.737259', 'Naturalist Bite - Spawn Coilfang Soothsayer'),
-('752001', '0', '10', '17961', '300000', '1', '0', '0', '8', '1', '0', '0', '0', '-90.23283', '-740.959', '35.3191', '35.94978', 'Naturalist Bite - Spawn Coilfang Enchantress'),
-('754001', '0', '15', '34906', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Cast Mark of Bite');
-
 # 548_serpentshrine_cavern.sql
 # Equipment ID YTDB
 SET @CGUID := 5480000; -- creatures

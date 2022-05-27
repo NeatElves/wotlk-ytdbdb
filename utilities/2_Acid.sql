@@ -47,7 +47,3 @@ REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_in
 (2286501, 22865, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 11, 39663, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Illidan''s Presence - Cast Summon Cosmetic Fel Fire on Spawn');
 
 UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,20666,21025,22865,22990,30366,32838,33211,33224);
-
-# ACID tbc for 14041_01_mangos_creature_spell_lists.sql
-DELETE FROM creature_ai_scripts WHERE Id IN(59503);
-DELETE FROM creature_ai_scripts WHERE Id IN(59504);

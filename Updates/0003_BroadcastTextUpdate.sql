@@ -1399,6 +1399,7 @@ UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN (11721,12861,12862,12
 UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN (12417,12418,12419);
 UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` IN (15959,15960);
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 1342;
+UPDATE `broadcast_text` SET `ChatTypeId` = 3 WHERE `Id` BETWEEN 24930 AND 24932;
 
 -- text
 # 4139_TDB-0206_betrayed.sql
