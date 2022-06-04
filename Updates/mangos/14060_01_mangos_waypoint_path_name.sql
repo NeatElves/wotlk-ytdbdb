@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14059_01_mangos_vehicle_seat_accessory required_14060_01_mangos_waypoint_path_name bit;
