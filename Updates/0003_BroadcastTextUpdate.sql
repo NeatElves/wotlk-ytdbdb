@@ -1441,6 +1441,10 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 1444;
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 1346;
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 1352;
 UPDATE `broadcast_text` SET `EmotesID` = 15 WHERE `Id` = 2313;
+UPDATE broadcast_text SET ChatTypeID=0 WHERE id IN (22138, 22139, 22140);
+UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 22391;
+UPDATE broadcast_text SET ChatTypeID = 2 WHERE id IN (25717,25720,25724);
+
 -- text
 # 4139_TDB-0206_betrayed.sql
 # UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;

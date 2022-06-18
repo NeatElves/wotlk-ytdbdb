@@ -345,11 +345,6 @@ UPDATE dbscripts_on_quest_start SET datalong = 59 WHERE command IN (2,4,5) AND d
 UPDATE dbscripts_on_spell SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
 UPDATE dbscripts_on_relay SET datalong = 59 WHERE command IN (2,4,5) AND datalong IN (46,58);
 
-# Replacing the text with the correct one, binding by broadcast_text_id
-# Not included, there are incorrect texts in the table broadcast_text
-#UPDATE broadcast_text, dbscript_string SET dbscript_string.content_default = broadcast_text.Text WHERE dbscript_string.broadcast_text_id = broadcast_text.Id AND (dbscript_string.content_default NOT LIKE broadcast_text.Text AND broadcast_text.Text != '');
-#UPDATE broadcast_text, dbscript_string SET dbscript_string.content_default = broadcast_text.Text1 WHERE dbscript_string.broadcast_text_id = broadcast_text.Id AND (dbscript_string.content_default NOT LIKE broadcast_text.Text1 AND broadcast_text.Text1 != '');
-
 # NPC_ADDON_FIX
 INSERT IGNORE INTO `creature_template_addon`
 SELECT

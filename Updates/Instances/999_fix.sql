@@ -20,6 +20,9 @@ INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `priority`, `command`,
 # 230_blackrock_depths.sql
 SET @OGUID := 2300000; -- gameobjects
 DELETE FROM `gameobject` WHERE `guid` = @OGUID+457;
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(@OGUID+800, 190395, 230, 1, 1, 891.688, -175.735, -43.925, 1.21, 0, 0, 0.886709, -0.462328, -180, -180, 100, 1),
+(@OGUID+801, 190394, 230, 1, 1, 891.688, -175.735, -43.925, 1.21, 0, 0, 0.886709, -0.462328, -180, -180, 100, 1);
 
 # 309_zulgurub.sql
 # condition ID YTDB
