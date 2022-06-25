@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14049_01_mangos_unitflags2 required_14050_01_mangos_npc_vendor bit;

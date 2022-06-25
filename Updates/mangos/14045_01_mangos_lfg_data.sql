@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14043_01_mangos_spawn_groups required_14045_01_mangos_lfg_data bit;

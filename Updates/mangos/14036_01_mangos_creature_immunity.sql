@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14034_01_mangos_column_fix required_14036_01_mangos_creature_immunity bit;

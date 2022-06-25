@@ -1,2 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14040_01_mangos_dbscript_data_flags_widening required_14041_01_mangos_creature_spell_lists bit;
-

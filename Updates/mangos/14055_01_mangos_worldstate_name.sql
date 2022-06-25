@@ -1,3 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14054_01_mangos_command required_14055_01_mangos_worldstate_name bit;
-
-

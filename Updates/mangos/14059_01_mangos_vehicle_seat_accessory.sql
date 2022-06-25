@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14058_01_mangos_quest_maxlevel required_14059_01_mangos_vehicle_seat_accessory bit;

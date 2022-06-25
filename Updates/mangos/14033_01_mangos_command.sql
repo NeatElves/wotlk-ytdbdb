@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14032_01_mangos_dbscript_npc_flag_update required_14033_01_mangos_command bit;

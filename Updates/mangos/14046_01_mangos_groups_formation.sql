@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14045_01_mangos_lfg_data required_14046_01_mangos_groups_formation bit;
