@@ -134,7 +134,8 @@ UPDATE conditions SET comments=CONCAT('Player is Dead OR NOT Within ',value2,'y 
 UPDATE conditions SET comments=CONCAT('All Players in Group are Dead OR NOT Within ',value2,'y of Source') WHERE type=36 AND value1=1 AND value2 !=0 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
 UPDATE conditions SET comments=CONCAT('All Players in Instance are Dead OR NOT Within ',value2,'y of Source') WHERE type=36 AND value1=2 AND value2 !=0 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
 UPDATE conditions SET comments=CONCAT('Creature Source is Dead') WHERE type=36 AND value1=3 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
-UPDATE conditions SET comments=CONCAT('Creature of Entry ',value1,' Found Alive Within ',value2,'y of Source') WHERE type=37 AND comments IS NULL;
+UPDATE conditions SET comments=CONCAT('Creature of Entry ',value1,' Found Alive Within ',value2,'y of Source') WHERE type=37 AND flags=0 AND comments IS NULL;
+UPDATE conditions SET comments=CONCAT('Creature of Entry ',value1,' No Found Alive Within ',value2,'y of Source') WHERE type=37 AND flags=1 AND comments IS NULL;
 -- CONDITION_PVP_SCRIPT
 -- CONDITION_SPAWN_COUNT
 -- CONDITION_WORLD_SCRIPT
