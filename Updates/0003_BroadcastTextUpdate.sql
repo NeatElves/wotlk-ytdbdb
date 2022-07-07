@@ -1446,6 +1446,19 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 22391;
 UPDATE broadcast_text SET ChatTypeID = 2 WHERE id IN (25717,25720,25724);
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 5946;
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 5941;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 1265;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 1268;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 1269;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 1270;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 732;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 733;
+UPDATE `broadcast_text` SET `EmoteID1` = 5 WHERE `Id` IN (16737);
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 736;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 873;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 882;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 1528;
+UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` = 20562;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 6231;
 
 -- text
 # 4139_TDB-0206_betrayed.sql
