@@ -344,7 +344,7 @@ UPDATE `quest_template` SET `StartScript`='4786' WHERE `entry`='4786';
 UPDATE `creature_template_classlevelstats` SET `BaseDamageExp0`='32.6201' WHERE `Level`='62' and`Class`='2';
 
 UPDATE `creature_template` SET `SpeedWalk` = 2.8, `SpeedRun` = 2.28571 WHERE `Entry` = 15343;
-UPDATE `creature_template` SET `Faction` = 7, `Faction` = 7, `MovementType` = 1 WHERE `Entry` = 15168;
+UPDATE `creature_template` SET `Faction` = 15, `Faction` = 15, `MovementType` = 1 WHERE `Entry` = 15168;
 UPDATE `quest_template` SET `QuestFlags`='256' WHERE `entry`='8579';
 UPDATE `quest_template` SET `PrevQuestId`='8579' WHERE `entry`='8627';
 UPDATE `quest_template` SET `PrevQuestId`='8579' WHERE `entry`='8628';
@@ -2764,5 +2764,616 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (18267, 193125, 571, 1, 1, 5293.28, 2932.33, 409.065, -2.49582, 0, 0, -0.948323, 0.317306, 900, 900, 100, 1),
 (1101, 51702, 530, 1, 1, -3088.4, 2598.12, 62.6914, 2.89724, 0, 0, 0.992546, 0.12187, 900, 900, 100, 1),
 (1129, 194127, 571, 1, 1, 6099.22, -1077.97, 404.227, 2.94897, 0.0418429, 0.0310535, 0.994143, 0.094686, 900, 900, 100, 1);
+
+UPDATE creature_template SET MinLevel = 70, MaxLevel = 70 WHERE entry = 17458;
+
+UPDATE creature_template SET MinLevel = 17, MaxLevel = 17 WHERE entry = 2673;
+UPDATE creature_template SET MinLevel = 37, MaxLevel = 37 WHERE entry = 2674;
+UPDATE creature_template SET MinLevel = 55, MaxLevel = 55 WHERE entry = 12426;
+
+UPDATE creature_template SET MinLevel = 40, MaxLevel = 40 WHERE entry = 2678;
+UPDATE creature_template SET MinLevel = 50, MaxLevel = 50 WHERE entry = 8615;
+UPDATE creature_template SET MinLevel = 60, MaxLevel = 60, Expansion = 1 WHERE entry = 12473;
+
+UPDATE creature SET position_x = 2051.842, position_y = -4794.3926, position_z = 23.494202, orientation = 5.358160972595214843 WHERE id = 11178;
+UPDATE creature SET position_x = 2064.3247, position_y = -4791.981, position_z = 23.196514, orientation = 5.759586334228515625 WHERE id = 7790;
+UPDATE creature SET position_x = 2055.8333, position_y = -4797.0693, position_z = 23.133238, orientation = 5.445427417755126953 WHERE id = 1383;
+UPDATE creature SET position_x = 2055.533, position_y = -4802.1113, position_z = 22.693106, orientation = 5.951572895050048828 WHERE id = 11176;
+UPDATE creature SET position_x = 2048.7969, position_y = -4799.8613, position_z = 23.123047, orientation = 6.003932476043701171 WHERE id = 11177;
+UPDATE creature SET position_x = 2054.632, position_y = -4805.9897, position_z = 22.646452, orientation = 3.31612563133239746 WHERE id = 7230;
+UPDATE creature SET position_x = 2052.2065, position_y = -4813.4585, position_z = 22.724476, orientation = 0.296705961227416992 WHERE id = 10266;
+UPDATE creature SET position_x = 2055.712, position_y = -4815.8975, position_z = 23.154497, orientation = 0.48869219422340393 WHERE id = 7792;
+UPDATE creature SET position_x = 2058.9688, position_y = -4835.5835, position_z = 24.661102, orientation = 3.31612563133239746 WHERE id = 3355;
+UPDATE creature SET position_x = 2053.3958, position_y = -4838.875, position_z = 24.661102, orientation = 3.089232683181762695 WHERE id = 5812;
+UPDATE creature SET position_x = 2049.7917, position_y = -4839.132, position_z = 24.661102, orientation = 0.174532920122146606 WHERE id = 3356;
+UPDATE creature SET position_x = 2098.587, position_y = -4823.4375, position_z = 34.345425, orientation = 2.862339973449707031 WHERE id = 3360;
+UPDATE creature SET position_x = 2099.2275, position_y = -4818.8457, position_z = 24.385685, orientation = 3.682644605636596679 WHERE id = 3409;
+UPDATE creature SET position_x = 2097.4219, position_y = -4824.924, position_z = 24.33118, orientation = 3.473205089569091796 WHERE id = 3361;
+UPDATE creature SET position_x = 2105.3315, position_y = -4829.993, position_z = 24.313433, orientation = 4.520402908325195312 WHERE id = 7231;
+UPDATE creature SET position_x = 2097.4358, position_y = -4834.809, position_z = 24.346512, orientation = 0.01745329238474369 WHERE id = 4043;
+UPDATE creature SET position_x = 2091.5, position_y = -4828.936, position_z = 24.417374, orientation = 0.610865235328674316 WHERE id = 11871;
+UPDATE creature SET position_x = 2091.0208, position_y = -4826.4863, position_z = 24.420786, orientation = 0.261799395084381103 WHERE id = 11868;
+UPDATE creature SET position_x = 2090.2656, position_y = -4824.2085, position_z = 24.432442, orientation = 0.541052043437957763 WHERE id = 2704;
+UPDATE creature SET position_x = 2047.9913, position_y = -4746.009, position_z = 29.470078, orientation = 4.625122547149658203 WHERE id = 2857;
+UPDATE creature SET position_x = 2045.526, position_y = -4753.8125, position_z = 29.470074, orientation = 1.117010712623596191 WHERE id = 9317;
+UPDATE creature SET position_x = 2038.401, position_y = -4748.979, position_z = 29.470078, orientation = 4.276056766510009765 WHERE id = 11017;
+UPDATE creature SET position_x = 2036.224, position_y = -4746.4966, position_z = 29.470078, orientation = 4.677482128143310546 WHERE id = 3412;
+UPDATE creature SET position_x = 2036.6285, position_y = -4739.4863, position_z = 29.470078, orientation = 4.933484554290771484 WHERE id = 3413;
+UPDATE gameobject SET position_x = 2038.606, position_y = -4729.1123, position_z = 25.702803, orientation = 2.8186984, rotation0 = 0, rotation1 = 0, rotation2 = 0.9869957, rotation3 = 0.16074672 WHERE id = 173082;
+UPDATE creature SET position_x = 2025.0834, position_y = -4708.9062, position_z = 27.113403, orientation = 1.815142393112182617 WHERE id = 3358;
+UPDATE creature SET position_x = 2029.908, position_y = -4706.1597, position_z = 27.113403, orientation = 3.351032257080078125 WHERE id = 3357;
+UPDATE creature SET position_x = 2052.2656, position_y = -4670.936, position_z = 25.776165, orientation = 5.288347721099853515 WHERE id = 14498;
+UPDATE creature SET position_x = 2000.6198, position_y = -4659.6562, position_z = 26.722319, orientation = 5.305800914764404296 WHERE id = 3332;
+UPDATE creature SET position_x = 1995.4098, position_y = -4662.316, position_z = 27.117552, orientation = 1.361356854438781738 WHERE id = 3333;
+UPDATE creature SET position_x = 1989.3091, position_y = -4655.9097, position_z = 27.75542, orientation = 0.157079637050628662 WHERE id = 16076;
+UPDATE creature SET position_x = 1989.8317, position_y = -4656.8315, position_z = 27.66127, orientation = 0.628318548202514648 WHERE id = 16069;
+UPDATE creature SET position_x = 1991.3177, position_y = -4652.349, position_z = 27.363424, orientation = 0.104719758033752441 WHERE id = 7951;
+UPDATE creature SET position_x = 1992.1945, position_y = -4651.047, position_z = 27.290503, orientation = 6.143558979034423828 WHERE id = 15186;
+UPDATE creature SET position_x = 2140.429, position_y = -4652.1875, position_z = 50.485786, orientation = 2.251474618911743164 WHERE id = 9988;
+UPDATE creature SET position_x = 2151.3645, position_y = -4654.1353, position_z = 50.34123, orientation = 1.93731546401977539 WHERE id = 4752;
+UPDATE creature SET position_x = 2159.3628, position_y = -4653.743, position_z = 49.96811, orientation = 2.809980154037475585 WHERE id = 3362;
+UPDATE creature SET position_x = 2153.6494, position_y = -4657.139, position_z = 50.226173, orientation = 1.518436431884765625 WHERE id = 14539;
+UPDATE creature SET position_x = 2158.7395, position_y = -4661.514, position_z = 49.926975, orientation = 2.007128715515136718 WHERE id = 5195;
+UPDATE creature SET position_x = 2158.7395, position_y = -4659.6196, position_z = 49.981743, orientation = 2.251474618911743164 WHERE id = 12351;
+UPDATE creature SET position_x = 2164.783, position_y = -4655.9395, position_z = 50.60522, orientation = 2.914699792861938476 WHERE id = 12353;
+UPDATE creature SET position_x = 2164.7344, position_y = -4651.932, position_z = 50.816193, orientation = 3.333578824996948242 WHERE id = 356;
+UPDATE creature SET position_x = 2161.6702, position_y = -4648.078, position_z = 50.590126, orientation = 4.188790321350097656 WHERE id = 14540;
+UPDATE creature SET position_x = 2155.5938, position_y = -4649.1772, position_z = 50.288754, orientation = 5.305800914764404296 WHERE id = 14541;
+UPDATE creature SET position_x = 2135.3264, position_y = -4610.7847, position_z = 54.613396, orientation = 4.171336650848388671 WHERE id = 10088;
+UPDATE creature SET position_x = 2100.5815, position_y = -4606.962, position_z = 59.013264, orientation = 4.520402908325195312 WHERE id = 3352;
+UPDATE creature SET position_x = 2107.3508, position_y = -4633.776, position_z = 58.964035, orientation = 2.111848354339599609 WHERE id = 3407;
+UPDATE creature SET position_x = 2084.9653, position_y = -4623.7744, position_z = 58.90305, orientation = 0.157079637050628662 WHERE id = 3406;
+UPDATE creature SET position_x = 2067.856, position_y = -4598.8784, position_z = 54.549633, orientation = 5.026548385620117187 WHERE id = 7294;
+UPDATE creature SET position_x = 1953.5938, position_y = -4735.7676, position_z = 48.73747, orientation = 1.099557399749755859 WHERE id = 4485;
+UPDATE creature SET position_x = 1991.2848, position_y = -4797.1494, position_z = 56.13053, orientation = 2.775073528289794921 WHERE id = 15350;
+UPDATE creature SET position_x = 1980.9896, position_y = -4801.5903, position_z = 56.104973, orientation = 1.2042771577835083 WHERE id = 3353;
+UPDATE creature SET position_x = 1970.9462, position_y = -4808.1665, position_z = 57.07497, orientation = 0.837758064270019531 WHERE id = 3354;
+UPDATE creature SET position_x = 1987.3993, position_y = -4813.108, position_z = 57.076057, orientation = 1.623156189918518066 WHERE id = 19912;
+UPDATE creature SET position_x = 1997.9271, position_y = -4807.9517, position_z = 57.07497, orientation = 2.443460941314697265 WHERE id = 3408;
+UPDATE creature SET position_x = 1878.6406, position_y = -4708.125, position_z = 39.57792, orientation = 0.523598790168762207 WHERE id = 3359;
+UPDATE creature SET position_x = 1914.1562, position_y = -4775.868, position_z = 36.565033, orientation = 1.117010712623596191 WHERE id = 3410;
+UPDATE creature SET position_x = 1860.8976, position_y = -4561.514, position_z = 25.07035, orientation = 2.58308720588684082 WHERE id = 3365;
+UPDATE creature SET position_x = 1855.8195, position_y = -4562.491, position_z = 25.07035, orientation = 2.268928050994873046 WHERE id = 3316;
+UPDATE creature SET position_x = 1855.3142, position_y = -4568.118, position_z = 25.07035, orientation = 2.129301786422729492 WHERE id = 5811;
+UPDATE creature SET position_x = 1849.0435, position_y = -4569.229, position_z = 25.07035, orientation = 4.729842185974121093 WHERE id = 7088;
+UPDATE creature SET position_x = 1848.0122, position_y = -4564.8906, position_z = 25.070353, orientation = 1.413716673851013183 WHERE id = 3366;
+UPDATE creature SET position_x = 1802.0798, position_y = -4561.5537, position_z = 23.089691, orientation = 1.518436431884765625 WHERE id = 3315;
+UPDATE creature SET position_x = 1813.257, position_y = -4563.3267, position_z = 23.089691, orientation = 2.530727386474609375 WHERE id = 2855;
+UPDATE creature SET position_x = 1806.8524, position_y = -4573.3247, position_z = 23.089691, orientation = 1.605702877044677734 WHERE id = 3363;
+UPDATE creature SET position_x = 1794.6841, position_y = -4572.7153, position_z = 23.089691, orientation = 0.92502450942993164 WHERE id = 14726;
+UPDATE creature SET position_x = 1792.6545, position_y = -4565.3926, position_z = 23.089691, orientation = 0.977384388446807861 WHERE id = 3364;
+UPDATE creature SET position_x = 1780.6337, position_y = -4505.507, position_z = 27.828892, orientation = 3.769911050796508789 WHERE id = 3369;
+UPDATE creature SET position_x = 1769.1649, position_y = -4485.6304, position_z = 45.730747, orientation = 1.797689080238342285 WHERE id = 3399;
+UPDATE creature SET position_x = 1775.0973, position_y = -4482.9062, position_z = 45.730747, orientation = 2.181661605834960937 WHERE id = 3368;
+UPDATE creature SET position_x = 1779.0851, position_y = -4488.08, position_z = 45.730747, orientation = 4.694935798645019531 WHERE id = 3400;
+UPDATE creature SET position_x = 1837.2726, position_y = -4469.6475, position_z = 47.746803, orientation = 1.605702877044677734 WHERE id = 3400;
+UPDATE creature SET position_x = 1839.0173, position_y = -4465.9775, position_z = 47.706245, orientation = 3.385938644409179687 WHERE id = 30706;
+UPDATE creature SET position_x = 1836.7692, position_y = -4461.5903, position_z = 47.681084, orientation = 1.500983119010925292 WHERE id = 3372;
+UPDATE creature SET position_x = 1843.0139, position_y = -4464.639, position_z = 47.728188, orientation = 5.672319889068603515 WHERE id = 3372;
+UPDATE creature SET position_x = 1843.1146, position_y = -4468.5347, position_z = 47.7517, orientation = 0.959931075572967529 WHERE id = 3371;
+UPDATE creature SET position_x = 1931.7812, position_y = -4514.993, position_z = 29.369501, orientation = 3.40339207649230957 WHERE id = 6986;
+UPDATE creature SET position_x = 1928.3334, position_y = -4517.2153, position_z = 29.369501, orientation = 0.959931075572967529 WHERE id = 6987;
+UPDATE creature SET position_x = 1955.099, position_y = -4459.3647, position_z = 55.004524, orientation = 2.652900457382202148 WHERE id = 8659;
+UPDATE creature SET position_x = 1954.7466, position_y = -4466.788, position_z = 26.018583, orientation = 3.50811171531677246 WHERE id = 3348;
+UPDATE creature SET position_x = 1966.15, position_y = -4463.1, position_z = 25.9237, orientation = 1.5708, spawntimesecsmin = 300, spawntimesecsmax = 300 WHERE id = 11046;
+UPDATE creature SET position_x = 1964.8837, position_y = -4477.8403, position_z = 26.008354, orientation = 5.25344085693359375 WHERE id = 3347;
+UPDATE creature SET position_x = 1918.2639, position_y = -4436.257, position_z = 24.857132, orientation = 1.989675283432006835 WHERE id = 3346;
+UPDATE creature SET position_x = 1912.1823, position_y = -4436.606, position_z = 24.882315, orientation = 2.862339973449707031 WHERE id = 3345;
+UPDATE creature SET position_x = 1913.2466, position_y = -4430.5435, position_z = 24.874634, orientation = 3.682644605636596679 WHERE id = 11066;
+UPDATE creature SET position_x = 1904.8629, position_y = -4451.632, position_z = 53.504585, orientation = 3.682644605636596679 WHERE id = 3405;
+UPDATE creature SET position_x = 1904.7604, position_y = -4460.6875, position_z = 53.504585, orientation = 2.862339973449707031 WHERE id = 3404;
+UPDATE creature SET position_x = 1583.8021, position_y = -4473.3145, position_z = 8.039657, orientation = 3.700098037719726562 WHERE id = 3317;
+UPDATE creature SET position_x = 1589.0209, position_y = -4469.4775, position_z = 7.9755816, orientation = 2.125526189804077148 WHERE id = 3321;
+UPDATE creature SET position_x = 1593.5452, position_y = -4465.6475, position_z = 7.9779706, orientation = 2.424191236495971679 WHERE id = 3319;
+UPDATE creature SET position_x = 1568, position_y = -4405.8696, position_z = 8.360646, orientation = 3.31612563133239746 WHERE id = 14392;
+UPDATE creature SET position_x = 1633.9861, position_y = -4439.368, position_z = 15.743605, orientation = 2.757620096206665039 WHERE id = 6929;
+UPDATE creature SET position_x = 1637.5226, position_y = -4438.0557, position_z = 15.716766, orientation = 2.076941728591918945 WHERE id = 6466;
+UPDATE creature SET position_x = 1640.7153, position_y = -4442.1875, position_z = 15.716766, orientation = 2.967059612274169921 WHERE id = 5610;
+UPDATE creature SET position_x = 1639.5625, position_y = -4443.738, position_z = 15.716764, orientation = 5.183627605438232421 WHERE id = 5614;
+UPDATE creature SET position_x = 1638.283, position_y = -4444.9966, position_z = 15.716766, orientation = 5.585053443908691406 WHERE id = 5613;
+UPDATE creature SET position_x = 1640.8264, position_y = -4446.9897, position_z = 15.716766, orientation = 1.972222089767456054 WHERE id = 5611;
+UPDATE creature SET position_x = 1634.1632, position_y = -4447.1772, position_z = 15.716764, orientation = 1.640609502792358398 WHERE id = 5606;
+UPDATE creature SET position_x = 1633.9445, position_y = -4445.616, position_z = 15.716766, orientation = 4.86946868896484375 WHERE id = 5609;
+UPDATE creature SET position_x = 1667.6198, position_y = -4463.757, position_z = 20.374456, orientation = 1.710422635078430175 WHERE id = 8724;
+UPDATE creature SET position_x = 1687.257, position_y = -4464.712, position_z = 20.374516, orientation = 2.007128715515136718 WHERE id = 8673;
+UPDATE creature SET position_x = 1695.9202, position_y = -4455.5537, position_z = 20.374424, orientation = 2.007128715515136718 WHERE id = 9856;
+UPDATE creature SET position_x = 1744.8993, position_y = -4317.858, position_z = 33.620445, orientation = 4.223696708679199218 WHERE id = 3323;
+UPDATE creature SET position_x = 1575.8021, position_y = -4292.672, position_z = 26.266024, orientation = 4.380776405334472656 WHERE id = 3370;
+UPDATE creature SET position_x = 1579.356, position_y = -4294.5, position_z = 26.331554, orientation = 3.752457857131958007 WHERE id = 5188;
+UPDATE creature SET position_x = 1520.5365, position_y = -4355.585, position_z = 19.077822, orientation = 6.021385669708251953 WHERE id = 3313;
+UPDATE creature SET position_x = 1522.3038, position_y = -4352.5347, position_z = 19.13167, orientation = 5.480333805084228515 WHERE id = 5817;
+UPDATE creature SET position_x = 1618.9601, position_y = -4307.2847, position_z = 3.4172313, orientation = 5.410520553588867187 WHERE id = 3312;
+UPDATE creature SET position_x = 1568.6545, position_y = -4386.243, position_z = 5.6224384, orientation = 3.03687286376953125 WHERE id = 5597;
+UPDATE creature SET position_x = 1607.9185, position_y = -4376.4443, position_z = 9.884301, orientation = 4.066617012023925781 WHERE id = 13842;
+UPDATE creature SET position_x = 1594.382, position_y = -4378.3003, position_z = 9.926887, orientation = 3.455751895904541015 WHERE id = 5603;
+UPDATE creature SET position_x = 1622.9028, position_y = -4369.0645, position_z = 12.036872, orientation = 3.577924966812133789 WHERE id = 3320;
+UPDATE creature SET position_x = 1627.3177, position_y = -4376.068, position_z = 12.040944, orientation = 3.438298702239990234 WHERE id = 3309;
+UPDATE creature SET position_x = 1632.3872, position_y = -4381.9688, position_z = 12.027235, orientation = 3.577924966812133789 WHERE id = 3318;
+UPDATE creature SET position_x = 1676.2517, position_y = -4313.4517, position_z = 61.944496, orientation = 5.25344085693359375 WHERE id = 3310;
+UPDATE creature SET position_x = 1634.9028, position_y = -4265.078, position_z = 49.4597, orientation = 3.822271108627319335 WHERE id = 12796;
+UPDATE creature SET position_x = 1717.783, position_y = -4200.108, position_z = 51.96369, orientation = 4.433136463165283203 WHERE id = 5910;
+UPDATE creature SET position_x = 1784.441, position_y = -4205.354, position_z = 40.317265, orientation = 4.537856101989746093 WHERE id = 3342;
+UPDATE creature SET position_x = 1914.6528, position_y = -4226.5835, position_z = 42.405853, orientation = 0.663225114345550537 WHERE id = 4047;
+UPDATE creature SET position_x = 1920.9531, position_y = -4212.991, position_z = 42.40515, orientation = 5.410520553588867187 WHERE id = 5892;
+UPDATE creature SET position_x = 1932.8785, position_y = -4211.299, position_z = 42.40515, orientation = 6.248278617858886718 WHERE id = 3403;
+UPDATE creature SET position_x = 1937.842, position_y = -4222.8403, position_z = 42.40507, orientation = 3.787364482879638671 WHERE id = 13417;
+UPDATE creature SET position_x = 1933.6945, position_y = -4224.8613, position_z = 42.40515, orientation = 0.05235987901687622 WHERE id = 3344;
+UPDATE creature SET position_x = 1915.6719, position_y = -4170.7725, position_z = 41.232998, orientation = 0.750491559505462646 WHERE id = 16012;
+UPDATE creature SET position_x = 1905.7466, position_y = -4161.3696, position_z = 41.12697, orientation = 0.48869219422340393 WHERE id = 3144;
+UPDATE creature SET position_x = 1914.8351, position_y = -4123.9565, position_z = 43.303627, orientation = 5.323254108428955078 WHERE id = 17098;
+UPDATE creature SET position_x = 1939.6945, position_y = -4133.328, position_z = 41.227745, orientation = 4.171336650848388671 WHERE id = 23128;
+UPDATE creature SET position_x = 1891.599, position_y = -4326.7534, position_z = 23.479906, orientation = 0.261799395084381103 WHERE id = 3350;
+UPDATE creature SET position_x = 1890.8993, position_y = -4322.0938, position_z = 23.479908, orientation = 4.101523876190185546 WHERE id = 3351;
+UPDATE creature SET position_x = 1452.4341, position_y = -4179.8228, position_z = 44.3602, orientation = 6.056292533874511718 WHERE id = 6018;
+UPDATE creature SET position_x = 1461.0156, position_y = -4181.6772, position_z = 61.644062, orientation = 2.827433347702026367 WHERE id = 5994;
+UPDATE creature SET position_x = 1453.2379, position_y = -4185.646, position_z = 61.644062, orientation = 1.326450228691101074 WHERE id = 6014;
+UPDATE creature SET position_x = 1482.7223, position_y = -4159.9517, position_z = 44.104027, orientation = 0.837758064270019531 WHERE id = 3373;
+UPDATE creature SET position_x = 1472.481, position_y = -4224.597, position_z = 43.26931, orientation = 2.059488534927368164 WHERE id = 5883;
+UPDATE creature SET position_x = 1466.8785, position_y = -4229.9204, position_z = 43.26931, orientation = 1.186823844909667968 WHERE id = 7311;
+UPDATE creature SET position_x = 1468.1823, position_y = -4219.882, position_z = 43.26931, orientation = 5.951572895050048828 WHERE id = 5885;
+UPDATE creature SET position_x = 1473.5521, position_y = -4218.5747, position_z = 43.269306, orientation = 3.735004663467407226 WHERE id = 5882;
+UPDATE creature SET position_x = 1451.6354, position_y = -4209.347, position_z = 43.87207, orientation = 5.532693862915039062 WHERE id = 5882;
+UPDATE creature SET position_x = 1474.9688, position_y = -4223.1426, position_z = 59.30409, orientation = 2.967059612274169921 WHERE id = 5958;
+UPDATE creature SET position_x = 1580.0521, position_y = -4097.6772, position_z = 36.551445, orientation = 5.1836276054382324211 WHERE id = 3349;
+UPDATE creature SET position_z = 53.3911 WHERE id = 5640;
+UPDATE creature SET position_x = 1846.5348, position_y = -4325.6704, position_z = -15.392348, orientation = 3.804817676544189453 WHERE id = 3335;
+UPDATE creature SET position_x = 1820.7726, position_y = -4300.2256, position_z = -12.087057, orientation = 4.485496044158935546 WHERE id = 5816;
+UPDATE creature SET position_x = 1823.8785, position_y = -4302.5903, position_z = -12.087057, orientation = 3.787364482879638671 WHERE id = 3330;
+UPDATE creature SET position_x = 1834.6598, position_y = -4362.5225, position_z = -14.555535, orientation = 2.094395160675048828 WHERE id = 3325;
+UPDATE creature SET position_x = 1844.2084, position_y = -4353.6094, position_z = -14.571289, orientation = 3.31612563133239746 WHERE id = 3324;
+UPDATE creature SET position_x = 1850.3073, position_y = -4357.3037, position_z = -14.571293, orientation = 5.323254108428955078 WHERE id = 5875;
+UPDATE creature SET position_x = 1848.9618, position_y = -4360.432, position_z = -14.571293, orientation = 0.855211317539215087 WHERE id = 3326;
+UPDATE creature SET position_x = 1836.8577, position_y = -4347.132, position_z = -14.535177, orientation = 3.333578824996948242 WHERE id = 5815;
+UPDATE creature SET position_x = 1800.6649, position_y = -4374.514, position_z = -17.120588, orientation = 4.572762489318847656 WHERE id = 3216;
+UPDATE creature SET position_x = 1766.7135, position_y = -4367.3594, position_z = -15.711345, orientation = 5.619960308074951171 WHERE id = 3329;
+UPDATE creature SET position_x = 1805.2952, position_y = -4285.2534, position_z = 7.2008853, orientation = 3.141592741012573242 WHERE id = 3189;
+UPDATE creature SET position_x = 1762.8403, position_y = -4345.059, position_z = -7.7549095, orientation = 0.453785598278045654 WHERE id = 29143;
+UPDATE creature SET position_x = 1750.375, position_y = -4320.9097, position_z = 6.2213173, orientation = 0.872664630413055419 WHERE id = 3331;
+UPDATE creature SET position_x = 1762.875, position_y = -4296.3784, position_z = 7.7577996, orientation = 5.410520553588867187 WHERE id = 3328;
+UPDATE creature SET position_x = 1771.2101, position_y = -4284.413, position_z = 8.067481, orientation = 5.759586334228515625 WHERE id = 3401;
+UPDATE creature SET position_x = 1772.9445, position_y = -4279.9272, position_z = 8.177933, orientation = 5.358160972595214843 WHERE id = 6446;
+UPDATE creature SET position_x = 1778.5521, position_y = -4279.8784, position_z = 7.8189054, orientation = 4.625122547149658203 WHERE id = 3402;
+UPDATE creature SET position_x = 1792.342, position_y = -4279.375, position_z = 7.5642776, orientation = 4.747295379638671875 WHERE id = 3327;
+UPDATE creature SET position_x = 1811.0416, position_y = -4270.903, position_z = 7.3961387, orientation = 3.944444179534912109 WHERE id = 3334;
+UPDATE creature SET position_x = 2004.1805, position_y = -4719.799, position_z = 26.526588, orientation = 0.959931075572967529 WHERE guid = 54770;
+UPDATE creature SET position_x = 2131.1477, position_y = -4729.884, position_z = 50.657143, orientation = 2.600540637969970703 WHERE guid = 54750;
+UPDATE creature SET position_x = 2126.4133, position_y = -4738.087, position_z = 50.676067, orientation = 2.740166902542114257 WHERE guid = 54757;
+UPDATE creature SET position_x = 1963.0104, position_y = -4730.9062, position_z = 49.187786, orientation = 2.49582076072692871 WHERE guid = 54916;
+UPDATE creature SET position_x = 1902.6285, position_y = -4628.7935, position_z = 34.203224, orientation = 0.593411922454833984 WHERE guid = 54926;
+UPDATE creature SET position_x = 1910.2396, position_y = -4623.915, position_z = 34.203148, orientation = 3.735004663467407226 WHERE guid = 54743;
+UPDATE creature SET position_x = 1913.7944, position_y = -4559.678, position_z = 34.200012, orientation = 3.717551231384277343 WHERE guid = 54762;
+UPDATE creature SET position_x = 1906.2535, position_y = -4564.205, position_z = 34.202755, orientation = 0.628318548202514648 WHERE guid = 54903;
+UPDATE creature SET position_x = 1889.526, position_y = -4485.0815, position_z = 21.537237, orientation = 1.448623299598693847 WHERE guid = 54909;
+UPDATE creature SET position_x = 1882.1545, position_y = -4483.991, position_z = 20.865744, orientation = 2.094395160675048828 WHERE guid = 54738;
+UPDATE creature SET position_x = 1829.2622, position_y = -4507.264, position_z = 21.683342, orientation = 4.956735134124755859 WHERE guid = 54759;
+UPDATE creature SET position_x = 1596.6459, position_y = -4388.6665, position_z = 10.210176, orientation = 5.98647928237915039 WHERE guid = 54744;
+UPDATE creature SET position_x = 1615.6354, position_y = -4376.113, position_z = 12.628747, orientation = 4.24114990234375 WHERE guid = 54754;
+UPDATE creature SET position_x = 1668.5573, position_y = -4323.663, position_z = 61.556442, orientation = 5.969026088714599609 WHERE guid = 54900;
+UPDATE creature SET position_x = 1620.4548, position_y = -4252.837, position_z = 47.754276, orientation = 3.700098037719726562 WHERE guid = 54755;
+UPDATE creature SET position_x = 1673.1044, position_y = -4250.0337, position_z = 52.128933, orientation = 5.044001579284667968 WHERE guid = 54913;
+UPDATE creature SET position_x = 1902.1389, position_y = -4275.212, position_z = 32.025604, orientation = 4.171336650848388671 WHERE guid = 54766;
+UPDATE creature SET position_x = 1886.1962, position_y = -4546.6807, position_z = 28.741745, orientation = 1.099557399749755859 WHERE guid = 54748;
+UPDATE creature SET position_x = 1696.0243, position_y = -4463.7065, position_z = 20.379148, orientation = 2.39110112190246582 WHERE guid = 54736;
+UPDATE creature SET position_x = 1384.6163, position_y = -4358.5557, position_z = 27.325195, orientation = 4.434017181396484375 WHERE guid = 54752;
+UPDATE creature SET position_x = 1603.4791, position_y = -4449.9478, position_z = 8.343441, orientation = 2.39110112190246582 WHERE guid = 54753;
+UPDATE creature SET position_x = 1387.2778, position_y = -4379.8926, position_z = 27.325195, orientation = 2.049943923950195312 WHERE guid = 54910;
+UPDATE creature SET position_x = 1481.7726, position_y = -4427.7915, position_z = 25.545673, orientation = 2.572782754898071289 WHERE guid = 54923;
+UPDATE creature SET position_x = 1479.3854, position_y = -4406.25, position_z = 25.54567, orientation = 3.817284584045410156 WHERE guid = 54920;
+UPDATE creature SET position_x = 1552.4149, position_y = -4324.7534, position_z = 22.02987, orientation = 5.515240192413330078 WHERE guid = 54769;
+UPDATE creature SET position_x = 1561.7935, position_y = -4360.4966, position_z = 1.4214883, orientation = 4.852015495300292968 WHERE guid = 54760;
+UPDATE creature SET position_x = 1557.7413, position_y = -4364.2466, position_z = 1.3066543, orientation = 0.226892799139022827 WHERE guid = 54928;
+UPDATE creature SET position_x = 1576.2031, position_y = -4394.432, position_z = 6.7819896, orientation = 4.572762489318847656 WHERE guid = 54908;
+UPDATE creature SET position_x = 1688.526, position_y = -4474.5767, position_z = 20.380627, orientation = 1.954768776893615722 WHERE guid = 54768;
+UPDATE creature SET position_x = 1672.2778, position_y = -4473.1978, position_z = 20.380634, orientation = 1.448623299598693847 WHERE guid = 54758;
+UPDATE creature SET position_x = 1689.9948, position_y = -4279.854, position_z = 32.357296, orientation = 4.118977069854736328 WHERE guid = 54740;
+UPDATE creature SET position_x = 1628.8923, position_y = -4274.7603, position_z = 24.312424, orientation = 5.131268024444580078 WHERE guid = 54906;
+UPDATE creature SET position_x = 1623.1476, position_y = -4279.637, position_z = 22.79634, orientation = 6.161012172698974609 WHERE guid = 54912;
+UPDATE creature SET position_x = 1952.5278, position_y = -4368.5747, position_z = 22.88594, orientation = 3.682644605636596679 WHERE guid = 54914;
+UPDATE creature SET position_x = 1950.8889, position_y = -4374.6895, position_z = 22.2699, orientation = 2.705260276794433593 WHERE guid = 54765;
+UPDATE creature SET position_x = 1566.4497, position_y = -4179.1807, position_z = 41.25547, orientation = 5.427973747253417968 WHERE guid = 54741;
+UPDATE creature SET position_x = 1566.2188, position_y = -4194.0728, position_z = 42.897797, orientation = 0.157079637050628662 WHERE guid = 54747;
+UPDATE creature SET position_x = 1759.0295, position_y = -4301.8926, position_z = 7.243084, orientation = 5.462880611419677734 WHERE guid = 54901;
+UPDATE creature SET position_x = 1775.0747, position_y = -4319.913, position_z = -7.6516075, orientation = 5.602506637573242187 WHERE guid = 54921;
+UPDATE creature SET position_x = 1817.0764, position_y = -4357.137, position_z = -9.589464, orientation = 2.30383467674255371 WHERE guid = 54737;
+UPDATE creature SET position_x = 1938.9497, position_y = -4130.733, position_z = 41.22026, orientation = 4.014257431030273437 WHERE guid = 86346;
+UPDATE creature SET position_x = 1942.3195, position_y = -4133.684, position_z = 41.23194, orientation = 3.822271108627319335 WHERE guid = 126614;
+UPDATE creature SET position_x = 1920.62, position_y = -4365.93, position_z = 22.9477, orientation = 0.296706 WHERE guid = 54922;
+UPDATE creature SET position_x = 2049.3, position_y = -4629.26, position_z = 51.0382, orientation = 0.434071 WHERE guid = 54739;
+UPDATE creature SET position_z = 22.7165 WHERE guid = 54911;
+UPDATE creature SET position_z = 56.992 WHERE guid = 102183;
+UPDATE creature SET position_z = 51.7776 WHERE guid = 54905;
+UPDATE creature SET position_z = 51.7777 WHERE guid = 54756;
+UPDATE creature SET position_z = 51.7777 WHERE guid = 54742;
+UPDATE creature SET position_z = 51.7773 WHERE guid = 54925;
+UPDATE creature SET position_z = 39.4804 WHERE guid = 54767;
+UPDATE creature SET position_z = 37.9385 WHERE guid = 54927;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(40112, 14304, 1, 1, 1, 0, 0, 1941.71, -4124.25, 43.7699, 3.90954, 300, 300, 0, 0, 0, 0, 0, 0),
+(40116, 14304, 1, 1, 1, 0, 0, 1924.73, -4245.42, 42.1677, 6.24828, 300, 300, 0, 0, 0, 0, 0, 0),
+(40128, 14304, 1, 1, 1, 0, 0, 1927.04, -4123.48, 43.2758, 4.45059, 300, 300, 0, 0, 0, 0, 0, 0),
+(40129, 14304, 1, 1, 1, 0, 0, 1914.56, -4136.63, 40.7184, 4.69494, 300, 300, 0, 0, 0, 0, 0, 0),
+(40130, 14304, 1, 1, 1, 0, 0, 1931.52, -4244.77, 42.1479, 2.98451, 300, 300, 0, 0, 0, 0, 0, 0),
+(40134, 14304, 1, 1, 1, 0, 0, 1944.36, -4146.45, 41.185, 3.26377, 300, 300, 0, 0, 0, 0, 0, 0),
+(53869, 14304, 1, 1, 1, 0, 0, 1919.36, -4176.05, 41.2319, 0.0523599, 300, 300, 0, 0, 0, 0, 0, 0),
+(40115, 14304, 1, 1, 1, 0, 0, 1928.03, -4246.21, 41.6868, 4.75941, 300, 300, 0, 0, 0, 0, 0, 2),
+(53876, 14304, 1, 1, 1, 0, 0, 1910.21, -4169.48, 41.2353, 0.837758, 300, 300, 0, 0, 0, 0, 0, 0),
+(54452, 14304, 1, 1, 1, 0, 0, 1933.29, -4168.81, 41.2367, 2.37365, 300, 300, 0, 0, 0, 0, 0, 0),
+(54453, 14304, 1, 1, 1, 0, 0, 1944.79, -4168.14, 43.7714, 2.3911, 300, 300, 0, 0, 0, 0, 0, 0),
+(54526, 14304, 1, 1, 1, 0, 0, 1928.19, -4203.37, 42.2767, 4.69494, 300, 300, 0, 0, 0, 0, 0, 0),
+(54541, 14304, 1, 1, 1, 0, 0, 1926.54, -4135.56, 40.7127, 4.7822, 300, 300, 0, 0, 0, 0, 0, 0),
+(54542, 14304, 1, 1, 1, 0, 0, 1924.79, -4238.43, 42.2415, 5.20108, 300, 300, 0, 0, 0, 0, 0, 0),
+(54546, 14304, 1, 1, 1, 0, 0, 1898.44, -4128.35, 43.7535, 5.51524, 300, 300, 0, 0, 0, 0, 0, 0),
+(54552, 14304, 1, 1, 1, 0, 0, 1898.32, -4149.7, 41.2145, 0.10472, 300, 300, 0, 0, 0, 0, 0, 0),
+(54559, 14304, 1, 1, 1, 0, 0, 1951.96, -4145.71, 43.7754, 3.22886, 300, 300, 0, 0, 0, 0, 0, 0),
+(40132, 14304, 1, 1, 1, 0, 0, 1902.47, -4150.23, 40.9349, 3.21379, 300, 300, 0, 0, 0, 0, 0, 2),
+(2815, 14304, 1, 1, 1, 0, 0, 1890.67, -4150.02, 43.7727, 0.0872665, 300, 300, 0, 0, 0, 0, 0, 0),
+(2888, 14304, 1, 1, 1, 0, 0, 1901.27, -4171.16, 43.7904, 0.994838, 300, 300, 0, 0, 0, 0, 0, 0),
+(2982, 14304, 1, 1, 1, 0, 0, 1912.25, -4124.2, 43.3439, 4.97419, 300, 300, 0, 0, 0, 0, 0, 0),
+(3048, 14304, 1, 1, 1, 0, 0, 1930.46, -4238.26, 42.2433, 4.39823, 300, 300, 0, 0, 0, 0, 0, 0),
+(3115, 14304, 1, 1, 1, 0, 0, 1922.2, -4204.38, 42.2973, 4.92183, 300, 300, 0, 0, 0, 0, 0, 0),
+(3163, 14304, 1, 1, 1, 0, 0, 1927.48, -4175.91, 41.2322, 3.15905, 300, 300, 0, 0, 0, 0, 0, 0);
+DELETE FROM creature_movement WHERE id IN (40132,40115);
+INSERT INTO `creature_movement` (`Id`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`, `Comment`) VALUES
+(40132, 1, 1904.29, -4149.22, 40.9247, 0, 0, 0, NULL),
+(40132, 2, 1907.24, -4148.9, 40.4052, 0, 0, 0, NULL),
+(40132, 3, 1935.98, -4146.76, 40.3551, 0, 0, 0, NULL),
+(40132, 4, 1939.34, -4146.55, 40.8738, 0, 0, 0, NULL),
+(40132, 5, 1941.56, -4146.41, 40.8738, 0, 0, 0, NULL),
+(40132, 6, 1938.78, -4146.7, 40.8738, 0, 0, 0, NULL),
+(40132, 7, 1936.01, -4147.02, 40.3554, 0, 0, 0, NULL),
+(40132, 8, 1906.95, -4148.52, 40.4051, 0, 0, 0, NULL),
+(40132, 9, 1903.65, -4148.96, 40.9223, 0, 0, 0, NULL),
+(40115, 1, 1927.76, -4238.93, 41.9378, 0, 0, 0, NULL),
+(40115, 2, 1927.16, -4225.79, 42.0952, 0, 0, 0, NULL),
+(40115, 3, 1926.9, -4222.44, 40.9472, 0, 0, 0, NULL),
+(40115, 4, 1926.17, -4214.07, 40.9472, 0, 0, 0, NULL),
+(40115, 5, 1926, -4211.83, 42.0298, 0, 0, 0, NULL),
+(40115, 6, 1925.04, -4201.23, 41.9278, 0, 0, 0, NULL),
+(40115, 7, 1924.26, -4184.18, 41.9316, 0, 0, 0, NULL),
+(40115, 8, 1923.78, -4179.16, 40.9267, 0, 0, 0, NULL),
+(40115, 9, 1922.11, -4166.08, 40.9036, 0, 0, 0, NULL),
+(40115, 10, 1921.89, -4163.02, 40.3834, 0, 0, 0, NULL),
+(40115, 11, 1920.23, -4136.2, 40.3089, 0, 0, 0, NULL),
+(40115, 12, 1922.66, -4163.07, 40.3826, 0, 0, 0, NULL),
+(40115, 13, 1922.74, -4165.29, 40.9019, 0, 0, 0, NULL),
+(40115, 14, 1923.38, -4179.26, 40.9256, 0, 0, 0, NULL),
+(40115, 15, 1923.64, -4182.61, 41.9333, 0, 0, 0, NULL),
+(40115, 16, 1925.69, -4210.79, 42.0951, 0, 0, 0, NULL),
+(40115, 17, 1925.93, -4214.14, 40.9467, 0, 0, 0, NULL),
+(40115, 18, 1926.58, -4223.91, 41.1487, 0, 0, 0, NULL),
+(40115, 19, 1926.69, -4225.58, 42.0951, 0, 0, 0, NULL),
+(40115, 20, 1927.33, -4235.07, 41.928, 0, 0, 0, NULL);
+
+DELETE FROM `questgiver_greeting` WHERE `Entry` in (1740,1938,1952,2055,2229,2277,2500,2934,3050,3428,4454,4630,5598,5636,5675,5878,6868,7802,10428,11259,11596,14567,19936);
+UPDATE `questgiver_greeting` SET `Text` = 'The Gordunni Ogres encroach upon our lands.  We send as many as are willing to face them in the desecrated ruins of Feralas. ' WHERE `Entry` = 7777 AND `Type` = 0;
+INSERT INTO `questgiver_greeting` VALUES (1740, 1, 'This collection of scrolls contains various logistic and strategic information, as well as coded correspondences.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (1938, 0, 'The Kirin Tor did not heed my warnings!  The Alliance is a sham.  Arugal is a wreckless fool.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (1952, 0, 'Hello, $c.  If you''re here, then you must know that Silverpine is saturated with our enemies.  To survive, the Forsaken must drive them back!', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (2055, 0, 'The Royal Apothecary Society shall heed The Dark Lady''s call to uncover the New Plague and drive Arthas and his heathen Scourge Army from the world once and for all.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (2229, 0, 'To think, the place the Warchief was born and raised lies so close.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (2277, 0, 'I have a great deal of work to do.  Are you here to aid me with my research?', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (2500, 0, 'They''re out there!  I can hear them at night, laughing.  Oh, they''ll pay!  They...will...pay!!', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (2934, 0, 'Knowledge is both tool and weapon to those with the will to use it.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (3050, 0, 'The tauren are sons and daughters of the Earthmother, and we show respect to all her children.  Even the beasts we slay are cherished, as their bodies give nourishment and their skins provide warmth.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (3428, 0, 'The dust of the Barrens parches my throat more and more every day, $N. But it is worth the sacrifice to remain here if it helps the Horde and the warchief.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (4454, 0, 'Aha!  Did you see that!  I think this new auto-spanner is going to do just the trick for my new influx manifold design.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (4630, 0, 'What a great day for racing! Oh, who am I kidding? Every day''s a great day for racing!', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (5598, 0, 'What do you ask of me?', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (5636, 0, 'What do you want? I''d be a whole lot happier up in the skies than grounded and yapping with a $r right now.$b$bGuess we can''t all get what we want.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (5675, 0, 'The summoning of beings from the chaos that lies beyond our world is essential to the mastery of the warlock arts, $N. I am glad to see the progress you have made.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (5878, 0, 'My vision has darkened, but there are many kinds of sight...', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (6868, 0, 'Whatcha need, $c?  I trust that you''ve come out to this wasteland for a reason other than idle chit chat.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (7802, 0, 'So few make it this far, even fewer make it past. Do not become a statistic, $N.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (10428, 0, 'Whitereach Post started off as a small hunting camp... Now, everyone wants to set up shop and call this home.$b$b<Motega shrugs his shoulder>', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (11259, 0, 'Desolace is not such a bad place, if you don''t mind the constant harassments from the centaurs.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (11596, 0, 'My business plan never accounted for housing giant kodos... maybe I should have gone into the underwater basket weaving business instead.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (14567, 0, 'These Mithril Order guys are sissies.', 0, 0);
+INSERT INTO `questgiver_greeting` VALUES (19936, 0, ' ', 0, 0);
+UPDATE `questgiver_greeting` SET `Text` = ' ' WHERE `Text` = '';
+
+UPDATE quest_template SET RequiredRaces = 512 WHERE entry IN (9618);
+UPDATE quest_template SET RequiredRaces = 1024 WHERE entry IN (9449, 9450, 9451);
+UPDATE quest_template SET RequiredRaces = 1024 , PrevQuestId = 9280 WHERE entry IN (9287, 9288, 9289, 9290, 9291, 9421);
+
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(2021, 142702, 0, 1, 1, -42.5312, -2481.28, 119.151, 2.94086, -0.416004, 0.113211, 0.893777, 0.123641, 1800, 3600, 100, 1),
+(18272, 142703, 0, 1, 1, -38.592, -2468.76, 121.659, 3.78737, 0.0935359, -0.0466347, -0.944858, 0.310355, 1800, 3600, 100, 1),
+(18274, 142704, 0, 1, 1, -38.4722, -2468.8, 121.807, 5.97776, 0.290411, 0.583498, -0.276992, 0.706022, 1800, 3600, 100, 1),
+(18278, 142705, 0, 1, 1, -43.7708, -2481.39, 118.982, 3.14159, 0, 0, -1, 0, 1800, 3600, 100, 1),
+(66191, 142706, 0, 1, 1, -43.8073, -2480.73, 118.917, 3.14159, 0, 0, -1, 0, 1800, 3600, 100, 1),
+(66192, 142707, 0, 1, 1, -38.7292, -2468.43, 121.504, 3.14255, 0.0610456, 0.00870991, -0.998096, 0.00100662, 1800, 3600, 100, 1),
+(18281, 142708, 0, 1, 1, -15.0868, -2789.53, 123.974, 0.916285, 0.705321, 0.172728, -0.672002, 0.145263, 1800, 3600, 100, 1),
+(18282, 142709, 0, 1, 1, -14.8472, -2789, 123.862, 4.2237, 0, 0, -0.857166, 0.51504, 1800, 3600, 100, 1),
+(66193, 142710, 0, 1, 1, -14.1372, -2789.71, 123.862, 3.14159, 0, 0, -1, 0, 1800, 3600, 100, 1),
+(66194, 142711, 0, 1, 1, -15.0243, -2789.39, 123.862, 3.14159, 0, 0, -1, 0, 1800, 3600, 100, 1),
+(66195, 142712, 0, 1, 1, -15.9653, -2789.68, 123.862, 3.14159, 0, 0, -1, 0, 1800, 3600, 100, 1),
+(66196, 142713, 0, 1, 1, -14.6562, -2460.39, 122.163, 3.14159, 0, 0, -1, 0, 1800, 3600, 100, 1),
+(18285, 142714, 0, 1, 1, -15.1615, -2460.22, 122.175, 3.1417, -0.086678, -0.104131, -0.990737, 0.00916097, 1800, 3600, 100, 1);
+DELETE FROM gameobject_questrelation WHERE quest = 2933;
+INSERT INTO gameobject_questrelation (id, quest) VALUES (142702, 2933), (142703, 2933), (142704, 2933), (142705, 2933), (142706, 2933), (142707, 2933), (142708, 2933), (142709, 2933), (142710, 2933), (142711, 2933), (142712, 2933), (142713, 2933), (142714, 2933);
+UPDATE `gameobject_template` SET `type` = '2', `flags` = '4', `data1` = '2419' WHERE `entry` IN (142708,142709,142710,142711);
+
+UPDATE trainer_greeting SET Text = 'There is no treat finer than Barbecued Buzzard Wing.' WHERE Entry = 2818;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 5164;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 7230;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 7231;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 7232;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 7406;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 7866;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 7867;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 7868;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 7869;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 7870;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 7871;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 7944;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 8126;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 11146;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 11177;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 11178;
+UPDATE trainer_greeting SET Text = 'There''s more than one way to cook a fish.' WHERE Entry = 19186;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 20124;
+UPDATE trainer_greeting SET Text = '' WHERE Entry = 20125;
+
+UPDATE quest_template SET RequestItemsText = NULL WHERE entry IN (5, 109, 163, 1361, 1464, 1489, 1679, 3570);
+UPDATE quest_template SET RequestItemsText = 'Yes?' WHERE entry = 219;
+UPDATE quest_template SET RequestItemsText = 'Where is my powder, $N? My need grows more desperate every day.' WHERE entry = 309;
+UPDATE quest_template SET RequestItemsText = 'Battle hard, $N. And do not despair, for despair is evil''s greatest weapon.' WHERE entry = 323;
+UPDATE quest_template SET RequestItemsText = 'Please be brief.  There is much danger about and we cannot stand idle in conversation.' WHERE entry = 435;
+UPDATE quest_template SET RequestItemsText = 'The time for talk is done. Protect Kinelory if you care about the people of Hillsbrad at all.' WHERE entry = 660;
+UPDATE quest_template SET RequestItemsText = 'This is no time to talk! The goggles need to be charged with the power of the stone!' WHERE entry = 665;
+UPDATE quest_template SET RequestItemsText = 'Do not delay, $N.  The Winterhoof Well''s taint must be removed!' WHERE entry = 754;
+UPDATE quest_template SET RequestItemsText = 'The Thunderhorn Water Well is still tainted, $N.  Please, you must perform the ritual!' WHERE entry = 758;
+UPDATE quest_template SET RequestItemsText = 'The last water well remains fetid and poisonous, $N.  You must not delay!' WHERE entry = 760;
+UPDATE quest_template SET RequestItemsText = 'Have you been to the Forgotten Pools, $N?  Did you find anything?' WHERE entry = 870;
+UPDATE quest_template SET RequestItemsText = 'The keyhole of this strongbox is filled with black resin.  It is impossible to open.' WHERE entry = 1393;
+UPDATE quest_template SET Details = 'Yeah, you''re obviously not the smartest $c to come into Stormwind, but you''re about to be one of the dumbest to never leave.$b$bHave you met me friends?' WHERE entry = 1447;
+UPDATE quest_template SET OfferRewardText = 'What do you want, $gladdy:missy;? Can''t you see I''ve got problems to take care of here? Who has time to stand around yapping with some $R chatterbox?$b$bThere are trolls coming out of the woodwork! Make it snappy.' WHERE entry = 1449;
+UPDATE quest_template SET OfferRewardText = 'I give you one in good faith. You already proved yourself once, but me tinkin'' you should be more careful in the future.' WHERE entry = 1463;
+UPDATE quest_template SET OfferRewardText = 'You were sent by Carendin? $N, then.$b$bDo not think light of me because my sight is gone. I see things that lie behind now, with clarity I had never known. What I once thought a curse, is now a boon.' WHERE entry = 1472;
+UPDATE quest_template SET RequestItemsText = 'Where is Tooga?' WHERE entry = 1560;
+UPDATE quest_template SET RequestItemsText = 'The only way you''ll get this mug is if you pry it from my cold, dead fingers...' WHERE entry = 1640;
+UPDATE quest_template SET RequestItemsText = 'We''ll make our stand at the house!' WHERE entry = 1651;
+UPDATE quest_template SET RequestItemsText = 'Time is wasting, $N.  If I were you, I''d get going...' WHERE entry = 1699;
+UPDATE quest_template SET RequestItemsText = 'Have you completed your challenge?' WHERE entry = 1719;
+UPDATE quest_template SET RequestItemsText = 'A surprise raid on the Scarlet Crusade''s tenuous forward position will give us a buffer of time to be able to march on Andorhal.  I trust you are here to report success!$b$bOnce this is successfully executed, we will need to work diligently and quickly.  We do not have the materiel and manpower to fight both the Scourge and the Scarlet Crusade at the same time if they do not buy our little ruse.' WHERE entry = 5096;
+UPDATE quest_template SET RequestItemsText = '...' WHERE entry = 5126;
+UPDATE quest_template SET OfferRewardText = 'Well, here you are, $n - the completed Skeleton Key.  I am certain as I can be that this key will allow you within the confines of the Scholomance.  There''s only one way to be absolutely sure it works, though.  Waste no time in trying it out, I say.$b$bGood luck, mighty hero.  May you continue to bring light unto the darkness!', RequestItemsText = NULL WHERE entry = 5505;
+UPDATE quest_template SET OfferRewardText = 'Well, here you are, $n - the completed Skeleton Key.  I am certain as I can be that this key will allow you within the confines of the Scholomance.  There''s only one way to be absolutely sure it works, though.  Waste no time in trying it out, I say.$b$bGood luck, mighty hero.  May your victories continue to bring you fame and power as you lay waste to Scholomance!', RequestItemsText = NULL WHERE entry = 5511;
+UPDATE quest_template SET OfferRewardText = 'Arbington said you''d deliver the goods, and deliver you have! A deal is a deal; let me pack the fragments into the mold for you.$b$bDid Arbington imbue them already? Excellent... otherwise, it would have been a long trip back to the Chillwind Point for you.',
+RequestItemsText = 'Yeah, I know who you are, and I know why you''re here. Arbington sent word to me before you arrived. Let''s cut to deal at hand, now shall we?$b$bI''ve got a mold you can use for the skeleton key, but it will cost you - fifteen gold, up front, no negotiation. I''ll pack the skeletal fragments into the mold for you, and I''ll also teach you on how to forge the stem of the key without any knowledge of blacksmithing... all free of charge no less.$b$bWho says mercenaries don''t offer competitive deals!'
+WHERE entry = 5538;
+UPDATE quest_template SET OfferRewardText = 'This new insignia reflects your rank amongst the Frostwolf. Keep it on you at all times.$b$bAnd $c... Die with honor!', RequestItemsText = '<Warmaster Laggrond salutes you.>$b$bIt is your time, $N. You have done much for the Frostwolf Clan and in doing so, earned a place as not only a soldier of Frostwolf but also as a friend.$b$bWell done! Present your initiate''s insignia.' WHERE entry = 7163;
+UPDATE quest_template SET RequestItemsText = 'Most do not live long enough to rise above their own mediocrity. You have proven yourself to be an exemplary soldier, $c. The time has come.$b$bPresent your insignia.' WHERE entry = 7168;
+UPDATE quest_template SET RequestItemsText = 'It is good to see you again, $c. I had not expected you to return. Alas, you have proven yourself a brave and honorable soldier of the Frostwolf.$b$bYour time has come again, $N. You have earned a new ranking and as such, a new insignia denoting this rise in stature.$b$bPresent your insignia.' WHERE entry = 7164;
+UPDATE quest_template SET RequestItemsText = 'The base buzzes with news of your exploits in the Field of Strife! You have struck mighty blows against our enemy - crushing their morale! For this, you have earned a rank of honor among the Stormpike.$b$bPresent your insignia.' WHERE entry = 7169;
+UPDATE quest_template SET OfferRewardText = '<Warmaster Laggrond roars.>$b$bThey have already begun telling tales of your deeds, soldier. The Stormpike shakes in fear when your name is uttered. Carry on!', RequestItemsText = 'So many slain. Blood drenches the fields. Yet... You live... You have persevered. You have led our armies to many victories. For this, then, soldier, you have earned a new rank.$b$bPresent your insignia.' WHERE entry = 7165;
+UPDATE quest_template SET RequestItemsText = 'I must know, $N. When you look directly into the eyes of the enemy, do you see fear? Do they now cower in your presence? They must realize that they are defeated!$b$bYou have earned reverence among the Guard. Present your insignia!' WHERE entry = 7170;
+UPDATE quest_template SET RequestItemsText = 'Your radiate command and power, $c. Exalted in the eyes of Frostwolf - the enemy cowers at the mention of your name.$b$bRise, Hero of Frostwolf. Rise and be honored!$b$bPresent your insignia.' WHERE entry = 7166;
+UPDATE quest_template SET OfferRewardText = 'Surely it will be you who carries the Eye of Command!', RequestItemsText = 'Before me stands an exalted hero of the Alliance.$b$b<Lieutenant Haggerdin salutes.>$b$bFew have earned such a rank among the Stormpike. I have watched the enemy fall before you. I have seen their resolve crumble in your presence. When you enter the fray, you become the beacon of hope for our forces!$b$bPresent your insignia.' WHERE entry = 7171;
+UPDATE quest_template SET RequestItemsText = 'Drek''Thar sings your praises. Kalimdor is abuzz with tales of your heroics. The Warchief glows - your stalwart defense of our clan has pleased him greatly.$b$bYou have earned the Eye of Command.$b$bPresent your insignia, Commander $N.' WHERE entry = 7167;
+UPDATE quest_template SET OfferRewardText = 'It is you who must lead our troops to victory, Commander! The soldiers are under your command. They will follow your direct orders. Lead them.... Crush the Frostwolf.', RequestItemsText = 'Let them hear your voice, Commander $N! Let them know fear. Show them what power the Stormpike holds in their rank!$b$bPresent your insignia.' WHERE entry = 7172;
+UPDATE quest_template SET RequestItemsText = 'You have the option of offering larger quantities of the blood taken from our enemies. I will be glad to accept gallon sized offerings, $N.' WHERE entry = 7385;
+UPDATE quest_template SET RequestItemsText = 'There are times which you may be entrenched in battle for days or weeks on end. During those longer periods of activity you may end up collecting large clusters of the Frostwolf''s storm crystals.$b$bThe Circle accepts such offerings, $N.' WHERE entry = 7386;
+
+UPDATE `creature_template` SET `SpeedWalk` = (2.5 / 2.5), `SpeedRun` = (8.0 / 7.0) WHERE (`Entry` IN  ('14285', '14282'));
+UPDATE `creature_template` SET `SpeedWalk` = 1 WHERE (`Entry` = 13145);
+UPDATE `creature_template` SET `SpeedWalk` = (2.5 / 2.5), `SpeedRun` = (8.0 / 7.0) WHERE (`Entry` IN  ('12051', '14282'));
+UPDATE `creature_template` SET `SpeedWalk` = 1 WHERE (`Entry` = 13146);
+
+DELETE FROM `creature` WHERE `guid` = 61750 AND `id` = 17136;
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 60890 AND `id` = 17136;
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) VALUES (60890, 17136),(60890, 17137);
+
+UPDATE `creature_template` SET `MechanicImmuneMask`='8388624' WHERE `entry`='9030';
+UPDATE `creature_template` SET `MechanicImmuneMask`='8389648' WHERE `entry`='9032';
+UPDATE `creature_template` SET `MechanicImmuneMask`='8388624' WHERE `entry`='9029';
+UPDATE `creature_template` SET `MechanicImmuneMask`='8388624' WHERE `entry`='9027';
+UPDATE `creature_template` SET `MechanicImmuneMask`='8388624' WHERE `entry`='9028';
+UPDATE `creature_template` SET `MechanicImmuneMask`='8388624', `MaxLootGold`='737' WHERE `entry`='9437';
+UPDATE `creature_template` SET `MechanicImmuneMask`='8388624', `MaxLootGold`='737', `MovementType`='0' WHERE `entry`='9438';
+UPDATE `creature_template` SET `MechanicImmuneMask`='8388624', `MaxLootGold`='761' WHERE `entry`='9439';
+UPDATE `creature_template` SET `MechanicImmuneMask`='8388624', `MaxLootGold`='998' WHERE `entry`='9441';
+UPDATE `creature_template` SET `MechanicImmuneMask`='8388624', `MaxLootGold`='737' WHERE `entry`='9442';
+UPDATE `creature_template` SET `MechanicImmuneMask`='8388624', `MaxLootGold`='761' WHERE `entry`='9443';
+UPDATE `creature_template` SET `MechanicImmuneMask`='8388624', `MaxLootGold`='761' WHERE `entry`='9476';
+UPDATE `creature_template` SET `MechanicImmuneMask`='76234719' WHERE `entry`='10076';
+
+SET @GROUP_ID := 44;
+SET @CREATURE_0 := 10744;
+SET @CREATURE_1 := 3196;
+SET @CREATURE_2 := 3200;
+SET @CREATURE_3 := 3241;
+SET @CREATURE_4 := 3248;
+SET @CREATURE_5 := 3297;
+SET @CREATURE_6 := 3332;
+DELETE FROM `creature` WHERE `id` = '1364';
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(@CREATURE_0, 1364, 0, 1, -2834.9870605469, -2870.6940917969, 32.6675491333, 3.875704765319820, 300, 300, 2, 1),
+(@CREATURE_1, 1364, 0, 1, -2659.9709472656, -2320.4445800781, 70.4773025513, 5.515240192413330, 300, 300, 2, 1),
+(@CREATURE_2, 1364, 0, 1, -2566.2189941406, -2350.4428710938, 80.0179977417, 0.379844337701797, 300, 300, 2, 1),
+(@CREATURE_3, 1364, 0, 1, -2946.4973144531, -2969.4484863281, 30.9222011566, 0.811208128929138, 300, 300, 2, 1),
+(@CREATURE_4, 1364, 0, 1, -2869.6140136719, -2941.6936035156, 33.7879409790, 0.151147961616516, 300, 300, 2, 1),
+(@CREATURE_5, 1364, 0, 1, -2931.105, -2973.809, 30.6708, 5.282537, 300, 300, 2, 1),
+(@CREATURE_6, 1364, 0, 1, -2927.9348144531, -2959.5249023438, 31.4318408966, 4.272197723388670, 300, 300, 2, 1);
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES
+(@GROUP_ID, 'Wetlands - Balgaras the Foul (1) Wandering 000', '0', '1', '0', '0');
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES
+(@GROUP_ID, @CREATURE_0, '0'),
+(@GROUP_ID, @CREATURE_1, '1'),
+(@GROUP_ID, @CREATURE_2, '2'),
+(@GROUP_ID, @CREATURE_3, '3'),
+(@GROUP_ID, @CREATURE_4, '4'),
+(@GROUP_ID, @CREATURE_5, '5'),
+(@GROUP_ID, @CREATURE_6, '6');
+
+DELETE FROM `dbscripts_on_quest_end` WHERE id = '1705';
+INSERT INTO dbscripts_on_quest_end(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(1705,0,0,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Grimand Elmore - Set Active Object'),
+(1705,0,1,29,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Grimand Elmore - Remove Quest Flags'),
+(1705,0,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3.8048,0,0,'Grimand Elmore - Set Facing'),
+(1705,0,3,0,0,0,0,0,0,0,2346,0,0,0,0,0,0,0,0,0,0,'Grimand Elmore - Say Text'),
+(1705,0,4,1,173,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Grimand Elmore - Emote State Work'),
+(1705,6000,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Grimand Elmore - Emotestate None'),
+(1705,7000,1,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Grimand Elmore - Face Player'),
+(1705,7000,2,1,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Grimand Elmore - Emote Question'),
+(1705,7000,3,0,0,0,0,0,0,0,2347,0,0,0,0,0,0,0,0,0,0,'Grimand Elmore - Say Text'),
+(1705,7000,4,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Grimand Elmore - Remove Active Object'),
+(1705,7000,5,29,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Grimand Elmore - Add Quest Flags');
+UPDATE `quest_template` SET `CompleteScript`='1705' WHERE `entry`='1705';
+
+UPDATE `creature` SET `position_x` = -4812.48,`position_y` = -1250.62,`position_z` = 502.014,`orientation` = 4.62512,`spawntimesecsmin` = 540,`spawntimesecsmax` = 540 WHERE `guid` = 9541;
+DELETE FROM `dbscripts_on_quest_end` WHERE id = '1708';
+INSERT INTO dbscripts_on_quest_end(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(1708,0,0,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Klockmort Spannerspan - Set Active Object'),
+(1708,0,1,29,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Klockmort Spannerspan - Remove Quest Flags'),
+(1708,0,2,3,0,0,0,0,0,0,0,0,0,0,0,-4814.891,-1250.5156,501.92575,0,0,0,'Klockmort Spannerspan - Move'),
+(1708,1000,0,1,173,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Klockmort Spannerspan - Emote State'),
+(1708,1000,1,0,0,0,0,0,0,0,2344,0,0,0,0,0,0,0,0,0,0,'Klockmort Spannerspan - Say Text'),
+(1708,7000,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Klockmort Spannerspan - Emote State'),
+(1708,8000,0,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Klockmort Spannerspan - Face Player'),
+(1708,8000,1,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Klockmort Spannerspan - Emote Cheer'),
+(1708,8000,2,0,0,0,0,0,0,0,2345,0,0,0,0,0,0,0,0,0,0,'Klockmort Spannerspan - Say Text'),
+(1708,11000,0,3,0,0,0,0,0,0,0,0,0,0,0,-4812.478,-1250.6177,501.94717,4.62512,0,0,'Klockmort Spannerspan - Move'),
+(1708,14000,0,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Klockmort Spannerspan - Remove Active Object'),
+(1708,14000,1,29,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Klockmort Spannerspan - Add Quest Flags');
+UPDATE `quest_template` SET `CompleteScript`='1708' WHERE `entry`='1708';
+
+DELETE FROM `dbscripts_on_quest_end` WHERE id = '1710';
+INSERT INTO dbscripts_on_quest_end(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(1710,0,0,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Mathiel - Set Active Object'),
+(1710,0,1,29,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Mathiel - Remove Quest Flags'),
+(1710,0,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3.45575,0,0,'Mathiel - Set Facing'),
+(1710,0,3,0,0,0,0,0,0,0,2348,0,0,0,0,0,0,0,0,0,0,'Mathiel - Say Text'),
+(1710,0,4,1,173,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Mathiel - Emote State Work'),
+(1710,6000,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Mathiel - Emotestate None'),
+(1710,7000,1,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Mathiel - Face Player'),
+(1710,7000,2,1,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Mathiel - Emote Question'),
+(1710,7000,3,0,0,0,0,0,0,0,2349,0,0,0,0,0,0,0,0,0,0,'Mathiel - Say Text'),
+(1710,7000,4,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Mathiel - Remove Active Object'),
+(1710,7000,5,29,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Mathiel - Add Quest Flags');
+UPDATE `quest_template` SET `CompleteScript`='1710' WHERE `entry`='1710';
+
+UPDATE `creature` SET `position_x` = '6427.71', `position_y` = '497.148', `position_z` = '8.10494', `orientation` = '4.74729', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =44228;
+DELETE FROM `dbscripts_on_quest_start` WHERE id = '947';
+INSERT INTO dbscripts_on_quest_start(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(947,0,0,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Barithras Moonshade - Face Player'),
+(947,0,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Barithras Moonshade - Emote Bow'),
+(947,0,2,0,0,0,0,0,0,0,1211,0,0,0,0,0,0,0,0,0,0,'Barithras Moonshade - Say Text'),
+(947,3000,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5.131268,0,0,'Barithras Moonshade - Set Orientation'),
+(947,3000,1,1,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Barithras Moonshade - Emote Point'),
+(947,3000,2,0,0,0,0,0,0,0,1210,0,0,0,0,0,0,0,0,0,0,'Barithras Moonshade - Say Text'),
+(947,10000,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4.747295,0,0,'Barithras Moonshade - Set Orientation'),
+(947,30000,0,31,3616,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Cave Mushrooms - Spam Prevention');
+UPDATE `quest_template` SET `StartScript`='947' WHERE `entry`='947';
+DELETE FROM conditions WHERE condition_entry IN (2420, 2421, 2422);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `flags`, `comments`) VALUES 
+('2420', '8', '949', '0', '1', 'Quest ID 949 not rewarded'),
+('2421', '8', '950', '0', '1', 'Quest ID 950 not rewarded');
+DELETE FROM `dbscripts_on_quest_end` WHERE id = '960';
+INSERT INTO dbscripts_on_quest_end(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(960,0,0,0,0,0,0,0,0,0,1219,0,0,0,0,0,0,0,0,0,0,'Onu is meditating - Say Text'),
+(960,20000,0,31,3616,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Onu is meditating - Spam Prevention');
+UPDATE `quest_template` SET `RequiredCondition`='2420', `PrevQuestId`='944', `SpecialFlags`='1', `CompleteScript`='960', `OfferRewardText`='I am meditating on your task, $N.  Meditating on reasons why the Twilight\'s Hammer and naga are here.$B$BWhen you are ready, use the phial of scrying to create a scrying bowl.  Then, contact me through the bowl.$B$BIf you have lost your phial of scrying, then here is another.' WHERE `entry`='960';
+DELETE FROM creature_questrelation WHERE id = '3616' AND quest = '960';
+INSERT INTO `creature_questrelation` (`id`, `quest`) VALUES ('3616', '960');
+DELETE FROM creature_involvedrelation WHERE id = '3616' AND quest = '960';
+INSERT INTO `creature_involvedrelation` (`id`, `quest`) VALUES ('3616', '960');
+UPDATE `creature` SET `position_x` = '5002.01', `position_y` = '88.8183', `position_z` = '52.7788', `orientation` = '1.74533', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =43139;
+DELETE FROM `dbscripts_on_quest_end` WHERE id = '961';
+INSERT INTO dbscripts_on_quest_end(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(961,0,0,0,0,0,0,0,0,0,1219,0,0,0,0,0,0,0,0,0,0,'Onu is meditating - Say Text'),
+(961,20000,0,31,3616,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Onu is meditating - Spam Prevention');
+UPDATE `quest_template` SET `RequiredCondition`='2421', `PrevQuestId`='949', `SpecialFlags`='1', `CompleteScript`='961' WHERE `entry`='961';
+UPDATE `quest_template` SET `RequiredRaces` = '1101' WHERE `entry` =960;
+
+UPDATE `creature` SET `position_x` = '-5497.94', `position_y` = '-455.835', `orientation` = '5.63683', `spawntimesecsmin` = '180', `spawntimesecsmax` = '180' WHERE `guid` =8624;
+DELETE FROM `dbscripts_on_quest_end` WHERE id = '412';
+INSERT INTO dbscripts_on_quest_end(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(412,0,1,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Set Active'),
+(412,0,2,29,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Remove QuestFlags'),
+(412,0,3,29,2,0,0,1268,5,0,0,0,0,0,0,0,0,0,0,0,0,'Ozzie Togglevolt - Remove QuestFlags'),
+(412,0,4,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Emote Talk'),
+(412,0,5,0,0,0,0,0,0,0,1883,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Say Text'),
+(412,0,6,20,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Change Movement');
+DELETE FROM `dbscripts_on_creature_movement` WHERE id IN (126901, 126902, 126903);
+INSERT INTO dbscripts_on_creature_movement(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(126901,1000,0,1,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Add EmoteState'),
+(126901,9000,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Remove EmoteState'),
+(126901,9000,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Emote Talk'),
+(126901,9000,2,0,0,0,0,0,0,0,1884,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Say Text'),
+(126902,1000,0,1,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Add EmoteState'),
+(126902,1000,1,0,0,0,0,0,0,0,1885,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Say Text'),
+(126902,4000,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Remove EmoteState'),
+(126902,4000,1,13,0,0,0,26449,15,9,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Activate Gameobject'),
+(126902,5000,0,45,5568,0,0,5568,15,7,0,0,0,0,0,0,0,0,0,0,0,'Captured Leper Gnome - Start Relay Script'),
+(126903,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Change Movement'),
+(126903,2000,0,29,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Add QuestFlags'),
+(126903,2000,1,29,2,1,0,1268,5,0,0,0,0,0,0,0,0,0,0,0,0,'Ozzie Togglevolt - Add QuestFlags'),
+(126903,2000,3,0,0,0,0,1268,15,0,1887,1888,1889,1890,0,0,0,0,0,0,0,'Ozzie Togglevolt - Say RND Text'),
+(126903,4000,2,0,0,0,0,0,0,0,1891,1892,1893,1894,0,0,0,0,0,0,0,'Razzle Sprysprocket - Say RND Text'),
+(126903,4000,3,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Razzle Sprysprocket - Remove Active');
+UPDATE `creature` SET `position_x` = '-5498.29', `position_y` = '-457.874', `position_z` = '395.644', `orientation` = '0.10472', `spawntimesecsmin` = '180', `spawntimesecsmax` = '180' WHERE `guid` =8623;
+DELETE FROM `dbscripts_on_relay` WHERE id = 5568;
+INSERT INTO dbscripts_on_relay(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(5568,1000,0,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Captured Leper Gnome - Set Active'),
+(5568,1000,0,0,0,0,0,0,0,0,1886,0,0,0,0,0,0,0,0,0,0,'Captured Leper Gnome - Say Text'),
+(5568,19000,0,15,7344,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Captured Leper Gnome - Cast Spell'),
+(5568,20000,0,25,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Captured Leper Gnome - Set Run'),
+(5568,27000,0,20,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Captured Leper Gnome - Change Movement');
+UPDATE `quest_template` SET `CompleteScript`='412' WHERE `entry`='412';
+SET @PATH := 1269;
+DELETE FROM creature_movement_template WHERE `Entry` = @PATH;
+INSERT INTO `creature_movement_template` (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES 
+(@PATH,1,1,-5496.711,-455.32004,395.43747,0.81,10000,126901),
+(@PATH,1,2,-5499.78,-454.44302,395.43747,1.137,6000,126902),
+(@PATH,1,3,-5497.935,-455.8348,395.3923,100,1000,126903);
+UPDATE `creature` SET `position_x` = '-5490.56', `position_y` = '-454.01', `position_z` = '398.021', `orientation` = '3.78736', `spawntimesecsmin` = '5', `spawntimesecsmax` = '5' WHERE `guid` =8636;
+SET @PATH := 5568;
+DELETE FROM creature_movement_template WHERE `Entry` = @PATH;
+INSERT INTO `creature_movement_template` (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`, `Comment`) VALUES 
+(@PATH,1,1,-5492.2705,-455.6094,395.84845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,2,-5493.5205,-456.8594,395.84845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,3,-5493.5205,-458.1094,395.84845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,4,-5493.0205,-459.3594,395.84845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,5,-5493.0205,-460.8594,395.59845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,6,-5494.5205,-461.6094,395.59845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,7,-5496.2705,-460.3594,395.59845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,8,-5496.7705,-458.6094,395.84845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,9,-5497.2705,-457.1094,395.84845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,10,-5496.0205,-455.6094,395.84845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,11,-5494.5205,-455.3594,395.84845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,12,-5493.0205,-455.6094,395.84845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,13,-5491.5205,-457.8594,395.84845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,14,-5490.2705,-458.3594,395.84845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,15,-5487.5205,-459.3594,395.84845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,16,-5485.2705,-460.1094,397.09845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,17,-5482.7705,-460.3594,398.09845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,18,-5481.2705,-461.1094,398.59845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,20,-5473.5205, -463.8594,398.34845,100,0,0,'Custom - Pathfinding issue'),
+(@PATH,1,21,-5469.482,-466.7084,397.67603,100,0,0,''),
+(@PATH,1,22,-5455.209,-465.07974,398.12848,100,0,0,''),
+(@PATH,1,23,-5445.134,-448.56778,396.6922,100,0,0,''),
+(@PATH,1,24,-5446.2266,-440.6647,396.50348,100,0,0,''),
+(@PATH,1,25,-5452.378,-427.95706,399.07904,100,0,0,''),
+(@PATH,1,26,-5458.4814,-423.00104,399.98138,100,1000,1,'');
+
+UPDATE `creature_template` SET `SchoolImmuneMask`='16' WHERE `entry`='15989';
+UPDATE `creature_template` SET `MeleeBaseAttackTime`='3500' WHERE `entry`='16061';
+UPDATE `creature_template` SET `MeleeBaseAttackTime`='2000', `RangedBaseAttackTime`='2000' WHERE `entry`='16157';
+UPDATE `creature_template` SET `MinLootGold`='6500', `MaxLootGold`='6800' WHERE `entry`='16194';
+UPDATE `creature_template` SET `MinLootGold`='6500', `MaxLootGold`='6800' WHERE `entry`='16215';
+UPDATE `creature_template` SET `MinLootGold`='6500', `MaxLootGold`='6800' WHERE `entry`='16216';
+UPDATE `creature_template` SET `MechanicImmuneMask`='8388625' WHERE `entry`='16290';
+UPDATE `creature_template` SET `MinLootGold`='6500', `MaxLootGold`='6800' WHERE `entry`='16446';
+UPDATE `creature_template` SET `MeleeBaseAttackTime`='2000' WHERE `entry`='16448';
+UPDATE `creature_template` SET `MeleeBaseAttackTime`='2000', `MinLootGold`='6500', `MaxLootGold`='10432' WHERE `entry`='16449';
+UPDATE `creature_template` SET `MechanicImmuneMask`='1' WHERE `entry`='16698';
+UPDATE `creature_template` SET `SchoolImmuneMask` = 32 WHERE `entry` = 16243;
+UPDATE `creature_template` SET `MinLevel`='61', `MaxLevel`='61', `Faction` = '14', `MeleeBaseAttackTime`='1800', `MechanicImmuneMask`='1', `MinLootGold`='6051', `MaxLootGold`='7906', `LootId`='16243', `SchoolImmuneMask` = 16 WHERE `entry`='16783';
+UPDATE `creature_template` SET `MinLevel`='61', `MaxLevel`='61', `Faction` = '14', `MeleeBaseAttackTime`='1800', `MechanicImmuneMask`='1', `MinLootGold`='6051', `MaxLootGold`='7906', `LootId`='16243', `SchoolImmuneMask` = 4 WHERE `entry`='16784';
+UPDATE `creature_template` SET `MinLevel`='61', `MaxLevel`='61', `Faction` = '14', `MeleeBaseAttackTime`='1800', `MechanicImmuneMask`='1', `MinLootGold`='6051', `MaxLootGold`='7906', `LootId`='16243', `SchoolImmuneMask` = 8 WHERE `entry`='16785';
+UPDATE `creature_template` SET `MechanicImmuneMask`='1' WHERE `entry`='17055';
+
+UPDATE `creature_template` SET `GossipMenuId` = '0' WHERE `Entry` =2055;
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------

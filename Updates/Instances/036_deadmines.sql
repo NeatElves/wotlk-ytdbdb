@@ -9,6 +9,7 @@ EndDBScriptData */
 SET @CGUID := 3600000; -- creatures
 SET @OGUID := 3600000; -- gameobjects
 SET @PGUID := 45200; -- pools
+SET @SGUID := 3600000; -- spawngroup
 
 -- =========
 -- CREATURES
@@ -995,95 +996,9 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 
 UPDATE `creature` SET `spawnMask` = 0 WHERE `guid` BETWEEN @CGUID+200 AND @CGUID+207; -- SpawnFirstDeadminesPatrol()
 
--- ======
--- EVENTS
--- ======
-
--- INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
--- INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipment_id`, `spell_start`, `spell_end`, `event`) VALUES
--- INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
-
--- =======
--- POOLING
--- =======
-
-INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALUES
-(@PGUID+51, @PGUID+50, 0, 'Deadmines - Tin Vein / Silver Vein - #1'),
-(@PGUID+52, @PGUID+50, 0, 'Deadmines - Tin Vein / Silver Vein - #2'),
-(@PGUID+91, @PGUID+90, 0, 'Deadmines (Mast Room) - Chest Pool'),
-(@PGUID+92, @PGUID+90, 0, 'Deadmines (Goblin Foundry) - Chest Pool'),
-(@PGUID+93, @PGUID+90, 0, 'Deadmines (Ironclad Cove) - Chest Pool');
-
-INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
-(@PGUID+1, 1, 'Deadmines - Miner Johnson (3586)'),
-(@PGUID+50, 5, 'Deadmines - Master Mineral Pool'),
-(@PGUID+51, 1, 'Deadmines - Tin Vein / Silver Vein - #1'),
-(@PGUID+52, 1, 'Deadmines - Tin Vein / Silver Vein - #2'),
-(@PGUID+70, 3, 'Deadmines - Food Crate / Barrel of Milk Pool'),
-(@PGUID+90, 2, 'Deadmines - Master Chest Pool'),
-(@PGUID+91, 1, 'Deadmines (Mast Room) - Chest Pool'),
-(@PGUID+92, 1, 'Deadmines (Goblin Foundry) - Chest Pool'),
-(@PGUID+93, 1, 'Deadmines (Ironclad Cove) - Chest Pool');
-
-INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALUES
-(@CGUID+96, @PGUID+1, 20, 'Deadmines - Miner Johnson (3586)'),
-(@CGUID+207, @PGUID+1, 0, 'Deadmines - Miner Johnson (Substitute)');
-
--- INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
-
-INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
-(@OGUID+31, @PGUID+50, 0, 'Deadmines - Copper Vein (1731)'),
-(@OGUID+32, @PGUID+50, 0, 'Deadmines - Copper Vein (1731)'),
-(@OGUID+33, @PGUID+50, 0, 'Deadmines - Copper Vein (1731)'),
-(@OGUID+34, @PGUID+50, 0, 'Deadmines - Copper Vein (1731)'),
-(@OGUID+35, @PGUID+50, 0, 'Deadmines - Copper Vein (1731)'),
-(@OGUID+36, @PGUID+50, 0, 'Deadmines - Copper Vein (1731)'),
-(@OGUID+37, @PGUID+50, 0, 'Deadmines - Copper Vein (1731)'),
-(@OGUID+38, @PGUID+50, 0, 'Deadmines - Copper Vein (1731)'),
-(@OGUID+51, @PGUID+50, 0, 'Deadmines - Tin Vein (1732)'),
-(@OGUID+53, @PGUID+50, 0, 'Deadmines - Tin Vein (1732)'),
-(@OGUID+54, @PGUID+50, 0, 'Deadmines - Tin Vein (1732)'),
-(@OGUID+55, @PGUID+50, 0, 'Deadmines - Tin Vein (1732)'),
-(@OGUID+57, @PGUID+50, 0, 'Deadmines - Tin Vein (1732)'),
-(@OGUID+58, @PGUID+50, 0, 'Deadmines - Tin Vein (1732)'),
-(@OGUID+59, @PGUID+50, 0, 'Deadmines - Tin Vein (1732)'),
-(@OGUID+60, @PGUID+50, 0, 'Deadmines - Tin Vein (1732)'),
-(@OGUID+61, @PGUID+50, 0, 'Deadmines - Tin Vein (1732)'),
-
-(@OGUID+52, @PGUID+51, 0, 'Deadmines - Tin Vein (1732)'),
-(@OGUID+71, @PGUID+51, 0, 'Deadmines - Silver Vein (1733)'),
-
-(@OGUID+56, @PGUID+52, 0, 'Deadmines - Tin Vein (1732)'),
-(@OGUID+72, @PGUID+52, 0, 'Deadmines - Silver Vein (1733)'),
-
-(@OGUID+81, @PGUID+70, 0, 'Deadmines - Food Crate, Barrel of Milk (3662,3705)'),
-(@OGUID+82, @PGUID+70, 0, 'Deadmines - Food Crate, Barrel of Milk (3662,3705)'),
-(@OGUID+83, @PGUID+70, 0, 'Deadmines - Food Crate, Barrel of Milk (3662,3705)'),
-(@OGUID+84, @PGUID+70, 0, 'Deadmines - Food Crate, Barrel of Milk (3662,3705)'),
-(@OGUID+85, @PGUID+70, 0, 'Deadmines - Food Crate, Barrel of Milk (3662,3705)'),
-
-(@OGUID+101, @PGUID+91, 0, 'Deadmines - Large Battered Chest (75293)'), -- Mast Room
-(@OGUID+102, @PGUID+91, 0, 'Deadmines - Large Battered Chest (75293)'), -- Mast Room
-
-(@OGUID+103, @PGUID+92, 0, 'Deadmines - Large Battered Chest (75293)'), -- Goblin Foundry
-
-(@OGUID+104, @PGUID+93, 0, 'Deadmines - Large Battered Chest (75293)'), -- Ironclad Cove
-(@OGUID+105, @PGUID+93, 0, 'Deadmines - Large Battered Chest (75293)'), -- Ironclad Cove
-(@OGUID+106, @PGUID+93, 0, 'Deadmines - Large Battered Chest (75293)'), -- Ironclad Cove
-(@OGUID+107, @PGUID+93, 0, 'Deadmines - Large Battered Chest (75293)'); -- Ironclad Cove
-
--- INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
-
 -- ===========
 -- GAMEOBJECTS
 -- ===========
-
-INSERT INTO gameobject_spawn_entry (guid, entry) VALUES
-(@OGUID+81, 3662), (@OGUID+81, 3705), -- Food Crate, Barrel of Milk
-(@OGUID+82, 3662), (@OGUID+82, 3705), -- Food Crate, Barrel of Milk
-(@OGUID+83, 3662), (@OGUID+83, 3705), -- Food Crate, Barrel of Milk
-(@OGUID+84, 3662), (@OGUID+84, 3705), -- Food Crate, Barrel of Milk
-(@OGUID+85, 3662), (@OGUID+85, 3705); -- Food Crate, Barrel of Milk
 
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
 (@OGUID+1, 13965, 36, -191.414443969726562, -457.44580078125, 54.43914413452148437, 1.692966461181640625, 0, 0, 0.74895477294921875, 0.662621140480041503, 180, 180, 100, 1), -- Factory Door
@@ -1108,30 +1023,6 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 (@OGUID+20, 144111, 36, 2.690864086151123046, -781.6328125, 9.769848823547363281, 2.338739633560180664, 0, 0, 0.920504570007324218, 0.3907318115234375, 86400, 86400, 100, 1), -- Smite's Chest
 (@OGUID+21, 180024, 36, -32.1232, -374.64, 59.06, 3.082, 0, 0, 0.999556, 0.0297919, -300, -300, 100, 1), -- Mysterious Deadmines Chest
 -- RE-USE
-(@OGUID+31, 1731, 36, -81.0082473754882812, -394.328826904296875, 61.52583694458007812, 0.436331570148468017, 0, 0, 0.216439247131347656, 0.976296067237854003, 86400, 86400, 100, 1), -- Copper Vein
-(@OGUID+32, 1731, 36, -286.103515625, -577.5823974609375, 50.98287582397460937, -0.06981168687343597, 0, 0, -0.03489875793457031, 0.999390840530395507, 86400, 86400, 100, 1), -- Copper Vein
-(@OGUID+33, 1731, 36, -56.90234375, -349.056304931640625, 57.40945053100585937, -1.06464958190917968, 0, 0, -0.507537841796875, 0.861629426479339599, 86400, 86400, 100, 1), -- Copper Vein
-(@OGUID+34, 1731, 36, -314.510162353515625, -592.76971435546875, 51.24377822875976562, 0.959930002689361572, 0, 0, 0.461748123168945312, 0.887011110782623291, 86400, 86400, 100, 1), -- Copper Vein
-(@OGUID+35, 1731, 36, -280.207794189453125, -603.55157470703125, 53.0013427734375, -0.22689247131347656, 0, 0, -0.11320304870605468, 0.993571877479553222, 86400, 86400, 100, 1), -- Copper Vein
-(@OGUID+36, 1731, 36, -130.780868530273437, -386.42681884765625, 60.46846389770507812, -2.4085543155670166, 0, 0, -0.93358039855957031, 0.358368009328842163, 86400, 86400, 100, 1), -- Copper Vein
-(@OGUID+37, 1731, 36, -277.478, -572.826, 52.6279, 5.23599, 0, 0, -0.5, 0.866025, 86400, 86400, 100, 1), -- Copper Vein
-(@OGUID+38, 1731, 36, -75.6958, -407.331, 56.1338, 4.34587, 0, 0, -0.824126, 0.566406, 86400, 86400, 100, 1), -- Copper Vein
--- 1731
-(@OGUID+51, 1732, 36, -127.871528625488281, -444.353607177734375, 57.16098403930664062, 0.349065214395523071, 0, 0, 0.173647880554199218, 0.984807789325714111, 86400, 86400, 100, 1), -- Tin Vein
-(@OGUID+52, 1732, 36, -211.942657470703125, -518.46002197265625, 52.86028289794921875, -2.33873963356018066, 0, 0, -0.92050457000732421, 0.3907318115234375, 86400, 86400, 100, 1), -- Tin Vein
-(@OGUID+53, 1732, 36, -106.249397277832031, -611.1182861328125, 16.69453239440917968, 2.251473426818847656, 0, 0, 0.902585029602050781, 0.430511653423309326, 86400, 86400, 100, 1), -- Tin Vein
-(@OGUID+54, 1732, 36, -146.761016845703125, -519.8096923828125, 55.09135055541992187, -0.62831687927246093, 0, 0, -0.30901622772216796, 0.95105677843093872, 86400, 86400, 100, 1), -- Tin Vein
-(@OGUID+55, 1732, 36, -140.056915283203125, -602.2091064453125, 17.77572059631347656, -1.37880921363830566, 0, 0, -0.636077880859375, 0.771624863147735595, 86400, 86400, 100, 1), -- Tin Vein
-(@OGUID+56, 1732, 36, -154.312820434570312, -393.339752197265625, 58.45208740234375, -2.19911456108093261, 0, 0, -0.8910064697265625, 0.453990638256072998, 86400, 86400, 100, 1), -- Tin Vein
-(@OGUID+57, 1732, 36, -174.634109497070312, -497.941314697265625, 55.847686767578125, -2.49581813812255859, 0, 0, -0.94832324981689453, 0.317305892705917358, 86400, 86400, 100, 1), -- Tin Vein
-(@OGUID+58, 1732, 36, -234.676925659179687, -492.15283203125, 51.55026626586914062, 2.059488296508789062, 0, 0, 0.857167243957519531, 0.515038192272186279, 86400, 86400, 100, 1), -- Tin Vein
-(@OGUID+59, 1732, 36, -139.255157470703125, -567.6728515625, 21.01113319396972656, -0.9773830771446228, 0, 0, -0.46947097778320312, 0.882947921752929687, 86400, 86400, 100, 1), -- Tin Vein
-(@OGUID+60, 1732, 36, -167.956, -411.293, 58.6313, 2.79252, 0, 0, 0.984807, 0.173652, 86400, 86400, 100, 1), -- Tin Vein
-(@OGUID+61, 1732, 36, -132.8860, -639.8724, 15.2255, 4.5316, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Tin Vein (guessed as per video)
--- 1732
-(@OGUID+71, 1733, 36, -211.942657470703125, -518.46002197265625, 52.86028289794921875, -2.33873963356018066, 0, 0, -0.92050457000732421, 0.3907318115234375, 86400, 86400, 100, 1), -- Silver Vein
-(@OGUID+72, 1733, 36, -154.312820434570312, -393.339752197265625, 58.45208740234375, -2.19911456108093261, 0, 0, -0.8910064697265625, 0.453990638256072998, 86400, 86400, 100, 1), -- Silver Vein
--- 1733
 (@OGUID+81, 0, 36, -144.899200439453125, -891.56048583984375, 4.309537887573242187, 1.518436193466186523, 0, 0, 0.6883544921875, 0.725374460220336914, 86400, 86400, 100, 1), -- Food Crate, Barrel of Milk
 (@OGUID+82, 0, 36, -103.5703125, -723.35870361328125, 8.494485855102539062, 0.698131501674652099, 0, 0, 0.342020034790039062, 0.939692676067352294, 86400, 86400, 100, 1), -- Food Crate, Barrel of Milk
 (@OGUID+83, 0, 36, -89.3314895629882812, -682.57379150390625, 7.423734188079833984, -2.63544416427612304, 0, 0, -0.96814727783203125, 0.250381410121917724, 86400, 86400, 100, 1), -- Food Crate, Barrel of Milk
@@ -1157,7 +1048,137 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 (@OGUID+104, 75293, 36, -121.300621032714843, -810.2078857421875, 16.96380233764648437, 1.762782454490661621, 0, 0, 0.771624565124511718, 0.636078238487243652, 86400, 86400, 100, 1), -- Large Battered Chest
 (@OGUID+105, 75293, 36, -77.7409439086914062, -788.59552001953125, 26.10969352722167968, 1.169368624687194824, 0, 0, 0.551936149597167968, 0.833886384963989257, 86400, 86400, 100, 1), -- Large Battered Chest
 (@OGUID+106, 75293, 36, -63.0889, -797.013, 39.0067, 1.55334, 0, 0, 0.700908, 0.713252, 86400, 86400, 100, 1), -- Large Battered Chest
-(@OGUID+107, 75293, 36, -155.300460815429687, -913.89617919921875, 10.28088092803955078, 0.907570183277130126, 0, 0, 0.438370704650878906, 0.898794233798980712, 86400, 86400, 100, 1); -- Large Battered Chest
+(@OGUID+107, 75293, 36, -155.300460815429687, -913.89617919921875, 10.28088092803955078, 0.907570183277130126, 0, 0, 0.438370704650878906, 0.898794233798980712, 86400, 86400, 100, 1), -- Large Battered Chest
+
+-- 1731
+(@OGUID + 110, 1731, 36, -81.0082473754882812, -394.328826904296875, 61.52583694458007812, 0.436331570148468017, 0, 0, 0.216439247131347656, 0.976296067237854003, 604800, 604800, 100, 1), -- Copper Vein
+(@OGUID + 111, 1731, 36, -75.6958541870117187, -407.331054687500000, 56.13377761840820312, 4.345870018005371093, 0, 0, -0.82412624359130859, 0.566406130790710449, 604800, 604800, 100, 1), -- Copper Vein
+(@OGUID + 112, 1731, 36, -56.9023437500000000, -349.056304931640625, 57.40945053100585937, 5.218535900115966796, 0, 0, -0.50753784179687500, 0.861629426479339599, 604800, 604800, 100, 1), -- Copper Vein
+(@OGUID + 113, 1731, 36, -130.780868530273437, -386.426818847656250, 60.46846389770507812, 3.874631166458129882, 0, 0, -0.93358039855957031, 0.358368009328842163, 604800, 604800, 100, 1), -- Copper Vein
+
+(@OGUID + 120, 1731, 36, -314.510162353515625, -592.769714355468750, 51.24377822875976562, 0.959929943084716796, 0, 0, 0.461748123168945312, 0.887011110782623291, 604800, 604800, 100, 1), -- Copper Vein
+(@OGUID + 121, 1731, 36, -277.478363037109375, -572.825866699218750, 52.62794876098632812, 5.235987663269042968, 0, 0, -0.50000000000000000, 0.866025388240814208, 604800, 604800, 100, 1), -- Copper Vein
+(@OGUID + 122, 1731, 36, -280.207794189453125, -603.551574707031250, 53.00134277343750000, 6.056293010711669921, 0, 0, -0.11320304870605468, 0.993571877479553222, 604800, 604800, 100, 1), -- Copper Vein
+(@OGUID + 123, 1731, 36, -286.103515625000000, -577.582397460937500, 50.98287582397460937, 6.213373661041259765, 0, 0, -0.03489875793457031, 0.999390840530395507, 604800, 604800, 100, 1), -- Copper Vein
+
+-- 1732 | 1733
+(@OGUID + 130, 0, 36, -106.249397277832031, -611.118286132812500, 16.69453239440917968, 2.251473426818847656, 0, 0, 0.902585029602050781, 0.430511653423309326, 604800, 604800, 100, 1), -- Tin Vein | Silver Vein
+(@OGUID + 131, 0, 36, -140.056915283203125, -602.209106445312500, 17.77572059631347656, 4.904376029968261718, 0, 0, -0.63607788085937500, 0.771624863147735595, 604800, 604800, 100, 1), -- Tin Vein | Silver Vein
+(@OGUID + 132, 0, 36, -134.418029785156250, -640.135742187500000, 16.60317230224609375, 1.308995485305786132, 0, 0, 0.608760833740234375, 0.793353796005249023, 604800, 604800, 100, 1), -- Tin Vein | Silver Vein
+(@OGUID + 133, 0, 36, -139.255157470703125, -567.672851562500000, 21.01113319396972656, 5.305802345275878906, 0, 0, -0.46947097778320312, 0.882947921752929687, 604800, 604800, 100, 1), -- Tin Vein | Silver Vein
+
+(@OGUID + 140, 0, 36, -234.676925659179687, -492.152832031250000, 51.55026626586914062, 2.059488296508789062, 0, 0, 0.857167243957519531, 0.515038192272186279, 604800, 604800, 100, 1), -- Tin Vein | Silver Vein
+(@OGUID + 141, 0, 36, -146.761016845703125, -519.809692382812500, 55.09135055541992187, 5.654868602752685546, 0, 0, -0.30901622772216796, 0.951056778430938720, 604800, 604800, 100, 1), -- Tin Vein | Silver Vein
+(@OGUID + 142, 0, 36, -174.634109497070312, -497.941314697265625, 55.84768676757812500, 3.787367343902587890, 0, 0, -0.94832324981689453, 0.317305892705917358, 604800, 604800, 100, 1), -- Tin Vein | Silver Vein
+(@OGUID + 143, 0, 36, -211.942657470703125, -518.460021972656250, 52.86028289794921875, 3.944445848464965820, 0, 0, -0.92050457000732421, 0.390731811523437500, 604800, 604800, 100, 1), -- Tin Vein | Silver Vein
+
+(@OGUID + 150, 0, 36, -127.871528625488281, -444.353607177734375, 57.16098403930664062, 0.349065244197845458, 0, 0, 0.173647880554199218, 0.984807789325714111, 604800, 604800, 100, 1), -- Tin Vein | Silver Vein
+(@OGUID + 151, 0, 36, -154.312820434570312, -393.339752197265625, 58.45208740234375000, 4.084071159362792968, 0, 0, -0.89100646972656250, 0.453990638256072998, 604800, 604800, 100, 1), -- Tin Vein | Silver Vein
+(@OGUID + 152, 0, 36, -167.955566406250000, -411.292633056640625, 58.63128662109375000, 2.792518377304077148, 0, 0, 0.984807014465332031, 0.173652306199073791, 604800, 604800, 100, 1); -- Tin Vein | Silver Vein
+
+INSERT INTO gameobject_spawn_entry (guid, entry) VALUES
+(@OGUID+81, 3662), (@OGUID+81, 3705), -- Food Crate, Barrel of Milk
+(@OGUID+82, 3662), (@OGUID+82, 3705), -- Food Crate, Barrel of Milk
+(@OGUID+83, 3662), (@OGUID+83, 3705), -- Food Crate, Barrel of Milk
+(@OGUID+84, 3662), (@OGUID+84, 3705), -- Food Crate, Barrel of Milk
+(@OGUID+85, 3662), (@OGUID+85, 3705); -- Food Crate, Barrel of Milk
+
+-- ======
+-- EVENTS
+-- ======
+
+-- INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
+-- INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipment_id`, `spell_start`, `spell_end`, `event`) VALUES
+-- INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
+
+-- =======
+-- POOLING
+-- =======
+
+INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALUES
+(@PGUID+91, @PGUID+90, 0, 'Deadmines (Mast Room) - Chest Pool'),
+(@PGUID+92, @PGUID+90, 0, 'Deadmines (Goblin Foundry) - Chest Pool'),
+(@PGUID+93, @PGUID+90, 0, 'Deadmines (Ironclad Cove) - Chest Pool');
+
+INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
+(@PGUID+1, 1, 'Deadmines - Miner Johnson (3586)'),
+(@PGUID+70, 3, 'Deadmines - Food Crate / Barrel of Milk Pool'),
+(@PGUID+90, 2, 'Deadmines - Master Chest Pool'),
+(@PGUID+91, 1, 'Deadmines (Mast Room) - Chest Pool'),
+(@PGUID+92, 1, 'Deadmines (Goblin Foundry) - Chest Pool'),
+(@PGUID+93, 1, 'Deadmines (Ironclad Cove) - Chest Pool');
+
+INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALUES
+(@CGUID+96, @PGUID+1, 20, 'Deadmines - Miner Johnson (3586)'),
+(@CGUID+207, @PGUID+1, 0, 'Deadmines - Miner Johnson (Substitute)');
+
+-- INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
+
+INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
+(@OGUID+81, @PGUID+70, 0, 'Deadmines - Food Crate, Barrel of Milk (3662,3705)'),
+(@OGUID+82, @PGUID+70, 0, 'Deadmines - Food Crate, Barrel of Milk (3662,3705)'),
+(@OGUID+83, @PGUID+70, 0, 'Deadmines - Food Crate, Barrel of Milk (3662,3705)'),
+(@OGUID+84, @PGUID+70, 0, 'Deadmines - Food Crate, Barrel of Milk (3662,3705)'),
+(@OGUID+85, @PGUID+70, 0, 'Deadmines - Food Crate, Barrel of Milk (3662,3705)'),
+
+(@OGUID+101, @PGUID+91, 0, 'Deadmines - Large Battered Chest (75293)'), -- Mast Room
+(@OGUID+102, @PGUID+91, 0, 'Deadmines - Large Battered Chest (75293)'), -- Mast Room
+
+(@OGUID+103, @PGUID+92, 0, 'Deadmines - Large Battered Chest (75293)'), -- Goblin Foundry
+
+(@OGUID+104, @PGUID+93, 0, 'Deadmines - Large Battered Chest (75293)'), -- Ironclad Cove
+(@OGUID+105, @PGUID+93, 0, 'Deadmines - Large Battered Chest (75293)'), -- Ironclad Cove
+(@OGUID+106, @PGUID+93, 0, 'Deadmines - Large Battered Chest (75293)'), -- Ironclad Cove
+(@OGUID+107, @PGUID+93, 0, 'Deadmines - Large Battered Chest (75293)'); -- Ironclad Cove
+
+-- INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
+
+-- ===========
+-- SPAWNGROUPS
+-- ===========
+
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES
+(@SGUID + 00, 'The Deadmines - Copper Vein (1) Ore 000', 1, 1, 0, 0),
+(@SGUID + 01, 'The Deadmines - Copper Vein (1) Ore 001', 1, 1, 0, 0),
+
+(@SGUID + 02, 'The Deadmines - Tin Vein | Silver Vein (1) Ore 000', 1, 1, 0, 0),
+(@SGUID + 03, 'The Deadmines - Tin Vein | Silver Vein (1) Ore 001', 1, 1, 0, 0),
+(@SGUID + 04, 'The Deadmines - Tin Vein | Silver Vein (1) Ore 002', 1, 1, 0, 0);
+
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES
+(@SGUID + 00, @OGUID + 110, -1), -- Copper Vein
+(@SGUID + 00, @OGUID + 111, -1), -- Copper Vein
+(@SGUID + 00, @OGUID + 112, -1), -- Copper Vein
+(@SGUID + 00, @OGUID + 113, -1), -- Copper Vein
+
+(@SGUID + 01, @OGUID + 120, -1), -- Copper Vein
+(@SGUID + 01, @OGUID + 121, -1), -- Copper Vein
+(@SGUID + 01, @OGUID + 122, -1), -- Copper Vein
+(@SGUID + 01, @OGUID + 123, -1), -- Copper Vein
+
+(@SGUID + 02, @OGUID + 130, -1), -- Tin Vein | Silver Vein
+(@SGUID + 02, @OGUID + 131, -1), -- Tin Vein | Silver Vein
+(@SGUID + 02, @OGUID + 132, -1), -- Tin Vein | Silver Vein
+(@SGUID + 02, @OGUID + 133, -1), -- Tin Vein | Silver Vein
+
+(@SGUID + 03, @OGUID + 140, -1), -- Tin Vein | Silver Vein
+(@SGUID + 03, @OGUID + 141, -1), -- Tin Vein | Silver Vein
+(@SGUID + 03, @OGUID + 142, -1), -- Tin Vein | Silver Vein
+(@SGUID + 03, @OGUID + 143, -1), -- Tin Vein | Silver Vein
+
+(@SGUID + 04, @OGUID + 150, -1), -- Tin Vein | Silver Vein
+(@SGUID + 04, @OGUID + 151, -1), -- Tin Vein | Silver Vein
+(@SGUID + 04, @OGUID + 152, -1); -- Tin Vein | Silver Vein
+
+INSERT INTO `spawn_group_entry` (`Id`, `Entry`, `MinCount`, `MaxCount`, `Chance`) VALUES
+(@SGUID + 02, 1732, 0, 0, 0), -- Tin Vein
+(@SGUID + 02, 1733, 0, 0, 5), -- Silver Vein
+
+(@SGUID + 03, 1732, 0, 0, 0), -- Tin Vein
+(@SGUID + 03, 1733, 0, 0, 5), -- Silver Vein
+
+(@SGUID + 04, 1732, 0, 0, 0), -- Tin Vein
+(@SGUID + 04, 1733, 0, 0, 5); -- Silver Vein
 
 -- =========
 -- DBSCRIPTS
@@ -1187,4 +1208,3 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 -- INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
-

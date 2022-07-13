@@ -365,9 +365,6 @@ INSERT INTO `locales_trainer_greeting` (`Entry`, `Text_loc1`, `Text_loc2`, `Text
 (7087, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Чтобы освежевать добычу, нужна твердая рука.'),
 (7088, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Чтобы освежевать добычу, нужна твердая рука.'),
 (7089, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Чтобы освежевать добычу, нужна твердая рука.'),
-(7230, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Здравствуй! Хочешь, я научу тебя, как из найденной руды делать оружие и доспехи?'),
-(7231, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Здравствуй! Хочешь, я научу тебя, как из найденной руды делать оружие и доспехи?'),
-(7232, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Здравствуй! Хочешь, я научу тебя, как из найденной руды делать оружие и доспехи?'),
 (7311, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Привет, маг! Ну что, будешь учиться?');
 INSERT INTO `locales_trainer_greeting` (`Entry`, `Text_loc1`, `Text_loc2`, `Text_loc3`, `Text_loc4`, `Text_loc5`, `Text_loc6`, `Text_loc7`, `Text_loc8`) VALUES
 (7312, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Привет, маг! Ну что, будешь учиться?'),
@@ -565,7 +562,6 @@ INSERT INTO `locales_trainer_greeting` (`Entry`, `Text_loc1`, `Text_loc2`, `Text
 (19180, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Чтобы освежевать добычу, нужна твердая рука.'),
 (19184, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Подойди, я покажу тебе, как перевязывать раны.'),
 (19185, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Хочешь, я научу тебя, как приготовить из пойманной дичи роскошное блюдо?'),
-(19186, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я могу научить тебя превращать мясо с животных, в очень вкусные блюда.'),
 (19187, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Здравствуй! Хочешь научиться делать доспехи из шкур животных?'),
 (19251, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Наложение чар - это искусство улучшения материальных объектов с помощью магии.'),
 (19252, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Наложение чар - это искусство улучшения материальных объектов с помощью магии.'),
