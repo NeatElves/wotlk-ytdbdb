@@ -108,6 +108,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (26686,'spell_aq_whirlwind'),
 (26767,'spell_cthun_tentacles_summon'),
 (26769,'spell_cthun_periodic_eye_trigger'),
+(27360,'spell_instill_lord_valthalaks_spirit'),
 (27934,'spell_viscidus_shrinks'),
 (28282,'spell_ashbringer_item'),
 (28441,'spell_ab_effect_000'),
@@ -614,6 +615,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (54269,'spell_water_globule_merge'),
 (54306,'spell_protective_bubble_aura'),
 (54361,'spell_void_shift_aura'),
+(55421,'spell_gymers_throw'),
 (55430,'spell_gymers_buddy'),
 (55814,'spell_eck_spit'),
 (55853,'spell_vortex_aura'),
@@ -1292,6 +1294,9 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (23333,'spell_flag_aura_bg'),
 (23335,'spell_flag_aura_bg'),
 (34976,'spell_flag_aura_bg'),
+-- WSG
+(61265,'spell_flag_click_bg'),
+(61266,'spell_flag_click_bg'),
 -- Arathi basin
 (23936,'spell_battleground_banner_trigger'),
 (23932,'spell_battleground_banner_trigger'),

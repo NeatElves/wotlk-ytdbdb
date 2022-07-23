@@ -1464,6 +1464,8 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 2346;
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 2344;
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 2348;
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 1219;
+UPDATE broadcast_text SET ChatTypeID=3 WHERE Id IN (30511,30652,30653);
+UPDATE broadcast_text SET ChatTypeID=1 WHERE Id IN (30658,30659,30595,30596,30597,30598,30656,30657);
 
 -- text
 # 4139_TDB-0206_betrayed.sql
