@@ -93,7 +93,7 @@ UPDATE conditions SET comments=CONCAT('Player Level >= ',value1) WHERE type=15 A
 UPDATE conditions SET comments=CONCAT('Player Level <= ',value1) WHERE type=15 AND value2=2 AND comments IS NULL; -- CONDITION_LEVEL
 UPDATE conditions SET comments=CONCAT('Player Has Learned Spell: ',value1) WHERE type=17 AND value2=0 AND comments IS NULL; -- CONDITION_SPELL
 UPDATE conditions SET comments=CONCAT('NOT Player Has Learned Spell: ',value1) WHERE type=17 AND value2=1 AND comments IS NULL; -- CONDITION_SPELL
-UPDATE conditions SET comments=CONCAT('Instance Conditions ID: ',value1) WHERE type=18 AND comments IS NULL; -- CONDITION_INSTANCE_SCRIPT  
+UPDATE conditions SET comments=CONCAT('ScriptDev: InstanceConditionID Value: ',value1) WHERE type=18 AND comments IS NULL; -- CONDITION_INSTANCE_SCRIPT
 UPDATE conditions SET comments=CONCAT('Quest ID ',value1,' Available') WHERE type=19 AND comments IS NULL; -- CONDITION_QUESTAVAILABLE
 UPDATE conditions SET comments=CONCAT('Player has achievement ID: ',value1) WHERE type=20 AND value2=0 AND comments IS NULL; -- CONDITION_ACHIEVEMENT
 UPDATE conditions SET comments=CONCAT('Player has no achievement ID: ',value1) WHERE type=20 AND value2=1 AND comments IS NULL; -- CONDITION_ACHIEVEMENT
@@ -136,9 +136,16 @@ UPDATE conditions SET comments=CONCAT('All Players in Instance are Dead OR NOT W
 UPDATE conditions SET comments=CONCAT('Creature Source is Dead') WHERE type=36 AND value1=3 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
 UPDATE conditions SET comments=CONCAT('Creature of Entry ',value1,' Found Alive Within ',value2,'y of Source') WHERE type=37 AND flags=0 AND comments IS NULL;
 UPDATE conditions SET comments=CONCAT('Creature of Entry ',value1,' No Found Alive Within ',value2,'y of Source') WHERE type=37 AND flags=1 AND comments IS NULL;
--- CONDITION_PVP_SCRIPT
--- CONDITION_SPAWN_COUNT
--- CONDITION_WORLD_SCRIPT
+
+# небольшой хак, просто текст в 500 знаков уже не вмещается(
+ALTER TABLE `conditions` CHANGE `comments` `comments` VARCHAR(750) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
+
+UPDATE conditions SET comments=CONCAT('OutdoorPvP AreaID: ',value1,' IsConditionFulfilled Value: ',value2) WHERE type=38 AND comments IS NULL; -- CONDITION_PVP_SCRIPT
+UPDATE conditions SET comments=CONCAT('Equal or More than ',value2,' of Entry: ',value1) WHERE type=39 AND comments IS NULL; -- CONDITION_SPAWN_COUNT
+UPDATE conditions SET comments=CONCAT('WorldStateID: ',value1,' Event: ',value2) WHERE type=40 AND comments IS NULL; -- CONDITION_WORLD_SCRIPT
+-- CONDITION_UNUSED_7
+UPDATE conditions SET comments=CONCAT('WorldStateID: ',value1,' WorldStateConditionSign: ',value2,' otherOperand: ',value3) WHERE type=42 AND comments IS NULL; -- CONDITION_WORLDSTATE
+
 
 -- NOT, OR, AND (Run a few times to completely fill out the most complex conditions)
 UPDATE conditions t, (SELECT DISTINCT condition_entry, comments FROM conditions) t1 -- CONDITION_NOT
