@@ -316,6 +316,12 @@ UPDATE `creature_ai_scripts` SET `event_param2` =340 WHERE `event_type` =22 AND 
 UPDATE `creature_ai_scripts` SET `event_param2` =273 WHERE `event_type` =22 AND `event_param2` =3 AND `event_param3` =0;
 #
 #UPDATE `creature_ai_scripts` SET `event_param6` =3695 WHERE `event_type` =10 AND `event_param5` =0 AND `event_param6` =772;
+# NPC guid for YTDB
+UPDATE `creature_ai_scripts` SET `creature_id` = '-49993' WHERE `id` =1534108;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-104133' WHERE `id` =2861702;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-104131' WHERE `id` =2861703;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-104132' WHERE `id` =2861704;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-104134' WHERE `id` =2861705;
 
 
 # Finall_Spell_UP

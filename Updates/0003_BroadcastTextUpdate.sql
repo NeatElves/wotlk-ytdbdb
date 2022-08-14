@@ -1472,6 +1472,28 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 4 WHERE `Id` IN (4717,4718);
 UPDATE broadcast_text SET ChatTypeID = 1 WHERE `Id` = 11355;
 UPDATE broadcast_text SET ChatTypeID = 2 WHERE `Id` IN (10853,10837);
 UPDATE broadcast_text SET ChatTypeID = 2 WHERE `Id` BETWEEN 28816 AND 28820;
+UPDATE `broadcast_text` SET `text` = `text1` WHERE `Id` = 12690;
+UPDATE broadcast_text SET ChatTypeID=7 WHERE Id IN(11427,11432,11425,11426,11424);
+UPDATE broadcast_text SET ChatTypeID=6 WHERE Id IN(11429);
+UPDATE broadcast_text SET ChatTypeID = 5 WHERE id IN (28552,29886);
+UPDATE broadcast_text SET SoundEntriesID1 = 14022 WHERE id = 29969;
+UPDATE broadcast_text SET SoundEntriesID1 = 14023 WHERE id = 29441;
+UPDATE broadcast_text SET SoundEntriesID1 = 14024 WHERE id = 29442;
+UPDATE broadcast_text SET SoundEntriesID1 = 14025 WHERE id = 29885;
+UPDATE broadcast_text SET SoundEntriesID1 = 14762 WHERE id = 29986;
+UPDATE broadcast_text SET SoundEntriesID1 = 14763 WHERE id = 29982;
+UPDATE broadcast_text SET SoundEntriesID1 = 14764 WHERE id = 29983;
+UPDATE broadcast_text SET SoundEntriesID1 = 14765 WHERE id = 29984;
+UPDATE broadcast_text SET SoundEntriesID1 = 14766 WHERE id = 29989;
+UPDATE broadcast_text SET SoundEntriesID1 = 14767 WHERE id = 29985;
+UPDATE broadcast_text SET ChatTypeID = 1, SoundEntriesID1 = 14026 WHERE id = 29916;
+UPDATE broadcast_text SET ChatTypeID = 1, SoundEntriesID1 = 14027 WHERE id = 29917;
+UPDATE broadcast_text SET ChatTypeID = 1, SoundEntriesID1 = 14028 WHERE id = 29918;
+UPDATE broadcast_text SET ChatTypeID = 1, SoundEntriesID1 = 14029 WHERE id = 29919;
+UPDATE broadcast_text SET ChatTypeID = 1, SoundEntriesID1 = 14030 WHERE id = 29920;
+UPDATE broadcast_text SET ChatTypeID = 1, SoundEntriesID1 = 14031 WHERE id = 29921;
+UPDATE broadcast_text SET ChatTypeID = 1, SoundEntriesID1  = 14020 WHERE id = 29922;
+UPDATE broadcast_text SET ChatTypeID = 1, SoundEntriesID1  = 14021 WHERE id = 29923;
 
 -- text
 # 4139_TDB-0206_betrayed.sql
