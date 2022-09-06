@@ -1589,6 +1589,8 @@ UPDATE broadcast_text SET SoundEntriesID1=9311,ChatTypeID=1 WHERE Id IN(15083);
 UPDATE broadcast_text SET SoundEntriesID1=9312,ChatTypeID=1 WHERE Id IN(15084);
 UPDATE broadcast_text SET SoundEntriesID1=9187,ChatTypeID=1 WHERE Id IN(15335);
 UPDATE broadcast_text SET SoundEntriesID1=9308,ChatTypeID=1 WHERE Id IN(15336);
+UPDATE `broadcast_text` SET ChatTypeID = 4 WHERE Id IN (27445,27446,27447,27448,27449,27450,27451,27452);
+
 
 -- text
 # 4139_TDB-0206_betrayed.sql
