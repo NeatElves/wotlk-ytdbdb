@@ -12144,4 +12144,458 @@ INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4, f
 UPDATE gameobject_loot_template SET ChanceOrQuestChance = 100, condition_id = 1756 WHERE item IN (39668,38335,39670,38379,38336,38345,39669,38396,38398,38338,38341,38343,38384,38397,38370,38381,38344,38337,38393,38342,38369);
 UPDATE gameobject_loot_template SET ChanceOrQuestChance = 100, condition_id = 20467 WHERE item IN (38386,38340,38346,38339);
 
+UPDATE `creature_template` SET SpellList=1602801 WHERE entry IN (16028, 29324);
+UPDATE `creature_template` SET SpellList=1606101 WHERE entry=16061;
+UPDATE `creature_template` SET SpellList=2835701 WHERE entry=28357;
+UPDATE `creature_template` SET SpellList=1601101 WHERE entry=16011;
+UPDATE `creature_template` SET SpellList=2971801 WHERE entry=29718;
+UPDATE `creature_template` SET UnitFlags=33554432 WHERE Entry=17025;
+UPDATE `creature_template` SET SpellList=1598901 WHERE entry=15989;
+UPDATE `creature_template` SET SpellList=2999101 WHERE entry=29991;
+UPDATE `creature_template` SET SpellList=1595301 WHERE entry=15953;
+UPDATE `creature_template` SET SpellList=2926801 WHERE entry=29268;
+REPLACE INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1602801, 1, 28307, 0, 0, 0, 100, 50, 1000, 1000, 1000, 1000, 'Patchwerk - Hateful Strike Primer'),
+(1602802, 1, 28307, 0, 0, 0, 100, 50, 1000, 1000, 1000, 1000, 'Patchwerk - Hateful Strike Primer (Berserk)'),
+(1602802, 3, 32309, 2, 1, 0, 100, 0, 5000, 5000, 5000, 5000, 'Patchwerk - Slimebolt (Berserk)');
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1602801, 'Naxxramas - Patchwerk', 0, 0),
+(1602802, 'Naxxramas - Patchwerk - Berserk', 0, 100);
+SET @SGUID := 23030;
+DELETE FROM `dbscripts_on_relay` WHERE id IN (@SGUID, @SGUID+1);
+REPLACE INTO `dbscripts_on_relay` (id, dataint, dataint2, dataint3, comments) VALUES
+(@SGUID, 7798, 0, 0, 'Gluth - Emote on Enrage'),
+(@SGUID+1, 32321, 0, 0, 'Gluth - Emote on Decimate');
+REPLACE INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1593201, 1, 54378, 0, 28783, 0, 100, 30, 10000, 10000, 10000, 10000, 'Gluth - Mortal Wound'),
+(1593201, 2, 54427, 1, 2, @SGUID, 100, 50, 25000, 25000, 20000, 30000, 'Gluth - Enrage'),
+(1593201, 3, 28374, 2, 2, @SGUID+1, 100, 0, 110000, 110000, 100000, 100000, 'Gluth - Decimate'),
+(2941701, 1, 54378, 0, 54099, 0, 100, 30, 10000, 10000, 10000, 10000, 'Gluth(25N) - Mortal Wound'),
+(2941701, 2, 54427, 1, 2, @SGUID, 100, 50, 25000, 25000, 20000, 30000, 'Gluth(25N) - Enrage'),
+(2941701, 3, 54426, 2, 2, @SGUID+1, 100, 0, 110000, 110000, 100000, 100000, 'Gluth(25N) - Decimate');
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1593201, 'Naxxramas - Gluth', 100, 100),
+(2941701, 'Naxxramas - Gluth(25N)', 100, 100);
+SET @SGUID := 23000;
+DELETE FROM `dbscripts_on_relay` WHERE id IN (@SGUID+0, @SGUID+1);
+REPLACE INTO `dbscripts_on_relay` (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, comments) VALUES
+(@SGUID+0, 0, 0, 31, 16061, 10, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Terminate Script if Razuvious is not in Range'),
+(@SGUID+0, 0, 1, 32, 1, 0, 0, 16061, 10, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Pause Waypoints for Razuvious'),
+(@SGUID+0, 100, 0, 37, 0, 0, 2, 16061, 10, 3, 0, @SGUID+1, 0, 0, 0, 0, 0, 0, 0, 0, 'Move Razuvious towards the Understudy'),
+(@SGUID+0, 100, 1, 35, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Send AIEvent 5 to self'),
+(@SGUID+1, 1000, 0, 0, 20293, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Razuvious Shouts at the Understudy'),
+(@SGUID+1, 1000, 1, 1, 0, 0, 0, 16803, 7, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Understudy stops emotes'),
+(@SGUID+1, 2000, 0, 36, 0, 0, 0, 16803, 7, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Turn Understudy towards Razuvious'),
+(@SGUID+1, 4000, 0, 0, 0, 0, 0, 16803, 7, 3, 13137, 13138, 13139, 13140, 0, 0, 0, 0, 0, 0, 'Understudy Talks towards Razuvious'),
+(@SGUID+1, 8000, 0, 1, 66, 0, 0, 16803, 7, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Understudy Salutes towards Razuvious'),
+(@SGUID+1, 10000, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Razuvious Resumes his Waypoint Path'),
+(@SGUID+1, 12000, 0, 36, 1, 0, 0, 16803, 7, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Understudy turns back towards his Training Dummy'),
+(@SGUID+1, 12000, 2, 1, 333, 0, 0, 16803, 7, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Understudy resumes emotes'),
+(@SGUID+1, 12000, 3, 35, 6, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Send AIEvent 6 to Understudy');
+UPDATE `creature_template_addon` SET b2_0_sheath=0 WHERE entry=16061;
+DELETE FROM `creature_template_addon` WHERE Entry=29941;
+DELETE FROM `creature_movement_template` WHERE Entry=16061 AND Point=7;
+UPDATE `creature_movement_template` SET ScriptId=0 WHERE Entry=16061;
+REPLACE INTO `dbscript_random_templates` (id, type, target_id, chance, comments) VALUES
+(20293, 0, 13131, 15, 'Razuvious - Random Text'),
+(20293, 0, 13136, 15, 'Razuvious - Random Text'),
+(20293, 0, 13129, 15, 'Razuvious - Random Text'),
+(20293, 0, 13132, 15, 'Razuvious - Random Text'),
+(20293, 0, 13130, 15, 'Razuvious - Random Text'),
+(20293, 0, 13134, 15, 'Razuvious - Random Text'),
+(20293, 0, 13135, 15, 'Razuvious - Random Text');
+SET @SGUID := 23000;
+DELETE FROM `dbscripts_on_relay` WHERE id IN (@SGUID+3);
+REPLACE INTO `dbscripts_on_relay` (id, dataint, dataint2, dataint3, comments) VALUES
+(@SGUID+3, 13082, 0, 0, 'Razuvious - Emote on Disrupting Shout');
+REPLACE INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1606101, 1, 55470, 0, 1, 0, 100, 0, 30000, 30000, 30000, 30000, 'Razuvious - Unbalancing Strike'),
+(1606101, 2, 55550, 2, 55550, 0, 100, 0, 10000, 15000, 10000, 10000, 'Razuvious - Jagged Knife'),
+(1606101, 3, 55543, 2, 0, @SGUID+3, 100, 0, 15000, 15000, 15000, 25000, 'Razuvious - Disrupting Shout'),
+(2835701, 1, 55470, 0, 1, 0, 100, 0, 30000, 30000, 30000, 30000, 'Razuvious(25N) - Unbalancing Strike'),
+(2835701, 2, 55550, 2, 55550, 0, 100, 0, 10000, 15000, 10000, 10000, 'Razuvious(25N) - Jagged Knife'),
+(2835701, 3, 29107, 2, 0, @SGUID+3, 100, 0, 15000, 15000, 15000, 25000, 'Razuvious(25N) - Disrupting Shout');
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1606101, 'Naxxramas - Razuvious', 100, 150),
+(2835701, 'Naxxramas - Razuvious(25N)', 100, 150);
+REPLACE INTO `creature_spell_targeting` (Id, Type, Param1, Param2, Param3, Comments) VALUES
+(55550, 1, 0, 0, 0, 'Razuvious - Jagged Knife - Target Random Player');
+SET @SGUID := 23015;
+DELETE FROM `dbscripts_on_relay` WHERE id IN (@SGUID+3);
+REPLACE INTO `dbscripts_on_relay` (id, dataint, dataint2, dataint3, comments) VALUES
+(@SGUID+3, 32334, 0, 0, 'Loatheb - Emote on Necrotic Aura');
+DELETE FROM `creature_spell_list` WHERE Id IN (1601101, 1601102, 2971801, 2971802);
+REPLACE INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1601101, 1, 29865, 2, 0, 0, 100, 10, 5000, 5000, 30000, 30000, 'Loatheb - Deathbloom'),
+(1601101, 2, 29234, 2, 0, 0, 100, 10, 10000, 15000, 36000, 36000, 'Loatheb - Summon Spore'),
+(1601101, 3, 55593, 2, 0, @SGUID+3, 100, 0, 12000, 12000, 20000, 20000, 'Loatheb - Necrotic Aura'),
+(1601101, 4, 29204, 2, 0, 0, 100, 10, 120000, 120000, 30000, 30000, 'Loatheb - Inevitable Doom (P1)'),
+(1601102, 1, 29865, 2, 0, 0, 100, 10, 0, 0, 30000, 30000, 'Loatheb - Deathbloom'),
+(1601102, 2, 29234, 2, 0, 0, 100, 10, 0, 0, 36000, 36000, 'Loatheb - Summon Spore'),
+(1601102, 3, 55593, 2, 0, @SGUID+3, 100, 0, 0, 0, 20000, 20000, 'Loatheb - Necrotic Aura'),
+(1601102, 4, 29204, 2, 0, 0, 100, 10, 0, 0, 15000, 15000, 'Loatheb - Inevitable Doom(P2)'),
+(2971801, 1, 55053, 2, 0, 0, 100, 10, 5000, 5000, 30000, 30000, 'Loatheb(25N) - Deathbloom'),
+(2971801, 2, 29234, 2, 0, 0, 100, 10, 10000, 15000, 18000, 18000, 'Loatheb(25N) - Summon Spore'),
+(2971801, 3, 55593, 2, 0, @SGUID+3, 100, 0, 12000, 12000, 20000, 20000, 'Loatheb(25N) - Necrotic Aura'),
+(2971801, 4, 55052, 2, 0, 0, 100, 10, 120000, 120000, 30000, 30000, 'Loatheb(25N) - Inevitable Doom (P1)'),
+(2971802, 1, 55053, 2, 0, 0, 100, 10, 5000, 5000, 30000, 30000, 'Loatheb(25N) - Deathbloom'),
+(2971802, 2, 29234, 2, 0, 0, 100, 10, 10000, 15000, 18000, 18000, 'Loatheb(25N) - Summon Spore'),
+(2971802, 3, 55593, 2, 0, @SGUID+3, 100, 0, 12000, 12000, 20000, 20000, 'Loatheb(25N) - Necrotic Aura'),
+(2971802, 4, 55052, 2, 0, 0, 100, 10, 0, 0, 15000, 15000, 'Loatheb(25N) - Inevitable Doom (P2)');
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1601101, 'Naxxramas - Loatheb', 100, 150),
+(1601102, 'Naxxramas - Loatheb(P2)', 100, 150),
+(2971801, 'Naxxramas - Loatheb(25N)', 100, 150),
+(2971802, 'Naxxramas - Loatheb(25N)(P2)', 100, 150);
+REPLACE INTO `creature_template_addon` (entry, auras) VALUES (17025, 29327);
+REPLACE INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1598901, 1, 19983, 0, 1, 0, 100, 0, 5000, 5000, 5000, 10000, 'Sapphiron - Cleave'),
+(1598901, 2, 55697, 0, 0, 0, 100, 0, 12000, 12000, 7000, 10000, 'Sapphiron - Tail Sweep'),
+(1598901, 3, 28542, 2, 0, 0, 100, 0, 11000, 11000, 24000, 24000, 'Sapphiron - Life Drain'),
+(1598901, 4, 28560, 2, 0, 0, 100, 0, 15000, 15000, 10000, 30000, 'Sapphiron - Blizzard'),
+(1598901, 5, 60539, 2, 0, 0, 100, 0, 1000, 1000, 20000, 20000, 'Sapphiron - Achievement Check'),
+(1598902, 1, 28526, 2, 0, 0, 100, 0, 2000, 2000, 1000, 1000, 'Sapphiron - Icebolt'),
+(2999101, 1, 19983, 0, 1, 0, 100, 0, 5000, 5000, 5000, 10000, 'Sapphiron(25N) - Cleave'),
+(2999101, 2, 55696, 0, 0, 0, 100, 0, 12000, 12000, 7000, 10000, 'Sapphiron(25N) - Tail Sweep'),
+(2999101, 3, 55665, 2, 0, 0, 100, 0, 11000, 11000, 24000, 24000, 'Sapphiron(25N) - Life Drain'),
+(2999101, 4, 28560, 2, 0, 0, 100, 0, 15000, 15000, 10000, 30000, 'Sapphiron(25N) - Blizzard'),
+(2999101, 5, 60539, 2, 0, 0, 100, 0, 1000, 1000, 20000, 20000, 'Sapphiron(25N) - Achievement Check'),
+(2999102, 1, 28526, 2, 0, 0, 100, 0, 2000, 2000, 1000, 1000, 'Sapphiron(25N) - Icebolt');
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1598901, 'Naxxramas - Sapphiron', 100, 150),
+(1598902, 'Naxxramas - Sapphiron - Air Phase', 100, 150),
+(1598903, 'Naxxramas - Sapphiron - NULL list', 0, 0),
+(2999101, 'Naxxramas - Sapphiron(25N)', 100, 150),
+(2999102, 'Naxxramas - Sapphiron(25N) - Air Phase', 100, 150),
+(2999103, 'Naxxramas - Sapphiron(25N) - NULL list', 0, 0);
+SET @SGUID := 23010;
+DELETE FROM `dbscripts_on_relay` WHERE id IN (@SGUID);
+REPLACE INTO `dbscripts_on_relay` (id, dataint, dataint2, dataint3, comments) VALUES
+(@SGUID, 1191, 0, 0, 'Faerlina - Emote on Frenzy'),
+(@SGUID, 12857, 12858, 12859, 'Faerlina - Shout on Frenzy');
+REPLACE INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1595301, 1, 28796, 2, 1, 0, 100, 1, 8000, 8000, 11000, 11000, 'Faerlina - Poison Bolt'),
+(1595301, 2, 28794, 2, 28794, 0, 100, 2, 16000, 16000, 16000, 16000, 'Faerlina - Rain of Fire'),
+(1595301, 3, 28798, 1, 2, @SGUID, 100, 0, 60000, 60000, 60000, 60000, 'Faerlina - Enrage'),
+(2926801, 1, 54098, 2, 1, 0, 100, 1, 8000, 8000, 11000, 11000, 'Faerlina(25N) - Poison Bolt'),
+(2926801, 2, 54099, 2, 54099, 0, 100, 2, 16000, 16000, 16000, 16000, 'Faerlina(25N) - Rain of Fire'),
+(2926801, 3, 54100, 1, 2, @SGUID, 100, 0, 60000, 60000, 60000, 60000, 'Faerlina(25N) - Enrage');
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1595301, 'Naxxramas - Faerlina', 100, 100),
+(2926801, 'Naxxramas - Faerlina(25N)', 100, 100);
+REPLACE INTO `creature_spell_targeting` (Id, Type, Param1, Param2, Param3, Comments) VALUES
+(28794, 1, 0, 0, 2, 'Faerlina - Rain of Fire - Target Random Player'),
+(54099, 1, 0, 0, 2, 'Faerlina(25N) - Rain of Fire - Target Random Player');
+SET @SGUID := 23020;
+DELETE FROM `dbscripts_on_relay` WHERE id IN (@SGUID);
+REPLACE INTO `dbscripts_on_relay` (id, dataint, dataint2, dataint3, comments) VALUES
+(@SGUID, 13443, 0, 0, 'Anub\'Rekhan - Emote on Locust Swarm');
+REPLACE INTO `dbscripts_on_relay` (id, delay, command, datalong, comments) VALUES
+(@SGUID, 3000, 15, 29508, 'Anub\'Rekhan - Summon Crypt Guard');
+REPLACE INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1595601, 1, 28783, 2, 28783, 0, 100, 2, 15000, 15000, 15000, 15000, 'Anub\'Rekhan - Impale'),
+(1595601, 2, 28785, 1, 2, @SGUID, 100, 0, 90000, 90000, 100000, 100000, 'Anub\'Rekhan - Locust Swarm'),
+(2924901, 1, 56090, 2, 54099, 0, 100, 2, 15000, 15000, 15000, 15000, 'Anub\'Rekhan(25N) - Impale'),
+(2924901, 2, 54021, 1, 2, @SGUID, 100, 0, 90000, 90000, 100000, 100000, 'Anub\'Rekhan(25N) - Locust Swarm');
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1595601, 'Naxxramas - Anub\'Rekhan', 100, 100),
+(2924901, 'Naxxramas - Anub\'Rekhan(25N)', 100, 100);
+REPLACE INTO `creature_spell_targeting` (Id, Type, Param1, Param2, Param3, Comments) VALUES
+(28783, 1, 0, 0, 2, 'Anub\'Rekhan - Impale - Target Random Player'),
+(56090, 1, 0, 0, 2, 'Anub\'Rekhan(25N) - Impale - Target Random Player');
+UPDATE creature_model_info SET combat_reach=3 WHERE modelid=16586;
+
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id IN (29133));
+DELETE FROM creature_movement WHERE id IN (SELECT guid FROM creature WHERE id IN (29133));
+DELETE FROM `creature` WHERE `id` IN (29133);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(119326, 29133, 571, 1, 1, 0, 0, 5625.5, -2569.46, 287.535, 0.296014, 300, 300, 10, 0, 0, 0, 0, 1),
+(119327, 29133, 571, 1, 1, 0, 0, 5637.85, -2523.92, 287.031, -2.58509, 300, 300, 10, 0, 0, 0, 0, 1),
+(119328, 29133, 571, 1, 1, 0, 0, 5659.62, -2437.32, 284.995, 3.38633, 300, 300, 10, 0, 0, 0, 0, 1),
+(119329, 29133, 571, 1, 1, 0, 0, 5697.21, -2412.75, 287.551, -1.3039, 300, 300, 10, 0, 0, 0, 0, 1),
+(49797, 29133, 571, 1, 1, 0, 0, 5677.38, -2354.97, 287.584, 3.54869, 300, 300, 10, 0, 0, 0, 0, 1),
+(49798, 29133, 571, 1, 1, 0, 0, 5660.39, -2411.04, 287.052, -2.38306, 300, 300, 10, 0, 0, 0, 0, 1),
+(49799, 29133, 571, 1, 1, 0, 0, 5697.89, -2364.72, 287.57, 1.22673, 300, 300, 10, 0, 0, 0, 0, 1),
+(49801, 29133, 571, 1, 1, 0, 0, 5665.21, -2323.72, 288.051, 3.08443, 300, 300, 10, 0, 0, 0, 0, 1),
+(49803, 29133, 571, 1, 1, 0, 0, 5625.91, -2496.58, 287.651, 0.214277, 300, 300, 10, 0, 0, 0, 0, 1),
+(49804, 29133, 571, 1, 1, 0, 0, 5610.38, -2523.13, 285.103, -2.74837, 300, 300, 10, 0, 0, 0, 0, 1),
+(49805, 29133, 571, 1, 1, 0, 0, 5614.59, -2326.62, 287.471, 0.244817, 300, 300, 10, 0, 0, 0, 0, 1),
+(49806, 29133, 571, 1, 1, 0, 0, 5568.19, -2348.27, 287.527, 2.96078, 300, 300, 10, 0, 0, 0, 0, 1),
+(49807, 29133, 571, 1, 1, 0, 0, 5619.04, -2378.92, 287.57, 3.47542, 300, 300, 10, 0, 0, 0, 0, 1),
+(49808, 29133, 571, 1, 1, 0, 0, 5631.4, -2357.58, 285.92, 2.73017, 300, 300, 10, 0, 0, 0, 0, 1),
+(49809, 29133, 571, 1, 1, 0, 0, 5657.65, -2459.85, 285.848, 1.44213, 300, 300, 10, 0, 0, 0, 0, 1),
+(49810, 29133, 571, 1, 1, 0, 0, 5617.11, -2437.78, 287.551, 3.15822, 300, 300, 10, 0, 0, 0, 0, 1),
+(49811, 29133, 571, 1, 1, 0, 0, 5669.29, -2500.06, 286.505, 4.83112, 300, 300, 10, 0, 0, 0, 0, 1),
+(49812, 29133, 571, 1, 1, 0, 0, 5572.84, -2523.33, 287.527, 2.90611, 300, 300, 10, 0, 0, 0, 0, 1),
+(49813, 29133, 571, 1, 1, 0, 0, 5654.72, -2525.98, 287.526, 1.03841, 300, 300, 10, 0, 0, 0, 0, 1);
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id IN (29129));
+DELETE FROM creature_movement WHERE id IN (SELECT guid FROM creature WHERE id IN (29129));
+DELETE FROM `creature` WHERE `id` IN (29129);
+DELETE FROM creature_template_addon WHERE entry = 29129;
+INSERT INTO creature_template_addon (entry, mount, bytes1, b2_0_sheath, b2_1_pvp_state, emote, auras) VALUES (29129,0,0,1,0,0,17327);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(118651, 29129, 571, 1, 1, 0, 0, 4839.16, -3059.7, 292.399, 5.55499, 300, 300, 10, 0, 0, 0, 0, 1),
+(118652, 29129, 571, 1, 1, 0, 0, 4807.54, -3097.89, 291.047, 1.72271, 300, 300, 10, 0, 0, 0, 0, 1),
+(118653, 29129, 571, 1, 1, 0, 0, 4889.48, -2908.81, 289.846, 5.59621, 300, 300, 10, 0, 0, 0, 0, 1),
+(118654, 29129, 571, 1, 1, 0, 0, 4925.29, -2847.63, 289.471, 5.97497, 300, 300, 10, 0, 0, 0, 0, 1),
+(118655, 29129, 571, 1, 1, 0, 0, 4887.04, -2951.77, 291.542, 2.41601, 300, 300, 10, 0, 0, 0, 0, 1),
+(6176, 29129, 571, 1, 1, 0, 0, 4933.61, -3001.19, 291.05, 3.17524, 300, 300, 10, 0, 0, 0, 0, 1),
+(118650, 29129, 571, 1, 1, 0, 0, 5566.88, -2383.53, 287.552, 5.15308, 300, 300, 0, 0, 0, 0, 0, 4),
+(49814, 29129, 571, 1, 1, 0, 0, 5646.01, -2346.96, 287.527, 2.89662, 300, 300, 10, 0, 0, 0, 0, 1),
+(49815, 29129, 571, 1, 1, 0, 0, 5665.38, -2557.05, 287.614, 2.35621, 300, 300, 10, 0, 0, 0, 0, 1),
+(49816, 29129, 571, 1, 1, 0, 0, 5641.22, -2486.3, 287.547, 5.10855, 300, 300, 10, 0, 0, 0, 0, 1),
+(49817, 29129, 571, 1, 1, 0, 0, 5665.11, -2470.07, 287.543, 0.508748, 300, 300, 10, 0, 0, 0, 0, 1),
+(49819, 29129, 571, 1, 1, 0, 0, 5624.09, -2565.4, 287.653, 2.64811, 300, 300, 10, 0, 0, 0, 0, 1),
+(49820, 29129, 571, 1, 1, 0, 0, 5652.43, -2390.27, 287.636, 3.63097, 300, 300, 10, 0, 0, 0, 0, 1),
+(49821, 29129, 571, 1, 1, 0, 0, 5687.56, -2512.81, 287.527, 3.01222, 300, 300, 10, 0, 0, 0, 0, 1),
+(49823, 29129, 571, 1, 1, 0, 0, 5629.61, -2427.6, 287.617, 4.44003, 300, 300, 10, 0, 0, 0, 0, 1),
+(49824, 29129, 571, 1, 1, 0, 0, 5560.9, -2564.57, 287.529, 2.53679, 300, 300, 10, 0, 0, 0, 0, 1),
+(49825, 29129, 571, 1, 1, 0, 0, 5701.64, -2556.69, 287.825, 4.5204, 300, 300, 10, 0, 0, 0, 0, 1),
+(49826, 29129, 571, 1, 1, 0, 0, 5688.06, -2389.79, 287.633, 2.00713, 300, 300, 10, 0, 0, 0, 0, 1),
+(49827, 29129, 571, 1, 1, 0, 0, 5686.13, -2331.51, 288.337, 3.27379, 300, 300, 10, 0, 0, 0, 0, 1),
+(49828, 29129, 571, 1, 1, 0, 0, 5755.42, -2433.88, 291.868, 4.84665, 300, 300, 7, 0, 0, 0, 0, 1);
+DELETE FROM creature_movement WHERE id IN (118650);
+INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orientation, waittime, scriptid) VALUES
+(118650,1,5573.7,-2392.93,287.527,100,0,0),
+(118650,2,5579.39,-2408.34,287.527,100,0,0),
+(118650,3,5582.05,-2422.05,287.527,100,0,0),
+(118650,4,5582.76,-2434.25,287.527,100,0,0),
+(118650,5,5583.28,-2446.84,287.527,100,0,0),
+(118650,6,5581.74,-2456.12,287.527,100,0,0),
+(118650,7,5576.81,-2473.49,287.527,100,0,0),
+(118650,8,5571.73,-2488.92,287.527,100,0,0);
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id IN (28221));
+DELETE FROM creature_movement WHERE id IN (SELECT guid FROM creature WHERE id IN (28221));
+DELETE FROM `creature` WHERE `id` IN (28221);
+DELETE FROM creature_template_addon WHERE entry = 28221;
+INSERT INTO creature_template_addon (entry, mount, bytes1, b2_0_sheath, b2_1_pvp_state, emote, auras) VALUES (28221,0,0,1,0,0,11959);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(99454, 28221, 571, 1, 1, 0, 0, 4778.76, -3123.45, 295.253, 4.8437, 300, 300, 5, 0, 0, 0, 0, 1),
+(99455, 28221, 571, 1, 1, 0, 0, 4832.12, -2980.46, 289.224, 5.05831, 300, 300, 5, 0, 0, 0, 0, 1),
+(99456, 28221, 571, 1, 1, 0, 0, 5981.56, -2680.28, 287.954, 5.52322, 300, 300, 5, 0, 0, 0, 0, 1),
+(99457, 28221, 571, 1, 1, 0, 0, 4885.42, -2868.75, 291.096, 1.78359, 300, 300, 5, 0, 0, 0, 0, 1),
+(99458, 28221, 571, 1, 1, 0, 0, 5925.48, -2685.13, 289.097, 0.868188, 300, 300, 5, 0, 0, 0, 0, 1),
+(99468, 28221, 571, 1, 1, 0, 0, 5994.22, -2831.05, 291.396, 2.3584, 300, 300, 5, 0, 0, 0, 0, 1),
+(99469, 28221, 571, 1, 1, 0, 0, 4836.49, -3076.91, 292.003, 6.14773, 300, 300, 5, 0, 0, 0, 0, 1),
+(99470, 28221, 571, 1, 1, 0, 0, 4882.93, -3015.26, 291.37, 5.20487, 300, 300, 5, 0, 0, 0, 0, 1),
+(99479, 28221, 571, 1, 1, 0, 0, 4889.35, -2936.09, 290.478, 3.99116, 300, 300, 5, 0, 0, 0, 0, 1),
+(99491, 28221, 571, 1, 1, 0, 0, 6182.05, -2821.9, 297.199, 2.23956, 300, 300, 5, 0, 0, 0, 0, 1),
+(49829, 28221, 571, 1, 1, 0, 0, 6112.11, -2881.68, 297.458, 4.33165, 300, 300, 5, 0, 0, 0, 0, 1),
+(49830, 28221, 571, 1, 1, 0, 0, 5980.53, -2889.04, 291, 3.60567, 300, 300, 5, 0, 0, 0, 0, 1),
+(49831, 28221, 571, 1, 1, 0, 0, 6056.86, -2884.48, 296.494, 0.772579, 300, 300, 5, 0, 0, 0, 0, 1),
+(49832, 28221, 571, 1, 1, 0, 0, 6186.02, -2880.49, 290.619, 5.31807, 300, 300, 5, 0, 0, 0, 0, 1),
+(49833, 28221, 571, 1, 1, 0, 0, 6449.32, -2817.49, 290.563, 5.72556, 300, 300, 5, 0, 0, 0, 0, 1),
+(49834, 28221, 571, 1, 1, 0, 0, 6390.32, -2813.76, 289.568, 4.01185, 300, 300, 5, 0, 0, 0, 0, 1),
+(49835, 28221, 571, 1, 1, 0, 0, 6250.57, -2821.68, 289.946, 3.53017, 300, 300, 5, 0, 0, 0, 0, 1),
+(49836, 28221, 571, 1, 1, 0, 0, 6317.37, -2820.56, 289.781, 3.81568, 300, 300, 5, 0, 0, 0, 0, 1),
+(49837, 28221, 571, 1, 1, 0, 0, 6118, -2820.57, 294.651, 2.21673, 300, 300, 5, 0, 0, 0, 0, 1),
+(49838, 28221, 571, 1, 1, 0, 0, 6054.97, -2812.09, 290.973, 6.09227, 300, 300, 5, 0, 0, 0, 0, 1),
+(49839, 28221, 571, 1, 1, 0, 0, 6227.81, -2308.13, 292.332, 2.80176, 300, 300, 5, 0, 0, 0, 0, 1),
+(49840, 28221, 571, 1, 1, 0, 0, 6096.8, -2344.96, 289.739, 4.44237, 300, 300, 10, 0, 0, 0, 0, 1),
+(49841, 28221, 571, 1, 1, 0, 0, 5745.36, -2345.97, 288.616, 1.86698, 300, 300, 5, 0, 0, 0, 0, 1),
+(49842, 28221, 571, 1, 1, 0, 0, 5819.75, -2559.14, 292.837, 3.53109, 300, 300, 5, 0, 0, 0, 0, 1),
+(49843, 28221, 571, 1, 1, 0, 0, 5872.26, -2428.61, 297.294, 2.87186, 300, 300, 10, 0, 0, 0, 0, 1),
+(49844, 28221, 571, 1, 1, 0, 0, 5814.27, -2354.17, 290.825, 0.341469, 300, 300, 10, 0, 0, 0, 0, 1),
+(49845, 28221, 571, 1, 1, 0, 0, 5773.65, -2503.75, 292.649, 5.96968, 300, 300, 0, 0, 0, 0, 0, 0),
+(49846, 28221, 571, 1, 1, 0, 0, 5761.48, -2537.15, 293.757, 0.687428, 300, 300, 5, 0, 0, 0, 0, 1),
+(49847, 28221, 571, 1, 1, 0, 0, 5898.73, -2532.49, 294.16, 0.682179, 300, 300, 0, 0, 0, 0, 0, 0),
+(49848, 28221, 571, 1, 1, 0, 0, 5950.12, -2545.48, 293.908, 4.4231, 300, 300, 5, 0, 0, 0, 0, 1),
+(49849, 28221, 571, 1, 1, 0, 0, 5990.13, -2509.56, 292.129, 3.00581, 300, 300, 5, 0, 0, 0, 0, 1),
+(49850, 28221, 571, 1, 1, 0, 0, 5983.32, -2738.6, 289.93, 5.18477, 300, 300, 5, 0, 0, 0, 0, 1),
+(49851, 28221, 571, 1, 1, 0, 0, 6080.15, -2416.85, 290.618, -2.96606, 300, 300, 10, 0, 0, 0, 0, 1),
+(49852, 28221, 571, 1, 1, 0, 0, 5822.19, -2490.8, 294.373, 0.677392, 300, 300, 10, 0, 0, 0, 0, 1),
+(49853, 28221, 571, 1, 1, 0, 0, 5963.22, -2411.91, 293.459, 4.85191, 300, 300, 5, 0, 0, 0, 0, 1),
+(49854, 28221, 571, 1, 1, 0, 0, 5954.36, -2475.73, 293.051, 0.051015, 300, 300, 5, 0, 0, 0, 0, 1),
+(49855, 28221, 571, 1, 1, 0, 0, 6015.16, -2350, 293.029, 3.67927, 300, 300, 5, 0, 0, 0, 0, 1),
+(49856, 28221, 571, 1, 1, 0, 0, 6012.3, -2409.39, 290.465, 2.35058, 300, 300, 5, 0, 0, 0, 0, 1),
+(49857, 28221, 571, 1, 1, 0, 0, 6012.34, -2471.71, 292.3, 1.13784, 300, 300, 5, 0, 0, 0, 0, 1),
+(49858, 28221, 571, 1, 1, 0, 0, 5900.52, -2418.23, 293.278, 5.90526, 300, 300, 5, 0, 0, 0, 0, 1),
+(49859, 28221, 571, 1, 1, 0, 0, 5928.65, -2509.85, 292.535, 5.57519, 300, 300, 5, 0, 0, 0, 0, 1);
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id IN (28233));
+DELETE FROM creature_movement WHERE id IN (SELECT guid FROM creature WHERE id IN (28233));
+DELETE FROM `creature` WHERE `id` IN (28233);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(99088, 28233, 571, 1, 1, 0, 0, 6553.6, -4750.41, 450.803, 2.90915, 300, 300, 10, 0, 0, 0, 0, 1),
+(99089, 28233, 571, 1, 1, 0, 0, 6539.28, -4683.35, 450.644, 3.35106, 300, 300, 10, 0, 0, 0, 0, 1),
+(99090, 28233, 571, 1, 1, 0, 0, 6289.84, -2456.54, 294.708, 6.10199, 300, 300, 10, 0, 0, 0, 0, 1),
+(99091, 28233, 571, 1, 1, 0, 0, 6498.48, -2936.28, 298.041, 4.80137, 300, 300, 10, 0, 0, 0, 0, 1),
+(99092, 28233, 571, 1, 1, 0, 0, 6345.04, -4381.98, 450.773, 4.74137, 300, 300, 10, 0, 0, 0, 0, 1),
+(99093, 28233, 571, 1, 1, 0, 0, 6514.73, -4625.73, 450.589, 5.11105, 300, 300, 10, 0, 0, 0, 0, 1),
+(99094, 28233, 571, 1, 1, 0, 0, 6266.37, -4456.13, 450.885, 2.79883, 300, 300, 10, 0, 0, 0, 0, 1),
+(99095, 28233, 571, 1, 1, 0, 0, 7059, -4220.42, 450.495, 4.16176, 300, 300, 10, 0, 0, 0, 0, 1),
+(99096, 28233, 571, 1, 1, 0, 0, 6853.48, -4858.69, 450.825, 1.94783, 300, 300, 10, 0, 0, 0, 0, 1),
+(99097, 28233, 571, 1, 1, 0, 0, 7127.51, -4450.65, 451.248, 0.101709, 300, 300, 10, 0, 0, 0, 0, 1),
+(99098, 28233, 571, 1, 1, 0, 0, 6593.19, -4630.11, 450.871, 2.09659, 300, 300, 10, 0, 0, 0, 0, 1),
+(99099, 28233, 571, 1, 1, 0, 0, 6744.34, -4894.05, 452.884, 2.1007, 300, 300, 10, 0, 0, 0, 0, 1),
+(99100, 28233, 571, 1, 1, 0, 0, 6680.09, -4874.36, 457.226, 0.303526, 300, 300, 10, 0, 0, 0, 0, 1),
+(99101, 28233, 571, 1, 1, 0, 0, 6659.82, -4729.5, 450.621, 3.40407, 300, 300, 10, 0, 0, 0, 0, 1),
+(99102, 28233, 571, 1, 1, 0, 0, 6181.1, -4531.35, 456.41, 3.61787, 300, 300, 10, 0, 0, 0, 0, 1),
+(99103, 28233, 571, 1, 1, 0, 0, 6013.01, -2736.06, 297.058, 1.67552, 300, 300, 10, 0, 0, 0, 0, 1),
+(99104, 28233, 571, 1, 1, 0, 0, 6997.14, -4233.8, 451.043, 0.384528, 300, 300, 10, 0, 0, 0, 0, 1),
+(99105, 28233, 571, 1, 1, 0, 0, 6808.95, -4121.69, 466.721, 5.40747, 300, 300, 10, 0, 0, 0, 0, 1),
+(99106, 28233, 571, 1, 1, 0, 0, 6692.98, -4202.52, 458.018, 4.75337, 300, 300, 10, 0, 0, 0, 0, 1),
+(99107, 28233, 571, 1, 1, 0, 0, 7027.49, -4314.6, 449.418, 6.14405, 300, 300, 10, 0, 0, 0, 0, 1),
+(99108, 28233, 571, 1, 1, 0, 0, 6153.24, -2312.28, 292.539, 2.45576, 300, 300, 10, 0, 0, 0, 0, 1),
+(99109, 28233, 571, 1, 1, 0, 0, 6815.07, -4225.17, 453.503, 0.523291, 300, 300, 10, 0, 0, 0, 0, 1),
+(99110, 28233, 571, 1, 1, 0, 0, 6940.65, -4132.54, 457.75, 3.17869, 300, 300, 10, 0, 0, 0, 0, 1),
+(99111, 28233, 571, 1, 1, 0, 0, 6142.04, -2793.83, 295.445, 6.06412, 300, 300, 10, 0, 0, 0, 0, 1),
+(99112, 28233, 571, 1, 1, 0, 0, 6883.37, -4219.04, 451.704, 1.46317, 300, 300, 10, 0, 0, 0, 0, 1),
+(99113, 28233, 571, 1, 1, 0, 0, 6015.04, -2862.75, 293.562, 4.45179, 300, 300, 10, 0, 0, 0, 0, 1),
+(99114, 28233, 571, 1, 1, 0, 0, 6351.61, -2910.09, 301.106, 2.43085, 300, 300, 10, 0, 0, 0, 0, 1),
+(99115, 28233, 571, 1, 1, 0, 0, 6278.46, -2938.55, 312.205, 1.48182, 300, 300, 10, 0, 0, 0, 0, 1),
+(99116, 28233, 571, 1, 1, 0, 0, 6480.73, -2779.29, 298.565, 0, 300, 300, 10, 0, 0, 0, 0, 1),
+(99117, 28233, 571, 1, 1, 0, 0, 6526.44, -2650.55, 322.044, 0.170768, 300, 300, 10, 0, 0, 0, 0, 1),
+(49860, 28233, 571, 1, 1, 0, 0, 6520.66, -2717.12, 316.833, 6.27147, 300, 300, 10, 0, 0, 0, 0, 1),
+(49861, 28233, 571, 1, 1, 0, 0, 6249.59, -2854.06, 291.72, 4.81012, 300, 300, 10, 0, 0, 0, 0, 1),
+(49862, 28233, 571, 1, 1, 0, 0, 6028.63, -2804.04, 289.565, 4.49381, 300, 300, 10, 0, 0, 0, 0, 1),
+(49863, 28233, 571, 1, 1, 0, 0, 6092.89, -2905.81, 299.233, 1.20951, 300, 300, 10, 0, 0, 0, 0, 1),
+(49864, 28233, 571, 1, 1, 0, 0, 6036.75, -2931.12, 301.124, 0.700365, 300, 300, 10, 0, 0, 0, 0, 1),
+(49865, 28233, 571, 1, 1, 0, 0, 6114.68, -2912.61, 298.023, 2.73533, 300, 300, 10, 0, 0, 0, 0, 1),
+(49866, 28233, 571, 1, 1, 0, 0, 6205.53, -2922.48, 294.492, 3.24524, 300, 300, 10, 0, 0, 0, 0, 1),
+(49867, 28233, 571, 1, 1, 0, 0, 6422.6, -2912.29, 298.881, 3.05431, 300, 300, 10, 0, 0, 0, 0, 1),
+(49868, 28233, 571, 1, 1, 0, 0, 6469.58, -2854.71, 293.103, 4.26139, 300, 300, 10, 0, 0, 0, 0, 1),
+(49869, 28233, 571, 1, 1, 0, 0, 6416.58, -2819.2, 289.663, 1.53738, 300, 300, 10, 0, 0, 0, 0, 1),
+(49870, 28233, 571, 1, 1, 0, 0, 6365.84, -2837.18, 290.67, 0.315881, 300, 300, 10, 0, 0, 0, 0, 1),
+(49872, 28233, 571, 1, 1, 0, 0, 6418.34, -2789.42, 291.247, 1.44154, 300, 300, 10, 0, 0, 0, 0, 1),
+(49873, 28233, 571, 1, 1, 0, 0, 6352.07, -2783.54, 297.069, 2.80934, 300, 300, 10, 0, 0, 0, 0, 1),
+(49875, 28233, 571, 1, 1, 0, 0, 6298.49, -2794.03, 293.251, 0.144137, 300, 300, 10, 0, 0, 0, 0, 1),
+(49876, 28233, 571, 1, 1, 0, 0, 6222.41, -2860.35, 292.028, 2.30022, 300, 300, 10, 0, 0, 0, 0, 1),
+(49878, 28233, 571, 1, 1, 0, 0, 6149.22, -2857.33, 293.667, 4.78175, 300, 300, 10, 0, 0, 0, 0, 1),
+(49994, 28233, 571, 1, 1, 0, 0, 6097.67, -2790.11, 294.185, 4.31971, 300, 300, 10, 0, 0, 0, 0, 1),
+(49995, 28233, 571, 1, 1, 0, 0, 6765.42, -4786.95, 450.893, 1.24826, 300, 300, 10, 0, 0, 0, 0, 1),
+(49996, 28233, 571, 1, 1, 0, 0, 5773.46, -2359.56, 288.895, -0.966761, 300, 300, 15, 0, 0, 0, 0, 1),
+(49997, 28233, 571, 1, 1, 0, 0, 5999.04, -2323.57, 291.973, 4.88918, 300, 300, 10, 0, 0, 0, 0, 1),
+(49998, 28233, 571, 1, 1, 0, 0, 6107, -2330.48, 290.505, -0.440683, 300, 300, 10, 0, 0, 0, 0, 1),
+(50000, 28233, 571, 1, 1, 0, 0, 5756.29, -2563.15, 293.23, 1.74493, 300, 300, 10, 0, 0, 0, 0, 1),
+(50001, 28233, 571, 1, 1, 0, 0, 5995.95, -2508.97, 291.563, 4.52857, 300, 300, 10, 0, 0, 0, 0, 1),
+(50002, 28233, 571, 1, 1, 0, 0, 5871.2, -2501, 294.785, 0.828529, 300, 300, 15, 0, 0, 0, 0, 1),
+(50003, 28233, 571, 1, 1, 0, 0, 5851.85, -2466.29, 298.098, 3.9891, 300, 300, 15, 0, 0, 0, 0, 1),
+(50004, 28233, 571, 1, 1, 0, 0, 5855.44, -2406.11, 292.967, 3.0622, 300, 300, 10, 0, 0, 0, 0, 1),
+(50005, 28233, 571, 1, 1, 0, 0, 5925.1, -2517.69, 292.859, 4.20943, 300, 300, 10, 0, 0, 0, 0, 1),
+(50007, 28233, 571, 1, 1, 0, 0, 5790.29, -2511.49, 292.96, 0.051465, 300, 300, 15, 0, 0, 0, 0, 1),
+(50009, 28233, 571, 1, 1, 0, 0, 5986.19, -2394.59, 291.642, -2.43799, 300, 300, 10, 0, 0, 0, 0, 1),
+(50012, 28233, 571, 1, 1, 0, 0, 6042.82, -2386.55, 292.734, 1.66958, 300, 300, 15, 0, 0, 0, 0, 1),
+(50013, 28233, 571, 1, 1, 0, 0, 5929.23, -2461.87, 291.333, -0.536542, 300, 300, 10, 0, 0, 0, 0, 1),
+(50015, 28233, 571, 1, 1, 0, 0, 6098.75, -2373.74, 290.609, 5.81043, 300, 300, 15, 0, 0, 0, 0, 1),
+(50016, 28233, 571, 1, 1, 0, 0, 5864.06, -2559.54, 292.333, 4.37489, 300, 300, 15, 0, 0, 0, 0, 1),
+(50018, 28233, 571, 1, 1, 0, 0, 5982.1, -2441.2, 292.234, 2.93098, 300, 300, 15, 0, 0, 0, 0, 1),
+(50019, 28233, 571, 1, 1, 0, 0, 6048.6, -2330.51, 291.094, 0.520032, 300, 300, 10, 0, 0, 0, 0, 1);
+
+DELETE FROM npc_trainer WHERE entry IN (11178);
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id) VALUES
+(11178,10003,15000,164,235,0,0),
+(11178,10007,15000,164,245,0,0),
+(11178,10011,15000,164,250,0,0),
+(11178,10015,15000,164,260,0,0),
+(11178,36125,10000,164,260,0,458),
+(11178,36126,10000,164,260,0,458),
+(11178,36128,10000,164,260,0,458),
+(11178,55183,50000,164,415,0,458),
+(11178,55184,50000,164,415,0,458),
+(11178,55185,50000,164,415,0,458),
+(11178,34535,100000,164,350,0,1839),
+(11178,34537,250000,164,375,0,1839),
+(11178,34538,100000,164,350,0,1839),
+(11178,34540,250000,164,375,0,1839),
+(11178,36131,40000,164,330,0,1839),
+(11178,36133,40000,164,330,0,1839),
+(11178,36258,500000,164,375,0,1839),
+(11178,36259,500000,164,375,0,1839),
+(11178,34545,100000,164,350,0,1837),
+(11178,34546,250000,164,375,0,1837),
+(11178,34547,500000,164,350,0,1837),
+(11178,34548,250000,164,375,0,1837),
+(11178,36136,40000,164,330,0,1837),
+(11178,36137,40000,164,330,0,1837),
+(11178,36262,500000,164,375,0,1837),
+(11178,36263,500000,164,375,0,1837),
+(11178,34541,100000,164,350,0,1838),
+(11178,34542,250000,164,375,0,1838),
+(11178,34543,100000,164,350,0,1838),
+(11178,34544,250000,164,375,0,1838),
+(11178,36134,40000,164,330,0,1838),
+(11178,36135,40000,164,330,0,1838),
+(11178,36260,500000,164,375,0,1838),
+(11178,36261,500000,164,375,0,1838);
+DELETE FROM npc_trainer WHERE entry IN (11177);
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id) VALUES
+(11177,9954,8000,164,245,0,0),
+(11177,9974,1000,164,245,0,0),
+(11177,34529,100000,164,350,0,279),
+(11177,34530,250000,164,375,0,279),
+(11177,34533,100000,164,350,0,279),
+(11177,34534,250000,164,375,0,279),
+(11177,36122,10000,164,260,0,279),
+(11177,36124,10000,164,260,0,279),
+(11177,36129,40000,164,330,0,279),
+(11177,36130,40000,164,330,0,279),
+(11177,36256,500000,164,375,0,279),
+(11177,36257,500000,164,375,0,279),
+(11177,55186,50000,164,415,0,279),
+(11177,55187,50000,164,415,0,279);
+DELETE FROM npc_trainer WHERE entry IN (5164);
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id) VALUES
+(5164,9954,8000,164,245,0,0),
+(5164,9974,1000,164,245,0,0),
+(5164,34529,100000,164,350,0,279),
+(5164,34530,250000,164,375,0,279),
+(5164,34533,100000,164,350,0,279),
+(5164,34534,250000,164,375,0,279),
+(5164,36122,10000,164,260,0,279),
+(5164,36124,10000,164,260,0,279),
+(5164,36129,40000,164,330,0,279),
+(5164,36130,40000,164,330,0,279),
+(5164,36256,500000,164,375,0,279),
+(5164,36257,500000,164,375,0,279),
+(5164,55186,50000,164,415,0,279),
+(5164,55187,50000,164,415,0,279);
+DELETE FROM npc_trainer WHERE entry IN (11146);
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id) VALUES
+(11146,10003,15000,164,235,0,0),
+(11146,10007,15000,164,245,0,0),
+(11146,10011,15000,164,250,0,0),
+(11146,10015,15000,164,260,0,0),
+(11146,36125,10000,164,260,0,458),
+(11146,36126,10000,164,260,0,458),
+(11146,36128,10000,164,260,0,458),
+(11146,55183,50000,164,415,0,458),
+(11146,55184,50000,164,415,0,458),
+(11146,55185,50000,164,415,0,458),
+(11146,34535,100000,164,350,0,1839),
+(11146,34537,250000,164,375,0,1839),
+(11146,34538,100000,164,350,0,1839),
+(11146,34540,250000,164,375,0,1839),
+(11146,36131,40000,164,330,0,1839),
+(11146,36133,40000,164,330,0,1839),
+(11146,36258,500000,164,375,0,1839),
+(11146,36259,500000,164,375,0,1839),
+(11146,34545,100000,164,350,0,1837),
+(11146,34546,250000,164,375,0,1837),
+(11146,34547,500000,164,350,0,1837),
+(11146,34548,250000,164,375,0,1837),
+(11146,36136,40000,164,330,0,1837),
+(11146,36137,40000,164,330,0,1837),
+(11146,36262,500000,164,375,0,1837),
+(11146,36263,500000,164,375,0,1837),
+(11146,34541,100000,164,350,0,1838),
+(11146,34542,250000,164,375,0,1838),
+(11146,34543,100000,164,350,0,1838),
+(11146,34544,250000,164,375,0,1838),
+(11146,36134,40000,164,330,0,1838),
+(11146,36135,40000,164,330,0,1838),
+(11146,36260,500000,164,375,0,1838),
+(11146,36261,500000,164,375,0,1838);
+UPDATE `gossip_menu_option` SET `box_text` = 'Forgetting your Axesmithing skill is not something to do lightly.  If you choose to abandon it you will forget all recipes that require Axesmithing to create!', `box_broadcast_text` = '18987' WHERE `menu_id` =6089 AND `id` =1;
+UPDATE `gossip_menu_option` SET `box_text` = 'Forgetting your Hammersmithing skill is not something to do lightly.  If you choose to abandon it you will forget all recipes that require Hammersmithing to create!', `box_broadcast_text` = '18991' WHERE `menu_id` =6090 AND `id` =1;
+UPDATE `gossip_menu_option` SET `box_text` = 'Forgetting your swordsmithing skill is not something to do lightly.  If you choose to abandon it you will forget all recipes that require swordsmithing to create!', `box_broadcast_text` = '18983' WHERE `menu_id` =6091 AND `id` =1;
+UPDATE `conditions` SET `value1` = '1845', `value2` = '458' WHERE `condition_entry` =1846;
+DELETE FROM `dbscripts_on_gossip` WHERE `id` in (320100);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(320100, 0, 15, 36436, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,'cast Forget (Unlearn Weaponsmith specialization)');
+UPDATE `gossip_menu_option` SET `box_text` = 'Forgetting your Armorsmithing skill is not something to do lightly.  If you choose to abandon it you will forget all recipes that require Armorsmithing to create!', `box_broadcast_text` = '19011' WHERE `menu_id` =597 AND `id` =1;
+UPDATE `gossip_menu_option` SET `box_text` = 'Forgetting your Armorsmithing skill is not something to do lightly.  If you choose to abandon it you will forget all recipes that require Armorsmithing to create!', `box_broadcast_text` = '19011' WHERE `menu_id` =3203 AND `id` =1;
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(3201, 1, 0, 'I wish to unlearn Weaponsmithing!',19007, 1, 1, -1, 0, 320100, 0, 0,'Forgetting your Weaponsmithing skill is not something to do lightly.  If you choose to abandon it you will forget all recipes that require Weaponsmithing to create!', 19008, 458),
+(3202, 1, 0, 'I wish to unlearn Weaponsmithing!',19007, 1, 1, -1, 0, 320100, 0, 0,'Forgetting your Weaponsmithing skill is not something to do lightly.  If you choose to abandon it you will forget all recipes that require Weaponsmithing to create!', 19008, 458);
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
