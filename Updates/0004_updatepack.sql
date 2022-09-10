@@ -12487,104 +12487,104 @@ INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqle
 (11178,10007,15000,164,245,0,0),
 (11178,10011,15000,164,250,0,0),
 (11178,10015,15000,164,260,0,0),
-(11178,36125,10000,164,260,0,458),
-(11178,36126,10000,164,260,0,458),
-(11178,36128,10000,164,260,0,458),
-(11178,55183,50000,164,415,0,458),
-(11178,55184,50000,164,415,0,458),
-(11178,55185,50000,164,415,0,458),
-(11178,34535,100000,164,350,0,1839),
-(11178,34537,250000,164,375,0,1839),
-(11178,34538,100000,164,350,0,1839),
-(11178,34540,250000,164,375,0,1839),
-(11178,36131,40000,164,330,0,1839),
-(11178,36133,40000,164,330,0,1839),
-(11178,36258,500000,164,375,0,1839),
-(11178,36259,500000,164,375,0,1839),
-(11178,34545,100000,164,350,0,1837),
-(11178,34546,250000,164,375,0,1837),
-(11178,34547,500000,164,350,0,1837),
-(11178,34548,250000,164,375,0,1837),
-(11178,36136,40000,164,330,0,1837),
-(11178,36137,40000,164,330,0,1837),
-(11178,36262,500000,164,375,0,1837),
-(11178,36263,500000,164,375,0,1837),
-(11178,34541,100000,164,350,0,1838),
-(11178,34542,250000,164,375,0,1838),
-(11178,34543,100000,164,350,0,1838),
-(11178,34544,250000,164,375,0,1838),
-(11178,36134,40000,164,330,0,1838),
-(11178,36135,40000,164,330,0,1838),
-(11178,36260,500000,164,375,0,1838),
-(11178,36261,500000,164,375,0,1838);
+(11178,36125,10000,164,260,0,0),
+(11178,36126,10000,164,260,0,0),
+(11178,36128,10000,164,260,0,0),
+(11178,55183,50000,164,415,0,0),
+(11178,55184,50000,164,415,0,0),
+(11178,55185,50000,164,415,0,0),
+(11178,34535,100000,164,350,0,0),
+(11178,34537,250000,164,375,0,0),
+(11178,34538,100000,164,350,0,0),
+(11178,34540,250000,164,375,0,0),
+(11178,36131,40000,164,330,0,0),
+(11178,36133,40000,164,330,0,0),
+(11178,36258,500000,164,375,0,0),
+(11178,36259,500000,164,375,0,0),
+(11178,34545,100000,164,350,0,0),
+(11178,34546,250000,164,375,0,0),
+(11178,34547,500000,164,350,0,0),
+(11178,34548,250000,164,375,0,0),
+(11178,36136,40000,164,330,0,0),
+(11178,36137,40000,164,330,0,0),
+(11178,36262,500000,164,375,0,0),
+(11178,36263,500000,164,375,0,0),
+(11178,34541,100000,164,350,0,0),
+(11178,34542,250000,164,375,0,0),
+(11178,34543,100000,164,350,0,0),
+(11178,34544,250000,164,375,0,0),
+(11178,36134,40000,164,330,0,0),
+(11178,36135,40000,164,330,0,0),
+(11178,36260,500000,164,375,0,0),
+(11178,36261,500000,164,375,0,0);
 DELETE FROM npc_trainer WHERE entry IN (11177);
 INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id) VALUES
 (11177,9954,8000,164,245,0,0),
 (11177,9974,1000,164,245,0,0),
-(11177,34529,100000,164,350,0,279),
-(11177,34530,250000,164,375,0,279),
-(11177,34533,100000,164,350,0,279),
-(11177,34534,250000,164,375,0,279),
-(11177,36122,10000,164,260,0,279),
-(11177,36124,10000,164,260,0,279),
-(11177,36129,40000,164,330,0,279),
-(11177,36130,40000,164,330,0,279),
-(11177,36256,500000,164,375,0,279),
-(11177,36257,500000,164,375,0,279),
-(11177,55186,50000,164,415,0,279),
-(11177,55187,50000,164,415,0,279);
+(11177,34529,100000,164,350,0,0),
+(11177,34530,250000,164,375,0,0),
+(11177,34533,100000,164,350,0,0),
+(11177,34534,250000,164,375,0,0),
+(11177,36122,10000,164,260,0,0),
+(11177,36124,10000,164,260,0,0),
+(11177,36129,40000,164,330,0,0),
+(11177,36130,40000,164,330,0,0),
+(11177,36256,500000,164,375,0,0),
+(11177,36257,500000,164,375,0,0),
+(11177,55186,50000,164,415,0,0),
+(11177,55187,50000,164,415,0,0);
 DELETE FROM npc_trainer WHERE entry IN (5164);
 INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id) VALUES
 (5164,9954,8000,164,245,0,0),
 (5164,9974,1000,164,245,0,0),
-(5164,34529,100000,164,350,0,279),
-(5164,34530,250000,164,375,0,279),
-(5164,34533,100000,164,350,0,279),
-(5164,34534,250000,164,375,0,279),
-(5164,36122,10000,164,260,0,279),
-(5164,36124,10000,164,260,0,279),
-(5164,36129,40000,164,330,0,279),
-(5164,36130,40000,164,330,0,279),
-(5164,36256,500000,164,375,0,279),
-(5164,36257,500000,164,375,0,279),
-(5164,55186,50000,164,415,0,279),
-(5164,55187,50000,164,415,0,279);
+(5164,34529,100000,164,350,0,0),
+(5164,34530,250000,164,375,0,0),
+(5164,34533,100000,164,350,0,0),
+(5164,34534,250000,164,375,0,0),
+(5164,36122,10000,164,260,0,0),
+(5164,36124,10000,164,260,0,0),
+(5164,36129,40000,164,330,0,0),
+(5164,36130,40000,164,330,0,0),
+(5164,36256,500000,164,375,0,0),
+(5164,36257,500000,164,375,0,0),
+(5164,55186,50000,164,415,0,0),
+(5164,55187,50000,164,415,0,0);
 DELETE FROM npc_trainer WHERE entry IN (11146);
 INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id) VALUES
 (11146,10003,15000,164,235,0,0),
 (11146,10007,15000,164,245,0,0),
 (11146,10011,15000,164,250,0,0),
 (11146,10015,15000,164,260,0,0),
-(11146,36125,10000,164,260,0,458),
-(11146,36126,10000,164,260,0,458),
-(11146,36128,10000,164,260,0,458),
-(11146,55183,50000,164,415,0,458),
-(11146,55184,50000,164,415,0,458),
-(11146,55185,50000,164,415,0,458),
-(11146,34535,100000,164,350,0,1839),
-(11146,34537,250000,164,375,0,1839),
-(11146,34538,100000,164,350,0,1839),
-(11146,34540,250000,164,375,0,1839),
-(11146,36131,40000,164,330,0,1839),
-(11146,36133,40000,164,330,0,1839),
-(11146,36258,500000,164,375,0,1839),
-(11146,36259,500000,164,375,0,1839),
-(11146,34545,100000,164,350,0,1837),
-(11146,34546,250000,164,375,0,1837),
-(11146,34547,500000,164,350,0,1837),
-(11146,34548,250000,164,375,0,1837),
-(11146,36136,40000,164,330,0,1837),
-(11146,36137,40000,164,330,0,1837),
-(11146,36262,500000,164,375,0,1837),
-(11146,36263,500000,164,375,0,1837),
-(11146,34541,100000,164,350,0,1838),
-(11146,34542,250000,164,375,0,1838),
-(11146,34543,100000,164,350,0,1838),
-(11146,34544,250000,164,375,0,1838),
-(11146,36134,40000,164,330,0,1838),
-(11146,36135,40000,164,330,0,1838),
-(11146,36260,500000,164,375,0,1838),
-(11146,36261,500000,164,375,0,1838);
+(11146,36125,10000,164,260,0,0),
+(11146,36126,10000,164,260,0,0),
+(11146,36128,10000,164,260,0,0),
+(11146,55183,50000,164,415,0,0),
+(11146,55184,50000,164,415,0,0),
+(11146,55185,50000,164,415,0,0),
+(11146,34535,100000,164,350,0,0),
+(11146,34537,250000,164,375,0,0),
+(11146,34538,100000,164,350,0,0),
+(11146,34540,250000,164,375,0,0),
+(11146,36131,40000,164,330,0,0),
+(11146,36133,40000,164,330,0,0),
+(11146,36258,500000,164,375,0,0),
+(11146,36259,500000,164,375,0,0),
+(11146,34545,100000,164,350,0,0),
+(11146,34546,250000,164,375,0,0),
+(11146,34547,500000,164,350,0,0),
+(11146,34548,250000,164,375,0,0),
+(11146,36136,40000,164,330,0,0),
+(11146,36137,40000,164,330,0,0),
+(11146,36262,500000,164,375,0,0),
+(11146,36263,500000,164,375,0,0),
+(11146,34541,100000,164,350,0,0),
+(11146,34542,250000,164,375,0,0),
+(11146,34543,100000,164,350,0,0),
+(11146,34544,250000,164,375,0,0),
+(11146,36134,40000,164,330,0,0),
+(11146,36135,40000,164,330,0,0),
+(11146,36260,500000,164,375,0,0),
+(11146,36261,500000,164,375,0,0);
 UPDATE `gossip_menu_option` SET `box_text` = 'Forgetting your Axesmithing skill is not something to do lightly.  If you choose to abandon it you will forget all recipes that require Axesmithing to create!', `box_broadcast_text` = '18987' WHERE `menu_id` =6089 AND `id` =1;
 UPDATE `gossip_menu_option` SET `box_text` = 'Forgetting your Hammersmithing skill is not something to do lightly.  If you choose to abandon it you will forget all recipes that require Hammersmithing to create!', `box_broadcast_text` = '18991' WHERE `menu_id` =6090 AND `id` =1;
 UPDATE `gossip_menu_option` SET `box_text` = 'Forgetting your swordsmithing skill is not something to do lightly.  If you choose to abandon it you will forget all recipes that require swordsmithing to create!', `box_broadcast_text` = '18983' WHERE `menu_id` =6091 AND `id` =1;
@@ -12597,5 +12597,798 @@ UPDATE `gossip_menu_option` SET `box_text` = 'Forgetting your Armorsmithing skil
 INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
 (3201, 1, 0, 'I wish to unlearn Weaponsmithing!',19007, 1, 1, -1, 0, 320100, 0, 0,'Forgetting your Weaponsmithing skill is not something to do lightly.  If you choose to abandon it you will forget all recipes that require Weaponsmithing to create!', 19008, 458),
 (3202, 1, 0, 'I wish to unlearn Weaponsmithing!',19007, 1, 1, -1, 0, 320100, 0, 0,'Forgetting your Weaponsmithing skill is not something to do lightly.  If you choose to abandon it you will forget all recipes that require Weaponsmithing to create!', 19008, 458);
+
+UPDATE `gameobject_template` SET `Faction` = 1743 WHERE `entry` IN (190110,190115);
+UPDATE `gameobject_template` SET `Faction` = 1744 WHERE `entry` IN (190111,190116);
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(39596, 190111, 530, -2187.64, 5399.79, 51.8825, 2.63545, 0.968148, 0.250379, 180, 180, 255, 1);
+
+UPDATE `creature_template` SET `Faction` = 29, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12788;
+UPDATE `creature_template` SET `Faction` = 126, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12789;
+UPDATE `creature_template` SET `Faction` = 68, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12790;
+UPDATE `creature_template` SET `Faction` = 104, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12791;
+UPDATE `creature_template` SET `Faction` = 35, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12792;
+UPDATE `creature_template` SET `Faction` = 35 WHERE `entry` = 12793;
+UPDATE `creature_template` SET `Faction` = 29, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12794;
+UPDATE `creature_template` SET `Faction` = 126, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12795;
+UPDATE `creature_template` SET `Faction` = 35, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12796;
+UPDATE `creature_template` SET `Faction` = 85, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12797;
+UPDATE `creature_template` SET `Faction` = 85, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12798;
+UPDATE `creature_template` SET `Faction` = 29, `MinLevel` = 55, `MaxLevel` = 55 WHERE `entry` = 12799;
+UPDATE `creature_template` SET `Faction` = 35 WHERE `entry` IN (14581,24667,26396);
+UPDATE `creature_template` SET `Faction` = 1604, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 19850;
+UPDATE `creature_template` SET `Faction` = 1604, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 23447;
+UPDATE `creature_template` SET `Faction` = 1604, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 24520;
+UPDATE `creature_template` SET `Faction` = 1074, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 24668;
+UPDATE `creature_template` SET `Faction` = 1074, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 26397;
+UPDATE `creature_template` SET `Faction` = 1604, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 26398;
+UPDATE `creature_template` SET `Faction` = 35, `MinLevel` = 65, `MaxLevel` = 65, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` IN (12777,24672,26393);
+UPDATE `creature_template` SET `Faction` = 12, `MinLevel` = 55, `MaxLevel` = 55, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12778;
+UPDATE `creature_template` SET `Faction` = 12, `MinLevel` = 55, `MaxLevel` = 55, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12779;
+UPDATE `creature_template` SET `Faction` = 80, `MinLevel` = 55, `MaxLevel` = 55, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12780;
+UPDATE `creature_template` SET `Faction` = 35, `MinLevel` = 55, `MaxLevel` = 55, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12781;
+UPDATE `creature_template` SET `Faction` = 35, `MinLevel` = 65, `MaxLevel` = 65, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` IN (12782,24671,26394);
+UPDATE `creature_template` SET `Faction` = 35, `MinLevel` = 55, `MaxLevel` = 55, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12783;
+UPDATE `creature_template` SET `Faction` = 875, `MinLevel` = 55, `MaxLevel` = 55, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12784;
+UPDATE `creature_template` SET `Faction` = 55, `MinLevel` = 55, `MaxLevel` = 55, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12785;
+UPDATE `creature_template` SET `Faction` = 11, `MinLevel` = 62, `MaxLevel` = 62, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12786;
+UPDATE `creature_template` SET `Faction` = 11, `MinLevel` = 62, `MaxLevel` = 62, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 12787;
+UPDATE `creature_template` SET `Faction` = 1638, `MinLevel` = 69, `MaxLevel` = 69, `UnitFlags` = `UnitFlags` | 33536 WHERE `entry` = 19848;
+UPDATE `creature_template` SET `Faction` = 1638, `MinLevel` = 65, `MaxLevel` = 65, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 23446;
+UPDATE `creature_template` SET `Faction` = 1638, `MinLevel` = 65, `MaxLevel` = 65, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 24670;
+UPDATE `creature_template` SET `Faction` = 1638, `MinLevel` = 65, `MaxLevel` = 65, `UnitFlags` = `UnitFlags` | 768 WHERE `entry` = 26395;
+
+UPDATE `npc_vendor` SET `slot` = 1 WHERE `item` = 32799 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 2 WHERE `item` = 32811 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 3 WHERE `item` = 32787 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 4 WHERE `item` = 32979 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 5 WHERE `item` = 32980 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 6 WHERE `item` = 32981 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 7 WHERE `item` = 32807 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 8 WHERE `item` = 32820 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 9 WHERE `item` = 32795 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 10 WHERE `item` = 32802 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 11 WHERE `item` = 32814 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 12 WHERE `item` = 32790 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 13 WHERE `item` = 32800 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 14 WHERE `item` = 32812 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 15 WHERE `item` = 32788 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 16 WHERE `item` = 32798 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 17 WHERE `item` = 32810 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 18 WHERE `item` = 32786 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 19 WHERE `item` = 32808 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 20 WHERE `item` = 32821 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 21 WHERE `item` = 32796 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 22 WHERE `item` = 32797 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 23 WHERE `item` = 32809 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 24 WHERE `item` = 32785 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 25 WHERE `item` = 32998 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 26 WHERE `item` = 32997 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 27 WHERE `item` = 32999 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 28 WHERE `item` = 32803 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 29 WHERE `item` = 32816 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 30 WHERE `item` = 32791 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 31 WHERE `item` = 32804 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 32 WHERE `item` = 32817 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 33 WHERE `item` = 32792 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 34 WHERE `item` = 32805 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 35 WHERE `item` = 32818 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 36 WHERE `item` = 32793 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 37 WHERE `item` = 32988 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 38 WHERE `item` = 32989 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 39 WHERE `item` = 32990 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 40 WHERE `item` = 32806 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 41 WHERE `item` = 32819 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 42 WHERE `item` = 32794 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 43 WHERE `item` = 32801 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 44 WHERE `item` = 32813 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 45 WHERE `item` = 32789 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 51 WHERE `item` = 33882 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 52 WHERE `item` = 33883 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 53 WHERE `item` = 33884 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 54 WHERE `item` = 33900 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 55 WHERE `item` = 33901 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 56 WHERE `item` = 33902 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 57 WHERE `item` = 33912 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 58 WHERE `item` = 33913 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 59 WHERE `item` = 33914 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 60 WHERE `item` = 33891 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 61 WHERE `item` = 33893 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 62 WHERE `item` = 33892 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 63 WHERE `item` = 33885 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 64 WHERE `item` = 33887 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 65 WHERE `item` = 33886 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 66 WHERE `item` = 33879 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 67 WHERE `item` = 33881 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 68 WHERE `item` = 33880 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 69 WHERE `item` = 33915 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 70 WHERE `item` = 33917 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 71 WHERE `item` = 33916 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 72 WHERE `item` = 33877 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 73 WHERE `item` = 33876 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 74 WHERE `item` = 33878 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 75 WHERE `item` = 33907 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 76 WHERE `item` = 33906 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 77 WHERE `item` = 33908 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 78 WHERE `item` = 33895 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 79 WHERE `item` = 33894 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 80 WHERE `item` = 33896 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 81 WHERE `item` = 33898 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 82 WHERE `item` = 33897 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 83 WHERE `item` = 33899 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 84 WHERE `item` = 33811 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 85 WHERE `item` = 33813 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 86 WHERE `item` = 33812 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 87 WHERE `item` = 33903 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 88 WHERE `item` = 33904 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 89 WHERE `item` = 33905 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 90 WHERE `item` = 33909 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 91 WHERE `item` = 33910 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 92 WHERE `item` = 33911 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 93 WHERE `item` = 33888 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 94 WHERE `item` = 33889 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 95 WHERE `item` = 33890 AND `entry` IN (26089);
+UPDATE `npc_vendor` SET `slot` = 35 WHERE `item` = 27707 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 36 WHERE `item` = 27710 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 37 WHERE `item` = 27709 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 38 WHERE `item` = 27708 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 39 WHERE `item` = 27711 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 40 WHERE `item` = 31409 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 41 WHERE `item` = 31412 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 42 WHERE `item` = 31411 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 43 WHERE `item` = 31410 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 44 WHERE `item` = 31413 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 45 WHERE `item` = 24556 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 46 WHERE `item` = 24554 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 47 WHERE `item` = 24555 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 48 WHERE `item` = 24553 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 49 WHERE `item` = 24552 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 50 WHERE `item` = 30188 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 51 WHERE `item` = 30186 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 52 WHERE `item` = 30201 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 53 WHERE `item` = 30187 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 54 WHERE `item` = 30200 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 55 WHERE `item` = 25857 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 56 WHERE `item` = 25854 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 57 WHERE `item` = 25858 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 58 WHERE `item` = 25855 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 59 WHERE `item` = 25856 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 60 WHERE `item` = 25834 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 61 WHERE `item` = 25832 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 62 WHERE `item` = 25833 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 63 WHERE `item` = 25830 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 64 WHERE `item` = 25831 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 65 WHERE `item` = 28126 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 66 WHERE `item` = 28129 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 67 WHERE `item` = 28128 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 68 WHERE `item` = 28127 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 69 WHERE `item` = 28130 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 70 WHERE `item` = 31375 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 71 WHERE `item` = 31378 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 72 WHERE `item` = 31377 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 73 WHERE `item` = 31376 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 74 WHERE `item` = 31379 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 75 WHERE `item` = 28136 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 76 WHERE `item` = 28139 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 77 WHERE `item` = 28138 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 78 WHERE `item` = 28137 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 79 WHERE `item` = 28140 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 80 WHERE `item` = 28335 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 81 WHERE `item` = 28333 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 82 WHERE `item` = 28332 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 83 WHERE `item` = 28331 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 84 WHERE `item` = 28334 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 85 WHERE `item` = 31397 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 86 WHERE `item` = 31407 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 87 WHERE `item` = 31406 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 88 WHERE `item` = 31400 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 89 WHERE `item` = 31396 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 90 WHERE `item` = 26000 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 91 WHERE `item` = 25999 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 92 WHERE `item` = 26001 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 93 WHERE `item` = 25998 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 94 WHERE `item` = 25997 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 95 WHERE `item` = 27470 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 96 WHERE `item` = 27473 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 97 WHERE `item` = 27472 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 98 WHERE `item` = 27471 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 99 WHERE `item` = 27469 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 100 WHERE `item` = 24549 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 101 WHERE `item` = 24546 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 102 WHERE `item` = 24547 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 103 WHERE `item` = 24545 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 104 WHERE `item` = 24544 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 105 WHERE `item` = 31614 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 106 WHERE `item` = 31619 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 107 WHERE `item` = 31618 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 108 WHERE `item` = 31616 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 109 WHERE `item` = 31613 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 110 WHERE `item` = 27880 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 111 WHERE `item` = 27883 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 112 WHERE `item` = 27882 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 113 WHERE `item` = 27881 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 114 WHERE `item` = 27879 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 115 WHERE `item` = 27703 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 116 WHERE `item` = 27706 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 117 WHERE `item` = 27705 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 118 WHERE `item` = 27704 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 119 WHERE `item` = 27702 AND `entry` IN (26090);
+UPDATE `npc_vendor` SET `slot` = 7 WHERE `item` = 16345 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 14 WHERE `item` = 18826 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 6 WHERE `item` = 18828 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 2 WHERE `item` = 18831 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 15 WHERE `item` = 18835 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 16 WHERE `item` = 18837 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 13 WHERE `item` = 18840 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 11 WHERE `item` = 18844 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 12 WHERE `item` = 18848 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 17 WHERE `item` = 18860 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 9 WHERE `item` = 18866 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 3 WHERE `item` = 18868 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 5 WHERE `item` = 18871 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 18 WHERE `item` = 18874 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 1 WHERE `item` = 18877 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 10 WHERE `item` = 23464 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 4 WHERE `item` = 23465 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 19 WHERE `item` = 23466 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 8 WHERE `item` = 23467 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 20 WHERE `item` = 23468 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 21 WHERE `item` = 23469 AND `entry` = 12794;
+UPDATE `npc_vendor` SET `slot` = 14 WHERE `item` = 22859 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 15 WHERE `item` = 22869 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 16 WHERE `item` = 22882 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 17 WHERE `item` = 22885 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 18 WHERE `item` = 23262 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 19 WHERE `item` = 23261 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 20 WHERE `item` = 17618 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 21 WHERE `item` = 17620 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 23 WHERE `item` = 17625 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 22 WHERE `item` = 17624 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 24 WHERE `item` = 17623 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 25 WHERE `item` = 17622 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 26 WHERE `item` = 22860 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 27 WHERE `item` = 22870 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 28 WHERE `item` = 22883 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 29 WHERE `item` = 22886 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 30 WHERE `item` = 23264 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 31 WHERE `item` = 23263 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 32 WHERE `item` = 16539 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 33 WHERE `item` = 16540 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 34 WHERE `item` = 16534 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 35 WHERE `item` = 16535 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 36 WHERE `item` = 16533 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 37 WHERE `item` = 16536 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 38 WHERE `item` = 22855 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 39 WHERE `item` = 22865 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 40 WHERE `item` = 22881 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 41 WHERE `item` = 22884 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 42 WHERE `item` = 23256 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 43 WHERE `item` = 23255 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 44 WHERE `item` = 17586 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 45 WHERE `item` = 17588 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 46 WHERE `item` = 17593 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 47 WHERE `item` = 17592 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 48 WHERE `item` = 17590 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 49 WHERE `item` = 17591 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 50 WHERE `item` = 22856 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 51 WHERE `item` = 22864 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 52 WHERE `item` = 22880 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 53 WHERE `item` = 22879 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 54 WHERE `item` = 23258 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 55 WHERE `item` = 23257 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 56 WHERE `item` = 16558 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 57 WHERE `item` = 16560 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 58 WHERE `item` = 16564 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 59 WHERE `item` = 16563 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 60 WHERE `item` = 16562 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 61 WHERE `item` = 16561 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 62 WHERE `item` = 22852 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 63 WHERE `item` = 22863 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 64 WHERE `item` = 22878 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 65 WHERE `item` = 22877 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 66 WHERE `item` = 23254 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 67 WHERE `item` = 23253 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 68 WHERE `item` = 16554 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 69 WHERE `item` = 16555 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 70 WHERE `item` = 16552 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 71 WHERE `item` = 16549 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 72 WHERE `item` = 16551 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 73 WHERE `item` = 16550 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 74 WHERE `item` = 22843 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 75 WHERE `item` = 22862 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 76 WHERE `item` = 22875 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 77 WHERE `item` = 22874 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 78 WHERE `item` = 23252 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 79 WHERE `item` = 23251 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 80 WHERE `item` = 16569 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 81 WHERE `item` = 16571 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 82 WHERE `item` = 16567 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 83 WHERE `item` = 16565 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 84 WHERE `item` = 16568 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 85 WHERE `item` = 16566 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 86 WHERE `item` = 22857 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 87 WHERE `item` = 22867 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 88 WHERE `item` = 22887 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 89 WHERE `item` = 22876 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 90 WHERE `item` = 23260 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 91 WHERE `item` = 23259 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 92 WHERE `item` = 16573 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 93 WHERE `item` = 16574 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 94 WHERE `item` = 16579 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 95 WHERE `item` = 16577 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 96 WHERE `item` = 16580 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 97 WHERE `item` = 16578 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 98 WHERE `item` = 22858 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 99 WHERE `item` = 22868 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 100 WHERE `item` = 22873 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 101 WHERE `item` = 22872 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 102 WHERE `item` = 23243 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 103 WHERE `item` = 23244 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 104 WHERE `item` = 16545 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 105 WHERE `item` = 16548 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 106 WHERE `item` = 16543 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 107 WHERE `item` = 16541 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 108 WHERE `item` = 16544 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 109 WHERE `item` = 16542 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 110 WHERE `item` = 29601 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 111 WHERE `item` = 29600 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 112 WHERE `item` = 29603 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 113 WHERE `item` = 29602 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 114 WHERE `item` = 29605 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 115 WHERE `item` = 29604 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 116 WHERE `item` = 29612 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 117 WHERE `item` = 29613 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 118 WHERE `item` = 29614 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 119 WHERE `item` = 29615 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 120 WHERE `item` = 29617 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 121 WHERE `item` = 29616 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 2 WHERE `item` = 16341 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 5 WHERE `item` = 16486 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 7 WHERE `item` = 16497 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 11 WHERE `item` = 16532 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 1 WHERE `item` = 18427 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 13 WHERE `item` = 18429 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 12 WHERE `item` = 18430 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 10 WHERE `item` = 18432 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 9 WHERE `item` = 18434 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 6 WHERE `item` = 18435 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 8 WHERE `item` = 18436 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 4 WHERE `item` = 18437 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 3 WHERE `item` = 18461 AND `entry` = 12795;
+UPDATE `npc_vendor` SET `slot` = 1 WHERE `item` = 29466 AND `entry` = 12796;
+UPDATE `npc_vendor` SET `slot` = 2 WHERE `item` = 29469 AND `entry` = 12796;
+UPDATE `npc_vendor` SET `slot` = 3 WHERE `item` = 29470 AND `entry` = 12796;
+UPDATE `npc_vendor` SET `slot` = 4 WHERE `item` = 29472 AND `entry` = 12796;
+UPDATE `npc_vendor` SET `slot` = 5 WHERE `item` = 34129 AND `entry` = 12796;
+UPDATE `npc_vendor` SET `slot` = 1 WHERE `item` = 29465 AND `entry` = 12783;
+UPDATE `npc_vendor` SET `slot` = 2 WHERE `item` = 29467 AND `entry` = 12783;
+UPDATE `npc_vendor` SET `slot` = 3 WHERE `item` = 29468 AND `entry` = 12783;
+UPDATE `npc_vendor` SET `slot` = 4 WHERE `item` = 29471 AND `entry` = 12783;
+UPDATE `npc_vendor` SET `slot` = 5 WHERE `item` = 35906 AND `entry` = 12783;
+UPDATE `npc_vendor` SET `slot` = 14 WHERE `item` = 23289 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 15 WHERE `item` = 23288 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 16 WHERE `item` = 23302 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 17 WHERE `item` = 23303 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 18 WHERE `item` = 23316 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 19 WHERE `item` = 23317 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 20 WHERE `item` = 17607 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 21 WHERE `item` = 17608 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 22 WHERE `item` = 17603 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 23 WHERE `item` = 17605 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 24 WHERE `item` = 17602 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 25 WHERE `item` = 17604 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 26 WHERE `item` = 23291 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 27 WHERE `item` = 23290 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 28 WHERE `item` = 23305 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 29 WHERE `item` = 23304 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 30 WHERE `item` = 23318 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 31 WHERE `item` = 23319 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 32 WHERE `item` = 16437 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 33 WHERE `item` = 16440 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 34 WHERE `item` = 16442 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 35 WHERE `item` = 16443 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 36 WHERE `item` = 16441 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 37 WHERE `item` = 16444 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 38 WHERE `item` = 23283 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 39 WHERE `item` = 23282 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 40 WHERE `item` = 23297 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 41 WHERE `item` = 23296 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 42 WHERE `item` = 23310 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 43 WHERE `item` = 23311 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 44 WHERE `item` = 17583 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 45 WHERE `item` = 17584 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 46 WHERE `item` = 17579 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 47 WHERE `item` = 17581 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 48 WHERE `item` = 17578 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 49 WHERE `item` = 17580 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 50 WHERE `item` = 23285 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 51 WHERE `item` = 23284 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 52 WHERE `item` = 23298 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 53 WHERE `item` = 23299 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 54 WHERE `item` = 23312 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 55 WHERE `item` = 23313 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 56 WHERE `item` = 16446 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 57 WHERE `item` = 16454 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 58 WHERE `item` = 16456 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 59 WHERE `item` = 16453 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 60 WHERE `item` = 16455 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 61 WHERE `item` = 16457 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 62 WHERE `item` = 23281 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 63 WHERE `item` = 23280 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 64 WHERE `item` = 23294 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 65 WHERE `item` = 23295 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 66 WHERE `item` = 23308 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 67 WHERE `item` = 23309 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 68 WHERE `item` = 16459 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 69 WHERE `item` = 16448 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 70 WHERE `item` = 16450 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 71 WHERE `item` = 16452 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 72 WHERE `item` = 16451 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 73 WHERE `item` = 16449 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 74 WHERE `item` = 23278 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 75 WHERE `item` = 23279 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 76 WHERE `item` = 23292 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 77 WHERE `item` = 23293 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 78 WHERE `item` = 23306 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 79 WHERE `item` = 23307 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 80 WHERE `item` = 16462 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 81 WHERE `item` = 16463 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 82 WHERE `item` = 16467 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 83 WHERE `item` = 16466 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 84 WHERE `item` = 16465 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 85 WHERE `item` = 16468 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 86 WHERE `item` = 29594 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 87 WHERE `item` = 29595 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 88 WHERE `item` = 29596 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 89 WHERE `item` = 29597 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 90 WHERE `item` = 29598 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 91 WHERE `item` = 29599 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 92 WHERE `item` = 29606 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 93 WHERE `item` = 29607 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 94 WHERE `item` = 29608 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 95 WHERE `item` = 29609 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 96 WHERE `item` = 29610 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 97 WHERE `item` = 29611 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 98 WHERE `item` = 23287 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 99 WHERE `item` = 23286 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 100 WHERE `item` = 23300 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 101 WHERE `item` = 23301 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 102 WHERE `item` = 23314 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 103 WHERE `item` = 23315 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 104 WHERE `item` = 16483 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 105 WHERE `item` = 16484 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 106 WHERE `item` = 16479 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 107 WHERE `item` = 16477 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 108 WHERE `item` = 16478 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 109 WHERE `item` = 16480 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 110 WHERE `item` = 23275 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 111 WHERE `item` = 23274 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 112 WHERE `item` = 23272 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 113 WHERE `item` = 23273 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 114 WHERE `item` = 23276 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 115 WHERE `item` = 23277 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 116 WHERE `item` = 16472 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 117 WHERE `item` = 16471 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 118 WHERE `item` = 16475 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 119 WHERE `item` = 16473 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 120 WHERE `item` = 16474 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 121 WHERE `item` = 16476 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 3 WHERE `item` = 16342 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 1 WHERE `item` = 18440 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 2 WHERE `item` = 18441 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 13 WHERE `item` = 18445 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 12 WHERE `item` = 18447 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 11 WHERE `item` = 18448 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 10 WHERE `item` = 18449 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 7 WHERE `item` = 18452 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 6 WHERE `item` = 18453 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 9 WHERE `item` = 18454 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 8 WHERE `item` = 18455 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 5 WHERE `item` = 18456 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 4 WHERE `item` = 18457 AND `entry` = 12785;
+UPDATE `npc_vendor` SET `slot` = 1 WHERE `item` = 18876 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 2 WHERE `item` = 18830 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 3 WHERE `item` = 18867 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 4 WHERE `item` = 23455 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 5 WHERE `item` = 18869 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 6 WHERE `item` = 18827 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 7 WHERE `item` = 12584 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 8 WHERE `item` = 23456 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 9 WHERE `item` = 18865 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 10 WHERE `item` = 23454 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 11 WHERE `item` = 18843 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 12 WHERE `item` = 18847 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 13 WHERE `item` = 18838 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 14 WHERE `item` = 18825 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 15 WHERE `item` = 18833 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 16 WHERE `item` = 18836 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 17 WHERE `item` = 18855 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 18 WHERE `item` = 18873 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 19 WHERE `item` = 23451 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 20 WHERE `item` = 23452 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 21 WHERE `item` = 23453 AND `entry` = 12784;
+UPDATE `npc_vendor` SET `slot` = 13 WHERE `item` = 15196 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 14 WHERE `item` = 15198 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 27 WHERE `item` = 18606 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 1 WHERE `item` = 18839 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 2 WHERE `item` = 18841 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 3 WHERE `item` = 31853 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 7 WHERE `item` = 31855 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 12 WHERE `item` = 32453 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 11 WHERE `item` = 32455 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 13 WHERE `item` = 15197 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 14 WHERE `item` = 15199 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 27 WHERE `item` = 18607 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 1 WHERE `item` = 18839 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 2 WHERE `item` = 18841 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 3 WHERE `item` = 31853 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 7 WHERE `item` = 31855 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 12 WHERE `item` = 32453 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 11 WHERE `item` = 32455 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 4 WHERE `item` = 31838 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 5 WHERE `item` = 31839 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 6 WHERE `item` = 31852 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 8 WHERE `item` = 31840 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 9 WHERE `item` = 31841 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 10 WHERE `item` = 31854 AND `entry` = 12793;
+UPDATE `npc_vendor` SET `slot` = 4 WHERE `item` = 31838 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 5 WHERE `item` = 31839 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 6 WHERE `item` = 31852 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 8 WHERE `item` = 31840 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 9 WHERE `item` = 31841 AND `entry` = 12781;
+UPDATE `npc_vendor` SET `slot` = 10 WHERE `item` = 31854 AND `entry` = 12781;
+UPDATE `creature_template` SET `Faction` = '35' WHERE `Entry` =26397;
+UPDATE `npc_vendor` SET `slot` = 1 WHERE `item` = 32034 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 2 WHERE `item` = 32037 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 3 WHERE `item` = 32036 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 4 WHERE `item` = 32035 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 5 WHERE `item` = 32038 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 6 WHERE `item` = 32015 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 7 WHERE `item` = 32018 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 8 WHERE `item` = 32017 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 9 WHERE `item` = 32016 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 10 WHERE `item` = 32019 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 11 WHERE `item` = 31973 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 12 WHERE `item` = 31976 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 13 WHERE `item` = 31975 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 14 WHERE `item` = 31974 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 15 WHERE `item` = 31977 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 16 WHERE `item` = 31981 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 17 WHERE `item` = 31979 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 18 WHERE `item` = 31983 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 19 WHERE `item` = 31980 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 20 WHERE `item` = 31982 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 21 WHERE `item` = 32049 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 22 WHERE `item` = 32047 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 23 WHERE `item` = 32051 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 24 WHERE `item` = 32048 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 25 WHERE `item` = 32050 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 26 WHERE `item` = 31998 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 27 WHERE `item` = 32001 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 28 WHERE `item` = 32000 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 29 WHERE `item` = 31999 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 30 WHERE `item` = 32002 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 31 WHERE `item` = 31967 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 32 WHERE `item` = 31971 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 33 WHERE `item` = 31969 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 34 WHERE `item` = 31968 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 35 WHERE `item` = 31972 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 36 WHERE `item` = 31987 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 37 WHERE `item` = 31990 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 38 WHERE `item` = 31989 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 39 WHERE `item` = 31988 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 40 WHERE `item` = 31991 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 41 WHERE `item` = 32056 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 42 WHERE `item` = 32059 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 43 WHERE `item` = 32058 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 44 WHERE `item` = 32057 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 45 WHERE `item` = 32060 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 46 WHERE `item` = 31961 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 47 WHERE `item` = 31964 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 48 WHERE `item` = 31963 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 49 WHERE `item` = 31962 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 50 WHERE `item` = 31960 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 51 WHERE `item` = 32030 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 52 WHERE `item` = 32033 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 53 WHERE `item` = 32032 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 54 WHERE `item` = 32031 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 55 WHERE `item` = 32029 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 56 WHERE `item` = 32005 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 57 WHERE `item` = 32008 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 58 WHERE `item` = 32007 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 59 WHERE `item` = 32006 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 60 WHERE `item` = 32004 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 61 WHERE `item` = 32010 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 62 WHERE `item` = 32013 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 63 WHERE `item` = 32012 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 64 WHERE `item` = 32011 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 65 WHERE `item` = 32009 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 66 WHERE `item` = 30487 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 67 WHERE `item` = 30490 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 68 WHERE `item` = 30489 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 69 WHERE `item` = 30488 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 70 WHERE `item` = 30486 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 71 WHERE `item` = 32021 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 72 WHERE `item` = 32024 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 73 WHERE `item` = 32023 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 74 WHERE `item` = 32022 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 75 WHERE `item` = 32020 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 76 WHERE `item` = 32040 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 77 WHERE `item` = 32043 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 78 WHERE `item` = 32042 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 79 WHERE `item` = 32041 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 80 WHERE `item` = 32039 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 81 WHERE `item` = 31993 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 82 WHERE `item` = 31996 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 83 WHERE `item` = 31995 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 84 WHERE `item` = 31997 AND `entry` IN (26091,26092);
+UPDATE `npc_vendor` SET `slot` = 85 WHERE `item` = 31992 AND `entry` IN (26091,26092);
+
+INSERT INTO `questgiver_greeting` (`Entry`, `Type`, `Text`, `EmoteId`, `EmoteDelay`) VALUES (8582, 0, ' ', 0, 0);
+DELETE FROM `gossip_menu` WHERE `entry` = 10331;
+UPDATE `creature_template` SET `NpcFlags` = '2', `GossipMenuId` = '0' WHERE `Entry` =8582;
+UPDATE `creature_template` SET `NpcFlags` = '2' WHERE `Entry` =22292;
+
+UPDATE `quest_template` SET `RewItemId1` = '0', `RewItemCount1` = '0' WHERE `entry` IN (14100, 14111);
+UPDATE `quest_template` SET `RequiredRaces` = '1024' WHERE `entry` IN (9449,9450,9451,9501,9503,9504,950,9509,9464,9465,9467,9468,9461,9552,9553,9554,9555);
+UPDATE `quest_template` SET `RequiredRaces` = '32' WHERE `entry` =1532;
+UPDATE `quest_template` SET `RequiredRaces` = '130' WHERE `entry` =1531;
+UPDATE `quest_template` SET `RewSpell` = '0' WHERE `entry` IN (96,9509,1527,9555,1518,1521,9451,1531,1532,9554);
+UPDATE `quest_template` SET `PrevQuestId` = '-1526' WHERE `entry` =1464;
+
+UPDATE `creature` SET `position_x` = '-3687.09', `position_y` = '-719.98', `position_z` = '11.2215', `orientation` = '4.61373', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300', `MovementType` = '2' WHERE `guid` =10027;
+UPDATE `creature` SET `position_x` = 995.666,`position_y` = -392.513,`position_z` = 8.51437,`orientation` = 2.0145,`spawntimesecsmin` = 300,`spawntimesecsmax` = 300,`spawndist` = 5,`currentwaypoint` = 0,`MovementType` = 1 WHERE `guid` = 1458;
+
+DELETE FROM dbscripts_on_quest_end WHERE id IN (12599);
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(12599,1,31,28324,10,0,0,0,0,0,0,0,0,0,0,0,0,'search for 28324'),
+(12599,100,0,0,0,0,0,0,0,27733,0,0,0,0,0,0,0,'Say'),
+(12599,101,20,2,0,0,28324,15,7,0,0,0,0,0,0,0,0,'buddy wp');
+UPDATE quest_template SET CompleteScript = 12599 WHERE entry = 12599;
+DELETE FROM `creature` WHERE `guid` = 104122;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(104118, 28117, 571, 1, 1, 0, 0, 5559.78, -2993.52, 276.643, 0.733038, 300, 300, 0, 0, 0, 0, 0, 0),
+(104119, 28117, 571, 1, 1, 0, 0, 5552.8, -2986.09, 276.643, 0.610865, 300, 300, 0, 0, 0, 0, 0, 0),
+(104120, 28117, 571, 1, 1, 0, 0, 5574.02, -2978.2, 276.583, 0.141479, 300, 300, 10, 0, 0, 0, 0, 1),
+(104121, 28117, 571, 1, 1, 0, 0, 5539.07, -2968.79, 276.583, 3.08295, 300, 300, 15, 0, 0, 0, 0, 1);
+DELETE FROM creature_spawn_data_template WHERE Entry IN (20033,20034,20035,20036);
+INSERT INTO creature_spawn_data_template(Entry,RelayId) VALUES (20033,30500),(20034,30501),(20035,30502),(20036,30503);
+DELETE FROM `creature_spawn_data` WHERE `id` BETWEEN 20033 AND 20036;
+INSERT INTO `creature_spawn_data` (`guid`, `id`) VALUES (104120,20033), (104118,20034), (104119,20035),(104121,20036);
+DELETE FROM dbscripts_on_relay WHERE `id` BETWEEN 30500 AND 30503;
+DELETE FROM dbscripts_on_relay WHERE `id` = 30510;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(30500,1,35,5,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'GENERIC - Send AI Event 5 (A) to Self'),
+(30501,1,35,6,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'GENERIC - Send AI Event 6 (B) to Self'),
+(30502,1,35,8,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'GENERIC - Send AI Event 8 (C) to Self'),
+(30503,1,35,9,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'GENERIC - Send AI Event 9 (D) to Self'),
+(30510,1,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'GENERIC - active Self');
+DELETE FROM `creature_movement_template` WHERE `entry` = 28117;
+INSERT INTO `creature_movement_template` (`entry`, `PathId`, `point`, `positionx`, `positiony`, `positionz`, `orientation`, `waittime`, `scriptid`) VALUES
+(28117,1,1,5568.49,-2980.96,276.584,3.44367,30000,2811701),
+(28117,1,2,5568.49,-2980.96,276.584,3.44367,5000,2811702),
+(28117,2,1,5563.38,-2986.08,276.584,1.12282,30000,2811701),
+(28117,2,2,5563.38,-2986.08,276.584,1.12282,10000,2811703),
+(28117,3,1,5561.11,-2983.05,276.584,0.255073,30000,2811701),
+(28117,3,2,5561.11,-2983.05,276.584,0.255073,10000,2811704),
+(28117,4,1,5563.46,-2978.4,276.584,4.98867,30000,2811701),
+(28117,4,2,5563.46,-2978.4,276.584,4.98867,5000,2811705);
+DELETE FROM dbscripts_on_creature_movement WHERE `id` BETWEEN 2811701 AND 2811705;
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(2811701,2000,28,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'sit'),
+(2811702,1,28,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'stand'),
+(2811702,200,20,1,10,0,0,0,0x04,0,0,0,0,0,0,0,0,'randommovement'),
+(2811702,201,35,5,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'send event 5'),
+(2811702,210,21,0,10,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive'),
+(2811703,1,28,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'stand'),
+(2811703,2000,3,0,0,0,0,0,0x04,0,0,0,0,5559.78,-2993.52,276.643,0.733038,'move'),
+(2811703,6000,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle'),
+(2811703,6001,35,6,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'send event 6'),
+(2811703,6002,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0.733038,'move'),
+(2811703,6010,21,0,10,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive'),
+(2811704,1,28,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'stand'),
+(2811704,2000,3,0,0,0,0,0,0x04,0,0,0,0,5552.8,-2986.09,276.643,0.610865,'move'),
+(2811704,6000,20,0,10,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle'),
+(2811704,6001,35,8,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'send event 8'),
+(2811704,6002,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0.610865,'move'),
+(2811704,6010,21,0,10,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive'),
+(2811705,1,28,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'stand'),
+(2811705,200,20,1,15,0,0,0,0x04,0,0,0,0,0,0,0,0,'randommovement'),
+(2811705,201,35,9,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'send event 9'),
+(2811705,210,21,0,10,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(87356, 28324, 571, 1, 1, 0, 0, 5542.89, -3012.41, 278.392, 2.3911, 300, 300, 0, 0, 0, 0, 0, 0);
+UPDATE creature_template SET MovementType=2 WHERE entry=28324;
+DELETE FROM `creature_movement_template` WHERE `entry` = 28324;
+INSERT INTO `creature_movement_template` (`entry`, `point`, `positionx`, `positiony`, `positionz`, `orientation`, `waittime`, `scriptid`) VALUES
+(28324,1,5542.888,-3012.408,278.3916,2.391101,5000,2832401),
+(28324,2,5540.61,-3010.148,278.3916,100,0,0),
+(28324,3,5537.147,-3006.25,278.3916,100,0,0),
+(28324,4,5542.891,-3000.26,278.4216,100,0,0),
+(28324,5,5550.705,-2994.714,278.4216,100,0,0),
+(28324,6,5560.89,-2985.472,276.6429,100,7000,2832402),
+(28324,7,5556.429,-2989.992,276.6429,100,0,0),
+(28324,8,5552.473,-2994.235,278.1889,100,0,0),
+(28324,9,5543.959,-2999.792,278.4216,100,0,0),
+(28324,10,5536.565,-3006.063,278.3916,100,0,0),
+(28324,11,5540.409,-3010.131,278.3916,100,0,0),
+(28324,12,5542.888,-3012.408,278.3916,2.391101,1000,2832403);
+DELETE FROM dbscripts_on_creature_movement WHERE `id` BETWEEN 2832401 AND 2832403;
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(2832401,1,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(2832401,4000,0,0,0,0,0,0,0,27730,0,0,0,0,0,0,0,''),
+(2832401,4001,1,66,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(2832402,1000,28,8,0,0,0,0,0,0,0,0,0,0,0,0,0,'kneel'),
+(2832402,2000,9,72946,60,0,0,0,0,0,0,0,0,0,0,0,0,'resp object'),
+(2832402,2010,35,10,100,0,0,0,0,0,0,0,0,0,0,0,0,'Send event AI 10'),
+(2832402,5000,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'stand state'),
+(2832403,10,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle'),
+(2832403,11,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+UPDATE gameobject SET spawntimesecsmin = -60, spawntimesecsmax = -60 WHERE guid = 72946;
+DELETE FROM `gameobject` WHERE `id` IN (190541,190542,190543);
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(20583, 190541, 571, 1, 1, 5278.07, -2858.5, 288.172, 0.488691, 0, 0, 0.241921, 0.970296, 300, 300, 255, 1),
+(20610, 190541, 571, 1, 1, 5309.95, -2815.82, 287.96, -2.93214, 0, 0, -0.994521, 0.104536, 300, 300, 255, 1),
+(27432, 190541, 571, 1, 1, 5360.36, -2898.41, 287.79, 0.59341, 0, 0, 0.292371, 0.956305, 300, 300, 255, 1),
+(27433, 190541, 571, 1, 1, 5371.04, -2835, 276.162, 0.680677, 0, 0, 0.333806, 0.942642, 300, 300, 255, 1),
+(29063, 190541, 571, 1, 1, 5401.77, -2832.13, 276.205, 1.62316, 0, 0, 0.725376, 0.688353, 300, 300, 255, 1),
+(29064, 190541, 571, 1, 1, 5411.15, -2766.45, 275.126, -1.16937, 0, 0, -0.551936, 0.833886, 300, 300, 255, 1),
+(29065, 190541, 571, 1, 1, 5468.38, -2752.36, 274.378, -0.436332, 0, 0, -0.216439, 0.976296, 300, 300, 255, 1),
+(29066, 190541, 571, 1, 1, 5480.51, -2820.53, 271.8, 1.74533, 0, 0, 0.766045, 0.642787, 300, 300, 255, 1),
+(29067, 190541, 571, 1, 1, 5484.91, -2899.53, 275.947, -3.05433, 0, 0, -0.999048, 0.0436174, 300, 300, 255, 1),
+(29068, 190541, 571, 1, 1, 5500.62, -2803.27, 271.5, -1.09956, 0, 0, -0.5225, 0.852639, 300, 300, 255, 1),
+(29069, 190541, 571, 1, 1, 5517.06, -2855.62, 271.632, -2.93214, 0, 0, -0.994521, 0.104535, 300, 300, 255, 1),
+(29070, 190541, 571, 1, 1, 5518.84, -2877.54, 274.378, 3.10665, 0, 0, 0.999847, 0.0174704, 300, 300, 255, 1),
+(29071, 190541, 571, 1, 1, 5525.71, -2754.21, 274.069, -2.51327, 0, 0, -0.951056, 0.309019, 300, 300, 255, 1),
+(29072, 190541, 571, 1, 1, 5535.62, -2822.26, 271.865, 3.03684, 0, 0, 0.998629, 0.0523524, 300, 300, 255, 1),
+(29073, 190541, 571, 1, 1, 5553.97, -2869.68, 274.768, 2.67035, 0, 0, 0.972369, 0.233447, 300, 300, 255, 1),
+(29074, 190541, 571, 1, 1, 5577.43, -2753.35, 274.378, 1.18682, 0, 0, 0.559193, 0.829038, 300, 300, 255, 1),
+(29075, 190541, 571, 1, 1, 5579.88, -2839.41, 274.378, -2.02458, 0, 0, -0.848048, 0.52992, 300, 300, 255, 1),
+(29076, 190541, 571, 1, 1, 5593.57, -2820.75, 273.788, -1.06465, 0, 0, -0.507538, 0.861629, 300, 300, 255, 1),
+(29077, 190541, 571, 1, 1, 5607.61, -2812.19, 274.12, -0.785397, 0, 0, -0.382683, 0.92388, 300, 300, 255, 1),
+(29078, 190541, 571, 1, 1, 5607.96, -2989.43, 274.539, 2.30383, 0, 0, 0.913544, 0.406739, 300, 300, 255, 1),
+(29079, 190541, 571, 1, 1, 5611.39, -2893.36, 274.088, 0.628317, 0, 0, 0.309016, 0.951057, 300, 300, 255, 1),
+(29080, 190541, 571, 1, 1, 5617.64, -2702.12, 276.583, -1.91986, 0, 0, -0.819151, 0.573577, 300, 300, 255, 1),
+(29081, 190541, 571, 1, 1, 5622.47, -2818.68, 273.441, 0.890117, 0, 0, 0.430511, 0.902586, 300, 300, 255, 1),
+(29082, 190541, 571, 1, 1, 5626.7, -2943.29, 274.378, 0.628317, 0, 0, 0.309016, 0.951057, 300, 300, 255, 1),
+(29083, 190541, 571, 1, 1, 5650.38, -2749.66, 275.508, 1.76278, 0, 0, 0.771624, 0.636079, 300, 300, 255, 1),
+(29084, 190541, 571, 1, 1, 5659.57, -2799.92, 274.286, -3.00195, 0, 0, -0.997563, 0.0697661, 300, 300, 255, 1),
+(29085, 190541, 571, 1, 1, 5660.02, -2680.07, 276.583, 2.05949, 0, 0, 0.857168, 0.515037, 300, 300, 255, 1),
+(29086, 190541, 571, 1, 1, 5674.29, -2872.01, 274.378, 2.11185, 0, 0, 0.870356, 0.492423, 300, 300, 255, 1),
+(29087, 190541, 571, 1, 1, 5674.79, -2775.34, 274.02, 1.90241, 0, 0, 0.814116, 0.580702, 300, 300, 255, 1),
+(29088, 190541, 571, 1, 1, 5682.21, -2682.45, 277.01, 3.10665, 0, 0, 0.999847, 0.0174704, 300, 300, 255, 1),
+(29089, 190541, 571, 1, 1, 5682.4, -2818.2, 273.714, -0.436332, 0, 0, -0.216439, 0.976296, 300, 300, 255, 1),
+(29090, 190541, 571, 1, 1, 5686.82, -2749.93, 276.583, 3.12412, 0, 0, 0.999962, 0.00873464, 300, 300, 255, 1),
+(44073, 190541, 571, 1, 1, 5707.92, -2798.36, 274.657, -1.79769, 0, 0, -0.782608, 0.622514, 300, 300, 255, 1),
+(46799, 190541, 571, 1, 1, 5710.05, -2665.64, 280.768, -3.10665, 0, 0, -0.999847, 0.0174704, 300, 300, 255, 1),
+(46800, 190541, 571, 1, 1, 5717.47, -2843.38, 274.447, -1.41372, 0, 0, -0.649447, 0.760406, 300, 300, 255, 1),
+(46801, 190541, 571, 1, 1, 5722.77, -2815.96, 274.295, 0.401425, 0, 0, 0.199368, 0.979925, 300, 300, 255, 1),
+(46819, 190541, 571, 1, 1, 5727.04, -2709.84, 276.637, -0.925024, 0, 0, -0.446198, 0.894934, 300, 300, 255, 1),
+(46820, 190541, 571, 1, 1, 5749.59, -2754.91, 276.34, -1.90241, 0, 0, -0.814116, 0.580702, 300, 300, 255, 1),
+(46821, 190541, 571, 1, 1, 5761.11, -2784.07, 274.142, -1.11701, 0, 0, -0.529919, 0.848048, 300, 300, 255, 1),
+(46823, 190541, 571, 1, 1, 5766.93, -2834.21, 273.742, 2.35619, 0, 0, 0.923879, 0.382686, 300, 300, 255, 1),
+(46824, 190541, 571, 1, 1, 5771.16, -2723.26, 276.182, 2.30383, 0, 0, 0.913544, 0.406739, 300, 300, 255, 1),
+(46825, 190541, 571, 1, 1, 5775.56, -2753.79, 276.583, 0.506145, 0, 0, 0.25038, 0.968148, 300, 300, 255, 1),
+(46826, 190541, 571, 1, 1, 5783.52, -2671.31, 276.583, -2.18166, 0, 0, -0.88701, 0.461749, 300, 300, 255, 1),
+(46827, 190541, 571, 1, 1, 5785.81, -2809.64, 274.439, -1.36136, 0, 0, -0.629322, 0.777145, 300, 300, 255, 1),
+(46828, 190541, 571, 1, 1, 5797.03, -2849.39, 274.516, -2.37364, 0, 0, -0.927182, 0.37461, 300, 300, 255, 1),
+(46829, 190541, 571, 1, 1, 5809.78, -2787.03, 274.738, 2.58308, 0, 0, 0.961261, 0.275641, 300, 300, 255, 1),
+(46830, 190541, 571, 1, 1, 5829.35, -2819.36, 274.156, -1.41372, 0, 0, -0.649449, 0.760405, 300, 300, 255, 1),
+(46831, 190541, 571, 1, 1, 5841.95, -2710.87, 276.16, -2.75761, 0, 0, -0.981626, 0.190814, 300, 300, 255, 1);
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 190541 FROM `gameobject` WHERE `gameobject`.`id` = 190541;
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 190542 FROM `gameobject` WHERE `gameobject`.`id` = 190541;
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 190543 FROM `gameobject` WHERE `gameobject`.`id` = 190541;
+UPDATE `gameobject_template` SET `ExtraFlags` = `ExtraFlags`|2 WHERE `entry` IN (190541,190542,190543);
+DELETE FROM `pool_gameobject_template` WHERE `id` = 190541;
+DELETE FROM `pool_gameobject_template` WHERE `id` = 190542;
+DELETE FROM `pool_gameobject_template` WHERE `id` = 190543;
+DELETE FROM `pool_template` WHERE `entry` = 35;
+DELETE FROM `pool_template` WHERE `entry` = 36;
+DELETE FROM `pool_template` WHERE `entry` = 37;
+DELETE FROM `spawn_group_spawn` WHERE id = 30002;
+INSERT IGNORE INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) SELECT 30002, `Guid`, -1 FROM `gameobject` WHERE id = 190541;
+DELETE FROM spawn_group WHERE id = 30002;
+INSERT INTO spawn_group (Id, Name, Type, MaxCount, WorldState, Flags) VALUES (30002,'Zul\'Drak - Dead Thornwood 190541,190541,190541',1,30,0,0);
+UPDATE `gameobject` SET `id` = 0 WHERE `id` IN (190541);
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
