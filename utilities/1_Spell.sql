@@ -44,5 +44,8 @@ INSERT INTO `spell_template` (`Id`, `Dispel`, `Mechanic`, `Attributes`, `Attribu
 (25935, 0, 0, 256, 0, 0, 0, 0, 0, 0, 0, 0, 0, 256, 1, 0, 0, 101, 0, 0, 0, 0, 0, 6, 0, -1, 0, 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21199, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 'Signet Ring of the Bronze Dragonflight TANK R4 DND'),
 (25936, 0, 0, 256, 0, 0, 0, 0, 0, 0, 0, 0, 0, 256, 1, 0, 0, 101, 0, 0, 0, 0, 0, 6, 0, -1, 0, 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 'Signet Ring of the Bronze Dragonflight TANK R5 DND');
 
+# error in fix_spell, line 1937 ("0" not in dbc)
+UPDATE `spell_template` SET `RangeIndex` = 1 WHERE `Id` IN (16613,16619,16630,16631);
+
 UPDATE `spell_template` SET `EffectMiscValue1` = 15795 WHERE `id` =34849;
 UPDATE `spell_template` SET `EffectMiscValue1` = 1051 WHERE `Id` =51010;

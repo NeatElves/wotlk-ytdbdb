@@ -3161,6 +3161,19 @@ UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` IN (4967,4969);
 
 UPDATE broadcast_text SET ChatTypeID=4 WHERE Id = 20154;
 
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` = 5832;
+
+UPDATE `broadcast_text` SET `ChatTypeID`='1' WHERE (`Id`='9633');
+UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='9636');
+UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='9618');
+
+UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='1265');
+UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='1268');
+UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='1269');
+UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='1270');
+
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` = 27674; -- Yell
+
 -- text
 # 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
