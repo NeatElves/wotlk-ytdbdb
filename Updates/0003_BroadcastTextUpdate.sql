@@ -3174,6 +3174,8 @@ UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='1270');
 
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` = 27674; -- Yell
 
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (27760,27776,27784,27789);
+
 -- text
 # 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
