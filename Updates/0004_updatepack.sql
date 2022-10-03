@@ -15678,8 +15678,8 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 INSERT IGNORE INTO `creature_spawn_data` (`Guid`, `Id`) SELECT `guid`, 2 FROM `creature` WHERE id = 28274;
 UPDATE `creature` SET `position_x` = '5072.7', `position_y` = '-3646.9', `position_z` = '397.08', `orientation` = '1.91986', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =119038;
 
-UPDATE quest_template SET RequiredRaces = 0 WHERE entry IN (5401, 5402, 5403, 5404);
-UPDATE quest_template SET RequiredRaces = 0 WHERE entry IN (5405, 5406, 5407, 5408);
+#UPDATE quest_template SET RequiredRaces = 0 WHERE entry IN (5401, 5402, 5403, 5404);
+#UPDATE quest_template SET RequiredRaces = 0 WHERE entry IN (5405, 5406, 5407, 5408);
 UPDATE `quest_template` SET `ExclusiveGroup` = '0' WHERE `ExclusiveGroup` =6028;
 UPDATE `quest_template` SET `ExclusiveGroup` = '0' WHERE `ExclusiveGroup` =5402;
 
@@ -16175,7 +16175,7 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (3461, 0, 0, 'I need another Argent Dawn Commission.', 0, 1, 1, -1, 0, 342100, 0, 0, NULL, 0, 1989),
 (3461, 1, 1, 'I would like to buy from you.', 0, 3, 128, 0, 0, 0, 0, 0, NULL, 0, 1988),
 (3461, 2, 0, 'Miranda, could you please tell me the insignia cost of items that you are offering for adventurers with other reputations?', 0, 1, 1, 7208, 0, 0, 0, 0, NULL, 0, 1379);
-UPDATE quest_template SET RequiredCondition=1989, PrevQuestId=0 WHERE entry IN (5402, 5403, 5404, 5406, 5407, 5408, 5508, 5509, 5510);
+UPDATE quest_template SET RequiredCondition=1379, PrevQuestId=0 WHERE entry IN (5402, 5403, 5404, 5406, 5407, 5408, 5508, 5509, 5510);
 
 DELETE FROM `creature_involvedrelation` WHERE `id` = 16376 AND `quest` = 9232;
 DELETE FROM `creature_involvedrelation` WHERE `id` = 16115 AND `quest` = 9033;
