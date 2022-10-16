@@ -18282,7 +18282,7 @@ UPDATE `npc_vendor` SET `slot` = 83 WHERE `entry` = 23381 AND `item` = 30978;
 UPDATE `npc_vendor` SET `slot` = 84 WHERE `entry` = 23381 AND `item` = 30980;
 UPDATE `npc_vendor` SET `slot` = 85 WHERE `entry` = 23381 AND `item` = 30976;
 
-UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` IN (2898,2899,3261,3262,3293,3294,3295,3296,3321,3328,3329,3330,3331,3332,3334,3345,3569);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` IN (2898,13937,13143,2899,3261,3262,3293,3294,3295,3296,3321,3328,3329,3330,3331,3332,3334,3345,3569);
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '5' WHERE `entry` =1936 AND `item` =3334;
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '75', `groupid` = '5' WHERE `entry` =1936 AND `item` =4261;
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '5' WHERE `entry` =2476 AND `item` =3563;
@@ -18290,7 +18290,15 @@ UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '30', `groupid` = '5
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '12' WHERE `item` IN (3181,3401,8429,8430);
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10', `groupid` = '12' WHERE `item` IN (4459,23920,23909);
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10', `groupid` = '9' WHERE `item` IN (9260);
-UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` IN (9276);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` IN (9276,10847,14617);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '100' WHERE `item` IN (9444);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '50' WHERE `item` IN (29590);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '-25' WHERE `item` IN (25468);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `item` IN (9445,13390,6341,18354);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '3' WHERE `item` IN (12033);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '15' WHERE `item` IN (16684);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` IN (18295);
+UPDATE `creature_loot_template` SET `groupid` = '13' WHERE `item` IN (9308,25433);
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5', `groupid` = '5' WHERE `entry` =4627 AND `item` =5943;
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '5' WHERE `entry` =4627 AND `item` =6438;
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '30', `groupid` = '5' WHERE `entry` =4627 AND `item` =6439;
@@ -18303,5 +18311,1140 @@ UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '35', `groupid` = '5
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '5' WHERE `entry` =2108 AND `item` =6200;
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '25', `groupid` = '5' WHERE `entry` =2283 AND `item` =6628;
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '5' WHERE `entry` =2283 AND `item` =5969;
+
+UPDATE `creature` SET `position_x` = '5934.02', `position_y` = '-2348.9', `position_z` = '293.924', `orientation` = '4.88692', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =98893;
+UPDATE gossip_menu_option SET action_script_id = 966801 WHERE menu_id IN (9668);
+DELETE FROM dbscripts_on_gossip WHERE id IN (966801);
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(966801,1,15,51015,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast 51055'),
+(966801,2,0,0,0,0,0,0,0,27633,27636,27637,27677,0,0,0,0,'random say');
+UPDATE quest_template SET RequiredCondition = 2936, PrevQuestId=0, ExclusiveGroup = 0 WHERE entry IN (12541);
+
+UPDATE quest_template SET ReqItemId1 = 0, ReqItemId3 = 5063, ReqItemCount1 = 0, ReqItemCount3 = 1 WHERE entry = 872;
+
+UPDATE dbscripts_on_quest_end SET datalong = 3617 WHERE id = 407 AND delay = 19000;
+
+DELETE FROM dbscripts_on_creature_movement WHERE id=2499901;
+INSERT INTO dbscripts_on_creature_movement (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(2499901,1,31,23033,15,0,0,0,0,0,0,0,0,0,0,0,0,'search for 23033'),
+(2499901,100,15,45023,0,0,23033,15,2,0,0,0,0,0,0,0,0,'Irespeaker - Cast Fel Consumption');
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (150101,150201);
+INSERT INTO dbscripts_on_creature_movement (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(150101,1,22,634,1,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(150101,2,31,1736,40,0,0,0,0,0,0,0,0,0,0,0,0,'search for 1736'),
+(150101,100,26,0,0,0,1736,40,1,0,0,0,0,0,0,0,0,''),
+(150201,1,22,21,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'W.Ghuol - Faction change'),
+(150201,2,31,1736,40,0,0,0,0,0,0,0,0,0,0,0,0,'W.Ghuol - search for 1736'),
+(150201,100,26,1,0,0,1736,40,1,0,0,0,0,0,0,0,0,'W.Ghuol - Attack on Guards');
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (1066601);
+INSERT INTO dbscripts_on_creature_movement (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(1066601,1,31,175566,40,0,0,0,1025,0,0,0,0,0,0,0,0,'Gordo - Terminate Script if go.entry 175566 not found in 40 range'),
+(1066601,9,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Gordo - active'),
+(1066601,10,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,'Gordo - Set Pause Waypoints'),
+(1066601,11,36,0,0,0,175566,40,1025,0,0,0,0,0,0,0,0,'Gordo - Face go.entry 175566'),
+(1066601,1000,16,6273,2,0,0,0,0,0,0,0,0,0,0,0,0,'Gordo - Play Sound'),
+(1066601,2000,37,0,0,0,175566,40,1025,2,0,0,0,0,0,0,3,'Gordo - Run to Gloom Weed go.entry 175566'),
+(1066601,7000,45,9998,0,0,0,0,0,0,0,0,0,0,0,0,0,'Gordo - Start Relay Script'), -- make sure object is still there... use relay instead
+(1066601,9000,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Gordo - Set Unpause Waypoints'),
+(1066601,9001,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Gordo - unactive');
+DELETE FROM dbscripts_on_relay WHERE id IN (9998);
+INSERT INTO dbscripts_on_relay (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(9998,1,31,175566,40,0,0,0,1025,0,0,0,0,0,0,0,0,'Gordo - Terminate Script if go.entry 175566 not found in 40 range'),
+(9998,10,1,36,0,0,0,0,0,0,0,0,0,0,0,0,0,'Gordo - EMOTE_ONESHOT_ATTACK1H'),
+(9998,11,0,0,0,0,0,0,0,6893,0,0,0,0,0,0,0,'Gordo - Text'),
+(9998,100,40,0,0,0,175566,5,1,0,0,0,0,0,0,0,0,'Gordo - Despawn Gloom Weed');
+UPDATE creature_movement_template SET waittime = 240000 WHERE entry = 17008 AND point = 4;
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (1700803);
+INSERT INTO dbscripts_on_creature_movement (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(1700803,100,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(1700803,2000,0,0,0,0,0,0,0x04,18702,0,0,0,0,0,0,0,''),
+(1700803,3000,15,35996,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'cast 35996'),
+(1700803,8000,0,0,0,0,0,0,0x04,18703,0,0,0,0,0,0,0,''),
+(1700803,15000,0,0,0,0,0,0,0x04,18704,0,0,0,0,0,0,0,''),
+(1700803,22000,0,0,0,0,0,0,0x04,18705,0,0,0,0,0,0,0,''),
+(1700803,26000,14,35996,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(1700803,27000,35,5,40,0,0,0,0,0,0,0,0,0,0,0,0,'Send Event AI 5'),
+(1700803,29000,0,0,0,0,0,0,0x04,18706,0,0,0,0,0,0,0,''),
+(1700803,29001,28,8,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'STATE_KNEEL'),
+(1700803,29002,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+UPDATE creature SET spawndist = 0, MovementType = 0 WHERE id = 21052;
+
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES ('2080', '4', '4128', '0', '0', '0', '0', NULL);
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES ('9417', '12664', '0', '2080');
+
+UPDATE `dbscripts_on_event` SET `x` = 1316.4685, `y` = 6686.6694, `z` = -18.59028, `o` = 0.482672661542892456 WHERE `id` = 13685 AND `delay` = 1000 AND `command` = 10;
+UPDATE `creature_template` SET `InhabitType` = 4 WHERE `entry` = 21351;
+REPLACE INTO `gameobject` (`guid`, `id`, `position_x`, `POSITION_y`, `position_z`, `orientation`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(33542, 0, -5975.29, -2786.09, 385.061, 5.74214, -0.267238, 0.963631, 180, 900, 100, 1), -- 191298 (Pool 21409), Entry 0 - [Random (gameobject_spawn_entry) X:-5795.830078, -2929.929932, 363.821014, 0
+(33544, 0, -6835.26, -3643.86, 253.034, 4.01426, -0.906307, 0.422619, 180, 900, 100, 1), -- 191772 (Pool 21423), Entry 0 - [Random (gameobject_spawn_entry) X:-6606.040039, -3416.659912, 279.299988, 0
+(33546, 106319, -6145.14, -2943.76, 397.839, 5.044, -0.580703, 0.814116, 300, 900, 100, 1), -- 12796 (Pool 31209), Entry 106319 - [Battered Chest X:-6162.259766, -2950.600098, 409.209015, 0
+(33547, 106319, -5053.31, -2681.58, 320.147, 0.733038, 0.358368, 0.93358, 300, 900, 100, 1); -- 31210, 0, 'Loch Modan - Battered Chest
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) VALUES (33542, 3662),(33542, 3705), (33544, 3706),(33544, 3707);
+REPLACE INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
+(33542, 529, 0, 'Loch Modan - Food Crate (3662) & Barrel of Milk (3705)'),
+(33544, 14191, 0, 'Badlands - Food Crate (3707) & Barrel of Sweet Nectar (3706)'),
+(33546, 480, 0, 'Loch Modan (Stonesplinter Valley) - Battered Chest (106319)'),
+(33547, 481, 0, 'Loch Modan - Battered Chest (106319)');
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (2182,2183));
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (2182,2183));
+DELETE FROM `creature` WHERE `id` IN (2182,2183);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(45407, 2182, 1, 1, 0, 0, 7305.55, -977.196, 31.9844, 3.3713, 300, 300, 10, 0, 0, 0, 0, 1),
+(45416, 2182, 1, 1, 0, 0, 7357.83, -1050.96, 36.511, 0.543228, 300, 300, 10, 0, 0, 0, 0, 1),
+(45426, 2182, 1, 1, 0, 0, 7335.42, -997.916, 31.6554, 1.41118, 300, 300, 10, 0, 0, 0, 0, 1),
+(45430, 2182, 1, 1, 0, 0, 7409.53, -1093.45, 43.5366, 3.97695, 300, 300, 10, 0, 0, 0, 0, 1),
+(45434, 2182, 1, 1, 0, 0, 7660.05, -957.327, 27.3848, 5.97665, 300, 300, 10, 0, 0, 0, 0, 1),
+(45435, 2182, 1, 1, 0, 0, 7350.21, -981.386, 32.2804, 5.63957, 300, 300, 5, 0, 0, 0, 0, 1),
+(45460, 2182, 1, 1, 0, 0, 7506.08, -987.29, -9.75635, 6.19686, 300, 300, 5, 0, 0, 0, 0, 1),
+(45468, 2182, 1, 1, 0, 0, 7457.88, -858.64, 1.25861, 5.60899, 300, 300, 3, 0, 0, 0, 0, 1),
+(45472, 2182, 1, 1, 0, 0, 7466.14, -983.503, -7.49843, 0.54365, 300, 300, 5, 0, 0, 0, 0, 1),
+(45476, 2182, 1, 1, 0, 0, 7278.5, -950.113, 34.2543, 2.42268, 300, 300, 10, 0, 0, 0, 0, 1),
+(45491, 2182, 1, 1, 0, 0, 7329.82, -889.928, 32.3375, 6.27315, 300, 300, 5, 0, 0, 0, 0, 1),
+(45522, 2182, 1, 1, 0, 0, 7368.3, -901.803, 32.3373, 4.78021, 300, 300, 5, 0, 0, 0, 0, 1),
+(45525, 2182, 1, 1, 0, 0, 7417.1, -1118.77, 40.5964, 1.96477, 300, 300, 10, 0, 0, 0, 0, 1),
+(45527, 2182, 1, 1, 0, 0, 7443.12, -905.454, 11.338, 3.5061, 300, 300, 0, 0, 0, 0, 0, 2),
+(45563, 2182, 1, 1, 0, 0, 7486.07, -821.3, 14.6356, 3.97431, 300, 300, 2, 0, 0, 0, 0, 1),
+(45550, 2182, 1, 1, 0, 0, 7377.18, -841.848, 18.077, 1.7701, 300, 300, 0, 0, 0, 0, 0, 2),
+(45748, 2182, 1, 1, 0, 0, 7628.4, -1002.74, 37.7353, 2.18198, 300, 300, 0, 0, 0, 0, 0, 2),
+(45576, 2182, 1, 1, 0, 0, 7577.87, -1081.61, 41.3153, 4.71222, 300, 300, 5, 0, 0, 0, 0, 1),
+(45583, 2182, 1, 1, 0, 0, 7482.22, -1109.47, 34.6743, 5.91491, 300, 300, 10, 0, 0, 0, 0, 1),
+(45584, 2182, 1, 1, 0, 0, 7357.16, -1090.96, 38.2491, 6.05886, 300, 300, 10, 0, 0, 0, 0, 1),
+(45588, 2182, 1, 1, 0, 0, 7386.86, -792.971, 8.59671, 5.26557, 300, 300, 10, 0, 0, 0, 0, 1),
+(45602, 2182, 1, 1, 0, 0, 7267.95, -880.176, 33.7943, 4.02361, 300, 300, 10, 0, 0, 0, 0, 1),
+(45608, 2182, 1, 1, 0, 0, 7254.61, -887.389, 34.4369, 1.38457, 300, 300, 10, 0, 0, 0, 0, 1),
+(45613, 2182, 1, 1, 0, 0, 7536.04, -889.868, 20.2889, 1.54244, 300, 300, 10, 0, 0, 0, 0, 1),
+(45617, 2182, 1, 1, 0, 0, 7518.44, -954.141, -9.75713, 1.49309, 300, 300, 5, 0, 0, 0, 0, 1);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(45365, 2183, 1, 1, 0, 0, 7370.23, -1071.53, 38.9667, 3.85662, 300, 300, 0, 0, 0, 0, 0, 2),
+(45350, 2183, 1, 1, 0, 0, 7370.76, -1120.69, 42.7017, 5.49972, 300, 300, 5, 0, 0, 0, 0, 1),
+(45359, 2183, 1, 1, 0, 0, 7424.59, -1072.14, 38.5301, 4.08368, 300, 300, 5, 0, 0, 0, 0, 1),
+(45369, 2183, 1, 1, 0, 0, 7358.01, -1007.05, 31.31, 2.36315, 300, 300, 0, 0, 0, 0, 0, 2),
+(45412, 2183, 1, 1, 0, 0, 7513.31, -995.103, -9.75635, 1.56868, 300, 300, 5, 0, 0, 0, 0, 1),
+(45414, 2183, 1, 1, 0, 0, 7477.85, -1019.35, -9.63135, 0.054363, 300, 300, 5, 0, 0, 0, 0, 1),
+(45417, 2183, 1, 1, 0, 0, 7506.33, -1018.65, -9.75635, 2.80109, 300, 300, 5, 0, 0, 0, 0, 1),
+(45455, 2183, 1, 1, 0, 0, 7450.99, -1006.57, -9.75634, 4.72875, 300, 300, 5, 0, 0, 0, 0, 1),
+(45510, 2183, 1, 1, 0, 0, 7394.6, -1055.38, 39.033, 5.0858, 300, 300, 5, 0, 0, 0, 0, 1),
+(45535, 2183, 1, 1, 0, 0, 7379.69, -1028.65, 33.8865, 0.459978, 300, 300, 5, 0, 0, 0, 0, 1),
+(45573, 2183, 1, 1, 0, 0, 7397.71, -1116.72, 41.2383, 4.05787, 300, 300, 10, 0, 0, 0, 0, 1),
+(45578, 2183, 1, 1, 0, 0, 7439.72, -1131.35, 40.5149, 3.4298, 300, 300, 3, 0, 0, 0, 0, 1),
+(45600, 2183, 1, 1, 0, 0, 7544.47, -1076.79, 39.614, 0.688111, 300, 300, 5, 0, 0, 0, 0, 1),
+(45661, 2183, 1, 1, 0, 0, 7495.04, -1080.98, 36.555, 1.69232, 300, 300, 10, 0, 0, 0, 0, 1),
+(45680, 2183, 1, 1, 0, 0, 7559.15, -1055.25, 37.4961, 3.33939, 300, 300, 5, 0, 0, 0, 0, 1),
+(129235, 2183, 1, 1, 0, 0, 7469.64, -1069.91, 34.93, 1.2225, 300, 300, 5, 0, 0, 0, 0, 1),
+(129236, 2183, 1, 1, 0, 0, 7520.77, -1066.37, 35.4488, 2.03707, 300, 300, 0, 0, 0, 0, 0, 0),
+(45328, 2183, 1, 1, 0, 0, 7460.62, -1096.84, 36.1425, 0.46866, 300, 300, 5, 0, 0, 0, 0, 1),
+(45334, 2183, 1, 1, 0, 0, 7323.82, -1059.67, 38.0261, 4.23056, 300, 300, 5, 0, 0, 0, 0, 1),
+(45339, 2183, 1, 1, 0, 0, 7498.7, -959.536, -3.24485, 3.80301, 300, 300, 5, 0, 0, 0, 0, 1);
+INSERT INTO `creature_movement` (`Id`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`, `Comment`) VALUES
+(45527, 1, 7441.08, -903.214, 10.3642, 0, 0, 0, NULL),
+(45527, 2, 7443.29, -896.773, 6.04285, 0, 0, 0, NULL),
+(45527, 3, 7445.4, -890.392, 2.06535, 0, 0, 0, NULL),
+(45527, 4, 7447.22, -881.618, 1.37975, 0, 0, 0, NULL),
+(45527, 5, 7450.02, -872.325, 1.38543, 0, 0, 0, NULL),
+(45527, 6, 7447.76, -865.21, 1.77814, 0, 0, 0, NULL),
+(45527, 7, 7439.89, -862.938, 2.80066, 0, 0, 0, NULL),
+(45527, 8, 7440.33, -871.887, 2.15905, 0, 0, 0, NULL),
+(45527, 9, 7443.55, -887.6, 1.47957, 0, 0, 0, NULL),
+(45527, 10, 7443.52, -893.564, 3.80273, 0, 0, 0, NULL),
+(45527, 11, 7443.34, -897.255, 6.37362, 0, 0, 0, NULL),
+(45527, 12, 7443, -902.069, 9.56213, 0, 0, 0, NULL),
+(45527, 13, 7442.65, -906.535, 11.5996, 0, 0, 0, NULL),
+(45527, 14, 7442.12, -912.056, 12.832, 0, 0, 0, NULL),
+(45527, 15, 7440.69, -907.864, 12.1266, 0, 0, 0, NULL),
+(45550, 1, 7376.2, -839.774, 17.9762, 0, 0, 0, NULL),
+(45550, 2, 7381.17, -831.44, 17.7484, 0, 0, 0, NULL),
+(45550, 3, 7391.31, -828.956, 17.9954, 0, 0, 0, NULL),
+(45550, 4, 7400.07, -830.809, 18.544, 0, 0, 0, NULL),
+(45550, 5, 7396.75, -845.288, 18.4474, 0, 0, 0, NULL),
+(45550, 6, 7386.46, -846.349, 18.2793, 0, 0, 0, NULL),
+(45748, 1, 7629.15, -999.852, 36.9551, 0, 0, 0, NULL),
+(45748, 2, 7637.15, -991.501, 35.2249, 0, 0, 0, NULL),
+(45748, 3, 7648.99, -979.068, 32.4709, 0, 0, 0, NULL),
+(45748, 4, 7659.46, -968.958, 29.0887, 0, 0, 0, NULL),
+(45748, 5, 7671.51, -964.996, 27.3553, 0, 0, 0, NULL),
+(45748, 6, 7682.28, -964.132, 27.0681, 0, 0, 0, NULL),
+(45748, 7, 7664.15, -962.166, 27.4713, 0, 0, 0, NULL),
+(45748, 8, 7662.26, -948.912, 25.9849, 0, 0, 0, NULL),
+(45748, 9, 7660.97, -960.325, 27.5803, 0, 0, 0, NULL),
+(45748, 10, 7655, -971.923, 30.3417, 0, 0, 0, NULL),
+(45748, 11, 7650.14, -977.008, 31.9573, 0, 0, 0, NULL),
+(45748, 12, 7639.56, -986.129, 34.1276, 0, 0, 0, NULL),
+(45748, 13, 7627.26, -997.239, 36.1259, 0, 0, 0, NULL),
+(45365, 1, 7368.98, -1074.15, 38.7691, 0, 0, 0, NULL),
+(45365, 2, 7369.66, -1063.76, 39.2337, 0, 0, 0, NULL),
+(45365, 3, 7368.79, -1055.6, 38.2127, 0, 0, 0, NULL),
+(45365, 4, 7367.47, -1041.13, 35.7029, 0, 0, 0, NULL),
+(45365, 5, 7374.28, -1033.69, 34.7094, 0, 0, 0, NULL),
+(45365, 6, 7387.56, -1034.16, 34.5821, 0, 0, 0, NULL),
+(45365, 7, 7392.24, -1043.5, 37.0186, 0, 0, 0, NULL),
+(45365, 8, 7389.59, -1052.06, 38.7681, 0, 0, 0, NULL),
+(45365, 9, 7381.79, -1059, 38.9127, 0, 0, 0, NULL),
+(45365, 10, 7374.25, -1065.69, 39.1258, 0, 0, 0, NULL),
+(45369, 1, 7365.12, -1005.82, 31.1487, 0, 0, 0, NULL),
+(45369, 2, 7351.49, -1007.39, 31.1688, 0, 0, 0, NULL),
+(45369, 3, 7341.44, -1007.33, 31.2482, 0, 0, 0, NULL),
+(45369, 4, 7330.25, -1007.72, 32.3376, 0, 0, 0, NULL),
+(45369, 5, 7314.73, -1005.47, 31.5722, 0, 0, 0, NULL),
+(45369, 6, 7328.48, -1006.36, 32.2121, 0, 0, 0, NULL),
+(45369, 7, 7341.55, -1005.97, 31.1666, 0, 0, 0, NULL),
+(45369, 8, 7350.51, -1005.71, 31.1085, 0, 0, 0, NULL),
+(45369, 9, 7365.62, -1000.34, 31.1722, 0, 0, 0, NULL),
+(45369, 10, 7365.16, -988.801, 31.9961, 0, 0, 0, NULL),
+(45369, 11, 7364.8, -982.483, 32.2154, 0, 0, 0, NULL),
+(45369, 12, 7363.22, -996.224, 31.5277, 0, 0, 0, NULL);
+UPDATE `creature` SET `position_x` = 1928.7673,  `position_y` = -4518.778,  `position_z` = 29.363235,  `orientation` = 0.959931075572967529 WHERE `id` = 6987;
+UPDATE `creature` SET `position_x` = 1932.3334,  `position_y` = -4516.3403,  `position_z` = 29.363235,  `orientation` = 3.40339207649230957 WHERE `id` = 6986;
+UPDATE `creature` SET `position_x` = -1755.7516,  `position_y` = 5677.2407,  `position_z` = 129.22449,  `orientation` = 3.001966238021850585 WHERE `id` = 23271;
+UPDATE `creature` SET `position_x` = -2054.7473,  `position_y` = 8609.072,  `position_z` = 22.24437,  `orientation` = 4.363323211669921875 WHERE `id` = 23007;
+UPDATE `creature` SET `position_x` = -247.86519,  `position_y` = 5443.954,  `position_z` = 24.624128,  `orientation` = 5.270894527435302734 WHERE `id` = 22832;
+UPDATE `creature` SET `position_x` = 291.8718, `position_y` = 6100.054, `position_z` = 132.2092, `orientation` = 3.874631 WHERE `id` = 18251;
+UPDATE `gameobject` SET `position_z` = 145.0453 WHERE `guid` = 68482 AND `id` = 184443;
+UPDATE `creature` SET `spawndist` = 5, `MovementType` = 1 WHERE `guid` = 94657 AND `id` = 21839;
+
+UPDATE `creature_model_info` SET `bounding_radius`=0.716546 WHERE `modelid`=180;
+UPDATE `creature_model_info` SET `bounding_radius`=1.967 WHERE `modelid`=181;
+UPDATE `creature_model_info` SET `bounding_radius`=0.522 WHERE `modelid`=317;
+UPDATE `creature_model_info` SET `bounding_radius`=0.753437 WHERE `modelid`=377;
+UPDATE `creature_model_info` SET `bounding_radius`=0.275186 WHERE `modelid`=382;
+UPDATE `creature_model_info` SET `bounding_radius`=0.6929 WHERE `modelid`=414;
+UPDATE `creature_model_info` SET `bounding_radius`=0.737491 WHERE `modelid`=503;
+UPDATE `creature_model_info` SET `bounding_radius`=0.754339 WHERE `modelid`=513;
+UPDATE `creature_model_info` SET `bounding_radius`=1.41225 WHERE `modelid`=523;
+UPDATE `creature_model_info` SET `bounding_radius`=0.5122 WHERE `modelid`=533;
+UPDATE `creature_model_info` SET `bounding_radius`=0.712805 WHERE `modelid`=598;
+UPDATE `creature_model_info` SET `bounding_radius`=1.05763 WHERE `modelid`=604;
+UPDATE `creature_model_info` SET `bounding_radius`=0.737491 WHERE `modelid`=607;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4797 WHERE `modelid`=646;
+UPDATE `creature_model_info` SET `bounding_radius`=0.661986 WHERE `modelid`=670;
+UPDATE `creature_model_info` SET `bounding_radius`=0.7511 WHERE `modelid`=673;
+UPDATE `creature_model_info` SET `bounding_radius`=0.7511 WHERE `modelid`=677;
+UPDATE `creature_model_info` SET `bounding_radius`=1 WHERE `modelid`=720;
+UPDATE `creature_model_info` SET `bounding_radius`=0.583449 WHERE `modelid`=748;
+UPDATE `creature_model_info` SET `bounding_radius`=1.40085 WHERE `modelid`=781;
+UPDATE `creature_model_info` SET `bounding_radius`=1.10339 WHERE `modelid`=785;
+UPDATE `creature_model_info` SET `bounding_radius`=0.7511 WHERE `modelid`=787;
+UPDATE `creature_model_info` SET `bounding_radius`=0.900508 WHERE `modelid`=843;
+UPDATE `creature_model_info` SET `bounding_radius`=0.927203 WHERE `modelid`=845;
+UPDATE `creature_model_info` SET `bounding_radius`=1.05 WHERE `modelid`=855;
+UPDATE `creature_model_info` SET `bounding_radius`=0.51935 WHERE `modelid`=902;
+UPDATE `creature_model_info` SET `bounding_radius`=1.08051 WHERE `modelid`=903;
+UPDATE `creature_model_info` SET `bounding_radius`=0.378102 WHERE `modelid`=909;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9723 WHERE `modelid`=925;
+UPDATE `creature_model_info` SET `bounding_radius`=0.65653 WHERE `modelid`=960;
+UPDATE `creature_model_info` SET `bounding_radius`=0.944068 WHERE `modelid`=1030;
+UPDATE `creature_model_info` SET `bounding_radius`=0.61681 WHERE `modelid`=1034;
+UPDATE `creature_model_info` SET `bounding_radius`=0.654478 WHERE `modelid`=1035;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9723 WHERE `modelid`=1039;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9723 WHERE `modelid`=1080;
+UPDATE `creature_model_info` SET `bounding_radius`=0.5622 WHERE `modelid`=1097;
+UPDATE `creature_model_info` SET `bounding_radius`=1.30932 WHERE `modelid`=1100;
+UPDATE `creature_model_info` SET `bounding_radius`=0.5729 WHERE `modelid`=1220;
+UPDATE `creature_model_info` SET `bounding_radius`=0.5729 WHERE `modelid`=1221;
+UPDATE `creature_model_info` SET `bounding_radius`=0.593268 WHERE `modelid`=1250;
+UPDATE `creature_model_info` SET `bounding_radius`=1 WHERE `modelid`=1336;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=1669;
+UPDATE `creature_model_info` SET `bounding_radius`=0.55 WHERE `modelid`=1742;
+UPDATE `creature_model_info` SET `bounding_radius`=0.7511 WHERE `modelid`=1744;
+UPDATE `creature_model_info` SET `bounding_radius`=0.7511 WHERE `modelid`=1746;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=1872;
+UPDATE `creature_model_info` SET `bounding_radius`=0.91425 WHERE `modelid`=1934;
+UPDATE `creature_model_info` SET `bounding_radius`=1.32 WHERE `modelid`=1958;
+UPDATE `creature_model_info` SET `bounding_radius`=0.7511 WHERE `modelid`=1959;
+UPDATE `creature_model_info` SET `bounding_radius`=0.805 WHERE `modelid`=1992;
+UPDATE `creature_model_info` SET `bounding_radius`=0.6 WHERE `modelid`=2194;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=2240;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=2381;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=2386;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=2394;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=2400;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=2401;
+UPDATE `creature_model_info` SET `bounding_radius`=0.66 WHERE `modelid`=2424;
+UPDATE `creature_model_info` SET `bounding_radius`=0.712805 WHERE `modelid`=2437;
+UPDATE `creature_model_info` SET `bounding_radius`=0.355085 WHERE `modelid`=2485;
+UPDATE `creature_model_info` SET `bounding_radius`=0.6 WHERE `modelid`=2489;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=2518;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=2519;
+UPDATE `creature_model_info` SET `bounding_radius`=1.5895 WHERE `modelid`=2539;
+UPDATE `creature_model_info` SET `bounding_radius`=1.59735 WHERE `modelid`=2549;
+UPDATE `creature_model_info` SET `bounding_radius`=1.87775 WHERE `modelid`=2573;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=2588;
+UPDATE `creature_model_info` SET `bounding_radius`=0.425 WHERE `modelid`=2709;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=2971;
+UPDATE `creature_model_info` SET `bounding_radius`=0.48 WHERE `modelid`=3005;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=3015;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=3293;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=3897;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=3899;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=3978;
+UPDATE `creature_model_info` SET `bounding_radius`=1.5 WHERE `modelid`=4065;
+UPDATE `creature_model_info` SET `bounding_radius`=0.554237 WHERE `modelid`=4091;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=4117;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=4119;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9932 WHERE `modelid`=4426;
+UPDATE `creature_model_info` SET `bounding_radius`=0.7 WHERE `modelid`=4449;
+UPDATE `creature_model_info` SET `bounding_radius`=0.923 WHERE `modelid`=4583;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=4595;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=4668;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=4669;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=4678;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=4680;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=4681;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=4682;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=4684;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=4691;
+UPDATE `creature_model_info` SET `bounding_radius`=0.14178 WHERE `modelid`=4732;
+UPDATE `creature_model_info` SET `bounding_radius`=0.148898 WHERE `modelid`=4734;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=4771;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=4772;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=4773;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=4774;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=4837;
+UPDATE `creature_model_info` SET `bounding_radius`=0.5205 WHERE `modelid`=5432;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=5435;
+UPDATE `creature_model_info` SET `bounding_radius`=0.369495 WHERE `modelid`=5436;
+UPDATE `creature_model_info` SET `bounding_radius`=0.369495 WHERE `modelid`=5438;
+UPDATE `creature_model_info` SET `bounding_radius`=0.369495 WHERE `modelid`=5443;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4596 WHERE `modelid`=5447;
+UPDATE `creature_model_info` SET `bounding_radius`=0.7917 WHERE `modelid`=5450;
+UPDATE `creature_model_info` SET `bounding_radius`=0.65 WHERE `modelid`=5497;
+UPDATE `creature_model_info` SET `bounding_radius`=0.609 WHERE `modelid`=5561;
+UPDATE `creature_model_info` SET `bounding_radius`=0.70035 WHERE `modelid`=5562;
+UPDATE `creature_model_info` SET `bounding_radius`=0.75 WHERE `modelid`=5563;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=5784;
+UPDATE `creature_model_info` SET `bounding_radius`=0.694 WHERE `modelid`=5848;
+UPDATE `creature_model_info` SET `bounding_radius`=0.201695 WHERE `modelid`=6368;
+UPDATE `creature_model_info` SET `bounding_radius`=1.725 WHERE `modelid`=6375;
+UPDATE `creature_model_info` SET `bounding_radius`=2.625 WHERE `modelid`=6378;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=6547;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=6549;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6670;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6671;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6675;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6676;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6677;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6698;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6699;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6700;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6701;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6702;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6707;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6708;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6709;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=6921;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=6922;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=6923;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=6924;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=6928;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=6994;
+UPDATE `creature_model_info` SET `bounding_radius`=0.7 WHERE `modelid`=7347;
+UPDATE `creature_model_info` SET `bounding_radius`=1 WHERE `modelid`=7534;
+UPDATE `creature_model_info` SET `bounding_radius`=1.5 WHERE `modelid`=7549;
+UPDATE `creature_model_info` SET `bounding_radius`=0.118 WHERE `modelid`=7554;
+UPDATE `creature_model_info` SET `bounding_radius`=1.5 WHERE `modelid`=7569;
+UPDATE `creature_model_info` SET `bounding_radius`=0.45 WHERE `modelid`=7571;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=7604;
+UPDATE `creature_model_info` SET `bounding_radius`=1.2 WHERE `modelid`=7671;
+UPDATE `creature_model_info` SET `bounding_radius`=1.8 WHERE `modelid`=7672;
+UPDATE `creature_model_info` SET `bounding_radius`=1.5 WHERE `modelid`=7709;
+UPDATE `creature_model_info` SET `bounding_radius`=0.175 WHERE `modelid`=7763;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4164 WHERE `modelid`=7764;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8 WHERE `modelid`=7806;
+UPDATE `creature_model_info` SET `bounding_radius`=0.525 WHERE `modelid`=7839;
+UPDATE `creature_model_info` SET `bounding_radius`=0.6125 WHERE `modelid`=7840;
+UPDATE `creature_model_info` SET `bounding_radius`=3 WHERE `modelid`=7873;
+UPDATE `creature_model_info` SET `bounding_radius`=0.234322 WHERE `modelid`=7894;
+UPDATE `creature_model_info` SET `bounding_radius`=1.5 WHERE `modelid`=7975;
+UPDATE `creature_model_info` SET `bounding_radius`=0.805 WHERE `modelid`=8013;
+UPDATE `creature_model_info` SET `bounding_radius`=3.75 WHERE `modelid`=8053;
+UPDATE `creature_model_info` SET `bounding_radius`=1.5 WHERE `modelid`=8182;
+UPDATE `creature_model_info` SET `bounding_radius`=0.6 WHERE `modelid`=8184;
+UPDATE `creature_model_info` SET `bounding_radius`=1.5 WHERE `modelid`=8269;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=8649;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=8653;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4164 WHERE `modelid`=8655;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=8658;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=8663;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=8760;
+UPDATE `creature_model_info` SET `bounding_radius`=0.152458 WHERE `modelid`=8808;
+UPDATE `creature_model_info` SET `bounding_radius`=0.387312 WHERE `modelid`=8843;
+UPDATE `creature_model_info` SET `bounding_radius`=0.7056 WHERE `modelid`=8869;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2 WHERE `modelid`=9028;
+UPDATE `creature_model_info` SET `bounding_radius`=0.15 WHERE `modelid`=9029;
+UPDATE `creature_model_info` SET `bounding_radius`=1.125 WHERE `modelid`=9030;
+UPDATE `creature_model_info` SET `bounding_radius`=0.6 WHERE `modelid`=9033;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=9149;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9747 WHERE `modelid`=9234;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=9236;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=9329;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=9330;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=9331;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2 WHERE `modelid`=9354;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8165 WHERE `modelid`=9414;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8165 WHERE `modelid`=9415;
+UPDATE `creature_model_info` SET `bounding_radius`=0.923 WHERE `modelid`=9417;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8165 WHERE `modelid`=9421;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8165 WHERE `modelid`=9422;
+UPDATE `creature_model_info` SET `bounding_radius`=0.923 WHERE `modelid`=9425;
+UPDATE `creature_model_info` SET `bounding_radius`=0.923 WHERE `modelid`=9426;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8165 WHERE `modelid`=9430;
+UPDATE `creature_model_info` SET `bounding_radius`=0.923 WHERE `modelid`=9432;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8165 WHERE `modelid`=9434;
+UPDATE `creature_model_info` SET `bounding_radius`=0.35 WHERE `modelid`=9449;
+UPDATE `creature_model_info` SET `bounding_radius`=0.45 WHERE `modelid`=9534;
+UPDATE `creature_model_info` SET `bounding_radius`=0.143559 WHERE `modelid`=9535;
+UPDATE `creature_model_info` SET `bounding_radius`=0.0875 WHERE `modelid`=9556;
+UPDATE `creature_model_info` SET `bounding_radius`=0.959322 WHERE `modelid`=9563;
+UPDATE `creature_model_info` SET `bounding_radius`=3 WHERE `modelid`=9564;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=9575;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=9576;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=9577;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=9578;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=9580;
+UPDATE `creature_model_info` SET `bounding_radius`=1.95 WHERE `modelid`=9584;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9602;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9603;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9614;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9617;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9619;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9625;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9637;
+UPDATE `creature_model_info` SET `bounding_radius`=0.459 WHERE `modelid`=9643;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9652;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9653;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9656;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9657;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9660;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9661;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9665;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=9675;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9692;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=9711;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=9715;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=9725;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=9727;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3672 WHERE `modelid`=9732;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9738;
+UPDATE `creature_model_info` SET `bounding_radius`=0.157797 WHERE `modelid`=9750;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=9754;
+UPDATE `creature_model_info` SET `bounding_radius`=2.3375 WHERE `modelid`=9755;
+UPDATE `creature_model_info` SET `bounding_radius`=1.09664 WHERE `modelid`=9756;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=9778;
+UPDATE `creature_model_info` SET `bounding_radius`=1 WHERE `modelid`=9784;
+UPDATE `creature_model_info` SET `bounding_radius`=1.15 WHERE `modelid`=9787;
+UPDATE `creature_model_info` SET `bounding_radius`=1.5 WHERE `modelid`=9806;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9867;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9868;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9869;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9870;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9874;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9876;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9879;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9880;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9882;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9883;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9884;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9885;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9886;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9888;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=9889;
+UPDATE `creature_model_info` SET `bounding_radius`=1 WHERE `modelid`=9909;
+UPDATE `creature_model_info` SET `bounding_radius`=0.459 WHERE `modelid`=9912;
+UPDATE `creature_model_info` SET `bounding_radius`=0.175 WHERE `modelid`=9989;
+UPDATE `creature_model_info` SET `bounding_radius`=0.14 WHERE `modelid`=10033;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9747 WHERE `modelid`=10050;
+UPDATE `creature_model_info` SET `bounding_radius`=1.967 WHERE `modelid`=10094;
+UPDATE `creature_model_info` SET `bounding_radius`=0.278 WHERE `modelid`=10095;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4836 WHERE `modelid`=10173;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3068 WHERE `modelid`=10174;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=10176;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4464 WHERE `modelid`=10177;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=10178;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2832 WHERE `modelid`=10179;
+UPDATE `creature_model_info` SET `bounding_radius`=1.3 WHERE `modelid`=10183;
+UPDATE `creature_model_info` SET `bounding_radius`=1.05 WHERE `modelid`=10193;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10217;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10229;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4979 WHERE `modelid`=10248;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10312;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10356;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2247 WHERE `modelid`=10375;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=10379;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=10381;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=10382;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10458;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10463;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10464;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10478;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10479;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10480;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10481;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10482;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10483;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10484;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10485;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10486;
+UPDATE `creature_model_info` SET `bounding_radius`=0.6929 WHERE `modelid`=10487;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10488;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10489;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10490;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10491;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10496;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10497;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10498;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10499;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10500;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10501;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10503;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10504;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10505;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10506;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10507;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10508;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10509;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10510;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10511;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10512;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10513;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10514;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10515;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10516;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10517;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10518;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10519;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10529;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10530;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10531;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10532;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10533;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10534;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10544;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10554;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10557;
+UPDATE `creature_model_info` SET `bounding_radius`=0.389 WHERE `modelid`=10558;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=10559;
+UPDATE `creature_model_info` SET `bounding_radius`=0.6929 WHERE `modelid`=10626;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10637;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10639;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10674;
+UPDATE `creature_model_info` SET `bounding_radius`=0.75 WHERE `modelid`=10772;
+UPDATE `creature_model_info` SET `bounding_radius`=0.403 WHERE `modelid`=10923;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4511 WHERE `modelid`=10974;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=11069;
+UPDATE `creature_model_info` SET `bounding_radius`=0.459 WHERE `modelid`=11070;
+UPDATE `creature_model_info` SET `bounding_radius`=1.3 WHERE `modelid`=11078;
+UPDATE `creature_model_info` SET `bounding_radius`=1 WHERE `modelid`=11121;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=11126;
+UPDATE `creature_model_info` SET `bounding_radius`=0.389 WHERE `modelid`=11205;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=11206;
+UPDATE `creature_model_info` SET `bounding_radius`=0.44735 WHERE `modelid`=11207;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=11208;
+UPDATE `creature_model_info` SET `bounding_radius`=0.389 WHERE `modelid`=11209;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=11210;
+UPDATE `creature_model_info` SET `bounding_radius`=0.389 WHERE `modelid`=11211;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=11212;
+UPDATE `creature_model_info` SET `bounding_radius`=0.44735 WHERE `modelid`=11213;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=11214;
+UPDATE `creature_model_info` SET `bounding_radius`=0.44735 WHERE `modelid`=11215;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=11216;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=11250;
+UPDATE `creature_model_info` SET `bounding_radius`=1.5 WHERE `modelid`=11253;
+UPDATE `creature_model_info` SET `bounding_radius`=0.389 WHERE `modelid`=11256;
+UPDATE `creature_model_info` SET `bounding_radius`=1 WHERE `modelid`=11261;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3672 WHERE `modelid`=11270;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=11279;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=11310;
+UPDATE `creature_model_info` SET `bounding_radius`=1.6095 WHERE `modelid`=11315;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=11394;
+UPDATE `creature_model_info` SET `bounding_radius`=1.05763 WHERE `modelid`=11416;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=11425;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=11427;
+UPDATE `creature_model_info` SET `bounding_radius`=0.56728 WHERE `modelid`=11451;
+UPDATE `creature_model_info` SET `bounding_radius`=2.8 WHERE `modelid`=11578;
+UPDATE `creature_model_info` SET `bounding_radius`=1.2 WHERE `modelid`=11658;
+UPDATE `creature_model_info` SET `bounding_radius`=0.558 WHERE `modelid`=11660;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=11665;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=11668;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9747 WHERE `modelid`=11790;
+UPDATE `creature_model_info` SET `bounding_radius`=3 WHERE `modelid`=11986;
+UPDATE `creature_model_info` SET `bounding_radius`=0.525 WHERE `modelid`=11997;
+UPDATE `creature_model_info` SET `bounding_radius`=3 WHERE `modelid`=12002;
+UPDATE `creature_model_info` SET `bounding_radius`=4.167 WHERE `modelid`=12110;
+UPDATE `creature_model_info` SET `bounding_radius`=4 WHERE `modelid`=12129;
+UPDATE `creature_model_info` SET `bounding_radius`=1.75 WHERE `modelid`=12162;
+UPDATE `creature_model_info` SET `bounding_radius`=2.0835 WHERE `modelid`=12164;
+UPDATE `creature_model_info` SET `bounding_radius`=0.35 WHERE `modelid`=12168;
+UPDATE `creature_model_info` SET `bounding_radius`=0.7 WHERE `modelid`=12189;
+UPDATE `creature_model_info` SET `bounding_radius`=0.75 WHERE `modelid`=12190;
+UPDATE `creature_model_info` SET `bounding_radius`=0.69 WHERE `modelid`=12192;
+UPDATE `creature_model_info` SET `bounding_radius`=0.51 WHERE `modelid`=12193;
+UPDATE `creature_model_info` SET `bounding_radius`=1 WHERE `modelid`=12197;
+UPDATE `creature_model_info` SET `bounding_radius`=0.6 WHERE `modelid`=12200;
+UPDATE `creature_model_info` SET `bounding_radius`=2.43075 WHERE `modelid`=12239;
+UPDATE `creature_model_info` SET `bounding_radius`=0.00235 WHERE `modelid`=12271;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9723 WHERE `modelid`=12340;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9723 WHERE `modelid`=12344;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=12681;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=12923;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=12972;
+UPDATE `creature_model_info` SET `bounding_radius`=3 WHERE `modelid`=13031;
+UPDATE `creature_model_info` SET `bounding_radius`=3.801 WHERE `modelid`=13489;
+UPDATE `creature_model_info` SET `bounding_radius`=0.52785 WHERE `modelid`=14172;
+UPDATE `creature_model_info` SET `bounding_radius`=0.35 WHERE `modelid`=14252;
+UPDATE `creature_model_info` SET `bounding_radius`=0.525 WHERE `modelid`=14253;
+UPDATE `creature_model_info` SET `bounding_radius`=0.525 WHERE `modelid`=14254;
+UPDATE `creature_model_info` SET `bounding_radius`=1.5 WHERE `modelid`=14368;
+UPDATE `creature_model_info` SET `bounding_radius`=0.7 WHERE `modelid`=14383;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4668 WHERE `modelid`=14384;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=14393;
+UPDATE `creature_model_info` SET `bounding_radius`=0.44735 WHERE `modelid`=14407;
+UPDATE `creature_model_info` SET `bounding_radius`=0.44735 WHERE `modelid`=14408;
+UPDATE `creature_model_info` SET `bounding_radius`=0.44735 WHERE `modelid`=14409;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=14410;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=14411;
+UPDATE `creature_model_info` SET `bounding_radius`=0.44735 WHERE `modelid`=14412;
+UPDATE `creature_model_info` SET `bounding_radius`=0.44735 WHERE `modelid`=14420;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=14421;
+UPDATE `creature_model_info` SET `bounding_radius`=0.389 WHERE `modelid`=14422;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=14534;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=14535;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=14536;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=14537;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=14538;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=14539;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=14540;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=14545;
+UPDATE `creature_model_info` SET `bounding_radius`=3 WHERE `modelid`=14555;
+UPDATE `creature_model_info` SET `bounding_radius`=1.2 WHERE `modelid`=14585;
+UPDATE `creature_model_info` SET `bounding_radius`=0.765 WHERE `modelid`=15325;
+UPDATE `creature_model_info` SET `bounding_radius`=0.4213 WHERE `modelid`=15349;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3366 WHERE `modelid`=15350;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=15387;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=15389;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=15390;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=15391;
+UPDATE `creature_model_info` SET `bounding_radius`=0.44735 WHERE `modelid`=15996;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=4245;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=7010;
+UPDATE `creature_model_info` SET `combat_reach`=0.615254 WHERE `modelid`=30;
+UPDATE `creature_model_info` SET `combat_reach`=1.0017 WHERE `modelid`=180;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=181;
+UPDATE `creature_model_info` SET `combat_reach`=0.521186 WHERE `modelid`=382;
+UPDATE `creature_model_info` SET `combat_reach`=0.627119 WHERE `modelid`=503;
+UPDATE `creature_model_info` SET `combat_reach`=0.605085 WHERE `modelid`=513;
+UPDATE `creature_model_info` SET `combat_reach`=2.625 WHERE `modelid`=523;
+UPDATE `creature_model_info` SET `combat_reach`=1.34492 WHERE `modelid`=598;
+UPDATE `creature_model_info` SET `combat_reach`=0.881356 WHERE `modelid`=604;
+UPDATE `creature_model_info` SET `combat_reach`=0.627119 WHERE `modelid`=607;
+UPDATE `creature_model_info` SET `combat_reach`=1.35 WHERE `modelid`=646;
+UPDATE `creature_model_info` SET `combat_reach`=0.925424 WHERE `modelid`=670;
+UPDATE `creature_model_info` SET `combat_reach`=1.25 WHERE `modelid`=720;
+UPDATE `creature_model_info` SET `combat_reach`=1.10085 WHERE `modelid`=748;
+UPDATE `creature_model_info` SET `combat_reach`=1.16737 WHERE `modelid`=781;
+UPDATE `creature_model_info` SET `combat_reach`=0.919492 WHERE `modelid`=785;
+UPDATE `creature_model_info` SET `combat_reach`=1.07203 WHERE `modelid`=843;
+UPDATE `creature_model_info` SET `combat_reach`=1.10381 WHERE `modelid`=845;
+UPDATE `creature_model_info` SET `combat_reach`=0.875 WHERE `modelid`=855;
+UPDATE `creature_model_info` SET `combat_reach`=0 WHERE `modelid`=901;
+UPDATE `creature_model_info` SET `combat_reach`=1.275 WHERE `modelid`=902;
+UPDATE `creature_model_info` SET `combat_reach`=0.900424 WHERE `modelid`=903;
+UPDATE `creature_model_info` SET `combat_reach`=0.716102 WHERE `modelid`=909;
+UPDATE `creature_model_info` SET `combat_reach`=0.917797 WHERE `modelid`=960;
+UPDATE `creature_model_info` SET `combat_reach`=1.18008 WHERE `modelid`=1030;
+UPDATE `creature_model_info` SET `combat_reach`=1.11017 WHERE `modelid`=1034;
+UPDATE `creature_model_info` SET `combat_reach`=1.17797 WHERE `modelid`=1035;
+UPDATE `creature_model_info` SET `combat_reach`=0.9 WHERE `modelid`=1097;
+UPDATE `creature_model_info` SET `combat_reach`=1.0911 WHERE `modelid`=1100;
+UPDATE `creature_model_info` SET `combat_reach`=1.0678 WHERE `modelid`=1250;
+UPDATE `creature_model_info` SET `combat_reach`=1 WHERE `modelid`=1336;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=1669;
+UPDATE `creature_model_info` SET `combat_reach`=0.55 WHERE `modelid`=1742;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=1872;
+UPDATE `creature_model_info` SET `combat_reach`=0 WHERE `modelid`=1924;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=1934;
+UPDATE `creature_model_info` SET `combat_reach`=0.805 WHERE `modelid`=1992;
+UPDATE `creature_model_info` SET `combat_reach`=0.875 WHERE `modelid`=2194;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=2240;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=2386;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=2394;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=2400;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=2401;
+UPDATE `creature_model_info` SET `combat_reach`=1.25 WHERE `modelid`=2424;
+UPDATE `creature_model_info` SET `combat_reach`=1.34492 WHERE `modelid`=2437;
+UPDATE `creature_model_info` SET `combat_reach`=0.710169 WHERE `modelid`=2485;
+UPDATE `creature_model_info` SET `combat_reach`=1.2 WHERE `modelid`=2489;
+UPDATE `creature_model_info` SET `combat_reach`=0 WHERE `modelid`=2490;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=2518;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=2519;
+UPDATE `creature_model_info` SET `combat_reach`=1.275 WHERE `modelid`=2539;
+UPDATE `creature_model_info` SET `combat_reach`=2.875 WHERE `modelid`=2549;
+UPDATE `creature_model_info` SET `combat_reach`=2.625 WHERE `modelid`=2573;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=2588;
+UPDATE `creature_model_info` SET `combat_reach`=1.275 WHERE `modelid`=2709;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=2971;
+UPDATE `creature_model_info` SET `combat_reach`=0.7 WHERE `modelid`=3005;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=3015;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=3897;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=3899;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4065;
+UPDATE `creature_model_info` SET `combat_reach`=0.554237 WHERE `modelid`=4091;
+UPDATE `creature_model_info` SET `combat_reach`=4.86 WHERE `modelid`=4307;
+UPDATE `creature_model_info` SET `combat_reach`=1.95 WHERE `modelid`=4426;
+UPDATE `creature_model_info` SET `combat_reach`=1.05 WHERE `modelid`=4449;
+UPDATE `creature_model_info` SET `combat_reach`=4.86 WHERE `modelid`=4519;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4595;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4684;
+UPDATE `creature_model_info` SET `combat_reach`=0.607627 WHERE `modelid`=4732;
+UPDATE `creature_model_info` SET `combat_reach`=0.638136 WHERE `modelid`=4734;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4771;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4773;
+UPDATE `creature_model_info` SET `combat_reach`=0 WHERE `modelid`=5379;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=5432;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=5435;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=5447;
+UPDATE `creature_model_info` SET `combat_reach`=1.95 WHERE `modelid`=5450;
+UPDATE `creature_model_info` SET `combat_reach`=1.95 WHERE `modelid`=5497;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=5561;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=5562;
+UPDATE `creature_model_info` SET `combat_reach`=2.25 WHERE `modelid`=5563;
+UPDATE `creature_model_info` SET `combat_reach`=4 WHERE `modelid`=5848;
+UPDATE `creature_model_info` SET `combat_reach`=3.45 WHERE `modelid`=6375;
+UPDATE `creature_model_info` SET `combat_reach`=5.25 WHERE `modelid`=6378;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6670;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6675;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6698;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6699;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6700;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6701;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6702;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6707;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6708;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6709;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=6921;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=6922;
+UPDATE `creature_model_info` SET `combat_reach`=1.4 WHERE `modelid`=7347;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=7534;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=7549;
+UPDATE `creature_model_info` SET `combat_reach`=0.5 WHERE `modelid`=7554;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=7569;
+UPDATE `creature_model_info` SET `combat_reach`=0.75 WHERE `modelid`=7571;
+UPDATE `creature_model_info` SET `combat_reach`=1.2 WHERE `modelid`=7671;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=7672;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=7709;
+UPDATE `creature_model_info` SET `combat_reach`=0.75 WHERE `modelid`=7763;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=7764;
+UPDATE `creature_model_info` SET `combat_reach`=8 WHERE `modelid`=7806;
+UPDATE `creature_model_info` SET `combat_reach`=1.2 WHERE `modelid`=7839;
+UPDATE `creature_model_info` SET `combat_reach`=1.4 WHERE `modelid`=7840;
+UPDATE `creature_model_info` SET `combat_reach`=3 WHERE `modelid`=7873;
+UPDATE `creature_model_info` SET `combat_reach`=1.00424 WHERE `modelid`=7894;
+UPDATE `creature_model_info` SET `combat_reach`=3 WHERE `modelid`=7975;
+UPDATE `creature_model_info` SET `combat_reach`=0.805 WHERE `modelid`=8013;
+UPDATE `creature_model_info` SET `combat_reach`=3.75 WHERE `modelid`=8053;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=8182;
+UPDATE `creature_model_info` SET `combat_reach`=0.875 WHERE `modelid`=8184;
+UPDATE `creature_model_info` SET `combat_reach`=3 WHERE `modelid`=8269;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=8649;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=8655;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=8658;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=8760;
+UPDATE `creature_model_info` SET `combat_reach`=0.65339 WHERE `modelid`=8808;
+UPDATE `creature_model_info` SET `combat_reach`=0.950848 WHERE `modelid`=8843;
+UPDATE `creature_model_info` SET `combat_reach`=0.6 WHERE `modelid`=8869;
+UPDATE `creature_model_info` SET `combat_reach`=0.6 WHERE `modelid`=9028;
+UPDATE `creature_model_info` SET `combat_reach`=1.125 WHERE `modelid`=9030;
+UPDATE `creature_model_info` SET `combat_reach`=0.875 WHERE `modelid`=9033;
+UPDATE `creature_model_info` SET `combat_reach`=4.05 WHERE `modelid`=9234;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=9329;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=9330;
+UPDATE `creature_model_info` SET `combat_reach`=0.6 WHERE `modelid`=9354;
+UPDATE `creature_model_info` SET `combat_reach`=2.5 WHERE `modelid`=9449;
+UPDATE `creature_model_info` SET `combat_reach`=1.125 WHERE `modelid`=9534;
+UPDATE `creature_model_info` SET `combat_reach`=0.615254 WHERE `modelid`=9535;
+UPDATE `creature_model_info` SET `combat_reach`=0.25 WHERE `modelid`=9556;
+UPDATE `creature_model_info` SET `combat_reach`=1.19915 WHERE `modelid`=9563;
+UPDATE `creature_model_info` SET `combat_reach`=3.75 WHERE `modelid`=9564;
+UPDATE `creature_model_info` SET `combat_reach`=2.5 WHERE `modelid`=9567;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=9578;
+UPDATE `creature_model_info` SET `combat_reach`=3.9 WHERE `modelid`=9584;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9602;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9603;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9614;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9617;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9619;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9625;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9637;
+UPDATE `creature_model_info` SET `combat_reach`=2.25 WHERE `modelid`=9643;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9652;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9653;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9656;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9657;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9660;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9661;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9665;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=9715;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9732;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9738;
+UPDATE `creature_model_info` SET `combat_reach`=0.676271 WHERE `modelid`=9750;
+UPDATE `creature_model_info` SET `combat_reach`=1.875 WHERE `modelid`=9755;
+UPDATE `creature_model_info` SET `combat_reach`=0.879661 WHERE `modelid`=9756;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9778;
+UPDATE `creature_model_info` SET `combat_reach`=3 WHERE `modelid`=9806;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9867;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9868;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9869;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9870;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9874;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9876;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9879;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9880;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9882;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9883;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9884;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9885;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9886;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9888;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=9889;
+UPDATE `creature_model_info` SET `combat_reach`=10 WHERE `modelid`=9909;
+UPDATE `creature_model_info` SET `combat_reach`=2.25 WHERE `modelid`=9912;
+UPDATE `creature_model_info` SET `combat_reach`=0.35 WHERE `modelid`=9989;
+UPDATE `creature_model_info` SET `combat_reach`=0.6 WHERE `modelid`=10033;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10094;
+UPDATE `creature_model_info` SET `combat_reach`=1.25 WHERE `modelid`=10095;
+UPDATE `creature_model_info` SET `combat_reach`=1.95 WHERE `modelid`=10173;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=10176;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=10177;
+UPDATE `creature_model_info` SET `combat_reach`=1.3 WHERE `modelid`=10183;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10217;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10229;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10356;
+UPDATE `creature_model_info` SET `combat_reach`=1.575 WHERE `modelid`=10375;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10458;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10463;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10478;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10482;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10483;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10488;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10496;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10500;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10503;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10504;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10507;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10508;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10512;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10516;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10529;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10544;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10554;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10557;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10637;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10674;
+UPDATE `creature_model_info` SET `combat_reach`=1.125 WHERE `modelid`=10772;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10923;
+UPDATE `creature_model_info` SET `combat_reach`=1.3 WHERE `modelid`=10974;
+UPDATE `creature_model_info` SET `combat_reach`=2.25 WHERE `modelid`=11070;
+UPDATE `creature_model_info` SET `combat_reach`=1.95 WHERE `modelid`=11078;
+UPDATE `creature_model_info` SET `combat_reach`=20 WHERE `modelid`=11121;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11205;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=11206;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=11207;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=11208;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=11210;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=11212;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=11213;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=11214;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=11215;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=11216;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=11250;
+UPDATE `creature_model_info` SET `combat_reach`=2.25 WHERE `modelid`=11253;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11256;
+UPDATE `creature_model_info` SET `combat_reach`=2.5 WHERE `modelid`=11261;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=11270;
+UPDATE `creature_model_info` SET `combat_reach`=2.25 WHERE `modelid`=11315;
+UPDATE `creature_model_info` SET `combat_reach`=0.881356 WHERE `modelid`=11416;
+UPDATE `creature_model_info` SET `combat_reach`=1.07034 WHERE `modelid`=11451;
+UPDATE `creature_model_info` SET `combat_reach`=4.2 WHERE `modelid`=11578;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=11658;
+UPDATE `creature_model_info` SET `combat_reach`=2.25 WHERE `modelid`=11660;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11665;
+UPDATE `creature_model_info` SET `combat_reach`=4.05 WHERE `modelid`=11790;
+UPDATE `creature_model_info` SET `combat_reach`=4.86 WHERE `modelid`=11797;
+UPDATE `creature_model_info` SET `combat_reach`=6 WHERE `modelid`=11986;
+UPDATE `creature_model_info` SET `combat_reach`=6 WHERE `modelid`=11997;
+UPDATE `creature_model_info` SET `combat_reach`=4.5 WHERE `modelid`=12002;
+UPDATE `creature_model_info` SET `combat_reach`=6 WHERE `modelid`=12029;
+UPDATE `creature_model_info` SET `combat_reach`=4.5 WHERE `modelid`=12110;
+UPDATE `creature_model_info` SET `combat_reach`=8 WHERE `modelid`=12129;
+UPDATE `creature_model_info` SET `combat_reach`=3.5 WHERE `modelid`=12162;
+UPDATE `creature_model_info` SET `combat_reach`=2.25 WHERE `modelid`=12164;
+UPDATE `creature_model_info` SET `combat_reach`=8 WHERE `modelid`=12189;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=12192;
+UPDATE `creature_model_info` SET `combat_reach`=1 WHERE `modelid`=12197;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=12200;
+UPDATE `creature_model_info` SET `combat_reach`=2.625 WHERE `modelid`=12239;
+UPDATE `creature_model_info` SET `combat_reach`=0.01 WHERE `modelid`=12271;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=12681;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=12923;
+UPDATE `creature_model_info` SET `combat_reach`=3 WHERE `modelid`=13029;
+UPDATE `creature_model_info` SET `combat_reach`=3.75 WHERE `modelid`=13489;
+UPDATE `creature_model_info` SET `combat_reach`=2.5875 WHERE `modelid`=14172;
+UPDATE `creature_model_info` SET `combat_reach`=2.5 WHERE `modelid`=14252;
+UPDATE `creature_model_info` SET `combat_reach`=3.75 WHERE `modelid`=14253;
+UPDATE `creature_model_info` SET `combat_reach`=3.75 WHERE `modelid`=14254;
+UPDATE `creature_model_info` SET `combat_reach`=2.25 WHERE `modelid`=14368;
+UPDATE `creature_model_info` SET `combat_reach`=5 WHERE `modelid`=14383;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=14384;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=14393;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=14407;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=14408;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=14409;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=14410;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=14411;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=14412;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=14420;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=14421;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=14422;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=14537;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=14545;
+UPDATE `creature_model_info` SET `combat_reach`=3 WHERE `modelid`=14555;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=14585;
+UPDATE `creature_model_info` SET `combat_reach`=3.75 WHERE `modelid`=15325;
+UPDATE `creature_model_info` SET `combat_reach`=1.65 WHERE `modelid`=15349;
+UPDATE `creature_model_info` SET `combat_reach`=1.65 WHERE `modelid`=15350;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=15387;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=15389;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=15390;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=15391;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=15996;
+UPDATE `creature_model_info` SET `combat_reach`=0 WHERE `modelid`=16925;
+
+UPDATE `creature_template` SET `SchoolImmuneMask`=`SchoolImmuneMask`|64, `MechanicImmuneMask`=`MechanicImmuneMask`|16 WHERE `entry`=10202;
+UPDATE `creature_template` SET `SchoolImmuneMask`=`SchoolImmuneMask`|64, `MechanicImmuneMask`=`MechanicImmuneMask`|(16+256+1024+2048) WHERE `entry`=10662;
+UPDATE `creature_template` SET `SchoolImmuneMask`=`SchoolImmuneMask`|64, `MechanicImmuneMask`=`MechanicImmuneMask`|(64+1024+4096) WHERE `entry`=10663;
+UPDATE `creature_template` SET `SchoolImmuneMask`=`SchoolImmuneMask`|64 WHERE `entry`=10664;
+
+UPDATE `npc_vendor` SET `slot` = 101 WHERE `entry` IN (1678,1684,2383,2626,3029,3178,3333,3497,3550,3572,4222,4574,5162,5494,5940,5942,7945,8508,10118,12031,12962,14740,16708,17101,18018,18347,18911,19472) AND `item` = 6256;
+UPDATE `npc_vendor` SET `slot` = 102 WHERE `entry` IN (1678,1684,2383,2626,3029,3178,3333,3497,3550,3572,4222,4574,5162,5494,5940,5942,7945,8508,10118,12031,12962,14740,16708,17101,18018,18347,18911,19472) AND `item` = 6365;
+UPDATE `npc_vendor` SET `slot` = 103 WHERE `entry` IN (1678,1684,2383,2626,3029,3178,3333,3497,3550,3572,4222,4574,5162,5494,5940,5942,7945,8508,10118,12031,12962,14740,16708,17101,18018,18347,18911,19472) AND `item` = 6529;
+UPDATE `npc_vendor` SET `slot` = 104 WHERE `entry` IN (1678,1684,2383,2626,3029,3178,3333,3497,3550,3572,4222,4574,5162,5494,5940,5942,7945,8508,10118,12031,12962,14740,16708,17101,18018,18347,18911,19472) AND `item` = 6530;
+UPDATE `npc_vendor` SET `slot` = 105 WHERE `entry` IN (1678,1684,2383,2626,3029,3178,3333,3497,3550,3572,4222,4574,5162,5494,5940,5942,7945,8508,10118,12031,12962,14740,16708,17101,18018,18347,18911,19472) AND `item` = 6532;
+UPDATE `npc_vendor` SET `slot` = 106 WHERE `entry` IN (1678,1684,2383,2626,3029,3178,3333,3497,3550,3572,4222,4574,5162,5494,5940,5942,7945,8508,10118,12031,12962,14740,16708,17101,18018,18347,18911,19472) AND `item` = 6533;
+
+DELETE FROM `npc_text_broadcast_text` WHERE `Id` BETWEEN 25327 AND 25344;
+DELETE FROM `npc_text_broadcast_Text` WHERE `Id` IN (10622, 10627);
+INSERT INTO `npc_text_broadcast_text` (`Id`, `Prob0`, `BroadcastTextId0`) VALUES
+(25327, 1, 25327),(25328, 1, 25328),(25329, 1, 25329),(25330, 1, 25330),(25331, 1, 25331),(25332, 1, 25332),(25333, 1, 25333),(25334, 1, 25334),(25335, 1, 25335),(25336, 1, 25336),
+(25337, 1, 25337),(25338, 1, 25338),(25339, 1, 25339),(25340, 1, 25340),(25341, 1, 25341),(25342, 1, 25342),(25343, 1, 25343),(25344, 1, 25344),(10622, 1, 10622),(10627, 1, 10627);
+DELETE FROM `gossip_menu` WHERE `entry` IN (26301, 26302, 26303);
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `condition_id`) VALUES(26301, 25329, 0),(26302, 25328, 0),(26303, 10622, 0);
+DELETE FROM `gossip_menu_option` WHERE `menu_id` IN (26301, 26302, 26303);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_text`, `option_broadcast_text`, `option_id`, `action_menu_id`, `action_script_id`, `condition_id`, `npc_option_npcflag`) VALUES
+(26301, 0, "Stable", 0, 14, 0, 0, 253, 1),
+(26301, 1, "New Pet", 0, 1, 26302, 0, 253, 1),
+(26301, 2, "Untrain Pet", 0, 1, 26303, 0, 253, 16),
+(26302, 0, NULL, 25330, 1, -1, 2630701, 253, 1),
+(26302, 1, NULL, 25331, 1, -1, 2630702, 253, 1),
+(26302, 2, NULL, 25332, 1, -1, 2630703, 253, 1),
+(26302, 3, NULL, 25333, 1, -1, 2630704, 253, 1),
+(26302, 4, NULL, 25334, 1, -1, 2630705, 253, 1),
+(26302, 5, NULL, 25335, 1, -1, 2630706, 253, 1),
+(26302, 6, NULL, 25336, 1, -1, 2630707, 253, 1),
+(26302, 7, NULL, 25337, 1, -1, 2630708, 253, 1),
+(26302, 8, NULL, 25338, 1, -1, 2630709, 253, 1),
+(26302, 9, NULL, 25339, 1, -1, 2630710, 253, 1),
+(26302, 10, NULL, 25340, 1, -1, 2630711, 253, 1),
+(26302, 11, NULL, 25341, 1, -1, 2630712, 253, 1),
+(26302, 12, NULL, 25342, 1, -1, 2630713, 253, 1),
+(26302, 13, NULL, 25343, 1, -1, 2630714, 253, 1),
+(26302, 14, NULL, 25344, 1, -1, 2630715, 253, 1),
+(26303, 0, NULL, 10627, 17, 0, 0, 253, 16);
+DELETE FROM `dbscripts_on_gossip` WHERE `id` BETWEEN 2630701 AND 2630715;
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `data_flags`, `comments`) VALUES
+(2630701, 0, 15, 46717, 6, "Bat"),
+(2630701, 500, 15, 46649, 6, "Bat Happiness"),
+(2630702, 0, 15, 46718, 6, "Boar"),
+(2630702, 500, 15, 46649, 6, "Boar Happiness"),
+(2630703, 0, 15, 46719, 6, "Carrion Bird"),
+(2630703, 500, 15, 46649, 6, "Carrion Bird Happiness"),
+(2630704, 0, 15, 46720, 6, "Cat"),
+(2630704, 500, 15, 46649, 6, "Cat Happiness"),
+(2630705, 0, 15, 46721, 6, "Dragonhawk"),
+(2630705, 500, 15, 46649, 6, "Dragonhawk Happiness"),
+(2630706, 0, 15, 46722, 6, "Nether Ray"),
+(2630706, 500, 15, 46649, 6, "Nether Ray Happiness"),
+(2630707, 0, 15, 46723, 6, "Owl"),
+(2630707, 500, 15, 46649, 6, "Owl Happiness"),
+(2630708, 0, 15, 46724, 6, "Raptor"),
+(2630708, 500, 15, 46649, 6, "Raptor Happiness"),
+(2630709, 0, 15, 46725, 6, "Ravager"),
+(2630709, 500, 15, 46649, 6, "Ravager Happiness"),
+(2630710, 0, 15, 46726, 6, "Scorpid"),
+(2630710, 500, 15, 46649, 6, "Scorpid Happiness"),
+(2630711, 0, 15, 46727, 6, "Serpent"),
+(2630711, 500, 15, 46649, 6, "Serpent Happiness"),
+(2630712, 0, 15, 46728, 6, "Spider"),
+(2630712, 500, 15, 46649, 6, "Spider Happiness"),
+(2630713, 0, 15, 46716, 6, "Warp Stalker"),
+(2630713, 500, 15, 46649, 6, "Warp Stalker Happiness"),
+(2630714, 0, 15, 46729, 6, "Wind Serpent"),
+(2630714, 500, 15, 46649, 6, "Wind Serpent Happiness"),
+(2630715, 0, 15, 46730, 6, "Wolf"),
+(2630715, 500, 15, 46649, 6, "Wolf Happiness");
+UPDATE `creature_template` SET `GossipMenuId`=26301 WHERE `Entry`=26307;
+UPDATE `creature_template` SET `NpcFlags`=4194321 WHERE `Entry`=26307;
+UPDATE `creature_template` SET `TrainerClass`=3 WHERE `Entry`=26307;
+UPDATE `creature_template` SET `TrainerType`=3 WHERE `Entry`=26307;
+DELETE FROM `creature_template_spells` WHERE `entry` = 26307;
+UPDATE `creature_template` SET `TrainerTemplateId`=2020 WHERE `Entry`=26307;
+INSERT INTO `npc_trainer_template` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`, `condition_id`) VALUES
+(2020, 136, 600, 0, 0, 0, 0),
+(2020, 674, 2200, 0, 0, 0, 0),
+(2020, 781, 2200, 0, 0, 0, 0),
+(2020, 1002, 1200, 0, 0, 0, 0),
+(2020, 1130, 100, 0, 0, 0, 0),
+(2020, 1462, 7000, 0, 0, 0, 0),
+(2020, 1494, 10, 0, 0, 0, 0),
+(2020, 1495, 1800, 0, 0, 0, 0),
+(2020, 1499, 2200, 0, 0, 0, 0),
+(2020, 1510, 18000, 0, 0, 0, 0),
+(2020, 1513, 1200, 0, 0, 0, 0),
+(2020, 1543, 10000, 0, 0, 0, 0),
+(2020, 1978, 100, 0, 0, 0, 0),
+(2020, 2643, 2000, 0, 0, 0, 0),
+(2020, 2974, 600, 0, 0, 0, 0),
+(2020, 3034, 14000, 0, 0, 0, 0),
+(2020, 3043, 6000, 0, 0, 0, 0),
+(2020, 3044, 100, 0, 0, 0, 0),
+(2020, 3045, 7000, 0, 0, 0, 0),
+(2020, 3111, 2200, 0, 0, 0, 0),
+(2020, 3127, 100, 0, 0, 0, 0),
+(2020, 3661, 8000, 0, 0, 0, 0),
+(2020, 3662, 14000, 0, 0, 0, 0),
+(2020, 5116, 200, 0, 0, 0, 0),
+(2020, 5118, 2200, 0, 0, 0, 0),
+(2020, 5384, 8000, 0, 0, 0, 0),
+(2020, 6197, 1200, 0, 0, 0, 0),
+(2020, 8737, 12000, 0, 0, 0, 0),
+(2020, 13159, 18000, 0, 0, 0, 0),
+(2020, 13161, 8000, 0, 0, 0, 0),
+(2020, 13163, 100, 0, 0, 0, 0),
+(2020, 13165, 400, 0, 0, 0, 0),
+(2020, 13542, 26000, 0, 0, 0, 0),
+(2020, 13543, 40000, 0, 0, 0, 0),
+(2020, 13544, 50000, 0, 0, 0, 0),
+(2020, 13549, 400, 0, 0, 0, 0),
+(2020, 13550, 2000, 0, 0, 0, 0),
+(2020, 13551, 7000, 0, 0, 0, 0),
+(2020, 13552, 12000, 0, 0, 0, 0),
+(2020, 13553, 24000, 0, 0, 0, 0),
+(2020, 13554, 36000, 0, 0, 0, 0),
+(2020, 13555, 48000, 0, 0, 0, 0),
+(2020, 13795, 1800, 0, 0, 0, 0),
+(2020, 13809, 8000, 0, 0, 0, 0),
+(2020, 13813, 12000, 0, 0, 0, 0),
+(2020, 14260, 200, 0, 0, 0, 0),
+(2020, 14261, 1800, 0, 0, 0, 0),
+(2020, 14262, 7000, 0, 0, 0, 0),
+(2020, 14263, 10000, 0, 0, 0, 0),
+(2020, 14264, 18000, 0, 0, 0, 0),
+(2020, 14265, 32000, 0, 0, 0, 0),
+(2020, 14266, 46000, 0, 0, 0, 0),
+(2020, 14267, 16000, 0, 0, 0, 0),
+(2020, 14268, 50000, 0, 0, 0, 0),
+(2020, 14269, 8000, 0, 0, 0, 0),
+(2020, 14270, 26000, 0, 0, 0, 0),
+(2020, 14271, 48000, 0, 0, 0, 0),
+(2020, 14281, 600, 0, 0, 0, 0),
+(2020, 14282, 2200, 0, 0, 0, 0),
+(2020, 14283, 8000, 0, 0, 0, 0),
+(2020, 14284, 14000, 0, 0, 0, 0),
+(2020, 14285, 26000, 0, 0, 0, 0),
+(2020, 14286, 40000, 0, 0, 0, 0),
+(2020, 14287, 50000, 0, 0, 0, 0),
+(2020, 14288, 8000, 0, 0, 0, 0),
+(2020, 14289, 24000, 0, 0, 0, 0),
+(2020, 14290, 42000, 0, 0, 0, 0),
+(2020, 14294, 36000, 0, 0, 0, 0),
+(2020, 14295, 48000, 0, 0, 0, 0),
+(2020, 14302, 7000, 0, 0, 0, 0),
+(2020, 14303, 14000, 0, 0, 0, 0),
+(2020, 14304, 28000, 0, 0, 0, 0),
+(2020, 14305, 46000, 0, 0, 0, 0),
+(2020, 14310, 18000, 0, 0, 0, 0),
+(2020, 14311, 50000, 0, 0, 0, 0),
+(2020, 14316, 26000, 0, 0, 0, 0),
+(2020, 14317, 42000, 0, 0, 0, 0),
+(2020, 14318, 2000, 0, 0, 0, 0),
+(2020, 14319, 8000, 0, 0, 0, 0),
+(2020, 14320, 16000, 0, 0, 0, 0),
+(2020, 14321, 32000, 0, 0, 0, 0),
+(2020, 14322, 48000, 0, 0, 0, 0),
+(2020, 14323, 6000, 0, 0, 0, 0),
+(2020, 14324, 18000, 0, 0, 0, 0),
+(2020, 14325, 48000, 0, 0, 0, 0),
+(2020, 14326, 8000, 0, 0, 0, 0),
+(2020, 14327, 28000, 0, 0, 0, 0),
+(2020, 19801, 50000, 0, 0, 0, 0),
+(2020, 19878, 10000, 0, 0, 0, 0),
+(2020, 19879, 36000, 0, 0, 0, 0),
+(2020, 19880, 7000, 0, 0, 0, 0),
+(2020, 19882, 18000, 0, 0, 0, 0),
+(2020, 19883, 400, 0, 0, 0, 0),
+(2020, 19884, 2000, 0, 0, 0, 0),
+(2020, 19885, 7000, 0, 0, 0, 0),
+(2020, 20043, 28000, 0, 0, 0, 0),
+(2020, 20190, 46000, 0, 0, 0, 0),
+(2020, 20736, 600, 0, 0, 0, 0),
+(2020, 20900, 400, 0, 0, 0, 0),
+(2020, 20901, 700, 0, 0, 0, 0),
+(2020, 20902, 1300, 0, 0, 0, 0),
+(2020, 20903, 2000, 0, 0, 0, 0),
+(2020, 20904, 2500, 0, 0, 0, 0),
+(2020, 20909, 1200, 0, 0, 0, 0),
+(2020, 20910, 2100, 0, 0, 0, 0),
+(2020, 24132, 1800, 0, 0, 0, 0),
+(2020, 24133, 2500, 0, 0, 0, 0),
+(2020, 25294, 50000, 0, 0, 0, 0),
+(2020, 25295, 50000, 0, 0, 0, 0),
+(2020, 25296, 50000, 0, 0, 0, 0),
+(2020, 27014, 87000, 0, 0, 0, 0),
+(2020, 27016, 140000, 0, 0, 0, 0),
+(2020, 27019, 170000, 0, 0, 0, 0),
+(2020, 27021, 140000, 0, 0, 0, 0),
+(2020, 27022, 140000, 0, 0, 0, 0),
+(2020, 27023, 110000, 0, 0, 0, 0),
+(2020, 27025, 68000, 0, 0, 0, 0),
+(2020, 27044, 150000, 0, 0, 0, 0),
+(2020, 27045, 150000, 0, 0, 0, 0),
+(2020, 27046, 150000, 0, 0, 0, 0),
+(2020, 27065, 2700, 0, 0, 0, 0),
+(2020, 27067, 2500, 0, 0, 0, 0),
+(2020, 27068, 2700, 0, 0, 0, 0),
+(2020, 34026, 120000, 0, 0, 0, 0),
+(2020, 34074, 100000, 0, 0, 0, 0),
+(2020, 34120, 77000, 0, 0, 0, 0),
+(2020, 34477, 190000, 0, 0, 0, 0),
+(2020, 34600, 150000, 0, 0, 0, 0),
+(2020, 36916, 190000, 0, 0, 0, 0);
+
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '50', `groupid` = '12' WHERE `item` IN (770,4860);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10', `groupid` = '12' WHERE `item` IN (3882);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '12' WHERE `item` IN (5118);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10', `groupid` = '9' WHERE `item` IN (5373);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` IN (46095,46097);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` IN (3229,34334,7559,18640,4861,4290,5767,4263);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '20' WHERE `item` IN (4595);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '25' WHERE `item` IN (4785);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `entry` =37217 AND `item` =52019;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `entry` =38103 AND `item` =52019;
+DELETE FROM `creature_loot_template` WHERE `entry` = 23390 AND `item` = 31560;
+UPDATE `creature_loot_template` SET `groupid` = '12' WHERE `item` IN (878);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '-10' WHERE `entry` =8761 AND `item` =20017;
+INSERT INTO `reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES ('8289', '20655', '0', '1', '1', '1', '0', '');
+DELETE FROM `creature_loot_template` WHERE `entry` = 15209 AND `item` = 20655;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '5' WHERE `item` IN (23380);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '25', `groupid` = '5' WHERE `item` IN (23381);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =3927 AND `item` =3748;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1' WHERE `entry` =3927 AND `item` =6314;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =3927 AND `item` =6320;
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
