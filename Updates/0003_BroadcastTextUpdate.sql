@@ -3179,6 +3179,18 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (27760,27776,27784,27
 UPDATE broadcast_text SET ChatTypeId = 5 WHERE Id IN (27630,27631,27632,27633,27634,27635,27636,27637,27677,27678,27679,27680,27681,27682,27683,27684,27685,27686,
 27687,27688,27690,27647,27648,27649,27650,27651,27652,27653,27654,27655,27656,27657,27658,27659,27660,27661,27662,27663,27664,27665,27666,27667,27668);
 
+UPDATE `broadcast_text` SET `EmoteId1` = 1 WHERE `ID` IN (39, 40, 44);
+UPDATE `broadcast_text` SET `EmoteId1` = 1 WHERE `ID` = 41;
+UPDATE `broadcast_text` SET `EmoteId1` = 1 WHERE `ID` = 42;
+UPDATE `broadcast_text` SET `EmoteId1` = 1 WHERE `ID` = 43;
+UPDATE `broadcast_text` SET `EmoteId1` = 1 WHERE `ID` IN (80, 81);
+UPDATE `broadcast_text` SET `EmoteId1` = 6 WHERE `ID` = 739;
+UPDATE `broadcast_text` SET `EmoteId1` = 5 WHERE `ID` IN (737, 738);
+
+-- Death Text - https://www.wowhead.com/tbc/npc=14464/avalanchion
+UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 9660;
+UPDATE `broadcast_text` SET `ChatTypeID` = 7 WHERE `Id` = 9669;
+
 -- text
 # 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;

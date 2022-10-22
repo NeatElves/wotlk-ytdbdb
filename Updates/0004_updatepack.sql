@@ -19447,4 +19447,667 @@ UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =3
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '1' WHERE `entry` =3927 AND `item` =6314;
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =3927 AND `item` =6320;
 
+UPDATE creature_template SET MovementType = 2 WHERE entry IN (28831);
+UPDATE creature SET position_x = 5774.632, position_y = -3559.887, position_z = 386.7439, spawndist = 0, MovementType = 2 WHERE id = 28831;
+UPDATE `creature` SET `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =99154;
+DELETE FROM `creature_movement_template` WHERE entry IN (28831);
+INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`positionx`,`positiony`,`positionz`,`orientation`,`waittime`,`scriptid`) VALUES
+(28831,0,1,5774.632,-3559.887,386.7439,100,0,0),
+(28831,0,2,5768.704,-3556.946,386.7439,100,0,0),
+(28831,0,3,5760.043,-3559.421,386.8905,100,0,0),
+(28831,0,4,5752.965,-3564.472,386.6405,100,0,0),
+(28831,0,5,5750.362,-3572.27,386.6188,100,0,0),
+(28831,0,6,5754.377,-3580.56,386.6188,100,0,0),
+(28831,0,7,5763.624,-3585.347,386.6188,100,0,0),
+(28831,0,8,5769.47,-3583.793,386.6188,100,0,0),
+(28831,0,9,5774.806,-3577.9,386.7438,100,0,0),
+(28831,0,10,5776.741,-3569.496,386.7438,100,0,0),
+(28831,0,11,5774.632,-3559.887,386.7439,100,0,0);
+UPDATE `creature` SET `position_x` = '5759.66', `position_y` = '-3581.31', `position_z` = '386.695', `orientation` = '3.68265', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =120631;
+UPDATE creature_template SET MovementType = 2 WHERE entry IN (28829);
+UPDATE creature SET spawndist = 0, MovementType = 2 WHERE id = 28829;
+DELETE FROM `creature_movement_template` WHERE entry IN (28829);
+INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`positionx`,`positiony`,`positionz`,`orientation`,`waittime`,`scriptid`) VALUES
+(28829,0,1,5759.659,-3581.314,386.695,3.682645,120000,0),
+(28829,0,2,5755.886,-3573.972,386.8688,3.700098,180000,0);
+UPDATE `creature` SET `position_x` = '5773.54', `position_y` = '-3564.82', `position_z` = '386.994', `orientation` = '1.16224', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =120632;
+UPDATE creature_template SET MovementType = 4 WHERE entry IN (28832);
+UPDATE creature SET spawndist = 0, MovementType = 4 WHERE id = 28832;
+DELETE FROM `creature_movement_template` WHERE entry IN (28832);
+INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`positionx`,`positiony`,`positionz`,`orientation`,`waittime`,`scriptid`) VALUES
+(28832,0,1,5771.052,-3568.831,387.2438,0.541052,300000,0),
+(28832,0,2,5772.02,-3568.333,387.2438,100,0,0),
+(28832,0,3,5773.54,-3564.822,386.9939,100,0,0),
+(28832,0,4,5770.52,-3562.18,387.1189,1.32645,300000,0);
+UPDATE `creature` SET `position_x` = '5782.7', `position_y` = '-3536.88', `position_z` = '388.494', `orientation` = '4.15388', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =98963;
+UPDATE creature_template SET MovementType = 2 WHERE entry IN (28828);
+UPDATE creature SET spawndist = 0, MovementType = 2 WHERE id = 28828;
+DELETE FROM `creature_movement_template` WHERE entry IN (28828);
+INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`positionx`,`positiony`,`positionz`,`orientation`,`waittime`,`scriptid`) VALUES
+(28828,0,1,5782.703,-3536.884,388.4939,4.153883,240000,0),
+(28828,0,2,5766.771,-3541.03,386.8689,2.892337,240000,0);
+DELETE FROM creature_addon WHERE guid IN (SELECT `guid` FROM `creature` WHERE `id` IN (28527,28479,28480,28484,28827,29583,28832,28828,28830,28831,28829,28855,28624));
+UPDATE `creature_template_addon` SET `auras`= 51749 WHERE entry IN (28527,28479,28480,28484,28827);
+DELETE FROM `creature_template_addon` WHERE `entry` IN (29583,28832,28828,28830,28831,28829,28855,28624);
+INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
+(29583,0,0,1,1,0,0,51749), (28832,0,0,1,1,0,0,51749), (28828,0,0,1,1,0,0,51749), (28830,0,0,1,1,0,0,51749),
+(28831,0,0,1,1,0,0,51749), (28829,0,0,1,1,0,0,51749), (28855,0,0,1,1,0,0,51749), (28624,0,0,1,1,0,0,51749);
+UPDATE `creature` SET `position_z` = '387.369', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =104253;
+UPDATE creature_template SET MovementType = 2 WHERE entry IN (28830);
+UPDATE creature SET spawndist = 0, MovementType = 2 WHERE id = 28830;
+DELETE FROM `creature_movement_template` WHERE entry IN (28830);
+INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`positionx`,`positiony`,`positionz`,`orientation`,`waittime`,`scriptid`) VALUES
+(28830,0,1,5785.643,-3590.281,387.3688,2.617994,400000,0),
+(28830,0,2,5779.545,-3570.587,386.6189,100,0,0),
+(28830,0,3,5774.797,-3550.833,386.6189,100,0,0),
+(28830,0,4,5761.477,-3549.435,386.6405,100,0,0),
+(28830,0,5,5750.535,-3564.666,386.6405,100,0,0),
+(28830,0,6,5749.817,-3580.157,386.6188,100,0,0),
+(28830,0,7,5759.719,-3590.341,386.6188,100,0,0),
+(28830,0,8,5771.472,-3588.823,386.6188,100,0,0),
+(28830,0,9,5785.643,-3590.281,387.3688,100,0,0);
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28387));
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28387));
+DELETE FROM `creature` WHERE `id` IN (28387);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(99119, 28387, 571, 1, 1, 0, 0, 5792.25, -3708.74, 373.818, -1.07467, 300, 300, 0, 0, 0, 0, 0, 0),
+(99120, 28387, 571, 1, 1, 0, 0, 5791.24, -3667.36, 384.933, 5.23599, 300, 300, 0, 0, 0, 0, 0, 0),
+(99121, 28387, 571, 1, 1, 0, 0, 5809.29, -3658.19, 382.161, 5.42797, 300, 300, 0, 0, 0, 0, 0, 0),
+(99122, 28387, 571, 1, 1, 0, 0, 5831.62, -3648.01, 380.769, 5.35816, 300, 300, 0, 0, 0, 0, 0, 0),
+(99123, 28387, 571, 1, 1, 0, 0, 5765.1, -3682.48, 377.404, 4.85202, 300, 300, 0, 0, 0, 0, 0, 0),
+(99124, 28387, 571, 1, 1, 0, 0, 5821.98, -3693.23, 372.239, 2.1686, 300, 300, 0, 0, 0, 0, 0, 0),
+(99125, 28387, 571, 1, 1, 0, 0, 5728.97, -3484.91, 386.76, 3.01942, 300, 300, 0, 0, 0, 0, 0, 0),
+(99126, 28387, 571, 1, 1, 0, 0, 5703.38, -3436.01, 367.479, -0.19706, 300, 300, 0, 0, 0, 0, 0, 0),
+(99127, 28387, 571, 1, 1, 0, 0, 5793.02, -3574.68, 386.649, 2.40855, 300, 300, 0, 0, 0, 0, 0, 0),
+(99128, 28387, 571, 1, 1, 0, 0, 5675.09, -3575.62, 379.263, 3.163, 300, 300, 0, 0, 0, 0, 0, 0),
+(99129, 28387, 571, 1, 1, 0, 0, 5711.46, -3472.02, 369.193, -2.69843, 300, 300, 0, 0, 0, 0, 0, 0),
+(99130, 28387, 571, 1, 1, 0, 0, 5678.06, -3537.43, 379.635, 1.5883, 300, 300, 0, 0, 0, 0, 0, 0),
+(99131, 28387, 571, 1, 1, 0, 0, 5690.54, -3504.85, 371.523, 2.70526, 300, 300, 0, 0, 0, 0, 0, 0),
+(99132, 28387, 571, 1, 1, 0, 0, 5783.41, -3677.28, 378.839, 5.55015, 300, 300, 0, 0, 0, 0, 0, 0),
+(99133, 28387, 571, 1, 1, 0, 0, 5795.19, -3565.88, 386.798, 3.12414, 300, 300, 0, 0, 0, 0, 0, 0);
+UPDATE creature SET spawndist = 0, MovementType = 2 WHERE guid = 99133;
+DELETE FROM `creature_movement` WHERE id IN (99133);
+INSERT INTO `creature_movement` (`id`,`point`,`positionx`,`positiony`,`positionz`,`orientation`,`waittime`,`scriptid`) VALUES
+(99133,1,5795.185,-3565.883,386.7977,3.124139,60000,0),
+(99133,2,5795.185,-3565.883,386.7977,3.124139,25000,2838701),
+(99133,3,5777.36,-3553.416,386.6189,100,0,0),
+(99133,4,5760.104,-3542.975,387.0155,100,0,0),
+(99133,5,5752.698,-3506.358,384.6919,100,0,0),
+(99133,6,5742.749,-3463.787,376.7929,2.932153,60000,0),
+(99133,7,5742.749,-3463.787,376.7929,2.932153,100,1);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (2838701);
+INSERT INTO dbscripts_on_creature_movement (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(2838701,1,25,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'RUN ON'),
+(2838701,10,35,5,10,0,0,0,0,0,0,0,0,0,0,0,0,'Send Event AI');
+UPDATE `creature` SET `position_x` = '5790.66', `position_y` = '-3566.08', `position_z` = '386.605', `orientation` = '3.14159', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =118943;
+DELETE FROM dbscripts_on_relay WHERE id IN (20664);
+INSERT INTO dbscripts_on_relay (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(20664,20000,14,51754,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Element-Tamer Dagoda 28480 EAI: unaura'),
+(20664,21000,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,3.141,'Part of Element-Tamer Dagoda 28480 EAI: reset orientation');
+
+UPDATE quest_template SET PrevQuestId=12516 WHERE entry IN(12615);
+
+DELETE FROM conditions WHERE condition_entry = 3683;
+INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4, flags) VALUES (2104, 22, 1642, 0, 0, 0, 0), (3013, 23, 3013, 1, 0, 0, 1), (3683, -1, 3013, 2104, 0, 0, 0);
+UPDATE quest_template SET PrevQuestId=0 WHERE entry = 1642;
+DELETE FROM conditions WHERE condition_entry = 3684;
+INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4, flags) VALUES (3014, 22, 1646, 0, 0, 0, 0), (3015, 23, 6916, 1, 0, 0, 1), (3684, -1, 3015, 3014, 0, 0, 0);
+UPDATE quest_template SET PrevQuestId=0 WHERE entry = 1646;
+
+DELETE FROM spell_script_target WHERE entry IN (9223);
+INSERT INTO spell_script_target (entry,type,targetEntry,inverseEffectMask) VALUES (9223,0,37097,0);
+DELETE FROM spell_script_target WHERE entry IN (9224);
+INSERT INTO spell_script_target (entry,type,targetEntry,inverseEffectMask) VALUES (9224,0,105576,0);
+
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '5' WHERE `item` IN (3011);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '25', `groupid` = '5' WHERE `item` IN (6331);
+UPDATE `creature_loot_template` SET `groupid` = '5' WHERE `item` IN (11610);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '25', `groupid` = '13' WHERE `item` IN (5117,5134,11404,19933,4582,11407);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '25', `groupid` = '5' WHERE `item` IN (5332);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '50', `groupid` = '5' WHERE `item` IN (5839);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0', `groupid` = '12' WHERE `item` IN (8508);
+
+UPDATE `npc_vendor` SET `Slot` = 101 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 5956;
+UPDATE `npc_vendor` SET `Slot` = 102 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 2901;
+UPDATE `npc_vendor` SET `Slot` = 103 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 4399;
+UPDATE `npc_vendor` SET `Slot` = 104 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 4400;
+UPDATE `npc_vendor` SET `Slot` = 105 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 2880;
+UPDATE `npc_vendor` SET `Slot` = 106 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 3466;
+UPDATE `npc_vendor` SET `Slot` = 107 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 10648;
+UPDATE `npc_vendor` SET `Slot` = 108 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 10647;
+UPDATE `npc_vendor` SET `Slot` = 109 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 4404;
+UPDATE `npc_vendor` SET `Slot` = 110 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 4361;
+UPDATE `npc_vendor` SET `Slot` = 111 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 4363;
+UPDATE `npc_vendor` SET `Slot` = 112 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 4371;
+UPDATE `npc_vendor` SET `Slot` = 113 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 4382;
+UPDATE `npc_vendor` SET `Slot` = 114 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 4357;
+UPDATE `npc_vendor` SET `Slot` = 115 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 4364;
+UPDATE `npc_vendor` SET `Slot` = 116 WHERE `entry` IN (1448,1694,2682,2683,2684,2685,2687,2688,3133,3413,3495,4587,5175,5519,6730,6777,8678,8679,9544,11185,14637) AND `item` = 4389;
+UPDATE `npc_vendor` SET `slot` = 203 WHERE `entry` =5175 AND `item` =7560;
+UPDATE `npc_vendor` SET `slot` = 203 WHERE `entry` =6730 AND `item` =7560;
+UPDATE `npc_vendor` SET `slot` = 205 WHERE `entry` =3413 AND `item` =18647;
+UPDATE `npc_vendor` SET `slot` = 205 WHERE `entry` =1304 AND `item` =18649;
+UPDATE `npc_vendor` SET `slot` = 205 WHERE `entry` =5175 AND `item` =18649;
+
+INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES (21, 0, 44, 0, 'Gryan Stoutmantle - Random OOC Texts');
+
+UPDATE `creature` SET `position_x` = -10531.8, `position_y` = -1155.08, `position_z` = 28.1039, `orientation` = 4.8442, `MovementType` = 2 WHERE `id` = 227;
+DELETE FROM `creature_movement_template` WHERE `entry` = 227;
+INSERT INTO `creature_movement_template` (`entry`, `point`, `positionx`, `positiony`, `positionz`, `waittime`, `scriptid`, `orientation`) VALUES
+('227', '1', '-10531.8', '-1155.08', '28.1039', '25000', '0', '100'),
+('227', '2', '-10531.1', '-1161.78', '28.1039', '5000', '0', '100'),
+('227', '3', '-10529.6', '-1164.64', '28.1039', '0', '0', '100'),
+('227', '4', '-10526.6', '-1165.65', '27.4763', '0', '0', '100'),
+('227', '5', '-10523.9', '-1165.83', '27.4775', '0', '0', '100'),
+('227', '6', '-10522.8', '-1171.44', '27.4775', '0', '0', '100'),
+('227', '7', '-10518.9', '-1172.77', '27.9101', '0', '0', '100'),
+('227', '8', '-10512.5', '-1172.22', '31.3067', '0', '0', '100'),
+('227', '9', '-10510.6', '-1169.43', '31.324', '0', '0', '100'),
+('227', '10', '-10512.8', '-1167.31', '31.3354', '0', '0', '100'),
+('227', '11', '-10518.8', '-1167.65', '34.9576', '0', '0', '100'),
+('227', '12', '-10520.9', '-1169.09', '34.9576', '0', '0', '100'),
+('227', '13', '-10521.7', '-1173.81', '34.9576', '0', '0', '100'),
+('227', '14', '-10523.8', '-1173.97', '34.9576', '25000', '0', '100'),
+('227', '15', '-10521.7', '-1173.81', '34.9576', '0', '0', '100'),
+('227', '16', '-10520.9', '-1169.09', '34.9576', '0', '0', '100'),
+('227', '17', '-10518.8', '-1167.65', '34.9576', '0', '0', '100'),
+('227', '18', '-10512.8', '-1167.31', '31.3354', '0', '0', '100'),
+('227', '19', '-10510.6', '-1169.43', '31.324', '0', '0', '100'),
+('227', '20', '-10512.5', '-1172.22', '31.3067', '0', '0', '100'),
+('227', '21', '-10518.9', '-1172.77', '27.9101', '0', '0', '100'),
+('227', '22', '-10522.8', '-1171.44', '27.4775', '0', '0', '100'),
+('227', '23', '-10523.9', '-1165.83', '27.4775', '0', '0', '100'),
+('227', '24', '-10526.6', '-1165.65', '27.4763', '0', '0', '100'),
+('227', '25', '-10529.6', '-1164.64', '28.1039', '0', '0', '100'),
+('227', '26', '-10531.1', '-1161.78', '28.1039', '0', '0', '100');
+
+UPDATE `creature_template` SET `UnitFlags` = 33536 WHERE `entry` = 4952;
+UPDATE `game_graveyard_zone` SET `ghost_loc` = '2057' WHERE `id` =429 AND `ghost_loc` =2037;
+UPDATE `game_graveyard_zone` SET `ghost_loc` = '1497', `faction` = '469' WHERE `id` =853 AND `ghost_loc` =85;
+DELETE FROM `game_graveyard_zone` WHERE `id` = 429 AND `ghost_loc` = 85;
+DELETE FROM `game_graveyard_zone` WHERE `id` = 1256 AND `ghost_loc` = 85;
+
+UPDATE `creature_template` SET `MovementType` = '0' WHERE `Entry` =16639;
+UPDATE `creature_template` SET `MovementType` = '0' WHERE `Entry` =16746;
+DELETE FROM npc_trainer WHERE entry IN (4578,9584);
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id) VALUES
+(4578,12052,1850,197,210,0,0),
+(4578,12055,2000,197,215,0,0),
+(4578,12071,2200,197,225,0,0),
+(4578,12076,2600,197,235,0,0),
+(4578,12082,2800,197,240,0,0);
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 9584, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 4578;
+DELETE FROM npc_trainer WHERE entry IN (1103,1346,2399,2627,3004,3363,3484,3523,3704,4159,4193,4576,5153,11052,11557,16366,16640,16729,17487);
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id) VALUES
+(1103,2385,50,197,10,0,0),
+(1103,2386,200,197,65,0,0),
+(1103,2392,50,197,40,0,0),
+(1103,2393,25,197,1,0,0),
+(1103,2394,50,197,40,0,0),
+(1103,2395,300,197,70,0,0),
+(1103,2396,200,197,70,0,0),
+(1103,2397,200,197,60,0,0),
+(1103,2399,300,197,85,0,0),
+(1103,2401,300,197,95,0,0),
+(1103,2402,250,197,75,0,0),
+(1103,2406,200,197,100,0,0),
+(1103,2964,100,197,75,0,0),
+(1103,3755,100,197,45,0,0),
+(1103,3757,200,197,80,0,0),
+(1103,3813,800,197,150,0,0),
+(1103,3839,500,197,125,0,0),
+(1103,3840,100,197,35,0,0),
+(1103,3841,200,197,60,0,0),
+(1103,3842,300,197,70,0,0),
+(1103,3843,400,197,85,0,0),
+(1103,3845,300,197,80,0,0),
+(1103,3848,500,197,110,0,0),
+(1103,3850,500,197,110,0,0),
+(1103,3852,750,197,130,0,0),
+(1103,3855,750,197,125,0,0),
+(1103,3859,750,197,150,0,0),
+(1103,3861,1000,197,185,0,0),
+(1103,3865,1000,197,175,0,0),
+(1103,3866,250,197,110,0,0),
+(1103,3871,500,197,170,0,0),
+(1103,3911,10,0,0,0,0),
+(1103,3912,500,197,50,0,0),
+(1103,3913,5000,197,125,0,0),
+(1103,3914,50,197,30,0,0),
+(1103,3915,25,197,1,0,0),
+(1103,6521,400,197,90,0,0),
+(1103,6690,1000,197,135,0,0),
+(1103,7623,50,197,30,0,0),
+(1103,7624,50,197,30,0,0),
+(1103,8465,50,197,40,0,0),
+(1103,8467,250,197,110,0,0),
+(1103,8483,500,197,160,0,0),
+(1103,8489,750,197,175,0,0),
+(1103,8758,600,197,140,0,0),
+(1103,8760,600,197,145,0,0),
+(1103,8762,750,197,160,0,0),
+(1103,8764,900,197,170,0,0),
+(1103,8766,1000,197,175,0,0),
+(1103,8770,1000,197,190,0,0),
+(1103,8772,1000,197,175,0,0),
+(1103,8774,1000,197,180,0,0),
+(1103,8776,50,197,15,0,0),
+(1103,8791,2500,197,185,0,0),
+(1103,8799,3000,197,195,0,0),
+(1103,8804,5000,197,210,0,0),
+(1103,12044,30,197,1,0,0),
+(1103,12045,50,197,20,0,0),
+(1103,12046,300,197,75,0,0),
+(1103,12048,4000,197,205,0,0),
+(1103,12049,4000,197,205,0,0),
+(1103,12050,4000,197,210,0,0),
+(1103,12053,5000,197,215,0,0),
+(1103,12061,2500,197,215,0,0),
+(1103,12065,5000,197,225,0,0),
+(1103,12067,5000,197,225,0,0),
+(1103,12069,5000,197,225,0,0),
+(1103,12070,5000,197,225,0,0),
+(1103,12072,6000,197,230,0,0),
+(1103,12073,6000,197,230,0,0),
+(1103,12074,6000,197,230,0,0),
+(1103,12077,5000,197,235,0,0),
+(1103,12079,6500,197,235,0,0),
+(1103,12088,7500,197,245,0,0),
+(1103,12092,7500,197,250,0,0),
+(1103,12181,50000,197,200,0,0),
+(1103,18401,10000,197,250,0,0),
+(1103,18402,10000,197,255,0,0),
+(1103,18403,10000,197,255,0,0),
+(1103,18406,10000,197,260,0,0),
+(1103,18407,10000,197,260,0,0),
+(1103,18409,10000,197,265,0,0),
+(1103,18410,10000,197,265,0,0),
+(1103,18411,10000,197,265,0,0),
+(1103,18413,10000,197,270,0,0),
+(1103,18414,10000,197,270,0,0),
+(1103,18415,10000,197,270,0,0),
+(1103,18416,12500,197,275,0,0),
+(1103,18417,12500,197,275,0,0),
+(1103,18420,12500,197,275,0,0),
+(1103,18421,12500,197,275,0,0),
+(1103,18423,15000,197,280,0,0),
+(1103,18424,15000,197,280,0,0),
+(1103,18437,15000,197,285,0,0),
+(1103,18438,15000,197,285,0,0),
+(1103,18441,15000,197,290,0,0),
+(1103,18442,15000,197,290,0,0),
+(1103,18444,15000,197,295,0,0),
+(1103,18446,15000,197,300,0,0),
+(1103,18449,15000,197,300,0,0),
+(1103,18450,15000,197,300,0,0),
+(1103,18451,15000,197,300,0,0),
+(1103,18453,15000,197,300,0,0),
+(1103,63742,750,197,125,0,0);
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 1346, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 2399, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 2627, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 3004, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 3363, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 3484, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 3523, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 3704, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 4159, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 4193, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 4576, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 5153, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 11052, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 11557, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 16366, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 16640, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 16729, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 17487, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 1103;
+DELETE FROM npc_trainer WHERE entry IN (18749,18772,33636,33684,33613);
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id) VALUES
+(18749,2385,50,197,10,0,0),
+(18749,2386,200,197,65,0,0),
+(18749,2392,50,197,40,0,0),
+(18749,2393,25,197,1,0,0),
+(18749,2394,50,197,40,0,0),
+(18749,2395,300,197,70,0,0),
+(18749,2396,200,197,70,0,0),
+(18749,2397,200,197,60,0,0),
+(18749,2399,300,197,85,0,0),
+(18749,2401,300,197,95,0,0),
+(18749,2402,250,197,75,0,0),
+(18749,2406,200,197,100,0,0),
+(18749,2964,100,197,75,0,0),
+(18749,3755,100,197,45,0,0),
+(18749,3757,200,197,80,0,0),
+(18749,3813,800,197,150,0,0),
+(18749,3839,500,197,125,0,0),
+(18749,3840,100,197,35,0,0),
+(18749,3841,200,197,60,0,0),
+(18749,3842,300,197,70,0,0),
+(18749,3843,400,197,85,0,0),
+(18749,3845,300,197,80,0,0),
+(18749,3848,500,197,110,0,0),
+(18749,3850,500,197,110,0,0),
+(18749,3852,750,197,130,0,0),
+(18749,3855,750,197,125,0,0),
+(18749,3859,750,197,150,0,0),
+(18749,3861,1000,197,185,0,0),
+(18749,3865,1000,197,175,0,0),
+(18749,3866,250,197,110,0,0),
+(18749,3871,500,197,170,0,0),
+(18749,3911,10,0,0,0,0),
+(18749,3912,500,197,50,0,0),
+(18749,3913,5000,197,125,0,0),
+(18749,3914,50,197,30,0,0),
+(18749,6521,400,197,90,0,0),
+(18749,6690,1000,197,135,0,0),
+(18749,7623,50,197,30,0,0),
+(18749,7624,50,197,30,0,0),
+(18749,8465,50,197,40,0,0),
+(18749,8467,250,197,110,0,0),
+(18749,8483,500,197,160,0,0),
+(18749,8489,750,197,175,0,0),
+(18749,8758,600,197,140,0,0),
+(18749,8760,600,197,145,0,0),
+(18749,8762,750,197,160,0,0),
+(18749,8764,900,197,170,0,0),
+(18749,8766,1000,197,175,0,0),
+(18749,8770,1000,197,190,0,0),
+(18749,8772,1000,197,175,0,0),
+(18749,8774,1000,197,180,0,0),
+(18749,8776,50,197,15,0,0),
+(18749,8791,2500,197,185,0,0),
+(18749,8799,3000,197,195,0,0),
+(18749,8804,5000,197,210,0,0),
+(18749,12045,50,197,20,0,0),
+(18749,12046,300,197,75,0,0),
+(18749,12048,4000,197,205,0,0),
+(18749,12049,4000,197,205,0,0),
+(18749,12050,4000,197,210,0,0),
+(18749,12053,5000,197,215,0,0),
+(18749,12061,2500,197,215,0,0),
+(18749,12065,5000,197,225,0,0),
+(18749,12067,5000,197,225,0,0),
+(18749,12069,5000,197,225,0,0),
+(18749,12070,5000,197,225,0,0),
+(18749,12072,6000,197,230,0,0),
+(18749,12073,6000,197,230,0,0),
+(18749,12074,6000,197,230,0,0),
+(18749,12077,5000,197,235,0,0),
+(18749,12079,6500,197,235,0,0),
+(18749,12088,7500,197,245,0,0),
+(18749,12092,7500,197,250,0,0),
+(18749,12181,50000,197,200,0,0),
+(18749,18401,10000,197,250,0,0),
+(18749,18402,10000,197,255,0,0),
+(18749,18403,10000,197,255,0,0),
+(18749,18406,10000,197,260,0,0),
+(18749,18407,10000,197,260,0,0),
+(18749,18409,10000,197,265,0,0),
+(18749,18410,10000,197,265,0,0),
+(18749,18411,10000,197,265,0,0),
+(18749,18413,10000,197,270,0,0),
+(18749,18414,10000,197,270,0,0),
+(18749,18415,10000,197,270,0,0),
+(18749,18416,12500,197,275,0,0),
+(18749,18417,12500,197,275,0,0),
+(18749,18420,12500,197,275,0,0),
+(18749,18421,12500,197,275,0,0),
+(18749,18423,15000,197,280,0,0),
+(18749,18424,15000,197,280,0,0),
+(18749,18437,15000,197,285,0,0),
+(18749,18438,15000,197,285,0,0),
+(18749,18441,15000,197,290,0,0),
+(18749,18442,15000,197,290,0,0),
+(18749,18444,15000,197,295,0,0),
+(18749,18446,15000,197,300,0,0),
+(18749,18449,15000,197,300,0,0),
+(18749,18450,15000,197,300,0,0),
+(18749,18451,15000,197,300,0,0),
+(18749,18453,15000,197,300,0,0),
+(18749,26745,20000,197,300,0,0),
+(18749,26746,15000,197,315,0,0),
+(18749,26764,15000,197,310,0,0),
+(18749,26765,15000,197,310,0,0),
+(18749,26770,20000,197,320,0,0),
+(18749,26771,20000,197,325,0,0),
+(18749,26772,20000,197,335,0,0),
+(18749,26791,100000,197,275,0,0),
+(18749,31460,20000,197,300,0,0),
+(18749,60969,750000,197,340,0,0),
+(18749,63742,750,197,125,0,0);
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 18772, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 18749;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 33636, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 18749;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 33684, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 18749;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 33613, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 18749;
+DELETE FROM npc_trainer WHERE entry IN (26914,26964,26969,27001,28699,33580);
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id) VALUES
+(26914,2385,50,197,10,0,0),
+(26914,2386,200,197,65,0,0),
+(26914,2392,50,197,40,0,0),
+(26914,2393,25,197,1,0,0),
+(26914,2394,50,197,40,0,0),
+(26914,2395,300,197,70,0,0),
+(26914,2396,200,197,70,0,0),
+(26914,2397,200,197,60,0,0),
+(26914,2399,300,197,85,0,0),
+(26914,2401,300,197,95,0,0),
+(26914,2402,250,197,75,0,0),
+(26914,2406,200,197,100,0,0),
+(26914,2964,100,197,75,0,0),
+(26914,3755,100,197,45,0,0),
+(26914,3757,200,197,80,0,0),
+(26914,3813,800,197,150,0,0),
+(26914,3839,500,197,125,0,0),
+(26914,3840,100,197,35,0,0),
+(26914,3841,200,197,60,0,0),
+(26914,3842,300,197,70,0,0),
+(26914,3843,400,197,85,0,0),
+(26914,3845,300,197,80,0,0),
+(26914,3848,500,197,110,0,0),
+(26914,3850,500,197,110,0,0),
+(26914,3852,750,197,130,0,0),
+(26914,3855,750,197,125,0,0),
+(26914,3859,750,197,150,0,0),
+(26914,3861,1000,197,185,0,0),
+(26914,3865,1000,197,175,0,0),
+(26914,3866,250,197,110,0,0),
+(26914,3871,500,197,170,0,0),
+(26914,3911,10,0,0,0,0),
+(26914,3912,500,197,50,0,0),
+(26914,3913,5000,197,125,0,0),
+(26914,3914,50,197,30,0,0),
+(26914,6521,400,197,90,0,0),
+(26914,6690,1000,197,135,0,0),
+(26914,7623,50,197,30,0,0),
+(26914,7624,49,197,30,0,0),
+(26914,8465,49,197,40,0,0),
+(26914,8467,250,197,110,0,0),
+(26914,8483,500,197,160,0,0),
+(26914,8489,750,197,175,0,0),
+(26914,8758,600,197,140,0,0),
+(26914,8760,600,197,145,0,0),
+(26914,8762,750,197,160,0,0),
+(26914,8764,900,197,170,0,0),
+(26914,8766,1000,197,175,0,0),
+(26914,8770,1000,197,190,0,0),
+(26914,8772,1000,197,175,0,0),
+(26914,8774,1000,197,180,0,0),
+(26914,8776,50,197,15,0,0),
+(26914,8791,2500,197,185,0,0),
+(26914,8799,3000,197,195,0,0),
+(26914,8804,5000,197,210,0,0),
+(26914,12045,50,197,20,0,0),
+(26914,12046,300,197,75,0,0),
+(26914,12048,4000,197,205,0,0),
+(26914,12049,4000,197,205,0,0),
+(26914,12050,4000,197,210,0,0),
+(26914,12053,5000,197,215,0,0),
+(26914,12061,2500,197,215,0,0),
+(26914,12065,5000,197,225,0,0),
+(26914,12067,5000,197,225,0,0),
+(26914,12069,5000,197,225,0,0),
+(26914,12070,5000,197,225,0,0),
+(26914,12072,6000,197,230,0,0),
+(26914,12073,6000,197,230,0,0),
+(26914,12074,6000,197,230,0,0),
+(26914,12077,5000,197,235,0,0),
+(26914,12079,6500,197,235,0,0),
+(26914,12088,7500,197,245,0,0),
+(26914,12092,7500,197,250,0,0),
+(26914,12181,50000,197,200,0,0),
+(26914,18401,10000,197,250,0,0),
+(26914,18402,10000,197,255,0,0),
+(26914,18403,10000,197,255,0,0),
+(26914,18406,10000,197,260,0,0),
+(26914,18407,10000,197,260,0,0),
+(26914,18409,10000,197,265,0,0),
+(26914,18410,10000,197,265,0,0),
+(26914,18411,10000,197,265,0,0),
+(26914,18413,10000,197,270,0,0),
+(26914,18414,10000,197,270,0,0),
+(26914,18415,10000,197,270,0,0),
+(26914,18416,12500,197,275,0,0),
+(26914,18417,12500,197,275,0,0),
+(26914,18420,12500,197,275,0,0),
+(26914,18421,12500,197,275,0,0),
+(26914,18423,15000,197,280,0,0),
+(26914,18424,15000,197,280,0,0),
+(26914,18437,15000,197,285,0,0),
+(26914,18438,15000,197,285,0,0),
+(26914,18441,15000,197,290,0,0),
+(26914,18442,15000,197,290,0,0),
+(26914,18444,15000,197,295,0,0),
+(26914,18446,15000,197,300,0,0),
+(26914,18449,15000,197,300,0,0),
+(26914,18450,15000,197,300,0,0),
+(26914,18451,15000,197,300,0,0),
+(26914,18453,15000,197,300,0,0),
+(26914,26745,20000,197,300,0,0),
+(26914,26746,15000,197,315,0,0),
+(26914,26764,15000,197,310,0,0),
+(26914,26765,15000,197,310,0,0),
+(26914,26770,20000,197,320,0,0),
+(26914,26771,20000,197,325,0,0),
+(26914,26772,20000,197,335,0,0),
+(26914,26791,100000,197,275,0,0),
+(26914,31460,20000,197,300,0,0),
+(26914,51308,350000,197,350,0,0),
+(26914,55642,125000,197,420,0,0),
+(26914,55769,125000,197,420,0,0),
+(26914,55777,125000,197,420,0,0),
+(26914,55898,50000,197,360,0,0),
+(26914,55899,50000,197,350,0,0),
+(26914,55900,125000,197,400,0,0),
+(26914,55901,50000,197,395,0,0),
+(26914,55902,50000,197,350,0,0),
+(26914,55903,50000,197,360,0,0),
+(26914,55904,50000,197,360,0,0),
+(26914,55906,50000,197,375,0,0),
+(26914,55907,50000,197,380,0,0),
+(26914,55908,50000,197,370,0,0),
+(26914,55910,80000,197,385,0,0),
+(26914,55911,80000,197,390,0,0),
+(26914,55913,80000,197,385,0,0),
+(26914,55914,50000,197,395,0,0),
+(26914,55919,100000,197,395,0,0),
+(26914,55920,50000,197,400,0,0),
+(26914,55921,100000,197,405,0,0),
+(26914,55922,100000,197,405,0,0),
+(26914,55923,100000,197,410,0,0),
+(26914,55924,125000,197,410,0,0),
+(26914,55925,125000,197,415,0,0),
+(26914,55941,125000,197,420,0,0),
+(26914,55943,125000,197,415,0,0),
+(26914,55995,50000,197,400,0,0),
+(26914,56000,50000,197,400,0,0),
+(26914,56001,100000,197,415,0,0),
+(26914,56002,100000,197,415,0,0),
+(26914,56003,100000,197,415,0,0),
+(26914,56007,80000,197,410,0,0),
+(26914,56008,100000,197,400,0,0),
+(26914,56010,100000,197,400,0,0),
+(26914,56014,100000,197,390,0,0),
+(26914,56015,100000,197,395,0,0),
+(26914,56018,100000,197,425,0,0),
+(26914,56019,100000,197,420,0,0),
+(26914,56020,100000,197,420,0,0),
+(26914,56021,100000,197,425,0,0),
+(26914,56022,100000,197,420,0,0),
+(26914,56023,100000,197,420,0,0),
+(26914,56024,200000,197,440,0,0),
+(26914,56025,200000,197,435,0,0),
+(26914,56026,200000,197,440,0,0),
+(26914,56027,200000,197,435,0,0),
+(26914,56028,200000,197,440,0,0),
+(26914,56029,200000,197,435,0,0),
+(26914,56030,50000,197,380,0,0),
+(26914,56031,50000,197,350,0,0),
+(26914,56034,100000,197,405,0,0),
+(26914,56039,100000,197,405,0,0),
+(26914,59582,100000,197,415,0,0),
+(26914,59583,100000,197,415,0,0),
+(26914,59584,100000,197,420,0,0),
+(26914,59585,100000,197,420,0,0),
+(26914,59586,100000,197,420,0,0),
+(26914,59587,100000,197,420,0,0),
+(26914,59588,120000,197,420,0,0),
+(26914,59589,120000,197,420,0,0),
+(26914,60969,750000,197,340,0,0),
+(26914,60971,150000,197,425,0,0),
+(26914,60990,180000,197,420,0,0),
+(26914,60993,180000,197,425,0,0),
+(26914,60994,180000,197,420,0,0),
+(26914,63742,750,197,125,0,0),
+(26914,64729,100000,197,400,0,0),
+(26914,64730,100000,197,405,0,0);
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 26964, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 26914;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 26969, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 26914;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 27001, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 26914;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 28699, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 26914;
+INSERT INTO npc_trainer (entry, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id)  SELECT 33580, spell, spellcost, reqskill, reqskillvalue, reqlevel, condition_id FROM `npc_trainer` WHERE entry = 26914;
+#UPDATE creature_template SET NpcFlags = 1 WHERE entry IN (16746);
+#DELETE FROM gossip_menu WHERE entry IN(11048,11050,16639);
+#INSERT INTO gossip_menu(entry, text_id, script_id, condition_id) VALUES (11048,4268,0,0), (11050,4269,0,0), (16639,8829,0,0);
+
+UPDATE `gossip_menu_option` SET `box_money` = '100000' WHERE `menu_id` =3201 AND `id` =1;
+UPDATE `gossip_menu_option` SET `box_money` = '100000' WHERE `menu_id` =3202 AND `id` =1;
+UPDATE `npc_trainer` SET `spellcost` = '100000' WHERE `entry` =11146 AND `spell` =34547;
+UPDATE `npc_trainer` SET `spellcost` = '100000' WHERE `entry` =11178 AND `spell` =34547;
+
+UPDATE quest_template SET Objectives='Bring pages 18, 20, 21 and 24 of Nesingwary\'s The Green Hills of Stranglethorn to Barnil Stonepot in order to complete Chapter III.' WHERE entry = 341;
+UPDATE quest_template SET RequestItemsText='The brazier still reflects the ambient light from the area, and the flame shifts slightly as you move closer.$B$BThe corruption along the hills seems to have kept its distance, and besides the missing components, the brazier looks prepared for the ritual to summon a cleansed manifestation of water.' WHERE entry=63;
+UPDATE `creature_linking` SET `flag` = `flag`|128 where `master_guid` IN (SELECT `guid` FROM `creature` where `id` IN (14454,14457,14461,14464));
+UPDATE `game_event` SET `description` = 'Elemental Invasion: Water' WHERE `entry` = 77;
+UPDATE `gameobject` SET `spawntimesecsmin` = 300, `spawntimesecsmax` = 300, `animprogress` = 255 where `guid` IN (SELECT `guid` FROM `game_event_gameobject` where `event` = 13);
+UPDATE `gameobject` SET `spawntimesecsmin` = 300, `spawntimesecsmax` = 300, `animprogress` = 255 where `guid` IN (SELECT `guid` FROM `game_event_gameobject` where `event` = 75);
+UPDATE `gameobject` SET `spawntimesecsmin` = 300, `spawntimesecsmax` = 300, `animprogress` = 255 where `guid` IN (SELECT `guid` FROM `game_event_gameobject` where `event` = 76);
+UPDATE `gameobject` SET `spawntimesecsmin` = 300, `spawntimesecsmax` = 300, `animprogress` = 255 where `guid` IN (SELECT `guid` FROM `game_event_gameobject` where `event` = 77);
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 173234 AND `item` = 11614;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 176325 AND `item` = 11614;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 176327 AND `item` = 11614;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 173232 AND `item` = 11615;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 176325 AND `item` = 11615;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 176327 AND `item` = 11615;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 173232 AND `item` = 12827;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 173234 AND `item` = 12827;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 176327 AND `item` = 12827;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 173232 AND `item` = 12830;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 173234 AND `item` = 12830;
+DELETE FROM `gameobject_loot_template` WHERE `entry` = 176325 AND `item` = 12830;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = 100, `groupid` = '0' WHERE `entry` = 176327 AND `item` = 12830;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = 100, `groupid` = '0' WHERE `entry` = 176325 AND `item` = 12827;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = 100, `groupid` = '0' WHERE `entry` = 173234 AND `item` = 11615;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = 100, `groupid` = '0' WHERE `entry` = 173232 AND `item` = 11614;
+UPDATE `creature_template` SET `Scale` = 1 WHERE `entry` IN (14464,14461,14457,14454);
+UPDATE `creature` SET `position_x` = -5310.00, `position_y` = 610.82, `position_z` = 390.2687, `spawndist` = 3, `MovementType` = 1 WHERE `guid` = 95003 AND `id` = 8503;
+UPDATE `creature` SET `position_x` = -5070.83, `position_y` = 500.00, `position_z` = 401.4849, `spawndist` = 3, `MovementType` = 1 WHERE `guid` = 9181 AND `id` = 8503;
+UPDATE `creature_template` SET `SchoolImmuneMask` = 8, `MechanicImmuneMask` = 42090354, `SpeedWalk` = 1.55556, `SpeedRun` = 1.14286 WHERE `entry` = 14464;
+UPDATE `creature_template` SET `SpeedWalk` = 1, `SchoolImmuneMask` = 8, `SpeedWalk` = 1.55556, `SpeedRun` = 1.14286 WHERE `entry` = 14462;
+UPDATE `creature_template` SET `SchoolImmuneMask` = 4, `MechanicImmuneMask` = 42090354, `SpeedWalk` = 1, `SpeedRun` = 0.992063 WHERE `entry` = 14461;
+UPDATE `creature_template` SET `SchoolImmuneMask` = 4, `SpeedWalk` = 1, `SpeedRun` = 0.992063 WHERE `entry` = 14460;
+UPDATE `creature_template` SET `Faction` = 91, `SchoolImmuneMask` = 16, `MechanicImmuneMask` = 42090354, `SpeedWalk` = 1.55556, `SpeedRun` = 1.14286 WHERE `entry` = 14457;
+UPDATE `creature_template` SET `SchoolImmuneMask` = 16, `InhabitType` = 3, `SpeedWalk` = 1.55556, `SpeedRun` = 1.14286 WHERE `entry` = 14458;
+UPDATE `creature_template` SET `SchoolImmuneMask` = 8, `MechanicImmuneMask` = 42090354, `SpeedWalk` = 1, `SpeedRun` = 1.14286 WHERE `entry` = 14454;
+UPDATE `creature_template` SET `SchoolImmuneMask` = 8, `SpeedWalk` = 1, `SpeedRun` = 1.14286 WHERE `entry` = 14455;
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
