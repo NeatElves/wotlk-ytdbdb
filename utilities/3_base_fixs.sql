@@ -38,3 +38,8 @@ INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalon
 (9007, 3000, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -6190.68, -1099.47, -215.189, 0, 0, 0, 'Bloodpetal Pest - Move'),
 (9007, 9000, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -6202.63, -1114.64, -220.1, 0, 0, 0, 'Bloodpetal Pest - Move'),
 (9007, 12000, 0, 20, 1, 20, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bloodpetal Pest - MovementType 1 and Spawndist 20');
+
+/* FELWOOD */
+UPDATE creature_template SET ScriptName='' WHERE entry=14469;
+UPDATE creature_template SET ScriptName='' WHERE entry=14467;
+DELETE FROM `scripted_event_id` WHERE `id` = 8328;

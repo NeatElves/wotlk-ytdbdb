@@ -3191,6 +3191,17 @@ UPDATE `broadcast_text` SET `EmoteId1` = 5 WHERE `ID` IN (737, 738);
 UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 9660;
 UPDATE `broadcast_text` SET `ChatTypeID` = 7 WHERE `Id` = 9669;
 
+-- chat corrections
+UPDATE `broadcast_text` SET `ChatTypeID`=1, EmoteID1 = 15 WHERE `Id`IN (28126,28124,28123);
+
+UPDATE `broadcast_text` SET `ChatTypeID`=4 WHERE `Id` IN (28431);
+
+-- q.12684 'Blood of a Dead God'
+UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` IN (28831);
+
+-- Prophet of Har'koa 28848
+UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` BETWEEN 28948 AND 28951;
+
 -- text
 # 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
