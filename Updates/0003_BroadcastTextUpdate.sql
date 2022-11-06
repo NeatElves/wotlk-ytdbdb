@@ -3202,6 +3202,9 @@ UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` IN (28831);
 -- Prophet of Har'koa 28848
 UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` BETWEEN 28948 AND 28951;
 
+-- q.9587 'Dark Tidings'
+UPDATE `broadcast_text` SET `ChatTypeID`= 4 WHERE `Id` IN (46545);
+
 -- text
 # 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
