@@ -3157,28 +3157,39 @@ UPDATE `broadcast_text` SET `ChatTypeID`='1' WHERE `Id`='4531'; -- No!  You must
 UPDATE `broadcast_text` SET `ChatTypeID`='1' WHERE `Id`='5430'; -- Emperor Thaurissan does not wish to be disturbed! Turn back now or face your doom, weak mortals! - https://wowpedia.fandom.com/wiki/Magmus
 UPDATE `broadcast_text` SET `EmoteID1`='2' WHERE `Id`='9346'; -- $N, I'll make sure all my friends in the Cartel know that you've saved my life today.  Here - I'm going to need to be able to travel light, so please help yourself to my cache of tailoring and leatherworking supplies!  Thanks again - see ya!
 
+-- Un'Goro
+-- add Bloodpetal Pest infestation event - Muigin 9119
 UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` IN (4967,4969);
 
+-- 0493_demonaic_visitation_whisper.sql
 UPDATE broadcast_text SET ChatTypeID=4 WHERE Id = 20154;
 
+-- Urok Doomhowl 10584 - Update
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` = 5832;
 
+-- Quest Kroshius Infernal Core
 UPDATE `broadcast_text` SET `ChatTypeID`='1' WHERE (`Id`='9633');
 UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='9636');
 UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='9618');
 
+-- Disciple of Naralex should have a small Detection
 UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='1265');
 UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='1268');
 UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='1269');
 UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='1270');
 
-UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` = 27674; -- Yell
+-- q.12555 'A Tangled Skein'
+-- Malas the Corrupter 28255
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` = 27674;
 
+-- q.12584 'Pure Evil'
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (27760,27776,27784,27789);
 
+-- q.12541 'Troll Patrol: The Alchemist's Apprentice'
 UPDATE broadcast_text SET ChatTypeId = 5 WHERE Id IN (27630,27631,27632,27633,27634,27635,27636,27637,27677,27678,27679,27680,27681,27682,27683,27684,27685,27686,
 27687,27688,27690,27647,27648,27649,27650,27651,27652,27653,27654,27655,27656,27657,27658,27659,27660,27661,27662,27663,27664,27665,27666,27667,27668);
 
+-- Gryan Stoutmantle, Protector Gariel, Protector Bialon, Captain Danuvin & Barkeep Hann
 UPDATE `broadcast_text` SET `EmoteId1` = 1 WHERE `ID` IN (39, 40, 44);
 UPDATE `broadcast_text` SET `EmoteId1` = 1 WHERE `ID` = 41;
 UPDATE `broadcast_text` SET `EmoteId1` = 1 WHERE `ID` = 42;
@@ -3205,6 +3216,16 @@ UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` BETWEEN 28948 AND 28951;
 -- q.9587 'Dark Tidings'
 UPDATE `broadcast_text` SET `ChatTypeID`= 4 WHERE `Id` IN (46545);
 
+-- q.13375 'The Heroic Key to the Focusing Iris'
+UPDATE `broadcast_text` SET `ChatTypeID`= 4 WHERE `Id` IN (32910);
+
+-- q.11969 'Springing the Trap'
+UPDATE `broadcast_text` SET `ChatTypeID`= 4 WHERE `Id` IN (25473);
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (25475,25477);
+
+-- q.11640 'Words of Power'
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (24586);
+
 -- text
-# 4139_TDB-0206_betrayed.sql
+-- 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
