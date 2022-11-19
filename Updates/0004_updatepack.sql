@@ -21601,11 +21601,759 @@ INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`,
 
 DELETE FROM dbscripts_on_gossip WHERE id IN (1027300);
 INSERT INTO dbscripts_on_gossip (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
-('1027300','0','0','15','62110','1','0','0','0','8','0','0','0','0','0','0','0','0','0','cast Tails Up: Gender Master (triggered)');
+('1027300','0','0','15','62110','0','0','0','0','0','0','0','0','0','0','0','0','0','0','cast Tails Up: Gender Master (triggered)');
 UPDATE creature_template SET UnitFlags = 768, minLevel = 76, maxLevel = 77, MinLevelHealth = 11001, MaxLevelHealth = 11379 WHERE entry IN (33010,33011);
 
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10', `groupid` = '12' WHERE `item` =6986;
 UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10', `groupid` = '9' WHERE `item` =22578;
 UPDATE `gameobject_loot_template` SET `groupid` = '13' WHERE `item` IN (18240,12938,11184,1708,8153,8838,11185,12938,22574,22786,22832,49908,3356,11018,11188,11185,29443,8836);
+
+UPDATE `gameobject_template` SET `data8`=1 WHERE `entry` IN (12653,178324,186471,195304,175328,160462);
+
+INSERT INTO gossip_menu (entry, text_id, script_id, condition_id) VALUES (9715, 13293, 0, 2948);
+REPLACE INTO conditions (condition_entry, type, value1, value2, value3, value4, flags) VALUES (1286, 8, 12647, 0, 0, 0, 1), (2948, -1, 1286, 994, 574, 0, 0);
+DELETE FROM gossip_menu_option WHERE menu_id IN (9715);
+INSERT INTO gossip_menu_option (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+('9715','0','0','Rhunok, I need to be reimbued with your mojo.','28537','1','1','9716','0','971501','0','0',NULL,'0','2948');
+DELETE FROM dbscripts_on_gossip WHERE id = 971500;
+DELETE FROM dbscripts_on_gossip WHERE id = 971501;
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(971501,1,15,51968,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast 51968');
+
+UPDATE `creature_template` SET `MinLootGold`=0, `MaxLootGold`=0 WHERE `entry` IN (8932, 9683, 10177, 10717, 15749, 15808, 15811, 16194, 16215, 16216);
+
+UPDATE `item_template` SET `minMoneyLoot` = 100, `maxMoneyLoot` = 1000 WHERE `entry` = 20766;
+UPDATE `item_template` SET `minMoneyLoot` = 500, `maxMoneyLoot` = 1500 WHERE `entry` = 20767;
+INSERT INTO `item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES ('20767', '7975', '2', '0', '-7975', '1', '0', '');
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '75' WHERE `entry` =20767 AND `item` =765;
+UPDATE `item_loot_template` SET `groupid` = '2' WHERE `entry` =20766 AND `item` =929;
+UPDATE `item_loot_template` SET `groupid` = '2' WHERE `entry` =20766 AND `item` =1710;
+UPDATE `item_template` SET `minMoneyLoot` = 1000, `maxMoneyLoot` = 2500 WHERE `entry` = 20768;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '15' WHERE `entry` =20768 AND `item` =774;
+INSERT INTO `item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES ('20768', '7975', '5', '0', '-7975', '1', '0', '');
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 765;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 785;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 1529;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 1705;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 2447;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 2449;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 2450;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 2452;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 2453;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 3356;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 3357;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 3818;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 3864;
+DELETE FROM `item_loot_template` WHERE `entry` = 20766 AND `item` = 7909;
+INSERT INTO `item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES ('20766', '765', '50', '0', '-765', '1', '0', '');
+INSERT INTO `item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES ('20766', '774', '5', '0', '-774', '1', '0', '');
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES ('16243', '20768', '15', '0', '1', '1', '0', '');
+
+UPDATE `gossip_menu_option` SET `action_script_id` = 968701, `condition_id` = 2950 WHERE `menu_id` = 9687;
+INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4, flags) VALUES  (2949, 8, 12665, 0, 0, 0, 1), (2950, -1, 2949, 575, 0, 0, 0);
+DELETE FROM dbscripts_on_gossip WHERE id = 968700;
+DELETE FROM dbscripts_on_gossip WHERE id = 968701;
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(968701,1,15,52187,0,0,0,0,6,0,0,0,0,0,0,0,0,'cast 52187');
+UPDATE creature_template SET SpeedRun = 2, UnitFlags = 33288, minLevel = 77, maxLevel = 77, MinLevelHealth = 11379, MaxLevelHealth = 11379, MovementType = 0 WHERE entry = 28665;
+DELETE FROM creature_movement_template WHERE entry = 28665;
+INSERT INTO `creature_movement_template` (`entry`, `pathid`, `point`,`positionx`,`positiony`,`positionz`,`waittime`,`scriptid`,`orientation`) VALUES
+(28665,1,1,5335.9814,-3770.708,371.66745,0,0,100),
+(28665,1,2,5343.4814,-3763.958,373.16745,0,0,100),
+(28665,1,3,5348.4814,-3759.458,370.41745,0,0,100),
+(28665,1,4,5355.4814,-3753.458,365.16745,0,0,100),
+(28665,1,5,5361.2314,-3749.208,361.16745,0,0,100),
+(28665,1,6,5385.9814,-3755.958,360.41745,0,0,100),
+(28665,1,7,5390.7314,-3760.708,362.41745,0,0,100),
+(28665,1,8,5409.9814,-3779.708,362.41745,0,0,100),
+(28665,1,9,5457.9814,-3784.708,363.41745,0,0,100),
+(28665,1,10,5464.7314,-3785.458,362.91745,0,0,100),
+(28665,1,11,5485.4814,-3791.958,360.16745,0,0,100),
+(28665,1,12,5521.4814,-3826.208,360.91745,0,0,100),
+(28665,1,13,5536.4814,-3841.708,372.41745,0,0,100),
+(28665,1,14,5574.9814,-3862.458,372.16745,0,0,100),
+(28665,1,15,5620.9814,-3882.208,372.16745,0,0,100),
+(28665,1,16,5655.4814,-3873.958,372.16745,0,0,100),
+(28665,1,17,5669.4814,-3878.958,373.91745,0,0,100),
+(28665,1,18,5697.4814,-3886.458,373.91745,0,0,100),
+(28665,1,19,5704.9814,-3890.458,373.41745,0,0,100),
+(28665,1,20,5714.7314,-3915.708,372.16745,0,0,100),
+(28665,1,21,5714.566,-3945.8325,371.9868,1,11,100),
+(28665,1,22,5717.133,-3981.728,372.51672,0,0,100),
+(28665,1,23,5718.133,-4018.978,372.51672,0,0,100),
+(28665,1,24,5717.883,-4035.478,363.76672,0,0,100),
+(28665,1,25,5717.633,-4051.978,355.01672,0,0,100),
+(28665,1,26,5716.633,-4085.478,353.51672,0,0,100),
+(28665,1,27,5716.133,-4126.478,354.01672,0,0,100),
+(28665,1,28,5716.383,-4163.478,354.26672,0,0,100),
+(28665,1,29,5716.383,-4188.478,354.51672,0,0,100),
+(28665,1,30,5717.133,-4196.978,359.01672,0,0,100),
+(28665,1,31,5717.633,-4205.478,363.26672,0,0,100),
+(28665,1,32,5724.633,-4238.478,364.01672,0,0,100),
+(28665,1,33,5724.883,-4248.228,369.51672,0,0,100),
+(28665,1,34,5724.883,-4257.978,374.76672,0,0,100),
+(28665,1,35,5723.633,-4282.728,374.51672,0,0,100),
+(28665,1,36,5721.633,-4331.978,375.26672,0,0,100),
+(28665,1,37,5721.883,-4341.228,380.01672,0,0,100),
+(28665,1,38,5722.2,-4351.6235,385.54483,1,12,100),
+(28665,1,39,5724.6978,-4361.0396,386.161,0,0,100),
+(28665,1,40,5731.4478,-4376.2896,386.411,0,0,100),
+(28665,1,41,5722.6978,-4386.7896,386.661,0,0,100),
+(28665,1,42,5708.1953,-4386.4556,385.8015,1,0,100),
+(28665,1,43,5702.7964,-4375.8423,385.8015,1,2866503,100),
+(28665,1,44,5714.0103,-4356.6357,385.89438,0,2866501,100),
+(28665,1,45,5714.5103,-4351.3857,385.64438,0,0,100),
+(28665,1,46,5714.5103,-4342.6357,380.89438,0,0,100),
+(28665,1,47,5714.7603,-4332.3857,375.39438,0,0,100),
+(28665,1,48,5712.0103,-4321.1357,374.39438,0,0,100),
+(28665,1,49,5708.2603,-4307.6357,374.39438,0,0,100),
+(28665,1,50,5707.7603,-4257.8857,374.89438,0,0,100),
+(28665,1,51,5709.2603,-4247.6357,369.14438,0,0,100),
+(28665,1,52,5711.0103,-4238.3857,363.89438,0,0,100),
+(28665,1,53,5713.5103,-4204.8857,363.14438,0,0,100),
+(28665,1,54,5713.5103,-4188.8857,354.64438,0,0,100),
+(28665,1,55,5713.5103,-4163.3857,353.89438,0,0,100),
+(28665,1,56,5713.0103,-4126.8857,354.14438,0,0,100),
+(28665,1,57,5713.2603,-4101.8857,353.64438,0,0,100),
+(28665,1,58,5714.0103,-4052.8857,354.64438,0,0,100),
+(28665,1,59,5713.7603,-4039.1357,361.89438,0,0,100),
+(28665,1,60,5713.7603,-4022.6357,371.14438,0,0,100),
+(28665,1,61,5713.7603,-4017.8857,372.39438,0,0,100),
+(28665,1,62,5713.5757,-3946.7046,372.04205,1,0,100),
+(28665,1,63,5713.8257,-3920.9546,372.04205,0,0,100),
+(28665,1,64,5713.8257,-3888.7046,372.04205,0,0,100),
+(28665,1,65,5709.5757,-3860.2046,372.04205,0,0,100),
+(28665,1,66,5699.0757,-3837.2046,372.04205,0,0,100),
+(28665,1,67,5683.8257,-3823.4546,373.04205,1,2866502,100);
+INSERT INTO `creature_movement_template` (`entry`, `pathid`, `point`,`positionx`,`positiony`,`positionz`,`waittime`,`scriptid`,`orientation`) VALUES
+(28665,2,1,5601.4917,-3796.567,363.46884,1,14,100),
+(28665,2,2,5583.9917,-3793.067,366.21884,0,0,100),
+(28665,2,3,5577.2417,-3792.817,366.71884,0,0,100),
+(28665,2,4,5567.2417,-3792.817,365.46884,0,0,100),
+(28665,2,5,5551.7417,-3793.067,362.46884,0,0,100),
+(28665,2,6,5540.2417,-3794.067,362.96884,0,0,100),
+(28665,2,7,5528.4917,-3795.067,360.96884,0,0,100),
+(28665,2,8,5514.2417,-3792.567,359.96884,0,0,100),
+(28665,2,9,5465.7417,-3784.317,362.71884,0,0,100),
+(28665,2,10,5453.2417,-3784.567,362.96884,0,0,100),
+(28665,2,11,5437.2417,-3780.567,362.46884,0,0,100),
+(28665,2,12,5391.7417,-3760.817,362.71884,0,0,100),
+(28665,2,13,5386.2417,-3756.317,360.96884,0,0,100),
+(28665,2,14,5360.2417,-3749.817,361.96884,0,0,100),
+(28665,2,15,5344.9917,-3764.317,373.21884,0,0,100),
+(28665,2,16,5328.556,-3779.1536,371.33997,3000,15,100);
+DELETE FROM dbscripts_on_creature_movement WHERE id = 2866501;
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(2866501,1,0,0,0,0,28671,50,7,28663,0,0,0,0,0,0,0,'');
+DELETE FROM dbscripts_on_creature_movement WHERE id = 2866502;
+INSERT INTO dbscripts_on_creature_movement(id,delay,priority,command,datalong,datalong2,datalong3,buddy_entry,search_radius,data_flags,dataint,dataint2,dataint3,dataint4,datafloat,x,y,z,o,speed,condition_id,comments) VALUES
+(2866502,0,0,20,15,20701,0,0,0,0,0,0,0,0,19.3,5649.4272,-3802.48,364.59714,0,35,0,'Har\'koa\'s Kitten - Jump');
+DELETE FROM dbscripts_on_creature_movement WHERE id = 2866503;
+INSERT INTO dbscripts_on_creature_movement(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(2866503,0,0,25,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Set run ON'),
+(2866503,0,0,16,643,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Play Distance Sound'),
+(2866503,0,0,35,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Send AI Event 8 to Self');
+DELETE FROM dbscripts_on_relay WHERE id = 20701;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20701,0,20,2,2,0,0,0,4,0,0,0,0,0,0,0,0,'');
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 29327);
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (29327));
+DELETE FROM `creature` WHERE `id` IN (29327);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(119457, 29327, 571, 1, 1, 0, 0, 5593.16, -3750.46, 364.337, 5.44416, 300, 300, 5, 0, 0, 0, 0, 1),
+(119458, 29327, 571, 1, 1, 0, 0, 5547.1, -3649.3, 365.146, 0.993357, 300, 300, 5, 0, 0, 0, 0, 1),
+(119459, 29327, 571, 1, 1, 0, 0, 5214.88, -4345.12, 385.838, 3.06145, 300, 300, 5, 0, 0, 0, 0, 1),
+(119460, 29327, 571, 1, 1, 0, 0, 5512.09, -4482.01, 371.302, 5.48327, 300, 300, 5, 0, 0, 0, 0, 1),
+(119461, 29327, 571, 1, 1, 0, 0, 5662.86, -3728.71, 363.257, 3.31279, 300, 300, 5, 0, 0, 0, 0, 1),
+(119462, 29327, 571, 1, 1, 0, 0, 5606.25, -3679.91, 364.702, 4.51505, 300, 300, 5, 0, 0, 0, 0, 1),
+(119463, 29327, 571, 1, 1, 0, 0, 5453.14, -3518.56, 363.342, 4.75533, 300, 300, 5, 0, 0, 0, 0, 1),
+(119464, 29327, 571, 1, 1, 0, 0, 5498.12, -4214.31, 363.927, 0.246637, 300, 300, 5, 0, 0, 0, 0, 1),
+(119465, 29327, 571, 1, 1, 0, 0, 5639.97, -3679.41, 365.578, 2.56547, 300, 300, 0, 0, 0, 0, 0, 0),
+(119466, 29327, 571, 1, 1, 0, 0, 5348.23, -4449.57, 391.219, 1.89156, 300, 300, 0, 0, 0, 0, 0, 0),
+(50747, 29327, 571, 1, 1, 0, 0, 5250, -4416.67, 398.079, 3.56886, 300, 300, 0, 0, 0, 0, 0, 0),
+(50788, 29327, 571, 1, 1, 0, 0, 5452.55, -4459.35, 379.196, 5.59359, 300, 300, 5, 0, 0, 0, 0, 1),
+(50789, 29327, 571, 1, 1, 0, 0, 5520.05, -4370.01, 368.073, 1.77571, 300, 300, 0, 0, 0, 0, 0, 0),
+(50790, 29327, 571, 1, 1, 0, 0, 5430.76, -4138.55, 362.77, 2.59045, 300, 300, 5, 0, 0, 0, 0, 1),
+(50791, 29327, 571, 1, 1, 0, 0, 5523.86, -4309.18, 365.66, 3.99884, 300, 300, 5, 0, 0, 0, 0, 1),
+(50792, 29327, 571, 1, 1, 0, 0, 5442.5, -4342.29, 364.582, 3.75991, 300, 300, 5, 0, 0, 0, 0, 1),
+(50793, 29327, 571, 1, 1, 0, 0, 5457.7, -4249.95, 364.255, 0.237351, 300, 300, 5, 0, 0, 0, 0, 1),
+(50794, 29327, 571, 1, 1, 0, 0, 5427.67, -4399.88, 369.612, 5.04575, 300, 300, 0, 0, 0, 0, 0, 0),
+(50795, 29327, 571, 1, 1, 0, 0, 5319.9, -4346.18, 372.282, 1.73075, 300, 300, 0, 0, 0, 0, 0, 0),
+(50796, 29327, 571, 1, 1, 0, 0, 5247.32, -4238.53, 361.805, 3.95314, 300, 300, 0, 0, 0, 0, 0, 0),
+(50797, 29327, 571, 1, 1, 0, 0, 5146.33, -4197.77, 347.672, 2.57363, 300, 300, 0, 0, 0, 0, 0, 0),
+(50798, 29327, 571, 1, 1, 0, 0, 5250.03, -4221.88, 360.781, 4.64111, 300, 300, 0, 0, 0, 0, 0, 0),
+(50799, 29327, 571, 1, 1, 0, 0, 5161.89, -4178, 352.226, 0.982794, 300, 300, 5, 0, 0, 0, 0, 1),
+(50800, 29327, 571, 1, 1, 0, 0, 5459.98, -3566.24, 363.863, 0.800315, 300, 300, 0, 0, 0, 0, 0, 0),
+(50801, 29327, 571, 1, 1, 0, 0, 5406.48, -3542, 365.608, 0.169599, 300, 300, 5, 0, 0, 0, 0, 1),
+(50802, 29327, 571, 1, 1, 0, 0, 5617.67, -3647.22, 362.425, 5.53734, 300, 300, 5, 0, 0, 0, 0, 1),
+(50803, 29327, 571, 1, 1, 0, 0, 5512.12, -3605.94, 363.684, 0.887816, 300, 300, 5, 0, 0, 0, 0, 1),
+(39826, 29327, 571, 1, 1, 0, 0, 5516.47, -3547.34, 363.856, 4.47633, 300, 300, 5, 0, 0, 0, 0, 1);
+
+UPDATE creature set MovementType = 3 WHERE id = 24637 AND MovementType = 2;
+UPDATE gameobject set spawntimesecsmin = 120, spawntimesecsmax = 120 WHERE guid = 72620;
+DELETE FROM `spawn_group` WHERE id = 30014;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (30014, 'Howling Fjord - Garvans Reef - o.187117 spawn for Ship `Sisters Mercy`', 1, 0, 20514, 0x08);
+DELETE FROM `spawn_group_spawn` WHERE id = 30014;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (30014, 72620, -1);
+DELETE FROM conditions WHERE condition_entry IN (20514);
+INSERT INTO conditions (condition_entry, `type`, value1, value2, value3, flags, comments) VALUES (20514, 42, 30014, 0, 1, 0, 'Howling Fjord - Garvans Reef - o.187117 spawn for Ship `Sisters Mercy`');
+DELETE FROM worldstate_name WHERE Id=30014;
+INSERT INTO worldstate_name(Id, Name) VALUES (30014,'Howling Fjord - Garvans Reef - o.187117 spawn for Ship `Sisters Mercy`');
+DELETE FROM `dbscripts_on_event` WHERE id IN (16522,16523);
+INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(16522,0,53,0,0,0,0,0,0,30014,1,0,0,0,0,0,0,'Set worldstate variable to 1'), (16523,0,53,0,0,0,0,0,0,30014,0,0,0,0,0,0,0,'Set worldstate variable to 0');
+
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 28597);
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28597));
+DELETE FROM `creature` WHERE `id` IN (28597);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(119213, 28597, 571, 1, 1, 0, 0, 6202.72, -3688.32, 390.184, 4.83456, 300, 300, 0, 0, 0, 0, 0, 0),
+(50804, 28597, 571, 1, 1, 0, 0, 6197.21, -3736.1, 372.286, 3.35911, 300, 300, 0, 0, 0, 0, 0, 4),
+(50805, 28597, 571, 1, 1, 0, 0, 6025.19, -3548.77, 363.669, 1.8747, 300, 300, 0, 0, 0, 0, 0, 4),
+(119313, 28597, 571, 1, 1, 0, 0, 6258.18, -3570.17, 383.772, 3.44491, 300, 300, 5, 0, 0, 0, 0, 1),
+(119314, 28597, 571, 1, 1, 0, 0, 6179.76, -3489.24, 383.078, 2.45861, 300, 300, 5, 0, 0, 0, 0, 1),
+(119315, 28597, 571, 1, 1, 0, 0, 6194.93, -3627.83, 383.788, 4.76161, 300, 300, 5, 0, 0, 0, 0, 1),
+(119316, 28597, 571, 1, 1, 0, 0, 6271.63, -3627.09, 383.816, 5.49779, 300, 300, 0, 0, 0, 0, 0, 0),
+(50806, 28597, 571, 1, 1, 0, 0, 6239.18, -3595.82, 383.772, 3.94901, 300, 300, 0, 0, 0, 0, 0, 2),
+(50807, 28597, 571, 1, 1, 0, 0, 6336.01, -3533.88, 375.485, 5.49873, 300, 300, 0, 0, 0, 0, 0, 4),
+(119317, 28597, 571, 1, 1, 0, 0, 6117.57, -3510.11, 384.587, 2.44346, 300, 300, 0, 0, 0, 0, 0, 0),
+(119318, 28597, 571, 1, 1, 0, 0, 6307.91, -3569.64, 389.926, 0.087266, 300, 300, 0, 0, 0, 0, 0, 0),
+(119319, 28597, 571, 1, 1, 0, 0, 6074.51, -3566.35, 385.174, 3.08923, 300, 300, 0, 0, 0, 0, 0, 0),
+(119320, 28597, 571, 1, 1, 0, 0, 6121.78, -3559.8, 383.96, 3.46037, 300, 300, 5, 0, 0, 0, 0, 1);
+INSERT INTO creature_movement (`id`,`point`,`positionx`,`positiony`,`positionz`,`orientation`,`waittime`,`scriptid`) VALUES
+(50804,1,6197.211,-3736.0955,372.28638,100,0,0),
+(50804,2,6234.336,-3728.049,370.1647,100,0,0),
+(50804,3,6276.447,-3711.085,374.6218,100,0,0),
+(50804,4,6306.909,-3690.852,371.9546,100,0,0),
+(50804,5,6331.018,-3660.56,374.7492,100,0,0),
+(50804,6,6335.969,-3616.691,380.8981,100,0,0),
+(50805,1,6025.194,-3548.775,363.6685,100,0,0),
+(50805,2,6038.44,-3590.656,367.2963,100,0,0),
+(50805,3,6065.051,-3616.845,365.2488,100,0,0),
+(50805,4,6087.592,-3645.4,366.4315,100,0,0),
+(50805,5,6103.399,-3666.6423,367.98697,100,0,0),
+(50806,1,6239.182,-3595.82,383.7724,100,0,0),
+(50806,2,6222.652,-3613.585,383.8542,100,0,0),
+(50806,3,6207.995,-3626.214,383.8542,100,0,0),
+(50806,4,6189.559,-3629.0078,383.85425,100,0,0),
+(50806,5,6176.777,-3615.374,383.85425,100,0,0),
+(50806,6,6161.248,-3598.873,383.8542,100,0,0),
+(50806,7,6147.965,-3584.607,383.8542,100,0,0),
+(50806,8,6134.771,-3570.918,383.7976,100,0,0),
+(50806,9,6130.83,-3551.097,383.8542,100,0,0),
+(50806,10,6142.182,-3534.96,383.8542,100,0,0),
+(50806,11,6153.19,-3522.899,383.8542,100,0,0),
+(50806,12,6168.383,-3506.912,383.8483,100,0,0),
+(50806,13,6195.092,-3506.062,383.8483,100,0,0),
+(50806,14,6213.455,-3521.616,383.7304,100,0,0),
+(50806,15,6227.168,-3536.413,384.1054,100,0,0),
+(50806,16,6249.348,-3560.03,383.7304,100,0,0),
+(50806,17,6253.115,-3581.26,383.7724,100,0,0),
+(50807,1,6330.822,-3593.243,379.47,100,0,0),
+(50807,2,6353.509,-3555.013,377.9852,100,0,0),
+(50807,3,6336.011,-3533.885,375.4852,100,0,0),
+(50807,4,6313.791,-3511.69,376.031,100,0,0);
+
+UPDATE creature SET position_x = -3802.68, position_y = -1847.32, position_z = 94.3483, spawndist = 0, MovementType = 0 WHERE guid = 29623;
+UPDATE creature SET position_x = -3799.06, position_y = -1842.58, position_z = 94.4779, spawndist = 0, MovementType = 0 WHERE guid = 29450;
+UPDATE creature SET position_x = -3808.37, position_y = -1846.71, position_z = 94.2435, spawndist = 0, MovementType = 0 WHERE guid = 30360;
+UPDATE creature SET position_x = -3805.65, position_y = -1841.24, position_z = 94.4038, spawndist = 0, MovementType = 0 WHERE guid = 28856;
+DELETE FROM creature_movement WHERE id IN (29623,29450,30360,28856);
+DELETE FROM creature_linking WHERE master_guid = 28856;
+DELETE FROM creature_spawn_entry WHERE guid IN (29623,29450,30360,28856);
+INSERT INTO creature_spawn_entry (guid,entry) VALUES (29623,3235),(29623,3236),(29623,3237), (29450,3235),(29450,3236),(29450,3237), (30360,3235),(30360,3236),(30360,3237), (28856,3235),(28856,3236),(28856,3237);
+UPDATE creature SET id = 0 WHERE guid IN (29623,29450,30360,28856);
+DELETE FROM `spawn_group` WHERE id = 19995;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (19995, 'Barrens - 4 Random Kodos - Patrol - 1', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 19995;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (19995, 29623, 0), (19995, 29450, 1), (19995, 30360, 2), (19995, 28856, 3);
+DELETE FROM `spawn_group_formation` WHERE id = 19995;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(19995, 4, 10, 0, 19995, 4, 'Barrens - 4 Random Kodos - Patrol - 1');
+DELETE FROM `waypoint_path_name` WHERE PathId = 19995;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (19995,'Barrens - 4 Random Kodos - Patrol - 1');
+DELETE FROM `waypoint_path` WHERE PathId = 19995;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(19995,1,-3802.9849,-1847.3167,94.4449,100,0,0),
+(19995,2,-3780.6667,-1879.9966,94.51902,100,0,0),
+(19995,3,-3765.317,-1912.2642,92.659584,100,0,0),
+(19995,4,-3743.7683,-1944.3379,93.25019,100,0,0),
+(19995,5,-3718.9587,-1949.9241,94.24338,100,0,0),
+(19995,6,-3674.7666,-1972.0784,92.34276,100,0,0),
+(19995,7,-3633.491,-1962.7506,91.96043,100,0,0),
+(19995,8,-3604.3447,-1934.8683,93.6461,100,0,0),
+(19995,9,-3574.0989,-1917.8884,94.641045,100,0,0),
+(19995,10,-3543.6143,-1922.9417,93.78076,100,0,0),
+(19995,11,-3514.391,-1891.8881,96.05839,100,0,0),
+(19995,12,-3482.7354,-1879.4718,95.54532,100,0,0),
+(19995,13,-3447.3694,-1879.2826,94.04059,100,0,0),
+(19995,14,-3419.4883,-1883.6552,93.07612,100,0,0),
+(19995,15,-3401.6602,-1915.7799,93.66566,100,0,0),
+(19995,16,-3377.1729,-1946.9575,91.91544,100,0,0),
+(19995,17,-3359.4075,-1987.9889,93.354164,100,0,0),
+(19995,18,-3351.847,-2020.0239,93.34684,100,0,0),
+(19995,19,-3347.3481,-2061.3584,96.55564,100,0,0),
+(19995,20,-3337.5916,-2084.593,91.86515,100,0,0),
+(19995,21,-3305.2717,-2097.2861,91.791664,100,0,0),
+(19995,22,-3264.5898,-2110.5752,93.58816,100,0,0),
+(19995,23,-3221.6958,-2091.54,92.918495,100,0,0),
+(19995,24,-3175.735,-2081.8813,91.791664,100,0,0),
+(19995,25,-3131.3293,-2093.495,91.81647,100,0,0),
+(19995,26,-3093.5208,-2117.2578,93.19572,100,0,0),
+(19995,27,-3050.1245,-2119.8708,93.09464,100,0,0),
+(19995,28,-3005.5127,-2109.9685,92.291664,100,0,0),
+(19995,29,-2967.4277,-2095.7334,91.791664,100,0,0),
+(19995,30,-2936.955,-2117.254,91.791664,100,0,0),
+(19995,31,-2908.1777,-2144.7766,93.2714,100,0,0),
+(19995,32,-2871.219,-2160.007,92.05509,100,0,0),
+(19995,33,-2853.049,-2161.5356,91.791664,100,0,0),
+(19995,34,-2835.0942,-2182.703,95.2443,100,0,0),
+(19995,35,-2795.9773,-2209.954,95.784584,100,0,0),
+(19995,36,-2758.5547,-2238.7458,92.954506,100,0,0),
+(19995,37,-2721.4429,-2257.816,91.791664,100,0,0),
+(19995,38,-2681.0037,-2258.5547,91.95255,100,0,0),
+(19995,39,-2673.5525,-2282.2383,91.791664,100,0,0),
+(19995,40,-2647.4885,-2312.194,92.01603,100,0,0),
+(19995,41,-2624.1008,-2319.0713,92.736,100,0,0),
+(19995,42,-2583.4438,-2317.825,91.791664,100,0,0),
+(19995,43,-2553.0298,-2291.6404,93.56666,100,0,0),
+(19995,44,-2522.4128,-2288.3354,95.39027,100,0,0),
+(19995,45,-2480.3079,-2292.0088,94.91757,100,0,0),
+(19995,46,-2440.1282,-2314.39,94.61803,100,0,0),
+(19995,47,-2414.875,-2342.5525,91.83561,100,0,0),
+(19995,48,-2396.1902,-2380.3955,91.791664,100,0,0),
+(19995,49,-2380.417,-2413.0195,92.82902,100,0,0),
+(19995,50,-2353.339,-2423.769,95.19796,100,0,0),
+(19995,51,-2310.5186,-2422.7778,95.587776,100,0,0),
+(19995,52,-2293.4502,-2402.058,93.38322,100,0,0),
+(19995,53,-2295.2888,-2370.951,92.66499,100,0,0),
+(19995,54,-2286.9407,-2341.9426,93.4555,100,0,0),
+(19995,55,-2252.9795,-2320.2158,93.7934,100,0,0),
+(19995,56,-2207.6965,-2319.8152,93.1684,100,0,0),
+(19995,57,-2185.574,-2344.3398,94.98741,100,0,0);
+UPDATE creature SET position_x = -2548.2842, position_y = -1823.4431, position_z = 93.25752, spawndist = 0, MovementType = 0 WHERE guid = 27435;
+UPDATE creature SET position_x = -2548.2842, position_y = -1823.4431, position_z = 93.25752, spawndist = 0, MovementType = 0 WHERE guid = 27472;
+UPDATE creature SET position_x = -2548.2842, position_y = -1823.4431, position_z = 93.25752, spawndist = 0, MovementType = 0 WHERE guid = 27993;
+UPDATE creature SET position_x = -2548.2842, position_y = -1823.4431, position_z = 93.25752, spawndist = 0, MovementType = 0 WHERE guid = 28354;
+DELETE FROM creature_movement WHERE id IN (27435,27472,27993,28354);
+DELETE FROM creature_spawn_entry WHERE guid IN (27435,27472,27993,28354);
+INSERT INTO creature_spawn_entry (guid,entry) VALUES (27435,3235),(27435,3236),(27435,3237), (27472,3235),(27472,3236),(27472,3237), (27993,3235),(27993,3236),(27993,3237), (28354,3235),(28354,3236),(28354,3237);
+UPDATE creature SET id = 0 WHERE guid IN (27435,29450,27993,28856);
+DELETE FROM `spawn_group` WHERE id = 19994;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (19994, 'Barrens - 4 Random Kodos - Patrol - 2', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 19994;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (19994, 27435, 0), (19994, 27472, 1), (19994, 27993, 2), (19994, 28354, 3);
+DELETE FROM `spawn_group_formation` WHERE id = 19994;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES (19994, 4, 10, 0, 19994, 4, 'Barrens - 4 Random Kodos - Patrol - 2');
+DELETE FROM `waypoint_path_name` WHERE PathId = 19994;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (19994,'Barrens - 4 Random Kodos - Patrol - 2');
+DELETE FROM `waypoint_path` WHERE PathId = 19994;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(19994,1,-2548.2842,-1823.4431,93.25752,100,0,0),
+(19994,2,-2549.9526,-1856.7218,91.79164,100,0,0),
+(19994,3,-2550.593,-1886.7155,93.6349,100,0,0),
+(19994,4,-2528.1716,-1913.3761,93.49894,100,0,0),
+(19994,5,-2514.9182,-1944.0527,91.791664,100,0,0),
+(19994,6,-2525.7134,-1972.6923,91.873344,100,0,0),
+(19994,7,-2519.366,-2015.1715,91.791664,100,0,0),
+(19994,8,-2539.711,-2043.043,94.06388,100,0,0),
+(19994,9,-2579.9106,-2051.9,91.791664,100,0,0),
+(19994,10,-2619.6133,-2038.2832,92.666664,100,0,0),
+(19994,11,-2625.1914,-2010.3055,95.011635,100,0,0),
+(19994,12,-2649.6484,-1987.704,98.87594,100,0,0),
+(19994,13,-2687.763,-1958.8242,98.20767,100,0,0),
+(19994,14,-2731.621,-1948.8926,94.54919,100,0,0),
+(19994,15,-2765.418,-1949.4645,94.289955,100,0,0),
+(19994,16,-2799.666,-1956.7109,92.666664,100,0,0),
+(19994,17,-2821.335,-1979.7496,94.364624,100,0,0),
+(19994,18,-2858.4404,-1977.6183,93.54441,100,0,0),
+(19994,19,-2892.971,-1985.3134,91.791664,100,0,0),
+(19994,20,-2924.9187,-2012.8451,91.791664,100,0,0),
+(19994,21,-2973.0881,-2018.61,94.84196,100,0,0),
+(19994,22,-3019.862,-2009.5938,91.862465,100,0,0),
+(19994,23,-3059.9058,-2014.0497,92.260216,100,0,0),
+(19994,24,-3105.4138,-2015.0334,97.450134,100,0,0),
+(19994,25,-3140.8923,-2008.1979,91.69159,100,0,0),
+(19994,26,-3185.1724,-2018.1434,93.416664,100,0,0),
+(19994,27,-3234.4036,-2015.4905,93.10758,100,0,0),
+(19994,28,-3278.2222,-2011.9592,93.55157,100,0,0),
+(19994,29,-3314.1902,-1990.8981,93.89457,100,0,0),
+(19994,30,-3347.5408,-1954.1077,93.972084,100,0,0),
+(19994,31,-3357.8528,-1922.2687,91.791664,100,0,0),
+(19994,32,-3384.438,-1912.7379,92.36173,100,0,0),
+(19994,33,-3418.5803,-1918.779,94.54066,100,0,0),
+(19994,34,-3440.851,-1951.4935,93.09258,100,0,0),
+(19994,35,-3420.3472,-1985.9188,93.16667,100,0,0),
+(19994,36,-3414.4775,-2022.2496,94.478676,100,0,0),
+(19994,37,-3413.9412,-2043.6198,96.92531,100,0,0),
+(19994,38,-3392.5605,-2081.25,96.745514,100,0,0),
+(19994,39,-3380.7786,-2125.5894,97.23457,100,0,0),
+(19994,40,-3408.1997,-2158.7026,91.791664,100,0,0),
+(19994,41,-3461.4775,-2223.1958,91.791664,100,0,0),
+(19994,42,-3491.955,-2258.996,92.54168,100,0,0),
+(19994,43,-3496.31,-2299.241,91.79168,100,0,0),
+(19994,44,-3527.3733,-2326.2695,96.75652,100,0,0),
+(19994,45,-3576.382,-2324.9717,96.541664,100,0,0),
+(19994,46,-3611.55,-2345.0105,91.791664,100,0,0),
+(19994,47,-3657.9917,-2348.1719,91.791664,100,0,0),
+(19994,48,-3684.3425,-2346.7075,92.267494,100,0,0),
+(19994,49,-3718.316,-2324.128,94.499435,100,0,0),
+(19994,50,-3742.3994,-2289.9778,92.77653,100,0,0),
+(19994,51,-3730.6775,-2247.0618,92.79777,100,0,0),
+(19994,52,-3718.365,-2216.5715,93.21793,100,0,0),
+(19994,53,-3756.2942,-2184.889,92.56457,100,0,0),
+(19994,54,-3799.9075,-2179.8037,93.76674,100,0,0),
+(19994,55,-3828.0073,-2195.0332,92.724594,100,0,0),
+(19994,56,-3850.562,-2208.744,91.791664,100,0,0),
+(19994,57,-3883.0647,-2204.8198,92.025795,100,0,0),
+(19994,58,-3913.9036,-2188.7336,91.791664,100,0,0),
+(19994,59,-3945.6965,-2189.132,94.17582,100,0,0),
+(19994,60,-3985.597,-2210.1846,94.22308,100,0,0);
+
+UPDATE creature_template SET RegenerateStats=0 WHERE entry IN (12923,12924,12925,12936,12937,12938);
+DELETE FROM `creature_template_addon` WHERE `entry` IN (12923,12924,12925,12936,12937,12938);
+INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
+(12923, 0, 0, 0, 1, 0, 0, NULL), (12924, 0, 0, 0, 1, 0, 0, NULL), (12925, 0, 0, 0, 1, 0, 0, NULL), (12936, 0, 0, 0, 1, 0, 0, NULL), (12937, 0, 0, 0, 1, 0, 0, NULL), (12938, 0, 0, 0, 1, 0, 0, NULL);
+
+DELETE FROM spell_area WHERE spell IN (51671);
+INSERT INTO spell_area (spell, area, quest_start, quest_start_active, quest_end, condition_id, aura_spell, racemask, gender, autocast) VALUES (51671,4325,12667,1,12684,0,0,0,2,1);
+UPDATE creature_template SET InhabitType = 7 WHERE entry = 28473;
+DELETE FROM `dbscripts_on_relay` WHERE id IN (20671);
+INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(20671,0,0,0,0,0,0,0,0x04,28025,0,0,0,0,0,0,0,'Part of Material You 28473 EAI: Player Say'),
+(20671,1,15,51719,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Material You 28473 EAI: cast 43671 on buddy');
+
+UPDATE `npc_vendor` SET `Slot` = 9 WHERE `entry` IN (1273,1698,2136,2265,2404,3077,3163,3609,10369,16257,18926) AND `item` = 2488;
+UPDATE `npc_vendor` SET `Slot` = 10 WHERE `entry` IN (1273,1698,2136,2265,2404,3077,3163,3609,10369,16257,18926) AND `item` = 2489;
+UPDATE `npc_vendor` SET `Slot` = 11 WHERE `entry` IN (1273,1698,2136,2265,2404,3077,3163,3609,10369,16257,18926) AND `item` = 2490;
+UPDATE `npc_vendor` SET `Slot` = 12 WHERE `entry` IN (1273,1698,2136,2265,2404,3077,3163,3609,10369,16257,18926) AND `item` = 2491;
+UPDATE `npc_vendor` SET `Slot` = 13 WHERE `entry` IN (1273,1698,2136,2265,2404,3077,3163,3609,10369,16257,18926) AND `item` = 2492;
+UPDATE `npc_vendor` SET `Slot` = 14 WHERE `entry` IN (1273,1698,2136,2265,2404,3077,3163,3609,10369,16257,18926) AND `item` = 2493;
+UPDATE `npc_vendor` SET `Slot` = 15 WHERE `entry` IN (1273,1698,2136,2265,2404,3077,3163,3609,10369,16257,18926) AND `item` = 2494;
+UPDATE `npc_vendor` SET `Slot` = 16 WHERE `entry` IN (1273,1698,2136,2265,2404,3077,3163,3609,10369,16257,18926) AND `item` = 2495;
+
+UPDATE `npc_vendor` SET `Slot` = 101 WHERE `entry` IN (3314,347935343658,4183) AND `item` = 851;
+UPDATE `npc_vendor` SET `Slot` = 105 WHERE `entry` IN (3314,347935343658,4183) AND `item` = 852;
+UPDATE `npc_vendor` SET `Slot` = 103 WHERE `entry` IN (3314,347935343658,4183) AND `item` = 853;
+UPDATE `npc_vendor` SET `Slot` = 108 WHERE `entry` IN (3314,347935343658,4183) AND `item` = 854;
+UPDATE `npc_vendor` SET `Slot` = 104 WHERE `entry` IN (3314,347935343658,4183) AND `item` = 1196;
+UPDATE `npc_vendor` SET `Slot` = 106 WHERE `entry` IN (3314,347935343658,4183) AND `item` = 1197;
+UPDATE `npc_vendor` SET `Slot` = 102 WHERE `entry` IN (3314,347935343658,4183) AND `item` = 1198;
+UPDATE `npc_vendor` SET `Slot` = 107 WHERE `entry` IN (3314,347935343658,4183) AND `item` = 2207;
+
+UPDATE `npc_vendor` SET `Slot` = 2 WHERE `entry` = 3314 AND `item` = 1194;
+UPDATE `npc_vendor` SET `Slot` = 5 WHERE `entry` = 3314 AND `item` = 2130;
+UPDATE `npc_vendor` SET `Slot` = 1 WHERE `entry` = 3314 AND `item` = 2131;
+UPDATE `npc_vendor` SET `Slot` = 8 WHERE `entry` = 3314 AND `item` = 2132;
+UPDATE `npc_vendor` SET `Slot` = 3 WHERE `entry` = 3314 AND `item` = 2134;
+UPDATE `npc_vendor` SET `Slot` = 7 WHERE `entry` = 3314 AND `item` = 2139;
+UPDATE `npc_vendor` SET `Slot` = 4 WHERE `entry` = 3314 AND `item` = 2479;
+UPDATE `npc_vendor` SET `Slot` = 6 WHERE `entry` = 3314 AND `item` = 2480;
+UPDATE `npc_vendor` SET `Slot` = 9 WHERE `entry` = 3314 AND `item` = 2488;
+UPDATE `npc_vendor` SET `Slot` = 10 WHERE `entry` = 3314 AND `item` = 2489;
+UPDATE `npc_vendor` SET `Slot` = 11 WHERE `entry` = 3314 AND `item` = 2490;
+UPDATE `npc_vendor` SET `Slot` = 12 WHERE `entry` = 3314 AND `item` = 2491;
+UPDATE `npc_vendor` SET `Slot` = 13 WHERE `entry` = 3314 AND `item` = 2492;
+UPDATE `npc_vendor` SET `Slot` = 14 WHERE `entry` = 3314 AND `item` = 2493;
+UPDATE `npc_vendor` SET `Slot` = 15 WHERE `entry` = 3314 AND `item` = 2494;
+UPDATE `npc_vendor` SET `Slot` = 16 WHERE `entry` = 3314 AND `item` = 2495;
+
+DELETE FROM `creature` WHERE `guid` = 87305;
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 28477);
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28477));
+DELETE FROM `creature` WHERE `id` IN (28477);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(50808, 28477, 571, 1, 1, 0, 0, 5590.38, -4478.98, 373.996, 3.16085, 300, 300, 7, 0, 0, 0, 0, 1),
+(50809, 28477, 571, 1, 1, 0, 0, 5833.94, -4520.9, 379.621, 1.00744, 300, 300, 5, 0, 0, 0, 0, 1),
+(50810, 28477, 571, 1, 1, 0, 0, 5554.46, -4217.58, 367.508, 5.01596, 300, 300, 10, 0, 0, 0, 0, 1),
+(50811, 28477, 571, 1, 1, 0, 0, 5663.2, -4085.74, 352.307, 4.30209, 300, 300, 5, 0, 0, 0, 0, 1),
+(50812, 28477, 571, 1, 1, 0, 0, 5666.17, -4142, 351.45, 6.19889, 300, 300, 5, 0, 0, 0, 0, 1),
+(119181, 28477, 571, 1, 1, 0, 0, 5716.42, -4076.3, 353.269, 4.74136, 300, 300, 0, 0, 0, 0, 0, 4),
+(50813, 28477, 571, 1, 1, 0, 0, 5771.6, -4148.34, 352.209, 2.88849, 300, 300, 5, 0, 0, 0, 0, 1),
+(50814, 28477, 571, 1, 1, 0, 0, 5589.36, -4424.72, 374.672, 2.9768, 300, 300, 5, 0, 0, 0, 0, 1),
+(50815, 28477, 571, 1, 1, 0, 0, 5649.47, -4453.19, 385.802, 0.283241, 300, 300, 7, 0, 0, 0, 0, 1),
+(50816, 28477, 571, 1, 1, 0, 0, 5652.63, -4371.88, 386.285, 3.21188, 300, 300, 7, 0, 0, 0, 0, 1),
+(50817, 28477, 571, 1, 1, 0, 0, 5624.32, -4309.4, 374.12, 6.03294, 300, 300, 5, 0, 0, 0, 0, 1),
+(50818, 28477, 571, 1, 1, 0, 0, 5840.52, -4416.95, 374.111, 0.017486, 300, 300, 7, 0, 0, 0, 0, 1),
+(50819, 28477, 571, 1, 1, 0, 0, 5656.46, -4277.18, 374.247, 2.55355, 300, 300, 7, 0, 0, 0, 0, 1),
+(50820, 28477, 571, 1, 1, 0, 0, 5793.19, -4387.93, 387.624, 0.678374, 300, 300, 5, 0, 0, 0, 0, 1),
+(50821, 28477, 571, 1, 1, 0, 0, 5784.16, -4456.67, 385.802, 5.56993, 300, 300, 7, 0, 0, 0, 0, 1),
+(50822, 28477, 571, 1, 1, 0, 0, 5716.55, -4021.24, 371.413, 1.58825, 300, 300, 0, 0, 0, 0, 0, 0),
+(50823, 28477, 571, 1, 1, 0, 0, 5716.93, -4277.48, 373.995, 5.16118, 300, 300, 7, 0, 0, 0, 0, 1),
+(50824, 28477, 571, 1, 1, 0, 0, 5566.36, -4218.52, 367.601, 3.08694, 300, 300, 0, 0, 0, 0, 0, 0),
+(50825, 28477, 571, 1, 1, 0, 0, 5769.95, -4086.59, 352.209, 1.13759, 300, 300, 5, 0, 0, 0, 0, 1),
+(50826, 28477, 571, 1, 1, 0, 0, 5815.07, -4312.76, 373.996, 4.93954, 300, 300, 7, 0, 0, 0, 0, 1),
+(50827, 28477, 571, 1, 1, 0, 0, 5838.88, -4238.73, 361.861, 1.30731, 300, 300, 7, 0, 0, 0, 0, 1);
+INSERT INTO creature_movement (`id`,`point`,`positionx`,`positiony`,`positionz`,`orientation`,`waittime`,`scriptid`) VALUES
+(119181,1,5716.424,-4076.297,353.2688,100,0,0),
+(119181,2,5716.905,-4099.453,353.2688,100,0,0),
+(119181,3,5716.278,-4118.028,353.2688,100,0,0),
+(119181,4,5715.866,-4133.016,353.2688,100,0,0),
+(119181,5,5716.534,-4165.779,353.9121,100,0,0),
+(119181,6,5715.816,-4183.864,354.3399,100,0,0),
+(119181,7,5717.188,-4208.333,362.7362,100,0,0),
+(119181,8,5716.556,-4220.69,362.8612,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 30015;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (30015, 'Zul\'Drak - Altar of Quetz\'lun: Scion of Quetz\'lun 28477 - Altar Warden 28784 - Patrol', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 30015;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (30015, 50824, 0), (30015, 50828, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 30015;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES (30015, 1, 7, 0, 30015, 4, 'Zul\'Drak - Altar of Quetz\'lun: Scion of Quetz\'lun 28477 - Altar Warden 28784 - Patrol');
+DELETE FROM `waypoint_path_name` WHERE PathId = 30015;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (30015,'Zul\'Drak - Altar of Questz\'lun: Scion of Quetz\'lun 28477 - Altar Warden 28784 - Patrol');
+DELETE FROM `waypoint_path` WHERE PathId = 30015;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(30015,1,5566.362,-4218.522,367.6009,100,0,0),
+(30015,2,5586.893,-4219.031,368.6462,100,0,0),
+(30015,3,5600.557,-4219.778,366.9977,100,0,0),
+(30015,4,5618.124,-4219.374,363.4977,100,0,0),
+(30015,5,5633.584,-4219.686,362.8758,100,0,0),
+(30015,6,5652.746,-4219.533,362.8758,100,0,0),
+(30015,7,5683.596,-4220.363,362.8123,100,0,0),
+(30015,8,5699.571,-4220.678,362.8123,100,0,0),
+(30015,9,5715.237,-4221.083,362.8612,100,0,0),
+(30015,10,5741.47,-4221.41,362.651,100,0,0),
+(30015,11,5766.562,-4221.095,361.516,100,0,0),
+(30015,12,5783.814,-4220.904,361.266,100,0,0),
+(30015,13,5798.88,-4221.15,362.108,100,0,0),
+(30015,14,5820.34,-4221.45,362.63,100,0,0),
+(30015,15,5848.9,-4221.36,360.878,100,0,0);
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 28784);
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28784));
+DELETE FROM `creature` WHERE `id` IN (28784);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(50828, 28784, 571, 1, 1, 0, 0, 5566.36, -4218.52, 367.601, 4.66761, 300, 300, 0, 0, 0, 0, 0, 0),
+(98894, 28784, 571, 1, 1, 0, 0, 5590.89, -4360.1, 373.996, 1.5369, 300, 300, 0, 0, 0, 0, 0, 4),
+(98900, 28784, 571, 1, 1, 0, 0, 5578.72, -4269.38, 392.738, 2.28638, 300, 300, 0, 0, 0, 0, 0, 0),
+(98901, 28784, 571, 1, 1, 0, 0, 5569.82, -4331.96, 376.519, 3.01942, 300, 300, 0, 0, 0, 0, 0, 0),
+(98902, 28784, 571, 1, 1, 0, 0, 5590.92, -4345.08, 374.515, 1.5708, 300, 300, 0, 0, 0, 0, 0, 0),
+(98903, 28784, 571, 1, 1, 0, 0, 5569.24, -4447.38, 377.124, 3.12414, 300, 300, 0, 0, 0, 0, 0, 0),
+(98895, 28784, 571, 1, 1, 0, 0, 5815.66, -4177.14, 353.73, 3.1105, 300, 300, 0, 0, 0, 0, 0, 4),
+(98904, 28784, 571, 1, 1, 0, 0, 5859.39, -4433.85, 375.875, 0, 300, 300, 0, 0, 0, 0, 0, 0),
+(98896, 28784, 571, 1, 1, 0, 0, 5590.89, -4360.1, 373.996, 1.56249, 300, 300, 0, 0, 0, 0, 0, 4),
+(98897, 28784, 571, 1, 1, 0, 0, 5788.87, -4383.76, 386.499, 4.7179, 300, 300, 0, 0, 0, 0, 0, 4),
+(98905, 28784, 571, 1, 1, 0, 0, 5698.09, -4227.1, 363.476, 1.58825, 300, 300, 0, 0, 0, 0, 0, 0),
+(98906, 28784, 571, 1, 1, 0, 0, 5596.36, -4084.57, 362.401, 3.12414, 300, 300, 0, 0, 0, 0, 0, 0),
+(98898, 28784, 571, 1, 1, 0, 0, 5814.34, -4115.92, 353.162, 6.26518, 300, 300, 0, 0, 0, 0, 0, 4),
+(98907, 28784, 571, 1, 1, 0, 0, 5646.08, -4030.69, 364.24, 1.50098, 300, 300, 0, 0, 0, 0, 0, 0),
+(98908, 28784, 571, 1, 1, 0, 0, 5788.5, -4028.91, 364.689, 1.5708, 300, 300, 0, 0, 0, 0, 0, 0),
+(98909, 28784, 571, 1, 1, 0, 0, 5837.9, -4157.94, 363.22, 6.26573, 300, 300, 0, 0, 0, 0, 0, 0),
+(98910, 28784, 571, 1, 1, 0, 0, 5838.09, -4074.41, 363.582, 6.24828, 300, 300, 0, 0, 0, 0, 0, 0),
+(98911, 28784, 571, 1, 1, 0, 0, 5734.48, -4226.8, 363.341, 2.23402, 300, 300, 0, 0, 0, 0, 0, 0),
+(98912, 28784, 571, 1, 1, 0, 0, 5672.67, -4321.79, 374.734, 1.5708, 300, 300, 0, 0, 0, 0, 0, 0),
+(50829, 28784, 571, 1, 1, 0, 0, 5790.74, -4270.35, 373.026, 0.994838, 300, 300, 0, 0, 0, 0, 0, 0),
+(98899, 28784, 571, 1, 1, 0, 0, 5646.83, -4378.77, 385.927, 1.58825, 300, 300, 0, 0, 0, 0, 0, 4),
+(50830, 28784, 571, 1, 1, 0, 0, 5840.6, -4345.65, 374.078, 1.55334, 300, 300, 0, 0, 0, 0, 0, 0),
+(50831, 28784, 571, 1, 1, 0, 0, 5849.13, -4294.46, 368.955, 5.98648, 300, 300, 0, 0, 0, 0, 0, 0),
+(50832, 28784, 571, 1, 1, 0, 0, 5597.75, -4151.42, 362.722, 3.14159, 300, 300, 0, 0, 0, 0, 0, 0),
+(50833, 28784, 571, 1, 1, 0, 0, 5755.83, -4312.34, 374.078, 1.58825, 300, 300, 0, 0, 0, 0, 0, 0);
+INSERT INTO creature_movement (`id`,`point`,`positionx`,`positiony`,`positionz`,`orientation`,`waittime`,`scriptid`) VALUES
+(98899,1,5646.833,-4378.769,385.9265,100,0,0),
+(98899,2,5645.918,-4399.209,385.9265,100,0,0),
+(98899,3,5645.585,-4417.915,385.8067,100,0,0),
+(98899,4,5645.652,-4433.37,385.8267,100,0,0),
+(98899,5,5645.97,-4449.309,385.8267,100,0,0),
+(98899,6,5645.405,-4466.635,386.0767,100,0,0),
+(98899,7,5644.552,-4488.913,385.9549,100,0,0),
+(98894,1,5590.89,-4360.1,373.996,100,0,0),
+(98894,2,5591.22,-4378.5,373.996,100,0,0),
+(98894,3,5590.9,-4395.97,373.996,100,0,0),
+(98894,4,5589.676,-4417.629,375.6486,100,0,0),
+(98894,5,5589.184,-4432.455,374.0443,100,0,0),
+(98894,6,5589.366,-4450.836,374.1485,100,0,0),
+(98894,7,5589.078,-4465.982,374.0235,100,0,0),
+(98894,8,5588.974,-4482.908,374.0142,100,0,0),
+(98895,1,5815.66,-4177.14,353.73,100,0,0),
+(98895,2,5782.63,-4177.32,353.434,100,0,0),
+(98895,3,5766.62,-4176.847,353.2013,100,0,0),
+(98895,4,5750.304,-4176.135,354.0763,100,0,0),
+(98895,5,5735.139,-4177.029,355.7013,100,0,0),
+(98895,6,5719.562,-4176.542,354.3399,100,0,0),
+(98895,7,5681.787,-4178.457,353.5242,100,0,0),
+(98895,8,5668.155,-4179.481,353.2742,100,0,0),
+(98895,9,5652.489,-4180.12,353.9466,100,0,0),
+(98895,10,5633.114,-4180.623,358.1201,100,0,0),
+(98895,11,5607.682,-4179.538,364.6201,100,0,0),
+(98896,1,5842.63,-4508,376.168,100,0,0),
+(98896,2,5843.19,-4489.91,375.578,100,0,0),
+(98896,3,5843.46,-4472.42,375.386,100,0,0),
+(98896,4,5843.483,-4448.838,374.0789,100,0,0),
+(98896,5,5843.611,-4433.374,374.0789,100,0,0),
+(98896,6,5845.159,-4416.106,374.7704,100,0,0),
+(98896,7,5844.595,-4400.002,374.5204,100,0,0),
+(98896,8,5844.48,-4373.26,373.995,100,0,0),
+(98897,1,5788.87,-4383.762,386.4994,100,0,0),
+(98897,2,5789.05,-4399.803,386.6244,100,0,0),
+(98897,3,5789.546,-4416.627,386.4262,100,0,0),
+(98897,4,5789.12,-4433.648,386.8014,100,0,0),
+(98897,5,5789.221,-4451.756,385.9264,100,0,0),
+(98897,6,5788.772,-4467.588,385.8587,100,0,0),
+(98897,7,5789.116,-4483.338,385.9837,100,0,0),
+(98897,8,5788.136,-4500.305,387.941,100,0,0),
+(98898,1,5814.34,-4115.92,353.162,100,0,0),
+(98898,2,5799.894,-4115.554,353.2197,100,0,0),
+(98898,3,5782.043,-4115.694,353.2197,100,0,0),
+(98898,4,5766.734,-4115.959,353.2197,100,0,0),
+(98898,5,5752.041,-4115.97,353.2023,100,0,0),
+(98898,6,5733.34,-4115.068,353.2023,100,0,0),
+(98898,7,5717.967,-4114.791,353.5188,100,0,0),
+(98898,8,5699.671,-4115.588,353.3376,100,0,0),
+(98898,9,5682.364,-4115.136,353.2126,100,0,0),
+(98898,10,5666.541,-4116.042,353.3477,100,0,0),
+(98898,11,5649.379,-4115.086,353.2227,100,0,0),
+(98898,12,5633.37,-4114.1,353.2227,100,0,0),
+(98898,13,5618.664,-4115.493,353.1671,100,0,0);
+UPDATE `creature` SET `position_z` = '372.07' WHERE `guid` =103997;
+UPDATE creature SET spawndist=0, MovementType=0 WHERE guid=103997;
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 28478);
+UPDATE creature_template_addon SET auras = 51715 WHERE entry = 28478;
+
+INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES (13256, 0, 0, 1, 0, 0, '15876');
+
+UPDATE `creature_template` SET `MovementType`='2' WHERE (`Entry`='5762');
+UPDATE `creature_template` SET `MovementType`='2' WHERE (`Entry`='5763');
+UPDATE `creature_template` SET `MovementType`='2' WHERE (`Entry`='3654');
+
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 28600);
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28600));
+DELETE FROM `creature` WHERE `id` IN (28600);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(119215, 28600, 571, 1, 1, 0, 0, 6005.94, -3797.64, 362.342, 0, 300, 300, 0, 0, 0, 0, 0, 4),
+(50834, 28600, 571, 1, 1, 0, 0, 5994.1, -3988.25, 362.87, 0.401426, 300, 300, 0, 0, 0, 0, 0, 0),
+(50835, 28600, 571, 1, 1, 0, 0, 5975.71, -3709.29, 371.307, 0.890118, 300, 300, 0, 0, 0, 0, 0, 0),
+(50836, 28600, 571, 1, 1, 0, 0, 5926.75, -3660.28, 372.404, 0.925025, 300, 300, 0, 0, 0, 0, 0, 0),
+(50837, 28600, 571, 1, 1, 0, 0, 5956.68, -3691.35, 370.756, 0.820305, 300, 300, 0, 0, 0, 0, 0, 0),
+(50838, 28600, 571, 1, 1, 0, 0, 5974.17, -3883.28, 382.483, 2.30383, 300, 300, 0, 0, 0, 0, 0, 0),
+(50839, 28600, 571, 1, 1, 0, 0, 5994.06, -3862.5, 382.581, 2.42601, 300, 300, 0, 0, 0, 0, 0, 0),
+(50840, 28600, 571, 1, 1, 0, 0, 5931.79, -3960.92, 363.619, 3.9968, 300, 300, 0, 0, 0, 0, 0, 0),
+(50841, 28600, 571, 1, 1, 0, 0, 5879.26, -3909.27, 367.781, 3.87463, 300, 300, 0, 0, 0, 0, 0, 0),
+(119216, 28600, 571, 1, 1, 0, 0, 5923.23, -3804.28, 363.653, 4.18879, 300, 300, 0, 0, 0, 0, 0, 0),
+(50842, 28600, 571, 1, 1, 0, 0, 5898.46, -3826.01, 363.027, 2.19912, 300, 300, 0, 0, 0, 0, 0, 0),
+(50847, 28600, 571, 1, 1, 0, 0, 5876.87, -3859.28, 363.106, 4.10152, 300, 300, 0, 0, 0, 0, 0, 0),
+(50849, 28600, 571, 1, 1, 0, 0, 5937.52, -3786.72, 364.251, 2.32129, 300, 300, 0, 0, 0, 0, 0, 0),
+(119214, 28600, 571, 1, 1, 0, 0, 5901.88, -3688.48, 368.983, 0, 300, 300, 0, 0, 0, 0, 0, 4),
+(50850, 28600, 571, 1, 1, 0, 0, 5825.44, -3858.52, 362.528, 3.94444, 300, 300, 0, 0, 0, 0, 0, 0),
+(50851, 28600, 571, 1, 1, 0, 0, 5829.98, -3812.09, 362.061, 3.63029, 300, 300, 0, 0, 0, 0, 0, 0),
+(50852, 28600, 571, 1, 1, 0, 0, 5821.01, -3691.8, 372.332, -0.972888, 300, 300, 0, 0, 0, 0, 0, 0),
+(50853, 28600, 571, 1, 1, 0, 0, 5794.3, -3712.53, 373.209, 2.06583, 300, 300, 0, 0, 0, 0, 0, 0),
+(50854, 28600, 571, 1, 1, 0, 0, 5898.33, -3693.58, 368.311, 2.51327, 300, 300, 0, 0, 0, 0, 0, 0),
+(50855, 28600, 571, 1, 1, 0, 0, 6081.34, -4017.9, 364.127, 5.39307, 300, 300, 0, 0, 0, 0, 0, 0),
+(119217, 28600, 571, 1, 1, 0, 0, 5879.16, -3678.52, 373.52, 2.43549, 300, 300, 0, 0, 0, 0, 0, 2),
+(119218, 28600, 571, 1, 1, 0, 0, 6046.53, -4035.26, 363.875, 4.79965, 300, 300, 0, 0, 0, 0, 0, 0);
+DELETE FROM `creature_template_addon` WHERE `entry` = 28600;
+INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES (28600,0,0,1,0,333,0,NULL);
+DELETE FROM creature_addon WHERE guid IN (119214,119215,119216,119217);
+INSERT INTO creature_addon (guid, mount, bytes1, b2_0_sheath, b2_1_pvp_state, emote, moveflags, auras) VALUES (119214,0,0,1,0,0,0,NULL), (119215,0,0,1,0,0,0,NULL), (119216,0,0,1,0,375,0,NULL), (119217,0,0,1,0,0,0,NULL);
+DELETE FROM `creature_spawn_data_template` WHERE entry IN (20039);
+INSERT INTO `creature_spawn_data_template` (`Entry`, `EquipmentId`) VALUES (20039,354);
+DELETE FROM `creature_spawn_data` WHERE `Guid` IN (119216);
+INSERT INTO `creature_spawn_data` (`Guid`, `Id`) VALUES (119216,20039);
+DELETE FROM creature_movement WHERE id IN (119217,119214,119215);
+INSERT INTO creature_movement (`id`,`point`,`positionx`,`positiony`,`positionz`,`orientation`,`waittime`,`scriptid`) VALUES
+(119217,1,5879.156,-3678.521,373.5202,100,5000,5),
+(119217,2,5861.944,-3650.029,373.1118,100,0,0),
+(119217,3,5851.053,-3640.044,377.6118,100,10000,20),
+(119214,1,5901.876,-3688.484,368.9826,100,0,0),
+(119214,2,5885.608,-3702.736,368.0851,100,0,0),
+(119214,3,5868.632,-3720.228,364.5851,100,0,0),
+(119214,4,5855.248,-3733.588,363.8351,100,0,0),
+(119214,5,5835.647,-3756.13,363.8351,100,0,0),
+(119214,6,5819.815,-3781.046,362.0851,100,0,0),
+(119214,7,5801.563,-3802.158,362.0851,100,0,0),
+(119215,1,6005.937,-3797.642,362.3418,100,0,0),
+(119215,2,6029.78,-3804.448,365.692,100,0,0),
+(119215,3,6055.831,-3830.752,367.4436,100,0,0),
+(119215,4,6079.955,-3858.63,370.3512,100,0,0),
+(119215,5,6095.668,-3877.434,373.7966,100,0,0),
+(119215,6,6096.148,-3902.963,373.3476,100,0,0);
+DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id = 28465);
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28465));
+DELETE FROM `creature` WHERE `id` IN (28465);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES
+(138417, 28465, 571, 1, 1, 0, 0, 5950.38, -4052.38, 369.604, 3.0652, 300, 300, 5, 0, 0, 0, 0, 1),
+(138418, 28465, 571, 1, 1, 0, 0, 5784.98, -3849.79, 362.085, 1.30784, 300, 300, 5, 0, 0, 0, 0, 1),
+(138419, 28465, 571, 1, 1, 0, 0, 5983.78, -3782.2, 362.481, 0.689133, 300, 300, 5, 0, 0, 0, 0, 1),
+(119176, 28465, 571, 1, 1, 0, 0, 5921.5, -3765.99, 374.932, 3.917, 300, 300, 0, 0, 0, 0, 0, 3),
+(119180, 28465, 571, 1, 1, 0, 0, 5859.4, -3828.62, 362.044, 1.0472, 300, 300, 0, 0, 0, 0, 0, 0),
+(119177, 28465, 571, 1, 1, 0, 0, 5921.6, -3728.17, 400.376, 3.95, 300, 300, 0, 0, 0, 0, 0, 3),
+(138420, 28465, 571, 1, 1, 0, 0, 5868.79, -3745, 362.044, 5.49779, 300, 300, 0, 0, 0, 0, 0, 0),
+(138421, 28465, 571, 1, 1, 0, 0, 5914.59, -3747.4, 362.085, 2.32593, 300, 300, 5, 0, 0, 0, 0, 1),
+(138423, 28465, 571, 1, 1, 0, 0, 5960.58, -3743.78, 362.044, 3.57792, 300, 300, 0, 0, 0, 0, 0, 0),
+(138424, 28465, 571, 1, 1, 0, 0, 5914.59, -3711.17, 362.055, 5.044, 300, 300, 0, 0, 0, 0, 0, 0),
+(138425, 28465, 571, 1, 1, 0, 0, 5916.38, -3885.39, 364.652, 0.273564, 300, 300, 5, 0, 0, 0, 0, 1),
+(138426, 28465, 571, 1, 1, 0, 0, 5951.6, -3981.44, 362.085, 4.04198, 300, 300, 5, 0, 0, 0, 0, 1),
+(138427, 28465, 571, 1, 1, 0, 0, 5841.62, -3895.03, 362.572, 4.78135, 300, 300, 5, 0, 0, 0, 0, 1),
+(138428, 28465, 571, 1, 1, 0, 0, 5888.85, -3968.64, 365.992, 1.67561, 300, 300, 5, 0, 0, 0, 0, 1),
+(119178, 28465, 571, 1, 1, 0, 0, 5879.12, -3724.1, 372.489, 0.85, 300, 300, 0, 0, 0, 0, 0, 3),
+(138429, 28465, 571, 1, 1, 0, 0, 5842.52, -3784.57, 362.043, 6.26573, 300, 300, 0, 0, 0, 0, 0, 0),
+(138430, 28465, 571, 1, 1, 0, 0, 5875.63, -3786.33, 361.961, 0.972637, 300, 300, 10, 0, 0, 0, 0, 1),
+(138431, 28465, 571, 1, 1, 0, 0, 6060.52, -3926.78, 371.723, 2.4353, 300, 300, 10, 0, 0, 0, 0, 1),
+(138432, 28465, 571, 1, 1, 0, 0, 6046.96, -3987.34, 364.402, 5.59262, 300, 300, 10, 0, 0, 0, 0, 1),
+(138433, 28465, 571, 1, 1, 0, 0, 6100.42, -3969.64, 375.279, 4.04868, 300, 300, 10, 0, 0, 0, 0, 1);
+UPDATE creature_template SET InhabitType=3 WHERE entry IN(28465);
+DELETE FROM `creature_template_addon` WHERE `entry` = 28465;
+INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES (28465,9074,0,1,0,0,0,NULL);
+UPDATE `creature_model_info` SET `modelid_alternative` = 27816 WHERE `modelid` = 27817;
+UPDATE `creature_model_info` SET `modelid_alternative` = 27817 WHERE `modelid` = 27816;
+DELETE FROM `creature_spawn_data` WHERE `Guid` IN (119177,119178,119176);
+INSERT INTO `creature_spawn_data` (`Guid`, `Id`) VALUES (119177,3), (119178,3), (119176,3);
+DELETE FROM creature_movement WHERE id IN (119177,119178,119176);
+INSERT INTO creature_movement (`id`,`point`,`positionx`,`positiony`,`positionz`,`orientation`,`waittime`,`scriptid`) VALUES
+(119177,1,5921.605,-3728.166,400.3763,100,0,0),
+(119177,2,5884.76,-3766.253,400.3763,100,0,0),
+(119177,3,5829.903,-3816.363,400.3763,100,0,0),
+(119177,4,5780.513,-3826.902,400.3763,100,0,0),
+(119177,5,5757.299,-3777.361,400.3763,100,0,0),
+(119177,6,5768.036,-3712.474,400.3763,100,0,0),
+(119177,7,5829.484,-3646.066,400.3763,100,0,0),
+(119177,8,5890.646,-3624.876,400.3763,100,0,0),
+(119177,9,5934.203,-3649.108,400.3763,100,0,0),
+(119177,10,5945.9,-3694.907,400.3763,100,0,0),
+(119178,1,5879.123,-3724.102,372.4887,100,0,0),
+(119178,2,5879.842,-3723.407,372.4887,100,0,0),
+(119178,3,5879.836,-3723.375,375.2218,100,0,0),
+(119178,4,5906.519,-3689.992,375.2218,100,0,0),
+(119178,5,5948.156,-3694.748,375.2218,100,0,0),
+(119178,6,5986.213,-3743.16,378.7217,100,0,0),
+(119178,7,5997.71,-3803.245,384.4437,100,0,0),
+(119178,8,5971.092,-3866.247,390.9993,100,0,0),
+(119178,9,5896.79,-3922.004,386.9997,100,0,0),
+(119178,10,5846.834,-3912.559,378.9444,100,0,0),
+(119178,11,5803.362,-3868.981,376.3888,100,0,0),
+(119178,12,5803.009,-3817.947,376.0551,100,0,0),
+(119178,13,5839.454,-3767.71,375.8884,100,0,0),
+(119176,1,5921.5,-3765.989,374.9324,100,0,0),
+(119176,2,5892.009,-3795.872,373.1823,100,0,0),
+(119176,3,5894.135,-3870.949,381.9322,100,0,0),
+(119176,4,5936.053,-3933.146,399.9323,100,0,0),
+(119176,5,5992.458,-3987.915,399.9323,100,0,0),
+(119176,6,6035.393,-3982.346,382.6824,100,0,0),
+(119176,7,6084.954,-3923.611,382.6824,100,0,0),
+(119176,8,6090.311,-3870.813,401.8766,100,0,0),
+(119176,9,6015.035,-3792.965,401.8766,100,0,0),
+(119176,10,5975.414,-3758.667,379.6266,100,0,0);
+
+DELETE FROM `creature` WHERE `guid` = 56544;
+DELETE FROM `creature` WHERE `guid` = 56545;
+DELETE FROM `dbscripts_on_event` WHERE id IN (18773);
+INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(18773,1,31,28636,200,0,0,0,8,0,0,0,0,0,0,0,0,'terminate if 28636 is alive'),
+(18773,100,10,28636,300000,0,0,0,6|0x08,0,0,0,0,5988.715,-3878.036,417.1502,2.356194,'summon Heb\'Jin'),
+(18773,101,10,28639,300000,0,0,0,6|0x08,0,0,0,0,5984.547,-3882.621,417.4379,1.919862,'summon Heb\'Jin\'s Bat'),
+(18773,1000,0,0,0,0,28636,300,3,28627,0,0,0,0,0,0,0,'buddy Say -> Player'),
+(18773,6000,0,0,0,0,28636,300,3,28628,0,0,0,0,0,0,0,'buddy Say -> Player'),
+(18773,6001,1,15,0,0,28636,300,7,0,0,0,0,0,0,0,0,'buddy emote'),
+(18773,10000,25,1,0,0,28639,300,7,0,0,0,0,0,0,0,0,'buddy - Run ON'),
+(18773,11000,3,0,0,0,28639,300,7,0,0,0,0,5982.633,-3879.573,422.4082,100,'buddy move'),
+(18773,11500,3,0,0,0,28639,300,7,0,0,0,0,5930.76,-3819.15,365.314,2.35994,'buddy move'),
+(18773,20000,48,256,0,0,28636,300,7,0,0,0,0,0,0,0,0,'buddy Remove UnitFlags'),
+(18773,20001,48,256,0,0,28639,300,7,0,0,0,0,0,0,0,0,'buddy Remove UnitFlags'),
+(18773,21000,0,0,0,0,28636,300,3,28629,0,0,0,0,0,0,0,'buddy Say -> Player'),
+(18773,21001,26,0,0,0,28636,300,3,0,0,0,0,0,0,0,0,'buddy attack -> Player');
+DELETE FROM `dbscripts_on_relay` WHERE id IN (20670);
+INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(20670,1,15,43671,0,0,28639,50,1,0,0,0,0,0,0,0,0,'Part of Heb\'Jin 28636 EAI: cast 43671 on buddy'),
+(20670,10000,14,43671,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Heb\'Jin 28636 EAI: remove aura');
+UPDATE creature_template SET InhabitType = 4 WHERE entry = 28639;
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -3226,6 +3226,18 @@ UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (25475,25477);
 -- q.11640 'Words of Power'
 UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (24586);
 
--- text
+-- Spirit of Rhunok 28561
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (28544);
+
+-- q.12665 'I Sense a Disturbance'
+UPDATE `broadcast_text` SET `ChatTypeID`= 4 WHERE `Id` IN (28652,28654,28656,28660,28671,28661);
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (28663);
+
+-- q.12662 'Bringing Down Heb'Jin'
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (28627,28628,28629);
+
+-- spell: Ghostly 51671
+UPDATE `broadcast_text` SET `ChatTypeID`= 5 WHERE `Id` IN (28025);
+
 -- 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
