@@ -3239,5 +3239,26 @@ UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (28627,28628,28629);
 -- spell: Ghostly 51671
 UPDATE `broadcast_text` SET `ChatTypeID`= 5 WHERE `Id` IN (28025);
 
+-- q.12674 'Hell Hath a Fury'
+UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` IN (28798,28799,28803);
+
+-- q.1920 'Investigate the Blue Recluse' - Alliance
+-- q.1960 'Investigate the Alchemist Shop' - Horde
+UPDATE `broadcast_text` SET `EmoteId1`= 25 WHERE `Id` IN (2681,2682);
+
+-- q.12685 'You Reap What You Sow'
+UPDATE `broadcast_text` SET `ChatTypeID`= 4 WHERE `Id` IN (28947);
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (28837,28838,28832,28833,28842,28843,28877,28855,28876);
+
+-- q.12712 'The Key of Warlord Zol'Maz'
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (29040,29041);
+
+-- Enraged Mammoth 28851
+UPDATE `broadcast_text` SET `ChatTypeID`= 5 WHERE `Id` IN (28990);
+
+-- q.12721 'Rampage'
+UPDATE `broadcast_text` SET `ChatTypeID`= 4 WHERE `Id` IN (29237);
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (29177,29179,29180,29183);
+
 -- 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
