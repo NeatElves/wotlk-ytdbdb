@@ -3260,5 +3260,15 @@ UPDATE `broadcast_text` SET `ChatTypeID`= 5 WHERE `Id` IN (28990);
 UPDATE `broadcast_text` SET `ChatTypeID`= 4 WHERE `Id` IN (29237);
 UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (29177,29179,29180,29183);
 
+-- Anok'suten 16357
+UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` = 14265;
+
+-- 0595_LH-20180802110535_world.sql
+UPDATE `broadcast_text` SET `ChatTypeId`=1 WHERE `ID` IN (7622, 7627, 7628, 7629);
+
+-- q.12730 'Convocation at Zol'Heb'
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (29250,29251,29251,29253,29256,29269,29271,29272,29273,29274,29275,29276);
+UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` IN (29257);
+
 -- 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
