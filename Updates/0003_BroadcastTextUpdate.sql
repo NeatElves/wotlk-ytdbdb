@@ -3270,5 +3270,11 @@ UPDATE `broadcast_text` SET `ChatTypeId`=1 WHERE `ID` IN (7622, 7627, 7628, 7629
 UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (29250,29251,29251,29253,29256,29269,29271,29272,29273,29274,29275,29276);
 UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` IN (29257);
 
+-- 4442_The_Amphitheater_of_Anguish_quests.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN
+(30686,30688,30687,30702,15469,30698,30769,30682,30684,30689,30768,30767,30770,30701,30700,30703,30704,30784,30715,30705,30706,30707,30708,30709,30716);
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` BETWEEN 30674 AND 30680;
+UPDATE `broadcast_text` SET `ChatTypeID`= 3 WHERE `Id` IN (30683,30710,30791);
+
 -- 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;

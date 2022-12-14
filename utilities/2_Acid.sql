@@ -56,4 +56,6 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 ('915701','9157','11','0','100','0','0','0','0','0','0','0','50','0','0','0','53','9007','0','0','0','0','0','0','YTDB(TBCDB) - Bloodpetal Pest - Set ReactState Passive, Bloodpetal Pest Infestation Event on Spawn (dbscripts_on_relay)'),
 ('915702','9157','29','0','100','0','12000','12000','0','0','0','0','50','2','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Bloodpetal Pest - Set ReactState Aggressive on Generic Timer');
 
+UPDATE `creature_ai_scripts` SET `action1_param2` = '0' WHERE `id` IN (63401,1693903,1940801,2105801,2359702);
+
 UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,7804,9119,9157,20666,21025,22865,22990,30366,32838,33211,33224);

@@ -256,6 +256,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (37430,'spell_lurker_spout_turning'),
 (37851,'spell_tag_for_single_use'),
 (37896,'spell_to_infinity_and_above'),
+(37751,'spell_submerged'),
+(37752,'spell_stand'),
 (38606,'spell_exorcism_feather'),
 (38640,'spell_koi_koi_death'),
 (38915,'spell_mental_interference'),
@@ -590,6 +592,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (47941,'spell_crystal_spike_aura'),
 (48095,'spell_intense_cold_aura'),
 (48268,'spell_container_of_rats'),
+(48363,'spell_rescue_villager'),
 (48385,'spell_create_spirit_fount_beam_aura'),
 (48397,'spell_drop_off_villager'),
 (48590,'spell_avenging_spirits'),
@@ -715,6 +718,10 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (55430,'spell_gymers_buddy'),
 (55814,'spell_eck_spit'),
 (55853,'spell_vortex_aura'),
+(55872,'spell_random_radius_picker'),
+(55882,'spell_random_radius_picker'),
+(55886,'spell_random_radius_picker'),
+(55888,'spell_random_radius_picker'),
 (55931,'spell_conjure_flame_sphere'),
 (56072,'spell_ride_red_dragon_buddy'),
 (56105,'spell_vortex'),
@@ -980,7 +987,10 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (54171,'spell_divine_storm_heal'),
 (70769,'spell_divine_storm_cooldown'),
 (31789,'spell_righteous_defense'),
-(40470,'spell_paladin_tier_6_trinket');
+(40470,'spell_paladin_tier_6_trinket'),
+(31850,'spell_ardent_defender'),
+(31851,'spell_ardent_defender'),
+(31852,'spell_ardent_defender');
 
 -- Warlock
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
