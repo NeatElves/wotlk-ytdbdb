@@ -3276,5 +3276,11 @@ UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN
 UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` BETWEEN 30674 AND 30680;
 UPDATE `broadcast_text` SET `ChatTypeID`= 3 WHERE `Id` IN (30683,30710,30791);
 
+-- 4515_TDB-quest_tormented_by_the_past.sql
+UPDATE `broadcast_text` SET `ChatTypeID`='1' WHERE Id IN(6505, 6506, 6507);
+
+-- 4144_c.8497_aggro_texts.sql
+UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN (4529,4530,4531,4532);
+
 -- 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;

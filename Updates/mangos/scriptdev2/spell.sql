@@ -111,6 +111,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (27360,'spell_instill_lord_valthalaks_spirit'),
 (27934,'spell_viscidus_shrinks'),
 (28282,'spell_ashbringer_item'),
+(28307,'spell_patchwerk_hatefulstrike'),
 (28441,'spell_ab_effect_000'),
 (28265,'spell_scourge_strike'),
 (28091,'spell_despawner_self'),
@@ -256,6 +257,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (37430,'spell_lurker_spout_turning'),
 (37851,'spell_tag_for_single_use'),
 (37896,'spell_to_infinity_and_above'),
+(38119,'spell_calling_rider'),
+(38249,'spell_calling_rider'),
 (37751,'spell_submerged'),
 (37752,'spell_stand'),
 (38606,'spell_exorcism_feather'),
@@ -713,6 +716,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (54361,'spell_void_shift_aura'),
 (54496,'spell_summon_plague_spray'),
 (54997,'spell_cast_net_stormforged_pursuer'),
+(55163,'spell_mojo_frenzy'),
 (55368,'spell_summon_stefan'),
 (55421,'spell_gymers_throw'),
 (55430,'spell_gymers_buddy'),
@@ -763,6 +767,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (61546,'spell_shatter'),
 (61830,'spell_drink'),
 (61916,'spell_lightning_whirl'),
+(62108,'spell_tails_up_summon_female_frost_leopard'),
+(62116,'spell_tails_up_summon_female_icepaw_bear'),
 (62138,'spell_teleport_inside_violet_hold'),
 (63482,'spell_lightning_whirl_heroic'),
 (64568,'spell_blood_reserve_enchant'),
@@ -827,6 +833,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (70903,'spell_dark_adherent_martyrdom_aura'),
 (71236,'spell_dark_fanatic_martyrdom_aura'),
 (71281,'spell_slave_trigger_closest'),
+(71519,'spell_icecrown_25_melee_trinket'),
+(71562,'spell_icecrown_25_melee_trinket'),
 (72088,'spell_bone_spike_graveyard'),
 (72089,'spell_bone_spike_graveyard'),
 (72180,'spell_aggro_nearest_slave'),
@@ -1276,7 +1284,9 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (58589,'spell_stoneclaw_totem_absorb'),
 (58590,'spell_stoneclaw_totem_absorb'),
 (58591,'spell_stoneclaw_totem_absorb'),
-(70811,'spell_item_shaman_t10_elemental_2p_bonus');
+(70811,'spell_item_shaman_t10_elemental_2p_bonus'),
+(2825,'spell_heroism_bloodlust'),
+(32182,'spell_heroism_bloodlust');
 
 -- Food and Drink
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
