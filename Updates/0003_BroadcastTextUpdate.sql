@@ -3282,5 +3282,19 @@ UPDATE `broadcast_text` SET `ChatTypeID`='1' WHERE Id IN(6505, 6506, 6507);
 -- 4144_c.8497_aggro_texts.sql
 UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN (4529,4530,4531,4532);
 
+-- 4528_Hodir_Daily_Script.sql
+UPDATE broadcast_text SET ChatTypeID=2 WHERE id BETWEEN 30909 AND 30915;
+UPDATE broadcast_text SET EmoteID1=53,SoundEntriesID1=9036 WHERE id=30915;
+
+-- 4529_Sladran.sql
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14443 WHERE id=31711;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14444 WHERE id=30369;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14445 WHERE id=30370;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14446 WHERE id=31712;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14447 WHERE id=31713;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14448 WHERE id=31714;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14449 WHERE id=31715;
+UPDATE broadcast_text SET ChatTypeID=3 WHERE id=30757;
+
 -- 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
