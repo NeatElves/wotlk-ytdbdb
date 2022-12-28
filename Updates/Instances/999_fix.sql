@@ -40,6 +40,11 @@ UPDATE `spawn_group` SET `WorldState` = 12002 WHERE `Id` =@GROUP_ID+14;
 DELETE FROM conditions WHERE condition_entry=12002 AND type=42;
 INSERT INTO conditions(condition_entry,type,value1,value2,value3) VALUES (12002, 42, 71101, 0, 1);
 
+# 533_Naxxramas_WOTLK.sql
+# [4325] Add Spell-Target-Position to "Summon Crypt Guard"
+DELETE FROM creature WHERE guid=4791;
+INSERT INTO creature VALUES (4791,17293,533,1,1,0,0,2772.57,-3685.28,273.666,5.5019,25,25,0,0,0,0,0,0);
+
 # 543_hellfire_ramparts.sql
 # Equipment ID YTDB
 SET @CGUID := 5430000; -- creatures

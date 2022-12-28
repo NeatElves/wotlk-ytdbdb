@@ -3296,5 +3296,18 @@ UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14448 WHERE id=31714;
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14449 WHERE id=31715;
 UPDATE broadcast_text SET ChatTypeID=3 WHERE id=30757;
 
+-- Gal\'darah - Gundrak
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14430 WHERE Id=32534;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14431 WHERE Id=32535;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14432 WHERE Id=32536;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14433 WHERE Id=32537;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14434 WHERE Id=32538;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14435 WHERE Id=32539;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14436 WHERE Id=32540;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14437 WHERE Id=32541;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14438 WHERE Id=32542;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14439 WHERE Id=32543;
+UPDATE broadcast_text SET ChatTypeID=3 WHERE Id=30718;
+
 -- 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;

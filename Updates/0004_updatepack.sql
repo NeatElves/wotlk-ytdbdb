@@ -26329,4 +26329,97 @@ INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalon
 (9007, 9000, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -6202.63, -1114.64, -220.1, 0, 0, 0, 'Bloodpetal Pest - Move'),
 (9007, 12000, 0, 20, 1, 20, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bloodpetal Pest - MovementType 1 and Spawndist 20');
 
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10', `groupid` = '9' WHERE `item` IN (22576,22577,22573,22572,22575,22574);
+UPDATE `creature_loot_template` SET `groupid` = '13' WHERE `item` IN (8564,12753,12219,32716,18563,5094,4481,8393,8394,8392,12337,39328);
+UPDATE `creature_loot_template` SET `groupid` = '13' WHERE `item` IN (22528,20513,29443,18562,16710,4595,8396,32717,4479,11018,16705,16714,10441,17203,16671,20514,31671,5092,16681,8391,12607,16735);
+UPDATE `creature_loot_template` SET `groupid` = '15' WHERE `item` IN (12337,12735,12335,32718);
+UPDATE `creature_loot_template` SET `groupid` = '16' WHERE `item` IN (18335);
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8301 AND `item` =8244;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8301 AND `item` =8393;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8301 AND `item` =10593;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8301 AND `item` =19933;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8299 AND `item` =5117;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8299 AND `item` =8244;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8299 AND `item` =10593;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8299 AND `item` =8396;
+INSERT INTO `reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES
+('13354', '13354', '0', '1', '1', '1', '140', ''),('13354', '13356', '0', '1', '1', '1', '140', ''),('13354', '13357', '0', '1', '1', '1', '140', '');
+DELETE FROM `creature_loot_template` WHERE `item` IN (13354,13357);
+UPDATE `creature_loot_template` SET `item` = '13354',`mincountOrRef` = '-13354',`condition_id` = '0',`comments` = NULL WHERE `item` =13356;
+
+UPDATE `item_template` SET `stackable` = '255' WHERE `entry` =3034;
+
+UPDATE `creature_template` SET `SpeedWalk` = 1, `MeleeBaseAttackTime` = 2000, `Faction` = 74 WHERE `entry` = 6647;
+UPDATE `creature_template` SET `SpeedWalk` = 1, `MeleeBaseAttackTime` = 2000, `Faction` = 74 WHERE `entry` = 8578;
+DELETE FROM `creature_loot_template` WHERE `entry` = 8578 AND `item` != 10597;
+UPDATE `creature_template` SET `SpeedWalk` = 1, `MeleeBaseAttackTime` = 2000 WHERE `entry` = 8581;
+UPDATE `creature_template` SET `SpeedWalk` = 1 WHERE `entry` = 8608;
+UPDATE `dbscripts_on_event` SET `datalong` = 0 WHERE `id` = 3241 AND `delay` = 12500;
+DELETE FROM `dbscripts_on_relay` WHERE `id`=23 AND `command` = 31;
+INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(23, 0, 0, 31, 8578, 50, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Blood Elf Defender - Terminate script if Magus Rimtori is within 50 yards');
+UPDATE `dbscripts_on_relay` SET `priority` = 1 WHERE `id` = 23 AND `command` = 10;
+INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES (30, 1, 'Magister Hawkhelm (6647)');
+DELETE FROM `pool_creature_template` WHERE `id` = 6647;
+INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES (6647, 30, 0, 'Magister Hawkhelm (6647)');
+DELETE FROM `creature` WHERE `id` = 6647;
+INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(42423, 6647, 1, 4374.57, -6160.3, 126.677, 0, 75600, 115200, 2, 1),
+(4755, 6647, 1, 4280.86, -6301.6, 95.387, 0, 75600, 115200, 2, 1);
+
+DELETE FROM `creature_spell_list` WHERE (`Id` = 2930600) AND (`Position` = 0);
+DELETE FROM `creature_spell_list` WHERE (`Id` = 3136800) AND (`Position` = 0);
+DELETE FROM `creature_spell_list` WHERE (`Id` = 2930600) AND (`Position` = 1);
+DELETE FROM `creature_spell_list` WHERE (`Id` = 3136800) AND (`Position` = 1);
+DELETE FROM `creature_spell_list` WHERE (`Id` = 2930600) AND (`Position` = 2);
+DELETE FROM `creature_spell_list` WHERE (`Id` = 3136800) AND (`Position` = 2);
+DELETE FROM `creature_spell_list` WHERE (`Id` = 2930601) AND (`Position` = 0);
+DELETE FROM `creature_spell_list` WHERE (`Id` = 3136801) AND (`Position` = 0);
+DELETE FROM `creature_spell_list` WHERE (`Id` = 2930601) AND (`Position` = 1);
+DELETE FROM `creature_spell_list` WHERE (`Id` = 3136801) AND (`Position` = 1);
+DELETE FROM `creature_spell_list` WHERE (`Id` = 2930601) AND (`Position` = 2);
+DELETE FROM `creature_spell_list` WHERE (`Id` = 3136801) AND (`Position` = 2);
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Flags`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `Comments`) VALUES
+(2930600, 0, 55218, 10000, 10000, 15000, 15000, 0, 1, 29003, 100, 1, 'Gal\'darah - Stampede'),
+(2930600, 1, 55276, 25000, 25000, 25000, 25000, 0, 1, 0, 100, 1, 'Gal\'darah - Puncture'),
+(2930600, 2, 55250, 12000, 12000, 12000, 12000, 0, 0, 29004, 100, 1, 'Gal\'darah - Whirling Slash'),
+(2930601, 0, 55285, 4000, 4000, 15000, 15000, 1, 0, 0, 100, 1, 'Gal\'darah - Enrage'),
+(2930601, 1, 55292, 1000, 1000, 10000, 10000, 0, 0, 0, 100, 1, 'Gal\'darah - Stomp'),
+(2930601, 2, 54956, 12000, 12000, 12000, 12000, 0, 101, 29005, 100, 1, 'Gal\'darah - Impaling Charge'),
+(3136800, 0, 55218, 10000, 10000, 15000, 15000, 0, 1, 29003, 100, 1, 'Gal\'darah HC - Stampede'),
+(3136800, 1, 59826, 25000, 25000, 25000, 25000, 0, 1, 0, 100, 1, 'Gal\'darah HC - Puncture'),
+(3136800, 2, 59824, 12000, 12000, 12000, 12000, 0, 0, 29004, 100, 1, 'Gal\'darah HC - Whirling Slash'),
+(3136801, 0, 59828, 4000, 4000, 15000, 15000, 1, 0, 0, 100, 1, 'Gal\'darah HC - Enrage'),
+(3136801, 1, 59829, 1000, 1000, 10000, 10000, 0, 0, 0, 100, 1, 'Gal\'darah HC - Stomp'),
+(3136801, 2, 59827, 12000, 12000, 12000, 12000, 0, 101, 29005, 100, 1, 'Gal\'darah HC - Impaling Charge');
+INSERT INTO `creature_spell_list_entry` VALUES
+(2930600, 'Gundrak - Gal\'darah Troll Form NHC', 100, 100),(2930601, 'Gundrak - Gal\'darah Rhino Form NHC', 100, 100),(3136800, 'Gundrak - Gal\'darah Troll Form HC', 100, 100),(3136801, 'Gundrak - Gal\'darah Rhino Form HC', 100, 100);
+UPDATE `creature_template` SET `SpellList`=2930600 WHERE entry=29306;
+UPDATE `creature_template` SET `SpellList`=3136800 WHERE entry=31368;
+INSERT INTO `dbscripts_on_relay` (id, command, datalong, data_flags, comments) VALUES (29004, 35, 5, 4, 'Gal\'darah - Increase special counter'),(29005, 35, 5, 4, 'Gal\'darah - Increase special counter');
+INSERT INTO `dbscripts_on_relay` (id, command, dataint, dataint2, dataint3, comments) VALUES (29003, 0, 32537, 32538, 32539, 'Gal\'darah - Say Summon');
+INSERT INTO `dbscripts_on_relay` (id, command, dataint, comments) VALUES (29005, 0, 30718, 'Gal\'darah - Emote Impaled');
+
+REPLACE INTO `spell_script_target` VALUES (28523, 0, 181247, 0);
+REPLACE INTO `spell_target_position` (id, target_map, target_position_x, target_position_y, target_position_z, target_orientation) VALUES (29508, 533, 3333.5, -3475.9, 287.1, 3.17);
+INSERT INTO `spell_script_target` VALUES (30116,0,181510,6),(30116,0,181511,6),(30116,0,181512,6),(30116,0,181513,6),(30116,0,181514,6),(30116,0,181515,6),(30116,0,181516,6),(30116,0,181525,6),(30116,0,181526,6),(30116,0,181527,6),
+(30116,0,181528,6),(30116,0,181529,6),(30116,0,181530,6),(30116,0,181531,6),(30116,0,181532,5),(30116,0,181533,6),(30116,0,181534,5),(30116,0,181535,5),(30116,0,181536,5),(30116,0,181537,5),(30116,0,181538,5),(30116,0,181539,5),
+(30116,0,181540,5),(30116,0,181541,5),(30116,0,181542,5),(30116,0,181543,5),(30116,0,181544,5),(30116,0,181545,3),(30116,0,181546,3),(30116,0,181547,3),(30116,0,181548,3),(30116,0,181549,3),(30116,0,181550,3),(30116,0,181551,3),
+(30116,0,181552,3),(30116,0,181676,6),(30116,0,181677,5),(30116,0,181695,3),(30117,0,181517,6),(30117,0,181518,6),(30117,0,181519,6),(30117,0,181520,6),(30117,0,181521,6),(30117,0,181522,6),(30117,0,181523,6),(30117,0,181524,6),
+(30117,0,181532,5),(30117,0,181534,5),(30117,0,181535,5),(30117,0,181536,5),(30117,0,181537,5),(30117,0,181538,5),(30117,0,181539,5),(30117,0,181540,5),(30117,0,181541,5),(30117,0,181542,5),(30117,0,181543,5),(30117,0,181544,5),
+(30117,0,181545,3),(30117,0,181546,3),(30117,0,181547,3),(30117,0,181548,3),(30117,0,181549,3),(30117,0,181550,3),(30117,0,181551,3),(30117,0,181552,3),(30117,0,181677,5),(30117,0,181678,6),(30117,0,181695,3),(30118,0,181510,5),
+(30118,0,181511,5),(30118,0,181512,5),(30118,0,181513,5),(30118,0,181514,5),(30118,0,181515,5),(30118,0,181516,5),(30118,0,181517,6),(30118,0,181518,6),(30118,0,181519,6),(30118,0,181520,6),(30118,0,181521,6),(30118,0,181522,6),
+(30118,0,181523,6),(30118,0,181524,6),(30118,0,181525,5),(30118,0,181526,5),(30118,0,181527,5),(30118,0,181528,5),(30118,0,181529,5),(30118,0,181530,5),(30118,0,181531,5),(30118,0,181533,5),(30118,0,181545,3),(30118,0,181546,3),
+(30118,0,181547,3),(30118,0,181548,3),(30118,0,181549,3),(30118,0,181550,3),(30118,0,181551,3),(30118,0,181552,3),(30118,0,181676,5),(30118,0,181678,6),(30118,0,181695,3),(30119,0,181510,5),(30119,0,181511,5),(30119,0,181512,5),
+(30119,0,181513,5),(30119,0,181514,5),(30119,0,181515,5),(30119,0,181516,5),(30119,0,181517,6),(30119,0,181518,6),(30119,0,181519,6),(30119,0,181520,6),(30119,0,181521,6),(30119,0,181522,6),(30119,0,181523,6),(30119,0,181524,6),
+(30119,0,181525,5),(30119,0,181526,5),(30119,0,181527,5),(30119,0,181528,5),(30119,0,181529,5),(30119,0,181530,5),(30119,0,181531,5),(30119,0,181532,3),(30119,0,181533,5),(30119,0,181534,3),(30119,0,181535,3),(30119,0,181536,3),
+(30119,0,181537,3),(30119,0,181538,3),(30119,0,181539,3),(30119,0,181540,3),(30119,0,181541,3),(30119,0,181542,3),(30119,0,181543,3),(30119,0,181544,3),(30119,0,181676,5),(30119,0,181677,3),(30119,0,181678,6);
+UPDATE `creature_template` SET UnitFlags=UnitFlags|256|33554432 WHERE entry=17293;
+
+UPDATE `creature_template_addon` SET `b2_1_pvp_state` = 16 WHERE  `entry` = 6299;
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` = 6299);
+UPDATE `creature_template_addon` SET `bytes1` = 0, `auras`= '7939 22766 8601' WHERE `entry` = 7110;
+
+UPDATE `game_event` SET `length` = '510' WHERE `entry` =29;
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------

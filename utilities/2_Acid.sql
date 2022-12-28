@@ -46,14 +46,4 @@ REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_in
 (3322401, 33224, 22, 0, 100, 1, 58, 2878, 0, 0, 0, 0, 41, 0, 0, 0, 12, 33220, 0, 30000, 28, 6, 62574, 0, 'YTDB - Q. A Blade Fit For A Champion'),
 (3322402, 33224, 22, 0, 100, 1, 58, 2879, 0, 0, 0, 0, 11, 62581, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Q. A Blade Fit For A Champion');
 
-REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
-(2286501, 22865, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 11, 39663, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Illidan''s Presence - Cast Summon Cosmetic Fel Fire on Spawn');
-
-REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`event_param5`,`event_param6`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
-('780401','7804','1','0','100','1','0','0','78000','78000','0','0','5','233','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Trenton Lighthammer - Set EMOTE_STATE_WORK_NOSHEATHE_MINING OOC'),
-('780402','7804','1','0','100','1','50000','50000','78000','78000','0','0','5','0','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Trenton Lighthammer - Set EMOTE_ONESHOT_NONE OOC'),
-('911901','9119','1','0','100','1','10000','10000','360000','360000','0','0','53','9006','0','0','1','0','0','0','0','0','0','0','YTDB(TBCDB) - Muigin - Bloodpetal Pest Infestation Event OOC (dbscripts_on_relay)'),
-('915701','9157','11','0','100','0','0','0','0','0','0','0','50','0','0','0','53','9007','0','0','0','0','0','0','YTDB(TBCDB) - Bloodpetal Pest - Set ReactState Passive, Bloodpetal Pest Infestation Event on Spawn (dbscripts_on_relay)'),
-('915702','9157','29','0','100','0','12000','12000','0','0','0','0','50','2','0','0','0','0','0','0','0','0','0','0','YTDB(TBCDB) - Bloodpetal Pest - Set ReactState Aggressive on Generic Timer');
-
-UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,7804,9119,9157,20666,21025,22865,22990,30366,32838,33211,33224);
+UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,20666,21025,22990,30366,32838,33211,33224);
