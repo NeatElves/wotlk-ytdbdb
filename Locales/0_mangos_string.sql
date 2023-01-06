@@ -70,7 +70,7 @@ UPDATE `mangos_string` SET `content_loc8` = 'Сообщения принимаю
 UPDATE `mangos_string` SET `content_loc8` = 'Сообщения отклоняются' WHERE `entry` = 64;
 UPDATE `mangos_string` SET `content_loc8` = 'Используемая библиотека скриптов: <Библиотека скриптов не загружена>' WHERE `entry` = 66;
 UPDATE `mangos_string` SET `content_loc8` = 'Глобальное уведомление: ' WHERE `entry` = 100;
-UPDATE `mangos_string` SET `content_loc8` = 'Карта: %u (%s) Зона: %u (%s) Область: %u (%s) Фаза: %u\nX: %f Y: %f Z: %f Ориентация: %f\nсетка[%u,%u]ячейка[%u,%u] ИНИнстанса: %u\n XЗоны: %f YЗоны: %f\nZОснования: %f ZПола: %f имеете данные Высот (Карта: %u КартаВ: %u)' WHERE `entry` = 101;
+UPDATE `mangos_string` SET `content_loc8` = 'Карта: %u (%s) Зона: %u (%s) Область: %u (%s) %s Фаза: %u\nX: %f Y: %f Z: %f Ориентация: %f\nсетка[%u,%u]ячейка[%u,%u] ИНИнстанса: %u\n XЗоны: %f YЗоны: %f\nZОснования: %f ZПола: %f имеете данные Высот (Карта: %u КартаВ: %u)' WHERE `entry` = 101;
 UPDATE `mangos_string` SET `content_loc8` = '%s уже телепортируется.' WHERE `entry` = 102;
 UPDATE `mangos_string` SET `content_loc8` = 'Вы можете призвать игрока в Ваше подземелье, только если он в Вашей группе, а Вы лидер группы.' WHERE `entry` = 103;
 UPDATE `mangos_string` SET `content_loc8` = 'Вы не можете отправиться к игроку в подземелье, потому что Вы сейчас в группе.' WHERE `entry` = 104;

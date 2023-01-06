@@ -36,9 +36,9 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `priority`, `command`
 # 531_temple_of_ahnqiraj.sql
 # condition ID YTDB
 SET @GROUP_ID := 5310000;
-UPDATE `spawn_group` SET `WorldState` = 12002 WHERE `Id` =@GROUP_ID+14;
-DELETE FROM conditions WHERE condition_entry=12002 AND type=42;
-INSERT INTO conditions(condition_entry,type,value1,value2,value3) VALUES (12002, 42, 71101, 0, 1);
+UPDATE `spawn_group` SET `WorldState` = 12010 WHERE `Id` =@GROUP_ID+14;
+DELETE FROM conditions WHERE condition_entry=12010 AND type=42;
+INSERT INTO conditions(condition_entry,type,value1,value2,value3) VALUES (12010, 42, 71101, 0, 1);
 
 # 543_hellfire_ramparts.sql
 # Equipment ID YTDB
