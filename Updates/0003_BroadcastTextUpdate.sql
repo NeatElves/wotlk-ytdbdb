@@ -3309,5 +3309,9 @@ UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14438 WHERE Id=32542;
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=14439 WHERE Id=32543;
 UPDATE broadcast_text SET ChatTypeID=3 WHERE Id=30718;
 
+-- https://youtu.be/_bsurq0NqIs?t=722
+UPDATE `broadcast_text` SET `ChatTypeID`= 7 WHERE `Id` = 11423; -- %s lets loose a massive attack.
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (11613,11614,11538); -- SlashCmd: 14 (MonsterYell) - Text: Invaders approaching from the south!
+
 -- 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
