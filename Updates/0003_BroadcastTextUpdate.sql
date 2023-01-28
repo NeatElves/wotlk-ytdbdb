@@ -3313,5 +3313,20 @@ UPDATE broadcast_text SET ChatTypeID=3 WHERE Id=30718;
 UPDATE `broadcast_text` SET `ChatTypeID`= 7 WHERE `Id` = 11423; -- %s lets loose a massive attack.
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (11613,11614,11538); -- SlashCmd: 14 (MonsterYell) - Text: Invaders approaching from the south!
 
+-- 4665_Naxx_Miscs.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `id` IN (10755,12195);
+
+-- 0637_Ras_Frostwhisper_random_yells.sql
+UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` = 6352; -- NO!
+UPDATE `broadcast_text` SET `ChatTypeId` = 1, `EmoteId1` = 5 WHERE `Id` = 6371; -- THIS CANNOT BE!!
+-- EmotesId is unused (not implemented, EmoteId1-3 are to be used!
+UPDATE `broadcast_text` SET `EmotesId` = 0, `EmoteId1` = 15 WHERE `Id` = 2313; -- "Anathera!" - EmotesId is unused EmoteId1 should be used
+UPDATE `broadcast_text` SET `EmotesId` = 0, `EmoteId1` = 1 WHERE `Id` = 16390;
+UPDATE `broadcast_text` SET `EmotesId` = 0, `EmoteId1` = 1 WHERE `Id` = 16391;
+UPDATE `broadcast_text` SET `EmotesId` = 0, `EmoteId1` = 1 WHERE `Id` = 16392;
+UPDATE `broadcast_text` SET `EmotesId` = 0, `EmoteId1` = 1 WHERE `Id` = 16393;
+UPDATE `broadcast_text` SET `EmotesId` = 0, `EmoteId1` = 1 WHERE `Id` = 16394;
+UPDATE `broadcast_text` SET `EmotesId` = 0, `EmoteId1` = 4 WHERE `Id` = 23207;
+
 -- 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
