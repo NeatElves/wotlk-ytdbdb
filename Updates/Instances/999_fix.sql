@@ -120,3 +120,20 @@ INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 # 580_sunwell_plateau.sql
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
 (72796, 201794, 580, 1, 1, 1694.95, 604.023, 28.1494, 5.95759, 0, 0, 0.162079, -0.986778, -30, -30, 100, 1);
+
+# 615_obsidian_sanctum.sql
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150000', 'The Obsidian Sanctum - 0');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150001', 'The Obsidian Sanctum - 1');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150002', 'The Obsidian Sanctum - 2');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150003', 'The Obsidian Sanctum - 3');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150004', 'The Obsidian Sanctum - 4');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150005', 'The Obsidian Sanctum - 5');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150006', 'The Obsidian Sanctum - 6');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150007', 'The Obsidian Sanctum - 7');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150008', 'The Obsidian Sanctum - 8');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150009', 'The Obsidian Sanctum - 9');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150010', 'The Obsidian Sanctum - 10');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150011', 'The Obsidian Sanctum - 11');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150012', 'The Obsidian Sanctum - 12');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150013', 'The Obsidian Sanctum - 13');
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('6150014', 'The Obsidian Sanctum - 14');

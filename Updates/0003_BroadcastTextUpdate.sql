@@ -3328,5 +3328,8 @@ UPDATE `broadcast_text` SET `EmotesId` = 0, `EmoteId1` = 1 WHERE `Id` = 16393;
 UPDATE `broadcast_text` SET `EmotesId` = 0, `EmoteId1` = 1 WHERE `Id` = 16394;
 UPDATE `broadcast_text` SET `EmotesId` = 0, `EmoteId1` = 4 WHERE `Id` = 23207;
 
+-- 4666_q.3909.sql
+UPDATE `broadcast_text` SET `ChatTypeID`=2 WHERE Id IN (4836,4768,4771);
+
 -- 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
