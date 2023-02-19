@@ -3397,3 +3397,7 @@ UPDATE `broadcast_text` SET `SoundEntriesID1`='0', `EmoteID1`='0' WHERE `Id`='52
 16020	No!
 */
 UPDATE `broadcast_text` SET `SoundEntriesID1`='10471', `EmoteID1`='5' WHERE `Id`='16020'; -- Thrall Sound
+
+-- 0673_baelgar_emote.sql
+-- baelgar summon emote
+UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` = 5283; -- %s begins to summon a lava spawn!
