@@ -40,27 +40,6 @@ UPDATE `spawn_group` SET `WorldState` = 12010 WHERE `Id` =@GROUP_ID+14;
 DELETE FROM conditions WHERE condition_entry=12010 AND type=42;
 INSERT INTO conditions(condition_entry,type,value1,value2,value3) VALUES (12010, 42, 71101, 0, 1);
 
-# 543_hellfire_ramparts.sql
-# Equipment ID YTDB
-SET @CGUID := 5430000; -- creatures
--- Worker Equipment
-UPDATE `creature` SET `equipment_id` = 2512 WHERE `guid` IN (@CGUID+16,@CGUID+17); -- Bonechewer Hungerer 17259
-UPDATE `creature` SET `equipment_id` = 4286 WHERE `guid` IN (@CGUID+24,@CGUID+25); -- Bonechewer Ravener 17264
-
-# 545_steamvault.sql
-# Equipment ID YTDB
-SET @CGUID := 5450000; -- creatures
--- Using nondefault weapon
-UPDATE `creature` SET `equipment_id` = 35 WHERE `guid` IN (@CGUID+21,@CGUID+22);
-
-# 548_serpentshrine_cavern.sql
-# Equipment ID YTDB
-SET @CGUID := 5480000; -- creatures
--- Greyheart Skulker - 1 dagger and 1 hammer
-UPDATE creature SET equipment_id=4774 WHERE guid IN (@CGUID+138,@CGUID+135,@CGUID+134,@CGUID+131);
--- Greyheart Nether-Mage/Tidecaller - 1 hammer
-UPDATE creature SET equipment_id=343 WHERE guid IN (@CGUID+119,@CGUID+95,@CGUID+93,@CGUID+110,@CGUID+108);
-
 # 556_sethekk_halls.sql
 # Gossip ID YTDB
 SET @CGUID := 5560000; -- creatures
@@ -81,11 +60,9 @@ SET @OGUID := 5600000; -- gameobjects
 DELETE FROM `gameobject` WHERE `guid` = @OGUID+186;
 
 # 568_zulaman.sql
-# Equipment ID YTDB
 # Event data YTDB
 SET @CGUID := 5680000; -- creatures
 SET @OGUID := 5680000; -- gameobjects
-UPDATE creature SET equipment_id=132 WHERE guid=@CGUID+104; -- Amanishi Guardian (starts holding a spear for gong event RP script)
 INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipment_id`, `spell_start`, `spell_end`, `event`) VALUES
 (@CGUID+254, 0, 21934, 0, 0, 0, 2); -- Zul'jin (Feast of Winter Veil)
 INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES

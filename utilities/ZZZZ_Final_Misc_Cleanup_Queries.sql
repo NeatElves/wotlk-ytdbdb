@@ -323,7 +323,21 @@ UPDATE `creature_ai_scripts` SET `creature_id` = '-104131' WHERE `id` =2861703;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-104132' WHERE `id` =2861704;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-104134' WHERE `id` =2861705;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-151328' WHERE `id` =1574406;
-
+UPDATE `creature_ai_scripts` SET `creature_id` = '-125878' WHERE `id` =2549603;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-125876' WHERE `id` =2549604;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-125879' WHERE `id` =2549605;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-125880' WHERE `id` =2549606;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-143329' WHERE `id` =2549607;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-143330' WHERE `id` =2549608;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-125869' WHERE `id` =2549609;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-125870' WHERE `id` =2549610;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-125871' WHERE `id` =2549611;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-118320' WHERE `id` =2549612;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-118316' WHERE `id` =2549613;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-125872' WHERE `id` =2549614;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-118318' WHERE `id` =2549615;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-118319' WHERE `id` =2549616;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-143332' WHERE `id` =2549617;
 
 # Finall_Spell_UP
 -- Classic -> WOTLK UNIT_NPC_FLAGS
