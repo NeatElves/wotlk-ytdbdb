@@ -1,10 +1,3 @@
--- ==============================
--- Creature Health and Mana Fixes
--- ==============================
-UPDATE creature SET curhealth=0;
-UPDATE creature SET curmana=0;
-#UPDATE `creature` SET `curmana`=0 WHERE `id` IN (SELECT `entry` FROM `creature_template` WHERE `RegenerateStats` & 8 != 0) AND `curmana` != 0;
-
 -- =========================================================================================================================================================
 -- =================                    APPLY LATEST ITEM NAMES AND REFERENCE NAMES TO LOOT / REFERENCE / VENDOR TABLES                    ================= 
 -- =========================================================================================================================================================
@@ -381,9 +374,9 @@ INSERT IGNORE INTO `creature_template_addon`
 SELECT
 `creature_template`.`DifficultyEntry1`,
 `creature_template_addon`.`mount`,
-`creature_template_addon`.`bytes1`,
-`creature_template_addon`.`b2_0_sheath`,
-`creature_template_addon`.`b2_1_pvp_state`,
+`creature_template_addon`.`stand_state`,
+`creature_template_addon`.`sheath_state`,
+`creature_template_addon`.`pvp_flags`,
 `creature_template_addon`.`emote`,
 `creature_template_addon`.`moveflags`,
 `creature_template_addon`.`auras`
@@ -396,9 +389,9 @@ INSERT IGNORE INTO `creature_template_addon`
 SELECT
 `creature_template`.`DifficultyEntry2`,
 `creature_template_addon`.`mount`,
-`creature_template_addon`.`bytes1`,
-`creature_template_addon`.`b2_0_sheath`,
-`creature_template_addon`.`b2_1_pvp_state`,
+`creature_template_addon`.`stand_state`,
+`creature_template_addon`.`sheath_state`,
+`creature_template_addon`.`pvp_flags`,
 `creature_template_addon`.`emote`,
 `creature_template_addon`.`moveflags`,
 `creature_template_addon`.`auras`
@@ -411,9 +404,9 @@ INSERT IGNORE INTO `creature_template_addon`
 SELECT
 `creature_template`.`DifficultyEntry3`,
 `creature_template_addon`.`mount`,
-`creature_template_addon`.`bytes1`,
-`creature_template_addon`.`b2_0_sheath`,
-`creature_template_addon`.`b2_1_pvp_state`,
+`creature_template_addon`.`stand_state`,
+`creature_template_addon`.`sheath_state`,
+`creature_template_addon`.`pvp_flags`,
 `creature_template_addon`.`emote`,
 `creature_template_addon`.`moveflags`,
 `creature_template_addon`.`auras`
@@ -438,8 +431,8 @@ SET
 `copy`.`SpeedRun`=`creature_template`.`SpeedRun`,
 `copy`.`SpeedWalk`=`creature_template`.`SpeedWalk`,
 `copy`.`Scale`=`creature_template`.`Scale`,
-`copy`.`MeleeBaseAttackTime`=`creature_template`.`MeleeBaseAttackTime`,
-`copy`.`RangedBaseAttackTime`=`creature_template`.`RangedBaseAttackTime`,
+#`copy`.`MeleeBaseAttackTime`=`creature_template`.`MeleeBaseAttackTime`,
+#`copy`.`RangedBaseAttackTime`=`creature_template`.`RangedBaseAttackTime`,
 `copy`.`DamageSchool`=`creature_template`.`DamageSchool`,
 `copy`.`SchoolImmuneMask`=`creature_template`.`SchoolImmuneMask`,
 #`copy`.`MinLootGold`=`creature_template`.`MinLootGold`,
@@ -465,8 +458,8 @@ SET
 `copy`.`SpeedRun`=`creature_template`.`SpeedRun`,
 `copy`.`SpeedWalk`=`creature_template`.`SpeedWalk`,
 `copy`.`Scale`=`creature_template`.`Scale`,
-`copy`.`MeleeBaseAttackTime`=`creature_template`.`MeleeBaseAttackTime`,
-`copy`.`RangedBaseAttackTime`=`creature_template`.`RangedBaseAttackTime`,
+#`copy`.`MeleeBaseAttackTime`=`creature_template`.`MeleeBaseAttackTime`,
+#`copy`.`RangedBaseAttackTime`=`creature_template`.`RangedBaseAttackTime`,
 `copy`.`DamageSchool`=`creature_template`.`DamageSchool`,
 `copy`.`SchoolImmuneMask`=`creature_template`.`SchoolImmuneMask`,
 #`copy`.`MinLootGold`=`creature_template`.`MinLootGold`,
@@ -492,8 +485,8 @@ SET
 `copy`.`SpeedRun`=`creature_template`.`SpeedRun`,
 `copy`.`SpeedWalk`=`creature_template`.`SpeedWalk`,
 `copy`.`Scale`=`creature_template`.`Scale`,
-`copy`.`MeleeBaseAttackTime`=`creature_template`.`MeleeBaseAttackTime`,
-`copy`.`RangedBaseAttackTime`=`creature_template`.`RangedBaseAttackTime`,
+#`copy`.`MeleeBaseAttackTime`=`creature_template`.`MeleeBaseAttackTime`,
+#`copy`.`RangedBaseAttackTime`=`creature_template`.`RangedBaseAttackTime`,
 `copy`.`DamageSchool`=`creature_template`.`DamageSchool`,
 `copy`.`SchoolImmuneMask`=`creature_template`.`SchoolImmuneMask`,
 #`copy`.`MinLootGold`=`creature_template`.`MinLootGold`,

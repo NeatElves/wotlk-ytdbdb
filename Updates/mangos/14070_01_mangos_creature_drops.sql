@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14069_01_mangos_addon_rename required_14070_01_mangos_creature_drops bit;

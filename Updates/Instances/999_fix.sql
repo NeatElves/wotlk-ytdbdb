@@ -20,9 +20,9 @@ INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `priority`, `command`,
 # 230_blackrock_depths.sql
 SET @OGUID := 2300000; -- gameobjects
 DELETE FROM `gameobject` WHERE `guid` = @OGUID+457;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
-(@OGUID+800, 190395, 230, 1, 1, 891.688, -175.735, -43.925, 1.21, 0, 0, 0.886709, -0.462328, -180, -180, 100, 1),
-(@OGUID+801, 190394, 230, 1, 1, 891.688, -175.735, -43.925, 1.21, 0, 0, 0.886709, -0.462328, -180, -180, 100, 1);
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
+(@OGUID+800, 190395, 230, 1, 1, 891.688, -175.735, -43.925, 1.21, 0, 0, 0.886709, -0.462328, -180, -180),
+(@OGUID+801, 190394, 230, 1, 1, 891.688, -175.735, -43.925, 1.21, 0, 0, 0.886709, -0.462328, -180, -180);
 
 # 309_zulgurub.sql
 # condition ID YTDB
@@ -95,5 +95,9 @@ INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 (@OGUID+30, 12); -- Laying Skeleton 03 (Hallow's End)
 
 # 580_sunwell_plateau.sql
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
-(72796, 201794, 580, 1, 1, 1694.95, 604.023, 28.1494, 5.95759, 0, 0, 0.162079, -0.986778, -30, -30, 100, 1);
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
+(72796, 201794, 580, 1, 1, 1694.95, 604.023, 28.1494, 5.95759, 0, 0, 0.162079, -0.986778, -30, -30);
+
+# 603_ulduar.sql
+SET @CGUID := 6030000; -- creatures
+UPDATE `creature` SET `spawndist` = '5' WHERE `guid` =@CGUID+1389;

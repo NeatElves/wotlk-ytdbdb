@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14066_01_mangos_reference_loot_template_names required_14067_01_mangos_addon_stand_state bit;

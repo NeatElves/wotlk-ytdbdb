@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14068_01_mangos_gameobject_data_split required_14069_01_mangos_addon_rename bit;
