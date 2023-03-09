@@ -48656,34 +48656,15 @@ ALTER TABLE creature DROP COLUMN DeathState;
 # 14071_01_mangos_spawn_data_equip.sql
 ALTER TABLE `creature_spawn_data_template` CHANGE `EquipmentId` `EquipmentId` MEDIUMINT(8) NOT NULL DEFAULT '-1';
 
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =126118 AND `Point` =1;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =74977 AND `Point` =1;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =74981 AND `Point` =1;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =65677 AND `Point` =1;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =66015 AND `Point` =1;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =6575 AND `Point` =1;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =5899 AND `Point` =4;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =5899 AND `Point` =1;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =127311 AND `Point` =3;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =62704 AND `Point` =1;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =63000 AND `Point` =1;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =65443 AND `Point` =1;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =16465 AND `Point` =1;
-UPDATE `creature_movement` SET `WaitTime` = '1' WHERE `Id` =16465 AND `Point` =10;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =27656 AND `Point` =1;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =27626 AND `Point` =1;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =797 AND `Point` =37;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =13533 AND `Point` =1;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =12056 AND `Point` =1;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =17895 AND `Point` =1;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =17895 AND `Point` =1;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =17895 AND `Point` =1;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =17897 AND `Point` =1;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =17897 AND `Point` =1;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =17897 AND `Point` =1;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =17898 AND `Point` =1;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =17898 AND `Point` =1;
-UPDATE `creature_movement_template` SET `WaitTime` = '1' WHERE `Entry` =17898 AND `Point` =1;
-UPDATE `waypoint_path` SET `WaitTime` = '1000' WHERE `PathId` =37005 AND `Point` =98;
+DELETE FROM command WHERE name = 'npc setdeathstate';
+UPDATE creature_movement SET WaitTime = 1 WHERE WaitTime = 0 AND ScriptId = 5;
+UPDATE creature_movement SET WaitTime = 1 WHERE WaitTime = 0 AND ScriptId = 6;
+UPDATE creature_movement_template SET WaitTime = 1 WHERE WaitTime = 0 AND ScriptId = 5;
+UPDATE creature_movement_template SET WaitTime = 1 WHERE WaitTime = 0 AND ScriptId = 6;
+UPDATE waypoint_path SET WaitTime = 1 WHERE WaitTime = 0 AND ScriptId = 5;
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (1971601,7945901,7946601,7946701,7948501,7952001,1534301);
+
+UPDATE creature_spawn_data_template SET EquipmentId = -1 WHERE EquipmentId = 0;
+UPDATE creature_spawn_data_template SET EquipmentId = 0 WHERE Entry = 20042;
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -97,7 +97,3 @@ INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 # 580_sunwell_plateau.sql
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
 (72796, 201794, 580, 1, 1, 1694.95, 604.023, 28.1494, 5.95759, 0, 0, 0.162079, -0.986778, -30, -30);
-
-# 603_ulduar.sql
-SET @CGUID := 6030000; -- creatures
-UPDATE `creature` SET `spawndist` = '5' WHERE `guid` =@CGUID+1389;
