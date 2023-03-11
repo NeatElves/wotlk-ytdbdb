@@ -1318,6 +1318,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 (@OGUID+108, 142144, 349, 959.936, -231.943, -49.4211, 5.86431, 0, 0, -0.207911, 0.978148, 86400, 86400), -- Ghost Mushroom
 (@OGUID+109, 142144, 349, 1038.12, -295.058, -71.9666, 5.61996, 0, 0, -0.325567, 0.945519, 86400, 86400); -- Ghost Mushroom
 
+-- INSERT INTO `gameobject_addon` (`guid`, `animprogress`, `state`) VALUES
+
 INSERT INTO `gameobject_spawn_entry` (`guid`, `entry`) VALUES
 (@OGUID+29, 1734), (@OGUID+29, 2040), -- Gold Vein, Mithril Deposit
 (@OGUID+30, 1734), (@OGUID+30, 2040), -- Gold Vein, Mithril Deposit
@@ -1333,6 +1335,17 @@ INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
 
 -- INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipment_id`, `spell_start`, `spell_end`, `event`) VALUES
 -- INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
+
+-- ============
+-- SPAWN GROUPS
+-- ============
+
+-- INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES
+-- INSERT INTO `spawn_group_entry` (`Id`, `Entry`, `MinCount`, `MaxCount`, `Chance`) VALUES
+-- INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`, `Chance`) VALUES
+-- INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+-- INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES
+-- INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`, `Comment`) VALUES
 
 -- =======
 -- POOLING
@@ -1521,10 +1534,6 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 -- INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
 INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(178905, 0, 10, 13696, 60000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'summon Noxxious Scion'),
-(178905, 0, 10, 13696, 60000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'summon Noxxious Scion'),
-(178905, 0, 10, 13696, 60000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'summon Noxxious Scion'),
-
 (178965, 0, 47, 3, 0, 0, 13716, 50, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Incantation of Celebras - Celebras interrupt channeled spell (Celebras Waiting 21916)'),
 (178965, 0, 9, @OGUID+25, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Incantation of Celebras - summon Celebras Blue Aura (178964)'),
 (178965, 1000, 0, 0, 0, 0, 0, 0, 0, 8949, 0, 0, 0, 0, 0, 0, 0, 'Incantation of Celebras - force Player to say'),

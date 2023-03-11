@@ -3334,8 +3334,9 @@ UPDATE `broadcast_text` SET `ChatTypeID`=2 WHERE Id IN (4836,4768,4771);
 -- 4139_TDB-0206_betrayed.sql
 UPDATE `broadcast_text` SET `Text1`='You dare! Now feel my wrath!' WHERE `Id`=4495;
 
--- 0656_script_texts_data_bct.sql
+-- 4733_TDB-0656_script_texts_data_bct.sql
 -- Diff some script_texts with broadcast_text
+-- wotlkmangos has ~3.5k more cases
 -- use other method then used in https://github.com/cmangos/tbc-db/commit/d3ee28a1fe9fe27eb8862e751e0944eb8bdb7760#r99870535
 -- SELECT CONCAT('UPDATE `broadcast_text` SET ',
 -- CASE WHEN A.`SoundEntriesID1` != B.`sound` THEN CONCAT('`SoundEntriesID1`=\'',B.`sound`,'\', ') ELSE '' END,
@@ -3398,6 +3399,6 @@ UPDATE `broadcast_text` SET `SoundEntriesID1`='0', `EmoteID1`='0' WHERE `Id`='52
 */
 UPDATE `broadcast_text` SET `SoundEntriesID1`='10471', `EmoteID1`='5' WHERE `Id`='16020'; -- Thrall Sound
 
--- 0673_baelgar_emote.sql
+-- 4731_TDB-0673_baelgar_emote.sql
 -- baelgar summon emote
 UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` = 5283; -- %s begins to summon a lava spawn!
