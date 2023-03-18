@@ -3402,3 +3402,9 @@ UPDATE `broadcast_text` SET `SoundEntriesID1`='10471', `EmoteID1`='5' WHERE `Id`
 -- 4731_TDB-0673_baelgar_emote.sql
 -- baelgar summon emote
 UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` = 5283; -- %s begins to summon a lava spawn!
+
+-- 0703_VDB-20210303085717_world.sql
+-- update to yell text for quests 5343 and 5341 - wrong its on accept next quest
+UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN (
+6554, -- The deeds are mine, brother! Soon you shall be out of my way for good! - already correct in tbcmangos
+6555); -- The fortune is mine, Alexi! Your end comes soon!
