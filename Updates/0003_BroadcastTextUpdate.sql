@@ -3408,3 +3408,9 @@ UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` = 5283; -- %s begins to 
 UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN (
 6554, -- The deeds are mine, brother! Soon you shall be out of my way for good! - already correct in tbcmangos
 6555); -- The fortune is mine, Alexi! Your end comes soon!
+
+-- 4756_q.8183.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `id` IN (10474,10537);
+
+-- q.1719
+UPDATE `broadcast_text` SET `ChatTypeID` = '6' WHERE `Id` =2354;
