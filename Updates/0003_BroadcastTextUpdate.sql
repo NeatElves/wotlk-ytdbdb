@@ -3416,7 +3416,7 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `id` IN (10474,10537);
 UPDATE `broadcast_text` SET `ChatTypeID` = '6' WHERE `Id` =2354;
 
 -- 4767_q.10998.sql
-UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (20773);
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (20773,21264);
 
 UPDATE `broadcast_text` SET `ChatTypeID` = 2, `SoundEntriesID1` = 431 WHERE `Id` =21420;
 UPDATE `broadcast_text` SET `ChatTypeID` = 2, `SoundEntriesID1` = 431 WHERE `Id` =21427;
