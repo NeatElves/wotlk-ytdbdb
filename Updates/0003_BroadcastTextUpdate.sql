@@ -5309,3 +5309,6 @@ UPDATE `broadcast_text` SET `ChatTypeID`=6 WHERE `Id`=7297;
 UPDATE `broadcast_text` SET `ChatTypeID`=6 WHERE `Id`=7296;
 
 UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id` IN (1452, 1517, 1518, 1522, 2124, 8240);
+
+-- yell instead of say for Thomas Yance 18672
+UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN ('19557','19558','19559');
