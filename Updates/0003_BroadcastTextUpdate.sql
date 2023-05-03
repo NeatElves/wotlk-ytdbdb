@@ -5312,3 +5312,7 @@ UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id` IN (1452, 1517, 1518, 1522
 
 -- yell instead of say for Thomas Yance 18672
 UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN ('19557','19558','19559');
+
+-- 4777_zeppelin_events.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (29545,35041,35039);
+UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` IN (24279);
