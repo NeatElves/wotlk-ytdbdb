@@ -3,8 +3,6 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 ('2315204','23152','6','0','100','0','0','0','0','0','0','0','1','20745','0','0','53','10134','0','0','0','0','0','0','YTDB(TBCDB) - Vagath - Yell and Start Relay Script on Death');
 
 REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
-(88801, 888, 11, 0, 100, 0, 0, 0, 0, 0, 0, 0, 18, 512, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Watcher Dodds - Set UnitFlag IMMUNE_TO_NPC on Spawn'),
-(88802, 888, 21, 0, 100, 0, 0, 0, 0, 0, 0, 0, 18, 512, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Watcher Dodds - Restore UnitFlag IMMUNE_TO_NPC on Reached Home'),
 (2066601, 20666, 30, 0, 100, 1, 5, 20845, 0, 0, 0, 0, 0, 0, 0, 0, 11, 35740, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Blade''s Edge - Orb Trigger 01 - Cast Holy Nova on Receive AI Event 5'),
 (2066602, 20666, 30, 491521, 100, 1, 5, 20845, 0, 0, 0, 0, 23, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Blade''s Edge - Orb Trigger 01 - Increment Phase on Receive AI Event 5 (Phase 1-14)'),
 (2066603, 20666, 30, 458751, 100, 1, 5, 20845, 0, 0, 0, 0, 22, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB(TBCDB) - Blade''s Edge - Orb Trigger 01 - Set Phase 4 on Receive AI Event 5 (Phase 16)'),
@@ -39,11 +37,7 @@ REPLACE INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_in
 # part of file 3_base_fixs.sql
 (3036651, 30366, 1, 0, 100, 0, 1000, 1000, 0, 0, 0, 0, 12, 30340, 0, 300000, 11, 56577, 0, 0, 0, 0, 0, 0, 'YTDB - Quest 13011'),
 # part of file 3_base_fixs.sql
-(3283851, 32838, 10, 0, 100, 0, 1, 5, 21600000, 28800000, 1, 0, 11, 61839, 7, 11, 53, 50003, 6, 0, 41, 3000, 0, 0, 'YTDB - NPC 32838'),
-#
-(3321101, 33211, 22, 0, 100, 1, 58, 2878, 0, 0, 0, 0, 11, 62537, 0, 0, 28, 6, 62574, 0, 41, 20000, 0, 0, 'YTDB - Q. A Blade Fit For A Champion'),
-(3321102, 33211, 22, 0, 100, 1, 58, 2879, 0, 0, 0, 0, 11, 62581, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Q. A Blade Fit For A Champion'),
-(3322401, 33224, 22, 0, 100, 1, 58, 2878, 0, 0, 0, 0, 41, 0, 0, 0, 12, 33220, 0, 30000, 28, 6, 62574, 0, 'YTDB - Q. A Blade Fit For A Champion'),
-(3322402, 33224, 22, 0, 100, 1, 58, 2879, 0, 0, 0, 0, 11, 62581, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - Q. A Blade Fit For A Champion');
+(3283851, 32838, 10, 0, 100, 0, 1, 5, 21600000, 28800000, 1, 0, 11, 61839, 7, 11, 53, 50003, 6, 0, 41, 3000, 0, 0, 'YTDB - NPC 32838');
 
-UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (888,20666,21025,22990,30366,32838,33211,33224);
+
+UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` IN (20666,21025,22990,30366,32838);
