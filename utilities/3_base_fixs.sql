@@ -127,3 +127,43 @@ UPDATE `creature_template` SET `DifficultyEntry1` = 0 WHERE `entry` IN (25740,25
 #DELETE FROM game_event_creature_data WHERE guid IN (18935,18937);
 #INSERT INTO game_event_creature_data (guid, event, `entry_id`) VALUES (18935,18,15103),(18937,18,15103),(18935,19,15102),(18937,19,15102),(18935,20,14991),(18937,20,14991),(18935,21,22013),(18937,21,22013),
 #(18935,30,30566),(18937,30,30567),(18935,42,34948),(18937,42,34950);
+
+# NPC AQ War
+#INSERT INTO game_event_creature SELECT guid, 123 FROM creature WHERE guid IN (27403,27421,27518,27524,27533,27583,27805,27834,27851);
+#INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `movementtype`) VALUES
+#(27403, 15747, 1, -5552.61, -2540.5, -56.0501, 6.01233, 900, 900, 20, 1),
+#(27421, 15750, 1, -6438.32, -3780.98, -58.7494, 4.83424, 900, 900, 20, 1),
+#(27518, 15753, 1, -7421.22, -3586.44, 9.84207, 1.19627, 900, 900, 20, 1),
+#(27524, 15753, 1, -7177.35, -3774.91, 8.46031, 4.79025, 900, 900, 20, 1),
+#(27533, 15753, 1, -4430.28, 3285.2, 12.3331, 4.83424, 900, 900, 20, 1),
+#(27583, 15753, 1, -7867.85, 1741.25, -0.224884, 0.5002, 900, 900, 20, 1),
+#(27805, 15753, 1, -6976.43, 1634.07, -1.2313, 4.22693, 900, 900, 20, 1),
+#(27834, 15806, 1, -3422.37, -1910.41, 95.1404, 2.24812, 900, 900, 20, 1),
+#(27851, 15812, 1, -2666.22, -1981.12, 97.9171, 2.91394, 900, 900, 20, 1);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15747 FROM `creature` WHERE `guid` IN (27403);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15815 FROM `creature` WHERE `guid` IN (27403);
+#UPDATE `creature` SET `id` = 0 WHERE `guid` IN (27403);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15750 FROM `creature` WHERE `guid` IN (27421);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15816 FROM `creature` WHERE `guid` IN (27421);
+#UPDATE `creature` SET `id` = 0 WHERE `guid` IN (27421);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15753 FROM `creature` WHERE `guid` IN (27518);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15817 FROM `creature` WHERE `guid` IN (27518);
+#UPDATE `creature` SET `id` = 0 WHERE `guid` IN (27518);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15753 FROM `creature` WHERE `guid` IN (27524);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15817 FROM `creature` WHERE `guid` IN (27524);
+#UPDATE `creature` SET `id` = 0 WHERE `guid` IN (27524);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15753 FROM `creature` WHERE `guid` IN (27533);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15817 FROM `creature` WHERE `guid` IN (27533);
+#UPDATE `creature` SET `id` = 0 WHERE `guid` IN (27533);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15753 FROM `creature` WHERE `guid` IN (27583);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15817 FROM `creature` WHERE `guid` IN (27583);
+#UPDATE `creature` SET `id` = 0 WHERE `guid` IN (27583);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15753 FROM `creature` WHERE `guid` IN (27805);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15817 FROM `creature` WHERE `guid` IN (27805);
+#UPDATE `creature` SET `id` = 0 WHERE `guid` IN (27805);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15806 FROM `creature` WHERE `guid` IN (27834);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15814 FROM `creature` WHERE `guid` IN (27834);
+#UPDATE `creature` SET `id` = 0 WHERE `guid` IN (27834);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15812 FROM `creature` WHERE `guid` IN (27851);
+#REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 15813 FROM `creature` WHERE `guid` IN (27851);
+#UPDATE `creature` SET `id` = 0 WHERE `guid` IN (27851);
