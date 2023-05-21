@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14073_01_mangos_creature_equip_drop required_14074_01_mangos_spell_list_conditions bit;
