@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14074_01_mangos_spell_list_conditions required_14075_01_mangos_creature_static_flags bit;
