@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14060_01_mangos_waypoint_path_name required_14062_01_mangos_eai_dbguid_support bit;

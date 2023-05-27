@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14076_01_mangos_hoverheight required_14077_01_mangos_trainer_ability bit;

@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14071_01_mangos_spawn_data_equip required_14072_01_mangos_string_id bit;

@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14065_01_mangos_aggro_range required_14066_01_mangos_reference_loot_template_names bit;

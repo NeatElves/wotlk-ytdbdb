@@ -8,9 +8,9 @@
 ####################################################################################################
 
 # need to be changed on each official DB/CORE release
-FULLDB_FILE_ZIP="YTDB_0.15.2_R664_cMaNGOS_R14060_RuDB_R72.sql.gz"
+FULLDB_FILE_ZIP="YTDB_0.15.3_R665_cMaNGOS_R14077_RuDB_R73.sql.gz"
 FULLDB_FILE=${FULLDB_FILE_ZIP%.gz}
-DB_TITLE="YTDB_0.15.2_R664"
+DB_TITLE="YTDB_0.15.3_R665"
 NEXT_MILESTONES="0.19 0.20"
 
 # internal use
@@ -78,6 +78,10 @@ DEV_UPDATES="NO"
 ## Define if AHBot SQL updates need to be applied (by default, assume the core is built without AHBot)
 ## Requires CORE_PATH to be set to a proper value. Set the variable to "YES" to import SQL updates.
 AHBOT="NO"
+
+## Define if the 'locales' directory for processing localization/multi-language SQL files needs to be used
+## Set the variable to "YES" to use the locales directory
+LOCALES="YES"
 
 ## Enjoy using the log
 LOGERRFILE="NO"
@@ -289,61 +293,85 @@ echo
 
 # Apply dbc changes (specific fixes to known wrong/missing data)
 echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/dbc/cmangos_fixes ..."
-for f in "${ADDITIONAL_PATH}Updates/mangos/base/dbc/cmangos_fixes/"*.sql
+for UPDATEFILE in ${ADDITIONAL_PATH}Updates/mangos/base/dbc/cmangos_fixes/*.sql
 do
-  echo "    Appending CMaNGOS DBC file fixes `basename $f` to database $DATABASE"
-  $MYSQL_COMMAND < $f
-  if [[ $? != 0 ]]
+  if [ -e "$UPDATEFILE" ]
   then
-    echo "ERROR: cannot apply $f"
-    exit 1
+      for UPDATE in ${ADDITIONAL_PATH}Updates/mangos/base/dbc/cmangos_fixes/*.sql
+      do
+          echo "    process update $UPDATE"
+          $MYSQL_COMMAND < $UPDATE
+          [[ $? != 0 ]] && exit 1
+      done
+      echo "  DBC changes applied"
+  else
+      echo "  No DBC changes to process"
   fi
+  break
 done
-echo "  DBC changes successfully applied"
 echo
 echo
 
 # Apply ScriptDev2 data
 echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/scriptdev2 ..."
-for f in "${ADDITIONAL_PATH}Updates/mangos/scriptdev2/"*.sql
+for UPDATEFILE in ${ADDITIONAL_PATH}Updates/mangos/scriptdev2/*.sql
 do
-  echo "    Appending SD2 file update `basename $f` to database $DATABASE"
-  $MYSQL_COMMAND < $f
-  if [[ $? != 0 ]]
+  if [ -e "$UPDATEFILE" ]
   then
-    echo "ERROR: cannot apply $f"
-    exit 1
+      for UPDATE in ${ADDITIONAL_PATH}Updates/mangos/scriptdev2/*.sql
+      do
+          echo "    process update $UPDATE"
+          $MYSQL_COMMAND < $UPDATE
+          [[ $? != 0 ]] && exit 1
+      done
+      echo "  ScriptDev2 applied"
+  else
+      echo "  No ScriptDev2 to process"
   fi
+  break
 done
-echo "  ScriptDev2 data successfully applied"
 echo
 echo
 
 # Apply acid_wotlk.sql
-echo "> Trying to apply ${ADDITIONAL_PATH}ACID/acid_wotlk.sql ..."
-$MYSQL_COMMAND < ${ADDITIONAL_PATH}ACID/acid_wotlk.sql
-if [[ $? != 0 ]]
-then
-  echo "ERROR: cannot apply ${ADDITIONAL_PATH}ACID/acid_wotlk.sql"
-  exit 1
-fi
-echo "  ACID successfully applied"
+echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/scriptdev2 ..."
+for UPDATEFILE in ${ADDITIONAL_PATH}ACID/*.sql
+do
+  if [ -e "$UPDATEFILE" ]
+  then
+      for UPDATE in ${ADDITIONAL_PATH}ACID/*.sql
+      do
+          echo "    process update $UPDATE"
+          $MYSQL_COMMAND < $UPDATE
+          [[ $? != 0 ]] && exit 1
+      done
+      echo "  ACID applied"
+  else
+      echo "  No ACID to process"
+  fi
+  break
+done
 echo
 echo
 
 # Apply cmangos utilites
 echo "> Trying to apply ${ADDITIONAL_PATH}utilities ..."
-for f in "${ADDITIONAL_PATH}utilities/"*.sql
+for UPDATEFILE in ${ADDITIONAL_PATH}utilities/*.sql
 do
-  echo "    Appending utilites file update `basename $f` to database $DATABASE"
-  $MYSQL_COMMAND < $f
-  if [[ $? != 0 ]]
+  if [ -e "$UPDATEFILE" ]
   then
-    echo "ERROR: cannot apply $f"
-    exit 1
+      for UPDATE in ${ADDITIONAL_PATH}utilities/*.sql
+      do
+          echo "    process update $UPDATE"
+          $MYSQL_COMMAND < $UPDATE
+          [[ $? != 0 ]] && exit 1
+      done
+      echo "  Utilites data applied"
+  else
+      echo "  No Utilites data to process"
   fi
+  break
 done
-echo "  Utilites data successfully applied"
 echo
 echo
 
@@ -614,61 +642,85 @@ echo
 
 # Apply dbc changes (specific fixes to known wrong/missing data)
 echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/base/dbc/cmangos_fixes ..."
-for f in "${ADDITIONAL_PATH}Updates/mangos/base/dbc/cmangos_fixes/"*.sql
+for UPDATEFILE in ${ADDITIONAL_PATH}Updates/mangos/base/dbc/cmangos_fixes/*.sql
 do
-  echo "    Appending CMaNGOS DBC file fixes `basename $f` to database $DATABASE"
-  $MYSQL_COMMAND < $f
-  if [[ $? != 0 ]]
+  if [ -e "$UPDATEFILE" ]
   then
-    echo "ERROR: cannot apply $f"
-    exit 1
+      for UPDATE in ${ADDITIONAL_PATH}Updates/mangos/base/dbc/cmangos_fixes/*.sql
+      do
+          echo "    process update $UPDATE"
+          $MYSQL_COMMAND < $UPDATE
+          [[ $? != 0 ]] && exit 1
+      done
+      echo "  DBC changes applied"
+  else
+      echo "  No DBC changes to process"
   fi
+  break
 done
-echo "  DBC changes successfully applied"
 echo
 echo
 
 # Apply ScriptDev2 data
 echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/scriptdev2 ..."
-for f in "${ADDITIONAL_PATH}Updates/mangos/scriptdev2/"*.sql
+for UPDATEFILE in ${ADDITIONAL_PATH}Updates/mangos/scriptdev2/*.sql
 do
-  echo "    Appending SD2 file update `basename $f` to database $DATABASE"
-  $MYSQL_COMMAND < $f
-  if [[ $? != 0 ]]
+  if [ -e "$UPDATEFILE" ]
   then
-    echo "ERROR: cannot apply $f"
-    exit 1
+      for UPDATE in ${ADDITIONAL_PATH}Updates/mangos/scriptdev2/*.sql
+      do
+          echo "    process update $UPDATE"
+          $MYSQL_COMMAND < $UPDATE
+          [[ $? != 0 ]] && exit 1
+      done
+      echo "  ScriptDev2 applied"
+  else
+      echo "  No ScriptDev2 to process"
   fi
+  break
 done
-echo "  ScriptDev2 data successfully applied"
 echo
 echo
 
 # Apply acid_wotlk.sql
-echo "> Trying to apply ${ADDITIONAL_PATH}ACID/acid_wotlk.sql ..."
-$MYSQL_COMMAND < ${ADDITIONAL_PATH}ACID/acid_wotlk.sql
-if [[ $? != 0 ]]
-then
-  echo "ERROR: cannot apply ${ADDITIONAL_PATH}ACID/acid_wotlk.sql"
-  exit 1
-fi
-echo "  ACID successfully applied"
+echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/scriptdev2 ..."
+for UPDATEFILE in ${ADDITIONAL_PATH}ACID/*.sql
+do
+  if [ -e "$UPDATEFILE" ]
+  then
+      for UPDATE in ${ADDITIONAL_PATH}ACID/*.sql
+      do
+          echo "    process update $UPDATE"
+          $MYSQL_COMMAND < $UPDATE
+          [[ $? != 0 ]] && exit 1
+      done
+      echo "  ACID applied"
+  else
+      echo "  No ACID to process"
+  fi
+  break
+done
 echo
 echo
 
 # Apply cmangos utilites
 echo "> Trying to apply ${ADDITIONAL_PATH}utilities ..."
-for f in "${ADDITIONAL_PATH}utilities/"*.sql
+for UPDATEFILE in ${ADDITIONAL_PATH}utilities/*.sql
 do
-  echo "    Appending utilites file update `basename $f` to database $DATABASE"
-  $MYSQL_COMMAND < $f
-  if [[ $? != 0 ]]
+  if [ -e "$UPDATEFILE" ]
   then
-    echo "ERROR: cannot apply $f"
-    exit 1
+      for UPDATE in ${ADDITIONAL_PATH}utilities/*.sql
+      do
+          echo "    process update $UPDATE"
+          $MYSQL_COMMAND < $UPDATE
+          [[ $? != 0 ]] && exit 1
+      done
+      echo "  Utilites data applied"
+  else
+      echo "  No Utilites data to process"
   fi
+  break
 done
-echo "  Utilites data successfully applied"
 echo
 echo
 

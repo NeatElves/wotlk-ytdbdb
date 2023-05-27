@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14062_01_mangos_eai_dbguid_support required_14063_01_mangos_battleground_reflooot bit;

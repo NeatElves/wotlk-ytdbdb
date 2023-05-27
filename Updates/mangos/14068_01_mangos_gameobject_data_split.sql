@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14067_01_mangos_addon_stand_state required_14068_01_mangos_gameobject_data_split bit;
