@@ -440,8 +440,7 @@ SET
 #`copy`.`VehicleTemplateId`=`creature_template`.`VehicleTemplateId`,
 `copy`.`MechanicImmuneMask`=`copy`.`MechanicImmuneMask`|`creature_template`.`MechanicImmuneMask`,
 `copy`.`MovementType`=`creature_template`.`MovementType`,
-`copy`.`InhabitType`=`creature_template`.`InhabitType`,
-`copy`.`VisibilityDistanceType`=`creature_template`.`VisibilityDistanceType`
+`copy`.`InhabitType`=`creature_template`.`InhabitType`
 WHERE
 `copy`.`Entry`=`creature_template`.`DifficultyEntry1`;
 UPDATE
@@ -467,8 +466,7 @@ SET
 #`copy`.`VehicleTemplateId`=`creature_template`.`VehicleTemplateId`,
 `copy`.`MechanicImmuneMask`=`copy`.`MechanicImmuneMask`|`creature_template`.`MechanicImmuneMask`,
 `copy`.`MovementType`=`creature_template`.`MovementType`,
-`copy`.`InhabitType`=`creature_template`.`InhabitType`,
-`copy`.`VisibilityDistanceType`=`creature_template`.`VisibilityDistanceType`
+`copy`.`InhabitType`=`creature_template`.`InhabitType`
 WHERE
 `copy`.`Entry`=`creature_template`.`DifficultyEntry2`;
 UPDATE
@@ -494,8 +492,7 @@ SET
 #`copy`.`VehicleTemplateId`=`creature_template`.`VehicleTemplateId`,
 `copy`.`MechanicImmuneMask`=`copy`.`MechanicImmuneMask`|`creature_template`.`MechanicImmuneMask`,
 `copy`.`MovementType`=`creature_template`.`MovementType`,
-`copy`.`InhabitType`=`creature_template`.`InhabitType`,
-`copy`.`VisibilityDistanceType`=`creature_template`.`VisibilityDistanceType`
+`copy`.`InhabitType`=`creature_template`.`InhabitType`
 WHERE
 `copy`.`Entry`=`creature_template`.`DifficultyEntry3`;
 

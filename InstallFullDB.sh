@@ -334,7 +334,7 @@ echo
 echo
 
 # Apply acid_wotlk.sql
-echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/scriptdev2 ..."
+echo "> Trying to apply ${ADDITIONAL_PATH}ACID ..."
 for UPDATEFILE in ${ADDITIONAL_PATH}ACID/*.sql
 do
   if [ -e "$UPDATEFILE" ]
@@ -683,7 +683,7 @@ echo
 echo
 
 # Apply acid_wotlk.sql
-echo "> Trying to apply ${ADDITIONAL_PATH}Updates/mangos/scriptdev2 ..."
+echo "> Trying to apply ${ADDITIONAL_PATH}ACID ..."
 for UPDATEFILE in ${ADDITIONAL_PATH}ACID/*.sql
 do
   if [ -e "$UPDATEFILE" ]
