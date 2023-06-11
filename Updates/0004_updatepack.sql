@@ -415,4 +415,5601 @@ UPDATE creature_template SET StaticFlags3=StaticFlags3|0x00000400 WHERE visibili
 UPDATE creature_template SET StaticFlags3=StaticFlags3|0x00000800 WHERE visibilityDistanceType=5;
 ALTER TABLE creature_template DROP COLUMN visibilityDistanceType;
 
+UPDATE `creature_template` SET `SpeedWalk` = 1 WHERE `Entry` IN (5982, 8299, 8300);
+UPDATE `creature_template` SET `SpeedWalk` = 1.6 WHERE `entry` = 8296;
+UPDATE `creature_template` SET `SpeedWalk` = 1.6 WHERE `entry` = 8297;
+UPDATE `creature_template` SET `SpeedWalk` = 1.11111 WHERE `entry` = 8298;
+UPDATE `creature_template` SET `SpeedWalk` = 1 WHERE `entry` = 8301;
+UPDATE `creature_template` SET `SpeedWalk` = 1.11111 WHERE `entry` = 8302;
+UPDATE `creature_template` SET `SpeedWalk` = 1 WHERE `entry` = 8303;
+UPDATE `creature_template` SET `SpeedWalk` = 1 WHERE `entry` = 8304;
+
+UPDATE `item_template` SET `minMoneyLoot`=5, `maxMoneyLoot`=15 WHERE `entry`=16883;
+
+UPDATE `creature_template` SET `InhabitType` = 4, `MinLevel` = 1, `MaxLevel` = 1, `NpcFlags` = 0, `UnitFlags` = 33554688, `SpeedWalk` = 1 WHERE `entry` = 13916;
+
+DELETE FROM creature_addon WHERE guid=6099;
+DELETE FROM creature_movement WHERE Id=6099;
+DELETE FROM game_event_creature WHERE guid=6099;
+DELETE FROM game_event_creature_data WHERE guid=6099;
+DELETE FROM creature_battleground WHERE guid=6099;
+DELETE FROM creature_linking WHERE guid=6099 OR master_guid=6099;
+DELETE FROM creature WHERE guid=6099;
+UPDATE creature SET spawndist = 0, MovementType = 0 WHERE guid=6087;
+DELETE FROM creature_movement WHERE id = 6087;
+
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8841;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8842;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8843;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8845;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8846;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8847;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8848;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8849;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8850;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8851;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8852;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8853;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8854;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8855;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8856;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8857;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8834;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8835;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8836;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8837;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8838;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8839;
+UPDATE `pool_pool` SET `description` = 'GO 123310,[73940,73941],map=1' WHERE `pool_id` = 8840;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8868;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8869;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8870;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8871;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8872;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8873;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8874;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8875;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8876;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8877;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8878;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8879;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8880;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8881;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8882;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8883;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8884;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8885;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8886;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8887;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8888;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8858;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8859;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8860;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8861;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8862;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8863;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8864;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8865;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8866;
+UPDATE `pool_pool` SET `description` = 'GO 123848,[123309,73941],map=1' WHERE `pool_id` = 8867;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8997;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9097;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9023;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8965;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9056;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8998;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9098;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9024;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8966;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9057;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8999;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9100;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9025;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8967;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9059;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9000;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9101;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9026;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8968;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9060;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9001;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9102;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9027;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8969;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9061;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9002;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9103;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9028;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8970;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9062;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9003;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9029;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8971;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9064;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9004;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8939;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9030;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8972;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9065;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9005;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8940;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9031;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8973;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9066;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9006;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8941;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9032;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8974;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9067;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9007;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8942;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9033;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8975;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9068;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9069;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9008;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8943;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9034;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8976;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9070;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9009;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9104;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8944;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9035;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8977;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9076;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9010;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9106;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8945;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9036;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8978;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9077;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9011;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9107;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8946;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9037;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8979;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9078;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9012;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9109;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8947;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9038;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8980;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9079;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9111;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8948;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9039;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8981;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9080;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9112;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8949;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9040;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8982;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8983;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9081;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9114;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8950;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9041;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8984;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9082;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9115;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8951;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9042;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8985;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9083;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9116;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8952;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9043;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8986;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9084;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9118;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8953;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9044;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8987;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9085;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9013;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9119;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8954;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9045;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8988;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9086;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9014;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9120;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8955;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9046;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8989;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9087;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9015;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9121;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8956;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9047;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8990;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9088;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9016;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8957;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9048;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8991;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9089;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9017;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8959;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9049;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8992;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9090;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9018;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8960;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9050;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8993;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9092;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9019;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8961;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9051;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8994;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9093;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9020;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8962;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9052;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8995;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9094;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9021;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8963;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9053;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8996;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9095;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9022;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 8964;
+UPDATE `pool_pool` SET `description` = 'GO 165658,[175404,324,2040,123309],map=0' WHERE `pool_id` = 9055;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6205;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6206;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6207;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6937;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6208;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6938;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6217;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6449;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6939;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6218;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6450;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6940;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6219;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6451;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6977;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6220;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6452;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6978;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6249;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6457;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6979;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6250;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6458;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6980;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6251;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6459;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6985;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6252;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6460;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6986;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6461;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6987;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6462;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6988;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6463;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6464;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6301;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6481;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6302;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6482;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6153;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6303;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6849;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6483;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6154;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6304;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6850;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6484;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6155;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6365;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6851;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6156;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6366;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6852;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6367;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6865;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6368;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6866;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6377;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6867;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6378;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6868;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6379;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6380;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6193;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6429;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6194;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6430;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6195;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6431;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6196;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=0' WHERE `pool_id` = 6432;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6723;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6445;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6911;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6573;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6724;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6446;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6912;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6574;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6729;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6447;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6575;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6730;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6448;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6576;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6731;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6577;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6732;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6578;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6753;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6579;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6754;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6580;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6755;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6597;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6756;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6598;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6757;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6599;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6600;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6758;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6261;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6759;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6262;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6760;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6263;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6821;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6264;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6822;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6823;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6824;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6617;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6618;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6619;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6537;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6620;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6538;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6633;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6539;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6634;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6540;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6635;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6561;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6636;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6562;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6653;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6885;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6563;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6654;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6886;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6564;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6655;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6887;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6565;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6656;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6888;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6566;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6721;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6909;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6567;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6722;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6910;
+UPDATE `pool_pool` SET `description` = 'GO 1732,[1733],map=1' WHERE `pool_id` = 6568;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7593;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7594;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7595;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7596;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7317;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7597;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7318;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7598;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7319;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7599;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7320;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7600;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7349;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7350;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7351;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7057;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7352;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7058;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7059;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7060;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7101;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7102;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7733;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7425;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7103;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7734;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7426;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7104;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7735;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7427;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7117;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7736;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7428;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7118;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7753;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7119;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7754;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7120;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7755;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7189;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7756;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7190;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7769;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7493;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7191;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7770;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7494;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7192;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7771;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7495;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7772;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=0' WHERE `pool_id` = 7496;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7533;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7211;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7534;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7212;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7535;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7536;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7701;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7702;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7703;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7704;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7705;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7397;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7706;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7398;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7707;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7399;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7708;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7400;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7473;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7474;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7475;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7476;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7209;
+UPDATE `pool_pool` SET `description` = 'GO 1735,[1733,1734,1732],map=1' WHERE `pool_id` = 7210;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=0' WHERE `pool_id` = 8813;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=0' WHERE `pool_id` = 8814;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=0' WHERE `pool_id` = 8815;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=0' WHERE `pool_id` = 8816;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=0' WHERE `pool_id` = 8817;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=0' WHERE `pool_id` = 8818;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=0' WHERE `pool_id` = 8819;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=0' WHERE `pool_id` = 8820;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=0' WHERE `pool_id` = 8821;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=0' WHERE `pool_id` = 8822;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=0' WHERE `pool_id` = 8823;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=0' WHERE `pool_id` = 8824;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8729;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8730;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8731;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8732;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8769;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8770;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8771;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8772;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8697;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8698;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8699;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8700;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8705;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8706;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8707;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8708;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8709;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8710;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8711;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8712;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8829;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8717;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8830;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8718;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8831;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8719;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8832;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8720;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8833;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8721;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8722;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8723;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8724;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8725;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8726;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8727;
+UPDATE `pool_pool` SET `description` = 'GO 175404,[2047,2040],map=1' WHERE `pool_id` = 8728;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8900;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8926;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8901;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8927;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8902;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8928;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8903;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8929;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8904;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8930;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8905;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8931;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8906;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8932;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8907;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8908;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8909;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8910;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8911;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8912;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8913;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8914;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8915;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8916;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8917;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8918;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8919;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8920;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8921;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8889;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8922;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8890;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8923;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8891;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8924;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8892;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8893;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8925;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8894;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8895;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8896;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8897;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8898;
+UPDATE `pool_pool` SET `description` = 'GO 177388,[123309,73941],map=1' WHERE `pool_id` = 8899;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10500;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10590;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10442;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10532;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10474;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10564;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10501;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10591;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10443;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10533;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10475;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10565;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10502;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10592;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10444;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10534;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10476;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10566;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10503;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10593;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10445;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10535;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10477;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10567;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10504;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10594;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10446;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10536;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10478;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10568;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10505;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10447;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10537;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10479;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10569;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10506;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10448;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10538;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10480;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10570;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10507;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10449;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10539;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10481;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10571;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10508;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10450;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10540;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10482;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10572;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10509;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10451;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10541;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10483;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10573;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10510;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10452;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10542;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10484;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10574;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10511;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10453;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10543;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10485;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10575;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10512;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10454;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10544;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10486;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10513;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10455;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10545;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10487;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10514;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10456;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10546;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10488;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10515;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10457;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10547;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10489;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10516;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10458;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10548;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10490;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10517;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10459;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10549;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10491;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10576;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10518;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10460;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10550;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10492;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10493;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10577;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10519;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10461;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10551;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10494;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10578;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10520;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10462;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10552;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10495;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10579;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10521;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10463;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10553;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10580;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10432;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10522;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10464;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10554;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10581;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10433;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10523;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10465;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10555;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10582;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10434;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10524;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10466;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10556;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10583;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10435;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10525;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10467;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10557;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10584;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10436;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10526;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10468;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10558;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10585;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10437;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10527;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10469;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10559;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10496;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10586;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10438;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10528;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10470;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10560;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10497;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10587;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10439;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10529;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10471;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10561;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10498;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10588;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10440;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10530;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10472;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10562;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10499;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10589;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10441;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10531;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10473;
+UPDATE `pool_pool` SET `description` = 'GO 181275,[181276],map=530' WHERE `pool_id` = 10563;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2796;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2497;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2557;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2200;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2647;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2349;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2738;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2439;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2828;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2529;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2589;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2232;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2679;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2381;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2465;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2770;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2860;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2621;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2706;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2407;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2797;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2498;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2558;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2201;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2648;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2350;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2739;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2440;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2829;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2530;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2590;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2233;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2680;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2382;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2466;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2771;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2861;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2259;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2622;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2707;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2408;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2409;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2798;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2499;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2559;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2202;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2649;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2351;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2740;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2441;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2830;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2531;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2591;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2234;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2681;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2383;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2467;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2772;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2862;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2260;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2623;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2708;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2410;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2799;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2500;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2560;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2203;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2650;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2352;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2741;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2442;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2831;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2532;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2592;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2235;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2682;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2384;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2468;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2773;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2863;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2171;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2261;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2624;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2709;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2411;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2800;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2501;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2561;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2204;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2651;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2353;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2742;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2443;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2832;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2533;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2593;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2236;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2683;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2469;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2774;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2864;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2172;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2710;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2412;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2801;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2502;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2562;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2205;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2652;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2354;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2743;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2444;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2833;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2534;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2594;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2684;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2470;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2775;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2865;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2173;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2322;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2711;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2712;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2413;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2802;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2503;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2563;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2206;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2653;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2355;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2744;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2445;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2834;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2535;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2595;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2685;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2471;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2776;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2323;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2713;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2414;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2803;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2504;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2564;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2207;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2654;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2356;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2745;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2446;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2835;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2536;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2596;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2239;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2687;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2472;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2777;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2324;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2714;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2415;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2804;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2505;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2565;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2208;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2655;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2357;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2746;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2447;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2836;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2537;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2597;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2688;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2473;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2778;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2325;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2326;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2715;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2416;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2805;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2506;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2566;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2209;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2656;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2358;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2747;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2448;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2837;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2538;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2598;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2241;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2689;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2474;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2779;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2177;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2327;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2716;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2417;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2806;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2507;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2567;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2657;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2359;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2748;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2449;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2838;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2539;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2599;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2242;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2385;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2690;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2475;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2780;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2178;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2625;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2328;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2717;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2418;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2807;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2508;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2568;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2211;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2658;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2360;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2749;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2450;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2839;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2540;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2600;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2243;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2386;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2691;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2476;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2781;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2626;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2329;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2718;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2419;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2808;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2509;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2569;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2212;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2659;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2361;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2750;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2451;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2840;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2541;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2601;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2244;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2387;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2692;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2477;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2782;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2866;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2627;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2628;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2330;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2719;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2420;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2809;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2510;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2570;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2213;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2660;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2362;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2751;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2452;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2841;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2542;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2602;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2245;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2388;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2693;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2478;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2783;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2867;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2181;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2629;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2331;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2720;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2421;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2810;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2511;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2571;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2214;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2661;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2363;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2752;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2453;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2842;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2543;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2603;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2389;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2694;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2479;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2784;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2868;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2630;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2332;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2721;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2422;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2811;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2512;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2572;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2215;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2662;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2364;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2753;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2454;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2843;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2544;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2604;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2390;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2695;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2480;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2785;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2869;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2631;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2333;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2722;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2423;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2812;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2513;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2573;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2216;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2663;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2365;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2754;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2455;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2844;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2605;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2391;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2696;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2481;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2870;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2185;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2632;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2334;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2723;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2424;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2813;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2514;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2574;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2664;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2366;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2755;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2456;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2845;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2606;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2392;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2697;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2482;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2871;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2633;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2335;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2724;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2425;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2814;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2515;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2575;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2218;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2665;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2367;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2756;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2457;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2846;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2607;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2393;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2698;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2483;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2872;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2187;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2634;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2336;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2725;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2426;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2815;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2516;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2576;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2666;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2368;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2757;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2458;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2847;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2608;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2394;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2699;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2484;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2873;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2545;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2635;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2337;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2726;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2427;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2816;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2517;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2577;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2667;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2369;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2758;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2459;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2848;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2246;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2609;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2395;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2700;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2485;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2874;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2546;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2636;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2338;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2727;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2428;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2817;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2518;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2578;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2668;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2370;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2759;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2460;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2849;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2247;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2610;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2396;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2701;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2486;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2875;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2547;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2190;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2637;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2339;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2728;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2429;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2818;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2519;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2579;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2222;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2669;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2371;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2760;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2461;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2850;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2611;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2397;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2702;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2786;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2487;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2876;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2548;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2638;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2340;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2729;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2430;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2819;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2520;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2580;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2223;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2670;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2372;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2761;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2462;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2851;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2249;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2612;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2398;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2703;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2787;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2488;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2877;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2549;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2639;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2341;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2730;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2431;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2820;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2521;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2581;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2671;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2373;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2762;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2463;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2852;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2250;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2613;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2399;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2704;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2788;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2489;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2878;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2879;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2550;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2193;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2640;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2342;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2731;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2432;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2821;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2522;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2582;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2225;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2672;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2374;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2763;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2464;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2853;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2251;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2614;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2400;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2705;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2789;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2490;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2880;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2551;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2641;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2343;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2732;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2433;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2822;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2523;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2583;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2226;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2673;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2375;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2764;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2854;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2615;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2401;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2790;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2491;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2492;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2881;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2552;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2642;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2344;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2733;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2434;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2823;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2524;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2584;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2227;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2674;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2376;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2765;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2855;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2253;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2616;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2402;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2791;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2493;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2553;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2643;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2345;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2734;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2435;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2824;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2525;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2585;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2675;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2377;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2766;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2856;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2254;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2617;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2403;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2792;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2494;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2554;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2197;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2644;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2346;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2735;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2436;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2825;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2526;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2586;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2676;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2378;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2767;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2857;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2618;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2404;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2793;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2495;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2555;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2645;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2347;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2736;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2437;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2826;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2527;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2587;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2230;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2677;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2379;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2768;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2858;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2256;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2619;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2405;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2794;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2496;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2556;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2199;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2646;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2348;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2737;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2438;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2827;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2528;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2588;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2231;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2678;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2380;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2769;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2859;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2257;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2620;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2406;
+UPDATE `pool_pool` SET `description` = 'GO 181555,181557 map=530' WHERE `pool_id` = 2795;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1584;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1950;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1436;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1526;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1628;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2030;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1468;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1558;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1772;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2164;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1372;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2258;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1494;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1585;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1951;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1437;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1527;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1629;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2051;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1469;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1559;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1773;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2165;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1373;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1495;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1586;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1952;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1438;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1528;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1630;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2052;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1470;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1560;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2166;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1374;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1496;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1587;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1953;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1439;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1529;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1635;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2053;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1471;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1561;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1375;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1497;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1588;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1954;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1440;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1530;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1636;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2054;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1472;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1562;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1376;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2262;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1498;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1499;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1589;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1959;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1441;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1531;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1637;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1343;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2063;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2237;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1473;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1563;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1377;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1500;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1590;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1960;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1442;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1532;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1638;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2064;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2238;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1474;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1564;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2174;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1378;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1398;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1501;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1595;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1961;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1443;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1533;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1639;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2065;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1475;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1565;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2175;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1379;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1399;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1502;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1596;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1962;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1444;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1534;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1640;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2066;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2240;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1476;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1566;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1774;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2176;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1380;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1400;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1503;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1597;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1963;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1445;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1535;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1641;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2067;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1477;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1567;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1775;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1381;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1401;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1402;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1504;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1598;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1964;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2210;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1446;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1536;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1642;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2068;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1478;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1568;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1776;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1382;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1403;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1505;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1599;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1965;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1447;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1537;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1683;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1349;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2069;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1479;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1569;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1777;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2179;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1383;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1384;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1404;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1506;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1600;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1966;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1448;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1538;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1684;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2070;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1480;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1778;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2180;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1385;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1405;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1507;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1601;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1979;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1449;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1539;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1685;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2095;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1481;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1791;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1386;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1406;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1508;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1602;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1980;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1450;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1540;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1686;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2096;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1482;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1792;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2182;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1387;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1407;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1509;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1603;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1981;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1451;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1541;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1687;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2097;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1483;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1793;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2183;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2184;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1388;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1408;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1510;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1604;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1982;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1452;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1542;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1688;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2098;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1484;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1794;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1389;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1409;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1511;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1605;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1987;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2217;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1453;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1543;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1689;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2115;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1485;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1815;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2186;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1390;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1410;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1512;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1606;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1988;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1454;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1544;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1690;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2116;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1486;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1570;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1816;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1391;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1411;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1513;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1607;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1989;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2219;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1455;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1545;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1703;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2117;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1487;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1571;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1817;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2188;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1392;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1412;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1514;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1608;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1990;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2220;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1456;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1546;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1704;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2118;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1488;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1572;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1818;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2189;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1393;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1413;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1515;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1609;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2003;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2221;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1457;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1547;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1705;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2155;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1489;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1573;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1831;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1394;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1414;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1516;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1610;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2004;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1458;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1548;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1706;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2156;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2248;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1574;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1832;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1833;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2191;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1395;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1427;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1517;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1611;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2005;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1459;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1549;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1711;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2157;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1575;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1834;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2192;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1396;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1428;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1518;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1612;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2006;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2224;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1460;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1550;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1712;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1363;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1576;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1939;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1397;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1429;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1519;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1613;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2011;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1461;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1551;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1713;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1365;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1577;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1940;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2194;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1430;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1520;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1614;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2012;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1462;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1552;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1714;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1366;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2252;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1578;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1941;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2195;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1431;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1521;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1615;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2013;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1463;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1553;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1743;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1367;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1579;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1942;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2196;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1432;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1522;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1616;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2014;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2228;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1464;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1554;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1744;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1368;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1490;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1580;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1947;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1433;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1523;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1617;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2027;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2229;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1465;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1555;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1745;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1369;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2255;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1491;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1581;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1582;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1948;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2198;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1434;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1524;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1618;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2028;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1466;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1556;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1746;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2158;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1370;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1492;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1583;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1949;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1435;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1525;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1627;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2029;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1467;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1557;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1771;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 2163;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1371;
+UPDATE `pool_pool` SET `description` = 'GO 181556,181569,181557 map=530' WHERE `pool_id` = 1493;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3214;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2886;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3304;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2976;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3394;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3066;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3156;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3246;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2918;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3336;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3008;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3098;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3272;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3362;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3034;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3124;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3452;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3453;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3215;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2887;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3305;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2977;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3395;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3067;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3157;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3247;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2919;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3337;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3009;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3099;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3273;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3363;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3035;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3125;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3454;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3216;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2888;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3306;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2978;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3396;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3068;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3158;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3248;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2920;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3338;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3010;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3100;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3274;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2946;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3364;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3036;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3126;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3455;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3217;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2889;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3307;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2979;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3397;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3069;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3159;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3249;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2921;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3339;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3011;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3101;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3275;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2947;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3365;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3037;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3127;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3128;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3456;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3218;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2890;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3308;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2980;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3398;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3070;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3160;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3250;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2922;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3340;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3012;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3102;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3186;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3276;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2948;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3366;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3038;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3129;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3457;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3219;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2891;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3309;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2981;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3399;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3071;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3161;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3251;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2923;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3341;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3013;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3103;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3187;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3277;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2949;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3367;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3039;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3130;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3458;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3220;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2892;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3310;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2982;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3400;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3072;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3162;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3252;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2924;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3342;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3014;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3426;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3104;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3188;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3278;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2950;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3368;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3040;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3131;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3459;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3221;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2893;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3311;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2983;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3401;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3073;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3163;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3253;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2925;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3343;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3015;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3427;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3105;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3189;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3279;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2951;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3369;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3041;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3132;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3460;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3222;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2894;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3312;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2984;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3402;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3074;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3164;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3254;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2926;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3344;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3016;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3428;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3190;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3280;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2952;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3370;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3042;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3133;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3461;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3223;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2895;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3313;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2985;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3403;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3075;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3165;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3255;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2927;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3345;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3017;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3429;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3191;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3281;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2953;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3371;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3043;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3134;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3462;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3224;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2896;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3314;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2986;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3404;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3076;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3166;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3256;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2928;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3018;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3430;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3192;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3282;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2954;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3372;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3044;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3045;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3135;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3225;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2897;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3315;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2987;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3405;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3077;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3167;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3257;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2929;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3019;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3431;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3193;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3283;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2955;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3373;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3046;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3136;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3226;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2898;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3316;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2988;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3406;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3078;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3168;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3258;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2930;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3020;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3432;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3194;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3284;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2956;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3374;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3047;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3137;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3227;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2899;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3317;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2989;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3407;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3079;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3169;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3259;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2931;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3021;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3433;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3195;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3285;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2957;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3375;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3048;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3138;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3228;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2900;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3318;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2990;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3408;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3080;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3170;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3260;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2932;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3022;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3106;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3434;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3196;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3286;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2958;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3376;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3377;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3049;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3139;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3229;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2901;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3319;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2991;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3409;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3081;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3171;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3261;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2933;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3023;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3107;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3435;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3197;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3287;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2959;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3378;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3050;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3140;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3230;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2902;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3320;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2992;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3410;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3082;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3172;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3262;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3346;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2934;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3024;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3108;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3436;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3198;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3288;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2960;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3379;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3051;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3141;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3231;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2903;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3321;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2993;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3411;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3083;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3173;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3263;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3347;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2935;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3025;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3109;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3437;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3199;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3289;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2961;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2962;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3380;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3052;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3142;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3232;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2904;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3322;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2994;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3412;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3084;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3174;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3264;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3348;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2936;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3110;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3438;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3200;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3290;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2963;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3381;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3053;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3143;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3233;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2905;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3323;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2995;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3413;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3085;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3175;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3265;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3349;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2937;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3111;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3439;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3201;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3291;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2964;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3382;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3054;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3144;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3234;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2906;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3324;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2996;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3414;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3086;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3176;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3350;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2938;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3112;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3440;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3202;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3292;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2965;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3383;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3055;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3145;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3235;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2907;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3325;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2997;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3415;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3087;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3177;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3351;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2939;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3113;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3441;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3203;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3293;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3294;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2966;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3384;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3056;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3146;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3236;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2908;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3326;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2998;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3416;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3088;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3178;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3352;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2940;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3114;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3442;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3204;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3295;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2967;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3385;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3057;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3147;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3237;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2909;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3327;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2999;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3417;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3089;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3179;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3353;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2941;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3115;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3443;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3205;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3296;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2968;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3386;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3058;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3148;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3238;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2910;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3328;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3000;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3418;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3090;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3180;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3354;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2942;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3026;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3116;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3444;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3206;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3297;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2969;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3387;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3059;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3149;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3239;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2911;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3329;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3001;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3419;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3091;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3181;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3355;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2943;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3027;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3117;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3445;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3207;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3298;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2970;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3388;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3060;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3150;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3240;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2912;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3330;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3002;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3420;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3092;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3182;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3266;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3356;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2944;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3028;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3118;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3446;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3208;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3299;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2971;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3389;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3061;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3151;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3241;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2913;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3331;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3003;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3421;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3093;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3183;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3267;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3357;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2945;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3029;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3119;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3447;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3209;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2882;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3300;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2972;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3390;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3062;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3152;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3242;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2914;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3332;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3004;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3422;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3094;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3184;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3268;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3358;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3030;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3120;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3448;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3210;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3211;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2883;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3301;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2973;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3391;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3063;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3153;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3243;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2915;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3333;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3005;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3423;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3095;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3185;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3269;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3359;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3031;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3121;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3449;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3212;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2884;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3302;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2974;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3392;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3064;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3154;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3244;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2916;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3334;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3006;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3424;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3096;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3270;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3360;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3032;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3122;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3450;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3213;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2885;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3303;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2975;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3393;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3065;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3155;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3245;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 2917;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3335;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3007;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3425;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3097;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3271;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3361;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3033;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3123;
+UPDATE `pool_pool` SET `description` = 'GO 189978,189979 map=571' WHERE `pool_id` = 3451;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4616;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3870;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4288;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3542;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3960;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4378;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3632;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4050;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3722;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4552;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4140;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3812;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4642;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3484;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4314;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3902;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4733;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3986;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3574;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4404;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4076;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3664;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4494;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3748;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4166;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4584;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3838;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4256;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3510;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4674;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3928;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4346;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3600;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4765;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4018;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4436;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3690;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4108;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4526;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3780;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4198;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4617;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3871;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4289;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3543;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3961;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4379;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3633;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4051;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3723;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4553;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4141;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3813;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4643;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3485;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4315;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3903;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4734;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3987;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3575;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4405;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4077;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3665;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4495;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3749;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4167;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4585;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3839;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4257;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3511;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4675;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3929;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4347;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3601;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4766;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4019;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4437;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3691;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4109;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4527;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3781;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4199;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4200;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4618;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3872;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4290;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3544;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3962;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4380;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3634;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4052;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3724;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4554;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4142;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4226;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3814;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4644;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3486;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4316;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3904;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4735;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3988;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3576;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4406;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4078;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4496;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3750;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4168;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4586;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3840;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4258;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3512;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4676;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3930;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4348;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3602;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4767;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4020;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4438;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3692;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4110;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4528;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3782;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4201;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4619;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3873;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4291;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3545;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3963;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4381;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3635;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4053;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3725;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4555;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4143;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4227;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3815;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4645;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3487;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4317;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3905;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4736;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3989;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3577;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4407;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4079;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4497;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3751;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4169;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4587;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3841;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4259;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3513;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4677;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3931;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4349;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3603;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4768;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4021;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4439;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3693;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4111;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4529;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3783;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4202;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4620;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3874;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4292;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3546;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3964;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4382;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3636;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4466;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4054;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3726;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4556;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4144;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4228;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3816;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4646;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3488;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4318;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4737;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3990;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3578;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4408;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4080;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4498;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3752;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4170;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4588;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3842;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4260;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3514;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4678;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3932;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4350;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3604;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4769;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4022;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4440;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3694;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4112;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4530;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3784;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3785;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4203;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4621;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3875;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4293;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3547;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3965;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4383;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3637;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4467;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4055;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3727;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4557;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4145;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4229;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3817;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4647;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3489;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4319;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4738;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3991;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3579;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4409;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4081;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4499;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3753;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4171;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4589;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3843;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4261;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3515;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4679;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3933;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4351;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3605;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4770;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4023;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4441;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3695;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4113;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4531;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3786;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4204;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4622;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3876;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4706;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4294;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3548;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3966;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4384;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3638;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4468;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4056;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3728;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4558;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4230;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3818;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4648;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3490;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4320;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4739;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3992;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3580;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4410;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4082;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4500;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3754;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4172;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4590;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3844;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4262;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3516;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4680;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3934;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4352;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3606;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4771;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4024;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4442;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3696;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4114;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4532;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4533;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3787;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4205;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4623;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3877;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4707;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4295;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3549;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3967;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4385;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3639;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4469;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4057;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3729;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4559;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4231;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3819;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4649;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3491;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4321;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4740;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3993;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3581;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4411;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4083;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4501;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3755;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4173;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4591;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3845;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4263;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3517;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4681;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3935;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4353;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3607;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4772;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4025;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4443;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3697;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4115;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4534;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3788;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4206;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4624;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3878;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4708;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4296;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3550;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3968;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3640;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4470;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4058;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3730;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4560;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4232;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3820;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4650;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3492;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4322;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4741;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3994;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3582;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4412;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3666;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4084;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4502;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3756;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4174;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4592;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3846;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4264;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3518;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4682;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3936;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4354;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3608;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4773;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4026;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4444;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3698;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4116;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4117;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4535;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3789;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4207;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4625;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3879;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4709;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4297;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3551;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3969;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3641;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4471;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4059;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3731;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4561;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4233;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3821;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4651;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3493;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4323;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4742;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3995;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3583;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4413;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3667;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4085;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4503;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3757;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4175;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4593;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3847;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4265;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3519;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4683;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3937;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4355;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3609;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4774;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4027;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4445;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3699;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4118;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4536;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3790;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4208;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3880;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4710;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4298;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3552;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3970;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3642;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4472;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4060;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3732;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4562;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4234;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3822;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4652;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3906;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3494;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4324;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4743;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3996;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3584;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4414;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3668;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4086;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4504;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3758;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4176;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4594;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3848;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4266;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3520;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4684;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3938;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4356;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3610;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4775;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4028;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4446;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3700;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4119;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4537;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3791;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4209;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3463;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3881;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4711;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4299;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3553;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3971;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3643;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4473;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4061;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3733;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4563;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4235;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3823;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4653;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3907;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3495;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4325;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4744;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3997;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3585;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4415;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3669;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4087;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4505;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3759;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4177;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4595;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3849;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4267;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3521;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4685;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3939;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4357;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3611;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4776;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4029;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4447;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3701;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3702;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4120;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4538;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3792;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4210;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3464;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3882;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4712;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4300;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3554;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3972;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3644;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4474;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4062;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4146;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3734;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4564;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4236;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3824;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4654;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3908;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3496;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4326;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4745;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3998;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4416;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3670;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4088;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4506;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3760;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4178;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4596;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3850;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4268;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3522;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4686;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3940;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4358;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3612;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4777;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4030;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4448;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3703;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4121;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4539;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3793;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4211;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3465;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3883;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4713;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4301;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3555;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3973;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3645;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4475;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4063;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4147;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3735;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4565;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4237;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3825;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4655;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3909;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3497;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4327;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4746;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3999;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4417;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3671;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4089;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4507;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3761;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4179;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4597;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3851;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4269;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3523;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4687;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3941;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4359;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3613;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4778;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4031;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4449;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4450;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3704;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4122;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4540;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3794;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4212;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3466;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3884;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4714;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4302;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3556;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4386;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3974;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3646;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4476;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4064;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4148;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3736;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4566;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4238;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4656;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3910;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3498;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4328;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4747;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4000;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4418;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3672;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4090;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4508;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3762;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4180;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4598;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3852;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4270;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3524;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4688;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3942;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4360;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3614;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4779;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4032;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4451;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3705;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4123;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4541;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3795;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4213;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3467;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3885;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4715;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4303;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3557;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4387;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3975;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3647;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4477;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4065;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4149;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3737;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4567;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4239;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4657;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3911;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3499;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4329;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4748;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4001;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4419;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3673;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4091;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4509;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3763;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4181;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4599;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3853;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4271;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3525;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4689;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3943;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4361;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3615;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4780;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4033;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4034;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4452;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3706;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4124;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4542;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3796;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4626;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4214;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3468;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3886;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4716;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4304;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3558;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4388;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3976;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3648;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4478;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4150;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3738;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4568;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4240;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4658;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3912;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3500;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4330;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4749;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4002;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4420;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3674;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4092;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4510;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3764;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4182;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4600;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3854;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4272;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3526;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4690;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3944;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4362;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3616;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4781;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4035;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4453;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3707;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4125;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4543;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3797;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4627;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4215;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3469;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3887;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4717;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4305;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3559;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4389;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3977;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3649;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4479;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4151;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3739;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4569;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4241;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4659;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3913;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3501;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4331;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4750;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4003;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4421;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3675;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4093;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4511;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3765;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4183;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4601;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3855;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4273;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3527;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4691;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3945;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4363;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3617;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4782;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4036;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4454;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3708;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4126;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4544;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3798;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4628;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4216;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3470;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3888;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4718;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3560;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4390;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3978;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3650;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4480;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4152;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3740;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4570;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4242;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4660;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3914;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3502;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4332;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3586;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4751;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4004;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4422;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3676;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4094;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4512;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3766;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4184;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4602;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3856;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4274;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3528;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4692;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3946;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4364;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3618;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3619;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4037;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4455;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3709;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4127;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4545;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3799;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4629;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4217;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3471;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3889;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4719;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3561;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4391;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3979;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3651;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4481;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4153;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3741;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4571;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4243;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4661;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3915;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3503;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4333;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3587;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4752;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4005;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4423;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3677;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4095;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4513;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3767;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4185;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4603;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3857;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4275;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3529;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4693;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3947;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4365;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3620;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4038;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4456;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3710;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4128;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3800;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4630;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4218;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3472;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3890;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4720;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3562;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4392;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3980;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3652;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4482;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4154;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3742;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4572;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3826;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4244;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4662;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3916;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3504;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4334;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3588;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4753;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4006;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4424;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3678;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4096;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4514;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3768;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4186;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4604;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3858;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4276;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3530;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4694;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3948;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4366;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4367;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3621;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4039;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4457;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3711;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4129;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3801;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4631;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4219;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3473;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3891;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4721;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3563;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4393;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3981;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3653;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4483;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4155;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3743;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4573;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3827;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4245;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4663;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3917;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3505;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4335;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3589;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4754;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4007;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4425;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3679;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4097;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4515;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3769;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4187;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4605;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3859;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4277;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3531;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4695;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3949;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4368;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3622;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4040;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4458;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3712;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4130;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3802;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4632;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4220;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3474;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3892;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4723;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3564;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4394;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3982;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4066;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3654;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4484;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4156;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3744;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4574;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3828;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4246;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4664;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3918;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4336;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3590;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4755;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4008;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4426;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3680;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4098;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4516;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3770;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4188;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4606;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3860;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4278;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3532;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4696;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3950;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3951;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4369;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3623;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4041;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4459;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3713;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4131;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3803;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4633;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4221;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3475;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3893;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4724;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3565;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4395;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3983;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4067;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3655;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4485;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4157;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3745;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4575;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3829;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4247;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4665;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3919;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4337;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3591;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4756;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4009;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4427;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3681;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4099;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4517;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3771;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4189;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4607;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3861;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4279;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3533;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4697;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3952;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4370;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3624;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4042;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4460;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3714;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4132;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3804;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4634;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4222;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3476;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4306;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3894;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4725;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3566;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4396;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3984;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4068;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3656;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4486;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4158;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4576;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3830;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4248;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4666;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3920;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4338;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3592;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4757;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4010;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4428;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3682;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4100;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4518;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3772;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4190;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4608;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3862;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4280;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3534;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4698;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4699;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3953;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4371;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3625;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4043;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4461;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3715;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4133;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3805;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4635;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4223;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3477;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4307;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3895;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4726;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3567;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4397;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3985;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4069;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3657;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4487;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4159;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4577;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3831;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4249;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4667;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3921;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4339;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3593;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4758;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4011;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4429;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3683;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4101;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4519;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3773;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4191;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4609;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3863;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4281;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3535;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3536;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4700;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3954;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4372;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3626;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4044;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4462;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3716;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4546;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4134;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3806;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4636;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4224;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3478;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4308;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3896;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4727;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3568;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4398;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4070;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3658;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4488;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4160;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4578;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3832;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4250;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4668;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3922;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4340;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3594;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4759;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4012;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4430;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3684;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4102;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4520;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3774;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4192;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4610;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3864;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4282;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3537;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4701;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3955;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4373;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3627;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4045;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4463;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3717;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4547;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4135;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3807;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4637;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4225;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3479;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4309;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3897;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4728;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3569;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4399;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4071;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3659;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4489;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4161;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4579;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3833;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4251;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4669;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3923;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4341;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3595;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4760;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4013;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4431;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3685;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4103;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4521;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3775;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4193;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4611;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3865;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4283;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4284;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3538;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4702;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3956;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4374;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3628;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4046;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4464;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3718;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4548;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4136;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3808;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4638;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3480;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4310;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3898;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4729;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3570;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4400;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4072;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3660;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4490;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4162;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4580;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3834;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4252;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3506;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4670;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3924;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4342;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3596;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4761;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4014;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4432;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3686;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4104;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4522;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3776;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4194;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4612;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3866;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4285;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3539;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4703;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3957;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4375;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3629;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4047;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4465;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3719;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4549;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4137;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3809;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4639;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3481;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4311;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3899;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4730;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3571;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4401;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4073;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3661;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4491;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4163;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4581;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3835;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4253;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3507;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4671;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3925;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4343;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3597;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4762;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4015;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4433;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3687;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4105;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4523;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3777;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4195;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4613;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3867;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3868;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4286;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3540;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4704;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3958;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4376;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3630;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4048;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3720;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4550;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4138;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3810;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4640;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3482;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4312;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3900;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4731;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3572;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4402;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4074;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3662;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4492;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3746;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4164;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4582;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3836;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4254;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3508;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4672;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3926;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4344;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3598;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4763;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4016;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4434;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3688;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4106;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4524;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3778;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4196;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4614;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3869;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4287;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3541;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4705;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3959;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4377;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3631;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4049;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3721;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4551;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4139;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3811;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4641;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3483;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4313;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3901;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4732;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3573;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4403;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4075;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3663;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4493;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3747;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4165;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4583;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3837;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4255;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3509;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4673;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3927;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4345;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3599;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4764;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4017;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4435;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3689;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4107;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4525;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 3779;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4197;
+UPDATE `pool_pool` SET `description` = 'GO 189980,189981,191133 map=571' WHERE `pool_id` = 4615;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9998;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10088;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10262;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10352;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10024;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10114;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10204;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9876;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10294;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9966;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10384;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10056;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10146;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10236;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9908;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10326;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10327;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9999;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10089;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10263;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10353;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10025;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10115;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10205;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9877;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10295;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9967;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10385;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10057;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10147;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10237;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9909;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10328;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10000;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10090;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10264;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9936;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10354;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10026;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10116;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10206;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9878;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10296;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9968;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10386;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10058;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10148;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10238;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9910;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10329;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10001;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10091;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10265;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9937;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10355;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10027;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10117;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10207;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9879;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10297;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9969;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10387;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10059;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10149;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10239;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9911;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9912;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10330;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10002;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10092;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10176;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10266;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9938;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10356;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10028;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10118;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10208;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9880;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10298;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9970;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10388;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10060;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10150;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10240;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9913;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10331;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10003;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10093;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10177;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10267;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9939;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10357;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10029;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10119;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10209;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9881;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10299;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9971;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10389;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10061;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10151;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10241;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9914;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10332;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10416;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10004;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10094;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10178;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10268;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9940;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10358;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10030;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10120;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10210;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9882;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10300;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9972;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10390;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10062;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10152;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10242;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9915;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10333;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10417;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10005;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10095;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10179;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10269;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9941;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10359;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10031;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10121;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10211;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9883;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10301;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9973;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10391;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10063;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10153;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10243;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10244;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9916;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10334;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10418;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10006;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10180;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10270;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9942;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10360;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10032;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10122;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10212;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9884;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10302;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9974;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10392;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10064;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10154;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10245;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9917;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10335;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10419;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10007;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10181;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10271;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9943;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10361;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10033;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10123;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10213;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9885;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10303;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9975;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10393;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10065;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10155;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10246;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9918;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10420;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10008;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10182;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10272;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9944;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10362;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10034;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10124;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10214;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9886;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10304;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9976;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10394;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10066;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10156;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10247;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9919;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10421;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10009;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10183;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10273;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9945;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10363;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10035;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10125;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10215;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9887;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10305;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9977;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10395;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10067;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10157;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10248;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9920;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10422;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10010;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10184;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10274;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9946;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10364;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10036;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10126;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10216;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9888;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10306;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9978;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10396;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10068;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10158;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10249;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9921;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10423;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10011;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10185;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10275;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9947;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10365;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10037;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10127;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10217;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9889;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10307;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9979;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10397;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10069;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10159;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10250;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9922;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10424;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10012;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10096;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10186;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10276;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9948;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10366;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10038;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10128;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10218;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9890;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10308;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9980;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10398;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10070;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10160;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10161;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10251;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9923;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10425;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10013;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10097;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10187;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10277;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9949;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10367;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10039;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10129;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10219;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9891;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10309;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9981;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10399;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10071;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10162;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10252;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10336;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9924;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10426;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10014;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10098;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10188;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10278;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9950;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10368;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10040;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10130;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10220;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9892;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10310;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9982;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10400;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10072;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10163;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10253;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10337;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9925;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10427;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10015;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10099;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10189;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10279;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9951;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10369;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10041;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10131;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10221;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9893;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10311;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9983;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10401;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10073;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10164;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10254;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10338;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9926;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10428;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10100;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10190;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10280;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9952;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10370;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10042;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10132;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10222;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9894;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10312;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9984;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10402;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10074;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10165;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10255;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10339;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9927;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10429;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10101;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10191;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10281;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9953;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10371;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10043;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10133;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10223;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9895;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10313;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9985;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10403;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10075;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10166;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10340;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9928;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10430;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10102;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10192;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10282;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9954;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10372;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10044;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10134;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10224;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9896;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10314;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9986;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10404;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10076;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10167;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10341;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9929;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10431;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10103;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10193;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10283;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9955;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10373;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10045;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10135;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10225;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9897;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10315;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9987;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10405;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10077;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10078;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10168;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10342;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9930;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10104;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10194;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10284;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9956;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10374;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10046;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10136;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10226;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9898;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10316;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9988;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10406;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10079;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10169;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10343;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9931;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10105;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10195;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10285;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9957;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10375;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10047;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10137;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10227;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9899;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10317;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9989;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10407;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10080;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10170;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10344;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9932;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10016;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10106;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10196;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10286;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9958;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10376;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10048;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10138;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10228;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9900;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10318;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9990;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10408;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10081;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10171;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10345;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9933;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10017;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10107;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10197;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9869;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10287;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9959;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10377;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10049;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10139;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10229;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9901;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10319;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9991;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10409;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10410;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10082;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10172;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10256;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10346;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9934;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10018;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10108;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10198;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9870;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10288;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9960;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10378;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10050;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10140;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10230;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9902;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10320;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9992;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10411;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10083;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10173;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10257;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10347;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9935;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10019;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10109;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10199;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9871;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10289;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9961;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10379;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10051;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10141;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10231;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9903;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10321;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9993;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10412;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10084;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10174;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10258;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10348;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10020;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10110;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10200;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9872;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10290;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9962;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10380;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10052;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10142;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10232;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9904;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10322;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9994;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9995;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10413;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10085;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10175;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10259;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10349;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10021;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10111;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10201;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9873;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10291;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9963;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10381;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10053;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10143;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10233;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9905;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10323;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9996;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10414;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10086;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10260;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10350;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10022;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10112;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10202;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9874;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10292;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9964;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10382;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10054;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10144;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10234;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9906;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10324;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9997;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10415;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10087;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10261;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10351;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10023;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10113;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10203;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9875;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10293;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9965;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10383;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10055;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10145;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10235;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 9907;
+UPDATE `pool_pool` SET `description` = 'GO 190172,[190171],map=571' WHERE `pool_id` = 10325;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10680;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10622;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10654;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10681;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10623;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10655;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10682;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10624;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10683;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10625;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10684;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10626;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10595;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10685;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10627;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10596;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10628;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10597;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10629;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10598;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10630;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10656;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10599;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10631;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10657;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10658;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10600;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10632;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10659;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10601;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10633;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10660;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10602;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10634;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10661;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10603;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10635;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10662;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10604;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10636;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10663;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10605;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10637;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10664;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10606;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10638;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10665;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10607;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10639;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10666;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10608;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10640;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10667;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10609;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10641;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10668;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10610;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10642;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10669;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10611;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10643;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10670;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10612;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10644;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10671;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10613;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10645;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10672;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10614;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10646;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10673;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10615;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10647;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10674;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10616;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10648;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10675;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10617;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10649;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10676;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10618;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10650;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10677;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10619;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10651;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10678;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10620;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10652;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10679;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10621;
+UPDATE `pool_pool` SET `description` = 'GO 190176,[190171,190172,190173],map=571' WHERE `pool_id` = 10653;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8151;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8152;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8153;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8154;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8155;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8156;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8273;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 7921;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8274;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 7922;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8275;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 7923;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8276;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 7924;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 7993;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 7994;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 7995;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 7996;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8369;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8370;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8371;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8372;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 7861;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 7862;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 7863;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8033;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 7864;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8034;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8035;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8036;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8149;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=0' WHERE `pool_id` = 8150;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7797;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7871;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7798;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7872;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7799;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7901;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7800;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7902;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7801;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7903;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7802;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7904;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7803;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7804;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7833;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7834;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8361;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7835;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8362;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7836;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8363;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7837;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8364;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7838;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7839;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8005;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7840;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8006;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7841;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8007;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7842;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8008;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7843;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8017;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7844;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8018;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8019;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8020;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8053;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8054;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8055;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 8056;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7869;
+UPDATE `pool_pool` SET `description` = 'GO 2040,[1734,1735,2047],map=1' WHERE `pool_id` = 7870;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=0' WHERE `pool_id` = 8521;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=0' WHERE `pool_id` = 8522;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=0' WHERE `pool_id` = 8523;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=0' WHERE `pool_id` = 8524;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8527;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8653;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8528;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8654;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8541;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8655;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8542;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8656;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8543;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8669;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8544;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8670;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8549;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8671;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8550;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8672;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8551;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8552;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8565;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8566;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8567;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8568;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8429;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8430;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8431;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8577;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8432;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8578;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8517;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8579;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8518;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8580;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8519;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8601;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8520;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8602;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8603;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8604;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8609;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8610;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8525;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8611;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8526;
+UPDATE `pool_pool` SET `description` = 'GO 324,[2047,2040],map=1' WHERE `pool_id` = 8612;
+UPDATE `pool_pool` SET `description` = 'NPC 12431' WHERE `pool_id` = 1315;
+UPDATE `pool_pool` SET `description` = 'NPC 12432' WHERE `pool_id` = 1316;
+UPDATE `pool_pool` SET `description` = 'NPC 14222' WHERE `pool_id` = 1317;
+UPDATE `pool_pool` SET `description` = 'NPC 14224' WHERE `pool_id` = 1318;
+UPDATE `pool_pool` SET `description` = 'NPC 14227' WHERE `pool_id` = 1319;
+UPDATE `pool_pool` SET `description` = 'NPC 14228' WHERE `pool_id` = 1320;
+UPDATE `pool_pool` SET `description` = 'NPC 14229' WHERE `pool_id` = 1321;
+UPDATE `pool_pool` SET `description` = 'NPC 14230' WHERE `pool_id` = 1322;
+UPDATE `pool_pool` SET `description` = 'NPC 14271' WHERE `pool_id` = 1327;
+UPDATE `pool_pool` SET `description` = 'NPC 14272' WHERE `pool_id` = 1328;
+UPDATE `pool_pool` SET `description` = 'NPC 14279' WHERE `pool_id` = 1329;
+UPDATE `pool_pool` SET `description` = 'NPC 14280' WHERE `pool_id` = 1330;
+UPDATE `pool_pool` SET `description` = 'NPC 14427' WHERE `pool_id` = 1335;
+UPDATE `pool_pool` SET `description` = 'NPC 14430' WHERE `pool_id` = 1336;
+UPDATE `pool_pool` SET `description` = 'NPC 14472' WHERE `pool_id` = 1337;
+UPDATE `pool_pool` SET `description` = 'NPC 14476' WHERE `pool_id` = 1338;
+UPDATE `pool_pool` SET `description` = 'NPC 18677' WHERE `pool_id` = 1344;
+UPDATE `pool_pool` SET `description` = 'NPC 18678' WHERE `pool_id` = 1345;
+UPDATE `pool_pool` SET `description` = 'NPC 18679' WHERE `pool_id` = 1346;
+UPDATE `pool_pool` SET `description` = 'NPC 18680' WHERE `pool_id` = 1347;
+UPDATE `pool_pool` SET `description` = 'NPC 18681' WHERE `pool_id` = 1348;
+UPDATE `pool_pool` SET `description` = 'NPC 18684' WHERE `pool_id` = 1350;
+UPDATE `pool_pool` SET `description` = 'NPC 18685' WHERE `pool_id` = 1351;
+UPDATE `pool_pool` SET `description` = 'NPC 18686' WHERE `pool_id` = 1352;
+UPDATE `pool_pool` SET `description` = 'NPC 18690' WHERE `pool_id` = 1353;
+UPDATE `pool_pool` SET `description` = 'NPC 18692' WHERE `pool_id` = 1354;
+UPDATE `pool_pool` SET `description` = 'NPC 18693' WHERE `pool_id` = 1355;
+UPDATE `pool_pool` SET `description` = 'NPC 18694' WHERE `pool_id` = 1356;
+UPDATE `pool_pool` SET `description` = 'NPC 18695' WHERE `pool_id` = 1357;
+UPDATE `pool_pool` SET `description` = 'NPC 18696' WHERE `pool_id` = 1358;
+UPDATE `pool_pool` SET `description` = 'NPC 18697' WHERE `pool_id` = 1359;
+UPDATE `pool_pool` SET `description` = 'NPC 18698' WHERE `pool_id` = 1360;
+UPDATE `pool_pool` SET `description` = 'NPC 22060' WHERE `pool_id` = 1362;
+UPDATE `pool_pool` SET `description` = 'NPC 6581' WHERE `pool_id` = 1275;
+UPDATE `pool_pool` SET `description` = 'NPC 6648' WHERE `pool_id` = 1276;
+UPDATE `pool_pool` SET `description` = 'NPC 7015' WHERE `pool_id` = 1278;
+UPDATE `pool_pool` SET `description` = 'NPC 7016' WHERE `pool_id` = 1279;
+UPDATE `pool_pool` SET `description` = 'NPC 8201' WHERE `pool_id` = 1280;
+UPDATE `pool_pool` SET `description` = 'NPC 8202' WHERE `pool_id` = 1281;
+UPDATE `pool_pool` SET `description` = 'NPC 8207' WHERE `pool_id` = 1282;
+UPDATE `pool_pool` SET `description` = 'NPC 8219' WHERE `pool_id` = 1287;
+UPDATE `pool_pool` SET `description` = 'NPC 8277' WHERE `pool_id` = 1288;
+UPDATE `pool_pool` SET `description` = 'NPC 8279' WHERE `pool_id` = 1289;
+UPDATE `pool_pool` SET `description` = 'NPC 8281' WHERE `pool_id` = 1290;
+
+DELETE FROM `pool_template` WHERE `entry` = 5641;
+DELETE FROM `pool_pool` WHERE `pool_id` = 1277;
+DELETE FROM `pool_pool` WHERE `pool_id` = 1275;
+DELETE FROM `pool_pool` WHERE `pool_id` = 1276;
+DELETE FROM `pool_pool` WHERE `pool_id` = 1278;
+
+DELETE FROM `pool_pool` WHERE `pool_id` = 31;
+DELETE FROM `pool_pool` WHERE `pool_id` = 32;
+DELETE FROM `pool_pool` WHERE `pool_id` = 33;
+DELETE FROM `pool_gameobject_template` WHERE `id` = 188501;
+DELETE FROM `pool_gameobject_template` WHERE `id` = 188502;
+DELETE FROM `pool_gameobject_template` WHERE `id` = 188503;
+UPDATE `gameobject` SET `id` = 188501 WHERE `id` IN (188502,188503);
+REPLACE INTO `pool_gameobject` (`guid`, `pool_entry`, `description`) SELECT `guid`, 34, 'War Golem Part' FROM `gameobject` WHERE `id` IN (188501);
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 188501 FROM `gameobject` WHERE `gameobject`.`id` = 188501;
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 188502 FROM `gameobject` WHERE `gameobject`.`id` = 188501;
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 188503 FROM `gameobject` WHERE `gameobject`.`id` = 188501;
+UPDATE `gameobject_template` SET `ExtraFlags` = `ExtraFlags`|2 WHERE `entry` IN (188501,188502,188503);
+UPDATE `gameobject` SET `id` = 0 WHERE `id` IN (188501);
+
+DELETE FROM `pool_gameobject` WHERE `guid` = 16769;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13228;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13074;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13229;
+DELETE FROM `pool_gameobject` WHERE `guid` = 20929;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13235;
+DELETE FROM `pool_gameobject` WHERE `guid` = 5576;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13236;
+DELETE FROM `pool_gameobject` WHERE `guid` = 46138;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13242;
+DELETE FROM `pool_gameobject` WHERE `guid` = 72007;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13244;
+DELETE FROM `pool_gameobject` WHERE `guid` = 44799;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13246;
+DELETE FROM `pool_gameobject` WHERE `guid` = 72006;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13247;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13216;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13252;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13217;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13253;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13226;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13254;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13227;
+DELETE FROM `pool_gameobject` WHERE `guid` = 13255;
+DELETE FROM `pool_pool` WHERE `pool_id` = 277;
+DELETE FROM `pool_pool` WHERE `pool_id` = 278;
+DELETE FROM `pool_pool` WHERE `pool_id` = 279;
+DELETE FROM `pool_pool` WHERE `pool_id` = 280;
+DELETE FROM `pool_pool` WHERE `pool_id` = 281;
+DELETE FROM `pool_pool` WHERE `pool_id` = 282;
+DELETE FROM `pool_pool` WHERE `pool_id` = 283;
+DELETE FROM `pool_pool` WHERE `pool_id` = 284;
+DELETE FROM `pool_pool` WHERE `pool_id` = 285;
+DELETE FROM `pool_pool` WHERE `pool_id` = 286;
+DELETE FROM `pool_pool` WHERE `pool_id` = 287;
+DELETE FROM `pool_pool` WHERE `pool_id` = 288;
+DELETE FROM `pool_template` WHERE `entry` = 277;
+DELETE FROM `pool_template` WHERE `entry` = 278;
+DELETE FROM `pool_template` WHERE `entry` = 279;
+DELETE FROM `pool_template` WHERE `entry` = 280;
+DELETE FROM `pool_template` WHERE `entry` = 281;
+DELETE FROM `pool_template` WHERE `entry` = 282;
+DELETE FROM `pool_template` WHERE `entry` = 283;
+DELETE FROM `pool_template` WHERE `entry` = 284;
+DELETE FROM `pool_template` WHERE `entry` = 285;
+DELETE FROM `pool_template` WHERE `entry` = 286;
+DELETE FROM `pool_template` WHERE `entry` = 287;
+DELETE FROM `pool_template` WHERE `entry` = 288;
+DELETE FROM `gameobject` WHERE `id` = 190779;
+REPLACE INTO `pool_gameobject` (`guid`, `pool_entry`, `description`) SELECT `guid`, 289, 'Raised Mud' FROM `gameobject` WHERE `id` IN (190778);
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 190778 FROM `gameobject` WHERE `gameobject`.`id` = 190778;
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 190779 FROM `gameobject` WHERE `gameobject`.`id` = 190778;
+UPDATE `gameobject_template` SET `ExtraFlags` = `ExtraFlags`|2 WHERE `entry` IN (190778,190779);
+UPDATE `gameobject` SET `id` = 0 WHERE `id` IN (190778);
+
+DELETE FROM `pool_pool` WHERE `pool_id` = 381;
+DELETE FROM `pool_pool` WHERE `pool_id` = 382;
+DELETE FROM `pool_pool` WHERE `pool_id` = 383;
+DELETE FROM `pool_pool` WHERE `pool_id` = 384;
+DELETE FROM `pool_template` WHERE `entry` = 381;
+DELETE FROM `pool_template` WHERE `entry` = 382;
+DELETE FROM `pool_template` WHERE `entry` = 383;
+DELETE FROM `pool_template` WHERE `entry` = 384;
+DELETE FROM `pool_template` WHERE `entry` = 385;
+DELETE FROM `gameobject` WHERE `guid` = 14518;
+DELETE FROM `gameobject` WHERE `guid` = 28391;
+DELETE FROM `gameobject` WHERE `guid` = 14517;
+DELETE FROM `gameobject` WHERE `guid` = 14511;
+DELETE FROM `gameobject` WHERE `guid` = 14545;
+DELETE FROM `gameobject` WHERE `guid` = 50683;
+DELETE FROM `gameobject` WHERE `guid` = 50682;
+DELETE FROM `gameobject` WHERE `guid` = 50672;
+DELETE FROM `gameobject` WHERE `guid` = 50675;
+DELETE FROM `gameobject` WHERE `guid` = 50681;
+DELETE FROM `gameobject` WHERE `guid` = 50693;
+DELETE FROM `gameobject` WHERE `guid` = 50691;
+DELETE FROM `gameobject` WHERE `guid` = 50687;
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
+(14518, 192910, 571, 1, 1, 5427.92, -538.148, 163.331, 0.104719, 0, 0, 0.0523356, 0.99863, 180, 180),
+(14517, 192912, 571, 1, 1, 5363.62, -742.185, 158.734, -1.16937, 0, 0, -0.551937, 0.833886, 180, 180),
+(14511, 192912, 571, 1, 1, 5269.72, -731.052, 165.912, 2.28638, 0, 0, 0.909961, 0.414694, 180, 180),
+(14545, 192912, 571, 1, 1, 5291.4, -539.707, 165.437, 0.226892, 0, 0, 0.113203, 0.993572, 180, 180),
+(50681, 192911, 571, 1, 1, 5247.96, -636.052, 160.95, 2.79252, 0, 0, 0.984807, 0.173652, 180, 180),
+(28391, 192912, 571, 1, 1, 5312.22, -824.504, 169.438, -2.96704, 0, 0, -0.996194, 0.0871655, 180, 180);
+UPDATE `gameobject` SET `id` = 192909 WHERE `id` IN (192910,192911,192912);
+DELETE FROM `spawn_group` WHERE id = 33600;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33600, 'Crystalsong Forest - Ancient Elven Masonry 192909 - 192912', 1, 30, 0, 0);
+DELETE FROM `spawn_group_spawn` WHERE id = 33600;
+INSERT IGNORE INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) SELECT 33600, `Guid`, -1 FROM `gameobject` WHERE id = 192909;
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 192909 FROM `gameobject` WHERE `gameobject`.`id` = 192909;
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 192910 FROM `gameobject` WHERE `gameobject`.`id` = 192909;
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 192911 FROM `gameobject` WHERE `gameobject`.`id` = 192909;
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 192912 FROM `gameobject` WHERE `gameobject`.`id` = 192909;
+UPDATE `gameobject_template` SET `ExtraFlags` = `ExtraFlags`|2 WHERE `entry` IN (192909,192910,192911,192912);
+UPDATE `gameobject` SET `id` = 0 WHERE `id` IN (192909);
+
+DELETE FROM `pool_pool` WHERE `pool_id` = 15744;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15745;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15746;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15747;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15748;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15749;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15750;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15751;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15752;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15753;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15754;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15755;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15756;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15757;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15758;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15759;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15760;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15761;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15762;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15763;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15764;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15765;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15766;
+DELETE FROM `pool_pool` WHERE `pool_id` = 15767;
+DELETE FROM `pool_template` WHERE `entry` = 15744;
+DELETE FROM `pool_template` WHERE `entry` = 15745;
+DELETE FROM `pool_template` WHERE `entry` = 15746;
+DELETE FROM `pool_template` WHERE `entry` = 15747;
+DELETE FROM `pool_template` WHERE `entry` = 15748;
+DELETE FROM `pool_template` WHERE `entry` = 15749;
+DELETE FROM `pool_template` WHERE `entry` = 15750;
+DELETE FROM `pool_template` WHERE `entry` = 15751;
+DELETE FROM `pool_template` WHERE `entry` = 15752;
+DELETE FROM `pool_template` WHERE `entry` = 15753;
+DELETE FROM `pool_template` WHERE `entry` = 15754;
+DELETE FROM `pool_template` WHERE `entry` = 15755;
+DELETE FROM `pool_template` WHERE `entry` = 15756;
+DELETE FROM `pool_template` WHERE `entry` = 15757;
+DELETE FROM `pool_template` WHERE `entry` = 15758;
+DELETE FROM `pool_template` WHERE `entry` = 15759;
+DELETE FROM `pool_template` WHERE `entry` = 15760;
+DELETE FROM `pool_template` WHERE `entry` = 15761;
+DELETE FROM `pool_template` WHERE `entry` = 15762;
+DELETE FROM `pool_template` WHERE `entry` = 15763;
+DELETE FROM `pool_template` WHERE `entry` = 15764;
+DELETE FROM `pool_template` WHERE `entry` = 15765;
+DELETE FROM `pool_template` WHERE `entry` = 15766;
+DELETE FROM `pool_template` WHERE `entry` = 15767;
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
+(50682, 191814, 571, 1, 2, 7170.52, -2989.24, 864.819, 1.25664, 0, 0, 0.587786, 0.809016, 180, 180);
+DELETE FROM `gameobject` WHERE `id` = 191815;
+REPLACE INTO `pool_gameobject` (`guid`, `pool_entry`, `description`) SELECT `guid`, 14351, 'The Storm Peaks - Granite Boulder' FROM `gameobject` WHERE `id` IN (191814);
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 191814 FROM `gameobject` WHERE `gameobject`.`id` = 191814;
+REPLACE INTO `gameobject_spawn_entry` (`guid`, `entry`) SELECT `guid` AS `guid`, 191815 FROM `gameobject` WHERE `gameobject`.`id` = 191814;
+UPDATE `gameobject_template` SET `ExtraFlags` = `ExtraFlags`|2 WHERE `entry` IN (191814,191815);
+UPDATE `gameobject` SET `id` = 0 WHERE `id` IN (191814);
+
+UPDATE `item_template` SET `minMoneyLoot`=150, `maxMoneyLoot`=600 WHERE `entry`=16885;
+
+UPDATE `creature_template` SET `UnitFlags` = '32832', `MechanicImmuneMask` = '76232671' WHERE `Entry` =644;
+UPDATE `creature_template` SET `UnitFlags` = '32832', `MechanicImmuneMask` = '76234719', `ResistanceFire` = '0', `ResistanceNature` = '0', `ResistanceFrost` = '0', `ResistanceShadow` = '0', `ResistanceArcane` = '0' WHERE `Entry` =639;
+UPDATE `creature_template` SET `UnitFlags` = '32832', `MechanicImmuneMask` = '76234719', `MovementType` = '2' WHERE `Entry` =645;
+UPDATE `creature_template` SET `MechanicImmuneMask` = '76234719' WHERE `Entry` =646;
+UPDATE `creature_template` SET `UnitFlags` = '32832', `MechanicImmuneMask` = '76251103', `MovementType` = '2' WHERE `Entry` =642;
+UPDATE `creature_template` SET `UnitFlags` = '32832', `MechanicImmuneMask` = '76232671' WHERE `Entry` =1763;
+
+DELETE FROM `pool_template` WHERE `entry` = 14683;
+DELETE FROM `pool_gameobject_template` WHERE `id` = 192908;
+DELETE FROM `gameobject` WHERE `guid` = 50688;
+DELETE FROM `gameobject` WHERE `guid` = 50661;
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
+(5174, 192908, 571, 1, 1, 5160.67, -751.432, 175.128, 1.01229, 0, 0, 0.484809, 0.87462, 180, 180),
+(5182, 192908, 571, 1, 1, 5190.21, -550.717, 158.294, 1.65806, 0, 0, 0.737277, 0.675591, 180, 180),
+(5224, 192908, 571, 1, 1, 5193.58, -745.836, 171.523, 2.82743, 0, 0, 0.987688, 0.156436, 180, 180),
+(5340, 192908, 571, 1, 1, 5202.85, -523.486, 158.928, 1.71042, 0, 0, 0.754709, 0.656059, 180, 180),
+(5507, 192908, 571, 1, 1, 5208.22, -480.027, 165.034, -0.977383, 0, 0, -0.469471, 0.882948, 180, 180),
+(5751, 192908, 571, 1, 1, 5209.88, -424.397, 163.288, -3.08918, 0, 0, -0.999657, 0.0262016, 180, 180),
+(6207, 192908, 571, 1, 1, 5215.18, -652.14, 160.017, -2.32129, 0, 0, -0.91706, 0.39875, 180, 180),
+(6281, 192908, 571, 1, 1, 5224.79, -610.28, 160.726, 0.610864, 0, 0, 0.300705, 0.953717, 180, 180),
+(6389, 192908, 571, 1, 1, 5232.28, -552.387, 158.133, 1.78023, 0, 0, 0.777145, 0.629321, 180, 180),
+(6498, 192908, 571, 1, 1, 5247.71, -707.626, 166.986, 3.07177, 0, 0, 0.999391, 0.0349043, 180, 180),
+(6739, 192908, 571, 1, 1, 5248.26, -349.006, 168.734, -1.90241, 0, 0, -0.814116, 0.580703, 180, 180),
+(7229, 192908, 571, 1, 1, 5255.4, -653.263, 161.673, -0.453785, 0, 0, -0.224951, 0.97437, 180, 180),
+(7405, 192908, 571, 1, 1, 5271.9, -388.615, 172.924, -0.942477, 0, 0, -0.45399, 0.891007, 180, 180),
+(7453, 192908, 571, 1, 1, 5275.84, -459.284, 168.598, -0.488691, 0, 0, -0.241921, 0.970296, 180, 180),
+(7606, 192908, 571, 1, 1, 5292.29, -515.026, 164.043, 1.95477, 0, 0, 0.829038, 0.559192, 180, 180),
+(7741, 192908, 571, 1, 1, 5296.73, -637.236, 163.091, -1.67551, 0, 0, -0.743143, 0.669133, 180, 180),
+(7742, 192908, 571, 1, 1, 5306.39, -206.811, 162.318, 0.174532, 0, 0, 0.0871553, 0.996195, 180, 180),
+(7762, 192908, 571, 1, 1, 5345.17, -524.656, 165.892, 2.11185, 0, 0, 0.870356, 0.492423, 180, 180),
+(7766, 192908, 571, 1, 1, 5368.88, -502.944, 170.168, -1.6057, 0, 0, -0.719339, 0.694659, 180, 180),
+(7771, 192908, 571, 1, 1, 5378.67, -739.58, 159.72, -2.91469, 0, 0, -0.993571, 0.113208, 180, 180),
+(7772, 192908, 571, 1, 1, 5402.67, -471.336, 176.396, 2.65289, 0, 0, 0.970294, 0.241927, 180, 180),
+(7774, 192908, 571, 1, 1, 5415.7, -504.323, 169.462, -1.46608, 0, 0, -0.669132, 0.743144, 180, 180),
+(7775, 192908, 571, 1, 1, 5417.86, -751.336, 161.411, -0.226892, 0, 0, -0.113203, 0.993572, 180, 180),
+(7777, 192908, 571, 1, 1, 5430.08, -194.574, 161.373, -1.309, 0, 0, -0.608761, 0.793354, 180, 180),
+(7778, 192908, 571, 1, 1, 5438.6, -713.15, 157.742, 2.30383, 0, 0, 0.913545, 0.406738, 180, 180),
+(7783, 192908, 571, 1, 1, 5442.29, -220.219, 168.658, 1.64061, 0, 0, 0.731354, 0.681998, 180, 180),
+(7784, 192908, 571, 1, 1, 5458.98, -455.529, 168.388, 1.15192, 0, 0, 0.54464, 0.83867, 180, 180),
+(7786, 192908, 571, 1, 1, 5460.93, -155.051, 151.456, -2.07694, 0, 0, -0.861629, 0.507539, 180, 180),
+(7787, 192908, 571, 1, 1, 5461.23, -651.926, 153.387, -1.95477, 0, 0, -0.829038, 0.559192, 180, 180),
+(7788, 192908, 571, 1, 1, 5461.87, -237.081, 169.242, -1.74533, 0, 0, -0.766045, 0.642787, 180, 180),
+(7790, 192908, 571, 1, 1, 5466.61, -740.803, 153.492, 0.855211, 0, 0, 0.414693, 0.909961, 180, 180),
+(7791, 192908, 571, 1, 1, 5468.33, -136.695, 143.123, 1.36136, 0, 0, 0.629322, 0.777145, 180, 180),
+(7792, 192908, 571, 1, 1, 5472.31, -209.988, 164.098, -1.43117, 0, 0, -0.656059, 0.75471, 180, 180),
+(7793, 192908, 571, 1, 1, 5484.98, -139.636, 150.417, -0.209439, 0, 0, -0.104528, 0.994522, 180, 180),
+(7795, 192908, 571, 1, 1, 5488.1, -613.985, 153.754, 1.95477, 0, 0, 0.829038, 0.559192, 180, 180),
+(7796, 192908, 571, 1, 1, 5491.9, -516.266, 162.587, -1.98967, 0, 0, -0.838669, 0.544641, 180, 180),
+(7797, 192908, 571, 1, 1, 5497.66, -814.598, 154.648, 2.74016, 0, 0, 0.979924, 0.199371, 180, 180),
+(7798, 192908, 571, 1, 1, 5504.7, -204.043, 159.461, 2.91469, 0, 0, 0.993571, 0.113208, 180, 180),
+(7799, 192908, 571, 1, 1, 5507.66, -268.136, 167.627, 0.820303, 0, 0, 0.398748, 0.91706, 180, 180),
+(7801, 192908, 571, 1, 1, 5511.75, -355.367, 172.753, 1.88495, 0, 0, 0.809015, 0.587788, 180, 180),
+(7802, 192908, 571, 1, 1, 5512.53, -169.392, 155.415, -2.04204, 0, 0, -0.85264, 0.522499, 180, 180),
+(7803, 192908, 571, 1, 1, 5512.84, -150.329, 148.674, 2.72271, 0, 0, 0.978147, 0.207914, 180, 180),
+(8186, 192908, 571, 1, 1, 5527.1, -240.351, 162.843, -3.00195, 0, 0, -0.997563, 0.0697646, 180, 180),
+(8411, 192908, 571, 1, 1, 5534.5, -391.149, 164.847, 0.087266, 0, 0, 0.0436192, 0.999048, 180, 180),
+(8418, 192908, 571, 1, 1, 5539.34, -538.983, 159.55, 2.44346, 0, 0, 0.939692, 0.342021, 180, 180),
+(8467, 192908, 571, 1, 1, 5545.15, -324.027, 164.798, -1.29154, 0, 0, -0.601814, 0.798637, 180, 180),
+(50661, 192908, 571, 1, 1, 5557.96, -270.712, 161.148, -2.54818, 0, 0, -0.956305, 0.292372, 180, 180),
+(50688, 192908, 571, 1, 1, 5574.94, -351.466, 160.799, 1.76278, 0, 0, 0.771625, 0.636078, 180, 180);
+DELETE FROM `spawn_group` WHERE id = 33601;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33601, 'Crystalsong Forest - Crystalline Heartwood 192908', 1, 50, 0, 0);
+DELETE FROM `spawn_group_spawn` WHERE id = 33601;
+INSERT IGNORE INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) SELECT 33601, `Guid`, -1 FROM `gameobject` WHERE id = 192908;
+
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31403,31404));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31403,31404));
+DELETE FROM `creature` WHERE `id` IN (31403,31404);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(109009, 31403, 571, 1, 1, 5509.25, 866.616, 164.488, 0, 300, 300, 0, 0),
+(112413, 31403, 571, 1, 1, 5396.81, 831.028, 183.34, 0, 300, 300, 0, 0),
+(112415, 31403, 571, 1, 1, 5492.07, 786.549, 172.154, 4.12852, 300, 300, 10, 1),
+(112439, 31403, 571, 1, 1, 5217.78, 658.357, 197.308, 5.53269, 300, 300, 0, 0),
+(112441, 31403, 571, 1, 1, 5642.35, 959.737, 173.156, 2.37365, 300, 300, 0, 0),
+(112442, 31403, 571, 1, 1, 5699.44, 978.356, 174.563, 2.19912, 300, 300, 0, 0),
+(112419, 31403, 571, 1, 1, 5288.98, 869.866, 189.11, 0, 300, 300, 10, 1),
+(112421, 31403, 571, 1, 1, 5520.78, 650.382, 163.736, 0, 300, 300, 0, 0),
+(112435, 31403, 571, 1, 1, 5355.95, 614.568, 182.048, 0, 300, 300, 0, 0),
+(112437, 31403, 571, 1, 1, 5267.03, 618.176, 187.718, 0, 300, 300, 10, 1);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(109017, 31404, 571, 1, 1, 5509.25, 866.616, 164.488, 0, 300, 300, 0, 0),
+(112414, 31404, 571, 1, 1, 5396.81, 831.028, 183.34, 0, 300, 300, 0, 0),
+(112440, 31404, 571, 1, 1, 5217.78, 658.357, 197.308, 3.85718, 300, 300, 0, 0),
+(112418, 31404, 571, 1, 1, 5492.07, 786.549, 172.154, 4.12852, 300, 300, 10, 1),
+(112420, 31404, 571, 1, 1, 5288.98, 869.866, 189.11, 0, 300, 300, 10, 1),
+(112423, 31404, 571, 1, 1, 5520.78, 650.382, 163.736, 0, 300, 300, 0, 0),
+(112436, 31404, 571, 1, 1, 5355.95, 614.568, 182.048, 0, 300, 300, 0, 0),
+(112438, 31404, 571, 1, 1, 5267.03, 618.176, 187.718, 0, 300, 300, 10, 1);
+DELETE FROM `spawn_group` WHERE id = 33506;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33506, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 1', 0, 0, 0, 0x01);
+DELETE FROM `spawn_group_spawn` WHERE id = 33506;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33506, 109009, 0),(33506, 109017, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 33506;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(33506, 2, 3, 0, 33506, 4, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 1');
+DELETE FROM `waypoint_path_name` WHERE PathId = 33506;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (33506,'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 1');
+DELETE FROM `waypoint_path` WHERE PathId = 33506;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(33506,1,5509.2476,866.61554,164.48833,100,2000,0),
+(33506,2,5521.7866,879.84247,165.39017,100,0,0),
+(33506,3,5531.623,900.7771,166.42143,100,0,0),
+(33506,4,5538.4194,923.72156,170.1688,100,0,0),
+(33506,5,5569.7095,929.1667,167.56163,100,0,0),
+(33506,6,5604.423,928.5961,164.93893,100,2000,0);
+DELETE FROM `spawn_group` WHERE id = 33507;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33507, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 2', 0, 0, 0, 0x01);
+DELETE FROM `spawn_group_spawn` WHERE id = 33507;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33507, 112413, 0), (33507, 112414, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 33507;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(33507, 2, 3, 0, 33507, 4, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 2');
+DELETE FROM `waypoint_path_name` WHERE PathId = 33507;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (33507,'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 2');
+DELETE FROM `waypoint_path` WHERE PathId = 33507;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(33507,1,5396.8145,831.028,183.33977,100,2000,0),
+(33507,2,5416.7793,826.8909,181.37091,100,0,0),
+(33507,3,5422.2607,816.7275,181.5578,100,0,0),
+(33507,4,5448.469,811.3294,177.5181,100,0,0),
+(33507,5,5460.827,830.54297,174.58585,100,0,0),
+(33507,6,5472.0825,846.8197,172.03975,100,0,0),
+(33507,7,5459.1704,853.88153,173.832,100,0,0),
+(33507,8,5458.4976,878.80414,175.13504,100,2000,0);
+DELETE FROM `spawn_group` WHERE id = 33508;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33508, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 3', 0, 0, 0, 0x01);
+DELETE FROM `spawn_group_spawn` WHERE id = 33508;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33508, 112415, 0), (33508, 112418, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 33508;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(33508, 2, 3, 0, 33508, 1, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 3');
+DELETE FROM `spawn_group` WHERE id = 33509;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33509, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 4', 0, 0, 0, 0x01);
+DELETE FROM `spawn_group_spawn` WHERE id = 33509;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33509, 112419, 0), (33509, 112420, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 33509;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(33509, 2, 3, 0, 33509, 1, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 4');
+DELETE FROM `spawn_group` WHERE id = 33510;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33510, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 5', 0, 0, 0, 0x01);
+DELETE FROM `spawn_group_spawn` WHERE id = 33510;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33510, 112421, 0), (33510, 112423, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 33510;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(33510, 2, 3, 0, 33510, 4, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 5');
+DELETE FROM `waypoint_path_name` WHERE PathId = 33510;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (33510,'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 5');
+DELETE FROM `waypoint_path` WHERE PathId = 33510;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(33510,1,5520.7817,650.38245,163.73587,100,2000,0),
+(33510,2,5509.8774,664.94476,164.3874,100,0,0),
+(33510,3,5494.0806,664.15735,167.74054,100,0,0),
+(33510,4,5477.0054,658.6755,171.12274,100,0,0),
+(33510,5,5473.9507,644.265,171.04193,100,0,0),
+(33510,6,5466.7803,630.7592,170.80563,100,0,0),
+(33510,7,5449.2876,622.9489,172.93936,100,0,0),
+(33510,8,5434.981,636.56824,177.17761,100,0,0),
+(33510,9,5423.9434,652.3285,181.94475,100,0,0),
+(33510,10,5414.6255,666.2023,185.721,100,2000,0);
+DELETE FROM `spawn_group` WHERE id = 33511;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33511, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 6', 0, 0, 0, 0x01);
+DELETE FROM `spawn_group_spawn` WHERE id = 33511;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33511, 112435, 0), (33511, 112436, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 33511;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(33511, 2, 3, 0, 33511, 2, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 6');
+DELETE FROM `waypoint_path_name` WHERE PathId = 33511;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (33511,'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 6');
+DELETE FROM `waypoint_path` WHERE PathId = 33511;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(33511,1,5355.951,614.56775,182.0483,100,0,0),
+(33511,2,5362.8906,594.09906,179.94266,100,0,0),
+(33511,3,5385.46,589.8519,177.0538,100,0,0),
+(33511,4,5386.4897,571.6219,174.96213,100,0,0),
+(33511,5,5367.44,567.50323,177.13693,100,0,0),
+(33511,6,5348.017,568.6433,180.50198,100,0,0),
+(33511,7,5320.683,592.9329,183.90001,100,0,0),
+(33511,8,5318.4644,620.8735,188.56856,100,0,0),
+(33511,9,5319.3657,616.3592,187.51363,100,0,0),
+(33511,10,5339.1157,617.96204,185.50252,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 33512;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33512, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 7', 0, 0, 0, 0x01);
+DELETE FROM `spawn_group_spawn` WHERE id = 33512;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33512, 112437, 0), (33512, 112438, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 33512;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(33512, 2, 3, 0, 33512, 1, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 7');
+DELETE FROM `spawn_group` WHERE id = 33513;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33513, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 8', 0, 0, 0, 0x01);
+DELETE FROM `spawn_group_spawn` WHERE id = 33513;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33513, 112439, 0), (33513, 112440, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 33513;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(33513, 2, 3, 0, 33513, 2, 'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 8');
+DELETE FROM `waypoint_path_name` WHERE PathId = 33513;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (33513,'Crystalsong Forest - Azure Spellweaver 31403 & Azure Manabeast 31404 - Patrol - 8');
+DELETE FROM `waypoint_path` WHERE PathId = 33513;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(33513,1,5217.776,658.35675,197.30757,100,2000,0),
+(33513,2,5216.434,674.5471,199.87938,100,0,0),
+(33513,3,5209.3774,686.3204,198.37303,100,0,0),
+(33513,4,5201.7134,702.9078,194.9688,100,0,0),
+(33513,5,5196.082,707.86053,196.38387,100,0,0),
+(33513,6,5186.182,718.7038,201.32014,100,0,0),
+(33513,7,5184.398,741.3065,205.3167,100,0,0),
+(33513,8,5184.593,753.49243,205.28252,100,0,0),
+(33513,9,5183.6733,769.7264,208.9421,100,0,0),
+(33513,10,5183.205,779.26495,212.79878,100,2000,0);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31402));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31402));
+DELETE FROM `creature` WHERE `id` IN (31402);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(112445, 31402, 571, 1, 1, 5660.19, 1028.45, 174.563, 2.79253, 180, 180, 0, 0),
+(109019, 31402, 571, 1, 1, 5659.53, 987.84, 174.568, 0.314159, 180, 180, 0, 0),
+(109018, 31402, 571, 1, 1, 5715.94, 1004.29, 174.563, 2.47837, 180, 180, 0, 0),
+(112450, 31402, 571, 1, 1, 5573.34, 862.854, 161.739, 1.48353, 300, 300, 0, 0),
+(112446, 31402, 571, 1, 1, 5434.65, 729.678, 186.696, 0, 300, 300, 0, 2),
+(112447, 31402, 571, 1, 1, 5362.53, 869.773, 182.784, 0, 300, 300, 0, 4),
+(112451, 31402, 571, 1, 1, 5464.41, 716.29, 171.82, 2.6529, 300, 300, 0, 0),
+(112452, 31402, 571, 1, 1, 5411.68, 623.162, 178.355, 0.872665, 300, 300, 0, 0),
+(112453, 31402, 571, 1, 1, 5344.32, 595.7, 183.074, 4.99164, 300, 300, 0, 0),
+(112448, 31402, 571, 1, 1, 5232.54, 577.22, 186.02, 0, 300, 300, 0, 4),
+(112449, 31402, 571, 1, 1, 5557.55, 914.363, 227.912, 0, 300, 300, 0, 2);
+UPDATE creature_template_addon SET auras = NULL WHERE entry = 31402;
+DELETE FROM creature_addon WHERE guid IN (109018,109019,112445,112442,112441);
+INSERT INTO creature_addon (guid,mount,stand_state,sheath_state,pvp_flags,emote,moveflags,auras) VALUES
+(109018,0,0,1,0,0,0,29266),(109019,0,0,1,0,0,0,29266),(112445,0,0,1,0,0,0,29266),(112442,0,0,1,0,0,0,29266),(112441,0,0,1,0,0,0,29266);
+DELETE FROM creature_movement WHERE Id IN (112446,112447,112448,112449);
+INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orientation, waittime, scriptid) VALUES
+(112446,1,5434.6514,729.67755,186.69624,100,0,0),
+(112446,2,5424.2207,745.3154,189.07738,100,0,0),
+(112446,3,5425.2295,759.6531,187.10838,100,0,0),
+(112446,4,5424.1465,777.35364,184.54306,100,0,0),
+(112446,5,5434.4033,783.9654,182.81616,100,0,0),
+(112446,6,5450.2334,781.68274,181.09998,100,0,0),
+(112446,7,5469.664,767.1058,178.77632,100,0,0),
+(112446,8,5465.3926,745.0414,178.15956,100,0,0),
+(112447,1,5362.5254,869.77344,182.784,100,0,0),
+(112447,2,5349.606,876.76447,184.35431,100,0,0),
+(112447,3,5334.7207,874.54596,185.72821,100,0,0),
+(112447,4,5328.4756,889.2465,189.27284,100,0,0),
+(112447,5,5314.742,900.71124,194.70587,100,0,0),
+(112447,6,5294.577,908.59674,198.58363,100,0,0),
+(112448,1,5232.5376,577.2203,186.01953,100,0,0),
+(112448,2,5220.886,591.7798,188.15442,100,0,0),
+(112448,3,5217.605,612.92786,191.57994,100,0,0),
+(112448,4,5206.0957,622.09357,196.2097,100,0,0),
+(112448,5,5207.4556,639.8265,196.15791,100,0,0),
+(112448,6,5222.6284,648.2538,194.53792,100,0,0),
+(112448,7,5231.276,657.504,194.96016,100,0,0),
+(112449,1,5557.5474,914.3631,227.91179,100,0,0),
+(112449,2,5544.703,910.54865,227.87708,100,0,0),
+(112449,3,5531.7056,912.5208,227.91203,100,0,0),
+(112449,4,5528.16,925.24054,227.87708,100,0,0),
+(112449,5,5529.973,938.7063,227.9142,100,0,0),
+(112449,6,5540.897,941.5965,227.87708,100,0,0),
+(112449,7,5555.855,940.02844,227.89307,100,0,0),
+(112449,8,5559.864,927.117,227.87708,100,0,0);
+DELETE FROM dbscripts_on_relay WHERE id IN (20735,20736,20737);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20735,1,15,59044,0,0,31400,112479,1|0x10,0,0,0,0,0,0,0,0,'Part of Azure Front Channel Stalker EAI: - Cast 59044 on buddy'),
+(20736,1,15,59044,0,0,31400,113967,1|0x10,0,0,0,0,0,0,0,0,'Part of Azure Front Channel Stalker EAI: - Cast 59044 on buddy'),
+(20737,1,15,59044,0,0,31400,112480,1|0x10,0,0,0,0,0,0,0,0,'Part of Azure Front Channel Stalker EAI: - Cast 59044 on buddy');
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (30861));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (30861));
+DELETE FROM `creature` WHERE `id` IN (30861);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(112561, 30861, 571, 1, 1, 5176.47, -561.28, 159.714, 5.17624, 300, 300, 0, 4),
+(112562, 30861, 571, 1, 1, 5528.73, -236.911, 162.596, 5.51011, 300, 300, 0, 4);
+DELETE FROM creature_movement WHERE Id IN (112561,112562);
+INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orientation, waittime, scriptid) VALUES
+(112561,1,5176.466,-561.2797,159.7138,100,0,0),
+(112561,2,5198.007,-526.8958,159.25449,100,0,0),
+(112561,3,5207.997,-501.90668,161.30594,100,0,0),
+(112561,4,5188.6187,-477.26828,164.76382,100,0,0),
+(112561,5,5168.7896,-451.5974,168.14476,100,0,0),
+(112561,6,5185.5103,-437.58038,163.26866,100,0,0),
+(112561,7,5214.6064,-426.37955,164.16347,100,0,0),
+(112561,8,5257.6055,-413.87735,169.95352,100,0,0),
+(112561,9,5267.8384,-391.41177,171.98119,100,0,0),
+(112561,10,5259.5215,-374.7864,172.06613,100,0,0),
+(112561,11,5253.485,-332.85492,169.1288,100,0,0),
+(112561,12,5270.757,-293.8442,170.7649,100,0,0),
+(112561,13,5272.1167,-246.0318,165.30133,100,0,0),
+(112561,14,5317.8735,-243.15555,169.05109,100,0,0),
+(112561,15,5346.4478,-220.89618,168.4331,100,0,0),
+(112561,16,5373.697,-208.04793,168.63197,100,0,0),
+(112561,17,5404.139,-200.9286,163.21382,100,0,0),
+(112561,18,5450.5845,-195.07295,163.64168,100,0,0),
+(112561,19,5467.127,-194.05457,160.46455,100,0,0),
+(112562,1,5528.725,-236.91113,162.59634,100,0,0),
+(112562,2,5522.305,-249.00317,164.05814,100,0,0),
+(112562,3,5514.391,-262.21603,166.05411,100,0,0),
+(112562,4,5527.216,-278.65286,165.92816,100,0,0),
+(112562,5,5551.5015,-281.92734,162.71786,100,0,0),
+(112562,6,5570.937,-287.6421,158.94746,100,0,0),
+(112562,7,5581.928,-290.26013,157.48494,100,0,0),
+(112562,8,5570.0405,-309.9425,160.23975,100,0,0),
+(112562,9,5576.621,-324.4771,159.77832,100,0,0),
+(112562,10,5568.6978,-354.1642,161.37244,100,0,0),
+(112562,11,5557.9834,-374.51367,161.88586,100,0,0),
+(112562,12,5572.9062,-385.4298,161.31274,100,0,0),
+(112562,13,5562.58,-405.64078,161.38739,100,0,0),
+(112562,14,5538.481,-406.301,163.76886,100,0,0),
+(112562,15,5526.668,-405.79572,166.13083,100,0,0),
+(112562,16,5516.1084,-409.9916,167.01157,100,0,0),
+(112562,17,5516.697,-435.19058,163.29196,100,0,0),
+(112562,18,5537.0806,-454.84875,161.07404,100,0,0),
+(112562,19,5530.372,-475.3635,162.06128,100,0,0),
+(112562,20,5542.6675,-504.14957,159.16072,100,0,0),
+(112562,21,5560.6196,-512.7498,159.12251,100,0,0),
+(112562,22,5552.266,-525.492,159.1573,100,0,0),
+(112562,23,5505.9663,-518.8379,160.72044,100,0,0),
+(112562,24,5479.883,-491.77676,164.36543,100,0,0),
+(112562,25,5474.4365,-462.0486,165.9697,100,0,0);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31041));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31041));
+DELETE FROM `creature` WHERE `id` IN (31041);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(93041, 31041, 571, 1, 1, 5141.84, -501.27, 175.657, 5.89034, 300, 300, 15, 1),
+(93042, 31041, 571, 1, 1, 5644.41, -932.727, 183.262, 1.70789, 300, 300, 15, 1),
+(93043, 31041, 571, 1, 1, 5575.8, -887.28, 173.345, 3.83841, 300, 300, 15, 1),
+(93044, 31041, 571, 1, 1, 5140.73, -657.463, 170.301, 0.100769, 300, 300, 15, 1),
+(93045, 31041, 571, 1, 1, 5540.42, -587.47, 157.161, 1.34955, 300, 300, 15, 1),
+(93046, 31041, 571, 1, 1, 5139.53, -382.407, 180.856, 0.144247, 300, 300, 15, 1),
+(112226, 31041, 571, 1, 1, 5217.54, -209.919, 163.101, 3.80734, 300, 300, 15, 1),
+(112227, 31041, 571, 1, 1, 5585.63, -104.239, 152.351, 0, 300, 300, 15, 1),
+(112228, 31041, 571, 1, 1, 5528.82, -71.8255, 149.573, 5.72335, 300, 300, 15, 1),
+(112229, 31041, 571, 1, 1, 5586.74, -141.681, 154.428, 0.496242, 300, 300, 15, 1),
+(112230, 31041, 571, 1, 1, 5625.96, -314.39, 154.56, 0.253537, 300, 300, 15, 1),
+(112231, 31041, 571, 1, 1, 5590.18, -475.506, 156.503, 2.55281, 300, 300, 15, 1),
+(112232, 31041, 571, 1, 1, 5437.86, -40.612, 148.985, 0.150792, 300, 300, 15, 1),
+(112233, 31041, 571, 1, 1, 5381.39, -74.6469, 151.067, 0.894724, 300, 300, 15, 1),
+(112234, 31041, 571, 1, 1, 5424.37, -82.6015, 147.367, 0, 300, 300, 15, 1),
+(112235, 31041, 571, 1, 1, 5642.18, -372.675, 156.265, 2.70635, 300, 300, 15, 1),
+(22699, 31041, 571, 1, 1, 5534.44, -759.552, 154.74, 2.62013, 300, 300, 15, 1),
+(22712, 31041, 571, 1, 1, 5645.87, -204.922, 168.769, 2.82385, 300, 300, 15, 1),
+(23024, 31041, 571, 1, 1, 5280.16, -131.021, 157.452, 2.26283, 300, 300, 15, 1),
+(23049, 31041, 571, 1, 1, 5178.05, -262.583, 172.382, 0.173624, 300, 300, 15, 1),
+(23050, 31041, 571, 1, 1, 5130.07, -443.239, 181.909, 3.08502, 300, 300, 15, 1),
+(23108, 31041, 571, 1, 1, 5120.49, -550.458, 178.682, 1.18618, 300, 300, 15, 1),
+(23121, 31041, 571, 1, 1, 5302.81, -986.202, 180.915, 2.52245, 300, 300, 15, 1),
+(23147, 31041, 571, 1, 1, 5349.43, -1030.06, 182.778, 3.19235, 300, 300, 15, 1),
+(23154, 31041, 571, 1, 1, 5589.22, -840.457, 174.558, 3.83355, 300, 300, 15, 1);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (33422));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (33422));
+DELETE FROM `creature` WHERE `id` IN (33422);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(127699, 33422, 571, 1, 1, 5812.59, 162.211, 179.182, 1.869, 180, 180, 5, 1),
+(127700, 33422, 571, 1, 1, 5757.36, 195.87, 182.874, 5.57873, 180, 180, 5, 1),
+(127701, 33422, 571, 1, 1, 5808.75, 212.86, 179.711, 0.030741, 180, 180, 5, 1),
+(127702, 33422, 571, 1, 1, 5786.79, 231.613, 179.268, 3.01205, 180, 180, 5, 1),
+(127703, 33422, 571, 1, 1, 5737.09, 175.558, 181.591, 1.7166, 180, 180, 5, 1),
+(127704, 33422, 571, 1, 1, 5761.98, 249.479, 175.708, 4.57125, 180, 180, 5, 1),
+(127705, 33422, 571, 1, 1, 5727.65, 146.771, 172.876, 2.39857, 180, 180, 5, 1),
+(127706, 33422, 571, 1, 1, 5794.12, 124.009, 177.089, 1.92364, 180, 180, 5, 1),
+(127707, 33422, 571, 1, 1, 5787.06, 176.372, 181.583, 2.74049, 180, 180, 0, 4),
+(127708, 33422, 571, 1, 1, 5604.93, 126.338, 150.784, 0.621701, 300, 300, 7, 1),
+(127709, 33422, 571, 1, 1, 5605.59, 293.128, 164.402, 3.63763, 300, 300, 7, 1),
+(127710, 33422, 571, 1, 1, 5616.52, 263.433, 163.752, 3.0957, 300, 300, 7, 1);
+DELETE FROM creature_movement WHERE Id IN (127707);
+INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orientation, waittime, scriptid) VALUES
+(127707,1,5787.065,176.3719,181.58337,100,1000,0),
+(127707,2,5791.05,168.96956,181.61719,100,0,0),
+(127707,3,5797.2793,156.74025,181.67137,100,0,0),
+(127707,4,5802.1294,145.88313,181.79547,100,0,0),
+(127707,5,5795.7456,138.03201,181.79634,100,0,0),
+(127707,6,5788.6455,133.2283,181.80536,100,0,0),
+(127707,7,5783.854,130.88922,181.82166,100,0,0),
+(127707,8,5777.146,128.98535,181.83177,100,0,0),
+(127707,9,5768.998,129.15865,181.86096,100,0,0),
+(127707,10,5762.9165,131.73872,181.85443,100,1000,0);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31236));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31236));
+DELETE FROM `creature` WHERE `id` IN (31236);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(92989, 31236, 571, 1, 1, 5548.16, -70.0838, 148.134, 6.22477, 300, 300, 15, 1),
+(92990, 31236, 571, 1, 1, 5584.22, 40.276, 148.567, 0.35612, 300, 300, 15, 1),
+(92997, 31236, 571, 1, 1, 5676.99, -110.461, 178.369, 5.78261, 300, 300, 15, 1),
+(92998, 31236, 571, 1, 1, 5443.63, 25.7569, 148.939, 3.89109, 300, 300, 15, 1),
+(92999, 31236, 571, 1, 1, 5609.2, 178.552, 151.785, 1.46413, 300, 300, 15, 1),
+(93000, 31236, 571, 1, 1, 5788.43, 341.794, 180.425, 6.28234, 300, 300, 15, 1),
+(93006, 31236, 571, 1, 1, 5734.81, 699.221, 152.39, 1.28478, 300, 300, 15, 1),
+(93008, 31236, 571, 1, 1, 5658.85, 336.869, 158.202, 5.81739, 300, 300, 15, 1),
+(93009, 31236, 571, 1, 1, 5659.65, 643.996, 150.425, 4.09535, 300, 300, 15, 1),
+(93010, 31236, 571, 1, 1, 5489.11, 402.72, 155.526, 2.44422, 300, 300, 15, 1),
+(93016, 31236, 571, 1, 1, 5962.37, 824.117, 160.478, 6.2744, 300, 300, 15, 1),
+(93017, 31236, 571, 1, 1, 5934.76, 1073.32, 198.464, 2.71112, 300, 300, 15, 1),
+(93018, 31236, 571, 1, 1, 5590.85, 1021.72, 182.235, 5.51061, 300, 300, 15, 1),
+(93024, 31236, 571, 1, 1, 5689.87, 835.543, 156.798, 5.76973, 300, 300, 15, 1),
+(93025, 31236, 571, 1, 1, 5606.53, 810.411, 159.732, 2.37001, 300, 300, 15, 1),
+(108947, 31236, 571, 1, 1, 5491.3, 720.961, 169.307, 2.97363, 300, 300, 15, 1),
+(108948, 31236, 571, 1, 1, 5275.79, 98.5246, 195.353, 3.03919, 300, 300, 15, 1),
+(108949, 31236, 571, 1, 1, 5694.6, 256.7, 167.943, 4.21903, 300, 300, 15, 1),
+(108950, 31236, 571, 1, 1, 5657.92, 397.901, 157.691, 3.87469, 300, 300, 15, 1),
+(108951, 31236, 571, 1, 1, 6037, 724.492, 173.564, 2.04231, 300, 300, 15, 1),
+(108952, 31236, 571, 1, 1, 5946.89, 730.564, 165.82, 0.54252, 300, 300, 15, 1),
+(111033, 31236, 571, 1, 1, 5838, 954.013, 167.234, 1.93208, 300, 300, 15, 1);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (30860));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (30860));
+DELETE FROM `creature` WHERE `id` IN (30860);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(112563, 30860, 571, 1, 1, 5185.86, -536.16, 160.191, 3.78431, 300, 300, 0, 4),
+(112564, 30860, 571, 1, 1, 5379.81, -495.98, 172.306, 2.95498, 300, 300, 0, 4),
+(112565, 30860, 571, 1, 1, 5204.69, -603.227, 160.121, 2.08029, 300, 300, 0, 4),
+(112566, 30860, 571, 1, 1, 5544.1, -365.495, 164.156, 3.34591, 300, 300, 0, 4),
+(112567, 30860, 571, 1, 1, 5527.4, -186.965, 157.167, 1.92774, 300, 300, 0, 4),
+(112568, 30860, 571, 1, 1, 5359.71, -839.49, 162.376, 0.785923, 300, 300, 0, 4),
+(112569, 30860, 571, 1, 1, 5373.85, -873.001, 164.092, 3.37445, 300, 300, 0, 4),
+(112570, 30860, 571, 1, 1, 5379.01, -159.552, 156.382, 2.89898, 300, 300, 0, 4),
+(112571, 30860, 571, 1, 1, 5241.35, -301.064, 166.273, 4.55719, 300, 300, 0, 4),
+(112572, 30860, 571, 1, 1, 5330.4, -733.996, 162.558, 0.102114, 300, 300, 0, 4),
+(112573, 30860, 571, 1, 1, 5332.13, -432.675, 181.835, 4.09718, 300, 300, 0, 4),
+(112574, 30860, 571, 1, 1, 5274.05, -534.503, 165.322, 2.98712, 300, 300, 0, 4),
+(112575, 30860, 571, 1, 1, 5481.3, -137.509, 149.93, 3.16475, 300, 300, 0, 4),
+(112576, 30860, 571, 1, 1, 5499.88, -231.363, 164.4, 5.98986, 300, 300, 0, 4),
+(112577, 30860, 571, 1, 1, 5307.01, -216.619, 163.448, 3.97186, 300, 300, 0, 4),
+(112578, 30860, 571, 1, 1, 5418.69, -191.493, 157.238, 0, 300, 300, 0, 4),
+(23169, 30860, 571, 1, 1, 5507.09, -120.836, 146.904, 0.471239, 300, 300, 0, 0),
+(23179, 30860, 571, 1, 1, 5524.13, -321.056, 167.669, 0, 300, 300, 0, 4),
+(23182, 30860, 571, 1, 1, 5401.54, -460.124, 179.009, 0, 300, 300, 0, 4),
+(23183, 30860, 571, 1, 1, 5384.15, -620.621, 165.129, 0, 300, 300, 0, 4),
+(23237, 30860, 571, 1, 1, 5241.3, -645.793, 161.273, 0, 300, 300, 0, 4);
+INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orientation, waittime, scriptid) VALUES
+(112577,1,5307.011,-216.61945,163.44766,100,0,0),
+(112577,2,5295.6465,-229.05315,164.30367,100,0,0),
+(112577,3,5298.26,-246.3489,167.47626,100,0,0),
+(112577,4,5316.754,-244.58315,169.25958,100,0,0),
+(112577,5,5330.252,-227.67952,167.65848,100,0,0),
+(112578,1,5418.693,-191.4926,157.2382,100,0,0),
+(112578,2,5417.47,-229.98828,171.39986,100,0,0),
+(112578,3,5420.066,-236.97604,174.16426,100,0,0),
+(112578,4,5435.2607,-234.43202,172.95348,100,0,0),
+(112578,5,5451.018,-222.50055,168.17574,100,0,0),
+(112570,1,5379.013,-159.55243,156.38242,100,0,0),
+(112570,2,5363.8154,-155.77988,155.89294,100,0,0),
+(112570,3,5347.12,-150.27719,156.00952,100,0,0),
+(112570,4,5345.818,-133.15074,153.69398,100,0,0),
+(112570,5,5335.867,-126.09879,153.84755,100,0,0),
+(112570,6,5323.2256,-142.43977,155.00993,100,0,0),
+(112575,1,5481.303,-137.50917,149.9301,100,0,0),
+(112575,2,5460.296,-162.47882,153.5459,100,0,0),
+(112575,3,5452.6313,-162.66942,153.9701,100,0,0),
+(112575,4,5439.572,-155.46196,152.28528,100,0,0),
+(112567,1,5527.398,-186.96512,157.1667,100,0,0),
+(112567,2,5544.2417,-243.41197,162.22066,100,0,0),
+(112567,3,5550.625,-233.65059,160.41072,100,0,0),
+(112567,4,5549.7227,-220.70459,159.49788,100,0,0),
+(112567,5,5543.119,-202.98201,157.74617,100,0,0),
+(112576,1,5499.8813,-231.36331,164.40018,100,0,0),
+(112576,2,5504.0225,-258.0895,167.58047,100,0,0),
+(112576,3,5518.8613,-262.5696,165.47452,100,0,0),
+(112576,4,5523.1816,-250.32607,163.9866,100,0,0),
+(23179,1,5524.1274,-321.05634,167.6689,100,0,0),
+(23179,2,5549.0703,-308.90173,163.63548,100,0,0),
+(23179,3,5553.703,-328.40857,164.07945,100,0,0),
+(23179,4,5561.1436,-343.6163,162.73608,100,0,0),
+(112571,1,5241.3477,-301.06445,166.27321,100,0,0),
+(112571,2,5255.0415,-314.2378,168.31569,100,0,0),
+(112571,3,5275.6245,-334.1307,172.77924,100,0,0),
+(112571,4,5271.686,-359.30606,172.5379,100,0,0),
+(112566,1,5544.1025,-365.49493,164.156,100,0,0),
+(112566,2,5513.287,-394.09375,168.71964,100,0,0),
+(112566,3,5528.8696,-413.58432,164.82956,100,0,0),
+(112566,4,5516.689,-443.2979,162.87961,100,0,0),
+(23182,1,5401.539,-460.12402,179.00945,100,0,0),
+(23182,2,5416.1846,-463.10513,175.16301,100,0,0),
+(23182,3,5431.4185,-459.0129,174.09953,100,0,0),
+(23182,4,5459.4243,-465.26416,166.71043,100,0,0),
+(112564,1,5379.81,-495.97955,172.30595,100,0,0),
+(112564,2,5357.031,-493.3021,170.67702,100,0,0),
+(112564,3,5338.8716,-480.35352,171.41505,100,0,0),
+(112564,4,5325.456,-463.47488,175.99802,100,0,0),
+(112564,5,5317.077,-461.89243,174.78867,100,0,0),
+(112574,1,5274.053,-534.50323,165.32208,100,0,0),
+(112574,2,5318.1157,-541.36426,165.77956,100,0,0),
+(112574,3,5360.7085,-534.9578,165.57254,100,0,0),
+(23183,1,5384.146,-620.6209,165.12863,100,0,0),
+(23183,2,5368.302,-610.7715,163.55295,100,0,0),
+(23183,3,5358.0938,-607.3965,162.0895,100,0,0),
+(23183,4,5344.813,-605.41895,164.20607,100,0,0),
+(23183,5,5328.5303,-599.9744,163.33125,100,0,0),
+(112573,1,5332.131,-432.67538,181.83513,100,0,0),
+(112573,2,5321.8223,-447.41843,178.03867,100,0,0),
+(112573,3,5304.97,-457.13434,173.98715,100,0,0),
+(112573,4,5285.2285,-453.0313,170.13437,100,0,0),
+(112573,5,5266.8535,-431.8948,170.8232,100,0,0),
+(112573,6,5260.8115,-410.79153,170.36758,100,0,0),
+(112563,1,5185.8574,-536.16016,160.19061,100,0,0),
+(112563,2,5210.681,-517.5727,158.92606,100,0,0),
+(112563,3,5210.162,-498.57227,161.93225,100,0,0),
+(112563,4,5231.5,-500.04678,162.14285,100,0,0),
+(112563,5,5244.566,-505.78098,162.36752,100,0,0),
+(112565,1,5204.685,-603.22687,160.12051,100,0,0),
+(112565,2,5205.743,-570.8597,158.74911,100,0,0),
+(112565,3,5194.543,-550.8167,158.19061,100,0,0),
+(23237,1,5241.302,-645.7933,161.2728,100,0,0),
+(23237,2,5248.528,-662.7642,161.93442,100,0,0),
+(23237,3,5268.6323,-642.3764,163.2048,100,0,0),
+(23237,4,5297.36,-639.8589,162.96579,100,0,0),
+(112572,1,5330.3955,-733.9964,162.5576,100,0,0),
+(112572,2,5351.5723,-737.0456,160.36937,100,0,0),
+(112572,3,5391.0864,-732.8016,161.96445,100,0,0),
+(112572,4,5412.8555,-751.49585,161.27727,100,0,0),
+(112568,1,5359.7095,-839.49005,162.37581,100,0,0),
+(112568,2,5374.5273,-824.62787,161.21304,100,0,0),
+(112568,3,5375.6074,-817.07935,161.75418,100,0,0),
+(112568,4,5375.962,-803.8167,161.5734,100,0,0),
+(112568,5,5367.3853,-797.8976,162.40349,100,0,0),
+(112568,6,5358.6973,-796.62897,163.91914,100,0,0),
+(112569,1,5373.85,-873.001,164.092,100,0,0),
+(112569,2,5399.047,-866.06836,163.01671,100,0,0),
+(112569,3,5404.157,-853.8249,161.54834,100,0,0),
+(112569,4,5410.21,-843.919,161.549,100,0,0),
+(112569,5,5421.99,-843.062,159.882,100,0,0),
+(112569,6,5432.22,-845.376,158.672,100,0,0),
+(112569,7,5438.58,-865.244,159.002,100,0,0),
+(112569,8,5445.33,-870.077,159.233,100,0,0),
+(112569,9,5460.81,-857.641,157.924,100,0,0);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (30862));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (30862));
+DELETE FROM `creature` WHERE `id` IN (30862);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(93027, 30862, 571, 1, 1, 5494.74, -1030.66, 186.814, 0.166754, 300, 300, 15, 1),
+(93028, 30862, 571, 1, 1, 5459.17, -962.651, 166.094, 5.83264, 300, 300, 15, 1),
+(93030, 30862, 571, 1, 1, 5314.33, -239.477, 167.882, 1.17719, 300, 300, 15, 1),
+(93031, 30862, 571, 1, 1, 5202.59, -508.765, 160.694, 0.967906, 300, 300, 15, 1),
+(93047, 30862, 571, 1, 1, 5475.5, -673.666, 151.92, 1.08765, 300, 300, 15, 1),
+(93048, 30862, 571, 1, 1, 5234.87, -463.372, 166.161, 0.97702, 300, 300, 15, 1),
+(93049, 30862, 571, 1, 1, 5490.6, -624.146, 152.075, 0.509943, 300, 300, 15, 1),
+(93050, 30862, 571, 1, 1, 5546.57, -355.873, 164.025, 1.91202, 300, 300, 15, 1),
+(93051, 30862, 571, 1, 1, 5258.57, -810.269, 175.317, 6.22936, 300, 300, 15, 1),
+(93052, 30862, 571, 1, 1, 5189.26, -746.197, 171.416, 2.19593, 300, 300, 15, 1),
+(93055, 30862, 571, 1, 1, 5208.83, -623.843, 159.871, 4.34742, 300, 300, 15, 1),
+(93056, 30862, 571, 1, 1, 5247.81, -327.14, 168.023, 1.21834, 300, 300, 15, 1),
+(93057, 30862, 571, 1, 1, 5344.32, -162.637, 157.881, 3.05007, 300, 300, 15, 1),
+(93058, 30862, 571, 1, 1, 5284.45, -377.736, 176.575, 2.62729, 300, 300, 15, 1),
+(112539, 30862, 571, 1, 1, 5268.05, -256.435, 165.874, 3.61517, 300, 300, 15, 1),
+(112540, 30862, 571, 1, 1, 5229.61, -416.316, 165.132, 3.1338, 300, 300, 15, 1),
+(112541, 30862, 571, 1, 1, 5320.96, -420.611, 182.176, 1.85272, 300, 300, 15, 1),
+(112542, 30862, 571, 1, 1, 5278.82, -487.114, 166.611, 3.25847, 300, 300, 15, 1),
+(112543, 30862, 571, 1, 1, 5530.94, -314.946, 166.269, 0.849274, 300, 300, 15, 1),
+(112544, 30862, 571, 1, 1, 5504.39, -270.89, 168.413, 1.52813, 300, 300, 15, 1),
+(112545, 30862, 571, 1, 1, 5423.17, -163.937, 152.326, 4.38817, 300, 300, 15, 1),
+(112546, 30862, 571, 1, 1, 5538.64, -991.114, 194.364, 0.033223, 300, 300, 15, 1),
+(112547, 30862, 571, 1, 1, 5490.13, -700.111, 150.643, 5.86986, 300, 300, 15, 1),
+(112548, 30862, 571, 1, 1, 5522.74, -182.916, 156.994, 0.316919, 300, 300, 15, 1),
+(112549, 30862, 571, 1, 1, 5549.15, -274.505, 162.974, 1.3245, 300, 300, 15, 1),
+(112550, 30862, 571, 1, 1, 5497.91, -379.652, 173.199, 3.03595, 300, 300, 15, 1),
+(112551, 30862, 571, 1, 1, 5463.79, -465.489, 166.075, 2.91421, 300, 300, 15, 1),
+(112552, 30862, 571, 1, 1, 5354.3, -504.689, 168.786, 4.11393, 300, 300, 15, 1),
+(112553, 30862, 571, 1, 1, 5460.85, -208.03, 164.733, 4.10489, 300, 300, 15, 1);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31231));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31231));
+DELETE FROM `creature` WHERE `id` IN (31231);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(108961, 31231, 571, 1, 1, 5395.22, 128.635, 153.832, 3.15061, 300, 300, 5, 1),
+(112308, 31231, 571, 1, 1, 5607.9, 280.426, 163.657, 4.03171, 300, 300, 0, 0),
+(112311, 31231, 571, 1, 1, 5761.55, 192.468, 182.957, 1.97222, 300, 300, 0, 0),
+(112313, 31231, 571, 1, 1, 5780.04, 197.552, 181.668, 4.9373, 300, 300, 5, 1),
+(112316, 31231, 571, 1, 1, 5754.94, 202.283, 182.957, 5.07891, 300, 300, 0, 0),
+(112317, 31231, 571, 1, 1, 5755.12, 193.533, 182.957, 1.93731, 300, 300, 0, 0),
+(112318, 31231, 571, 1, 1, 5758.21, 195.081, 182.957, 1.91986, 300, 300, 0, 0),
+(112320, 31231, 571, 1, 1, 5758.32, 191.146, 182.957, 2.1293, 300, 300, 0, 0),
+(112321, 31231, 571, 1, 1, 5761.74, 196.484, 182.957, 2.14675, 300, 300, 0, 0),
+(5304, 31231, 571, 1, 1, 5508.92, 432.936, 161.747, 2.42601, 300, 300, 0, 0),
+(23246, 31231, 571, 1, 1, 5786.1, 168.134, 181.687, 0.383972, 300, 300, 0, 0),
+(23264, 31231, 571, 1, 1, 5668.06, 228.85, 167.306, 1.38928, 300, 300, 5, 1),
+(23304, 31231, 571, 1, 1, 5800.04, 142.03, 181.801, 0.947208, 300, 300, 5, 1),
+(23329, 31231, 571, 1, 1, 5742.19, 195.88, 181.659, 3.63029, 300, 300, 0, 0),
+(23338, 31231, 571, 1, 1, 5430.98, 388.716, 168.03, 3.87463, 300, 300, 0, 0),
+(5355, 31231, 571, 1, 1, 5442.4, 381.688, 168.084, 5.21853, 300, 300, 0, 0),
+(23341, 31231, 571, 1, 1, 5486.11, 440.806, 164.035, 4.33081, 300, 300, 5, 1),
+(23344, 31231, 571, 1, 1, 5439.66, 422.065, 167.608, 0.976561, 300, 300, 5, 1),
+(23378, 31231, 571, 1, 1, 5634.74, 278.278, 164.398, 3.86548, 300, 300, 5, 1),
+(23392, 31231, 571, 1, 1, 5769.82, 931.393, 158.893, 1.08794, 300, 300, 0, 0),
+(23399, 31231, 571, 1, 1, 5695.86, 918.449, 158.893, 1.86598, 300, 300, 0, 0),
+(23413, 31231, 571, 1, 1, 5414.46, 199.592, 154.06, 2.52481, 300, 300, 0, 0);
+DELETE FROM creature_addon WHERE guid IN (5304,5355);
+INSERT INTO creature_addon (guid,mount,stand_state,sheath_state,pvp_flags,emote,moveflags,auras) VALUES (5304,0,0,1,0,426,0,NULL), (5355,0,0,1,0,415,0,NULL);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (33499));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (33499));
+DELETE FROM `creature` WHERE `id` IN (33499);
+DELETE FROM creature_template_addon WHERE entry IN (33499);
+INSERT INTO creature_template_addon (entry,mount,stand_state,sheath_state,pvp_flags,emote,moveflags,auras) VALUES (33499,0,0,1,0,234,0,NULL);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(127736, 33499, 571, 1, 3, 5427, 440.918, 169.243, 2.56563, 180, 180, 0, 0),
+(127737, 33499, 571, 1, 3, 5416.46, 439.152, 170.435, 3.42085, 180, 180, 0, 0),
+(127738, 33499, 571, 1, 3, 5411.86, 354.365, 166.123, 5.75959, 180, 180, 0, 0),
+(127739, 33499, 571, 1, 3, 5396.52, 375.717, 170.754, 2.53073, 180, 180, 0, 0),
+(127740, 33499, 571, 1, 3, 5427.88, 360.651, 163.194, 5.07891, 180, 180, 0, 0),
+(127741, 33499, 571, 1, 3, 5410.31, 369.326, 167.655, 3.26377, 180, 180, 0, 0);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(5502, 31401, 571, 1, 1, 5458.53, 424.54, 163.886, 0.226893, 300, 300, 0, 0),
+(5507, 31401, 571, 1, 1, 5469.51, 374.177, 158.115, 4.20624, 300, 300, 0, 0);
+DELETE FROM creature_addon WHERE guid IN (112461,112464,112467);
+INSERT INTO creature_addon (guid,mount,stand_state,sheath_state,pvp_flags,emote,moveflags,auras) VALUES (112461,0,0,1,0,69,0,NULL), (112464,0,0,1,0,69,0,NULL), (112467,0,0,1,0,69,0,NULL);
+DELETE FROM dbscripts_on_relay WHERE id IN (20738);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20738,1,31,31400,35,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Azure Manashaper 31401 EAI: - search for 31400'),
+(20738,10,15,59069,0,0,31400,35,1,0,0,0,0,0,0,0,0,'Part of Azure Manashaper 31401 EAI: - Cast 59069 on buddy');
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31233));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31233));
+DELETE FROM `creature` WHERE `id` IN (31233);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(92952, 31233, 571, 1, 1, 5402.95, 184.415, 156.232, 4.03128, 300, 300, 5, 1),
+(92953, 31233, 571, 1, 1, 5444.9, -12.3125, 150.105, 2.25357, 300, 300, 5, 1),
+(92954, 31233, 571, 1, 1, 5607.4, -57.3976, 155.126, 1.39024, 300, 300, 5, 1),
+(92955, 31233, 571, 1, 1, 5740.04, 25.5992, 178.127, 1.80587, 300, 300, 5, 1),
+(92956, 31233, 571, 1, 1, 5751.46, 460.772, 159.653, 0.799921, 300, 300, 5, 1),
+(92957, 31233, 571, 1, 1, 5545.08, 985.547, 176.659, 0, 300, 300, 15, 1),
+(92958, 31233, 571, 1, 1, 5665.59, 221.156, 166.561, 2.09551, 300, 300, 5, 1),
+(92959, 31233, 571, 1, 1, 5658.24, 41.8529, 163.512, 3.44074, 300, 300, 0, 0),
+(92960, 31233, 571, 1, 1, 5784.76, 341.797, 179.55, 3.14286, 300, 300, 5, 1),
+(92961, 31233, 571, 1, 1, 5916.07, 948.518, 160.391, 0, 300, 300, 15, 1),
+(92964, 31233, 571, 1, 1, 5660.36, 645.282, 150.381, 0.170768, 300, 300, 5, 1),
+(92968, 31233, 571, 1, 1, 5512.1, 474.754, 161.584, 1.55908, 300, 300, 0, 0),
+(92969, 31233, 571, 1, 1, 5477.77, 495.509, 164.595, 0.099699, 300, 300, 5, 1),
+(92971, 31233, 571, 1, 1, 5849.48, 637.707, 171.496, 6.02447, 300, 300, 5, 1),
+(92973, 31233, 571, 1, 1, 5971.44, 780.478, 163.953, 5.80513, 300, 300, 5, 1),
+(92974, 31233, 571, 1, 1, 5643.44, 787.429, 153.885, 2.12629, 300, 300, 5, 1),
+(92976, 31233, 571, 1, 1, 5855.63, 758.34, 159.655, 3.15038, 300, 300, 5, 1),
+(92977, 31233, 571, 1, 1, 5724.96, 452.603, 158.876, 2.89752, 300, 300, 5, 1),
+(92978, 31233, 571, 1, 1, 5790.33, 840.113, 154.92, 0.161725, 300, 300, 5, 1),
+(92985, 31233, 571, 1, 1, 5971.33, 1007.83, 168.269, 0, 300, 300, 15, 1),
+(92986, 31233, 571, 1, 1, 5724.5, 324.169, 164.64, 5.90703, 300, 300, 5, 1),
+(92987, 31233, 571, 1, 1, 6022.68, 867.98, 155.382, 0, 300, 300, 15, 1),
+(92991, 31233, 571, 1, 1, 5449.13, 349.568, 156.158, 0, 300, 300, 15, 1),
+(92992, 31233, 571, 1, 1, 5517.46, 537.5, 160.064, 0, 300, 300, 15, 1),
+(92993, 31233, 571, 1, 1, 5372.72, 157.505, 161.721, 0, 300, 300, 15, 1);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31228));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (31228));
+DELETE FROM `creature` WHERE `id` IN (31228);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(92947, 31228, 571, 1, 1, 6014.43, 1027.49, 166.882, 0, 300, 300, 15, 1),
+(92948, 31228, 571, 1, 1, 5895.1, 1022.69, 185.539, 0, 300, 300, 15, 1),
+(92949, 31228, 571, 1, 1, 6040.72, 817.526, 167.702, 0, 300, 300, 15, 1),
+(92950, 31228, 571, 1, 1, 5608.73, 923.122, 165.778, 0, 300, 300, 15, 1),
+(92951, 31228, 571, 1, 1, 5434.04, 271.911, 153.203, 0, 300, 300, 15, 1),
+(92962, 31228, 571, 1, 1, 5838.07, 883.63, 159.213, 0, 300, 300, 15, 1),
+(92963, 31228, 571, 1, 1, 5599.2, 523.367, 153.29, 5.34001, 300, 300, 15, 1),
+(92965, 31228, 571, 1, 1, 5770.39, 568.582, 158.981, 4.47973, 300, 300, 15, 1),
+(92966, 31228, 571, 1, 1, 5681.63, -85.1868, 173.357, 3.97033, 300, 300, 15, 1),
+(92967, 31228, 571, 1, 1, 5506.57, 0.439636, 148.468, 1.10191, 300, 300, 15, 1),
+(92970, 31228, 571, 1, 1, 5824.3, 206.737, 179.932, 3.35633, 300, 300, 15, 1),
+(92972, 31228, 571, 1, 1, 5565.55, 218.123, 150.937, 0.902305, 300, 300, 15, 1),
+(92975, 31228, 571, 1, 1, 5793.57, 388.891, 178.965, 4.23301, 300, 300, 15, 1),
+(92979, 31228, 571, 1, 1, 5736.76, 363.929, 166.601, 2.38866, 300, 300, 15, 1),
+(92980, 31228, 571, 1, 1, 5603.95, 61.1347, 149.198, 4.7925, 300, 300, 15, 1),
+(92981, 31228, 571, 1, 1, 5662.79, 53.7682, 162.887, 2.59228, 300, 300, 15, 1),
+(92982, 31228, 571, 1, 1, 5585.42, 656.46, 159.239, 4.66009, 300, 300, 15, 1),
+(92983, 31228, 571, 1, 1, 5822.68, 709.327, 161.505, 2.51646, 300, 300, 15, 1),
+(92984, 31228, 571, 1, 1, 5820.45, 571.464, 171.866, 2.0703, 300, 300, 15, 1),
+(92988, 31228, 571, 1, 1, 5859.34, 679.413, 168.083, 3.04891, 300, 300, 15, 1),
+(93001, 31228, 571, 1, 1, 5450.56, 442.956, 165.624, 2.95702, 300, 300, 15, 1),
+(93002, 31228, 571, 1, 1, 5953.18, 792.287, 161.301, 0.28131, 300, 300, 15, 1),
+(93011, 31228, 571, 1, 1, 5670.21, 311.748, 162.279, 4.19106, 300, 300, 15, 1),
+(93012, 31228, 571, 1, 1, 5743.11, 361.785, 167.483, 1.34948, 300, 300, 15, 1),
+(93013, 31228, 571, 1, 1, 5805.85, 360.481, 184.785, 3.5541, 300, 300, 15, 1);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(112490, 31393, 571, 1, 1, 5438.81, 668.266, 322.421, 5.04997, 300, 300, 0, 3),
+(112491, 31393, 571, 1, 1, 5291.3, 818.469, 288.776, 0, 300, 300, 0, 3);
+DELETE FROM creature_movement WHERE Id IN (112490,112491);
+INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orientation, waittime, scriptid) VALUES
+(112490,1,5438.815,668.2655,322.42108,100,0,0),
+(112490,2,5451.159,709.10034,322.42108,100,0,0),
+(112490,3,5476.8647,733.9802,322.42108,100,0,0),
+(112490,4,5454.2964,810.34503,322.42108,100,0,0),
+(112490,5,5427.173,886.34015,322.42108,100,0,0),
+(112490,6,5387.578,929.3948,322.42108,100,0,0),
+(112490,7,5333.851,919.97766,322.42108,100,0,0),
+(112490,8,5253.631,889.6624,322.42108,100,0,0),
+(112490,9,5204.9907,835.01697,322.42108,100,0,0),
+(112490,10,5189.2383,746.423,322.42108,100,0,0),
+(112490,11,5220.4736,645.9417,322.42108,100,0,0),
+(112490,12,5256.108,601.68915,322.42108,100,0,0),
+(112490,13,5306.3574,592.3024,322.42108,100,0,0),
+(112490,14,5347.3755,604.81903,322.42108,100,0,0),
+(112490,15,5413.7056,632.4085,322.42108,100,0,0),
+(112491,1,5291.2993,818.4689,288.7756,100,0,0),
+(112491,2,5291.472,818.68335,288.47034,100,0,0),
+(112491,3,5302.6475,814.3542,299.387,100,0,0),
+(112491,4,5338.491,803.68555,317.63696,100,0,0),
+(112491,5,5368.569,787.5017,324.66476,100,0,0),
+(112491,6,5383.143,751.4431,329.22006,100,0,0),
+(112491,7,5375.0166,694.2756,315.08142,100,0,0),
+(112491,8,5325.981,673.482,299.66476,100,0,0),
+(112491,9,5267.1343,683.8737,299.41486,100,0,0),
+(112491,10,5243.1304,711.9871,306.80365,100,0,0),
+(112491,11,5237.7314,749.3507,305.6092,100,0,0),
+(112491,12,5250.0005,786.5188,297.66476,100,0,0);
+DELETE FROM creature_spawn_data WHERE guid IN (112490,112491);
+INSERT INTO creature_spawn_data (guid, Id) VALUES (112490,20056), (112491,20056);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (30856));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (30856));
+DELETE FROM `creature` WHERE `id` IN (30856);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(93032, 30856, 571, 1, 1, 5548.17, -960.585, 188.55, 1.64318, 300, 300, 5, 1),
+(93033, 30856, 571, 1, 1, 5487.93, -656.733, 151.12, 5.9714, 300, 300, 5, 1),
+(93034, 30856, 571, 1, 1, 5523.87, -809.086, 159.52, 0.588003, 300, 300, 5, 1),
+(93035, 30856, 571, 1, 1, 5443.21, -684.69, 156.449, 2.56117, 300, 300, 5, 1),
+(93036, 30856, 571, 1, 1, 5481.05, -780.352, 152.972, 3.74479, 300, 300, 5, 1),
+(93038, 30856, 571, 1, 1, 5477.37, -942.468, 164.326, 1.59536, 300, 300, 5, 1),
+(93039, 30856, 571, 1, 1, 5556.17, -874.091, 165.251, 3.14745, 300, 300, 5, 1),
+(112579, 30856, 571, 1, 1, 5510.22, -594.728, 153.325, 0.143868, 300, 300, 5, 1),
+(112580, 30856, 571, 1, 1, 5513.78, -715.61, 148.643, 2.57952, 300, 300, 5, 1);
+DELETE FROM dbscripts_on_relay WHERE id IN (20739);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20739,1,31,30862,25,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Unbound Trickster 30856 EAI: - search for 30862'),
+(20739,10,15,58438,0,0,30862,30,1,0,0,0,0,0,0,0,0,'Part of Unbound Trickster 30856 EAI: - Cast 30862 on buddy');
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (30864,31123));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (30864,31123));
+DELETE FROM `creature` WHERE `id` IN (30864,31123);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(112524, 30864, 571, 1, 1, 5481.99, -1043.84, 174.746, -1.51262, 300, 300, 5, 1),
+(112525, 30864, 571, 1, 1, 5414.77, -882.598, 164.108, 0.86369, 300, 300, 5, 1),
+(112518, 30864, 571, 1, 1, 5265.11, -715.235, 167.058, 4.7807, 300, 300, 0, 0),
+(112500, 30864, 571, 1, 1, 5543.31, -522.224, 159.14, 5.43838, 300, 300, 0, 0),
+(112522, 30864, 571, 1, 1, 5470.13, -1014.58, 176.522, 5.86219, 300, 300, 0, 0),
+(112526, 30864, 571, 1, 1, 5515.19, -539.242, 158.039, 5.74672, 300, 300, 0, 0),
+(112520, 30864, 571, 1, 1, 5407.79, -1031.36, 175.136, 0, 300, 300, 0, 0),
+(112523, 31123, 571, 1, 1, 5470.13, -1014.58, 176.522, 5.86807, 300, 300, 0, 0),
+(112519, 31123, 571, 1, 1, 5265.11, -715.235, 167.058, 4.78071, 300, 300, 0, 0),
+(112501, 31123, 571, 1, 1, 5543.31, -522.224, 159.14, 5.43841, 300, 300, 0, 0),
+(112521, 31123, 571, 1, 1, 5407.79, -1031.36, 175.136, 0, 300, 300, 0, 0);
+DELETE FROM `spawn_group` WHERE id = 33514;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33514, 'Crystalsong Forest - Shandaral Hunter Spirit 30864 & Shandaral Spirit Wolf 31123 - Patrol - 1', 0, 0, 0, 0x01);
+DELETE FROM `spawn_group_spawn` WHERE id = 33514;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33514, 112500, 0), (33514, 112501, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 33514;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(33514, 2, 3, 0, 33514, 4, 'Crystalsong Forest - Shandaral Hunter Spirit 30864 & Shandaral Spirit Wolf 31123 - Patrol - 1');
+DELETE FROM `waypoint_path_name` WHERE PathId = 33514;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (33514,'Crystalsong Forest - Shandaral Hunter Spirit 30864 & Shandaral Spirit Wolf 31123 - Patrol - 1');
+DELETE FROM `waypoint_path` WHERE PathId = 33514;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(33514,1,5543.315,-522.22394,159.14021,100,2000,0),
+(33514,2,5505.426,-519.4785,160.697,100,0,0),
+(33514,3,5492.992,-505.6021,164.04689,100,0,0),
+(33514,4,5478.925,-483.1222,164.467,100,0,0),
+(33514,5,5468.003,-467.11642,165.50264,100,0,0),
+(33514,6,5456.1777,-452.50992,169.5731,100,0,0),
+(33514,7,5438.0923,-460.3023,172.10619,100,0,0),
+(33514,8,5426.3286,-479.04184,171.21355,100,0,0),
+(33514,9,5422.2183,-499.1059,169.08952,100,2000,0);
+DELETE FROM `spawn_group` WHERE id = 33515;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33515, 'Crystalsong Forest - Shandaral Hunter Spirit 30864 & Shandaral Spirit Wolf 31123 - Patrol - 2', 0, 0, 0, 0x01);
+DELETE FROM `spawn_group_spawn` WHERE id = 33515;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33515, 112518, 0), (33515, 112519, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 33515;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(33515, 2, 3, 0, 33515, 4, 'Crystalsong Forest - Shandaral Hunter Spirit 30864 & Shandaral Spirit Wolf 31123 - Patrol - 2');
+DELETE FROM `waypoint_path_name` WHERE PathId = 33515;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (33515,'Crystalsong Forest - Shandaral Hunter Spirit 30864 & Shandaral Spirit Wolf 31123 - Patrol - 2');
+DELETE FROM `waypoint_path` WHERE PathId = 33515;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(33515,1,5265.112,-715.23456,167.05826,100,2000,0),
+(33515,2,5239.076,-698.1352,165.2673,100,0,0),
+(33515,3,5225.785,-675.7913,162.09357,100,0,0),
+(33515,4,5222.5728,-648.01117,160.78284,100,0,0),
+(33515,5,5220.1313,-612.3183,160.70474,100,0,0),
+(33515,6,5238.053,-583.7121,160.159,100,0,0),
+(33515,7,5235.5645,-549.7577,158.31961,100,0,0),
+(33515,8,5241.815,-536.75555,159.69461,100,0,0),
+(33515,9,5256.4756,-520.9168,161.55295,100,0,0),
+(33515,10,5289.114,-514.0457,163.94778,100,2000,0);
+DELETE FROM `spawn_group` WHERE id = 33516;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33516, 'Crystalsong Forest - Shandaral Hunter Spirit 30864 & Shandaral Spirit Wolf 31123 - Patrol - 3', 0, 0, 0, 0x01);
+DELETE FROM `spawn_group_spawn` WHERE id = 33516;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33516, 112520, 0), (33516, 112521, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 33516;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(33516, 2, 3, 0, 33516, 4, 'Crystalsong Forest - Shandaral Hunter Spirit 30864 & Shandaral Spirit Wolf 31123 - Patrol - 3');
+DELETE FROM `waypoint_path_name` WHERE PathId = 33516;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (33516,'Crystalsong Forest - Shandaral Hunter Spirit 30864 & Shandaral Spirit Wolf 31123 - Patrol - 3');
+DELETE FROM `waypoint_path` WHERE PathId = 33516;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(33516,1,5407.7866,-1031.356,175.13638,100,2000,0),
+(33516,2,5388.0415,-1014.7551,173.47734,100,0,0),
+(33516,3,5367.467,-1002.1464,169.83391,100,0,0),
+(33516,4,5373.2153,-981.0752,168.63574,100,0,0),
+(33516,5,5368.0054,-960.0721,167.96118,100,0,0),
+(33516,6,5356.063,-940.04926,168.27489,100,0,0),
+(33516,7,5334.9595,-930.12274,169.92134,100,0,0),
+(33516,8,5315.518,-921.26855,172.25314,100,0,0),
+(33516,9,5296.7266,-912.7507,175.43773,100,0,0),
+(33516,10,5277.918,-921.5883,177.90697,100,0,0),
+(33516,11,5273.2056,-941.7913,179.76158,100,2000,0);
+DELETE FROM `spawn_group` WHERE id = 33517;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33517, 'Crystalsong Forest - Shandaral Hunter Spirit 30864 & Shandaral Spirit Wolf 31123 - Patrol - 4', 0, 0, 0, 0x01);
+DELETE FROM `spawn_group_spawn` WHERE id = 33517;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33517, 112522, 0), (33517, 112523, 1);
+DELETE FROM `spawn_group_formation` WHERE id = 33517;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(33517, 2, 3, 0, 33517, 4, 'Crystalsong Forest - Shandaral Hunter Spirit 30864 & Shandaral Spirit Wolf 31123 - Patrol - 4');
+DELETE FROM `waypoint_path_name` WHERE PathId = 33517;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (33517,'Crystalsong Forest - Shandaral Hunter Spirit 30864 & Shandaral Spirit Wolf 31123 - Patrol - 4');
+DELETE FROM `waypoint_path` WHERE PathId = 33517;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(33517,1,5470.13,-1014.58,176.522,100,2000,0),
+(33517,2,5481.08,-1027.12,182.045,100,0,0),
+(33517,3,5493.24,-1068.22,193.444,100,2000,0);
+DELETE FROM dbscripts_on_relay WHERE id IN (20740);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20740,1,32,1,0,0,0,0,2,0,0,0,0,0,0,0,0,'pause WP'),
+(20740,100,37,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'move towards target'),
+(20740,5000,1,396,0,0,0,0,2,0,0,0,0,0,0,0,0,'emote'),
+(20740,8000,1,153,0,0,0,0,2,0,0,0,0,0,0,0,0,'emote'),
+(20740,11000,32,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'unpause WP');
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (30863,30865));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (30863,30865));
+DELETE FROM `creature` WHERE `id` IN (30863,30865);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(112529, 30865, 571, 1, 1, 5425.48, -918.537, 165.94, 3.7001, 300, 300, 0, 0),
+(112530, 30863, 571, 1, 1, 5500.84, -558.263, 157.866, 5.20073, 300, 300, 0, 0),
+(112514, 30865, 571, 1, 1, 5384.02, -783.603, 156.793, 1.93731, 300, 300, 0, 0),
+(112511, 30865, 571, 1, 1, 5307.88, -680.026, 163.018, 5.30593, 300, 300, 0, 2),
+(112531, 30865, 571, 1, 1, 5408.15, -786.723, 156.061, 3.25959, 300, 300, 0, 0),
+(112532, 30865, 571, 1, 1, 5328.52, -790.152, 165.518, 5.251, 300, 300, 0, 0),
+(112533, 30865, 571, 1, 1, 5364.85, -777.385, 156.834, 4.99547, 300, 300, 5, 1),
+(112534, 30865, 571, 1, 1, 5441.58, -799.435, 155.468, 2.29548, 300, 300, 5, 1),
+(112535, 30865, 571, 1, 1, 5390.1, -753.646, 156.881, 1.73319, 300, 300, 5, 1),
+(112510, 30865, 571, 1, 1, 5360.1, -819.005, 165.532, 2.07307, 300, 300, 0, 2),
+(112536, 30865, 571, 1, 1, 5316.98, -590.268, 165.481, 3.15905, 300, 300, 0, 0),
+(112515, 30865, 571, 1, 1, 5304.41, -567.677, 166.739, 1.76278, 300, 300, 0, 0),
+(112537, 30863, 571, 1, 1, 5495.46, -541.869, 159.122, 6.16101, 300, 300, 0, 0),
+(112538, 30865, 571, 1, 1, 5467.35, -553.575, 158.414, 1.95923, 300, 300, 5, 1),
+(23414, 30865, 571, 1, 1, 5411.45, -895.82, 165.94, 5.44543, 300, 300, 0, 0),
+(112504, 30865, 571, 1, 1, 5530.47, -549.706, 157.977, 5.01265, 300, 300, 0, 4),
+(23423, 30865, 571, 1, 1, 5495.46, -541.869, 159.122, 6.16101, 300, 300, 0, 0),
+(112513, 30865, 571, 1, 1, 5480.55, -517.363, 162.639, 5.96903, 300, 300, 0, 0),
+(112508, 30865, 571, 1, 1, 5309.43, -741.21, 162.904, 0.374985, 300, 300, 0, 2),
+(23434, 30865, 571, 1, 1, 5286.67, -553.345, 166.739, 4.9757, 300, 300, 0, 0),
+(112507, 30865, 571, 1, 1, 5314.03, -796.765, 165.486, 1.1878, 300, 300, 0, 2),
+(23452, 30865, 571, 1, 1, 5337.8, -824.36, 165.436, 1.50106, 300, 300, 5, 1),
+(112517, 30865, 571, 1, 1, 5255.15, -618.642, 162.987, 5.23599, 300, 300, 0, 0),
+(23492, 30865, 571, 1, 1, 5340.57, -560.297, 163.971, 5.10078, 300, 300, 7, 1),
+(23538, 30865, 571, 1, 1, 5441.12, -911.869, 164.142, 2.70526, 300, 300, 0, 0),
+(23580, 30865, 571, 1, 1, 5410.68, -914.799, 165.87, 5.5019, 300, 300, 5, 1),
+(112509, 30865, 571, 1, 1, 5417.61, -942.468, 163.753, 4.08203, 300, 300, 0, 4),
+(23592, 30865, 571, 1, 1, 5432.54, -521.662, 165.012, 5.96395, 300, 300, 7, 1),
+(23609, 30865, 571, 1, 1, 5271.6, -704.479, 165.402, 2.21636, 300, 300, 5, 1),
+(23619, 30865, 571, 1, 1, 5313.65, -707.441, 162.944, 5.33299, 300, 300, 5, 1),
+(23683, 30865, 571, 1, 1, 5438.39, -550.648, 162.381, 3.67392, 300, 300, 5, 1),
+(112528, 30865, 571, 1, 1, 5278.81, -734.433, 162.987, 0.244346, 300, 300, 0, 0),
+(112506, 30865, 571, 1, 1, 5372.73, -755.605, 156.756, 0, 300, 300, 0, 4),
+(23732, 30865, 571, 1, 1, 5340.59, -803.853, 165.518, 4.32931, 300, 300, 0, 0),
+(23743, 30865, 571, 1, 1, 5317.71, -813.541, 165.555, 4.55935, 300, 300, 5, 1),
+(23749, 30865, 571, 1, 1, 5297.3, -765.943, 162.903, 3.0964, 300, 300, 5, 1),
+(23759, 30865, 571, 1, 1, 5321.08, -553.354, 166.739, 4.60767, 300, 300, 0, 0),
+(23779, 30865, 571, 1, 1, 5276.23, -590.122, 165.202, 4.83456, 300, 300, 0, 0),
+(112505, 30865, 571, 1, 1, 5276.45, -588.745, 165.675, 4.64258, 300, 300, 0, 4),
+(23789, 30865, 571, 1, 1, 5317.49, -615.572, 164.093, 5.96903, 300, 300, 7, 1),
+(112512, 30865, 571, 1, 3, 5389.43, -905.448, 164.141, 4.4855, 300, 300, 0, 2);
+DELETE FROM creature_addon WHERE guid IN (112513,23779,112514,112515,112517,112528);
+INSERT INTO creature_addon (guid,mount,stand_state,sheath_state,pvp_flags,emote,moveflags,auras) VALUES
+(112513,0,0,1,0,415,0,NULL),(23779,0,0,1,0,415,0,NULL),(112514,0,0,1,0,415,0,NULL),(112515,0,0,1,0,426,0,NULL),(112517,0,0,1,0,426,0,NULL),(112528,0,0,1,0,426,0,NULL);
+DELETE FROM creature_movement WHERE Id IN (112504,112505,112506,112507,112510,112511,112508,112512,112509);
+INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orientation, waittime, scriptid) VALUES
+(112504,1,5530.471,-549.70557,157.97676,100,2000,0),
+(112504,2,5529.841,-559.5335,157.3426,100,0,0),
+(112504,3,5521.088,-570.40607,155.36043,100,0,0),
+(112504,4,5506.772,-576.10333,155.74312,100,0,0),
+(112504,5,5493.6113,-577.1097,156.85867,100,0,0),
+(112504,6,5478.178,-580.38196,157.65457,100,0,0),
+(112504,7,5458.776,-578.7349,159.64879,100,2000,0),
+(112505,1,5276.4453,-588.74506,165.67499,100,2000,0),
+(112505,2,5288.0913,-579.4436,165.36249,100,0,0),
+(112505,3,5290.417,-575.4884,165.35527,100,0,0),
+(112505,4,5290.475,-573.7107,166.22186,100,0,0),
+(112505,5,5289.9785,-565.18896,166.64372,100,0,0),
+(112505,6,5286.481,-554.202,166.64372,100,0,0),
+(112505,7,5321.6567,-554.36664,166.64445,100,0,0),
+(112505,8,5330.402,-554.79834,166.64738,100,0,0),
+(112505,9,5345.9907,-556.65265,163.46082,100,0,0),
+(112505,10,5353.6914,-558.4887,162.75029,100,0,0),
+(112505,11,5357.235,-572.1251,165.6732,100,0,0),
+(112505,12,5348.9014,-577.91797,165.65654,100,0,0),
+(112505,13,5331.661,-584.1468,162.21944,100,0,0),
+(112505,14,5318.5073,-588.9816,165.37782,100,2000,0),
+(112506,1,5372.725,-755.605,156.75551,100,2000,0),
+(112506,2,5388.5547,-757.1473,156.75551,100,0,0),
+(112506,3,5388.493,-770.9094,156.80217,100,0,0),
+(112506,4,5404.0044,-785.308,156.41849,100,0,0),
+(112506,5,5385.1104,-781.92413,156.80217,100,0,0),
+(112506,6,5363.545,-771.5294,156.83443,100,0,0),
+(112506,7,5358.3823,-762.1309,156.7534,100,0,0),
+(112506,8,5332.699,-763.8851,162.00987,100,2000,0),
+(112507,1,5314.03,-796.7652,165.48558,100,0,0),
+(112507,2,5319.744,-811.3045,165.55498,100,0,0),
+(112507,3,5324.917,-830.2284,165.80498,100,0,0),
+(112507,4,5337.1934,-822.40137,165.53181,100,0,0),
+(112507,5,5356.827,-824.35266,165.53181,100,0,0),
+(112507,6,5357.43,-813.11847,165.53181,100,0,0),
+(112507,7,5338.444,-809.18286,165.53181,100,0,0),
+(112507,8,5338.5366,-803.8273,165.53181,100,0,0),
+(112507,9,5336.906,-793.1082,165.45943,100,0,0),
+(112507,10,5328.731,-791.71783,165.48558,100,0,0),
+(112508,1,5309.43,-741.21,162.904,100,0,0),
+(112508,2,5308.71,-722.579,162.904,100,0,0),
+(112508,3,5309.1,-703.25,162.904,100,0,0),
+(112508,4,5295.75,-699.225,162.904,100,0,0),
+(112508,5,5285.48,-707.884,162.904,100,0,0),
+(112508,6,5283.85,-727.763,162.904,100,0,0),
+(112508,7,5282.97,-749.952,162.904,100,0,0),
+(112508,8,5296.57,-766.492,162.904,100,0,0),
+(112508,9,5312.37,-756.607,162.913,100,0,0),
+(112509,1,5417.608,-942.468,163.753,100,2000,0),
+(112509,2,5419.03,-930.07,163.993,100,2000,0),
+(112509,3,5418.47,-918.998,165.857,100,0,0),
+(112509,4,5412.83,-912.7,165.857,100,0,0),
+(112509,5,5412.34,-897.677,165.857,100,0,0),
+(112509,6,5426.32,-895.401,165.332,100,0,0),
+(112509,7,5433.3,-888.139,164.058,100,0,0),
+(112509,8,5417.87,-878.314,164.058,100,0,0),
+(112509,9,5399.9,-877.988,164.058,100,0,0),
+(112509,10,5394.58,-891.022,164.058,100,0,0),
+(112509,11,5393.96,-905.103,164.06,100,2000,0),
+(112510,1,5360.1025,-819.0045,165.53181,1.500983119010925292,2000,0),
+(112510,2,5360.1025,-819.0045,165.53181,1.500983119010925292,100,3086301),
+(112511,1,5307.885,-680.0257,163.01816,5.672319889068603515,2000,0),
+(112511,2,5307.885,-680.0257,163.01816,5.672319889068603515,100,3086302),
+(112512,1,5389.4272,-905.4484,164.14134,4.781221866607666015,2000,0),
+(112512,2,5389.4272,-905.4484,164.14134,4.781221866607666015,100,3086303);
+DELETE FROM dbscripts_on_creature_movement WHERE id BETWEEN 3086301 AND 3086303;
+INSERT INTO dbscripts_on_creature_movement (id,delay,priority,command,datalong,datalong2,datalong3,buddy_entry,search_radius,data_flags,dataint,dataint2,dataint3,dataint4,datafloat,x,y,z,o,speed,condition_id,comments) VALUES
+(3086301,1,0,25,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,0,0,0,'Run ON'),
+(3086301,2,0,20,15,0,0,0,0,0x04,0,0,0,0,1.8,5360.655,-815.09174,166.68712,100,17,0,'jump 1'),
+(3086301,400,0,3,0,0,0,0,0,0x04,0,0,0,0,0,5360.49,-812.712,166.711,100,0,0,'move'),
+(3086301,700,0,20,15,0,0,0,0,0x04,0,0,0,0,1.8,5359.313,-809.99677,166.94325,100,17,0,'jump 2'),
+(3086301,1500,0,20,15,30600,0,0,0,0x04,0,0,0,0,1.8,5354.398,-809.8303,165.43495,100,17,0,'jump 3'),
+(3086301,1501,0,25,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,0,0,0,'Run OFF'),
+(3086302,1,0,25,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,0,0,0,'Run ON'),
+(3086302,2,0,20,15,0,0,0,0,0x04,0,0,0,0,1.8,5313.8535,-680.46423,164.22122,100,17,0,'jump 1'),
+(3086302,400,0,20,15,0,0,0,0,0x04,0,0,0,0,0,5315.96,-678.148,164.156,100,17,0,'jump 1.5'),
+(3086302,700,0,20,15,0,0,0,0,0x04,0,0,0,0,1.8,5313.751,-674.8944,163.99696,100,17,0,'jump 2'),
+(3086302,1500,0,20,15,30600,0,0,0,0x04,0,0,0,0,1.8,5311.729,-671.7586,164.56024,100,17,0,'jump 3'),
+(3086302,1900,0,3,0,0,0,0,0,0x04,0,0,0,0,0,5308.83,-671.628,164.411,100,0,0,'move'),
+(3086302,2200,0,20,15,30600,0,0,0,0x04,0,0,0,0,1.8,5305.551,-676.56604,162.90202,100,17,0,'jump 4'),
+(3086302,2201,0,25,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,0,0,0,'Run OFF'),
+(3086303,1,0,25,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,0,0,0,'Run ON'),
+(3086303,2,0,20,15,0,0,0,0,0x04,0,0,0,0,1.8,5389.456,-910.71625,165.33638,100,17,0,'jump 1'),
+(3086303,400,0,20,15,0,0,0,0,0x04,0,0,0,0,0,5391.616,-913.0387,165.40662,100,17,0,'jump 1.5'),
+(3086303,700,0,20,15,0,0,0,0,0x04,0,0,0,0,1.8,5394.777,-913.86115,164.97685,100,17,0,'jump 2'),
+(3086303,1500,0,20,15,30600,0,0,0,0x04,0,0,0,0,1.8,5399.104,-913.6858,165.29282,100,17,0,'jump 3'),
+(3086303,1900,0,3,0,0,0,0,0,0x04,0,0,0,0,0,5400.614,-910.1753,165.42584,100,0,0,'move'),
+(3086303,2200,0,20,15,30600,0,0,0,0x04,0,0,0,0,1.8,5400.1235,-906.66473,164.05887,100,17,0,'jump 4'),
+(3086303,2201,0,25,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,0,0,0,'Run OFF');
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 30863 FROM `creature` WHERE `id` IN (30865);
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 30864 FROM `creature` WHERE `id` IN (30865);
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 30865 FROM `creature` WHERE `id` IN (30865);
+UPDATE `creature` SET `id` = 0 WHERE `id` IN (30865);
+DELETE FROM creature_spawn_data WHERE Guid IN (112504,112505,112506,112507,112508,112509);
+INSERT INTO creature_spawn_data (Guid, Id) VALUES (112504,80),(112505,80),(112506,80),(112507,80),(112508,80),(112509,80);
+
+DELETE FROM `creature_linking_template` WHERE `entry` = 390 AND `map` = 0;
+
+UPDATE `quest_template` SET `OfferRewardText` = 'It gives me great hope for our future that you come seeking my wisdom. While I have my hands full here with our injured, I am not so busy that I cannot spare a moment to aid you in your first steps as a $C.  To walk in the Light is the highest of callings, and one that I am certain you are more than ready to undertake!$b$bSpeak with me again when you feel that you are ready to begin your training.' WHERE `entry` =9291;
+UPDATE `quest_template` SET `OfferRewardText` = 'I am pleased that you have come seeking my knowledge. We have much to do if your magical skills are to be honed.$b$bFor over a hundred years I have taught the arcane, frost and fire magics, and I can feel them just as strongly on this world.  Would you like me to impart some of what I know to you?' WHERE `entry` =9290;
+
+UPDATE `quest_template` SET `BreadcrumbForQuestId` = '9303' WHERE `entry` =10304;
+UPDATE `quest_template` SET `PrevQuestId` = '0' WHERE `entry` =9303;
+UPDATE `quest_template` SET `BreadcrumbForQuestId` = '9591' WHERE `entry` =9757;
+UPDATE `quest_template` SET `PrevQuestId` = '0' WHERE `entry` =9591;
+
+INSERT INTO `gameobject` (`guid`, `id`, `map`,`spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax` ) VALUES
+(53, 195218, 1, 1, 1, 8008.7421875, -2668.053955078125, 512.06414794921875, 2.757613182067871093, 0, 0, 0.981626510620117187, 0.190812408924102783, 120, 120);
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
