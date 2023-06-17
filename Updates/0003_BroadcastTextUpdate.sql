@@ -5316,3 +5316,25 @@ UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN ('19557','19558','195
 -- 4777_zeppelin_events.sql
 UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (29545,35041,35039);
 UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` IN (24279);
+
+-- 0056_bm_aeonus.sql
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10403 WHERE Id IN(16831);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10404 WHERE Id IN(16832);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10402 WHERE Id IN(16829);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10401 WHERE Id IN(16829);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10405 WHERE Id IN(16830);
+
+-- 0057_bm_chrono_lord_deja.sql
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10414 WHERE Id IN(16815);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10413 WHERE Id IN(16817);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10415 WHERE Id IN(16818);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10416 WHERE Id IN(16819);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10417 WHERE Id IN(16816);
+
+-- 0058_bm_temporus.sql
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10444 WHERE Id IN(16822);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10443 WHERE Id IN(16824);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10447 WHERE Id IN(16823);
+
+-- 0059_ac_shirrak.sql
+UPDATE broadcast_text SET ChatTypeID=3 WHERE Id IN(19321);

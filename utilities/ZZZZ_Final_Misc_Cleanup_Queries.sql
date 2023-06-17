@@ -331,6 +331,11 @@ UPDATE `creature_ai_scripts` SET `creature_id` = '-125872' WHERE `id` =2549614;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-118318' WHERE `id` =2549615;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-118319' WHERE `id` =2549616;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-143332' WHERE `id` =2549617;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-113967' WHERE `id` =3140001;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-112480' WHERE `id` =3140002;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-112479' WHERE `id` =3140003;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-112478' WHERE `id` =3140004;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-112482' WHERE `id` =3140005;
 
 # Finall_Spell_UP
 -- Classic -> WOTLK UNIT_NPC_FLAGS
