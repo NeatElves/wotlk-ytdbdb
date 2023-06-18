@@ -5338,3 +5338,23 @@ UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10447 WHERE Id IN(16823)
 
 -- 0059_ac_shirrak.sql
 UPDATE broadcast_text SET ChatTypeID=3 WHERE Id IN(19321);
+
+-- 0060_ac_maladaar.sql
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10512 WHERE Id IN(15466);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10513 WHERE Id IN(17647);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10514 WHERE Id IN(17648);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10515 WHERE Id IN(17649);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10510 WHERE Id IN(17644);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10511 WHERE Id IN(17645);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10516 WHERE Id IN(17650);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10517 WHERE Id IN(17651);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10518 WHERE Id IN(17646);
+
+-- 0061_mt_pandemonius.sql
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10561 WHERE Id IN(17771);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10562 WHERE Id IN(17772);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10563 WHERE Id IN(17773);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10564 WHERE Id IN(17774);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10565 WHERE Id IN(17775);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10566 WHERE Id IN(17776);
+UPDATE broadcast_text SET ChatTypeID=3, SoundEntriesID1=0 WHERE Id IN(21067);
