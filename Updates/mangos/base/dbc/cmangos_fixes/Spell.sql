@@ -2275,8 +2275,13 @@ UPDATE `spell_template` SET `AttributesServerSide` = `AttributesServerSide`|0x00
 6742, -- Bloodlust
 8852, -- Moss Hide
 11816, -- Land Mine Arming
+11966, -- Fire Shield
+12896, -- Helboar
+12898, -- Smoke Aura Visual
 13879, -- Magma Splash
 17205, -- Winterfall Firewater
+18163, -- Strength of Arko'narin
+18167, -- Holy Fire
 23378, -- Magma Splash
 27791, -- Suicide (Suicide)
 21789, -- Hate to Half (Hate to Half)
@@ -2342,6 +2347,9 @@ INSERT INTO `spell_template` (`Id`, `SchoolMask`, `Category`, `Dispel`, `Mechani
 INSERT INTO `spell_template` (`Id`, `SchoolMask`, `Category`, `Dispel`, `Mechanic`, `Attributes`, `AttributesEx`, `AttributesEx2`, `AttributesEx3`, `AttributesEx4`, `AttributesEx5`, `Stances`, `StancesNot`, `Targets`, `TargetCreatureType`, `RequiresSpellFocus`, `CasterAuraState`, `TargetAuraState`, `CasterAuraStateNot`, `TargetAuraStateNot`, `CastingTimeIndex`, `RecoveryTime`, `CategoryRecoveryTime`, `InterruptFlags`, `AuraInterruptFlags`, `ChannelInterruptFlags`, `procFlags`, `procChance`, `procCharges`, `maxLevel`, `baseLevel`, `spellLevel`, `DurationIndex`, `powerType`, `manaCost`, `manaCostPerLevel`, `manaPerSecond`, `manaPerSecondPerLevel`, `rangeIndex`, `speed`, `StackAmount`, `Totem1`, `Totem2`, `Reagent1`, `Reagent2`, `Reagent3`, `Reagent4`, `Reagent5`, `Reagent6`, `Reagent7`, `Reagent8`, `ReagentCount1`, `ReagentCount2`, `ReagentCount3`, `ReagentCount4`, `ReagentCount5`, `ReagentCount6`, `ReagentCount7`, `ReagentCount8`, `EquippedItemClass`, `EquippedItemSubClassMask`, `EquippedItemInventoryTypeMask`, `Effect1`, `Effect2`, `Effect3`, `EffectDieSides1`, `EffectDieSides2`, `EffectDieSides3`, `EffectRealPointsPerLevel1`, `EffectRealPointsPerLevel2`, `EffectRealPointsPerLevel3`, `EffectBasePoints1`, `EffectBasePoints2`, `EffectBasePoints3`, `EffectMechanic1`, `EffectMechanic2`, `EffectMechanic3`, `EffectImplicitTargetA1`, `EffectImplicitTargetA2`, `EffectImplicitTargetA3`, `EffectImplicitTargetB1`, `EffectImplicitTargetB2`, `EffectImplicitTargetB3`, `EffectRadiusIndex1`, `EffectRadiusIndex2`, `EffectRadiusIndex3`, `EffectApplyAuraName1`, `EffectApplyAuraName2`, `EffectApplyAuraName3`, `EffectAmplitude1`, `EffectAmplitude2`, `EffectAmplitude3`, `EffectMultipleValue1`, `EffectMultipleValue2`, `EffectMultipleValue3`, `EffectChainTarget1`, `EffectChainTarget2`, `EffectChainTarget3`, `EffectItemType1`, `EffectItemType2`, `EffectItemType3`, `EffectMiscValue1`, `EffectMiscValue2`, `EffectMiscValue3`, `EffectMiscValueB1`, `EffectMiscValueB2`, `EffectMiscValueB3`, `EffectTriggerSpell1`, `EffectTriggerSpell2`, `EffectTriggerSpell3`, `EffectPointsPerComboPoint1`, `EffectPointsPerComboPoint2`, `EffectPointsPerComboPoint3`, `SpellVisual`, `SpellIconID`, `activeIconID`, `spellPriority`, `SpellName`, `SpellName2`, `SpellName3`, `SpellName4`, `SpellName5`, `SpellName6`, `SpellName7`, `SpellName8`, `ManaCostPercentage`, `StartRecoveryCategory`, `StartRecoveryTime`, `MaxTargetLevel`, `SpellFamilyName`, `SpellFamilyFlags`, `MaxAffectedTargets`, `DmgClass`, `PreventionType`, `DmgMultiplier1`, `DmgMultiplier2`, `DmgMultiplier3`, `TotemCategory1`, `TotemCategory2`, `AreaId`) VALUES
 ('12360','4','0','0','0','464','136','0','67108864','0','0','0','0','0','0','0','0','0','0','0','1','0','0','0','0','0','87376','10','0','0','0','1','21','0','0','0','0','0','1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','-1','-1','0','6','0','0','1','0','0','0','0','0','-1','0','0','0','0','0','1','0','0','0','0','0','0','0','0','42','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','12355','0','0','0','0','0','0','45','0','50','Impact','','','','','','','','0','0','0','0','3','0','0','0','0','1','1','1','0','0','0'),
 ('24215','1','0','0','0','384','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1','0','0','0','0','0','0','101','0','0','0','0','9','0','0','0','0','0','4','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','-1','0','0','28','0','0','0','0','0','0','0','0','0','0','0','0','0','0','22','0','0','18','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','15073','0','0','64','0','0','0','0','0','0','0','0','0','1','0','0','Create Heart of Hakkar Explosion','','','','','','','','0','0','0','0','0','0','0','0','0','1','1','0','0','0','0');
+
+-- require backstab to face back
+UPDATE spell_template SET AttributesServerside=AttributesServerside|0x00000008 WHERE Id IN(15582);
 
 -- ============================================================
 -- TBC section
@@ -2620,8 +2628,7 @@ UPDATE `spell_template` SET `AttributesEx4`=`AttributesEx4`|64 WHERE `Id`=33949;
 
 -- Backstab spells used by creatures
 -- these are all easily controlled and made castable only from behind via AI, however when a player Mind Controls the NPC, we need these attributes to prevent usage from the front:
--- SPELL_ATTR_EX_FACING_TARGET, SPELL_ATTR_EX2_FACING_TARGETS_BACK
-UPDATE `spell_template` SET `AttributesEx`=`AttributesEx`|0x00000200, `AttributesEx2`=`AttributesEx2`|0x00100000 WHERE `Id` IN (7159,15582,15657,22416,30992,34614,37685);
+UPDATE `spell_template` SET AttributesServerside=AttributesServerside|0x00000008 WHERE `Id` IN (7159,15582,15657,22416,30992,34614,37685);
 
 -- Stormchops - Fix targeting
 UPDATE spell_template SET EffectImplicitTargetA2=1,EffectImplicitTargetB2=0 WHERE Id IN(43730);
