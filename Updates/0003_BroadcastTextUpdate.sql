@@ -5317,29 +5317,29 @@ UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN ('19557','19558','195
 UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (29545,35041,35039);
 UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` IN (24279);
 
--- 0056_bm_aeonus.sql
+-- 0056_bm_aeonus.sql TBC
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10403 WHERE Id IN(16831);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10404 WHERE Id IN(16832);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10402 WHERE Id IN(16829);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10401 WHERE Id IN(16829);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10405 WHERE Id IN(16830);
 
--- 0057_bm_chrono_lord_deja.sql
+-- 0057_bm_chrono_lord_deja.sql TBC
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10414 WHERE Id IN(16815);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10413 WHERE Id IN(16817);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10415 WHERE Id IN(16818);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10416 WHERE Id IN(16819);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10417 WHERE Id IN(16816);
 
--- 0058_bm_temporus.sql
+-- 0058_bm_temporus.sql TBC
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10444 WHERE Id IN(16822);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10443 WHERE Id IN(16824);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10447 WHERE Id IN(16823);
 
--- 0059_ac_shirrak.sql
+-- 0059_ac_shirrak.sql TBC
 UPDATE broadcast_text SET ChatTypeID=3 WHERE Id IN(19321);
 
--- 0060_ac_maladaar.sql
+-- 0060_ac_maladaar.sql TBC
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10512 WHERE Id IN(15466);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10513 WHERE Id IN(17647);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10514 WHERE Id IN(17648);
@@ -5350,7 +5350,7 @@ UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10516 WHERE Id IN(17650)
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10517 WHERE Id IN(17651);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10518 WHERE Id IN(17646);
 
--- 0061_mt_pandemonius.sql
+-- 0061_mt_pandemonius.sql TBC
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10561 WHERE Id IN(17771);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10562 WHERE Id IN(17772);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10563 WHERE Id IN(17773);
@@ -5358,3 +5358,58 @@ UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10564 WHERE Id IN(17774)
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10565 WHERE Id IN(17775);
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10566 WHERE Id IN(17776);
 UPDATE broadcast_text SET ChatTypeID=3, SoundEntriesID1=0 WHERE Id IN(21067);
+
+-- 0069_sh_darkweaver_syth.sql TBC
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10502 WHERE Id IN(17733);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10503 WHERE Id IN(17734);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10504 WHERE Id IN(17735);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10505 WHERE Id IN(17736);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10506 WHERE Id IN(17737);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10507 WHERE Id IN(17738);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10508 WHERE Id IN(17739);
+
+-- 0078_sh_anzu.sql TBC
+UPDATE broadcast_text SET ChatTypeID=1, EmoteID1=35 WHERE Id IN(20797);
+UPDATE broadcast_text SET ChatTypeID=1 WHERE Id IN(20799);
+UPDATE broadcast_text SET ChatTypeID=1 WHERE Id IN(20991);
+UPDATE broadcast_text SET ChatTypeID=5 WHERE Id IN(21015);
+UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN(20980);
+UPDATE broadcast_text SET ChatTypeID=5 WHERE Id IN(21016);
+UPDATE broadcast_text SET ChatTypeID=5 WHERE Id IN(21017);
+
+-- 4819_q.12580.sql
+UPDATE `broadcast_text` SET ChatTypeID = 2 WHERE Id IN (15158);
+
+-- 0082_sl_ambassador_hellmaw.sql TBC
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10475 WHERE Id IN(17860);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10476 WHERE Id IN(17861);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10477 WHERE Id IN(17863);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10474 WHERE Id IN(17859);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10478 WHERE Id IN(17864);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10479 WHERE Id IN(17865);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10480 WHERE Id IN(17866);
+
+-- 0083_sl_blackheart_the_inciter.sql TBC
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10486 WHERE Id IN(17563);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10497 WHERE Id IN(17565);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10491 WHERE Id IN(17569);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10487 WHERE Id IN(16433);
+
+-- 0079_escort_c.8284.sql TBC
+UPDATE `broadcast_text` SET `ChatTypeID`='1' WHERE (`Id`='4358');
+UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE Id IN (4362, 5944);
+
+-- 0084_sl_grandmaster_vorpil.sql TBC
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10524 WHERE Id IN(17868);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10525 WHERE Id IN(17869);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10526 WHERE Id IN(17870);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10523 WHERE Id IN(17867);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10527 WHERE Id IN(17871);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10528 WHERE Id IN(17872);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10529 WHERE Id IN(17873);
+
+-- 0085_sl_murmur.sql TBC
+UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN(18799);
+
+-- 4823_q.8731_8507.sql
+UPDATE broadcast_text SET ChatTypeID = 1 WHERE Id IN (11286,11287,11207,11288,11356,10970,10982,10961);

@@ -117,6 +117,26 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalo
 -- wotlk ahune only has one version
 UPDATE `creature_template` SET `DifficultyEntry1` = 0 WHERE `entry` IN (25740,25755,25756,25757,25865);
 
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194032;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194035;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194036;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194038;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194040;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194044;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194045;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194049;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194033;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194034;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194037;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194039;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194042;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194043;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194046;
+UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `entry` = 194048;
+
+# NPC id=0 not work - start event 29 - crash core
+DELETE FROM `game_event_creature_data` WHERE `guid` in (9661,9674,9687,9701,9726,9732,46575,46592,46704,46737,46809,52392,66114,68382,68394,68395,78932,78933,78934,78935);
+
 # NPC emissary id=0 not work - start event - crash core
 #DELETE FROM creature WHERE guid IN (18935,18937);
 #INSERT INTO creature (guid, id, map, spawnmask, phasemask, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) values
