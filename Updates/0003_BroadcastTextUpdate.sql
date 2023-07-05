@@ -5413,3 +5413,25 @@ UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN(18799);
 
 -- 4823_q.8731_8507.sql
 UPDATE broadcast_text SET ChatTypeID = 1 WHERE Id IN (11286,11287,11207,11288,11356,10970,10982,10961);
+
+-- 0099_underbog_bct.sql TBC
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10385 WHERE Id IN(17506);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10384 WHERE Id IN(17505);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10386 WHERE Id IN(17507);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10383 WHERE Id IN(17511);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10387 WHERE Id IN(17508);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10388 WHERE Id IN(17509);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10389 WHERE Id IN(17510);
+
+-- 0100_mt_bct.sql TBC
+UPDATE broadcast_text SET ChatTypeID=1,EmoteId1=1 WHERE Id IN(20633);
+UPDATE broadcast_text SET ChatTypeID=1,EmoteId1=1 WHERE Id IN(20634);
+
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10539 WHERE Id IN(17784);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10541 WHERE Id IN(17780);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10542 WHERE Id IN(17781);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10543 WHERE Id IN(17782);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10544 WHERE Id IN(17779);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10545 WHERE Id IN(17778);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10540 WHERE Id IN(17783);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10546 WHERE Id IN(17777);

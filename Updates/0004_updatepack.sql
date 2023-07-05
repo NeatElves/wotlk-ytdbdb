@@ -9711,4 +9711,18 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 (84,180001,52,6623,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Janela Stouthammer 15443 EAI: Set Gossip'),
 (84,180002,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Janela Stouthammer 15443 EAI - UnActive');
 
+UPDATE creature_model_info SET combat_reach=1 WHERE modelid=17728;
+
+UPDATE creature_template SET `Faction` = 1395, `SpeedWalk` = 1, `SpeedRun` = 1.71429, `MeleeBaseAttackTime` = 2000, `RangedBaseAttackTime` = 2000, `DamageMultiplier` = 6.4 WHERE `entry` = 15620;
+UPDATE creature_template SET `SpeedRun` = 2.85714 WHERE `entry` = 15449;
+UPDATE `creature_model_info` SET `bounding_radius` = 8.15, `combat_reach` = 7.5 WHERE `modelid` = 15576;
+UPDATE `creature_model_info` SET `bounding_radius` = 7.965, `combat_reach` = 6.75 WHERE `modelid` = 15452;
+UPDATE creature_template SET `Faction` = 310 WHERE `entry` IN (10040,10041,13136,13301);
+
+DELETE FROM string_id WHERE Id IN(10000) AND Name IN('CLAW_UNDERBOG');
+INSERT INTO string_id(Id, Name) VALUES (10000, 'CLAW_UNDERBOG');
+DELETE FROM spell_script_target WHERE entry IN(34662);
+INSERT INTO spell_script_target(entry, type, targetEntry, inverseEffectMask) VALUES (34662,5,10000,0);
+UPDATE creature_template SET StringId1=10000 WHERE entry IN(17827,20165);
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------

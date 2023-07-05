@@ -137,6 +137,12 @@ UPDATE `gameobject_template` SET `ScriptName` = 'go_midsummer_bonfire' WHERE `en
 # NPC id=0 not work - start event 29 - crash core
 DELETE FROM `game_event_creature_data` WHERE `guid` in (9661,9674,9687,9701,9726,9732,46575,46592,46704,46737,46809,52392,66114,68382,68394,68395,78932,78933,78934,78935);
 
+# Error Table combat_condition entry ... has invalid worldstate expression 30517. Setting to ....
+DELETE FROM `combat_condition` WHERE `Id` = 4523;
+DELETE FROM `combat_condition` WHERE `Id` = 5102;
+DELETE FROM `combat_condition` WHERE `Id` = 5375;
+DELETE FROM `combat_condition` WHERE `Id` = 5376;
+
 # NPC emissary id=0 not work - start event - crash core
 #DELETE FROM creature WHERE guid IN (18935,18937);
 #INSERT INTO creature (guid, id, map, spawnmask, phasemask, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) values
