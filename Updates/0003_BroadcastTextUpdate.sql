@@ -5470,3 +5470,12 @@ UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10558 WHERE Id IN(17763);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10559 WHERE Id IN(17764);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10560 WHERE Id IN(17762);
 UPDATE broadcast_text SET ChatTypeID=3 WHERE Id IN(19738);
+
+-- 0110_sv_thespia.sql TBC
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=0 WHERE Id IN(19456); -- has no sound - i checked
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10361 WHERE Id IN(17696);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10362 WHERE Id IN(17697);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10363 WHERE Id IN(17698);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10364 WHERE Id IN(17701);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10365 WHERE Id IN(17702);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10366 WHERE Id IN(17704);
