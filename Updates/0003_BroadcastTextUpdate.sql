@@ -5517,3 +5517,44 @@ UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10326 WHERE Id IN(17619);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10327 WHERE Id IN(17620);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10328 WHERE Id IN(17621);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=0 WHERE Id IN(18367);
+
+-- 0147_omrogg.sql TBC
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10306,EmoteID1=0 WHERE Id IN(14046);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10308,EmoteID1=0 WHERE Id IN(14048);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10309,EmoteID1=0 WHERE Id IN(19842);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10317,EmoteID1=0 WHERE Id IN(14047);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10318,EmoteID1=0 WHERE Id IN(16916);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10319,EmoteID1=0 WHERE Id IN(16919);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10303,EmoteID1=0 WHERE Id IN(16898);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10315,EmoteID1=0 WHERE Id IN(16901);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10302,EmoteID1=0 WHERE Id IN(16895);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10300,EmoteID1=0 WHERE Id IN(14043);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10314,EmoteID1=0 WHERE Id IN(16899);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10305,EmoteID1=0 WHERE Id IN(16902);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10313,EmoteID1=0 WHERE Id IN(16896);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10312,EmoteID1=0 WHERE Id IN(14044);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10304,EmoteID1=0 WHERE Id IN(16900);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10316,EmoteID1=0 WHERE Id IN(16903);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10307,EmoteID1=0 WHERE Id IN(16917);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10301,EmoteID1=0 WHERE Id IN(14045);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10310,EmoteID1=0 WHERE Id IN(16922);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10320,EmoteID1=0 WHERE Id IN(16921);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10321,EmoteID1=0 WHERE Id IN(16923);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10311,EmoteID1=0 WHERE Id IN(16924);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=10322,EmoteID1=0 WHERE Id IN(16925);
+UPDATE broadcast_text SET ChatTypeID=2, SoundEntriesID1=0,EmoteID1=0 WHERE Id IN(16402);
+
+-- 0148_gruul_sounds.sql TBC
+UPDATE broadcast_text SET SoundEntriesID1 = '11367', ChatTypeID = '1' WHERE Id = 20066;
+UPDATE broadcast_text SET SoundEntriesID1 = '11368', ChatTypeID = '1' WHERE Id = 20067;
+UPDATE broadcast_text SET SoundEntriesID1 = '11369', ChatTypeID = '1' WHERE Id = 20068;
+UPDATE broadcast_text SET SoundEntriesID1 = '11370', ChatTypeID = '1' WHERE Id = 20069;
+UPDATE broadcast_text SET SoundEntriesID1 = '11371', ChatTypeID = '1' WHERE Id = 20070;
+UPDATE broadcast_text SET SoundEntriesID1 = '11372', ChatTypeID = '1' WHERE Id = 20071;
+UPDATE broadcast_text SET SoundEntriesID1 = '11373', ChatTypeID = '1' WHERE Id = 20072;
+UPDATE broadcast_text SET SoundEntriesID1 = '11374', ChatTypeID = '1' WHERE Id = 20073;
+UPDATE broadcast_text SET SoundEntriesID1 = '11375', ChatTypeID = '1' WHERE Id = 20074;
+UPDATE broadcast_text SET SoundEntriesID1 = '11376', ChatTypeID = '1' WHERE Id = 20075;
+
+-- 4864_q.12521.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (27611,27610);

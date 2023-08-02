@@ -13199,4 +13199,95 @@ INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `Combat
 (1640904, 3, 29492, 2, -1, 1, 0, 100, 0, 0, 1200, 1200, 2500, 'Phantom Guest (Version - Caster) - Searing Pain - on current'),
 (1640905, 1, 29581, 0, -1, 1, 0, 100, 0, 0, 5000, 6000, 9000, 'Phantom Guest (Version - Healer) - Punch - on current');
 
+UPDATE `creature` SET `position_x` = '-1240.03', `position_y` = '-2513.96', `position_z` = '21.9831', `orientation` = '4.22309', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300', `spawndist` = '7', `MovementType` = '1' WHERE `guid` =11587;
+
+UPDATE `creature` SET `position_x` = '-9288.95', `position_y` = '-1911.28', `position_z` = '74.9346', `orientation` = '2.34692', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300', `spawndist` = '15', `MovementType` = '1' WHERE `guid` =5424;
+
+UPDATE `creature` SET `position_x` = '-6098.09', `position_y` = '396.074', `position_z` = '395.54', `orientation` = '5.66209', `spawntimesecsmin` = '180', `spawntimesecsmax` = '180', `spawndist` = '7', `MovementType` = '1' WHERE `guid` =7820;
+
+UPDATE `creature_template` SET `ExperienceMultiplier` = 2 WHERE `entry` IN (11517,11520,11518,11519,644,3586,642,643,1763,646,647,639,645,3653,3671,3669,3670,3674,3673,5775,3654,4887,4831,6243,12902,12876,4832,4830,4829,1696,1666,1717,
+1663,1716,1720,3914,3886,3887,4278,4279,3872,4274,3927,4275,7079,7361,6235,6229,7800,6168,4424,4428,4420,4422,4421,7355,7356,7357,7354,8567,7358,3983,4543,3974,6487,3975,4542,3977,3976,8127,7272,7271,7796,7795,7273,7275,7797,7267,6910,
+6906,7228,7023,7206,7291,4854,2748,13282,12258,12236,12225,12203,13601,13596,12201,5714,5713,5717,5712,5716,5715,8580,5721,5720,5710,5711,5719,5722,8443,5709,11490,13280,14327,11492,14326,14322,14321,14323,14325,11501,14324,11489,11488,
+11487,11496,11486,11058,10393,10516,10558,11143,10808,11032,10997,10811,10813,10436,10437,10438,10435,10439,10440,10506,10503,11622,10433,10432,10508,10505,11261,10901,10507,10504,10502,1853,9025,9016,9319,9018,10096,9024,9033,8983,9543,
+9537,9499,9502,9017,9056,9041,9042,9156,9938,8929,9019,9196,9236,9237,10596,10584,9736,10268,10220,9568,9816,10429,10339,10430,10363,17306,18436,17308,18433,17536,18432,17537,18434,17381,18621,17380,18601,17377,18607,16807,20568,17461,
+20581,20923,20992,20993,16809,20596,16808,20597,17941,19893,17991,19895,17942,19894,25865,26339,25740,26338,17770,20169,18105,20168,18107,20182,17826,20183,17827,20165,17882,20184,17797,20629,17796,20630,17798,20633,18341,20267,18343,
+20268,18344,20266,22930,18371,20318,18373,20306,18478,20303,18472,20690,23035,18473,20706,18731,20636,18667,20637,18732,20653,18708,20657,17848,20535,17862,20521,18096,20531,17879,20738,21697,21712,17880,20745,17881,20737,19218,21525,
+19710,21526,19219,21533,19221,21536,19220,21537,17976,21551,17975,21558,17978,21581,17980,21559,17977,21582,20870,21626,20885,21590,20886,21624,20912,21599,24723,25562,24744,25573,24664,24857,24560,25560,24553,25541,24554,25550,24555,
+25555,24552,25564,24556,25579,24557,25556,24558,25549,24656,25553,24559,25574,24561,25578);
+
+UPDATE `creature_template` SET `SpeedWalk` = 1, `MechanicImmuneMask` = `MechanicImmuneMask`|(32+33554432), `MovementType` = 0 WHERE `entry` = 14834;
+
+UPDATE gossip_menu_option SET action_script_id = 1002400 WHERE menu_id = 10024;
+DELETE FROM dbscripts_on_gossip WHERE id = 1002400;
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(1002400,1,15,50859,0,0,0,0,0,0,0,0,0,0,0,0,0,'q.12521 - source cast spell 50859'),
+(1002400,3,53,0,0,0,0,0,0,33700,1,0,0,0,0,0,0,'q.12521 - Set worldstate variable to 1'),
+(1002400,10,0,0,0,0,0,0,0x04,27620,0,0,0,0,0,0,0,'q.12521 - source Say'),
+(1002400,11,1,25,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'q.12521 - source emote'),
+(1002400,10000,53,0,0,0,0,0,0,33700,0,0,0,0,0,0,0,'q.12521 - Set worldstate variable to 0');
+UPDATE creature_template SET MinLevel = 75, MaxLevel = 75, SpeedWalk = 2, SpeedRun = 3, MovementType = 3 WHERE entry = 28192;
+DELETE FROM creature_movement_template WHERE entry = 28192;
+INSERT INTO creature_movement_template (Entry, pathid, Point, PositionX, PositionY, PositionZ, Orientation, WaitTime, ScriptId) VALUES
+(28192,0,1,5831.446,484.9737,658.2015,4.67,3000,2819201),
+(28192,0,2,5828.687,428.0962,669.8951,100,1000,2819202),
+(28192,1,1,5071.35,4642.54,72.164,100,0,0),
+(28192,1,2,5142.877,4676.631,73.46826,100,0,0),
+(28192,1,3,5635.875,5225.561,-75.11644,100,0,0),
+(28192,1,4,5637.412,5301.54,-109.5869,100,100,1);
+DELETE FROM dbscripts_on_creature_movement WHERE id BETWEEN 2819201 AND 2819204;
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(2819201,0,15,51076,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'28192 - self cast 51076'),
+(2819201,0,15,48602,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'28192 - self cast 48602'),
+(2819201,0,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,'Active'),
+(2819201,2,25,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'28192 - RUN ON'),
+(2819202,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'28192 - stop'),
+(2819202,10,15,50987,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'28192 - cast 50987'),
+(2819202,100,20,3,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'28192 - set Pathid 1');
+DELETE FROM creature_template_addon WHERE entry IN (28229);
+INSERT INTO creature_template_addon (entry, mount, stand_state, sheath_state, pvp_flags, emote, moveflags, auras) VALUES
+(28229,23365,0,1,0,0,0,'48602 51043 51044');
+UPDATE creature_template SET SpeedWalk = 2.2, SpeedRun = 3.5, InhabitType = 4, MovementType = 3 WHERE entry = 28229;
+UPDATE creature_template SET MovementType = 3 WHERE entry = 28229;
+DELETE FROM creature_movement_template WHERE entry = 28229;
+INSERT INTO creature_movement_template (Entry, pathid, Point, PositionX, PositionY, PositionZ, Orientation, WaitTime, ScriptId) VALUES
+(28229,0,1 ,5427.185,4948.977,13.40735 ,100,1,2822901),
+(28229,0,2 ,5427.865,4949.71,13.40735  ,100,0,0),
+(28229,0,3 ,5508.881,4993.853,-26.99996,100,0,0),
+(28229,0,4 ,5527.892,5024.44,-33.16645 ,100,0,0),
+(28229,0,5 ,5555.948,5055.017,-40.5555 ,100,0,0),
+(28229,0,6 ,5573.23,5081.368,-46.41664 ,100,0,0),
+(28229,0,7 ,5596.792,5120.542,-60.86132,100,0,0),
+(28229,0,8 ,5616.421,5169.335,-73.94473,100,0,0),
+(28229,0,9 ,5639.541,5246.319,-82.02806,100,0,0),
+(28229,0,10,5649.434,5336.935,-80.61153,100,0,0),
+(28229,0,11,5649.434,5336.935,-80.61153,100,0,0),
+(28229,0,12,5649.434,5336.935,-80.61153,100,100,1);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (2822901,2822902);
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(2822901,0,25,1,0,0,0,0,0x04,27611,0,0,0,0,0,0,0,'28229 - RuN'),
+(2822901,1,0,0,0,0,0,0,0x04,27611,0,0,0,0,0,0,0,'28229 - Yell');
+DELETE FROM dbscripts_on_relay WHERE id = 20762;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20762,0,3,1,0,0,0,0,0x04|0x08,0,0,0,0,5427.185,4948.977,13.40735,0,'Part of Venture Co. Pilot 28229 EAI: Teleport');
+DELETE FROM dbscripts_on_spell WHERE id = 50630;
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(50630,0,31,27987,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 27987'),
+(50630,5000,0,0,0,0,27987,300,7,27610,0,0,0,0,0,0,0,'27987 Say');
+DELETE FROM spell_script_target WHERE entry IN (50878,50892);
+INSERT INTO spell_script_target (entry, `type`, targetEntry, inverseEffectMask) VALUES (50878,1,28192,0),(50892,1,28192,0);
+UPDATE spell_target_position SET target_position_x = 5071.35, target_position_y = 4642.54, target_position_z = 72.164, target_orientation = 0.878587 WHERE id = 50987;
+UPDATE `creature` SET `position_x` = '5584.02', `position_y` = '5200.42', `position_z` = '-129.298', `orientation` = '0.593412', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =121090;
+UPDATE gameobject SET map = 571, position_x = 5828.639, position_y = 427.1178, position_z = 670.0963, Orientation = 0.8203033 WHERE guid = 6659;
+DELETE FROM `spawn_group` WHERE id = 33700;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33700, 'Dalaran - o.190488 spawn with q.12521', 1, 0, 20547, 0x08);
+DELETE FROM `spawn_group_spawn` WHERE id = 33700;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33700, 6659, -1);
+DELETE FROM conditions WHERE condition_entry IN (20547);
+INSERT INTO conditions (condition_entry, `type`, value1, value2, value3, flags, comments) VALUES (20547, 42, 33700, 1, 1, 0, 'Dalaran - o.190488 spawn with q.12521');
+DELETE FROM worldstate_name WHERE Id = 33700;
+INSERT INTO worldstate_name(Id, Name) VALUES (33700,'Dalaran - o.190488 spawn with q.12521');
+
+DELETE FROM `spawn_group_spawn` WHERE `Id` = 50002;
+INSERT IGNORE INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) SELECT 50002, `Guid`, -1 FROM `gameobject_spawn_entry` WHERE entry = 180871;
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
