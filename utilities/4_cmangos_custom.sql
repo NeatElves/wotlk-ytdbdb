@@ -262,5 +262,3 @@ UPDATE `item_template` SET `stat_type4` = 0, `stat_value4` = 0, `stat_type5` = 4
 -- Spell custom changes
 -- -------------------------------
 
--- spell 44333 Haste has travel speed.
-UPDATE `spell_template` SET `Speed` = '0' WHERE `Id` = 44333;
