@@ -9159,7 +9159,7 @@ SET @PATH := 8284;
 DELETE FROM waypoint_path_name WHERE `PathId` = @PATH;
 INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (@PATH, ' Searing Gorge - Suntara Stones - Escort Quest');
 DELETE FROM waypoint_path WHERE `PathId` = @PATH;
-INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES 
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
 (@PATH,1,-7007.35,-1739.4038,234.22345,100,0,0),
 (@PATH,2,-7007.5977,-1733.5464,234.22345,100,0,0),
 (@PATH,3,-7008.2,-1729.9734,234.13889,100,0,0),
@@ -9301,7 +9301,7 @@ INSERT INTO dbscripts_on_relay(id, delay, priority, command, datalong, datalong2
 (@RELAYID,9000,1,15,12244,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,'Dark Iron Marksman - Cast Spell');
 SET @PATH := 8337;
 DELETE FROM creature_movement_template WHERE Entry = @PATH;
-INSERT INTO `creature_movement_template` (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES 
+INSERT INTO `creature_movement_template` (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
 (@PATH,1,1,-6853.902, -1768.343, 253.676,100, 1, @PATH*100+1),
 (@PATH,1,2,-6855.8496,-1754.6787,251.59106,100, 1, 3),
 (@PATH,2,1,-6846.377,-1739.689,252.630,100, 1, 5),
@@ -10079,7 +10079,7 @@ INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalo
 DELETE FROM creature_spawn_data_template WHERE `Entry` IN (20059);
 INSERT INTO creature_spawn_data_template (Entry,SpawnFlags,RelayId,Name) VALUES (20059,1,30500,'- SPAWN FLAG RUN, Relayid 30500');
 DELETE FROM `creature_spawn_data` WHERE guid IN (@CGUID+128,@CGUID+127,@CGUID+126,@CGUID+129,@CGUID+130,@BGUID+25,@BGUID+23,@BGUID+24,@BGUID+27,@AGUID+75);
-INSERT INTO `creature_spawn_data` (`guid`, `id`) VALUES 
+INSERT INTO `creature_spawn_data` (`guid`, `id`) VALUES
 (@CGUID+128, 20059),(@CGUID+127, 20059),(@CGUID+126, 20059),(@CGUID+129, 20059),(@CGUID+130, 20059),
 (@BGUID+25, 20059),(@BGUID+23, 20059),(@BGUID+24, 20059),(@BGUID+27, 20059),(@AGUID+75, 20059);
 UPDATE creature SET position_x = 6309.3237, position_y = 3751.912, position_z = 290.75223, orientation = 3.36619, spawndist = 0, MovementType = 0 WHERE guid = @CGUID+26;
@@ -10130,7 +10130,7 @@ INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`Positi
 (32505,15 ,6242.3853,4031.882,28.648708,100,0,0),
 (32505,16 ,6229.028,4055.2756,14.592867,100,100,2821801);
 DELETE FROM `creature_spawn_data` WHERE guid IN (@CGUID+26,@CGUID+30,@AGUID+29,@AGUID+34,@CGUID+41,@AGUID+36,@CGUID+36,@AGUID+38,@AGUID+39,@CGUID+43);
-INSERT INTO `creature_spawn_data` (`guid`, `id`) VALUES 
+INSERT INTO `creature_spawn_data` (`guid`, `id`) VALUES
 (@CGUID+26, 20059),(@CGUID+30, 20059),(@AGUID+29, 20059),(@AGUID+34, 20059),(@CGUID+41, 20059),
 (@AGUID+36, 20059),(@CGUID+36, 20059),(@AGUID+38, 20059),(@AGUID+39, 20059),(@CGUID+43, 20059);
 UPDATE creature SET position_x = 6322.4785, position_y = 3680.4536, position_z = 332.23456, orientation = 1.952, spawndist = 0, MovementType = 0 WHERE guid = @CGUID+32;
@@ -10187,7 +10187,7 @@ INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`Positi
 (32506,21,6029.506,3752.7805,43.341286,100,0,0),
 (32506,22,5996.7734,3756.4917,25.568716,100,100,2821801);
 DELETE FROM `creature_spawn_data` WHERE guid IN (@CGUID+32,@AGUID+30,@CGUID+31,@CGUID+75,@AGUID+28,@AGUID+37,@AGUID+46,@AGUID+20,@CGUID+33,@CGUID+48);
-INSERT INTO `creature_spawn_data` (`guid`, `id`) VALUES 
+INSERT INTO `creature_spawn_data` (`guid`, `id`) VALUES
 (@CGUID+32,20059),(@AGUID+30,20059),(@CGUID+31,20059),(@CGUID+75,20059),(@AGUID+28,20059),
 (@AGUID+37,20059),(@AGUID+46,20059),(@AGUID+20,20059),(@CGUID+33,20059),(@CGUID+48,20059);
 DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28242));
@@ -10803,7 +10803,7 @@ INSERT INTO creature_spawn_data (guid, Id) VALUES (109278,1),(109277,1);
 
 DELETE FROM `creature` WHERE `guid` = 26078;
 DELETE FROM `creature` WHERE `guid` = 26084;
-REPLACE INTO creature (guid, id, map, spawnmask, phasemask, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) VALUES 
+REPLACE INTO creature (guid, id, map, spawnmask, phasemask, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) VALUES
 (32100,28002,571,1,1,5360.82,5021.1,-139.743,1.8751,300,300,10,1),
 (97097,28002,571,1,1,5674.83,4849.18,-136.221,6.12018,300,300,10,1),
 (26058,28002,571,1,1,5717.55,4916.16,-135.674,4.01139,300,300,10,1),
@@ -10993,7 +10993,7 @@ INSERT INTO creature_spell_targeting(Id, Type, Param1, Param2, Param3, UnitCondi
 ('107', '1', '0', '0', '130', '-1', 'Attack - random player not in melee'),
 ('108', '1', '0', '1', '130', '-1', 'Attack - random player non tank not in melee');
 
-INSERT INTO creature (guid, id, map, spawnmask, phasemask, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) VALUES 
+INSERT INTO creature (guid, id, map, spawnmask, phasemask, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) VALUES
 (26078,28320,571,1,2,6191.455,4728.845,224.80719,5.86430644,300,300,0,0),
 (26084,28320,571,1,2,6177.8335,4730.029,224.69289,0.2443460,300,300,0,0),
 (38857,28320,571,1,2,6238.1743,4731.893,224.78261,3.9269907,300,300,0,0),
@@ -11736,7 +11736,7 @@ INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`Positi
 (32525,8,5016.37,5601.02,-93.2894,100,20000,0),
 (32525,9,5016.37,5601.02,-93.2894,100,1000,2821801);
 DELETE FROM `creature_spawn_data` WHERE guid IN (85232,85245,85246,85233,85247,85248,85234,85249,85250,85235,85251,85252,85236,85253,85254);
-INSERT INTO `creature_spawn_data` (`guid`, `id`) VALUES 
+INSERT INTO `creature_spawn_data` (`guid`, `id`) VALUES
 (85232,20059),(85245,20059),(85246,20059),(85233,20059),(85247,20059),(85248,20059),(85234,20059),(85249,20059),(85250,20059),
 (85235,20059),(85251,20059),(85252,20059),(85236,20059),(85253,20059),(85254,20059);
 DELETE FROM dbscripts_on_relay WHERE id IN (20756,20757,20758,30602,30603,30604,30605,30606);
@@ -11907,7 +11907,7 @@ DELETE FROM creature_template_addon WHERE entry IN (28092);
 INSERT INTO creature_template_addon (entry, mount, stand_state, sheath_state, pvp_flags, emote, moveflags, auras) VALUES (28092,0,0,1,0,0,0,'16245 25900');
 UPDATE creature SET position_x = -6193.86, position_y = -1219.55, position_z = -160.768, orientation = 4.72984, spawntimesecsmin = 180, spawntimesecsmax = 180 WHERE guid = 88623;
 UPDATE creature SET position_x = -6028.0815, position_y = -1249.0177, position_z = -146.68127, orientation = 3.054326, spawndist = 0, MovementType = 0 WHERE guid = 84069;
-INSERT INTO creature (guid, id, map, spawnmask, phasemask, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) VALUES 
+INSERT INTO creature (guid, id, map, spawnmask, phasemask, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) VALUES
 (23037,28602,1,1,1,-6105.942,-1249.7822,-143.15865,0,300,300,0,4);
 UPDATE creature SET position_x = -6122.5464, position_y = -1249.9878, position_z = -143.15865, spawndist = 0, MovementType = 4 WHERE guid = 88622;
 UPDATE creature SET position_x = -6104.9653, position_y = -1243.6011, position_z = -143.19208, orientation = 3.12413, spawndist = 0, MovementType = 0 WHERE guid = 88618;
@@ -12336,7 +12336,7 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `PositionX
 (28111,6,13,4962.4,5854.3,-65.2739  ,100,5000,21),
 (28111,6,14,4962.4,5854.3,-65.2739  ,100,1000,2807801);
 DELETE FROM `creature_spawn_data` WHERE guid IN (82308,82309,82310,82311,82312,82313,82314,82315,82316,82317,82318,82319);
-INSERT INTO `creature_spawn_data` (`guid`, `id`) VALUES 
+INSERT INTO `creature_spawn_data` (`guid`, `id`) VALUES
 (82308,20059),(82309,20059),(82310,20059),(82311,20059),(82312,20059),(82313,20059),(82314,20059),(82315,20059),(82316,20059),(82317,20059),(82318,20059),(82319,20059);
 
 DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28077));
@@ -12545,7 +12545,7 @@ DELETE FROM creature_spell_list_entry WHERE Id = 1641001;
 REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES (1640601, "Karazhan - Phantom Attendant", 0, 0);
 UPDATE creature_template SET SpellList = '1640601' WHERE entry = '16406';
 DELETE FROM creature_spell_targeting WHERE Id IN (120, 121);
-INSERT INTO `creature_spell_targeting` (Id, Type, Param1, Param2, Param3, Comments) VALUES 
+INSERT INTO `creature_spell_targeting` (Id, Type, Param1, Param2, Param3, Comments) VALUES
 (120, 1, 1, 0, 512, "Attack - ATTACKING_TARGET_TOPAGGRO - SELECT_FLAG_NOT_AURA"),
 (121, 1, 0, 0, 512, "Attack - ATTACKING_TARGET_RANDOM - SELECT_FLAG_NOT_AURA");
 
@@ -14048,7 +14048,7 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 (9991,1,0,40,30,0,1414,5858,7|0x10,0,0,0,0,0,0,0,0,'Part of Janey Anship 1413 EAI: 1414 - Ransom text'),
 (9991,4000,0,41,0,0,1415,5856,7|0x10,0,0,0,0,0,0,0,0,'Part of Janey Anship 1413 EAI: 1415 - Ransom text'),
 (9991,7000,0,42,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Janey Anship 1413 EAI: Say Random Text');
-DELETE FROM `dbscript_random_templates` WHERE `id` BETWEEN 39 AND 42; 
+DELETE FROM `dbscript_random_templates` WHERE `id` BETWEEN 39 AND 42;
 INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 (39, 1, 9989, 0, 'Janey Anship 1413 & Lisan Pierce 1414 & Suzanne 1415 - RP - Random Script 1'),
 (39, 1, 9990, 0, 'Janey Anship 1413 & Lisan Pierce 1414 & Suzanne 1415 - RP - Random Script 2'),
@@ -14160,7 +14160,7 @@ INSERT INTO creature_movement_template (Entry, Point, PositionX, PositionY, Posi
 (3627,75,-9035.346,861.90265,107.154,100,0,0),
 (3627,76,-9034.61,874.1747,110.45368,100,0,0),
 (3627,77,-9030.81,883.0651,110.44071,100,1000,0);
-DELETE FROM `dbscript_random_templates` WHERE `id` = 43; 
+DELETE FROM `dbscript_random_templates` WHERE `id` = 43;
 INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 (43, 0, 1192, 0, 'Erich Lohan 3627 - RP - Random Text 1'),
 (43, 0, 1193, 0, 'Erich Lohan 3627 - RP - Random Text 2'),
@@ -14170,7 +14170,7 @@ INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `c
 (43, 0, 1197, 0, 'Erich Lohan 3627 - RP - Random Text 6'),
 (43, 0, 1198, 0, 'Erich Lohan 3627 - RP - Random Text 7'),
 (43, 0, 1199, 0, 'Erich Lohan 3627 - RP - Random Text 8');
-DELETE FROM `dbscript_random_templates` WHERE `id` = 44; 
+DELETE FROM `dbscript_random_templates` WHERE `id` = 44;
 INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 (44, 0, 179, 0, 'Morris Lawry 1405 - Random Text 1'),
 (44, 0, 181, 0, 'Morris Lawry 1405 - Random Text 2'),
@@ -14533,7 +14533,7 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@PTEMPLATE+26, 1, 'Ancient Relic / Loose Soil - Wetlands'),
 (@PTEMPLATE+27, 1, 'Ancient Relic / Loose Soil - Wetlands'),
 (@PTEMPLATE+28, 1, 'Ancient Relic / Loose Soil - Wetlands');
-INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `description`) VALUES 
+INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `description`) VALUES
 (@OGUID+1, @PTEMPLATE+1, 'Ancient Relic / Loose Soil - Wetlands'),
 (@OGUID+2, @PTEMPLATE+2, 'Ancient Relic / Loose Soil - Wetlands'),
 (@OGUID+3, @PTEMPLATE+3, 'Ancient Relic / Loose Soil - Wetlands'),
@@ -14964,7 +14964,7 @@ DELETE FROM `creature_spell_list_entry` WHERE `Id` = 148701;
 INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES (148701, 'Duskwood - Splinter Fist Enslaver (1487)', 0, 75);
 DELETE FROM `creature_spell_list` WHERE `Id` = 148701;
 INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
--- (148701, 1, 6533, 0, -1, 1, 0, 100, 1, 3000, 20000, 20000, 40000, 'Splinter Fist Enslaver - Net'),
+(148701, 1, 6533, 0, -1, 1, 0, 100, 1, 3000, 20000, 20000, 40000, 'Splinter Fist Enslaver - Net'),
 (148701, 2, 10277, 2, -1, 1, 0, 100, 1, 0, 1000, 2000, 4000, 'Splinter Fist Enslaver - Throw');
 UPDATE `creature_template` SET `SpellList` = 21201, `ExtraFlags` = `ExtraFlags`|1048576 WHERE `entry` = 212;
 DELETE FROM `creature_template_spells` WHERE `entry` = 212;
@@ -15041,5 +15041,210 @@ REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 1251 FROM `
 UPDATE `creature` SET `spawndist` = 3, `MovementType` = 1 WHERE `guid` = 1960;
 UPDATE `creature` SET `spawndist` = 5, `MovementType` = 1 WHERE `guid` = 1681;
 UPDATE `creature` SET `spawndist` = 5, `MovementType` = 1 WHERE `guid` = 1684;
+
+UPDATE creature_template SET CorpseDecay = '5' WHERE Entry IN (2676, 2675);
+
+DELETE FROM `dbscript_random_templates` WHERE `id` = 1;
+INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
+(1, 0, 746, 0, 'Imp Minion 12922 - Random Aggro Texts'),
+(1, 0, 747, 0, 'Imp Minion 12922 - Random Aggro Texts'),
+(1, 0, 749, 0, 'Imp Minion 12922 - Random Aggro Texts'),
+(1, 0, 750, 0, 'Imp Minion 12922 - Random Aggro Texts'),
+(1, 0, 751, 0, 'Imp Minion 12922 - Random Aggro Texts'),
+(1, 0, 752, 0, 'Imp Minion 12922 - Random Aggro Texts'),
+(1, 0, 753, 0, 'Imp Minion 12922 - Random Aggro Texts'),
+(1, 0, 754, 0, 'Imp Minion 12922 - Random Aggro Texts');
+
+UPDATE `creature_template` SET `SpellList` = 153501 WHERE `entry` = 1535;
+DELETE FROM `creature_template_spells` WHERE `entry` = 1535;
+DELETE FROM `creature_spell_list` WHERE `Id` = 153501;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(153501, 0, 3238, 0, -1, 0, 0, 100, 0, 0, 10000, 45000, 45000, 'Tirisfal Glades - Scarlet Warrior - Cast Nimble Reflexes');
+DELETE FROM `creature_template_spells` WHERE `entry` = 1553;
+UPDATE `creature_template` SET `SpellList` = 153801 WHERE `entry` = 1538;
+UPDATE `creature_template_spells` SET `spell1` = 0 WHERE `entry` = 1538;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 153801;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES (153801, 'Tirisfal Glades - Scarlet Friar', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 153801;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(153801, 0, 2052, 0, -1, 201, 0, 100, 1, 4000, 12000, 15000, 30000, 'Tirisfal Glades - Scarlet Friar - Lesser Heal (Rank 2) on Friendly Missing 50% including self');
+UPDATE `creature_template` SET `SpellList` = 153901 WHERE `entry` = 1539;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 153901;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES (153901, 'Tirisfal Glades - Scarlet Neophyte', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 153901;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(153901, 0, 13322, 2, -1, 1, 0, 100, 0, 0, 0, 0, 0, 'Tirisfal Glades - Scarlet Neophyte - Frostbolt on Current');
+UPDATE `creature_template_spells` SET `spell1` = 72 WHERE `entry` = 1664 AND `spell1` = 35178;
+REPLACE INTO `creature_template_addon` (`entry`, `sheath_state`, `auras`) VALUES (1007, 1, '8852'),(1008, 1, '8852'),(1009, 1, '8852 12544'),(1010, 1, '8852'),(1011, 1, '8852'),(1013, 1, '8852'),(1014, 1, '8852');
+UPDATE `creature_template` SET `SpellList` = 101301 WHERE `entry` = 1013;
+DELETE FROM `creature_template_spells` WHERE `entry` = 1013;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 101301;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES (101301, 'Wetlands - Mosshide Mystic', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 101301;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(101301, 0, 11986, 0, -1, 201, 0, 100, 1, 4000, 12000, 20000, 30000, 'Wetlands - Mosshide Mystic - Healing Wave on Friendly Missing 50% including self'),
+(101301, 1, 11436, 0, -1, 1, 0, 100, 0, 14000, 20000, 20000, 40000, 'Wetlands - Mosshide Mystic - Cast Slow on Current'),
+(101301, 2, 9532, 2, -1, 1, 0, 100, 0, 0, 0, 0, 0, 'Wetlands - Mosshide Mystic - Lightning Bolt on Current');
+
+REPLACE INTO `creature_movement_template` (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`, `Comment`) VALUES
+(7937, 1, 412, -5229.87, -626.006, 420.467, 100, 0, 0, NULL),
+(7937, 1, 418, -5232.12, -617.506, 418.467, 100, 0, 0, NULL),
+(7937, 1, 421, -5233.62, -612.506, 417.467, 100, 0, 0, NULL),
+(7937, 1, 424, -5234.37, -609.006, 416.467, 100, 0, 0, NULL),
+(7937, 1, 428, -5235.62, -604.256, 415.467, 100, 0, 0, NULL),
+(7937, 1, 431, -5236.62, -600.256, 414.467, 100, 0, 0, NULL),
+(7937, 1, 434, -5237.62, -596.506, 413.467, 100, 0, 0, NULL),
+(7937, 1, 437, -5238.87, -591.506, 412.717, 100, 0, 0, NULL),
+(7937, 1, 438, -5239.62, -589.756, 412.217, 100, 0, 0, NULL);
+
+UPDATE creature_spawn_data_template SET Name = 'GENERIC - NpcFlags (1) - UNIT_NPC_FLAG_GOSSIP' WHERE Entry = '4';
+UPDATE creature_spawn_data_template SET Name = 'GENERIC - EquipmentId (0) - No Equipment' WHERE Entry = '5';
+DELETE FROM `dbscripts_on_relay` WHERE id = '5676';
+DELETE FROM `creature_spawn_data_template` WHERE entry = '5676';
+DELETE FROM `dbscripts_on_relay` WHERE id = '6268';
+DELETE FROM `creature_spawn_data_template` WHERE entry = '6268';
+UPDATE creature_spawn_data_template SET Name = 'Quest: The Madness Within: Shen\'dralar Ancient - RelayScript (7461)' WHERE Entry = '7461';
+UPDATE creature_spawn_data_template SET Name = 'Quest: The Madness Within: Shen\'dralar Ancient - RelayScript (7462)' WHERE Entry = '7462';
+UPDATE creature_spawn_data_template SET Name = 'Quest: The Madness Within: Shen\'dralar Ancient - RelayScript (7463)' WHERE Entry = '7463';
+UPDATE creature_spawn_data_template SET Name = 'Quest: The Madness Within: Shen\'dralar Ancient - RelayScript (7464)' WHERE Entry = '7464';
+UPDATE creature_spawn_data_template SET Name = 'Quest: The Madness Within: Shen\'dralar Ancient - RelayScript (7465)' WHERE Entry = '7465';
+UPDATE creature_spawn_data_template SET Name = 'Quest: The Madness Within: Shen\'dralar Ancient - RelayScript (7466)' WHERE Entry = '7466';
+UPDATE creature_spawn_data_template SET Name = 'Quest: The Madness Within: Shen\'dralar Ancient - RelayScript (7467)' WHERE Entry = '7467';
+UPDATE creature_spawn_data_template SET Name = 'Defias Rioter - RelayScript (30510)' WHERE Entry = '9999';
+UPDATE creature_spawn_data_template SET Name = 'Dark Iron Antagonist - UnitFlags and Faction' WHERE Entry = '10000';
+UPDATE creature_spawn_data_template SET Name = 'Mutant War Hound - UnitFlags' WHERE Entry = '10001';
+UPDATE creature_spawn_data_template SET Name = 'BT: Bonechewer NPCs - UnitFlags' WHERE Entry = '10002';
+UPDATE creature_spawn_data_template SET Name = 'World Invisible Trigger - ModelId (dscripts_on_event 14143)' WHERE Entry = '10003';
+UPDATE creature_spawn_data_template SET Name = 'Cork Gizelton - RelayScript (1162501)' WHERE Entry = '11625';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19970)' WHERE Entry = '19985';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19971)' WHERE Entry = '19986';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19972)' WHERE Entry = '19987';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19973)' WHERE Entry = '19988';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19974)' WHERE Entry = '19989';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19975)' WHERE Entry = '19990';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19976)' WHERE Entry = '19991';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19977)' WHERE Entry = '19992';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19978)' WHERE Entry = '19993';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19979)' WHERE Entry = '19994';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19980)' WHERE Entry = '19995';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19981)' WHERE Entry = '19996';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19982)' WHERE Entry = '19997';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19983)' WHERE Entry = '19998';
+UPDATE creature_spawn_data_template SET Name = 'Stillpine Captive - RelayScript (19984)' WHERE Entry = '19999';
+UPDATE creature_spawn_data_template SET Name = 'Orgrimmar Peon | Peon Overseer - RelayScript (30500)' WHERE Entry = '20033';
+UPDATE creature_spawn_data_template SET Name = 'Orgrimmar Peon | Peon Overseer - RelayScript (30501)' WHERE Entry = '20034';
+UPDATE creature_spawn_data_template SET Name = 'Flawless Draenethyst Fragment - RelayScript (25210)' WHERE Entry = '25210';
+UPDATE creature_spawn_data_template SET Name = 'Draenei Refugee - RelayScript (25211)' WHERE Entry = '25211';
+UPDATE creature_spawn_data_template SET Name = 'Draenei Refugee - RelayScript (25212)' WHERE Entry = '25212';
+UPDATE creature_spawn_data_template SET Name = 'Draenei Refugee - RelayScript (25213)' WHERE Entry = '25213';
+UPDATE creature_spawn_data_template SET Name = 'Draenei Refugee - RelayScript (25214)' WHERE Entry = '25214';
+UPDATE creature_spawn_data_template SET Name = 'Draenei Refugee - RelayScript (25215)' WHERE Entry = '25215';
+UPDATE creature_spawn_data_template SET Name = 'Draenei Refugee - RelayScript (25216)' WHERE Entry = '25216';
+UPDATE creature_spawn_data_template SET Name = 'Draenei Refugee - RelayScript (25217)' WHERE Entry = '25217';
+UPDATE creature_spawn_data_template SET Name = 'Draenei Refugee - RelayScript (25218)' WHERE Entry = '25218';
+UPDATE creature_spawn_data_template SET Name = 'Draenei Refugee - RelayScript (25219)' WHERE Entry = '25219';
+UPDATE creature_spawn_data_template SET Name = 'Plaque Spreader (604) - Faction' WHERE Entry = '60401';
+UPDATE creature_spawn_data_template SET Name = 'Hammerfall Guardian (2621) - Equipment' WHERE Entry = '262101';
+UPDATE creature_spawn_data_template SET Name = 'Crimson Guardsman (10418) - Faction' WHERE Entry = '1041801';
+UPDATE creature_spawn_data_template SET Name = 'Darkmoon Faire Carnie (14849) - Equipment' WHERE Entry = '1484901';
+UPDATE creature_spawn_data_template SET Name = 'Darkmoon Faire Carnie (14849) - Equipment' WHERE Entry = '1484902';
+UPDATE creature_spawn_data_template SET Name = 'Darkmoon Faire Carnie (14849) - Equipment' WHERE Entry = '1484903';
+UPDATE creature_spawn_data_template SET Name = 'Peon (14901) - Equipment' WHERE Entry = '1490101';
+UPDATE creature_spawn_data_template SET Name = 'Peon (14901) - Equipment' WHERE Entry = '1490102';
+UPDATE creature_spawn_data_template SET Name = 'Peon (14901) - Equipment' WHERE Entry = '1490103';
+UPDATE creature_spawn_data_template SET Name = 'Peon (14901) - Equipment' WHERE Entry = '1490104';
+UPDATE creature_spawn_data_template SET Name = 'Peon (14901) - Equipment' WHERE Entry = '1490105';
+UPDATE creature_spawn_data_template SET Name = 'Thrallmar Grunt (16580) - Equipment' WHERE Entry = '1658001';
+UPDATE creature_spawn_data_template SET Name = 'Thrallmar Grunt (16580) - Equipment' WHERE Entry = '1658002';
+UPDATE creature_spawn_data_template SET Name = 'Thrallmar Grunt (16580) - Equipment' WHERE Entry = '1658003';
+UPDATE creature_spawn_data_template SET Name = 'Thrallmar Grunt (16580) - Equipment' WHERE Entry = '1658004';
+UPDATE creature_spawn_data_template SET Name = 'Thrallmar Grunt (16580) - Equipment' WHERE Entry = '1658005';
+UPDATE creature_spawn_data_template SET Name = 'Thrallmar Grunt (16580) - Equipment' WHERE Entry = '1658006';
+UPDATE creature_spawn_data_template SET Name = 'Thrallmar Grunt (16580) - Equipment' WHERE Entry = '1658007';
+UPDATE creature_spawn_data_template SET Name = 'Thrallmar Marksman (16582) - Equipment' WHERE Entry = '1658201';
+UPDATE creature_spawn_data_template SET Name = 'Thrallmar Marksman (16582) - Equipment' WHERE Entry = '1658202';
+UPDATE creature_spawn_data_template SET Name = 'Thrallmar Marksman (16582) - Equipment' WHERE Entry = '1658203';
+UPDATE creature_spawn_data_template SET Name = 'Thrallmar Marksman (16582) - Equipment' WHERE Entry = '1658204';
+UPDATE creature_spawn_data_template SET Name = 'Nethergarde Infantry (16831) - Equipment' WHERE Entry = '1683101';
+UPDATE creature_spawn_data_template SET Name = 'Nethergarde Infantry (16831) - Equipment' WHERE Entry = '1683102';
+UPDATE creature_spawn_data_template SET Name = 'Nethergarde Infantry (16831) - Equipment' WHERE Entry = '1683103';
+UPDATE creature_spawn_data_template SET Name = 'Nethergarde Infantry (16831) - Equipment' WHERE Entry = '1683104';
+UPDATE creature_spawn_data_template SET Name = 'Nethergarde Infantry (16831) - Equipment' WHERE Entry = '1683105';
+UPDATE creature_spawn_data_template SET Name = 'Nethergarde Infantry (16831) - Equipment' WHERE Entry = '1683106';
+UPDATE creature_spawn_data_template SET Name = 'Nethergarde Infantry (16831) - Equipment' WHERE Entry = '1683107';
+UPDATE creature_spawn_data_template SET Name = 'Nethergarde Infantry (16831) - Equipment' WHERE Entry = '1683108';
+UPDATE creature_spawn_data_template SET Name = 'Nethergarde Infantry (16831) - Equipment' WHERE Entry = '1683109';
+UPDATE creature_spawn_data_template SET Name = 'Nethergarde Infantry (16831) - Equipment' WHERE Entry = '1683110';
+UPDATE creature_spawn_data_template SET Name = 'Honor Hold Defender (16842) - Equipment' WHERE Entry = '1684201';
+UPDATE creature_spawn_data_template SET Name = 'Honor Hold Defender (16842) - Equipment' WHERE Entry = '1684202';
+UPDATE creature_spawn_data_template SET Name = 'Honor Hold Defender (16842) - Equipment' WHERE Entry = '1684203';
+UPDATE creature_spawn_data_template SET Name = 'Honor Hold Defender (16842) - Equipment' WHERE Entry = '1684204';
+UPDATE creature_spawn_data_template SET Name = 'Honor Hold Defender (16842) - Equipment' WHERE Entry = '1684205';
+UPDATE creature_spawn_data_template SET Name = 'Honor Hold Defender (16842) - Equipment' WHERE Entry = '1684206';
+UPDATE creature_spawn_data_template SET Name = 'Stormwind Infantry (16864) - Equipment' WHERE Entry = '1686401';
+UPDATE creature_spawn_data_template SET Name = 'Stormwind Infantry (16864) - Equipment' WHERE Entry = '1686402';
+UPDATE creature_spawn_data_template SET Name = 'Stormwind Infantry (16864) - Equipment' WHERE Entry = '1686403';
+UPDATE creature_spawn_data_template SET Name = 'Stormwind Infantry (16864) - Equipment' WHERE Entry = '1686404';
+UPDATE creature_spawn_data_template SET Name = 'Stormwind Infantry (16864) - Equipment' WHERE Entry = '1686405';
+UPDATE creature_spawn_data_template SET Name = 'Stormwind Infantry (16864) - Equipment' WHERE Entry = '1686406';
+UPDATE creature_spawn_data_template SET Name = 'Stormwind Infantry (16864) - Equipment' WHERE Entry = '1686407';
+UPDATE creature_spawn_data_template SET Name = 'Stormwind Infantry (16864) - Equipment' WHERE Entry = '1686408';
+UPDATE creature_spawn_data_template SET Name = 'Stormwind Infantry (16864) - Equipment' WHERE Entry = '1686409';
+UPDATE creature_spawn_data_template SET Name = 'Boulderfist Crusher (17134) - RelayScript (1713401)' WHERE Entry = '1713401';
+UPDATE creature_spawn_data_template SET Name = 'Siltfin Oracle (17191) - RelayScript (1719101)' WHERE Entry = '1719101';
+UPDATE creature_spawn_data_template SET Name = 'Bonechewer Hungerer (17259) - RelayScript (1725901)' WHERE Entry = '1725901';
+UPDATE creature_spawn_data_template SET Name = 'Bonechewer Ravener (17264) - RelayScript (1726401)' WHERE Entry = '1726401';
+UPDATE creature_spawn_data_template SET Name = 'Blacksilt Shorestriker (17328) - RelayScript (1732801)' WHERE Entry = '1732801';
+UPDATE creature_spawn_data_template SET Name = 'Coilfang Engineer (17721) - RelayScript (1772101)' WHERE Entry = '1772101';
+UPDATE creature_spawn_data_template SET Name = 'Expedition Warden (17855) - EquipmentId' WHERE Entry = '1785501';
+UPDATE creature_spawn_data_template SET Name = 'Mug\'gok (18475) - RelayScript (1847501)' WHERE Entry = '1847501';
+UPDATE creature_spawn_data_template SET Name = 'Telaari Watcher (18488) - RelayScript (1848801)' WHERE Entry = '1848801';
+UPDATE creature_spawn_data_template SET Name = 'Scryer Arcanist (18547) - RelayScript (1854701)' WHERE Entry = '1854701';
+UPDATE creature_spawn_data_template SET Name = 'Worker (18800) - EquipmentId' WHERE Entry = '1880001';
+UPDATE creature_spawn_data_template SET Name = 'Telaari Elekk Rider (19071) - RelayScript (1907101)' WHERE Entry = '1907101';
+UPDATE creature_spawn_data_template SET Name = 'Kor\'kron Defender (19362) - RelayScript (1936201)' WHERE Entry = '1936201';
+UPDATE creature_spawn_data_template SET Name = 'Coilskar Myrmidon (19765) - EquipmentId' WHERE Entry = '1976501';
+UPDATE creature_spawn_data_template SET Name = 'Nether Technician (20203) - EquipmentId' WHERE Entry = '2020301';
+UPDATE creature_spawn_data_template SET Name = 'Nether Technician (20203) - EquipmentId' WHERE Entry = '2020302';
+UPDATE creature_spawn_data_template SET Name = 'Nether Technician (20203) - EquipmentId' WHERE Entry = '2020303';
+UPDATE creature_spawn_data_template SET Name = 'Greyheart Tidecaller (21229) | Greyheart Nether-Mage (21230) - RelayScript (2122901)' WHERE Entry = '2122901';
+UPDATE creature_spawn_data_template SET Name = 'Greyheart Skulker (21232) - RelayScript (2123201)' WHERE Entry = '2123201';
+UPDATE creature_spawn_data_template SET Name = 'Ethereal Plunderer (21368) - EquipmentId' WHERE Entry = '2136801';
+UPDATE creature_spawn_data_template SET Name = 'Ethereal Nethermancer (21370) - EquipmentId' WHERE Entry = '2137001';
+UPDATE creature_spawn_data_template SET Name = 'Ethereal Arcanist (21405) - EquipmentId' WHERE Entry = '2140501';
+UPDATE creature_spawn_data_template SET Name = 'Sunfury Eradicator (21742) - RelayScript (2174201)' WHERE Entry = '2174201';
+UPDATE creature_spawn_data_template SET Name = 'Skettis Soulcaller (21911) - EquipmentId' WHERE Entry = '2191101';
+UPDATE creature_spawn_data_template SET Name = 'Eclipsion Soldier (22016) - RelayScript (2201601)' WHERE Entry = '2201601';
+UPDATE creature_spawn_data_template SET Name = 'Eclipsion Cavalier (22018) - RelayScript (2201801)' WHERE Entry = '2201801';
+UPDATE creature_spawn_data_template SET Name = 'Dragonmaw Peon (22252) - EquipmentId' WHERE Entry = '2225201';
+UPDATE creature_spawn_data_template SET Name = 'Dragonmaw Ascendant (22253) - RelayScript (2225301)' WHERE Entry = '2225301';
+UPDATE creature_spawn_data_template SET Name = 'Skyguard Navigator (22982) - EquipmentId' WHERE Entry = '2298201';
+UPDATE creature_spawn_data_template SET Name = 'Dragonmaw Enforcer (23146) - RelayScript (2314601)' WHERE Entry = '2314601';
+UPDATE creature_spawn_data_template SET Name = 'Skyguard Windcharger (23257) - EquipmentId' WHERE Entry = '2325701';
+UPDATE creature_spawn_data_template SET Name = 'Murkblood Miner (23287) - UnitFlags' WHERE Entry = '2328701';
+UPDATE creature_spawn_data_template SET Name = 'Amani\'shi Guardian (23597) - RelayScript (2359701)' WHERE Entry = '2359701';
+UPDATE `creature_spawn_data_template` SET `Name` = 'Servant of the Hand (15080) - RelayScript (29)' WHERE `Entry` = 9998;
+UPDATE `creature_spawn_data_template` SET `Name` = 'Servant of the Hand (15080) - RelayScript (28)' WHERE `Entry` = 9999;
+
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|1048576, `InhabitType` = 1, `MovementType` = 0 WHERE `entry` = 21719;
+DELETE FROM `creature` WHERE `id` = 21719;
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(77396, 21719, 530, 1, -4072.34, 361.866, 64.5531, 2.04204, 300, 300, 0, 0),
+(77397, 21719, 530, 1, -4155.55, 386.615, 141.415, 1.20428, 300, 300, 0, 0),
+(77398, 21719, 530, 1, -4218.88, 381.402, 135.627, 1.44862, 300, 300, 0, 0),
+(77399, 21719, 530, 1, -4117.26, 452.178, 57.7584, 4.85202, 300, 300, 0, 0),
+(77400, 21719, 530, 1, -4141.86, 416.067, 53.6638, 0.488692, 300, 300, 0, 0),
+(77401, 21719, 530, 1, -4230.58, 489.843, 43.7573, 0.261799, 300, 300, 0, 0),
+(77402, 21719, 530, 1, -4271.06, 509.687, 75.0461, 1.50098, 300, 300, 0, 0),
+(77403, 21719, 530, 1, -4209.37, 535.747, 77.3108, 0.349066, 300, 300, 0, 0),
+(77404, 21719, 530, 1, -4154.23, 492.462, 59.1349, 2.84489, 300, 300, 0, 0);
+DELETE FROM dbscripts_on_relay WHERE id IN (30611);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(30611,0,39,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'GENERIC - FLY ANIM ON - RUN OFF');
+UPDATE `creature_template` SET `Faction` = 62, `SpeedWalk` = 1, `SpeedRun` = 1.38571, `InhabitType` = 1, `MovementType` = 0 WHERE `entry` = 22000;
+REPLACE INTO `creature_template_addon` (`entry`, `sheath_state`, `auras`) VALUES (22000, 1, '36630');
+
+UPDATE `creature` SET `position_x` = '1331.11', `position_y` = '-4649.45', `position_z` = '53.6269', `orientation` = '0', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =39533;
+UPDATE `creature` SET `position_x` = '1975.03', `position_y` = '-6095.22', `position_z` = '67.2222', `orientation` = '4.2237', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =95498;
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
