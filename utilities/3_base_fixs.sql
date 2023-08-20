@@ -126,12 +126,6 @@ DELETE FROM `combat_condition` WHERE `Id` = 5102;
 DELETE FROM `combat_condition` WHERE `Id` = 5375;
 DELETE FROM `combat_condition` WHERE `Id` = 5376;
 
-# NPC emissary id=0 not work - start event - crash core
-#DELETE FROM creature WHERE guid IN (18935,18937);
-#INSERT INTO creature (guid, id, map, spawnmask, phasemask, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) values
-#(18935,0,0,1,1,-8351.663,627.2608,95.24413,5.21675,300,300,0,0),
-#(18937,0,0,1,1,-8351.663,627.2608,95.24413,5.21675,300,300,0,0);
-
 # NPC AQ War
 #INSERT INTO game_event_creature SELECT guid, 123 FROM creature WHERE guid IN (27403,27421,27518,27524,27533,27583,27805,27834,27851);
 #INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `movementtype`) VALUES
