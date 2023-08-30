@@ -18303,6 +18303,77 @@ UPDATE `creature_template` SET `MinLootGold` = 276, `MaxLootGold` = 1836 WHERE `
 UPDATE `creature_template` SET `MinLootGold` = 300, `MaxLootGold` = 2000 WHERE `entry` = 18658;
 UPDATE `creature_template` SET `MinLootGold` = 352, `MaxLootGold` = 1788 WHERE `entry`= 17147;
 
+REPLACE INTO `creature_addon` (`guid`, `stand_state`, `sheath_state`, `emote`, `auras`) VALUES
+(70741, 0, 1, 353, NULL),(70774, 0, 1, 353, NULL),(70775, 0, 1, 353, NULL),(70776, 0, 1, 353, NULL);
+DELETE FROM `creature_addon` WHERE `guid` IN (70812,74270,70783,70822,70823,70830,70831,74285);
+UPDATE `creature` SET `MovementType` = 2 WHERE `guid` IN (70812,74270,70783,70822,70823,70830,70831,74285);
+DELETE FROM `creature_movement` WHERE `id` IN (70812,74270,70783,70822,70823,70830,70831,74285);
+INSERT INTO `creature_movement` (`Id`, `Point`,`PositionX`,`PositionY`,`PositionZ`,`WaitTime`,`ScriptId`,`Orientation`,`Comment`) VALUES
+(70783, 1, -2936.75, 6354.43, 88.3589, 90000, 1714615, 100, 'Kil\'Sorrow Spellbinder/Cultist - Set Random Standstate (0/1/3/8)'),
+(70823, 1, -2784.44, 6397.67, 62.2251, 90000, 1714615, 100, 'Kil\'Sorrow Spellbinder/Cultist - Set Random Standstate (0/1/3/8)'),
+(74270, 1, -2894.21, 6461.79, 101.635, 90000, 1714615, 100, 'Kil\'Sorrow Spellbinder/Cultist - Set Random Standstate (0/1/3/8)'),
+(70831, 1, -2894.21, 6461.79, 101.635, 90000, 1714615, 100, 'Kil\'Sorrow Spellbinder/Cultist - Set Random Standstate (0/1/3/8)'),
+(74285, 1, -2787.1, 6414.78, 62.2411, 90000, 1714615, 100, 'Kil\'Sorrow Spellbinder/Cultist - Set Random Standstate (0/1/3/8)'),
+(70822, 1, -2787.1, 6414.78, 62.2411, 90000, 1714615, 100, 'Kil\'Sorrow Spellbinder/Cultist - Set Random Standstate (0/1/3/8)'),
+(70812, 1, -3018.98, 6515.63, 113.043, 90000, 1714616, 100, 'Kil\'Sorrow Spellbinder/Cultist - Set Random Standstate (0/8)'),
+(70830, 1, -2783.24, 6468.62, 78.5516, 90000, 1714616, 100, 'Kil\'Sorrow Spellbinder/Cultist - Set Random Standstate (0/8)');
+DELETE FROM `dbscripts_on_creature_movement` WHERE `Id` = 1714614;
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+(1714614, 5000, 0, 1, 353, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kil\'Sorrow Spellbinder/Cultist - EMOTE_STATE_SPELLKNEELSTART'),
+(1714614, 5000, 1, 15, 31902, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kil\'Sorrow Spellbinder/Cultist - Cast Purple Beam');
+DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN (1714615,1714616);
+INSERT INTO `dbscripts_on_creature_movement` (`id`,`delay`,`priority`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(1714615, 0, 0, 45, 0, 1714601, 0, 0, 0, 0, 0, 0, 0, 0,'Kil\'Sorrow Spellbinder/Cultist - Set Random Standstate (0/1/3/8)', 0, 0, 0, 0),
+(1714616, 0, 0, 45, 0, 1714602, 0, 0, 0, 0, 0, 0, 0, 0,'Kil\'Sorrow Spellbinder/Cultist - Set Random Standstate (0/8)', 0, 0, 0, 0);
+DELETE FROM `dbscripts_on_relay` WHERE `id` BETWEEN 32800 AND 32809;
+INSERT INTO `dbscripts_on_relay` (`id`,`delay`,`priority`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
+(32800,0,0,28,0,0,0,0,0,0,0,0,0,0,'GENERIC - UNIT_STAND_STATE_STAND',0,0,0,0),
+(32801,0,0,28,1,0,0,0,0,0,0,0,0,0,'GENERIC - UNIT_STAND_STATE_SIT',0,0,0,0),
+(32802,0,0,28,2,0,0,0,0,0,0,0,0,0,'GENERIC - UNIT_STAND_STATE_SIT_CHAIR',0,0,0,0),
+(32803,0,0,28,3,0,0,0,0,0,0,0,0,0,'GENERIC - UNIT_STAND_STATE_SLEEP',0,0,0,0),
+(32804,0,0,28,4,0,0,0,0,0,0,0,0,0,'GENERIC - UNIT_STAND_STATE_SIT_LOW_CHAIR',0,0,0,0),
+(32805,0,0,28,5,0,0,0,0,0,0,0,0,0,'GENERIC - UNIT_STAND_STATE_SIT_MEDIUM_CHAIR',0,0,0,0),
+(32806,0,0,28,6,0,0,0,0,0,0,0,0,0,'GENERIC - UNIT_STAND_STATE_SIT_HIGH_CHAIR',0,0,0,0),
+(32807,0,0,28,7,0,0,0,0,0,0,0,0,0,'GENERIC - UNIT_STAND_STATE_DEAD',0,0,0,0),
+(32808,0,0,28,8,0,0,0,0,0,0,0,0,0,'GENERIC - UNIT_STAND_STATE_KNEEL',0,0,0,0),
+(32809,0,0,28,9,0,0,0,0,0,0,0,0,0,'GENERIC - UNIT_STAND_STATE_CUSTOM',0,0,0,0);
+DELETE FROM `dbscript_random_templates` WHERE `id` BETWEEN 1714601 AND 1714602;
+INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
+(1714601,1,32800,0,'GENERIC - UNIT_STAND_STATE_STAND'),
+(1714601,1,32801,0,'GENERIC - UNIT_STAND_STATE_SIT'),
+(1714601,1,32803,0,'GENERIC - UNIT_STAND_STATE_SLEEP'),
+(1714601,1,32808,0,'GENERIC - UNIT_STAND_STATE_KNEEL'),
+(1714602,1,32800,0,'GENERIC - UNIT_STAND_STATE_STAND'),
+(1714602,1,32808,30,'GENERIC - UNIT_STAND_STATE_KNEEL');
+REPLACE INTO `creature_spawn_data_template` (`entry`, `RelayId`, `Name`) VALUES (1714701, 1714701, 'RelayScript (1714701)');
+REPLACE INTO `creature_spawn_data` (`guid`, `id`) SELECT `guid`, 1714701 FROM `creature` WHERE `guid` IN (70780,70820);
+DELETE FROM `creature_addon` WHERE `guid` IN (70780,70820);
+DELETE FROM `dbscripts_on_relay` WHERE `id` = 1714701;
+INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(1714701, 0, 42, 0, 0, 0, 0, 0, 0, 2717, 0, 0, 0, 0, 0, 0, 0, '17147 - EquipSet 2'),
+(1714701, 1000, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '17147 - EMOTE_STATE_USESTANDING');
+UPDATE `creature_template` SET `SpeedWalk` = 1, `UnitFlags` = 33536, `KillCredit1` = 0 WHERE `entry` = 18397;
+UPDATE `creature_template_addon` SET `emote` = 0, `stand_state` = 0, `auras` = '31261' WHERE `entry` = 18397;
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(41982, 18658, 530, 1, -2719.82, 8343.47, -83.0841, 4.60767, 300, 300, 0, 0),
+(42004, 18658, 530, 1, -2709.5, 8331.9, -83.0979, 3.05433, 300, 300, 0, 0),
+(69441, 18658, 530, 1, -2810.39, 8339.39, -94.0092, 3.83723, 300, 300, 0, 2),
+(69457, 18658, 530, 1, -2811.15, 8330.02, -94.0154, 2.47837, 300, 300, 0, 2),
+(69458, 18658, 530, 1, -2814.55, 8342.08, -94.1181, 5.0091, 300, 300, 0, 2),
+(69456, 18658, 530, 1, -2815.97, 8327.21, -94.12, 1.46608, 300, 300, 0, 2),
+(42015, 18658, 530, 1, -2720.37, 8320.63, -83.0145, 1.48353, 300, 300, 0, 0),
+(42023, 18658, 530, 1, -2731.09, 8334.11, -83.0028, 6.05629, 300, 300, 0, 0);
+DELETE FROM `creature_movement` WHERE `id` IN (69458,69441,69457,69456);
+INSERT INTO `creature_movement` (`Id`, `Point`,`PositionX`,`PositionY`,`PositionZ`,`WaitTime`,`ScriptId`,`Orientation`,`Comment`) VALUES
+(69441, 1, -2810.39, 8339.39, -94.0092, 5000, 1865801, 100, 'Kil\'sorrow Ritualist - Cast Power Subjugator'),
+(69457, 1, -2811.15, 8330.02, -94.0154, 5000, 1865801, 100, 'Kil\'sorrow Ritualist - Cast Power Subjugator'),
+(69458, 1, -2814.55, 8342.08, -94.1181, 5000, 1865801, 100, 'Kil\'sorrow Ritualist - Cast Power Subjugator'),
+(69456, 1, -2815.97, 8327.21, -94.12, 5000, 1865801, 100, 'Kil\'sorrow Ritualist - Cast Power Subjugator');
+DELETE FROM `dbscripts_on_creature_movement` WHERE `Id` = 1865801;
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+(1865801, 5000, 0, 15, 32623, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kil\'sorrow Ritualist - Cast Power Subjugator'),
+(1865801, 5000, 1, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kil\'sorrow Ritualist - Set Idle Movement');
+
 UPDATE `creature` SET `position_x`=9266.465,`position_y`=-6550.5283,`position_z`=33.899437,`orientation`=0,`spawndist`=0,`MovementType`=0 WHERE `guid`=67233;
 UPDATE `creature` SET `position_x`=9266.465,`position_y`=-6550.5283,`position_z`=33.899437,`orientation`=0,`spawndist`=0,`MovementType`=0 WHERE `guid`=67235;
 SET @GROUP_ID := 5300006;
@@ -18413,5 +18484,95 @@ INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`, `Posit
 (@GROUP_ID,48,8800.046,-6648.526,58.3881,100,0,0),
 (@GROUP_ID,49,8766.34,-6649.9844,65.844604,100,0,0),
 (@GROUP_ID,50,8737.004,-6677.9756,69.692726,100,0,0);
+
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
+(10022, 192824, 571, 1, 1, 5899.09, 503.22, 642.573, 0.087266, 0, 0, 0.0436192, 0.999048, 300, 300),
+(11260, 192824, 571, 1, 1, 5868.87, 469.549, 655.691, 1.53589, 0, 0, 0.694658, 0.71934, 300, 300),
+(11268, 192824, 571, 1, 1, 5726.2, 515.808, 648.447, -3.05433, 0, 0, -0.999048, 0.0436193, 300, 300),
+(11384, 192824, 571, 1, 1, 5744.8, 700.564, 619.141, 2.02458, 0, 0, 0.848047, 0.529921, 300, 300),
+(11392, 192824, 571, 1, 1, 5691.61, 718.249, 635.907, -0.052359, 0, 0, -0.0261765, 0.999657, 300, 300),
+(11399, 192824, 571, 1, 1, 5684.89, 580.468, 653.717, 1.41372, 0, 0, 0.649447, 0.760406, 300, 300),
+(11413, 192824, 571, 1, 1, 5754.64, 695.588, 619.497, -1.18682, 0, 0, -0.559193, 0.829038, 300, 300),
+(11440, 192824, 571, 1, 1, 5872.93, 465.101, 642.679, 1.81514, 0, 0, 0.788011, 0.615662, 300, 300),
+(11473, 192824, 571, 1, 1, 5905.87, 481.323, 641.643, -2.40855, 0, 0, -0.93358, 0.358368, 300, 300),
+(11495, 192824, 571, 1, 1, 5866.1, 496.981, 655.691, -0.698132, 0, 0, -0.34202, 0.939693, 300, 300),
+(11558, 192824, 571, 1, 1, 5690.83, 722.674, 654.969, 1.6057, 0, 0, 0.719339, 0.694659, 300, 300),
+(11598, 192824, 571, 1, 1, 5873.84, 609.288, 651.153, -1.53589, 0, 0, -0.694658, 0.71934, 300, 300),
+(11604, 192824, 571, 1, 1, 5878.04, 598.562, 651.202, 2.07694, 0, 0, 0.861629, 0.507539, 300, 300),
+(11665, 192824, 571, 1, 1, 5849.25, 652.039, 648.651, 1.48353, 0, 0, 0.67559, 0.737278, 300, 300),
+(11676, 192824, 571, 1, 1, 5845.59, 663.863, 659.532, -2.00713, 0, 0, -0.843391, 0.5373, 300, 300),
+(11678, 192824, 571, 1, 1, 5858.28, 658.759, 648.755, 0.541051, 0, 0, 0.267238, 0.963631, 300, 300),
+(50438, 192824, 571, 1, 1, 5858.11, 644.819, 648.755, -0.541051, 0, 0, -0.267238, 0.963631, 300, 300),
+(50439, 192824, 571, 1, 1, 5697.18, 694.274, 654.862, 1.16937, 0, 0, 0.551936, 0.833886, 300, 300),
+(50440, 192824, 571, 1, 1, 5707.79, 709.05, 654.896, -2.84488, 0, 0, -0.989016, 0.147811, 300, 300),
+(50441, 192824, 571, 1, 1, 5875.1, 473.528, 642.438, -0.122173, 0, 0, -0.0610485, 0.998135, 300, 300),
+(50495, 192824, 571, 1, 1, 5899.67, 508.963, 643.488, 0.087266, 0, 0, 0.0436192, 0.999048, 300, 300),
+(50517, 192824, 571, 1, 1, 5886.09, 461.617, 642.7, -1.83259, 0, 0, -0.793353, 0.608762, 300, 300),
+(50580, 192824, 571, 1, 1, 5762.04, 711.909, 619.409, -1.95477, 0, 0, -0.829037, 0.559194, 300, 300),
+(50581, 192824, 571, 1, 1, 5892.73, 587.291, 659.425, -0.610864, 0, 0, -0.300705, 0.953717, 300, 300),
+(50592, 192824, 571, 1, 1, 5852.19, 468.392, 640.732, -2.35619, 0, 0, -0.923879, 0.382686, 300, 300),
+(50627, 192824, 571, 1, 1, 5892.92, 594.19, 651.203, 2.89724, 0, 0, 0.992546, 0.12187, 300, 300),
+(50628, 192824, 571, 1, 1, 5878.1, 600.172, 662.472, -1.58825, 0, 0, -0.71325, 0.70091, 300, 300),
+(50629, 192824, 571, 1, 1, 5893.04, 600.001, 651.169, -1.95477, 0, 0, -0.829037, 0.559194, 300, 300),
+(50644, 192824, 571, 1, 1, 5700.62, 539.499, 648.704, 0.296705, 0, 0, 0.147809, 0.989016, 300, 300),
+(51497, 192824, 571, 1, 1, 5776.55, 517.818, 653.922, -2.94959, 0, 0, -0.995396, 0.0958512, 300, 300),
+(51498, 192824, 571, 1, 1, 5852.09, 658.57, 659.553, 1.18682, 0, 0, 0.559193, 0.829038, 300, 300),
+(51499, 192824, 571, 1, 1, 5854.26, 633.049, 649.19, -2.44346, 0, 0, -0.939692, 0.34202, 300, 300),
+(51506, 192824, 571, 1, 1, 5848.04, 642.36, 648.651, 2.70526, 0, 0, 0.976295, 0.216442, 300, 300),
+(51507, 192824, 571, 1, 1, 5851.05, 665.22, 648.512, -0.663223, 0, 0, -0.325567, 0.945519, 300, 300),
+(51534, 192824, 571, 1, 1, 5856.61, 637.894, 659.601, -0.733038, 0, 0, -0.358368, 0.93358, 300, 300),
+(51548, 192824, 571, 1, 1, 5763.92, 716.935, 619.422, -1.09956, 0, 0, -0.522498, 0.85264, 300, 300),
+(51558, 192824, 571, 1, 1, 5871.04, 492.215, 642.452, -0.628317, 0, 0, -0.309016, 0.951057, 300, 300),
+(51559, 192824, 571, 1, 1, 5704.12, 718.16, 643.362, -0.349065, 0, 0, -0.173648, 0.984808, 300, 300),
+(51560, 192824, 571, 1, 1, 5716.01, 695.169, 646.453, -0.226892, 0, 0, -0.113203, 0.993572, 300, 300),
+(51571, 192824, 571, 1, 1, 5716.24, 684.985, 646.46, -2.56563, 0, 0, -0.958819, 0.284016, 300, 300),
+(51587, 192824, 571, 1, 1, 5706.39, 697.851, 646.668, 1.62316, 0, 0, 0.725374, 0.688355, 300, 300),
+(51588, 192824, 571, 1, 1, 5722.52, 677.688, 647.417, -1.16937, 0, 0, -0.551936, 0.833886, 300, 300),
+(51597, 192824, 571, 1, 1, 5844.36, 655.988, 648.658, -1.71042, 0, 0, -0.754709, 0.656059, 300, 300),
+(51598, 192824, 571, 1, 1, 5678.96, 711.913, 655.032, -1.37881, 0, 0, -0.636078, 0.771625, 300, 300),
+(51572, 192824, 571, 1, 1, 5882.99, 454.758, 643.635, -2.19912, 0, 0, -0.891006, 0.453991, 300, 300);
+DELETE FROM `pool_gameobject_template` WHERE `pool_entry` =14592;
+DELETE FROM `pool_template` WHERE `entry` = 14592;
+UPDATE gameobject SET spawntimesecsmin = 180, spawntimesecsmax = 180 WHERE id IN (192824);
+DELETE FROM `spawn_group` WHERE id = 33702;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33702, 'Dalaran - A Hero\'s Welcome - Half Full Glass of Wine 192824', 1, 5, 0, 0);
+DELETE FROM `spawn_group_spawn` WHERE id = 33702;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES
+(33702, 11392, -1),(33702, 11558, -1),(33702, 50439, -1),(33702, 50440, -1),(33702, 51559, -1),
+(33702, 51560, -1),(33702, 51571, -1),(33702, 51587, -1),(33702, 51588, -1),(33702, 51598, -1);
+DELETE FROM `spawn_group` WHERE id = 33703;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33703, 'Dalaran - The Filthy Animal - Half Full Glass of Wine 192824', 1, 5, 0, 0);
+DELETE FROM `spawn_group_spawn` WHERE id = 33703;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES
+(33703, 11260, -1),(33703, 11440, -1),(33703, 11473, -1),(33703, 11495, -1),(33703, 50441, -1),
+(33703, 50495, -1),(33703, 50517, -1),(33703, 50592, -1),(33703, 51558, -1),(33703, 51572, -1);
+DELETE FROM `spawn_group` WHERE id = 33704;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33704, 'Dalaran - The Legerdemain Lounge - Half Full Glass of Wine 192824', 1, 5, 0, 0);
+DELETE FROM `spawn_group_spawn` WHERE id = 33704;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES
+(33704, 11665, -1),(33704, 11676, -1),(33704, 11678, -1),(33704, 50438, -1),(33704, 51498, -1),
+(33704, 51499, -1),(33704, 51506, -1),(33704, 51507, -1),(33704, 51534, -1),(33704, 51597, -1);
+DELETE FROM `spawn_group` WHERE id = 33705;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33705, 'Dalaran - The Violet Hold - Half Full Glass of Wine 192824', 1, 3, 0, 0);
+DELETE FROM `spawn_group_spawn` WHERE id = 33705;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33705, 11268, -1),(33705, 11399, -1),(33705, 50644, -1),(33705, 51497, -1);
+DELETE FROM `spawn_group` WHERE id = 33706;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33706, 'Dalaran - Cantrips & Crows - Half Full Glass of Wine 192824', 1, 3, 0, 0);
+DELETE FROM `spawn_group_spawn` WHERE id = 33706;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33706, 11384, -1),(33706, 11413, -1),(33706, 50580, -1),(33706, 51548, -1);
+DELETE FROM `spawn_group` WHERE id = 33707;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33707, 'Dalaran - One More Glass - Half Full Glass of Wine 192824', 1, 3, 0, 0);
+DELETE FROM `spawn_group_spawn` WHERE id = 33707;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES
+(33707, 11598, -1),(33707, 11604, -1),(33707, 50581, -1),(33707, 50627, -1),(33707, 50628, -1),(33707, 50629, -1);
+DELETE FROM `pool_gameobject_template` WHERE `pool_entry` =14591;
+DELETE FROM `pool_template` WHERE `entry` = 14591;
+INSERT INTO gameobject (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax) VALUES
+(11867,192825,571,1,5886.419,612.6855,651.1896,0.3490652,0,0,0.1736479,0.9848078,180,180);
+UPDATE gameobject SET spawntimesecsmin = 180, spawntimesecsmax = 180 WHERE id IN (192825);
+DELETE FROM `spawn_group` WHERE id = 33708;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (33708, 'Dalaran - Aged Dalaran Limburger 192825', 1, 2, 0, 0);
+DELETE FROM `spawn_group_spawn` WHERE id = 33708;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33708, 50453, -1),(33708, 14556, -1),(33708, 51508, -1),(33708, 11867, -1),(33708, 50583, -1);
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------

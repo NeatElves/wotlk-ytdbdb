@@ -114,7 +114,7 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalo
 (654304, 100, 5, 17, 20450, 1, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'greater wind stone - water - delete item'),
 (654304, 100, 6, 17, 20451, 1, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'greater wind stone - water - delete item');
 
--- wotlk ahune only has one version
+# wotlk ahune only has one version
 UPDATE `creature_template` SET `DifficultyEntry1` = 0 WHERE `entry` IN (25740,25755,25756,25757,25865);
 
 # NPC id=0 not work - start event 29 - crash core
@@ -125,6 +125,18 @@ DELETE FROM `combat_condition` WHERE `Id` = 4523;
 DELETE FROM `combat_condition` WHERE `Id` = 5102;
 DELETE FROM `combat_condition` WHERE `Id` = 5375;
 DELETE FROM `combat_condition` WHERE `Id` = 5376;
+
+# My hack
+# а то только приседают и каст у двоих всего))
+DELETE FROM `creature_addon` WHERE `guid` IN (70741,70774,70775,70776);
+UPDATE `creature_movement` SET `WaitTime` = '10000' WHERE `Id` =70776 AND `Point` =1;
+UPDATE `creature_movement` SET `WaitTime` = '15000' WHERE `Id` =70775 AND `Point` =1;
+UPDATE `creature_movement` SET `WaitTime` = '20000' WHERE `Id` =70741 AND `Point` =1;
+UPDATE `creature_movement` SET `WaitTime` = '25000' WHERE `Id` =70774 AND `Point` =1;
+DELETE FROM `dbscripts_on_creature_movement` WHERE `Id` = 1714614 AND `priority` = 0;
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+(1714614, 5000, 0, 1, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kil\'Sorrow Spellbinder/Cultist - ONESHOT_SPELLCAST');
+
 
 # NPC AQ War
 #INSERT INTO game_event_creature SELECT guid, 123 FROM creature WHERE guid IN (27403,27421,27518,27524,27533,27583,27805,27834,27851);
