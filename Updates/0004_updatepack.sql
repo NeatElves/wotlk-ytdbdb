@@ -18575,4 +18575,220 @@ INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flag
 DELETE FROM `spawn_group_spawn` WHERE id = 33708;
 INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (33708, 50453, -1),(33708, 14556, -1),(33708, 51508, -1),(33708, 11867, -1),(33708, 50583, -1);
 
+UPDATE creature_template SET MinLevel = 80, MaxLevel = 80, UnitFlags = 520 WHERE  entry = 28857;
+DELETE FROM creature_addon WHERE guid IN(SELECT guid FROM creature WHERE id = 28857);
+DELETE FROM creature_template_addon WHERE entry IN (28857);
+INSERT INTO creature_template_addon (entry, mount, stand_state, sheath_state, pvp_flags, emote, moveflags, auras) VALUES (28857,0,0,2,0,0,0,NULL);
+UPDATE `creature` SET `position_x` = '5547.83', `position_y` = '5749.53', `position_z` = '-77.6173', `orientation` = '2.98451', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =95632;
+DELETE FROM dbscripts_on_quest_start WHERE id IN (12592);
+INSERT INTO dbscripts_on_quest_start (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(12592,0,0,0,0,0,0,0,0,29924,0,0,0,0,0,0,0,'say'),
+(12592,0,1,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'emote');
+UPDATE quest_template SET StartScript = 12592 WHERE entry IN (12592);
+DELETE FROM dbscripts_on_spell WHERE id IN (52585);
+DELETE FROM dbscripts_on_spell WHERE id BETWEEN 52725 AND 52731;
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(52585,1,36,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'face Source'),
+(52585,10,0,0,0,0,0,0,6,28983,28984,28985,28986,0,0,0,0,'Cue Drostan Response Set 1'),
+(52585,11,1,5,0,0,0,0,6,0,0,0,0,0,0,0,0,'emote'),
+(52585,12,25,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'RUN ON'),
+(52585,4000,3,0,0,0,0,0,6,0,0,0,0,5547.88,5749.37,-77.6656,0,'move'),
+(52585,6000,18,0,0,0,0,0,6,0,0,0,0,0,0,0,0,'despawn Self'),
+(52725,1,36,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'face Source'),
+(52725,0,0,0,0,0,0,0,2,29080,29081,29082,29083,0,0,0,0,'Cue Drostan Response Set 2'),
+(52725,11,1,5,0,0,0,0,2,0,0,0,0,0,0,0,0,'emote'),
+(52725,12,25,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'RUN ON'),
+(52725,4000,3,0,0,0,0,0,6,0,0,0,0,5547.88,5749.37,-77.6656,0,'move'),
+(52725,6000,18,0,0,0,0,0,6,0,0,0,0,0,0,0,0,'despawn Self'),
+(52726,1,36,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'face Source'),
+(52726,0,0,0,0,0,0,0,6,29084,29091,29092,29093,0,0,0,0,'Cue Drostan Response Set 3'),
+(52726,11,1,5,0,0,0,0,6,0,0,0,0,0,0,0,0,'emote'),
+(52726,12,25,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'RUN ON'),
+(52726,4000,3,0,0,0,0,0,6,0,0,0,0,5547.88,5749.37,-77.6656,0,'move'),
+(52726,6000,18,0,0,0,0,0,6,0,0,0,0,0,0,0,0,'despawn Self'),
+(52727,1,36,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'face Source'),
+(52727,0,0,0,0,0,0,0,6,29096,0,0,0,0,0,0,0,'Cue Drostan Response Set 4'),
+(52727,11,1,5,0,0,0,0,6,0,0,0,0,0,0,0,0,'emote'),
+(52727,4000,3,0,0,0,0,0,6,0,0,0,0,5547.88,5749.37,-77.6656,0,'move'),
+(52727,7000,15,46769,0,0,0,0,6,0,0,0,0,0,0,0,0,'cast 46769'),
+(52728,1,36,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'face Source'),
+(52728,0,0,0,0,0,0,0,6,29097,0,0,0,0,0,0,0,'Cue Drostan Response Set 5'),
+(52728,5000,0,0,0,0,0,0,6,29101,0,0,0,0,0,0,0,'Cue Drostan Response Set 5'),
+(52728,5001,1,5,0,0,0,0,6,0,0,0,0,0,0,0,0,'emote'),
+(52728,5002,25,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'RUN ON'),
+(52728,9000,3,0,0,0,0,0,6,0,0,0,0,5547.88,5749.37,-77.6656,0,'move'),
+(52728,11000,18,0,0,0,0,0,6,0,0,0,0,0,0,0,0,'despawn Self'),
+(52729,1,36,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'face Source'),
+(52729,0,0,0,0,0,0,0,6,29116,29117,29118,29118,0,0,0,0,'Cue Drostan Response Set 6'),
+(52729,11,1,5,0,0,0,0,6,0,0,0,0,0,0,0,0,'emote'),
+(52729,12,25,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'RUN ON'),
+(52729,4000,3,0,0,0,0,0,6,0,0,0,0,5547.88,5749.37,-77.6656,0,'move'),
+(52729,6000,18,0,0,0,0,0,6,0,0,0,0,0,0,0,0,'despawn Self'),
+(52730,1,36,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'face Source'),
+(52730,0,0,0,0,0,0,0,6,29119,29120,29121,28986,0,0,0,0,'Cue Drostan Response Set 7'),
+(52730,11,1,5,0,0,0,0,6,0,0,0,0,0,0,0,0,'emote'),
+(52730,12,25,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'RUN ON'),
+(52730,4000,3,0,0,0,0,0,6,0,0,0,0,5547.88,5749.37,-77.6656,0,'move'),
+(52730,6000,18,0,0,0,0,0,6,0,0,0,0,0,0,0,0,'despawn Self'),
+(52731,1,36,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'face Source'),
+(52731,0,0,0,0,0,0,0,6,29123,29124,29125,29126,0,0,0,0,'Cue Drostan Response Set 8'),
+(52731,11,1,5,0,0,0,0,6,0,0,0,0,0,0,0,0,'emote'),
+(52731,12,25,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'RUN ON'),
+(52731,4000,3,0,0,0,0,0,6,0,0,0,0,5547.88,5749.37,-77.6656,0,'move'),
+(52731,6000,18,0,0,0,0,0,6,0,0,0,0,0,0,0,0,'despawn Self');
+
+UPDATE `creature` SET `position_x` = '5545.45', `position_y` = '5767.53', `position_z` = '-77.8042', `orientation` = '5.39307', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =95623;
+UPDATE creature SET MovementType = 0, spawntimesecsmin = 10, spawntimesecsmax = 10 WHERE id = 28566;
+UPDATE creature_template SET MovementType = 2 WHERE entry = 28566;
+DELETE FROM creature_movement_template WHERE entry = 28566;
+INSERT INTO creature_movement_template (Entry, Point, PositionX, PositionY, PositionZ, Orientation, WaitTime, ScriptId) VALUES
+(28566,1,5546.436,5769.873,-77.94647,100,0,0),
+(28566,2,5548.857,5771.478,-77.94647,100,0,0),
+(28566,3,5546.5,5769.79,-78.0501,100,0,0),
+(28566,4,5548.84,5766.77,-78.0235,100,0,0),
+(28566,5,5554.43,5765.72,-78.0143,100,0,0),
+(28566,6,5556.36,5770.36,-78.0109,100,0,0),
+(28566,7,5556.13,5773.06,-78.0788,100,0,0),
+(28566,8,5554.97,5773.9,-77.8565,100,0,0),
+(28566,9,5552.357,5773.401,-77.82147,100,100,1);
+
+DELETE FROM dbscripts_on_spell WHERE id = 51962;
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(51962,1,34,3750,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'condition check'),
+(51962,10,0,0,0,0,0,0,0x04,28558,0,0,0,0,0,0,0,'Source Say');
+DELETE FROM `conditions` WHERE `condition_entry` BETWEEN 3747 AND 3750;
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES
+(3747,37,28047,7,0,0,0,''),(3748,37,27986,7,0,0,0,''),(3749,37,28568,7,0,0,0,''),(3750,-2,3749,3748,3474,0,1,'');
+UPDATE `creature` SET `position_x` = '5562.35', `position_y` = '5737.39', `position_z` = '-74.5769', `orientation` = '0.820305', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =95640;
+UPDATE `creature` SET `position_x` = '5584.49', `position_y` = '5748.84', `position_z` = '-71.9047', `orientation` = '3.24631', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =95613;
+UPDATE `creature` SET `position_x` = '5483.16', `position_y` = '4730.05', `position_z` = '-194.283', `orientation` = '0.977384', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =97252;
+DELETE FROM dbscripts_on_relay WHERE id BETWEEN 20763 AND 20765;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20763,1,21,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: Source Active'),
+(20763,2000,0,0,0,0,0,0,6,28549,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: Say'),
+(20763,2001,1,273,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: emote'),
+(20763,4000,42,0,0,0,0,0,6,2705,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: temp equip'),
+(20763,5000,1,92,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: emote'),
+(20763,7000,0,0,0,0,0,0,6,28550,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: Say'),
+(20763,7001,1,5,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: emote'),
+(20763,11000,0,0,0,0,0,0,6,28551,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: Say'),
+(20763,11001,1,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: emote'),
+(20763,12000,42,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: temp equip'),
+(20763,12002,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: kill credit'),
+(20763,13000,54,2,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: set ranged'),
+(20763,13001,21,0,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hemet Nesingwary 27986 EAI: Source unactive'),
+(20764,1,21,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: Source Active'),
+(20764,2000,0,0,0,0,0,0,6,28554,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: Say'),
+(20764,2001,1,273,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: emote'),
+(20764,4000,42,0,0,0,0,0,6,2705,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: temp equip'),
+(20764,5000,1,92,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: emote'),
+(20764,7000,0,0,0,0,0,0,6,28556,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: Say'),
+(20764,7001,1,5,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: emote'),
+(20764,11000,15,42963,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: Self Cast'),
+(20764,13000,0,0,0,0,0,0,6,28557,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: Say'),
+(20764,13001,1,5,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: emote'),
+(20764,16000,1,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: emote'),
+(20764,17000,42,0,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: temp equip'),
+(20764,17001,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: kill credit'),
+(20764,18000,21,0,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Hadrius Harlowe 28047 EAI: Source unactive'),
+(20765,1,21,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Tamara Wobblesprocket 28568 EAI: Source Active'),
+(20765,2000,0,0,0,0,0,0,6,28546,0,0,0,0,0,0,0,'Part of Tamara Wobblesprocket 28568 EAI: Say'),
+(20765,2001,1,273,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Tamara Wobblesprocket 28568 EAI: emote'),
+(20765,4000,42,0,0,0,0,0,6,2705,0,0,0,0,0,0,0,'Part of Tamara Wobblesprocket 28568 EAI: temp equip'),
+(20765,5000,1,92,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Tamara Wobblesprocket 28568 EAI: emote'),
+(20765,7000,42,0,0,0,0,0,6,31824,0,0,0,0,0,0,0,'Part of Tamara Wobblesprocket 28568 EAI: temp equip'),
+(20765,7001,0,0,0,0,0,0,6,28547,0,0,0,0,0,0,0,'Part of Tamara Wobblesprocket 28568 EAI: Say'),
+(20765,8000,1,5,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Tamara Wobblesprocket 28568 EAI: emote'),
+(20765,11000,0,0,0,0,0,0,6,28548,0,0,0,0,0,0,0,'Part of Tamara Wobblesprocket 28568 EAI: Say'),
+(20765,11001,1,1,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Tamara Wobblesprocket 28568 EAI: emote'),
+(20765,12001,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Tamara Wobblesprocket 28568 EAI: kill credit'),
+(20765,12000,21,0,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Tamara Wobblesprocket 28568 EAI: Source unactive');
+
+DELETE FROM creature_addon WHERE guid IN(SELECT guid FROM creature WHERE id IN (28279,28230));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28279,28230));
+DELETE FROM `creature` WHERE `id` = 28279;
+DELETE FROM `creature` WHERE `id` = 28230;
+DELETE FROM dbscripts_on_event WHERE id = 18481;
+INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(18481,1,31,28256,50,0,0,0,0x08,0,0,0,0,0,0,0,0,'q check - terminate if alive'),
+(18481,10,10,28256,35000,0,0,0,0x08,0,0,0,0,5212.603,5787.078,-70.56953,2.513274,'summon: 28256'),
+(18481,11,10,28279,20000,0,0,0,0x08,1,0,0,0,5242.078,5740.667,-59.98927,4.18879,'summon: 28279'),
+(18481,12,10,28279,20000,0,0,0,0x08,1,0,0,0,5232.818,5750.225,-63.93412,3.961897,'summon: 28279'),
+(18481,13,10,28279,20000,0,0,0,0x08,1,0,0,0,5249.261,5765.971,-59.90696,6.178465,'summon: 28279'),
+(18481,14,10,28279,20000,0,0,0,0x08,1,0,0,0,5230.022,5771.104,-56.96051,1.710423,'summon: 28279'),
+(18481,15,10,28279,20000,0,0,0,0x08,1,0,0,0,5240.936,5786.487,-63.58977,1.22173,'summon: 28279'),
+(18481,16,10,28279,20000,0,0,0,0x08,1,0,0,0,5206.194,5754.944,-71.6155,2.879793,'summon: 28279'),
+(18481,17,10,28279,20000,0,0,0,0x08,1,0,0,0,5221.603,5749.741,-63.75953,3.543018,'summon: 28279'),
+(18481,18,10,28279,20000,0,0,0,0x08,1,0,0,0,5232.51,5731.526,-68.7676,4.764749,'summon: 28279'),
+(18481,19,10,28279,20000,0,0,0,0x08,1,0,0,0,5214.361,5743.659,-73.36909,4.29351,'summon: 28279'),
+(18481,20,10,28279,20000,0,0,0,0x08,1,0,0,0,5206.439,5767.634,-68.19739,3.822271,'summon: 28279'),
+(18481,21,10,28279,20000,0,0,0,0x08,1,0,0,0,5197.423,5776.377,-70.25041,2.094395,'summon: 28279'),
+(18481,22,10,28279,20000,0,0,0,0x08,1,0,0,0,5199.837,5789.268,-62.45123,2.775074,'summon: 28279'),
+(18481,23,10,28279,20000,0,0,0,0x08,1,0,0,0,5198.979,5768.557,-70.70884,0.436332,'summon: 28279'),
+(18481,24,10,28279,20000,0,0,0,0x08,1,0,0,0,5204.702,5791.856,-68.11948,1.623156,'summon: 28279'),
+(18481,25,10,28279,20000,0,0,0,0x08,1,0,0,0,5259.322,5767.997,-63.7346,2.75762,'summon: 28279'),
+(18481,26,10,28279,20000,0,0,0,0x08,1,0,0,0,5254.312,5781.61,-67.96659,3.420845,'summon: 28279'),
+(18481,27,10,28279,20000,0,0,0,0x08,1,0,0,0,5242.865,5777.236,-65.67616,2.426008,'summon: 28279'),
+(18481,28,10,28279,20000,0,0,0,0x08,1,0,0,0,5232.002,5790.667,-68.25787,1.518436,'summon: 28279'),
+(18481,29,10,28279,20000,0,0,0,0x08,1,0,0,0,5223.679,5794.549,-64.10463,5.951573,'summon: 28279'),
+(18481,30,10,28279,20000,0,0,0,0x08,1,0,0,0,5207.38,5800.154,-67.0273,3.822271,'summon: 28279'),
+(18481,31,10,28279,20000,0,0,0,0x08,1,0,0,0,5215.567,5799.322,-68.99142,3.193953,'summon: 28279'),
+(18481,32,10,28230,30000,0,0,0,0x08,0,0,0,0,5215.021,5777.659,-71.13335,3.752458,'summon: 28230'),
+(18481,33,10,28230,30000,0,0,0,0x08,0,0,0,0,5214.409,5784.443,-62.01576,0.5934119,'summon: 28230'),
+(18481,34,10,28230,30000,0,0,0,0x08,0,0,0,0,5208.637,5778.08,-63.04353,2.565634,'summon: 28230'),
+(18481,35,10,28230,30000,0,0,0,0x08,0,0,0,0,5219.113,5779.453,-71.0571,4.520403,'summon: 28230'),
+(18481,36,10,28230,30000,0,0,0,0x08,0,0,0,0,5225.277,5777.674,-67.50936,5.061455,'summon: 28230'),
+(18481,37,53,0,0,0,0,0,0,32538,1,0,0,0,0,0,0,'Set worldstate variable to 1'),
+(18481,28000,8,28256,0,0,0,0,0,0,0,0,0,0,0,0,0,'Q Credit'),
+(18481,30000,53,0,0,0,0,0,0,32538,0,0,0,0,0,0,0,'Set worldstate variable to 0');
+UPDATE creature_template SET UnitFlags = 33554432, MovementType = 0 WHERE entry IN (28256);
+UPDATE creature_template SET InhabitType = 4, MovementType = 1 WHERE entry IN (28279);
+UPDATE creature_template SET InhabitType = 4, MovementType = 0 WHERE entry IN (28230);
+DELETE FROM dbscripts_on_relay WHERE id BETWEEN 20766 AND 20771;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20766,4000,0,0,0,0,0,0,2,27697,0,0,0,0,0,0,0,'Part of Voice of Nozronn 28256 EAI: Say'),
+(20766,11000,0,0,0,0,0,0,2,27698,0,0,0,0,0,0,0,'Part of Voice of Nozronn 28256 EAI: Say'),
+(20766,17000,0,0,0,0,0,0,2,27699,0,0,0,0,0,0,0,'Part of Voice of Nozronn 28256 EAI: Say'),
+(20766,24000,0,0,0,0,0,0,2,27701,0,0,0,0,0,0,0,'Part of Voice of Nozronn 28256 EAI: Say'),
+(20766,29000,0,0,0,0,0,0,2,27702,0,0,0,0,0,0,0,'Part of Voice of Nozronn 28256 EAI: Say'),
+(20767,1,15,33343,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Sholazar Witch Light 28279 EAI: Self Cast'),
+(20768,1,15,33344,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Sholazar Witch Light 28279 EAI: Self Cast'),
+(20769,1,15,35709,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Sholazar Witch Light 28279 EAI: Self Cast'),
+(20770,1,15,32566,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Sholazar Witch Light 28279 EAI: Self Cast'),
+(20771,1,37,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Sholazar Witch Light 28279 EAI: move towards summoner');
+DELETE FROM dbscript_random_templates WHERE id = 20311;
+INSERT INTO dbscript_random_templates (id, `type`, target_id, chance, comments) VALUES
+(20311,1,20767,0,'Sholazar Witch Light 28279 - Random Script 1'),
+(20311,1,20768,0,'Sholazar Witch Light 28279 - Random Script 2'),
+(20311,1,20769,0,'Sholazar Witch Light 28279 - Random Script 3'),
+(20311,1,20770,0,'Sholazar Witch Light 28279 - Random Script 4');
+UPDATE creature SET position_x = 5212.669922, position_y = 5831.364746, position_z = -71.507301 WHERE guid = 26098;
+DELETE FROM game_event_gameobject WHERE guid = 11874;
+DELETE FROM gameobject_battleground WHERE guid = 11874;
+DELETE FROM gameobject WHERE guid = 11874;
+INSERT INTO gameobject (guid, id, map, spawnMask, position_x, position_y, position_z, orientation, rotation0, rotation1, rotation2, rotation3, spawntimesecsmin, spawntimesecsmax) VALUES
+(11874,188443,571,1,5210.079,5790.797,-71.42526,0.71558490,0,0,0.3502073,0.9366722,1,1);
+DELETE FROM `spawn_group` WHERE id = 32538;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32538, 'Sholazar Basin - o.188443 spawn with q.12544', 1, 0, 20563, 0x08);
+DELETE FROM `spawn_group_spawn` WHERE id = 32538;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32538, 11874, -1);
+DELETE FROM conditions WHERE condition_entry IN (20563);
+INSERT INTO conditions (condition_entry, `type`, value1, value2, value3, flags, comments) VALUES (20563, 42, 32538, 1, 1, 0, 'Sholazar Basin - o.188443 spawn with q.12544');
+DELETE FROM worldstate_name WHERE Id=32538;
+INSERT INTO worldstate_name(Id, Name) VALUES (32538,'Sholazar Basin - o.188443 spawn with q.12544');
+
+UPDATE `creature` SET `position_x` = '5355.12', `position_y` = '5814.42', `position_z` = '-74.0425', `orientation` = '0.418879', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =117171;
+DELETE FROM dbscripts_on_event WHERE id = 18503;
+INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(18503,1,10,28317,300000,0,0,0,0x08,0,0,0,0,5421.839,4867.183,-199.7485,1.518436,'summon: 28317');
+DELETE FROM dbscripts_on_relay WHERE id = 20772;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20772,1,25,1,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Bushwhacker 28317 EAI: move towards summoner'),
+(20772,100,37,0,0,0,0,0,2,0,0,0,0,0,0,0,0,'Part of Bushwhacker 28317 EAI: move towards summoner'),
+(20772,10000,0,0,0,0,0,0,0,27731,0,0,0,0,0,0,0,'Part of Bushwhacker 28317 EAI: emote'),
+(20772,10001,1,50,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Bushwhacker 28317 EAI: emote'),
+(20772,10010,14,51319,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Bushwhacker 28317 EAI: remove aura from player'),
+(20772,11000,48,256,0,0,0,0,6,0,0,0,0,0,0,0,0,'Part of Bushwhacker 28317 EAI: remove unitflags');
+UPDATE creature_template SET UnitFlags = 33024, MovementType = 0 WHERE entry IN (28317);
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------

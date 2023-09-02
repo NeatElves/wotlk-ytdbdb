@@ -5648,3 +5648,6 @@ UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=11232,EmoteId1=0 WHERE Id
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=11233,EmoteId1=0 WHERE Id IN(18376);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=11234,EmoteId1=0 WHERE Id IN(20022);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=11235,EmoteId1=0 WHERE Id IN(20028);
+
+-- 4899_q.12569.sql
+UPDATE broadcast_text SET ChatTypeID = 2 WHERE id IN (27731);
