@@ -5651,3 +5651,7 @@ UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=11235,EmoteId1=0 WHERE Id
 
 -- 4899_q.12569.sql
 UPDATE broadcast_text SET ChatTypeID = 2 WHERE id IN (27731);
+
+-- 0186_truth_unorbed.sql TBC
+-- Text should be emoted
+UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='19958');
