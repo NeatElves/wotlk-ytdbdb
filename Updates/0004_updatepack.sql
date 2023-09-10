@@ -19280,9 +19280,10 @@ INSERT INTO creature_movement_template (Entry, PathId, Point, PositionX, Positio
 (21981,0,145,3177.92,5539.96,143.12,1.50541,0,0),
 (21981,0,146,3179.65,5555.1,141.729,1.50541,0,0);
 
+UPDATE `creature_template` SET `SpeedWalk` = 4, `SpeedRun` = 2.57143 WHERE `entry` = 19849;
 DELETE FROM creature_template_spells WHERE entry = 19849;
 INSERT INTO creature_template_spells (entry, setId, spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8, spell9, spell10) VALUES
-(19849,0,0,0,34618,34620,0,0,0,0,0,0);
+(19849,0,0,0,34618,34620,34619,0,0,0,0,0);
 
 UPDATE `creature_template` SET `Faction` = 90 WHERE `Entry` =23353;
 
@@ -19771,7 +19772,7 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3
 UPDATE `quest_template` SET `PrevQuestId` = '583' WHERE `entry` =338;
 UPDATE `quest_template` SET `PrevQuestId` = '-338' WHERE `entry` IN (339,340,341,342);
 
-UPDATE `creature_template` SET `InhabitType` = 1, `Detection` = 25, `ExtraFlags` = `ExtraFlags`&~1048576 WHERE `entry` = 18470;
+UPDATE `creature_template` SET `InhabitType` = 1, `Detection` = 25, `ExtraFlags` = `ExtraFlags`|1048576 WHERE `entry` = 18470;
 REPLACE INTO `creature_spawn_data` (`guid`, `id`) VALUES (74260, 3),(74262, 3);
 UPDATE `creature_template` SET `InhabitType` = 1, `MechanicImmuneMask` = 9123442, `ExtraFlags` = `ExtraFlags`|1048576 WHERE `entry` = 21515;
 UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|1048576 WHERE `entry` = 22100;
@@ -19953,5 +19954,54 @@ INSERT INTO `creature_movement` (`id`, `point`, `PositionX`, `PositionY`, `Posit
 (74262, 17, -2822.779, 4780.681, 11.92027, 100, 0, 0),
 (71683, 01, -3805.94, 4799.89, -21.0945, 100, 0, 0),
 (71683, 02, -3726.62, 4820.02, -19.6149, 100, 0, 0);
+
+DELETE FROM `creature_spell_targeting` WHERE `Id` IN (206,207) AND `Param1` = 25;
+INSERT INTO `creature_spell_targeting` (`Id`, `Type`, `Param1`, `Param2`, `Param3`, `UnitCondition`, `Comments`) VALUES
+(206, 2, 25, 1, 1, -1, 'Support - Missing 25% including self'),
+(207, 2, 25, 1, 0, -1, 'Support - Missing 25% excluding self');
+
+UPDATE `gossip_menu_option` SET `option_text` = 'Show me your wares, Wilhelm.' WHERE `menu_id` =7219 AND `id` =0;
+UPDATE `gossip_menu_option` SET `option_text` = 'Ysera is my answer.' WHERE `menu_id` =4763 AND `id` =0;
+UPDATE `gossip_menu_option` SET `option_text` = 'Neltharion is  my answer.' WHERE `menu_id` =4763 AND `id` =1;
+DELETE FROM `gossip_menu_option` WHERE `menu_id` = 4763 AND `id` IN (2,3,4);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(4763, 2, 0, 'Alexstrasza is my answer.', 8384, 1, 1, -1, 0, 476300, 0, 0, NULL, 0, 1725),
+(4763, 3, 0, 'Malygos is my answer.', 8385, 1, 1, -1, 0, 476300, 0, 0, NULL, 0, 1725);
+DELETE FROM `dbscripts_on_gossip` WHERE id IN (476300,476301);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(476301, 0, 0, 7, 6627, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Correct Answer - Complete quest Test of Lore'),
+(476300, 6000, 0, 29, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Wrong Answer - Braug Dimspirit Add Gossip Flag'),
+(476300, 3000, 0, 15, 6766, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Wrong Answer - Braug Dimspirit Cast Test of Lore'),
+(476300, 1000, 1, 1, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Wrong Answer - Braug Dimspirit Emote Yell'),
+(476300, 1000, 0, 0, 0, 0, 0, 0, 8393, 0, 0, 0, 0, 0, 0, 0, 0, 'Wrong Answer - Braug Dimspirit Say Text 2'),
+(476300, 0, 0, 29, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Wrong Answer - Braug Dimspirit Remove Gossip Flag');
+DELETE FROM `dbscripts_on_gossip` WHERE id IN (476400,476401);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(476401, 0, 2, 7, 6628, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Correct Answer - Complete quest Test of Lore'),
+(476401, 0, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Correct Answer - Parqual Fintallas Emote Bow'),
+(476401, 0, 0, 0, 0, 0, 0, 0, 1608, 0, 0, 0, 0, 0, 0, 0, 0, 'Correct Answer - Parqual Fintallas Say Text 1'),
+(476400, 0, 1, 15, 6767, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Wrong Answer - Parqual Fintallas Cast Mark of Shame'),
+(476400, 0, 0, 0, 0, 0, 0, 0, 8394, 0, 0, 0, 0, 0, 0, 0, 0, 'Wrong Answer - Parqual Fintallas Say Text 1');
+DELETE FROM `gameobject` WHERE `guid` = 707;
+DELETE FROM `dbscripts_on_gossip` WHERE id IN (16100);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(16100, 14000, 0, 29, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Estelle Gendry - Add Gossip Flag'),
+(16100, 13000, 0, 15, 9949, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Estelle Gendry - Cast Thieves Tool Rack Conjure'),
+(16100, 11000, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 1389.83, 122.755, -62.3697, 6.24828, 0, 'Estelle Gendry - Move to Home Position'),
+(16100, 9000, 0, 0, 0, 0, 0, 0, 2623, 0, 0, 0, 0, 0, 0, 0, 0, 'Estelle Gendry - Say Text 2'),
+(16100, 8000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Estelle Gendry - Stop Emoting'),
+(16100, 6000, 0, 1, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Estelle Gendry - Emote Crafting'),
+(16100, 3000, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 1381.95, 124.56, -62.363, 2.6, 0, 'Estelle Gendry - Move to Crates'),
+(16100, 1000, 0, 0, 0, 0, 0, 0, 2622, 0, 0, 0, 0, 0, 0, 0, 0, 'Estelle Gendry - Say Text 1'),
+(16100, 0, 0, 29, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Estelle Gendry - Remove Gossip Flag');
+
+UPDATE `creature_template` SET `SpeedWalk` = 1 WHERE `SpeedWalk`=0;
+UPDATE `creature_template` SET `SpeedRun` = 1.14286 WHERE `SpeedRun`=0;
+UPDATE `creature_template` SET `ResistanceHoly`=60, `ResistanceFire`=60, `ResistanceNature`=60, `ResistanceFrost`=60, `ResistanceShadow`=60, `ResistanceArcane`=60 WHERE `entry`=12916;
+UPDATE `creature_template` SET `ResistanceHoly`=225, `ResistanceFire`=225, `ResistanceNature`=225, `ResistanceFrost`=225, `ResistanceShadow`=225, `ResistanceArcane`=225 WHERE `entry`=12917;
+UPDATE `creature_template` SET `ResistanceFire`=100, `ResistanceArcane`=100 WHERE `entry`=14162;
+UPDATE `creature_template` SET `MeleeBaseAttackTime` = 2000 WHERE `entry` = 10182;
+UPDATE `creature_template` SET `ArmorMultiplier`=0 WHERE `entry`=17685;
+
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
