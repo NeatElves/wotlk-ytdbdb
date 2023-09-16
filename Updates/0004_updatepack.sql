@@ -18812,21 +18812,21 @@ DELETE FROM `dbscripts_on_quest_end` WHERE id = '10176';
 INSERT INTO dbscripts_on_quest_end(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
 (10176,0,0,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Set Active'),
 (10176,0,1,29,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Remove NPCFlags'),
-(10176,0,2,0,0,0,0,0,0,0,17524,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Say Text'), 
-(10176,3000,0,15,30416,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Cast Visual'), 
-(10176,4000,0,10,19916,13000,0,0,0,0,0,0,0,0,0,2240.2253, 2234.1865, 136.19032, 0.71558,0,0,'Archmage Vargoth - Spawn Archmage\'s Ritual Crystal'), 
-(10176,4000,1,10,19916,13000,0,0,0,0,0,0,0,0,0,2248.5305, 2239.8777, 136.5948, 5.602,0,0,'Archmage Vargoth - Spawn Archmage\'s Ritual Crystal'), 
-(10176,4000,2,10,19916,13000,0,0,0,0,0,0,0,0,0,2236.6987, 2224.657, 136.41919, 5.6374,0,0,'Archmage Vargoth - Spawn Archmage\'s Ritual Crystal'), 
+(10176,0,2,0,0,0,0,0,0,0,17524,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Say Text'),
+(10176,3000,0,15,30416,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Cast Visual'),
+(10176,4000,0,10,19916,13000,0,0,0,0,0,0,0,0,0,2240.2253, 2234.1865, 136.19032, 0.71558,0,0,'Archmage Vargoth - Spawn Archmage\'s Ritual Crystal'),
+(10176,4000,1,10,19916,13000,0,0,0,0,0,0,0,0,0,2248.5305, 2239.8777, 136.5948, 5.602,0,0,'Archmage Vargoth - Spawn Archmage\'s Ritual Crystal'),
+(10176,4000,2,10,19916,13000,0,0,0,0,0,0,0,0,0,2236.6987, 2224.657, 136.41919, 5.6374,0,0,'Archmage Vargoth - Spawn Archmage\'s Ritual Crystal'),
 (10176,4000,3,10,19924,13000,0,0,0,0,0,0,0,0,0,2248.510986328125, 2239.90576171875, 136.592132568359375, 5.044001579284667968,0,0,'Archmage Vargoth - Invis Ritual Crystal'),
 (10176,4000,4,10,19924,13000,0,0,0,0,0,0,0,0,0,2236.65966796875, 2224.678955078125, 136.4153594970703125, 5.218534469604492187,0,0,'Archmage Vargoth - Invis Ritual Crystal'),
-(10176,4000,5,10,19924,13000,0,0,0,0,0,0,0,0,0,2240.181396484375, 2234.1982421875, 136.186431884765625, 0.104719758033752441,0,0,'Archmage Vargoth - Invis Ritual Crystal'), 
+(10176,4000,5,10,19924,13000,0,0,0,0,0,0,0,0,0,2240.181396484375, 2234.1982421875, 136.186431884765625, 0.104719758033752441,0,0,'Archmage Vargoth - Invis Ritual Crystal'),
 (10176,8000,0,15,34679,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Cast Visual'),
-(10176,16000,0,15,34725,0,0,19924,10,519,0,0,0,0,0,0,0,0,0,0,0,'Invis Ritual Crystal - Cast Shadow Nova'),  
+(10176,16000,0,15,34725,0,0,19924,10,519,0,0,0,0,0,0,0,0,0,0,0,'Invis Ritual Crystal - Cast Shadow Nova'),
 (10176,18000,0,15,13360,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Cast Visual'),
-(10176,18000,0,1,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Emote'), 
-(10176,21000,0,0,0,0,0,0,0,0,17526,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Say Text'), 
+(10176,18000,0,1,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Emote'),
+(10176,21000,0,0,0,0,0,0,0,0,17526,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Say Text'),
 (10176,25000,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Emote'),
-(10176,27000,0,0,0,0,0,0,0,0,17535,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Say Text'), 
+(10176,27000,0,0,0,0,0,0,0,0,17535,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Say Text'),
 (10176,27000,1,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Remove Active'),
 (10176,27000,2,29,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Archmage Vargoth - Add NPCFlags');
 UPDATE quest_template SET CompleteScript= 10176 WHERE entry= 10176;
@@ -18861,12 +18861,12 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `PositionX
 (22235,1,2,2976.3555, 5476.4536, 143.14305,100,100,2223501);
 DELETE FROM `dbscripts_on_creature_movement` WHERE id IN (2223201, 2223501);
 INSERT INTO dbscripts_on_creature_movement(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
-(2223201,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Grishna Arakkoa - Change movement'), 
+(2223201,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Grishna Arakkoa - Change movement'),
 (2223201,0,1,1,393,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Grishna Arakkoa - Emote OneShotCreatureSpecial'),
 (2223201,0,1,36,0,0,0,22233,10,2,0,0,0,0,0,0,0,0,0,0,0,'Grishna Arakkoa - Unsuspecting Leafbeard - face Grishna'),
 (2223201,0,1,36,0,0,0,22233,10,0,0,0,0,0,0,0,0,0,0,0,0,'Grishna Arakkoa - Face Unsuspecting Leafbeard'),
 (2223201,2000,0,15,37679,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,'Grishna Arakkoa - Cast Arakkoa Channeling'),
-(2223501,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Evil Koi-Koi - Change movement'), 
+(2223501,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Evil Koi-Koi - Change movement'),
 (2223501,2000,0,36,0,0,0,22232,10,0,0,0,0,0,0,0,0,0,0,0,0,'Evil Koi-Koi - Face Grishna Arakkoa');
 UPDATE `creature` SET `position_z` = '143.841', `orientation` = '1.22173', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =60892;
 DELETE FROM gameobject WHERE guid = @OGUID;
@@ -20003,5 +20003,870 @@ UPDATE `creature_template` SET `ResistanceFire`=100, `ResistanceArcane`=100 WHER
 UPDATE `creature_template` SET `MeleeBaseAttackTime` = 2000 WHERE `entry` = 10182;
 UPDATE `creature_template` SET `ArmorMultiplier`=0 WHERE `entry`=17685;
 
+INSERT INTO `questgiver_greeting` (`Entry`, `Type`, `Text`, `EmoteId`, `EmoteDelay`) VALUES (6142, 0, 'The craft of the night elves ranges beyond the woods and its denizens.  We know much of the earth below, and of the metals within it.', 1, 0);
+INSERT INTO `questgiver_greeting` (`Entry`, `Type`, `Text`, `EmoteId`, `EmoteDelay`) VALUES (6166, 0, 'You think you have guts?  Well I have something for you if you do...', 1, 0);
+INSERT INTO `questgiver_greeting` (`Entry`, `Type`, `Text`, `EmoteId`, `EmoteDelay`) VALUES (16787, 0, 'Greetings, $n. If you bring me necrotic stones from the undead invaders, I can give you access to the stores of the Argent Dawn.', 66, 0);
+
+UPDATE `game_event_creature` SET `event` = '99' WHERE `guid` =150664 AND `event` =17;
+UPDATE `creature` SET `id` = '16787', `position_x` = '2264.15', `position_y` = '-5311.22', `position_z` = '81.904', `orientation` = '2.00085' WHERE `guid` =150664;
+
+UPDATE creature_model_info SET bounding_radius=2,combat_reach=4 WHERE modelid=19438;
+
+DELETE FROM creature_addon WHERE guid IN (97159,97158,97160);
+DELETE FROM creature WHERE guid IN (97159,97158,97160);
+INSERT INTO creature (guid, id, map, spawnMask, phaseMask, position_x, position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) VALUES
+(97159,28083,571,1,1,4775.083,4684.838,-68.16202,0.8925187,300,300,0,0),
+(97158,28083,571,1,1,4856.273,4394.056,-61.92804,0.5759587,300,300,0,0),
+(97160,28083,571,1,1,4820.1,4760.937,-75.98487,3.298672,300,300,0,0);
+UPDATE creature SET spawntimesecsmin = 300, spawntimesecsmax = 300, spawndist = 0, MovementType = 0 WHERE guid = 111448;
+DELETE FROM `pool_template` WHERE `entry` = 140;
+DELETE FROM `pool_creature` WHERE `pool_entry` = 140;
+DELETE FROM `spawn_group` WHERE id = 32571;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32571, 'Sholazar Basin - Serfex the Reaver 28083', 0, 1, 0, 0);
+DELETE FROM `spawn_group_spawn` WHERE id = 32571;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32571, 111448, -1), (32571, 97159, -1), (32571, 97158, -1);
+DELETE FROM creature_addon WHERE guid IN(SELECT guid FROM creature WHERE id = 28085);
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28085));
+DELETE FROM `creature` WHERE `id` IN (28085);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(97135, 28085, 571, 1, 1, 5002.64, 4325.29, -48.9155, 0, 300, 300, 0, 0),
+(97136, 28085, 571, 1, 1, 5002.64, 4325.29, -48.9155, 0, 300, 300, 0, 0),
+(97137, 28085, 571, 1, 1, 5002.64, 4325.29, -48.9155, 0, 300, 300, 0, 0),
+(97138, 28085, 571, 1, 1, 5102.68, 4198.22, -81.2723, 0, 300, 300, 0, 0),
+(97139, 28085, 571, 1, 1, 5102.68, 4198.22, -81.2723, 0, 300, 300, 0, 0),
+(97140, 28085, 571, 1, 1, 5102.68, 4198.22, -81.2723, 0, 300, 300, 0, 0),
+(97141, 28085, 571, 1, 1, 4998.41, 4288.05, -40.3793, 0, 300, 300, 0, 0),
+(97142, 28085, 571, 1, 1, 4998.41, 4288.05, -40.3793, 0, 300, 300, 0, 0),
+(97143, 28085, 571, 1, 1, 4998.41, 4288.05, -40.3793, 0, 300, 300, 0, 0),
+(97144, 28085, 571, 1, 1, 4980.45, 4074.75, -4.0274, 0, 300, 300, 0, 0),
+(97145, 28085, 571, 1, 1, 4980.45, 4074.75, -4.0274, 0, 300, 300, 0, 0),
+(97146, 28085, 571, 1, 1, 4980.45, 4074.75, -4.0274, 0, 300, 300, 0, 0),
+(97147, 28085, 571, 1, 1, 5010.89, 4242.56, -24.3804, 0, 300, 300, 0, 0),
+(97148, 28085, 571, 1, 1, 5028.78, 4680.98, 1.86177, 0, 300, 300, 0, 0),
+(97149, 28085, 571, 1, 1, 5028.78, 4680.98, 1.86177, 0, 300, 300, 0, 0),
+(97150, 28085, 571, 1, 1, 5028.78, 4680.98, 1.86177, 0, 300, 300, 0, 0),
+(97151, 28085, 571, 1, 1, 4756.11, 4818.28, -67.3835, 4.80972, 300, 300, 0, 0),
+(97152, 28085, 571, 1, 1, 4973.93, 4446.58, -129.382, 1.91737, 300, 300, 0, 0),
+(97153, 28085, 571, 1, 1, 4973.93, 4446.58, -129.382, 1.89705, 300, 300, 0, 0),
+(97154, 28085, 571, 1, 1, 4740.17, 4246.34, -16.0232, 4.44944, 300, 300, 0, 0),
+(97155, 28085, 571, 1, 1, 4756.11, 4818.28, -67.3835, 4.80978, 300, 300, 0, 0),
+(97156, 28085, 571, 1, 1, 5110.5, 4310.77, -41.3733, 0.595416, 300, 300, 0, 0),
+(97157, 28085, 571, 1, 1, 5110.5, 4310.77, -41.3733, 2.13714, 300, 300, 0, 0),
+(42997, 28085, 571, 1, 1, 5110.5, 4310.77, -41.3733, 2.1254, 300, 300, 0, 0),
+(43000, 28085, 571, 1, 1, 4911.27, 4206.23, -24.6051, 3.54297, 300, 300, 0, 0),
+(43001, 28085, 571, 1, 1, 4911.27, 4206.23, -24.6051, 3.1769, 300, 300, 0, 0),
+(43003, 28085, 571, 1, 1, 4911.27, 4206.23, -24.6051, 3.16834, 300, 300, 0, 0),
+(43007, 28085, 571, 1, 1, 5020.78, 4319.44, -52.851, 1.24509, 300, 300, 0, 0),
+(43009, 28085, 571, 1, 1, 5020.78, 4319.44, -52.851, 1.27223, 300, 300, 0, 0),
+(43010, 28085, 571, 1, 1, 5020.78, 4319.44, -52.851, 1.27222, 300, 300, 0, 0),
+(43011, 28085, 571, 1, 1, 5034.85, 5045.79, -111.265, 4.32612, 300, 300, 0, 0),
+(43015, 28085, 571, 1, 1, 5034.85, 5045.79, -111.265, 4.41214, 300, 300, 0, 0),
+(43017, 28085, 571, 1, 1, 5034.85, 5045.79, -111.265, 4.41893, 300, 300, 0, 0),
+(43022, 28085, 571, 1, 1, 5010.89, 4242.56, -24.3804, 3.03842, 300, 300, 0, 0),
+(43025, 28085, 571, 1, 1, 5010.89, 4242.56, -24.3804, 3.09178, 300, 300, 0, 0),
+(43038, 28085, 571, 1, 1, 4916.62, 4681.1, -32.7159, 1.04011, 300, 300, 0, 0),
+(43040, 28085, 571, 1, 1, 4916.62, 4681.1, -32.7159, 1.02595, 300, 300, 0, 0),
+(43043, 28085, 571, 1, 1, 4916.62, 4681.1, -32.7159, 0.987751, 300, 300, 0, 0),
+(43046, 28085, 571, 1, 1, 5072.83, 4250.31, -49.972, 1.70895, 300, 300, 0, 0),
+(43059, 28085, 571, 1, 1, 5072.83, 4250.31, -49.972, 2.27607, 300, 300, 0, 0),
+(43068, 28085, 571, 1, 1, 5072.83, 4250.31, -49.972, 2.2729, 300, 300, 0, 0),
+(43071, 28085, 571, 1, 1, 4941.6, 4812.83, -91.4815, 0.550343, 300, 300, 0, 0),
+(43078, 28085, 571, 1, 1, 4941.6, 4812.83, -91.4815, 0.547884, 300, 300, 0, 0),
+(43092, 28085, 571, 1, 1, 4941.6, 4812.83, -91.4815, 0.549823, 300, 300, 0, 0),
+(43099, 28085, 571, 1, 1, 5079.61, 4277.89, -44.3879, 3.98868, 300, 300, 0, 0),
+(43100, 28085, 571, 1, 1, 5079.61, 4277.89, -44.3879, 4.30703, 300, 300, 0, 0),
+(43112, 28085, 571, 1, 1, 5079.61, 4277.89, -44.3879, 4.26412, 300, 300, 0, 0),
+(43121, 28085, 571, 1, 1, 4973.93, 4446.58, -129.382, 1.89792, 300, 300, 0, 0),
+(43136, 28085, 571, 1, 1, 4740.17, 4246.34, -16.0232, 4.44297, 300, 300, 0, 0),
+(43137, 28085, 571, 1, 1, 4740.17, 4246.34, -16.0232, 4.44014, 300, 300, 0, 0),
+(43144, 28085, 571, 1, 1, 4835.1, 4639.83, -64.6013, 1.80938, 300, 300, 0, 0),
+(43146, 28085, 571, 1, 1, 4835.1, 4639.83, -64.6013, 1.80938, 300, 300, 0, 0),
+(43169, 28085, 571, 1, 1, 4835.1, 4639.83, -64.6013, 1.80938, 300, 300, 0, 0),
+(43177, 28085, 571, 1, 1, 4804.26, 4470.69, -58.0373, 4.2641, 300, 300, 0, 0),
+(43179, 28085, 571, 1, 1, 4804.26, 4470.69, -58.0373, 4.29107, 300, 300, 0, 0),
+(43196, 28085, 571, 1, 1, 4804.26, 4470.69, -58.0373, 4.28997, 300, 300, 0, 0),
+(43237, 28085, 571, 1, 1, 4789.15, 4572.69, -59.6525, 1.63555, 300, 300, 0, 0),
+(43239, 28085, 571, 1, 1, 4789.15, 4572.69, -59.6525, 1.44932, 300, 300, 0, 0),
+(43247, 28085, 571, 1, 1, 4789.15, 4572.69, -59.6525, 1.44914, 300, 300, 0, 0),
+(43285, 28085, 571, 1, 1, 4920.82, 4762.74, -81.8216, 4.37608, 300, 300, 0, 0),
+(43290, 28085, 571, 1, 1, 4920.82, 4762.74, -81.8216, 4.38253, 300, 300, 0, 0),
+(43309, 28085, 571, 1, 1, 4920.82, 4762.74, -81.8216, 4.38257, 300, 300, 0, 0),
+(43310, 28085, 571, 1, 1, 4822.42, 4563.57, -62.4573, 4.86117, 300, 300, 0, 0),
+(43342, 28085, 571, 1, 1, 4822.42, 4563.57, -62.4573, 1.71901, 300, 300, 0, 0),
+(43376, 28085, 571, 1, 1, 4822.42, 4563.57, -62.4573, 1.7191, 300, 300, 0, 0),
+(43432, 28085, 571, 1, 1, 4933.59, 4435.46, -72.4016, 1.67607, 300, 300, 0, 0),
+(43496, 28085, 571, 1, 1, 4933.59, 4435.46, -72.4016, 1.67568, 300, 300, 0, 0),
+(43504, 28085, 571, 1, 1, 4933.59, 4435.46, -72.4016, 1.6755, 300, 300, 0, 0),
+(44785, 28085, 571, 1, 1, 4844.56, 4272.22, -42.2319, 1.11372, 300, 300, 0, 0),
+(44535, 28085, 571, 1, 1, 4844.56, 4272.22, -42.2319, 1.11903, 300, 300, 0, 0),
+(44549, 28085, 571, 1, 1, 4844.56, 4272.22, -42.2319, 1.11879, 300, 300, 0, 0),
+(44551, 28085, 571, 1, 1, 4936.08, 4219.79, -81.233, 4.80896, 300, 300, 0, 0),
+(44586, 28085, 571, 1, 1, 4936.08, 4219.79, -81.233, 4.80895, 300, 300, 0, 0),
+(44587, 28085, 571, 1, 1, 4936.08, 4219.79, -81.233, 4.80895, 300, 300, 0, 0),
+(44597, 28085, 571, 1, 1, 4907.31, 4267.42, -78.4264, 2.98182, 300, 300, 0, 0),
+(44598, 28085, 571, 1, 1, 4907.31, 4267.42, -78.4264, 2.97992, 300, 300, 0, 0),
+(44600, 28085, 571, 1, 1, 4907.31, 4267.42, -78.4264, 2.97995, 300, 300, 0, 0),
+(44602, 28085, 571, 1, 1, 5075.23, 4325.64, -82.7162, 1.35442, 300, 300, 0, 0),
+(44611, 28085, 571, 1, 1, 5075.23, 4325.64, -82.7162, 1.35429, 300, 300, 0, 0),
+(44612, 28085, 571, 1, 1, 5075.23, 4325.64, -82.7162, 1.35431, 300, 300, 0, 0),
+(44631, 28085, 571, 1, 1, 5017.46, 4300.4, -84.9682, 0.693961, 300, 300, 0, 0),
+(44638, 28085, 571, 1, 1, 5017.46, 4300.4, -84.9682, 0.693936, 300, 300, 0, 0),
+(44640, 28085, 571, 1, 1, 5017.46, 4300.4, -84.9682, 0.693904, 300, 300, 0, 0),
+(44671, 28085, 571, 1, 1, 5014.76, 4273.95, -84.5932, 1.41699, 300, 300, 0, 0),
+(44681, 28085, 571, 1, 1, 5014.76, 4273.95, -84.5932, 0.097786, 300, 300, 0, 0),
+(44697, 28085, 571, 1, 1, 5014.76, 4273.95, -84.5932, 0.090073, 300, 300, 0, 0),
+(44702, 28085, 571, 1, 1, 4758.09, 4454.15, -60.521, 4.56067, 300, 300, 0, 0),
+(44711, 28085, 571, 1, 1, 4758.09, 4454.15, -60.521, 5.16246, 300, 300, 0, 0),
+(44726, 28085, 571, 1, 1, 4758.09, 4454.15, -60.521, 5.13099, 300, 300, 0, 0),
+(44778, 28085, 571, 1, 1, 4756.11, 4818.28, -67.3835, 4.80424, 300, 300, 0, 0);
+DELETE FROM `spawn_group` WHERE id = 32541;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32541, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 1', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32541;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32541, 97135, 0), (32541, 97136, 1), (32541, 97137, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32541;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32541, 3, 2, 0, 32541, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 1');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32541;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32541,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 1');
+DELETE FROM `waypoint_path` WHERE PathId = 32541;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32541,1 ,5002.637,4325.293,-48.9155 ,100,0,0),
+(32541,2 ,5002.199,4326.192,-48.9155 ,100,0,0),
+(32541,3 ,5006.778,4316.222,-48.73987,100,0,0),
+(32541,4 ,5040.143,4275.319,-53.57321,100,0,0),
+(32541,5 ,5099.93,4263.995,-40.62877 ,100,0,0),
+(32541,6 ,5169.019,4355.886,-66.351  ,100,0,0),
+(32541,7 ,5196.381,4358.717,-66.96212,100,0,0),
+(32541,8 ,5241.487,4305.265,-66.96212,100,0,0),
+(32541,9 ,5254.937,4247.185,-66.96212,100,0,0),
+(32541,10,5254.781,4276.123,-65.46691,100,0,0),
+(32541,11,5222.763,4286.479,-63.91553,100,0,0),
+(32541,12,5146.983,4277.513,-60.44317,100,0,0),
+(32541,13,5087.189,4270.749,-45.88769,100,0,0),
+(32541,14,5020.289,4289.139,-48.9155 ,100,0,0),
+(32541,15,5002.199,4326.192,-48.9155 ,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32542;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32542, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 2', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32542;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32542, 43007, 0), (32542, 43009, 1), (32542, 43010, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32542;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32542, 3, 2, 0, 32542, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 2');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32542;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32542,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 2');
+DELETE FROM `waypoint_path` WHERE PathId = 32542;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32542,1 ,5020.779,4319.441,-52.85098,100,0,0),
+(32542,2 ,5044.975,4311.095,-53.57321,100,0,0),
+(32542,3 ,5070.199,4375.286,-40.62877,100,0,0),
+(32542,4 ,5099.526,4423.799,-66.351  ,100,0,0),
+(32542,5 ,5118.942,4481.29,-66.96212 ,100,0,0),
+(32542,6 ,5090.995,4449.904,-67.18697,100,0,0),
+(32542,7 ,5071.371,4403.331,-54.93696,100,0,0),
+(32542,8 ,5060.991,4346.471,-46.15918,100,0,0),
+(32542,9 ,5053.147,4312.71,-54.79807 ,100,0,0),
+(32542,10,5014.968,4325.505,-53.18696,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32543;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32543, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 3', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32543;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32543, 44631, 0), (32543, 44638, 1), (32543, 44640, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32543;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32543, 3, 2, 0, 32543, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 3');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32543;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES
+(32543,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 3');
+DELETE FROM `waypoint_path` WHERE PathId = 32543;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32543,1,5017.462,4300.402,-84.96822,100,0,0),
+(32543,2,5048.723,4326.588,-84.27931,100,0,0),
+(32543,3,5054.09,4331.078,-85.02931 ,100,0,0),
+(32543,4,5054.856,4331.721,-85.02931,100,0,0),
+(32543,5,5050.241,4352.208,-79.84698,100,0,0),
+(32543,6,5043.462,4384.828,-74.17358,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32544;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32544, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 4', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32544;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32544, 43046, 0), (32544, 43059, 1), (32544, 43068, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32544;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32544, 3, 2, 0, 32544, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 4');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32544;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32544,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 4');
+DELETE FROM `waypoint_path` WHERE PathId = 32544;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32544,1,5072.827,4250.31,-49.97196 ,100,0,0),
+(32544,2,5031.521,4190.533,-49.97196,100,0,0),
+(32544,3,4993.202,4226.004,-49.97196,100,0,0),
+(32544,4,5001.688,4292.706,-49.97196,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32545;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32545, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 5', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32545;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32545, 44602, 0), (32545, 44611, 1), (32545, 44612, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32545;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32545, 3, 2, 0, 32545, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 5');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32545;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32545,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 5');
+DELETE FROM `waypoint_path` WHERE PathId = 32545;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32545,1,5075.234,4325.642,-82.71622,100,0,0),
+(32545,2,5072.703,4298.773,-75.84122,100,0,0),
+(32545,3,5082.053,4270.725,-75.46622,100,0,0),
+(32545,4,5076.808,4246.818,-76.0026 ,100,0,0),
+(32545,5,5087.134,4233.321,-72.32821,100,0,0),
+(32545,6,5095.87,4221.915,-76.82821 ,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32546;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32546, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 6', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32546;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32546, 43099, 0), (32546, 43100, 1), (32546, 43112, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32546;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32546, 3, 2, 0, 32546, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 6');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32546;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32546,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 6');
+DELETE FROM `waypoint_path` WHERE PathId = 32546;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32546,1,5079.613,4277.886,-44.38786,100,0,0),
+(32546,2,5080.277,4205.226,-36.27674,100,0,0),
+(32546,3,5020.093,4211.659,-36.36007,100,0,0),
+(32546,4,5011.027,4273.704,-44.38786,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32547;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32547, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 7', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32547;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32547, 97156, 0), (32547, 97157, 1), (32547, 42997, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32547;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32547, 3, 2, 0, 32547, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 7');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32547;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32547,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 7');
+DELETE FROM `waypoint_path` WHERE PathId = 32547;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32547,1,5110.503,4310.772,-41.37334,100,0,0),
+(32547,2,5107.401,4261.192,-45.09555,100,0,0),
+(32547,3,5075.264,4186.481,-41.37334,100,0,0),
+(32547,4,5019.273,4278.96,-51.59556,100,0,0),
+(32547,5,5080.073,4318.104,-41.37334,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32548;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32548, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 8', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32548;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32548, 97138, 0), (32548, 97139, 1), (32548, 97140, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32548;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32548, 3, 2, 0, 32548, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 8');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32548;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32548,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 8');
+DELETE FROM `waypoint_path` WHERE PathId = 32548;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32548,1,5102.682,4198.218,-81.27229,100,0,0),
+(32548,2,5088.62,4197.392,-82.27351,100,0,0),
+(32548,3,5064.66,4204.033,-82.35399,100,0,0),
+(32548,4,5036.595,4209.761,-83.47899,100,0,0),
+(32548,5,5003.932,4210.67,-83.59311,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32549;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32549, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 9', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32549;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32549, 44671, 0), (32549, 44681, 1), (32549, 44697, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32549;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32549, 3, 2, 0, 32549, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 9');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32549;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32549,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 9');
+DELETE FROM `waypoint_path` WHERE PathId = 32549;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32549,1,5014.761,4273.954,-84.59322,100,0,0),
+(32549,2,5020.323,4242.454,-81.3795 ,100,0,0),
+(32549,3,5049.475,4239.045,-83.0117 ,100,0,0),
+(32549,4,5055.183,4275.399,-82.79951,100,0,0),
+(32549,5,5043.205,4295.906,-83.04951,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32550;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32550, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 10', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32550;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32550, 44597, 0), (32550, 44598, 1), (32550, 44600, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32550;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32550, 3, 2, 0, 32550, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 10');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32550;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES
+(32550,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 10');
+DELETE FROM `waypoint_path` WHERE PathId = 32550;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32550,1,4907.31,4267.417,-78.42643,100,0,0),
+(32550,2,4915.276,4291.992,-82.92643,100,0,0),
+(32550,3,4937.795,4288.363,-83.81261,100,0,0),
+(32550,4,4949.672,4289.955,-82.81261,100,0,0),
+(32550,5,4970.487,4292.745,-83.42213,100,0,0),
+(32550,6,4979.983,4313.242,-83.51762,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32551;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32551, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 11', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32551;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32551, 97152, 0), (32551, 97153, 1), (32551, 43121, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32551;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32551, 3, 2, 0, 32551, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 11');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32551;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32551,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 11');
+DELETE FROM `waypoint_path` WHERE PathId = 32551;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32551,1,4973.933,4446.575,-129.3822,100,0,0),
+(32551,2,4943.6,4445.485,-124.722,100,0,0),
+(32551,3,4927.523,4431.369,-124.4701,100,0,0),
+(32551,4,4934.78,4411.275,-122.3451,100,0,0),
+(32551,5,4940.698,4410.76,-121.4944,100,0,0),
+(32551,6,4951.856,4409.788,-119.1264,100,0,0),
+(32551,7,4957.872,4409.264,-119.9521,100,0,0),
+(32551,8,4962.393,4408.87,-120.2451,100,0,0),
+(32551,9,4964.136,4408.718,-120.3657,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32552;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32552, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 12', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32552;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32552, 43432, 0), (32552, 43496, 1), (32552, 43504, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32552;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32552, 3, 2, 0, 32552, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 12');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32552;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32552,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 12');
+DELETE FROM `waypoint_path` WHERE PathId = 32552;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32552,1,4933.589,4435.456,-72.40157,100,0,0),
+(32552,2,4938.618,4388.009,-66.45499,100,0,0),
+(32552,3,4942.885,4365.414,-61.82888,100,0,0),
+(32552,4,4945.761,4350.115,-61.20388,100,0,0),
+(32552,5,4927.946,4321.715,-73.06843,100,0,0),
+(32552,6,4944.643,4309.708,-78.5439 ,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32553;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32553, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 13', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32553;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32553, 43000, 0), (32553, 43001, 1), (32553, 43003, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32553;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32553, 3, 2, 0, 32553, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 13');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32553;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32553,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 13');
+DELETE FROM `waypoint_path` WHERE PathId = 32553;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32553,1,4911.274,4206.232,-24.60511,100,0,0),
+(32553,2,4926.756,4111.928,-5.29955,100,0,0),
+(32553,3,5023.579,4161.569,-25.63288,100,0,0),
+(32553,4,5049.39,4185.145,-27.46622,100,0,0),
+(32553,5,4999.664,4228.146,-39.85511,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32554;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32554, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 14', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32554;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32554, 44551, 0), (32554, 44586, 1), (32554, 44587, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32554;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32554, 3, 2, 0, 32554, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 14');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32554;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32554,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 14');
+DELETE FROM `waypoint_path` WHERE PathId = 32554;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32554,1,4936.084,4219.787,-81.23304,100,0,0),
+(32554,2,4976.206,4238.374,-81.89825,100,0,0),
+(32554,3,4987.537,4257.544,-84.14825,100,0,0),
+(32554,4,4961.461,4275.754,-84.06261,100,0,0),
+(32554,5,4933.544,4245.99,-81.39619 ,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32555;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32555, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 15', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32555;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32555, 97141, 0), (32555, 97142, 1), (32555, 97143, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32555;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32555, 3, 2, 0, 32555, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 15');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32555;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32555,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 15');
+DELETE FROM `waypoint_path` WHERE PathId = 32555;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32555,1,4998.407,4288.053,-40.37927,100,0,0),
+(32555,2,5070.737,4264.85,-38.87926 ,100,0,0),
+(32555,3,5028.22,4207.275,-34.76815 ,100,0,0),
+(32555,4,4965.372,4190.627,-34.76815,100,0,0),
+(32555,5,4943.978,4244.221,-34.76815,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32556;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32556, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 16', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32556;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32556, 97144, 0), (32556, 97145, 1), (32556, 97146, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32556;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32556, 3, 2, 0, 32556, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 16');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32556;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32556,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 16');
+DELETE FROM `waypoint_path` WHERE PathId = 32556;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32556,1 ,4980.448,4074.755,-4.027405,100,0,0),
+(32556,2 ,4994.831,4109.579,-2.414357,100,0,0),
+(32556,3 ,5010.439,4162.144,-2.414357,100,0,0),
+(32556,4 ,4993.8,4226.438,-38.13657  ,100,0,0),
+(32556,5 ,4992.137,4278.705,-46.46992,100,0,0),
+(32556,6 ,4987.289,4324.862,-45.44215,100,0,0),
+(32556,7 ,4990.415,4315.515,-49.54962,100,0,0),
+(32556,8 ,5014.45,4253.967,-50.49408 ,100,0,0),
+(32556,9 ,5050.807,4174.558,-17.60515,100,0,0),
+(32556,10,5017.929,4103.535,-7.072595,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32557;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32557, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 17', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32557;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32557, 43022, 0), (32557, 43025, 1), (32557, 97147, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32557;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32557, 3, 2, 0, 32557, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 17');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32557;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32557,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 17');
+DELETE FROM `waypoint_path` WHERE PathId = 32557;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32557,1,5010.887,4242.565,-24.38045,100,0,0),
+(32557,2,4888.21,4272.306,-24.38045 ,100,0,0),
+(32557,3,4893.202,4224.808,-24.38045,100,0,0),
+(32557,4,4921.955,4177.2,-24.38045  ,100,0,0),
+(32557,5,4988.135,4165.612,-24.38045,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32558;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32558, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 18', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32558;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32558, 44785, 0), (32558, 44535, 1), (32558, 44549, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32558;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32558, 3, 2, 0, 32558, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 18');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32558;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32558,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 18');
+DELETE FROM `waypoint_path` WHERE PathId = 32558;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32558,1,4844.565,4272.218,-42.23193,100,0,0),
+(32558,2,4856.214,4296.021,-49.10693,100,0,0),
+(32558,3,4856.946,4321.676,-51.99996,100,0,0),
+(32558,4,4870.038,4345.854,-56.74276,100,0,0),
+(32558,5,4876.217,4358.418,-57.49276,100,0,0),
+(32558,6,4880.631,4367.393,-58.22227,100,0,0),
+(32558,7,4883.222,4372.657,-58.72227,100,0,0),
+(32558,8,4885.065,4406.69,-60.73599 ,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32559;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32559, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 19', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32559;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32559, 43038, 0), (32559, 43040, 1), (32559, 43043, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32559;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32559, 3, 2, 0, 32559, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 19');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32559;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32559,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 19');
+DELETE FROM `waypoint_path` WHERE PathId = 32559;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32559,1 ,4916.618,4681.096,-32.7159,100,0,0),
+(32559,2 ,4969.025,4708.955,-46.43816,100,0,0),
+(32559,3 ,5025.48,4692.735,-60.02157,100,0,0),
+(32559,4 ,5053.596,4680.749,-68.99379,100,0,0),
+(32559,5 ,5084.707,4640.418,-80.54938,100,0,0),
+(32559,6 ,5096.221,4584.704,-78.6883,100,0,0),
+(32559,7 ,5070.799,4530.558,-54.16037,100,0,0),
+(32559,8 ,5014.469,4495.913,-42.52145,100,0,0),
+(32559,9 ,4952.527,4486.896,-38.24366,100,0,0),
+(32559,10,4893.802,4503.269,-32.88253,100,0,0),
+(32559,11,4858.266,4561.13,-31.66031,100,0,0),
+(32559,12,4867.447,4629.522,-30.1881,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32560;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32560, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 20', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32560;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32560, 43177, 0), (32560, 43179, 1), (32560, 43196, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32560;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32560, 3, 2, 0, 32560, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 20');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32560;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32560,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 20');
+DELETE FROM `waypoint_path` WHERE PathId = 32560;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32560,1 ,4804.26,4470.69,-58.03729,100,0,0),
+(32560,2 ,4826.972,4425.921,-57.03728,100,0,0),
+(32560,3 ,4830.703,4383.079,-55.17613,100,0,0),
+(32560,4 ,4819.916,4350.413,-50.25944,100,0,0),
+(32560,5 ,4795.706,4321.648,-47.6856 ,100,0,0),
+(32560,6 ,4803.614,4330.432,-46.81986,100,0,0),
+(32560,7 ,4819.557,4355.022,-48.95877,100,0,0),
+(32560,8 ,4830.708,4394.117,-53.04214,100,0,0),
+(32560,9 ,4818.15,4446.595,-54.95887 ,100,0,0),
+(32560,10,4789.123,4500.799,-53.59771,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32561;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32561, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 21', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32561;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32561, 43310, 0), (32561, 43342, 1), (32561, 43376, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32561;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32561, 3, 2, 0, 32561, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 21');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32561;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32561,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 21');
+DELETE FROM `waypoint_path` WHERE PathId = 32561;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32561,1,4822.417,4563.569,-62.45734,100,0,0),
+(32561,2,4827.738,4528.068,-63.62299,100,0,0),
+(32561,3,4848.827,4494.432,-64.42863,100,0,0),
+(32561,4,4888.949,4472.828,-66.5888 ,100,0,0),
+(32561,5,4921.898,4468.713,-71.08053,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32562;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32562, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 22', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32562;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32562, 97154, 0), (32562, 43136, 1), (32562, 43137, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32562;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32562, 3, 2, 0, 32562, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 22');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32562;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32562,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 22');
+DELETE FROM `waypoint_path` WHERE PathId = 32562;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32562,1 ,4740.17,4246.344,-16.02317 ,100,0,0),
+(32562,2 ,4756.937,4258.651,-21.27317,100,0,0),
+(32562,3 ,4757.28,4286.005,-27.66216 ,100,0,0),
+(32562,4 ,4751.892,4313.786,-43.70028,100,0,0),
+(32562,5 ,4759.365,4341.533,-47.79268,100,0,0),
+(32562,6 ,4759.822,4347.516,-46.91768,100,0,0),
+(32562,7 ,4760.051,4350.507,-46.16768,100,0,0),
+(32562,8 ,4760.279,4353.498,-45.41768,100,0,0),
+(32562,9 ,4761.041,4363.469,-44.79268,100,0,0),
+(32562,10,4761.422,4368.454,-44.16256,100,0,0),
+(32562,11,4762.117,4377.584,-47.41256,100,0,0),
+(32562,12,4749.611,4398.264,-47.28756,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32563;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32563, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 23', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32563;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32563, 97148, 0), (32563, 97149, 1), (32563, 97150, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32563;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32563, 3, 2, 0, 32563, 2, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 23');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32563;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32563,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 23');
+DELETE FROM `waypoint_path` WHERE PathId = 32563;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32563,1 ,5028.78,4680.979,1.861765 ,100,0,0),
+(32563,2 ,5002.378,4686.915,1.861765,100,0,0),
+(32563,3 ,4943.917,4684.968,1.861765,100,0,0),
+(32563,4 ,4900.949,4649.646,1.861765,100,0,0),
+(32563,5 ,4875.145,4611.798,1.861765,100,0,0),
+(32563,6 ,4865.788,4553.84,1.861765 ,100,0,0),
+(32563,7 ,4913.313,4493.152,1.861765,100,0,0),
+(32563,8 ,4969.278,4492.751,1.861765,100,0,0),
+(32563,9 ,5045.389,4523.042,1.861765,100,0,0),
+(32563,10,5078.478,4576.022,1.861765,100,0,0),
+(32563,11,5077.286,4650.569,1.861765,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32564;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32564, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 24', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32564;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32564, 43237, 0), (32564, 43239, 1), (32564, 43247, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32564;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32564, 3, 2, 0, 32564, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 24');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32564;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32564,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 24');
+DELETE FROM `waypoint_path` WHERE PathId = 32564;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32564,1,4789.149,4572.695,-59.65247,100,0,0),
+(32564,2,4792.582,4594.102,-58.71836,100,0,0),
+(32564,3,4800.17,4630.251,-58.71836 ,100,0,0),
+(32564,4,4799.065,4675.612,-59.88504,100,0,0),
+(32564,5,4789.401,4732.325,-62.24615,100,0,0),
+(32564,6,4789.802,4786.182,-62.57954,100,0,0),
+(32564,7,4822.999,4807.211,-63.35728,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32565;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32565, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 25', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32565;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32565, 44778, 0), (32565, 97151, 1), (32565, 97155, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32565;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32565, 3, 2, 0, 32565, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 25');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32565;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32565,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 25');
+DELETE FROM `waypoint_path` WHERE PathId = 32565;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32565,1,4756.107,4818.278,-67.38346,100,0,0),
+(32565,2,4761.855,4801.228,-68.63346,100,0,0),
+(32565,3,4762.726,4785.685,-69.06566,100,0,0),
+(32565,4,4757.821,4764.469,-68.38517,100,0,0),
+(32565,5,4766.37,4744.67,-68.7674,100,0,0),
+(32565,6,4762.64,4715.14,-66.7573,100,0,0),
+(32565,7,4752.358,4695.661,-61.61516,100,0,0),
+(32565,8,4754.085,4669.825,-61.99016,100,0,0),
+(32565,9,4760.934,4648.48,-61.62798,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32566;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32566, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 26', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32566;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32566, 43144, 0), (32566, 43146, 1), (32566, 43169, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32566;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32566, 3, 2, 0, 32566, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 26');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32566;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32566,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 26');
+DELETE FROM `waypoint_path` WHERE PathId = 32566;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32566,1,4835.101,4639.826,-64.60135,100,0,0),
+(32566,2,4833.268,4604.254,-63.50662,100,0,0),
+(32566,3,4839.412,4578.991,-63.69352,100,0,0),
+(32566,4,4844.993,4559.014,-65.79906,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32567;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES
+(32567, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 27', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32567;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32567, 43285, 0), (32567, 43290, 1), (32567, 43309, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32567;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32567, 3, 2, 0, 32567, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 27');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32567;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32567,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 27');
+DELETE FROM `waypoint_path` WHERE PathId = 32567;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32567,1,4920.82,4762.737,-81.82165 ,100,0,0),
+(32567,2,4890.551,4743.261,-75.68582,100,0,0),
+(32567,3,4893.712,4720.615,-73.63714,100,0,0),
+(32567,4,4884.702,4694.276,-71.26365,100,0,0),
+(32567,5,4867.192,4671.278,-68.26365,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32568;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32568, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 28', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32568;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32568, 43071, 0), (32568, 43078, 1), (32568, 43092, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32568;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32568, 3, 2, 0, 32568, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 28');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32568;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32568,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 28');
+DELETE FROM `waypoint_path` WHERE PathId = 32568;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32568,1,4941.599,4812.828,-91.48145,100,0,0),
+(32568,2,4946.243,4831.114,-90.65855,100,0,0),
+(32568,3,4954.081,4862.177,-93.31429,100,0,0),
+(32568,4,4957.731,4876.543,-95.41595,100,0,0),
+(32568,5,4970.125,4911.411,-100.8458,100,0,0),
+(32568,6,4994.251,4926.262,-103.7208,100,0,0),
+(32568,7,5014.409,4951.733,-108.3815,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32569;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32569, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 29', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32569;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32569, 44702, 0), (32569, 44711, 1), (32569, 44726, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32569;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32569, 3, 2, 0, 32569, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 29');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32569;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32569,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 29');
+DELETE FROM `waypoint_path` WHERE PathId = 32569;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32569,1,4758.094,4454.147,-60.52105,100,0,0),
+(32569,2,4758.125,4495.637,-61.22179,100,0,0),
+(32569,3,4753.512,4516.009,-58.20261,100,0,0),
+(32569,4,4751.44,4525.563,-57.03389 ,100,0,0),
+(32569,5,4757.662,4562.866,-57.81196,100,0,0),
+(32569,6,4742.79,4587.09,-51.7034,100,0,0);
+DELETE FROM `spawn_group` WHERE id = 32570;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32570, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 30', 0, 0, 0, 1);
+DELETE FROM `spawn_group_spawn` WHERE id = 32570;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32570, 43011, 0), (32570, 43015, 1), (32570, 43017, 2);
+DELETE FROM `spawn_group_formation` WHERE id = 32570;
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(32570, 3, 2, 0, 32570, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 30');
+DELETE FROM `waypoint_path_name` WHERE PathId = 32570;
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES (32570,'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 30');
+DELETE FROM `waypoint_path` WHERE PathId = 32570;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`,`PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(32570,1 ,5034.852,5045.786,-111.2647,100,0,0),
+(32570,2 ,5022.82,5064.22,-107.2884,100,0,0),
+(32570,3 ,4991.313,5043.729,-103.7621,100,0,0),
+(32570,4 ,4949.784,5035.696,-101.3626,100,0,0),
+(32570,5 ,4917.63,5033.36,-97.712,100,0,0),
+(32570,6 ,4904.84,5006.67,-95.272,100,0,0),
+(32570,7 ,4891.03,4988.17,-93.6083,100,0,0),
+(32570,8 ,4882.73,4972.05,-94.1083,100,0,0),
+(32570,9 ,4874.2,4929.75,-94.199,100,0,0),
+(32570,10,4861.93,4897.41,-86.8722,100,0,0);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28096));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28096));
+DELETE FROM `creature` WHERE `id` IN (28096);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(81910, 28096, 571, 1, 1, 5130.81, 4007.76, -61.7342, 5.29571, 300, 300, 7, 1),
+(81911, 28096, 571, 1, 1, 5228.34, 4162.73, -87.4553, 2.34075, 300, 300, 15, 1),
+(81912, 28096, 571, 1, 1, 5234.62, 4330.14, -97.1329, 1.37923, 300, 300, 15, 1),
+(81913, 28096, 571, 1, 1, 5199.09, 4218.47, -95.1596, 1.77739, 300, 300, 15, 1),
+(81914, 28096, 571, 1, 1, 5168.97, 4122.99, -77.4802, 0.394201, 300, 300, 15, 1),
+(81915, 28096, 571, 1, 1, 5187.39, 4267.67, -96.4757, 1.06126, 300, 300, 15, 1),
+(81916, 28096, 571, 1, 1, 5152.1, 4034.9, -61.8941, 1.08281, 300, 300, 7, 1),
+(81917, 28096, 571, 1, 1, 5142.74, 4057.35, -62.2059, 5.11081, 300, 300, 7, 1),
+(81918, 28096, 571, 1, 1, 5158.5, 3988.5, -61.7989, 5.67444, 300, 300, 7, 1),
+(81919, 28096, 571, 1, 1, 5178.96, 4003.38, -61.6299, 1.16869, 300, 300, 7, 1),
+(81920, 28096, 571, 1, 1, 5119.54, 4081.79, -62.4412, 1.11648, 300, 300, 7, 1),
+(81921, 28096, 571, 1, 1, 5114.95, 4031.84, -61.8371, 0.531593, 300, 300, 7, 1),
+(81922, 28096, 571, 1, 1, 5364.17, 4414.95, -132.289, 1.40004, 300, 300, 15, 1),
+(81923, 28096, 571, 1, 1, 5314.14, 4359.14, -114.031, 0.652676, 300, 300, 15, 1),
+(97037, 28096, 571, 1, 1, 5348.05, 4358.48, -126.571, 4.07532, 300, 300, 15, 1),
+(97038, 28096, 571, 1, 1, 5215.8, 3883.85, -43.0027, 1.38221, 300, 300, 15, 1),
+(97039, 28096, 571, 1, 1, 5256.05, 3863.59, -54.2733, 1.23788, 300, 300, 15, 1),
+(97040, 28096, 571, 1, 1, 5227.07, 3953.88, -55.0194, 3.65898, 300, 300, 15, 1),
+(97041, 28096, 571, 1, 1, 5208.86, 3840.5, -27.3712, 5.9602, 300, 300, 15, 1),
+(97042, 28096, 571, 1, 1, 5125.52, 3891.78, -7.19431, 3.20067, 300, 300, 15, 1),
+(97043, 28096, 571, 1, 1, 5255.67, 4343.97, -98.0048, 2.5864, 300, 300, 15, 1);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28098,28213));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28098,28213));
+DELETE FROM `creature` WHERE `id` IN (28098,28213);
+DELETE FROM `creature` WHERE `guid` = 87441;
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(81876, 28098, 571, 1, 1, 5123.48, 4123.94, -72.5937, 6.23036, 300, 300, 10, 1),
+(81877, 28098, 571, 1, 1, 4987.56, 4869.29, -101.367, 4.40155, 300, 300, 10, 1),
+(81878, 28098, 571, 1, 1, 4994.23, 4911.15, -102.971, 6.24638, 300, 300, 10, 1),
+(81879, 28098, 571, 1, 1, 5006.55, 4724.52, -101.181, 0.419514, 300, 300, 10, 1),
+(81880, 28098, 571, 1, 1, 4997.89, 4788.89, -102.488, 5.02626, 300, 300, 10, 1),
+(81881, 28098, 571, 1, 1, 5078.84, 4518.86, -99.0146, 3.05312, 300, 300, 10, 1),
+(81882, 28098, 571, 1, 1, 4959.2, 4722.07, -90.7234, 4.37647, 300, 300, 10, 1),
+(81883, 28098, 571, 1, 1, 5053.57, 4470.27, -94.6789, 4.66876, 300, 300, 10, 1),
+(81884, 28098, 571, 1, 1, 5020.31, 4458.9, -86.7064, 1.2656, 300, 300, 10, 1),
+(81885, 28098, 571, 1, 1, 5168.48, 4526.97, -96.6331, 5.57146, 300, 300, 10, 1),
+(81886, 28098, 571, 1, 1, 4985.29, 4826.74, -101.802, 3.18053, 300, 300, 10, 1),
+(81887, 28098, 571, 1, 1, 5080.04, 4480.31, -99.0907, 5.36583, 300, 300, 10, 1),
+(81888, 28098, 571, 1, 1, 5096.29, 4453.94, -96.4596, 4.74265, 300, 300, 10, 1),
+(81889, 28098, 571, 1, 1, 5229.61, 3807.29, -23.7877, 5.73069, 300, 300, 10, 1),
+(81890, 28098, 571, 1, 1, 5143.2, 4139.72, -78.831, 6.10458, 300, 300, 10, 1),
+(81891, 28098, 571, 1, 1, 5156.22, 4469.42, -96.6659, 4.98222, 300, 300, 10, 1),
+(81892, 28098, 571, 1, 1, 5112.7, 4139.2, -75.3655, 3.92522, 300, 300, 10, 1),
+(81893, 28098, 571, 1, 1, 5268.87, 4068.81, -71.7105, 4.1071, 300, 300, 10, 1),
+(81894, 28098, 571, 1, 1, 5254.78, 4074.03, -72.3771, 3.92054, 300, 300, 10, 1),
+(81895, 28098, 571, 1, 1, 5075.87, 4432.08, -93.6645, 2.99956, 300, 300, 10, 1),
+(81896, 28098, 571, 1, 1, 5258.31, 4070.26, -71.837, 5.56757, 300, 300, 10, 1),
+(81897, 28098, 571, 1, 1, 5294.77, 4010.92, -70.252, 1.74667, 300, 300, 10, 1),
+(81898, 28098, 571, 1, 1, 5239.65, 3785.49, -19.7558, 2.88388, 300, 300, 10, 1),
+(81899, 28098, 571, 1, 1, 5273.17, 4028.99, -70.3791, 5.27058, 300, 300, 10, 1),
+(81900, 28098, 571, 1, 1, 5244.3, 3792.22, -22.179, 1.82692, 300, 300, 10, 1),
+(81901, 28098, 571, 1, 1, 5238.25, 3795.32, -22.0941, 0.306556, 300, 300, 10, 1),
+(81902, 28098, 571, 1, 1, 5220.89, 3788.08, -20.3528, 1.52294, 300, 300, 10, 1),
+(81903, 28098, 571, 1, 1, 5240.5, 3805.79, -24.5626, 3.36814, 300, 300, 10, 1),
+(81905, 28098, 571, 1, 1, 5229.64, 4271.12, -99.4103, 5.91214, 300, 300, 10, 1),
+(81906, 28098, 571, 1, 1, 5241.38, 4286.96, -96.6243, 4.12952, 300, 300, 10, 1),
+(81907, 28098, 571, 1, 1, 5263.15, 4288.07, -94.6651, 1.54372, 300, 300, 10, 1),
+(81908, 28098, 571, 1, 1, 5213.04, 4376.35, -95.071, 0.571997, 300, 300, 10, 1),
+(81909, 28098, 571, 1, 1, 5219.97, 4410.82, -96.1016, 2.61277, 300, 300, 10, 1),
+(81957, 28098, 571, 1, 1, 5247.01, 4284.39, -96.3558, 0.081073, 300, 300, 10, 1),
+(97044, 28098, 571, 1, 1, 5227.76, 4286.85, -97.201, 6.18985, 300, 300, 10, 1),
+(97045, 28098, 571, 1, 1, 5170.23, 4385.53, -95.3167, 4.35803, 300, 300, 10, 1),
+(97046, 28098, 571, 1, 1, 5252.39, 4292, -95.9437, 0.807866, 300, 300, 10, 1),
+(97047, 28098, 571, 1, 1, 5189.27, 4419.23, -93.9123, 4.20907, 300, 300, 10, 1),
+(97048, 28098, 571, 1, 1, 5141.13, 4415.97, -95.7168, 0.898268, 300, 300, 10, 1),
+(97049, 28098, 571, 1, 1, 5253.94, 4273.78, -97.6456, 5.25199, 300, 300, 10, 1),
+(77050, 28098, 571, 1, 1, 5162.48, 4441.7, -95.408, 4.69006, 300, 300, 10, 1),
+(87441, 28098, 571, 1, 1, 5127.53, 4142.92, -78.135, 1.55332, 300, 300, 10, 1);
+DELETE FROM dbscripts_on_relay WHERE id = 20780;
+INSERT INTO dbscripts_on_relay (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20780,1,0,31,28213,255,0,0,0,0x08,0,0,0,0,0,0,0,0,'Part of Softknuckle 28127 EAI: script check - prevent double spawn'),
+(20780,100,0,10,28213,300000,0,0,0,0x08,0,0,0,0,5114.435,3966.317,-56.11565,2.216568,'Part of Softknuckle 28127 EAI: summon 28213');
+UPDATE creature_template SET MovementType = 2 WHERE entry IN (28213);
+DELETE FROM creature_movement_template WHERE Entry IN (28213);
+INSERT INTO creature_movement_template (Entry, Point, PositionX, PositionY, PositionZ, Orientation, WaitTime, ScriptId) VALUES
+(28213,1,5114.435,3966.317,-56.11565,2.216568,1,5),
+(28213,2,5181.516,3972.203,-60.13863,100,0,0),
+(28213,3,5177.994,4008.45,-61.42373,100,0,0),
+(28213,4,5153.477,4032.832,-61.83991,100,0,0),
+(28213,5,5138.581,4066.388,-61.46491,100,0,0),
+(28213,6,5115.952,4065.072,-61.83991,100,0,0);
+UPDATE creature_template SET InhabitType = 4 WHERE entry = 28087;
+UPDATE creature SET position_x = 4988.022, position_y = 4439.033, position_z = -131.7517, orientation = 2.932153, spawndist = 0, MovementType = 0 WHERE id = 28087;
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28086));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28086));
+DELETE FROM `creature` WHERE `id` IN (28086);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(44825, 28086, 571, 1, 1, 5068.83, 4153.26, -38.0091, 0, 300, 300, 0, 3),
+(44842, 28086, 571, 1, 1, 4886.03, 4758.86, -73.4961, 1.48353, 300, 300, 0, 0),
+(44846, 28086, 571, 1, 1, 4768.64, 4674.46, -54.6772, 5.0091, 300, 300, 0, 0),
+(44853, 28086, 571, 1, 1, 4949.55, 4752.03, -93.7504, 4.88692, 300, 300, 0, 0),
+(118049, 28086, 571, 1, 1, 4856.86, 4401.1, -62.6357, 1.25664, 300, 300, 0, 0),
+(118050, 28086, 571, 1, 1, 4862.41, 4392.82, -62.0045, 0.314159, 300, 300, 0, 0),
+(118051, 28086, 571, 1, 1, 4801.1, 4370.27, -57.0477, 2.09439, 300, 300, 0, 0),
+(118052, 28086, 571, 1, 1, 4828.47, 4764.88, -76.743, 1.51844, 300, 300, 0, 0),
+(118053, 28086, 571, 1, 1, 4765.44, 4699.65, -67.193, 3.38594, 300, 300, 0, 0),
+(118054, 28086, 571, 1, 1, 4826.71, 4753.66, -74.5243, 4.2586, 300, 300, 0, 0),
+(118055, 28086, 571, 1, 1, 4795.73, 4363.39, -55.9727, 3.42085, 300, 300, 0, 0),
+(118056, 28086, 571, 1, 1, 4772.41, 4692.22, -68.2058, 5.48033, 300, 300, 0, 0),
+(44854, 28086, 571, 1, 1, 4902.83, 4572.16, 21.383, 4.83456, 300, 300, 0, 0),
+(44856, 28086, 571, 1, 1, 5054.58, 4632.88, 21.3484, 0.331613, 300, 300, 0, 0),
+(44859, 28086, 571, 1, 1, 4772.79, 4641.91, -56.9158, 5.8294, 300, 300, 0, 0),
+(44864, 28086, 571, 1, 1, 4825.72, 4203.15, -16.0981, 5.41052, 300, 300, 0, 0),
+(44866, 28086, 571, 1, 1, 4800.73, 4547.38, -58.723, 0.453786, 300, 300, 0, 0),
+(44837, 28086, 571, 1, 1, 4939.6, 4139.07, -29.0229, 0.711154, 300, 300, 0, 3),
+(44873, 28086, 571, 1, 1, 4771.43, 4815.17, -65.5365, 4.81711, 300, 300, 0, 0),
+(44874, 28086, 571, 1, 1, 4733.04, 4622.3, -43.5689, 1.48353, 300, 300, 0, 0),
+(44883, 28086, 571, 1, 1, 5123.51, 4077.49, -38.3043, 5.2063, 300, 300, 0, 0),
+(44787, 28086, 571, 1, 1, 5083.1, 4287.41, -43.326, 3.77449, 300, 300, 0, 3),
+(44886, 28086, 571, 1, 1, 4957.13, 4829.06, -93.8149, 0.785398, 300, 300, 0, 0),
+(44892, 28086, 571, 1, 1, 4992.64, 4948.6, -105.953, 2.21657, 300, 300, 0, 0),
+(44898, 28086, 571, 1, 1, 4897.63, 4969, -85.2378, 1.71042, 300, 300, 0, 0),
+(44899, 28086, 571, 1, 1, 4875.47, 4894.73, -86.5262, 4.7822, 300, 300, 0, 0),
+(44903, 28086, 571, 1, 1, 4924.13, 5024.51, -100.854, 0.244346, 300, 300, 0, 0),
+(44904, 28086, 571, 1, 1, 5084.12, 4359.26, -65.1266, 5.49779, 300, 300, 0, 0),
+(44829, 28086, 571, 1, 1, 4875.72, 4250.2, -40.1328, 3.71228, 300, 300, 0, 3),
+(44905, 28086, 571, 1, 1, 4978.34, 4258.75, -52.5458, 6.03046, 300, 300, 0, 0),
+(44912, 28086, 571, 1, 1, 4761.2, 4422.06, -59.3797, 2.14675, 300, 300, 0, 0),
+(44915, 28086, 571, 1, 1, 4868.13, 4609.57, -57.7338, 4.13643, 300, 300, 0, 0),
+(44923, 28086, 571, 1, 1, 4913.07, 4171.23, -40.2014, 3.26377, 300, 300, 0, 0),
+(44927, 28086, 571, 1, 1, 4871.96, 4205.88, -37.6505, 3.4383, 300, 300, 0, 0),
+(44929, 28086, 571, 1, 1, 4852.46, 4255.08, -37.3341, 2.96706, 300, 300, 0, 0),
+(44930, 28086, 571, 1, 1, 4883.62, 4166.11, -32.8415, 5.68977, 300, 300, 0, 0),
+(44933, 28086, 571, 1, 1, 4731.07, 4329.69, -45.6337, 2.40855, 300, 300, 0, 0),
+(44942, 28086, 571, 1, 1, 5021.73, 5050.71, -109.865, 3.82227, 300, 300, 0, 0),
+(44952, 28086, 571, 1, 1, 4855.31, 4604.9, -66.6662, 6.03884, 300, 300, 0, 0),
+(44953, 28086, 571, 1, 1, 5078.17, 4542.23, -99.9933, 1.0472, 300, 300, 0, 0),
+(44954, 28086, 571, 1, 1, 4834.24, 4554.8, -64.737, 5.06145, 300, 300, 0, 0),
+(44957, 28086, 571, 1, 1, 4841.2, 4651.64, -61.8669, 1.74533, 300, 300, 0, 0),
+(44958, 28086, 571, 1, 1, 4824.23, 4610.41, -62.3963, 0.15708, 300, 300, 0, 0),
+(44961, 28086, 571, 1, 1, 4853.7, 4679.01, -68.0049, 1.0472, 300, 300, 0, 0),
+(44971, 28086, 571, 1, 1, 4860.65, 4723.49, -70.3683, 2.96706, 300, 300, 0, 0),
+(44973, 28086, 571, 1, 1, 4878.94, 4707.82, -72.8477, 2.14675, 300, 300, 0, 0),
+(44975, 28086, 571, 1, 1, 4950.4, 4482.68, -71.0526, 4.43314, 300, 300, 0, 0),
+(44976, 28086, 571, 1, 1, 4815.57, 4517.43, -64.2362, 1.74533, 300, 300, 0, 0),
+(44978, 28086, 571, 1, 1, 4845.27, 4331.13, -46.1394, 5.11381, 300, 300, 0, 0),
+(44979, 28086, 571, 1, 1, 4766.44, 4333.43, -46.1733, 0.750492, 300, 300, 0, 0),
+(44980, 28086, 571, 1, 1, 4887.27, 4329.79, -50.1705, 3.19395, 300, 300, 0, 0),
+(44981, 28086, 571, 1, 1, 4736.69, 4274.92, -19.7921, 3.45575, 300, 300, 0, 0),
+(44982, 28086, 571, 1, 1, 4964.43, 4258.49, -66.4936, 5.88176, 300, 300, 0, 0),
+(44983, 28086, 571, 1, 1, 4945.84, 4895.91, -95.8757, 4.38078, 300, 300, 0, 0),
+(44990, 28086, 571, 1, 1, 4977.65, 4257.21, -81.9297, 3.1765, 300, 300, 0, 0),
+(44997, 28086, 571, 1, 1, 4978.74, 4313.81, -61.7428, 2.93215, 300, 300, 0, 0),
+(45002, 28086, 571, 1, 1, 4969.77, 4369.05, -97.2193, 3.10669, 300, 300, 0, 0),
+(45003, 28086, 571, 1, 1, 4811.51, 4299.08, -46.34, 3.64774, 300, 300, 0, 0),
+(45007, 28086, 571, 1, 1, 5025.27, 4325.17, -79.8963, 1.18682, 300, 300, 0, 0),
+(45008, 28086, 571, 1, 1, 5039.67, 4248.6, -80.7639, 3.10669, 300, 300, 0, 0),
+(45012, 28086, 571, 1, 1, 5002.05, 4332.74, -78.1547, 1.29154, 300, 300, 0, 0),
+(45020, 28086, 571, 1, 1, 5085.57, 4253.44, -69.6155, 6.10865, 300, 300, 0, 0),
+(45021, 28086, 571, 1, 1, 4763.2, 4576.28, -61.2332, 0.959931, 300, 300, 0, 0),
+(45022, 28086, 571, 1, 1, 4723.96, 4559.86, -42.7326, 1.76278, 300, 300, 0, 0),
+(45028, 28086, 571, 1, 1, 5088.61, 4348.12, -80.5151, 2.16421, 300, 300, 0, 0),
+(45029, 28086, 571, 1, 1, 4774.78, 4438.83, -57.1887, 3.29867, 300, 300, 0, 0),
+(45030, 28086, 571, 1, 1, 4717.82, 4798.65, -55.927, 0.575959, 300, 300, 0, 0),
+(45033, 28086, 571, 1, 1, 4747.38, 4720.74, -57.2688, 1.01229, 300, 300, 0, 0),
+(45044, 28086, 571, 1, 1, 4732.64, 4777.32, -61.4282, 1.29154, 300, 300, 0, 0),
+(45048, 28086, 571, 1, 1, 4982.58, 4387.9, -106.011, 6.21337, 300, 300, 0, 0),
+(45049, 28086, 571, 1, 1, 4730.64, 4494.89, -40.3003, 4.99164, 300, 300, 0, 0),
+(45054, 28086, 571, 1, 1, 4739.27, 4395.41, -38.7234, 3.28122, 300, 300, 0, 0),
+(45056, 28086, 571, 1, 1, 5025.81, 4316.47, -35.7617, 1.56514, 300, 300, 0, 0),
+(45060, 28086, 571, 1, 1, 5053.03, 4141.3, -54.3735, 3.7001, 300, 300, 0, 0),
+(45061, 28086, 571, 1, 1, 5016.3, 4076.92, -19.0441, 0.295422, 300, 300, 0, 0),
+(45062, 28086, 571, 1, 1, 5102.55, 4173.97, -74.2918, 5.3058, 300, 300, 0, 0);
+DELETE FROM creature_addon WHERE guid IN (118049,118050,118051,118052,118053,118054,118055,118056);
+INSERT INTO creature_addon (guid, mount, stand_state, sheath_state, pvp_flags, emote, moveflags, auras) VALUES 
+(118049,0,0,0,0,0,0,'29266'), (118050,0,0,0,0,0,0,'29266'), (118051,0,0,0,0,0,0,'29266'), (118052,0,0,0,0,0,0,'29266'),
+(118053,0,0,0,0,0,0,'29266'), (118054,0,0,0,0,0,0,'29266'), (118055,0,0,0,0,0,0,'29266'), (118056,0,0,0,0,0,0,'29266');
+DELETE FROM creature_movement WHERE Id IN (44787,44825,44829,44837);
+INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orientation, waittime, scriptid) VALUES
+(44787,1,5083.101,4287.411,-43.32595,100,0,0),
+(44787,2,5065.318,4258.768,-43.32595,100,0,0),
+(44787,3,5007.839,4252.438,-43.32595,100,0,0),
+(44787,4,4981.251,4276.26,-43.32595 ,100,0,0),
+(44787,5,5008.417,4303.622,-43.32595,100,0,0),
+(44787,6,5059.262,4306.766,-43.32595,100,0,0),
+(44825,1,5068.83,4153.258,-38.00907,100,0,0),
+(44825,2,5028.781,4160.93,-36.25915,100,0,0),
+(44825,3,5023.019,4213.807,-35.5091,100,0,0),
+(44825,4,5066.196,4244.922,-37.87021,100,0,0),
+(44825,5,5102.799,4197.651,-40.89795,100,0,0),
+(44829,1,4875.717,4250.202,-40.13281,100,0,0),
+(44829,2,4892.114,4204.521,-39.68836,100,0,0),
+(44829,3,4947.577,4217.527,-44.02172,100,0,0),
+(44829,4,4964.918,4270.733,-44.02172,100,0,0),
+(44829,5,4926.086,4306.289,-42.85502,100,0,0),
+(44829,6,4875.699,4285.236,-43.07725,100,0,0),
+(44837,1,4939.598,4139.068,-29.02286,100,0,0),
+(44837,2,4896.458,4173.998,-30.38411,100,0,0),
+(44837,3,4903.733,4207.013,-35.82854,100,0,0),
+(44837,4,4940.302,4233.117,-35.82854,100,0,0),
+(44837,5,4993.917,4224.557,-35.82854,100,0,0),
+(44837,6,4998.557,4176.309,-32.49517,100,0,0),
+(44837,7,4973.729,4146.288,-31.10626,100,0,0);
+DELETE FROM creature_spawn_data WHERE guid IN (44787,44825,44829,44837);
+INSERT INTO creature_spawn_data (guid, Id) VALUES (44787,1),(44825,1),(44829,1),(44837,1);
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
