@@ -20024,7 +20024,7 @@ DELETE FROM `pool_creature` WHERE `pool_entry` = 140;
 DELETE FROM `spawn_group` WHERE id = 32571;
 INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32571, 'Sholazar Basin - Serfex the Reaver 28083', 0, 1, 0, 0);
 DELETE FROM `spawn_group_spawn` WHERE id = 32571;
-INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32571, 111448, -1), (32571, 97159, -1), (32571, 97158, -1);
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (32571, 111448, -1), (32571, 97159, -1), (32571, 97158, -1), (32571, 97160, -1);
 DELETE FROM creature_addon WHERE guid IN(SELECT guid FROM creature WHERE id = 28085);
 DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28085));
 DELETE FROM `creature` WHERE `id` IN (28085);
@@ -20868,5 +20868,51 @@ INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orien
 (44837,7,4973.729,4146.288,-31.10626,100,0,0);
 DELETE FROM creature_spawn_data WHERE guid IN (44787,44825,44829,44837);
 INSERT INTO creature_spawn_data (guid, Id) VALUES (44787,1),(44825,1),(44829,1),(44837,1);
+
+INSERT INTO `trainer_greeting` (`Entry`, `Text`) VALUES
+(5032, 'With alchemy you can turn found herbs into healing and other types of potions.'),
+(5037, 'Engineering is very simple once you grasp the basics.'),
+(5038, 'Enchanting is the art of improving existing items through magic. '),
+(5040, 'Greetings!  Can I teach you how to turn beast hides into armor?'),
+(5041, 'Greetings!  Can I teach you how to turn found cloth into cloth armor?');
+
+DELETE FROM `gossip_menu_option` WHERE `menu_id` = 3701 AND `id` = 1;
+UPDATE `gossip_menu_option` SET `id` = '1', `action_menu_id` = '3702' WHERE `menu_id` =3701 AND `id` =2;
+DELETE FROM dbscripts_on_gossip WHERE `id` =370100;
+UPDATE `gossip_menu` SET `entry` = '3702' WHERE `entry` =50010 AND `text_id` =4533;
+UPDATE `gossip_menu_option` SET `menu_id` = '3702', `action_menu_id` = '3703' WHERE `menu_id` =50010 AND `id` =0;
+UPDATE `gossip_menu` SET `entry` = '3703' WHERE `entry` =50011 AND `text_id` =4534;
+UPDATE `gossip_menu_option` SET `menu_id` = '3703', `action_menu_id` = '3704' WHERE `menu_id` =50011 AND `id` =0;
+UPDATE `gossip_menu` SET `entry` = '3704' WHERE `entry` =50012 AND `text_id` =4535;
+UPDATE `gossip_menu_option` SET `menu_id` = '3704', `action_menu_id` = '3705' WHERE `menu_id` =50012 AND `id` =0;
+UPDATE `gossip_menu` SET `entry` = '3705' WHERE `entry` =50013 AND `text_id` =4536;
+
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = '6584' WHERE `Entry` =14524;
+DELETE FROM `conditions` WHERE `condition_entry` BETWEEN 4026 AND 4034;
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`) VALUES
+(4026, 8, 7635, 0, 0, 0, 0),
+(4027, 8, 7636, 0, 0, 0, 0),
+(4028, -1, 4027, 4026, 0, 0, 0),
+(4029, 2, 18707, 1, 0, 0, 0),
+(4030, 2, 18724, 1, 0, 0, 0),
+(4031, 2, 18715, 1, 0, 0, 1),
+(4032, -1, 4031, 4030, 4029, 4028, 0),
+(4033, 2, 18713, 1, 0, 0, 0),
+(4034, -1, 4033, 4031, 4028, 0, 0);
+DELETE FROM gossip_menu WHERE entry IN(6584);
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (6584, 7800, 0, 0);
+DELETE FROM gossip_menu_option WHERE menu_id IN (6584);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(6584, 0, 0, 'Greetings, ancient one. I have done all that has been asked of me. I now ask that you grant me Rhok''delar.', 10784, 1, 1, -1, 0, 658400, 0, 0, NULL, 0, 4032),
+(6584, 1, 0, 'Greetings, ancient one. I have done all that has been asked of me. I now ask that you grant me Lok''delar.', 10785, 1, 1, -1, 0, 658401, 0, 0, NULL, 0, 4034);
+DELETE FROM dbscripts_on_gossip WHERE id IN (658400,658401);
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(658400, 0, 17, 18724, 1, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Vartrus the Ancient - remove Enchanted Black Dragon Sinew'),
+(658400, 1, 17, 18707, 1, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Vartrus the Ancient - remove Ancient Rune Etched Stave'),
+(658400, 2, 17, 18713, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Vartrus the Ancient - Give Player Rhok''delar, Longbow of the Ancient Keepers'),
+(658401, 0, 17, 18713, 1, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Vartrus the Ancient - remove Rhok''delar, Longbow of the Ancient Keepers'),
+(658401, 1, 17, 18715, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Vartrus the Ancient - Give Player Lok''delar, Stave of the Ancient Keepers');
+UPDATE `quest_template` SET `PrevQuestId` = '7632' WHERE `entry` =7633;
+UPDATE `quest_template` SET `PrevQuestId` = '7633' WHERE `entry` IN (7634,7635,7636);
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
