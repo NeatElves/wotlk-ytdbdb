@@ -5685,3 +5685,33 @@ UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=11194,EmoteId1=0 WHERE Id
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=11195,EmoteId1=0 WHERE Id IN(20043);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=11200,EmoteId1=0 WHERE Id IN(20044);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=0,EmoteId1=53 WHERE Id IN(19059);
+
+-- 020X_doom_lord_kazzak.sql TBC
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11332,EmoteID1=0 WHERE Id IN(20076);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11333,EmoteID1=0 WHERE Id IN(20077);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11334,EmoteID1=0 WHERE Id IN(20078);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11335,EmoteID1=0 WHERE Id IN(20079);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11336,EmoteID1=0 WHERE Id IN(20080);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11337,EmoteID1=0 WHERE Id IN(20081);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11338,EmoteID1=0 WHERE Id IN(20082);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11339,EmoteID1=0 WHERE Id IN(20083);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11340,EmoteID1=0 WHERE Id IN(20084);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=0,EmoteID1=0 WHERE Id IN(15895); -- yes these two dont have sounds
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=0,EmoteID1=0 WHERE Id IN(16432);
+
+-- 0211_doomwalker.sql TBC
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11344,EmoteID1=0 WHERE Id IN(20941);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11345,EmoteID1=0 WHERE Id IN(20942);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11346,EmoteID1=0 WHERE Id IN(20943);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11347,EmoteID1=0 WHERE Id IN(20944);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11348,EmoteID1=0 WHERE Id IN(20945);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11349,EmoteID1=0 WHERE Id IN(20946);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11350,EmoteID1=0 WHERE Id IN(20947);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11351,EmoteID1=0 WHERE Id IN(20948);
+UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=11352,EmoteID1=0 WHERE Id IN(20949);
+
+-- 4915_FrenzyheartTribe_Quests.sql
+UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN (27831,27785,27738,27741);
+
+-- 4917_q.12570.sql
+UPDATE broadcast_text SET ChatTypeID = 1 WHERE `Id` = 27798;

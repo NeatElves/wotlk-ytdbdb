@@ -347,6 +347,13 @@ UPDATE `creature_ai_scripts` SET `creature_id` = '-85291' WHERE `id` =2807806;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-85294' WHERE `id` =2807807;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-23633' WHERE `id` =2807707;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-23564' WHERE `id` =2807708;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-45065' WHERE `id` =2821702;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-97051' WHERE `id` =2821703;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-81427' WHERE `id` =2821704;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-56791' WHERE `id` =2821705;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-56793' WHERE `id` =2821706;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-56792' WHERE `id` =2821707;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-87337' WHERE `id` =2830701;
 
 
 # Finall_Spell_UP
