@@ -5715,3 +5715,6 @@ UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN (27831,27785,27738,27741);
 
 -- 4917_q.12570.sql
 UPDATE broadcast_text SET ChatTypeID = 1 WHERE `Id` = 27798;
+
+-- 4919_q.12671.sql
+UPDATE `broadcast_text` SET `ChatTypeID`='3' WHERE `Id`='28756';
