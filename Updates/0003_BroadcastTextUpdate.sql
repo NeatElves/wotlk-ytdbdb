@@ -5718,3 +5718,12 @@ UPDATE broadcast_text SET ChatTypeID = 1 WHERE `Id` = 27798;
 
 -- 4919_q.12671.sql
 UPDATE `broadcast_text` SET `ChatTypeID`='3' WHERE `Id`='28756';
+
+-- 20230924151636_world.sql vmangos
+UPDATE `broadcast_text` SET `ChatTypeID`=1, `EmotesID`=1 WHERE `Id`=5748;
+UPDATE `broadcast_text` SET `ChatTypeID`=1, `EmotesID`=5 WHERE `Id`=5760;
+UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=5761;
+UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=5596;
+UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=5776;
+UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=5777;
+UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=5778;
