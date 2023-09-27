@@ -22128,4 +22128,11 @@ INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flag
 (26000, 'Shadowmoon Valley - Collidus the Warp-Watcher', 0, 1, 0, 0);
 INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (26000, 130866, -1), (26000, 131429, -1), (26000, 45102, -1), (26000, 45104, -1);
 
+DELETE FROM `spell_target_position` WHERE `id` = 29295;
+INSERT INTO `spell_target_position` (`id`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES (29295, 533, 3006.29, -3434.53, 293.882, 1.5708);
+
+UPDATE `creature_template` SET `NpcFlags` = 16385, `CreatureTypeFlags` = `CreatureTypeFlags`|2, `GossipMenuId` = 83, `UnitFlags` = 33536 WHERE `entry` IN (13056, 18153); -- npcflags 16385 tbc+
+REPLACE INTO `creature_template_addon` (`entry`, `auras`) VALUES (6491, '9036 10848'),(13056, '9036 10848'),(18153, '9036 10848');
+UPDATE `creature_template` SET `EquipmentTemplateId` = 0 WHERE `entry` IN (14490);
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------

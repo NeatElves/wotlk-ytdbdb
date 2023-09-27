@@ -378,6 +378,7 @@ UPDATE creature_template SET ScriptName='boss_murmur' WHERE entry=18708;
 UPDATE creature_template SET ScriptName='boss_grandmaster_vorpil' WHERE entry=18732;
 UPDATE creature_template SET ScriptName='boss_blackheart_the_inciter' WHERE entry=18667;
 UPDATE creature_template SET ScriptName='boss_ambassador_hellmaw' WHERE entry=18731;
+UPDATE creature_template SET ScriptName='npc_voidwalker_summoner' WHERE entry=19427;
 UPDATE creature_template SET ScriptName='npc_void_traveler' WHERE entry=19226;
 UPDATE creature_template SET ScriptName='dummy_blackheart_the_inciter' WHERE entry IN(19300,19301,19302,19303,19304);
 UPDATE gameobject_template SET ScriptName='go_screaming_hall_door' WHERE entry=183295;
@@ -3949,26 +3950,11 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 
 -- -1 269 000 OPENING OF THE DARK PORTAL (BLACK MORASS)
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1269000','Why do you persist? Surely you can see the futility of it all. It is not too late! You may still leave with your lives ...','10442','1','0','0','16821','temporus SAY_ENTER'),
-('-1269001','So be it ... you have been warned.','10444','1','0','0','16822','temporus SAY_AGGRO'),
-('-1269002','Time... sands of time is run out for you.','10443','1','0','0','16824','temporus SAY_BANISH'),
-('-1269003','You should have left when you had the chance.','10445','1','0','0','16825','temporus SAY_SLAY1'),
-('-1269004','Your days are done.','10446','1','0','0','16826','temporus SAY_SLAY2'),
-('-1269005','My death means ... little.','10447','1','0','0','16823','temporus SAY_DEATH'),
+('-1269000','Why do you persist? Surely you can see the futility of it all. It is not too late! You may still leave with your lives...','10442','1','0','0','16821','temporus SAY_ENTER'),
 
 ('-1269006','Why do you aid the Magus? Just think of how many lives could be saved if the portal is never opened, if the resulting wars could be erased ...','10412','1','0','0','16814','chrono_lord_deja SAY_ENTER'),
-('-1269007','If you will not cease this foolish quest, then you will die!','10414','1','0','0','16815','chrono_lord_deja SAY_AGGRO'),
-('-1269008','You have outstayed your welcome, Timekeeper. Begone!','10413','1','0','0','16817','chrono_lord_deja SAY_BANISH'),
-('-1269009','I told you it was a fool''s quest!','10415','1','0','0','16818','chrono_lord_deja SAY_SLAY1'),
-('-1269010','Leaving so soon?','10416','1','0','0','16819','chrono_lord_deja SAY_SLAY2'),
-('-1269011','Time ... is on our side.','10417','1','0','0','16816','chrono_lord_deja SAY_DEATH'),
 
-('-1269012','The time has come to shatter this clockwork universe forever! Let us no longer be slaves of the hourglass! I warn you: those who do not embrace the greater path shall become victims of its passing!','10400','1','0','0','16827','aeonus SAY_ENTER'),
-('-1269013','Let us see what fate lays in store...','10402','1','0','0','16828','aeonus SAY_AGGRO'),
-('-1269014','Your time is up, slave of the past!','10401','1','0','0','16829','aeonus SAY_BANISH'),
-('-1269015','One less obstacle in our way!','10403','1','0','0','16831','aeonus SAY_SLAY1'),
-('-1269016','No one can stop us! No one!','10404','1','0','0','16832','aeonus SAY_SLAY2'),
-('-1269017','It is only a matter...of time.','10405','1','0','0','16830','aeonus SAY_DEATH'),
+('-1269012','The time has come to shatter this clockwork universe forever! Let us no longer be slaves of the hourglass! I warn you: those who do not embrace this greater path shall become victims of its passing!','10400','1','0','0','16827','aeonus SAY_ENTER'),
 ('-1269018','REUSE ME','0','0','0','0','0','REUSE ME'),
 
 ('-1269019','Stop! Do not go any further, mortal. You are ill-prepared to face the forces of the Infinite Dragonflight. Come, let me help you.','0','0','0','0','17814','saat SAY_SAAT_WELCOME'),
@@ -4879,44 +4865,9 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 
 -- -1 545 000 THE STEAMVAULT
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1545000','Surge forth my pets!','10360','1','0','0','0','thespia SAY_SUMMON'),
-('-1545001','The depths will consume you!','10361','1','0','0','17696','thespia SAY_AGGRO_1'),
-('-1545002','Meet your doom, surface dwellers!','10362','1','0','0','17697','thespia SAY_AGGRO_2'),
-('-1545003','You will drown in blood!','10363','1','0','0','17698','thespia SAY_AGGRO_3'),
-('-1545004','To the depths of oblivion with you!','10364','1','0','0','17701','thespia SAY_SLAY_1'),
-('-1545005','For my lady and master!','10365','1','0','0','17702','thespia SAY_SLAY_2'),
-('-1545006','Our matron will be.. the end of.. you..','10366','1','0','0','17704','thespia SAY_DEAD'),
-
-('-1545007','I''m bringin'' the pain!','10367','1','0','0','17719','mekgineer SAY_MECHANICS'),
-('-1545008','You''re in for a world of hurt!','10368','1','0','0','0','mekgineer SAY_AGGRO_1'),
-('-1545009','Eat hot metal, scumbag!','10369','1','0','0','17717','mekgineer SAY_AGGRO_2'),
-('-1545010','I''ll come over there!','10370','1','0','0','17718','mekgineer SAY_AGGRO_3'),
-('-1545011','I''m bringin'' the pain!','10371','1','0','0','17719','mekgineer SAY_AGGRO_4'),
-('-1545012','You just got served, punk!','10372','1','0','0','17720','mekgineer SOUND_SLAY_1'),
-('-1545013','I own you!','10373','1','0','0','17721','mekgineer SOUND_SLAY_2'),
-('-1545014','Have fun dyin'', cupcake!','10374','1','0','0','17722','mekgineer SOUND_SLAY_3'),
-('-1545015','Mommy!','10375','1','0','0','832','mekgineer SAY_DEATH'),
-
-('-1545016','You deem yourselves worthy simply because you bested my guards? Our work here will not be compromised!','10390','1','0','0','17724','kalithresh SAY_INTRO'),
-('-1545017','This is not nearly over...','10391','1','0','0','17725','kalithresh SAY_REGEN'),
-('-1545018','Your head will roll!','10392','1','0','0','17726','kalithresh SAY_AGGRO1'),
-('-1545019','I despise all of your kind!','10393','1','0','0','17727','kalithresh SAY_AGGRO2'),
-('-1545020','Ba''ahntha sol''dorei!','10394','1','0','0','0','kalithresh SAY_AGGRO3'),
-('-1545021','Scram, surface filth!','10395','1','0','0','17729','kalithresh SAY_SLAY1'),
-('-1545022','Ah ha ha ha ha ha ha!','10396','1','0','0','0','kalithresh SAY_SLAY2'),
-('-1545023','For her Excellency... for... Vashj!','10397','1','0','0','17730','kalithresh SAY_DEATH'),
-
-('-1545024','Enjoy the storm, warm bloods!','0','1','0','0','19456','thespia SAY_CLOUD');
+('-1545000','Surge forth my pets!','10360','1','0','0','0','thespia SAY_SUMMON');
 
 -- -1 546 000 THE UNDERBOG
-INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1546000','I will end this quickly...','10385','1','0','0','17506','MUSELEK AGGRO_1'),
-('-1546001','We fight to the death!','10384','1','0','0','17505','MUSELEK AGGRO_2'),
-('-1546002','Acalah pek ecta!','10386','1','0','0','17507','MUSELEK AGGRO_3'),
-('-1546003','Beast! Obey me! Kill them at once!','10383','1','0','0','17511','MUSELEK COMMAND'),
-('-1546004','Krypta!','10387','1','0','0','17508','MUSELEK SLAY_1'),
-('-1546005','It is finished.','10388','1','0','0','17509','MUSELEK SLAY_2'),
-('-1546006','Well... done...','10389','1','0','0','17510','MUSELEK DEATH');
 
 -- -1 547 000 THE SLAVE PENS
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
@@ -5168,133 +5119,13 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 
 -- -1 555 000 SHADOW LABYRINTH
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1555000','Infidels have invaded the sanctuary! Sniveling pests...You have yet to learn the true meaning of agony!','10473','1','0','0','0','hellmaw SAY_INTRO'),
-('-1555001','Pathetic mortals! You will pay dearly!','10475','1','0','0','17860','hellmaw SAY_AGGRO1'),
-('-1555002','I will break you!','10476','1','0','0','17861','hellmaw SAY_AGGRO2'),
-('-1555003','Finally! Something to relieve the tedium!','10477','1','0','0','17863','hellmaw SAY_AGGRO3'),
-('-1555004','Aid me, you fools, before it''s too late!','10474','1','0','0','17859','hellmaw SAY_HELP'),
-('-1555005','Do you fear death?','10478','1','0','0','17864','hellmaw SAY_SLAY1'),
-('-1555006','This is the part I enjoy most.','10479','1','0','0','17865','hellmaw SAY_SLAY2'),
-('-1555007','Do not...grow...overconfident, mortal.','10480','1','0','0','17866','hellmaw SAY_DEATH'),
-
-('-1555008','All flesh must burn.','10482','1','0','0','0','blackhearth SAY_INTRO1'),
-('-1555009','All creation must be unmade!','10483','1','0','0','0','blackhearth SAY_INTRO2'),
-('-1555010','Power will be yours!','10484','1','0','0','0','blackhearth SAY_INTRO3'),
-('-1555011','You''ll be sorry!','10486','1','0','0','17563','blackhearth SAY_AGGRO1'),
-('-1555012','Time for fun!','10487','1','0','0','16433','blackhearth SAY_AGGRO2'),
-('-1555013','I see dead people!','10488','1','0','0','0','blackhearth SAY_AGGRO3'),
-('-1555014','No comin'' back for you!','10489','1','0','0','0','blackhearth SAY_SLAY1'),
-('-1555015','Nice try!','10490','1','0','0','19528','blackhearth SAY_SLAY2'),
-('-1555016','Help us, hurry!','10485','1','0','0','0','blackhearth SAY_HELP'),
-('-1555017','This... no... good...','10491','1','0','0','17569','blackhearth SAY_DEATH'),
-
-('-1555018','Be ready for Dark One''s return.','10492','1','0','0','0','blackhearth SAY2_INTRO1'),
-('-1555019','So we have place in new universe.','10493','1','0','0','0','blackhearth SAY2_INTRO2'),
-('-1555020','Dark one promise!','10494','1','0','0','0','blackhearth SAY2_INTRO3'),
-('-1555021','You''ll be sorry!','10496','1','0','0','17563','blackhearth SAY2_AGGRO1'),
-('-1555022','Time to kill!','10497','1','0','0','17565','blackhearth SAY2_AGGRO2'),
-('-1555023','You be dead people!','10498','1','0','0','0','blackhearth SAY2_AGGRO3'),
-('-1555024','Now you gone for good.','10499','1','0','0','17576','blackhearth SAY2_SLAY1'),
-('-1555025','You failed, haha haha','10500','1','0','0','0','blackhearth SAY2_SLAY2'),
-('-1555026','Help us, hurry!','10495','1','0','0','0','blackhearth SAY2_HELP'),
-('-1555027','Arrgh, aah...ahhh','10501','1','0','0','0','blackhearth SAY2_DEATH'),
-
-('-1555028','Keep your minds focused for the days of reckoning are close at hand. Soon, the destroyer of worlds will return to make good on his promise. Soon the destruction of all that is will begin!','10522','1','0','0','0','vorpil SAY_INTRO'),
-('-1555029','I''ll make an offering of your blood!','10524','1','0','0','17868','vorpil SAY_AGGRO1'),
-('-1555030','You''ll be a fine example, for the others.','10525','1','0','0','17869','vorpil SAY_AGGRO2'),
-('-1555031','Good, a worthy sacrifice.','10526','1','0','0','17870','vorpil SAY_AGGRO3'),
-('-1555032','Come to my aid, heed your master now!','10523','1','0','0','17867','vorpil SAY_HELP'),
-('-1555033','I serve with pride.','10527','1','0','0','17871','vorpil SAY_SLAY1'),
-('-1555034','Your death is for the greater cause!','10528','1','0','0','17872','vorpil SAY_SLAY2'),
-('-1555035','I give my life... Gladly.','10529','1','0','0','17873','vorpil SAY_DEATH'),
-
-('-1555036','%s draws energy from the air.','0','2','0','0','18799','murmur EMOTE_SONIC_BOOM');
+('-1555028','Keep your minds focused for the days of reckoning are close at hand. Soon, the destroyer of worlds will return to make good on his promise. Soon the destruction of all that is will begin!','10522','1','0','0','0','vorpil SAY_INTRO');
 
 -- -1 556 000 SETHEKK HALLS
-INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1556000','I have pets..<squawk>..of my own!','10502','1','0','0','17733','syth SAY_SUMMON'),
-('-1556001','Hrrmm.. Time to.. hrrm.. make my move.','10503','1','0','0','17734','syth SAY_AGGRO_1'),
-('-1556002','Nice pets..hrm.. Yes! <squawking>','10504','1','0','0','17735','syth SAY_AGGRO_2'),
-('-1556003','Nice pets have.. weapons. No so..<squawk>..nice.','10505','1','0','0','17736','syth SAY_AGGRO_3'),
-('-1556004','Death.. meeting life is.. <squawking>','10506','1','0','0','0','syth SAY_SLAY_1'),
-('-1556005','Uhn.. Be free..<squawk>','10507','1','0','0','17738','syth SAY_SLAY_2'),
-('-1556006','No more life..hrm. No more pain. <squawks weakly>','10508','1','0','0','17739','syth SAY_DEATH'),
-
-('-1556007','<squawk>..Trinkets yes pretty Trinkets..<squawk>..power, great power.<squawk>..power in Trinkets..<squawk>','10557','1','0','0','17769','ikiss SAY_INTRO'),
-('-1556008','You make war on Ikiss?..<squawk>','10554','1','0','0','17765','ikiss SAY_AGGRO_1'),
-('-1556009','Ikiss cut you pretty..<squawk>..slice you. Yes!','10555','1','0','0','17767','ikiss SAY_AGGRO_2'),
-('-1556010','No escape for..<squawk>..for you','10556','1','0','0','17768','ikiss SAY_AGGRO_3'),
-('-1556011','You die..<squawk>..stay away from Trinkets','10558','1','0','0','17763','ikiss SAY_SLAY_1'),
-('-1556012','<squawk>','10559','1','0','0','0','ikiss SAY_SLAY_2'),
-('-1556013','Ikiss will not..<squawk>..die','10560','1','0','0','17762','ikiss SAY_DEATH'),
-('-1556015','%s begins to channel arcane energy...','0','3','0','0','19738','ikiss EMOTE_ARCANE_EXP'),
-
-('-1556016','No! How can this be?','0','1','0','0','20797','anzu SAY_INTRO_1'),
-('-1556017','Pain will be the price for your insolence! You cannot stop me from claiming the Emerald Dream as my own!','0','1','0','0','20799','anzu SAY_INTRO_2'),
-('-1556018','Awaken, my children and assist your master!','0','1','0','0','20991','anzu SAY_BANISH'),
-('-1556019','Your magics shall be your undoing... ak-a-ak...','0','5','0','0','21015','anzu SAY_WHISPER_MAGIC_1'),
-('-1556020','%s returns to stone.','0','2','0','0','20980','anzu EMOTE_BIRD_STONE'),
-('-1556021','Your powers... ak-ak... turn against you...','0','5','0','0','21016','anzu SAY_WHISPER_MAGIC_2'),
-('-1556022','Your spells... ke-kaw... are weak magics... easy to turn against you...','0','5','0','0','21017','anzu SAY_WHISPER_MAGIC_3');
 
 -- -1 557 000 MANA TOMBS
-INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1557000','What is this? You must forgive me, but I was not expecting company. As you can see, we are somewhat preoccupied right now. But no matter. As I am a gracious host, I will tend to you... personally.','10539','1','0','0','17784','shaffar SAY_INTRO'),
-('-1557001','We have not yet been properly introduced.','10541','1','0','0','17780','shaffar SAY_AGGRO_1'),
-('-1557002','An epic battle. How exciting!','10542','1','0','0','17781','shaffar SAY_AGGRO_2'),
-('-1557003','I have longed for a good adventure.','10543','1','0','0','17782','shaffar SAY_AGGRO_3'),
-('-1557004','It has been... entertaining.','10544','1','0','0','17779','shaffar SAY_SLAY_1'),
-('-1557005','And now we part company.','10545','1','0','0','17778','shaffar SAY_SLAY_2'),
-('-1557006','I have such fascinating things to show you.','10540','1','0','0','17783','shaffar SAY_SUMMON'),
-('-1557007','I must bid you... farewell.','10546','1','0','0','17777','shaffar SAY_DEAD'),
-
-('-1557008','I will feed on your soul.','10561','1','0','0','17771','pandemonius SAY_AGGRO_1'),
-('-1557009','So... full of life!','10562','1','0','0','17772','pandemonius SAY_AGGRO_2'),
-('-1557010','Do not... resist.','10563','1','0','0','17773','pandemonius SAY_AGGRO_3'),
-('-1557011','Yes! I am... empowered!','10564','1','0','0','17774','pandemonius SAY_KILL_1'),
-('-1557012','More... I must have more!','10565','1','0','0','17775','pandemonius SAY_KILL_2'),
-('-1557013','To the void... once... more..','10566','1','0','0','17776','pandemonius SAY_DEATH'),
-('-1557014','%s shifts into the void...','0','3','0','0','21067','pandemonius EMOTE_DARK_SHELL'),
-
-('-1557015','This should''t take very long. Just watch my back as I empty these nether collectors.','0','0','0','0','17246','sha''heen SAY_ESCORT_START'),
-('-1557016','Fantastic! Let''s move on, shall we?','0','0','0','0','17248','sha''heen SAY_START'),
-('-1557017','Looking at these energy levels, Shaffar was set to make a killing!','0','0','0','28','17249','sha''heen SAY_FIRST_STOP'),
-('-1557018','That should do it...','0','0','0','0','17251','sha''heen SAY_FIRST_STOP_COMPLETE'),
-('-1557019','Hrm, now where is the next collector?','0','0','0','0','17252','sha''heen SAY_COLLECTOR_SEARCH'),
-('-1557020','Ah, there it is. Follow me, fleshling.','0','0','0','0','17254','sha''heen SAY_COLLECTOR_FOUND'),
-('-1557021','There can''t be too many more of these collectors. Just keep me safe as I do my job.','0','0','0','28','17255','sha''heen SAY_SECOND_STOP'),
-('-1557022','What do we have here? I thought you said the area was secure? This is now the third attack? If we make it out of here, I will definitely be deducting this from your reward. Now don''t just stand there, destroy them so I can get to that collector.','0','0','0','0','17256','sha''heen SAY_THIRD_STOP'),
-('-1557023','We''re close to the exit. I''ll let you rest for about thirty seconds, but then we''re out of here.','0','0','0','0','17258','sha''heen SAY_REST'),
-('-1557024','Are you ready to go?','0','0','0','0','17260','sha''heen SAY_READY_GO'),
-('-1557025','Ok break time is OVER. Let''s go!','0','0','0','0','17261','sha''heen SAY_BREAK_OVER'),
-('-1557026','Bravo! Bravo! Good show... I couldn''t convince you to work for me, could I? No, I suppose the needless slaughter of my employees might negatively impact your employment application.','0','1','0','0','17241','xiraxis SAY_SPAWN'),
-('-1557027','Your plan was a good one, Sha''heen, and you would have gotten away with it if not for one thing...','0','0','0','1','17243','xiraxis SAY_FINAL_STOP_1'),
-('-1557028','Oh really? And what might that be?','0','0','0','1','17263','sha''heen SAY_FINAL_STOP_2'),
-('-1557029','Never underestimate the other ethereal''s greed!','0','0','0','0','17244','xiraxis SAY_FINAL_STOP_3'),
-('-1557030','He was right, you know. I''ll have to take that tag-line for my own... It''s not like he''ll have a use for it anymore!','0','0','0','1','17264','sha''heen SAY_XIRAXIS_DEAD'),
-('-1557031','Thanks and good luck!','0','0','0','1','17265','sha''heen SAY_COMPLETE'),
-('-1557032','%s checks to make sure his body is intact.','0','2','0','0','17228','sha''heen EMOTE_TELEPORT'),
-('-1557033','You made it! Well done, $r. Now if you''ll excuse me, I have to get the rest of our crew inside.','0','0','0','1','17229','sha''heen SAY_SPAWN'),
-('-1557034','%s expertly manipulates the control panel.','0','2','0','28','17230','sha''heen EMOTE_PANEL'),
-('-1557035','Let''s not waste any time! Take anything that isn''t nailed down to the floor and teleport directly to Stormspire! Chop chop!','0','0','0','1','17231','sha''heen SAY_ESCORT_READY'),
-
-('-1557036','I... I am free! Ethereum were planning on torturing me until I gave in to their requests. I fear that, had you not come along, I would have surely given in to their torment.','0','0','0','1','20633','Ambassador SAY_RELEASED_1'),
-('-1557037','Know this, $r. Within Shaffar''s chambers at the end of these tombs rests a creature of unimaginable power. It is held in check by the power of the stasis chamber. You must return to Ameer before you venture further if you wish to destroy it!','0','0','0','1','20634','Ambassador SAY_RELEASED_2');
 
 -- -1 558 000 AUCHENAI CRYPTS
-INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1558000','You have defiled the resting place of our ancestors. For this offense, there can be but one punishment. It is fitting that you have come to a place of the dead... for you will soon be joining them.','10509','1','0','0','0','maladaar SAY_INTRO'),
-('-1558001','Rise my fallen brothers. Take form and fight!','10512','1','0','0','15466','maladaar SAY_SUMMON'),
-('-1558002','You will pay with your life!','10513','1','0','0','17647','maladaar SAY_AGGRO_1'),
-('-1558003','There''s no turning back now!','10514','1','0','0','17648','maladaar SAY_AGGRO_2'),
-('-1558004','Serve your penitence!','10515','1','0','0','17649','maladaar SAY_AGGRO_3'),
-('-1558005','Let your mind be clouded.','10510','1','0','0','17644','maladaar SAY_ROAR'),
-('-1558006','Stare into the darkness of your soul.','10511','1','0','0','17645','maladaar SAY_SOUL_CLEAVE'),
-('-1558007','These walls will be your doom.','10516','1','0','0','0','maladaar SAY_SLAY_1'),
-('-1558008','<laugh> Now, you''ll stay for eternity!','10517','1','0','0','0','maladaar SAY_SLAY_2'),
-('-1558009','This is... where.. I belong...','10518','1','0','0','17646','maladaar SAY_DEATH'),
-
-('-1558010','%s focuses on $N','0','3','0','0','21077','shirrak EMOTE_FOCUS');
 
 -- -1 560 000 ESCAPE FROM DURNHOLDE (OLD HILLSBRAD)
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
