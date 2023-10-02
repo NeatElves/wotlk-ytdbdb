@@ -5727,3 +5727,67 @@ UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=5596;
 UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=5776;
 UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=5777;
 UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=5778;
+
+-- 0207_bf_bct.sql TBC
+-- kelidan
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10164,EmoteId1=0 WHERE Id IN(15130);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10166,EmoteId1=0 WHERE Id IN(17673);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10167,EmoteId1=0 WHERE Id IN(17674);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10168,EmoteId1=0 WHERE Id IN(17675);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10169,EmoteId1=0 WHERE Id IN(17670);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10170,EmoteId1=0 WHERE Id IN(17671);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10165,EmoteId1=0 WHERE Id IN(15132);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10171,EmoteId1=0 WHERE Id IN(17672);
+-- broggok
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=0,EmoteId1=0 WHERE Id IN(14259);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=0,EmoteId1=0 WHERE Id IN(15115);
+-- maker
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10286,EmoteId1=0 WHERE Id IN(17679);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10287,EmoteId1=0 WHERE Id IN(17680);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10288,EmoteId1=0 WHERE Id IN(17681);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10289,EmoteId1=0 WHERE Id IN(17683);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10290,EmoteId1=0 WHERE Id IN(17684);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10291,EmoteId1=0 WHERE Id IN(17685);
+
+-- 0217_hfr_bct.sql TBC
+-- gargolmar
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=0,EmoteId1=0 WHERE Id IN(13999);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10329,EmoteId1=0 WHERE Id IN(17498);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10330,EmoteId1=0 WHERE Id IN(17499);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10331,EmoteId1=0 WHERE Id IN(17502);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10332,EmoteId1=0 WHERE Id IN(17503);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10333,EmoteId1=0 WHERE Id IN(17504);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10334,EmoteId1=0 WHERE Id IN(17500);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10335,EmoteId1=0 WHERE Id IN(17501);
+-- omor
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10280,EmoteId1=0 WHERE Id IN(17634);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10279,EmoteId1=0 WHERE Id IN(17633);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10281,EmoteId1=0 WHERE Id IN(17635);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10277,EmoteId1=0 WHERE Id IN(17637);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10278,EmoteId1=0 WHERE Id IN(17636);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10282,EmoteId1=0 WHERE Id IN(17631);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10284,EmoteId1=0 WHERE Id IN(17630);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10283,EmoteId1=0 WHERE Id IN(17632);
+-- vazruden
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10292,EmoteId1=0 WHERE Id IN(13981);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10294,EmoteId1=0 WHERE Id IN(17492);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10295,EmoteId1=0 WHERE Id IN(17493);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10296,EmoteId1=0 WHERE Id IN(17494);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10293,EmoteId1=0 WHERE Id IN(17491);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10297,EmoteId1=0 WHERE Id IN(17495);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10298,EmoteId1=0 WHERE Id IN(17496);
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10299,EmoteId1=0 WHERE Id IN(17497);
+UPDATE broadcast_text SET ChatTypeID=3,SoundEntriesID1=0,EmoteId1=0 WHERE Id IN(20472);
+
+-- 4930_q.12620.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 5 WHERE `Id` IN (28536);
+
+-- 4923_OracleTribe_Quests.sql
+UPDATE broadcast_text SET ChatTypeID = 1 WHERE `Id` IN (27893,27895);
+UPDATE broadcast_text SET ChatTypeID = 1 WHERE `Id` IN (28646,28647,28648,28649,28650);
+UPDATE broadcast_text SET ChatTypeID = 3 WHERE `Id` IN (33188); -- Artruis is shielded. You mus
+
+-- 4927_FrenzyheartOracle_Tribe_Daily_Quests.sql
+UPDATE broadcast_text SET ChatTypeID = 3 WHERE `Id` = 29005;
+UPDATE broadcast_text SET ChatTypeID = 3 WHERE `Id` IN (29005,28988);
+UPDATE broadcast_text SET ChatTypeID = 3 WHERE `Id` = 29003;

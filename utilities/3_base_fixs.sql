@@ -126,6 +126,15 @@ DELETE FROM `combat_condition` WHERE `Id` = 5102;
 DELETE FROM `combat_condition` WHERE `Id` = 5375;
 DELETE FROM `combat_condition` WHERE `Id` = 5376;
 
+# No WOTLK spell, log error
+DELETE FROM `spell_scripts` WHERE `Id` IN (19977,19978,19979,20162,20305,20306,20307,20308,21082,27144,27158);
+
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(2930501, 'Gundrak - Moorabi (Normal) - Troll Form', 0, 0),
+(2930502, 'Gundrak - Moorabi (Normal) - Mammoth Form', 0, 0),
+(3053001, 'Moorabi - Moorabi (Heroic) - Troll Form', 0, 0),
+(3053002, 'Moorabi - Moorabi (Heroic) - Mammoth Form', 0, 0);
+
 # My hack
 # а то только приседают и каст у двоих всего))
 DELETE FROM `creature_addon` WHERE `guid` IN (70741,70774,70775,70776);

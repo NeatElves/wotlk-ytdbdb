@@ -12521,7 +12521,7 @@ UPDATE creature_template SET SpellList = '1641201' WHERE entry = '16412';
 DELETE FROM creature_spell_list WHERE Id = 1641501;
 INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
 (1641501, 1, 32441, 0, 121, 0, 100, 0, 11000, 20000, 21000, 30000, "Skeletal Waiter - Brittle Bones - ATTACKING_TARGET_RANDOM - SELECT_FLAG_NOT_AURA");
-DELETE FROM creature_spell_list_entry WHERE Id = 1641101;
+DELETE FROM creature_spell_list_entry WHERE Id = 1641501;
 REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES (1641501, "Karazhan - Skeletal Waiter", 0, 0);
 UPDATE creature_template SET SpellList = '1641501' WHERE entry = '16415';
 DELETE FROM creature_spell_list WHERE Id = 1640801;
@@ -12541,7 +12541,7 @@ DELETE FROM creature_spell_list WHERE Id = 1640601;
 INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
 (1640601, 1, 29586, 0, 1, 0, 100, 0, 5000, 13000, 22000, 32000, "Phantom Attendant - Kick - on current"),
 (1640601, 2, 29587, 0, 201, 0, 100, 0, 9000, 20000, 30000, 35000, "Phantom Attendant - Shadow Rejuvantation - on missing 50% including self");
-DELETE FROM creature_spell_list_entry WHERE Id = 1641001;
+DELETE FROM creature_spell_list_entry WHERE Id = 1640601;
 REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES (1640601, "Karazhan - Phantom Attendant", 0, 0);
 UPDATE creature_template SET SpellList = '1640601' WHERE entry = '16406';
 DELETE FROM creature_spell_targeting WHERE Id IN (120, 121);
@@ -21818,6 +21818,7 @@ DELETE FROM dbscripts_on_spell WHERE id = 51156;
 INSERT INTO dbscripts_on_spell (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (51156,1,0,10,28253,60000,0,0,0,0,0,0,0,0,6196.975,4964.1,-80.53481,2.94960,'summon 28253 A'),
 (51156,1,1,10,28253,60000,1,0,0,0,0,0,0,0,6224.011,4944.437,-80.04568,4.904375,'summon 28253 B'),
+(51156,1,3,49,12537,1,0,0,0,0,0,0,0,0,0,0,0,0,'send sd2 script: weather change'),
 (51156,2,0,31,28273,20,0,0,0,0,0,0,0,0,0,0,0,0,'npc check'),
 (51156,100,0,15,51150,0,0,28273,30,7,0,0,0,0,0,0,0,0,'buddy selc cast 51150'),
 (51156,100,1,15,51172,0,0,28273,30,7,0,0,0,0,0,0,0,0,'buddy selc cast 51172'),
@@ -21825,7 +21826,8 @@ INSERT INTO dbscripts_on_spell (id, delay, priority, command, datalong, datalong
 (51156,201,0,7,12537,0,0,0,0,0,0,0,0,0,0,0,0,0,'Q credit'),
 (51156,1000,0,15,51150,0,0,28273,30,7,0,0,0,0,0,0,0,0,'buddy selc cast 51150'),
 (51156,1000,1,15,51172,0,0,28273,30,7,0,0,0,0,0,0,0,0,'buddy selc cast 51172'),
-(51156,2000,0,53,0,0,0,0,0,4,32574,0,0,0,0,0,0,0,'Set worldstate variable to 0');
+(51156,2000,0,53,0,0,0,0,0,4,32574,0,0,0,0,0,0,0,'Set worldstate variable to 0'),
+(51156,30000,3,49,12537,0,0,0,0,0,0,0,0,0,0,0,0,0,'send sd2 script: weather reset');
 DELETE FROM spell_script_target WHERE entry IN (51122,51172);
 INSERT INTO spell_script_target (`entry`, `type`, `targetEntry`, `inverseEffectMask`) VALUES (51122, 1, 28109, 0), (51122, 1, 28110, 0), (51122, 1, 28254, 0), (51172, 1, 28253, 0);
 UPDATE creature_template SET InhabitType = 4, UnitFlags = 33555200, MovementType = 3 WHERE entry IN (28253);
@@ -22134,5 +22136,448 @@ INSERT INTO `spell_target_position` (`id`, `target_map`, `target_position_x`, `t
 UPDATE `creature_template` SET `NpcFlags` = 16385, `CreatureTypeFlags` = `CreatureTypeFlags`|2, `GossipMenuId` = 83, `UnitFlags` = 33536 WHERE `entry` IN (13056, 18153); -- npcflags 16385 tbc+
 REPLACE INTO `creature_template_addon` (`entry`, `auras`) VALUES (6491, '9036 10848'),(13056, '9036 10848'),(18153, '9036 10848');
 UPDATE `creature_template` SET `EquipmentTemplateId` = 0 WHERE `entry` IN (14490);
+
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28877));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (28877));
+DELETE FROM `creature` WHERE `id` IN (28877);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(56539, 28877, 571, 1, 1, 5884.35, 6082.44, 60.8372, 0.04973, 300, 300, 0, 4),
+(56540, 28877, 571, 1, 1, 6097.14, 5934.57, 54.7383, 5.83213, 300, 300, 0, 4),
+(109307, 28877, 571, 1, 1, 6252.15, 5776.62, 45.3848, 2.53035, 300, 300, 0, 4),
+(109308, 28877, 571, 1, 1, 6357.01, 5816.03, 57.8074, 4.34298, 300, 300, 0, 4),
+(116912, 28877, 571, 1, 1, 5987.54, 5979.17, 55.0143, 0, 300, 300, 0, 4);
+INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orientation, waittime, scriptid) VALUES
+(116912,1,5987.537,5979.175,55.01433,100,2000,0),
+(116912,2,5964.441,5983.22,54.26162 ,100,0,0),
+(116912,3,5954.452,6000.104,57.37743,100,0,0),
+(116912,4,5934.518,6022.311,56.75243,100,0,0),
+(116912,5,5918.34,6034.6,57.7063,100,0,0),
+(116912,6,5916.51,6052.21,60.8565,100,2000,0),
+(56539,1 ,5884.35,6082.44,60.8372,100,2000,0),
+(56539,2 ,5871.952,6088.182,59.13168,100,0,0),
+(56539,3 ,5869.471,6120.908,57.42928,100,0,0),
+(56539,4 ,5858.89,6140.84,56.9659,100,0,0),
+(56539,5 ,5846.72,6156.9,53.4936 ,100,0,0),
+(56539,6 ,5838.92,6160.58,52.0675,100,0,0),
+(56539,7 ,5823.25,6163.98,54.0743,100,0,0),
+(56539,8 ,5799.76,6163.58,55.606 ,100,0,0),
+(56539,9 ,5780.1,6162.54,56.5089 ,100,0,0),
+(56539,10,5767.8,6163.21,58.4557 ,100,0,0),
+(56539,11,5761.96,6175.05,59.5124,100,2000,0),
+(109307,1 ,6252.148,5776.622,45.38485,100,2000,0),
+(109307,2 ,6293.148,5777.343,48.75985,100,0,0),
+(109307,3 ,6315.876,5766.052,49.57132,100,0,0),
+(109307,4 ,6336.806,5751.384,50.11419,100,0,0),
+(109307,5 ,6348.347,5729.963,51.1244 ,100,0,0),
+(109307,6 ,6352.221,5723,53.2494,100,0,0),
+(109307,7 ,6356.771,5710.609,53.6244 ,100,0,0),
+(109307,8 ,6367.198,5708.746,53.48195,100,0,0),
+(109307,9 ,6378.523,5698.505,53.12866,100,0,0),
+(109307,10,6390.501,5689.878,55.87866,100,2000,0),
+(109308,1,6357.009,5816.03,57.80745,100,2000,0),
+(109308,2,6340.655,5813.981,53.93245,100,0,0),
+(109308,3,6320.745,5808.393,53.33389,100,0,0),
+(109308,4,6287.545,5806.91,50.77678 ,100,0,0),
+(109308,5,6258.076,5804.292,46.60287,100,0,0),
+(109308,6,6251.218,5786.583,45.63485,100,0,0),
+(109308,7,6249.073,5756.687,48.08655,100,0,0),
+(109308,8,6252.708,5732.587,47.56175,100,2000,0),
+(56540,1,6097.143,5934.571,54.73834,100,2000,0),
+(56540,2,6132.959,5924.418,56.75366,100,0,0),
+(56540,3,6168.486,5921.835,56.97091,100,0,0),
+(56540,4,6191.149,5919.376,56.72091,100,0,0),
+(56540,5,6205.862,5912.272,53.4913,100,0,0),
+(56540,6,6223.819,5906.893,51.6163,100,2000,0);
+
+DELETE FROM conditions WHERE condition_entry IN (582);
+INSERT INTO conditions (condition_entry, type, value1, comments) VALUES
+(582, 1, 54189, 'Quest 12805: npc has aura');
+DELETE FROM dbscripts_on_spell WHERE id IN (54190);
+INSERT INTO dbscripts_on_spell (id, priority, command, datalong, data_flags, condition_id, comments) VALUES
+(54190, 0, 8, 29303, 0, 582, 'Quest 12805: kill credit'),
+(54190, 1, 14, 54189, 6, 582, 'Quest 12805: preventing reuse');
+
+DELETE FROM dbscripts_on_go_template_use WHERE id IN (190590);
+INSERT INTO dbscripts_on_go_template_use (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(190590,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'despawn');
+UPDATE gameobject SET spawntimesecsmin = 180, spawntimesecsmax = 180 WHERE id = 190590;
+
+UPDATE creature SET phasemask = 1 WHERE id IN (28538,28320);
+DELETE FROM dbscripts_on_event WHERE id IN (18719);
+INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(18719,0,31,28563,50,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(18719,10,0,0,0,0,28563,50,3,28536,0,0,0,0,0,0,0,'buddy Say'),
+(18719,11,15,51318,0,0,28563,50,2,0,0,0,0,0,0,0,0,'buddy cast 51318'),
+(18719,5000,15,51395,0,0,28563,50,2,0,0,0,0,0,0,0,0,'buddy cast 51395');
+DELETE FROM spell_script_target WHERE entry IN (51395);
+INSERT INTO spell_script_target VALUES (51395, 1, 28538, 0), (51395, 1, 28108, 0), (51395, 1, 28170, 0);
+UPDATE `creature` SET `phaseMask` = '3', `position_z` = '248.057', `spawntimesecsmin` = '180', `spawntimesecsmax` = '180' WHERE `guid` =128089;
+
+UPDATE creature_template SET SpeedWalk = 1.5, LootId = 0, SpellList=0 WHERE Entry = 28222;
+DELETE FROM creature_loot_template WHERE entry IN (28222);
+DELETE FROM creature_spell_list_entry WHERE Id IN (2822200);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES (2822200, 'Sholazar Basin - The Etymidian 28222 - Vehicle spells',0,0);
+DELETE FROM creature_spell_list WHERE Id IN (2822200);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(2822200,0,50978,0,0,0,100,0,0,0,0,0,'The Etymidian 28222 - Colossal Strike'),
+(2822200,1,50980,0,0,0,100,0,0,0,0,0,'The Etymidian 28222 - Cataclysm'),
+(2822200,2,50985,0,0,0,100,0,0,0,0,0,'The Etymidian 28222 - Reconstruction'),
+(2822200,3,50983,0,0,0,100,0,0,0,0,0,'The Etymidian 28222 - Titanic Surge'),
+(2822200,4,54166,0,0,0,100,0,0,0,0,0,'The Etymidian 28222 - Maker\'s Sanctuary');
+
+DELETE FROM `game_event_creature_data` WHERE `guid` IN (81716,81714,81715,54929,54930,54931,54932,81713,74566,74565,68332,68329,68323,68295,68293,68280,68159,68055,68053,67488,67483,67482,67450,51024,51026);
+
+UPDATE `gossip_menu_option` SET `id` = '5' WHERE `menu_id` =9742 AND `id` =6;
+UPDATE gossip_menu_option SET action_script_id = 974201, condition_id = 1326 WHERE menu_id = 9742 AND id = 1;
+UPDATE gossip_menu_option SET action_script_id = 974203, condition_id = 4071 WHERE menu_id = 9742 AND id = 3;
+UPDATE gossip_menu_option SET action_script_id = 974205, condition_id = 4076 WHERE menu_id = 9742 AND id = 5;
+DELETE FROM dbscripts_on_gossip WHERE id IN (974200,974202,974201,974203,974205);
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(974201,0,15,52547,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast Forceitem Lafoo'),
+(974201,1,17,38623,1,0,0,0,0x08,0,0,0,0,0,0,0,0,'Remove item from Player'),
+(974201,2,17,38624,1,0,0,0,0x08,0,0,0,0,0,0,0,0,'Remove item from Player'),
+(974203,0,15,52548,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast Forceitem Jaloot'),
+(974203,1,17,38624,1,0,0,0,0x08,0,0,0,0,0,0,0,0,'Remove item from Player'),
+(974203,2,17,38622,1,0,0,0,0x08,0,0,0,0,0,0,0,0,'Remove item from Player'),
+(974205,0,15,52549,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast Forceitem Moodle'),
+(974205,1,17,38622,1,0,0,0,0x08,0,0,0,0,0,0,0,0,'Remove item from Player'),
+(974205,2,17,38623,1,0,0,0,0x08,0,0,0,0,0,0,0,0,'Remove item from Player');
+DELETE FROM `conditions` WHERE `condition_entry` IN (1327,1328,1331,1326,1000,1001,586,1002,1330,1329,587,588);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES
+(586,9,12572,0,0,0,0,''),
+(587,19,12571,0,0,0,0,''),
+(588,-2,587,586,583,0,0,''),
+(1000,5,1105,5,0,0,0,''),
+(1001,-2,1000,588,0,0,0,''),
+(1002,23,38622,1,0,0,1,''),
+(1326,-1,1002,1001,0,0,0,''),
+(1327,8,12572,0,0,0,0,''),
+(1328,8,12573,0,0,0,0,''),
+(1329,8,12578,0,0,0,1,''),
+(1330,9,12578,0,0,0,1,''),
+(1331,-1,1330,1329,1328,1327,0,''),
+(4069,-2,1331,1000,0,0,0,''),
+(4070,23,38623,1,0,0,1,''),
+(4071,-1,4070,4069,0,0,0,''),
+(4072,8,12577,0,0,0,0,''),
+(4073,-1,589,4072,0,0,0,''),
+(4074,-2,4073,1000,0,0,0,''),
+(4075,23,38624,1,0,0,1,''),
+(4076,-1,4075,4074,0,0,0,'');
+DELETE FROM dbscripts_on_spell WHERE id IN (52547);
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(52547,0,15,53163,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(52547,100,15,51190,0,0,0,0,6,0,0,0,0,0,0,0,0,'');
+DELETE FROM spell_script_target WHERE entry IN (53163);
+INSERT INTO spell_script_target (`entry`, `type`, `targetEntry`, `inverseEffectMask`) VALUES
+(53163, 1, 28214, 0), (53163, 1, 28215, 0), (53163, 1, 28216, 0), (53163, 1, 28120, 0), (53163, 1, 28121, 0), (53163, 1, 28122, 0);
+DELETE FROM dbscript_random_templates WHERE `id` BETWEEN 20325 AND 20327;
+INSERT INTO dbscript_random_templates (id, `type`, target_id, chance, comments) VALUES
+(20325,0,28291,0,'Lafoo 28120 - Random OOC Say 1'),
+(20325,0,28292,0,'Lafoo 28120 - Random OOC Say 2'),
+(20325,0,28293,0,'Lafoo 28120 - Random OOC Say 3'),
+(20325,0,28294,0,'Lafoo 28120 - Random OOC Say 4'),
+(20325,0,28306,0,'Lafoo 28120 - Random OOC Say 5'),
+(20326,0,28276,0,'Lafoo 28120 - Random Say 1 (kill Venomtip 28358)'),
+(20326,0,28277,0,'Lafoo 28120 - Random Say 2 (kill Venomtip 28358)'),
+(20326,0,28278,0,'Lafoo 28120 - Random Say 3 (kill Venomtip 28358)'),
+(20326,0,28279,0,'Lafoo 28120 - Random Say 4 (kill Venomtip 28358)'),
+(20327,0,28265,0,'Lafoo 28120 - Random Say 1 (q.12572)'),
+(20327,0,28261,0,'Lafoo 28120 - Random Say 2 (q.12572)'),
+(20327,0,28266,0,'Lafoo 28120 - Random Say 3 (q.12572)'),
+(20327,0,28267,0,'Lafoo 28120 - Random Say 4 (q.12572)');
+INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4, flags, comments) VALUES
+(4077,37,28362,7,0,0,0,''), (4078,9,12572,1,0,0,0,''), (4079,-1,4078,4077,0,0,0,'');
+UPDATE quest_template SET RequiredCondition = 4080 WHERE entry IN (12574);
+INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4, flags, comments) VALUES (4080,-1,1328,1327,0,0,0,'');
+DELETE FROM dbscripts_on_quest_start WHERE id IN (12574);
+INSERT INTO dbscripts_on_quest_start (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(12574,1,0,17,38622,1,0,0,0,0x08,0,0,0,0,0,0,0,0,'Remove item from Player');
+UPDATE quest_template SET StartScript = 12574 WHERE entry = 12574;
+DELETE FROM dbscripts_on_spell WHERE id IN (52548);
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(52548,0,15,53163,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(52548,100,15,51191,0,0,0,0,6,0,0,0,0,0,0,0,0,'');
+DELETE FROM dbscript_random_templates WHERE `id` BETWEEN 20328 AND 20330;
+INSERT INTO dbscript_random_templates (id, `type`, target_id, chance, comments) VALUES
+(20328,0,28339,0,'Jaloot 28121 - Random OOC Say 1 (Rainspeaker)'),
+(20328,0,28340,0,'Jaloot 28121 - Random OOC Say 2 (Rainspeaker)'),
+(20328,0,28341,0,'Jaloot 28121 - Random OOC Say 3 (Rainspeaker)'),
+(20328,0,28342,0,'Jaloot 28121 - Random OOC Say 4 (Rainspeaker)'),
+(20328,0,28343,0,'Jaloot 28121 - Random OOC Say 5 (Rainspeaker)'),
+(20328,0,28344,0,'Jaloot 28121 - Random OOC Say 6 (Rainspeaker)'),
+(20328,0,28345,0,'Jaloot 28121 - Random OOC Say 7 (Rainspeaker)'),
+(20329,0,28346,0,'Jaloot 28121 - Random Respond Say 1 (kill Frenzyheart Spearbearer\Scavenger)'),
+(20329,0,28347,0,'Jaloot 28121 - Random Respond Say 2 (kill Frenzyheart Spearbearer\Scavenger)'),
+(20329,0,28348,0,'Jaloot 28121 - Random Respond Say 3 (kill Frenzyheart Spearbearer\Scavenger)'),
+(20329,0,28349,0,'Jaloot 28121 - Random Respond Say 4 (kill Frenzyheart Spearbearer\Scavenger)'),
+(20329,0,28350,0,'Jaloot 28121 - Random Respond Say 5 (kill Frenzyheart Spearbearer\Scavenger)'),
+(20329,0,28351,0,'Jaloot 28121 - Random Respond Say 6 (kill Frenzyheart Spearbearer\Scavenger)'),
+(20330,0,28315,0,'Jaloot 28121 - Random Respond Say 1 (Kill Tartek)'),
+(20330,0,28316,0,'Jaloot 28121 - Random Respond Say 2 (Kill Tartek)'),
+(20330,0,28317,0,'Jaloot 28121 - Random Respond Say 3 (Kill Tartek)'),
+(20330,0,28318,0,'Jaloot 28121 - Random Respond Say 4 (Kill Tartek)');
+DELETE FROM spell_area WHERE spell = 52217;
+INSERT INTO spell_area (spell, area, quest_start, quest_start_active, quest_end, condition_id, aura_spell, racemask, gender, autocast) VALUES
+(52217,4288,0,0,0,4081,0,0,2,1), (52217,4306,0,0,0,4081,0,0,2,1), (52217,4287,0,0,0,4081,0,0,2,1);
+INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4, flags, comments) VALUES (4081,5,1105,4,0,0,0,'');
+DELETE FROM dbscripts_on_relay WHERE id IN (20790);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20790,1,31,28399,100,0,0,0,0x08,0,0,0,0,0,0,0,0,'Part of Jaloot 28121 EAI: npc check'),
+(20790,10,31,28105,100,0,0,0,0x08,0,0,0,0,0,0,0,0,'Part of Jaloot 28121 EAI: npc check'),
+(20790,10,0,20330,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Jaloot 28121 EAI: Say');
+UPDATE creature_template SET UnitFlags = 33536, MovementType = 2 WHERE entry = 28399;
+DELETE FROM creature_movement_template WHERE entry = 28399;
+INSERT INTO creature_movement_template (Entry, PathId, Point, PositionX, PositionY, PositionZ, Orientation, WaitTime, ScriptId) VALUES
+(28399,0,1,6710.399,5162.64,-20.66248,100,0,0),
+(28399,0,2,6710.989,5148.311,-19.3981,100,0,0),
+(28399,0,3,6712.461,5136.462,-19.3981,100,100,3);
+DELETE FROM vehicle_accessory WHERE vehicle_entry = 28399;
+INSERT INTO vehicle_accessory (vehicle_entry, seat, accessory_entry, comment) VALUES (28399,0,28105,'Warlord Tartek on Zeptek the Destroyer');
+DELETE FROM dbscripts_on_creature_death WHERE id IN (28399);
+INSERT INTO dbscripts_on_creature_death (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(28399,1,31,28399,100,0,0,0,0x08,0,0,0,0,0,0,0,0,'npc check'),
+(28399,10,31,28105,100,0,0,0,0x08,0,0,0,0,0,0,0,0,'npc check'),
+(28399,100,27,8,0,0,190578,100,7|0x400,0,0,0,0,0,0,0,0,'unlock Go');
+DELETE FROM `creature` WHERE `guid` = 88586;
+UPDATE creature_template SET UnitFlags = 33536 WHERE entry = 28105;
+DELETE FROM dbscripts_on_relay WHERE id IN (20789);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20789,1,27,4,0,0,190578,100,7|0x400,0,0,0,0,0,0,0,0,'Part of Warlord Tartek 28105 EAI: lock Go'),
+(20789,2,0,0,0,0,0,0,0x04,27893,0,0,0,0,0,0,0,'Part of Warlord Tartek 28105 EAI: Say'),
+(20789,9000,14,46598,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Warlord Tartek 28105 EAI: Remove aura'),
+(20789,12000,0,0,0,0,0,0,0x04,27895,0,0,0,0,0,0,0,'Part of Warlord Tartek 28105 EAI: Say'),
+(20789,17000,48,768,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Warlord Tartek 28105 EAI: Remove UnitFlags'),
+(20789,17001,48,768,0,0,28399,30,7,0,0,0,0,0,0,0,0,'Part of Warlord Tartek 28105 EAI: buddy: Remove UnitFlags'),
+(20789,17002,35,5,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Warlord Tartek 28105 EAI: Send Event 5');
+DELETE FROM dbscripts_on_creature_death WHERE id IN (28105);
+INSERT INTO dbscripts_on_creature_death (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(28105,1,31,28399,100,0,0,0,0x08,0,0,0,0,0,0,0,0,'npc check'),
+(28105,10,31,28105,100,0,0,0,0x08,0,0,0,0,0,0,0,0,'npc check'),
+(28105,100,27,8,0,0,190578,100,7|0x400,0,0,0,0,0,0,0,0,'unlock Go');
+DELETE FROM vehicle_seat_addon WHERE SeatEntry=1682;
+INSERT INTO vehicle_seat_addon(SeatEntry, SeatOrientation, ExitParamX, ExitParamY, ExitParamZ, ExitParamO, ExitParamValue) VALUES
+(1682,0,6708.172,5130.744,-19.38803,4.836085,2);
+UPDATE gameobject SET spawntimesecsmin = 45, spawntimesecsmax = 45 WHERE id IN (190578);
+UPDATE quest_template SET RequiredCondition = 4084 WHERE entry IN (12577);
+INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4, flags, comments) VALUES
+(4082,8,12575,0,0,0,0,''), (4083,8,12576,0,0,0,0,''), (4084,-1,4083,4082,0,0,0,'');
+DELETE FROM dbscripts_on_quest_start WHERE id IN (12578);
+INSERT INTO dbscripts_on_quest_start (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(12578,1,0,17,38623,1,0,0,0,0x08,0,0,0,0,0,0,0,0,'Remove item from Player');
+UPDATE quest_template SET StartScript = 12578 WHERE entry = 12578;
+DELETE FROM dbscripts_on_spell WHERE id IN (52549);
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(52549,0,15,53163,0,0,0,0,0,0,0,0,0,0,0,0,0,''),
+(52549,100,15,51192,0,0,0,0,6,0,0,0,0,0,0,0,0,'');
+DELETE FROM dbscript_random_templates WHERE `id` BETWEEN 20331 AND 20333;
+INSERT INTO dbscript_random_templates (id, `type`, target_id, chance, comments) VALUES
+(20331,0,28393,0,'Moodle 28122 - Random OOC Say 1 (Rainspeaker)'),
+(20331,0,28394,0,'Moodle 28122 - Random OOC Say 2 (Rainspeaker)'),
+(20331,0,28395,0,'Moodle 28122 - Random OOC Say 3 (Rainspeaker)'),
+(20331,0,28396,0,'Moodle 28122 - Random OOC Say 4 (Rainspeaker)'),
+(20332,0,28397,0,'Moodle 28122 - Random OOC Say 1 (Mosswalker Village)'),
+(20332,0,28398,0,'Moodle 28122 - Random OOC Say 2 (Mosswalker Village)'),
+(20332,0,28399,0,'Moodle 28122 - Random OOC Say 3 (Mosswalker Village)'),
+(20332,0,28400,0,'Moodle 28122 - Random OOC Say 4 (Mosswalker Village)'),
+(20332,0,28401,0,'Moodle 28122 - Random OOC Say 5 (Mosswalker Village)'),
+(20332,0,28402,0,'Moodle 28122 - Random OOC Say 6 (Mosswalker Village)');
+UPDATE quest_template SET RequiredCondition = 4087 WHERE entry IN (12581);
+INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4, flags, comments) VALUES
+(4085,8,12579,0,0,0,0,''), (4086,8,12580,0,0,0,0,''), (4087,-1,4086,4085,0,0,0,'');
+DELETE FROM dbscripts_on_quest_start WHERE id IN (12581);
+INSERT INTO dbscripts_on_quest_start (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(12581,1,17,38624,1,0,0,0,0x08,0,0,0,0,0,0,0,0,'Remove item from Player'),
+(12581,2,15,53163,0,0,0,0,0,0,0,0,0,0,0,0,0,'');
+UPDATE quest_template SET StartScript = 12581 WHERE entry = 12581;
+DELETE FROM spell_script_target WHERE entry IN (52185);
+INSERT INTO spell_script_target (`entry`, `type`, `targetEntry`, `inverseEffectMask`) VALUES
+(52185, 1, 28667, 0), (52185, 1, 28668, 0), (52185, 1, 28659, 0);
+UPDATE creature_template SET Detection = 40 WHERE entry IN (28667,28668);
+UPDATE creature_template_addon SET auras = '50726 52119' WHERE entry = 28667;
+UPDATE creature_template_addon SET auras = 54176 WHERE entry = 28668;
+DELETE FROM dbscripts_on_relay WHERE id BETWEEN 20791 AND 20797;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20791,1,22,2036,1,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: temp faction'),
+(20791,2,48,512,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: Remove UnitFlag'),
+(20792,1,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: active'),
+(20792,2,22,250,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: Set default faction'),
+(20792,3,48,512,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: Add UnitFlag'),
+(20792,10,3,0,0,0,0,0,0x04,0,0,0,0,5616.917,3772.682,-94.25798,1.780236,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: Move'),
+(20792,10000,15,52182,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: Cast 52182'),
+(20792,10001,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: unactive'),
+(20793,1,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: active'),
+(20793,2,22,250,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: Set default faction'),
+(20793,3,48,512,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: Add UnitFlag'),
+(20793,10,3,0,0,0,0,0,0x04,0,0,0,0,5631.632,3794.364,-92.23675,3.455752,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: Move'),
+(20793,10000,15,52182,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: Cast 52182'),
+(20793,10001,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: unactive'),
+(20794,1,35,10,100,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Artruis the Heartless 28659 EAI: Send Event E'),
+(20794,10,41,0,0,0,28667,86572,7|0x10|0x40,0,0,0,0,0,0,0,0,'Part of Artruis the Heartless 28659 EAI: respawn buddy - event reset'),
+(20794,10,41,0,0,0,28668,86573,7|0x10|0x40,0,0,0,0,0,0,0,0,'Part of Artruis the Heartless 28659 EAI: respawn buddy - event reset'),
+(20795,1,31,28668,100,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: npc check'),
+(20795,10,35,10,100,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: send Event AI E'),
+(20796,1,31,28667,100,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: npc check'),
+(20796,10,35,11,100,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: send Event AI F'),
+(20797,1,0,0,0,0,0,0,0x04,28649,0,0,0,0,0,0,0,'Part of Artruis the Heartless 28659 EAI: Say'),
+(20797,2,0,0,0,0,0,0,0x04,33188,0,0,0,0,0,0,0,'Part of Artruis the Heartless 28659 EAI: Say');
+DELETE FROM gameobject WHERE id = 191086;
+UPDATE `creature` SET `phaseMask` = '3', `position_x` = '5616.92', `position_y` = '3772.68', `position_z` = '-94.258', `orientation` = '1.78024', `spawntimesecsmin` = '180', `spawntimesecsmax` = '180' WHERE `guid` =86572;
+UPDATE `creature` SET `phaseMask` = '3', `spawntimesecsmin` = '180', `spawntimesecsmax` = '180' WHERE `guid` =86573;
+
+UPDATE quest_template SET RequiredCondition = 4048, PrevQuestId = 0 WHERE entry = 12692;
+UPDATE quest_template SET RequiredCondition = 1000, PrevQuestId = 0 WHERE entry = 12695;
+DELETE FROM dbscripts_on_relay WHERE id BETWEEN 20798 AND 20799;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20798,1,29,2,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: Remove NpcFlags'),
+(20799,1,29,2,1,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Jaloot 28667/Zepik the Gorloc Hunter 28668 EAI: Add NpcFlags');
+UPDATE creature_loot_template SET ChanceorQuestChance = -100 WHERE item = 39265;
+DELETE FROM creature_loot_template WHERE entry IN (28116);
+UPDATE creature_template SET SpeedWalk = 2.4, SpeedRun = 1.714, RegenerateStats = 0, LootId = 0, VehicleTemplateId = 257, SpellList=0 WHERE Entry = 28116;
+DELETE FROM creature_spell_list_entry WHERE Id IN (2811600);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(2811600, 'Sholazar Basin - Kartak the Abominable 28116 - Vehicle spells',0,0);
+DELETE FROM creature_spell_list WHERE Id IN (2811600);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(2811600,0,52316,0,0,0,100,0,0,0,0,0,'Kartak the Abominable 28116 - Head Smash'),
+(2811600,1,52271,0,0,0,100,0,0,0,0,0,'Kartak the Abominable 28116 - Violent Crash'),
+(2811600,2,52311,0,0,0,100,0,0,0,0,0,'Kartak the Abominable 28116 - Furious Charge'),
+(2811600,3,52272,0,0,0,100,0,0,0,0,0,'Kartak the Abominable 28116 - Boulder Throw'),
+(2811600,5,52274,0,0,0,100,0,0,0,0,0,'Kartak the Abominable 28116 - Consume Gorloc');
+DELETE FROM spell_script_target WHERE entry IN (52271,52274,52305);
+INSERT INTO spell_script_target (`entry`, `type`, `targetEntry`, `inverseEffectMask`) VALUES
+(52271, 1, 28111, 0), (52271, 1, 28112, 0), (52274, 1, 28111, 0), (52274, 1, 28112, 0), (52305, 1, 28111, 0), (52305, 1, 28112, 0);
+DELETE FROM dbscripts_on_relay WHERE id IN (20800);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20800,10,34,4091,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Kartak the Abominable 28116/Soo-holu 28115 EAI: area check'),
+(20800,100,0,0,0,0,0,0,0,28988,0,0,0,0,0,0,0,'Part of Kartak the Abominable 28116/Soo-holu 28115 EAI: warning'),
+(20800,101,15,56966,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Part of Kartak the Abominable 28116/Soo-holu 28115 EAI: spell warning'),
+(20800,15000,34,4091,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Kartak the Abominable 28116/Soo-holu 28115 EAI: area check'),
+(20800,15100,14,46598,0,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Kartak the Abominable 28116/Soo-holu 28115 EAI: Player Drop');
+INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4) VALUES
+(4088,4,4288,0,0,0), (4089,4,4287,0,0,0), (4090,4,4289,0,0,0), (4091,-2,4090,4089,4088,0);
+DELETE FROM dbscripts_on_creature_death WHERE id IN (28111,28112);
+INSERT INTO dbscripts_on_creature_death (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) values
+(28111,1,21,0,0,0,0,0,4,0,0,0,0,0,0,0,0,'unactive'),
+(28111,2,18,30000,0,0,0,0,4,0,0,0,0,0,0,0,0,'despawn'),
+(28112,1,21,0,0,0,0,0,4,0,0,0,0,0,0,0,0,'unactive'),
+(28112,2,18,30000,0,0,0,0,4,0,0,0,0,0,0,0,0,'despawn');
+UPDATE `gameobject_template` SET `data6` = '-1', `data7` = '0' WHERE `entry` =191146;
+DELETE FROM dbscripts_on_quest_end WHERE id IN (12732);
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(12732,1,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(12732,2,29,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'NpcFlags Removed'),
+(12732,3,0,0,0,0,0,0,0,29247,0,0,0,0,0,0,0,''),
+(12732,4,1,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(12732,3000,15,52968,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(12732,7000,0,0,0,0,0,0,0,29248,0,0,0,0,0,0,0,''),
+(12732,7001,1,53,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(12732,10000,1,36,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(12732,13000,1,35,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(12732,16000,0,0,0,0,0,0,0,29249,0,0,0,0,0,0,0,''),
+(12732,16001,1,53,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(12732,16002,29,2,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'NpcFlags added'),
+(12732,16003,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+UPDATE quest_template SET CompleteScript = 12732 WHERE entry = 12732;
+DELETE FROM dbscripts_on_quest_end WHERE id IN (12758);
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(12758,1,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(12758,2,29,2,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'NpcFlags Removed'),
+(12758,1000,0,0,0,0,0,0,0,29460,0,0,0,0,0,0,0,''),
+(12758,1001,10,28139,40000,0,0,0,0,0,0,0,102,5258.08,4503.89,-85.3036,5.90333,'summon 28139'),
+(12758,1002,10,28139,40000,0,0,0,0,0,0,0,103,5266.56,4519.91,-84.6035,4.79278,'summon 28139'),
+(12758,10000,0,0,0,0,0,0,0,29463,0,0,0,0,0,0,0,''),
+(12758,10001,1,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(12758,12000,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,5.74,'move'),
+(12758,14001,1,35,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(12758,15000,15,53171,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'cast 53171'),
+(12758,17000,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,2.46,'move'),
+(12758,19000,0,0,0,0,0,0,0,29464,0,0,0,0,0,0,0,''),
+(12758,19001,1,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(12758,29000,0,0,0,0,0,0,0,29466,0,0,0,0,0,0,0,''),
+(12758,29001,1,35,0,0,0,0,0x04,0,0,0,0,0,0,0,0,''),
+(12758,35000,29,2,1,0,0,0,0x04,0,0,0,0,0,0,0,0,'NpcFlags added'),
+(12758,35001,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+UPDATE quest_template SET CompleteScript = 12758 WHERE entry = 12758;
+DELETE FROM creature_movement_template WHERE entry = 28139;
+INSERT INTO creature_movement_template (Entry, PathId, Point, PositionX, PositionY, PositionZ, Orientation, WaitTime, ScriptId) VALUES
+(28139,2,1,5264.68,4503.21,-84.6573,6.27482,23000,2813901),
+(28139,2,2,5264.68,4503.21,-84.6573,6.27482,100,0),
+(28139,2,3,5249.65,4501.64,-85.3437,100,100,1),
+(28139,3,1,5266.9,4506.43,-84.5008,5.08966,23000,2813902),
+(28139,3,2,5266.9,4506.43,-84.5008,5.08966,100,2813903),
+(28139,3,3,5262.55,4526.42,-84.5208,100,100,1);
+DELETE FROM dbscripts_on_creature_movement WHERE id BETWEEN 2813901 AND 2813903;
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(2813901,1,0,0,0,0,0,0,0x04,29461,0,0,0,0,0,0,0,'say'),
+(2813902,1,0,0,0,0,0,0,0x04,29462,0,0,0,0,0,0,0,'say'),
+(2813903,1,0,0,0,0,0,0,0x04,29465,0,0,0,0,0,0,0,'say');
+UPDATE creature_template SET UnitFlags = 33554432 WHERE Entry = 29116;
+DELETE FROM dbscript_random_templates WHERE `id` = 20327;
+INSERT INTO dbscript_random_templates (id, `type`, target_id, chance, comments) VALUES
+(20327,0,28265,0,'Lafoo 28120 - Random Say 1 (q.12572 & q.12704)'),
+(20327,0,28261,0,'Lafoo 28120 - Random Say 2 (q.12572 & q.12704)'),
+(20327,0,28266,0,'Lafoo 28120 - Random Say 3 (q.12572 & q.12704)'),
+(20327,0,28267,0,'Lafoo 28120 - Random Say 4 (q.12572 & q.12704)');
+INSERT INTO conditions (condition_entry, type, value1, value2, value3, value4, flags, comments) VALUES
+(4092,9,12704,1,0,0,0,''), (4093,-2,4092,4078,0,0,0,''), (4094,-1,4093,4077,0,0,0,'');
+UPDATE creature_template SET MinLevel = 80, MaxLevel = 80 WHERE Entry IN (29125,29126,29127);
+UPDATE creature_template SET SpeedWalk = 1, SpeedRun = 1.289, RegenerateStats = 14, SpellList=0 WHERE Entry = 28999;
+UPDATE creature_template SET MinLevel =80, MaxLevel = 80, SpeedWalk = 1, SpeedRun = 1.289, RegenerateStats = 14 WHERE Entry = 28985;
+DELETE FROM creature_spell_list_entry WHERE Id IN (2899900,2899901);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(2899900, 'Sholazar Basin - Haiphoon, the Great Tempest 28999 - Water Form Vehicle spells',0,0),
+(2899901, 'Sholazar Basin - Haiphoon, the Great Tempest 28999 - Air Form Vehicle spells',0,0);
+DELETE FROM creature_spell_list WHERE Id IN (2899900,2899901);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(2899900,0,61375,0,0,0,100,0,0,0,0,0,'Haiphoon, the Great Tempest - Water Bolt'),
+(2899900,1,61376,0,0,0,100,0,0,0,0,0,'Haiphoon, the Great Tempest - Frost Nova'),
+(2899900,2,52862,0,0,0,100,0,0,0,0,0,'Haiphoon, the Great Tempest - Devour Wind'),
+(2899900,5,52869,0,0,0,100,0,0,0,0,0,'Haiphoon, the Great Tempest - Evocation'),
+(2899901,0,61374,0,0,0,100,0,0,0,0,0,'Haiphoon, the Great Tempest - Lightning Bolt'),
+(2899901,1,52870,0,0,0,100,0,0,0,0,0,'Haiphoon, the Great Tempest - Windshear'),
+(2899901,2,52864,0,0,0,100,0,0,0,0,0,'Haiphoon, the Great Tempest - Devour Water'),
+(2899901,5,52869,0,0,0,100,0,0,0,0,0,'Haiphoon, the Great Tempest - Evocation');
+UPDATE creature_loot_template SET ChanceorQuestChance = -100 WHERE item = 39266;
+UPDATE `gameobject` SET `position_x` = '5110.54', `position_y` = '5466.71', `position_z` = '-91.8355', `orientation` = '1.58118', `rotation2` = '0.710767', `rotation3` = '0.703427',
+`spawntimesecsmin` = '180', `spawntimesecsmax` = '180' WHERE `guid` =47299;
+UPDATE creature_template SET SpeedWalk = 2.4, SpeedRun = 1.714, RegenerateStats = 14, LootId = 0, VehicleTemplateId = 257, SpellList=0 WHERE Entry = 28115;
+DELETE FROM creature_loot_template WHERE entry IN (28115);
+DELETE FROM creature_spell_list_entry WHERE Id IN (2811500);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES (2811500, 'Sholazar Basin - Soo-holu 28115 - Vehicle spells',0,0);
+DELETE FROM creature_template_spells WHERE entry = 28115;
+DELETE FROM creature_spell_list WHERE Id IN (2811500);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(2811500,0,52331,0,0,0,100,0,0,0,0,0,'Soo-holu 28115 - Wide Swipe'),
+(2811500,1,52358,0,0,0,100,0,0,0,0,0,'Soo-holu 28115 - Swift Paws'),
+(2811500,2,53032,0,0,0,100,0,0,0,0,0,'Soo-holu 28115 - Flurry of Claws'),
+(2811500,5,52321,0,0,0,100,0,0,0,0,0,'Soo-holu 28115 - Perseverance of the Gods');
+
+DELETE FROM dbscripts_on_quest_end WHERE id IN (11961);
+INSERT INTO dbscripts_on_quest_end (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(11961,1,10,24765,20000,0,0,0,8,0,0,0,1,2857.64,4706.33,28.8486,3.16056,'summon Spirit of Issliruk'),
+(11961,2,49,11961,1,0,0,0,0,0,0,0,0,0,0,0,0,'Send SD2 Script: weather change'),
+(11961,10,0,0,0,0,0,0,0,25615,0,0,0,0,0,0,0,''),
+(11961,9000,31,26403,100,0,0,0,0,0,0,0,0,0,0,0,0,'terminate if not found'),
+(11961,10000,0,0,0,0,26403,100,3,25614,0,0,0,0,0,0,0,''),
+(11961,30000,49,11961,0,0,0,0,0,0,0,0,0,0,0,0,0,'Send SD2 Script: weather reset');
+
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(153501, 'Tirisfal Glades - Scarlet Warrior', 0, 0),
+(454301, 'Scarlet Monastery - Bloodmage Thalnos (4543)', 0, 75),
+(1451702, 'High Priestess Jeklik - Phase 2', 0, 0),
+(1468201, 'Shadowfang Keep - Sever', 0, 0),
+(1468601, 'Razorfen Downs - Lady Falther''ess', 0, 0),
+(1469701, 'Scourge Invasion - Lumbering Horror', 0, 0),
+(1574001, 'Silithus - Colossus of Zora', 0, 0),
+(1574101, 'Silithus - Colossus of Regal', 0, 0),
+(1574201, 'Silithus - Colossus of Ashi', 0, 0),
+(1614101, 'Scourge Invasion - Ghoul Berserker', 0, 0),
+(1629801, 'Scourge Invasion - Spectral Soldier', 0, 0),
+(1629901, 'Scourge Invasion - Skeletal Shocktrooper', 0, 0),
+(1637901, 'Scourge Invasion - Spirit of the Damned (16379)', 0, 75),
+(1638001, 'Scourge Invasion - Bone Witch (16380)', 0, 75),
+(1643801, 'Scourge Invasion - Skeletal Trooper', 0, 0),
+(2135001, 'Gruuls''Lair - Gronn Priest', 0, 0);
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -301,6 +301,7 @@ UPDATE `creature_ai_scripts` SET `event_param6` =3517 WHERE `event_type` =10 AND
 UPDATE `creature_ai_scripts` SET `event_param6` =3539 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20287;
 UPDATE `creature_ai_scripts` SET `event_param2` =3555 WHERE `event_type` =22 AND `event_param2` =9011 AND `event_param3` =0;
 UPDATE `creature_ai_scripts` SET `event_param2` =2373 WHERE `event_type` =22 AND `event_param2` =2460 AND `event_param3` =0;
+UPDATE `creature_ai_scripts` SET `event_param6` =4094 WHERE `event_type` =10 AND `event_param5` =1 AND `event_param6` =20641;
 # cond UDB type 6
 UPDATE `creature_ai_scripts` SET `event_param2` =340 WHERE `event_type` =22 AND `event_param2` =22 AND `event_param3` =0;
 UPDATE `creature_ai_scripts` SET `event_param2` =273 WHERE `event_type` =22 AND `event_param2` =21 AND `event_param3` =0;
@@ -354,6 +355,7 @@ UPDATE `creature_ai_scripts` SET `creature_id` = '-56791' WHERE `id` =2821705;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-56793' WHERE `id` =2821706;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-56792' WHERE `id` =2821707;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-87337' WHERE `id` =2830701;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-82026' WHERE `id` =2811307;
 
 
 # Finall_Spell_UP
