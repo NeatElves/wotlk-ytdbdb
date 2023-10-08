@@ -24346,4 +24346,6 @@ UPDATE creature_template SET SpellList=2899900 WHERE entry IN(28999);
 UPDATE creature_template SET SpellList=2899901 WHERE entry IN(28985);
 DELETE FROM creature_template_spells WHERE entry IN(28999);
 
+DELETE FROM `creature_template_spells` WHERE `entry` in (15931,28931,29304,29307,29573,29278,29373,31370,28222);
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
