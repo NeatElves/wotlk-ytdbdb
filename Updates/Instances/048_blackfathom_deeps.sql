@@ -94,8 +94,8 @@ INSERT INTO `creature_addon` (`guid`, `mount`, `stand_state`, `sheath_state`, `e
 
 REPLACE INTO `creature_template_addon` (`entry`, `mount`, `stand_state`, `sheath_state`, `emote`, `moveflags`, `auras`) VALUES
 (4787, 0, 7, 1, 0, 0, NULL), -- Argent Guard Thaelrid
-(4789, 0, 0, 1, 0, 0, '7939 22766'), -- Fallenroot Rogue
-(4798, 0, 0, 1, 0, 0, '7939 22766'), -- Fallenroot Shadowstalker
+(4789, 0, 0, 1, 0, 0, NULL), -- Fallenroot Rogue
+(4798, 0, 0, 1, 0, 0, NULL), -- Fallenroot Shadowstalker
 (4799, 0, 0, 1, 0, 0, NULL), -- Fallenroot Hellcaller
 (4805, 0, 0, 1, 0, 0, '12544'), -- Blackfathom Sea Witch
 (4807, 0, 0, 1, 0, 0, NULL), -- Blackfathom Myrmidon
@@ -340,9 +340,10 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+210, 4832, 48, -818.832, -155.576, -25.7923, 4.74729, 86400, 86400, 0, 0), -- Twilight Lord Kelris
 (@CGUID+211, 4887, 48, -442.424, 211.822, -52.6367, 2.23402, 86400, 86400, 0, 0), -- Ghamoo-ra
 (@CGUID+212, 6243, 48, -412.653, 40.919, -48.1363, 4.31096, 86400, 86400, 0, 0), -- Gelihast
-(@CGUID+213, 12902, 48, -455.93, -39.96, -32.5239, 2.5, 86400, 86400, 0, 0), -- Lorgus Jett
-(@CGUID+214, 12902, 48, -474.22, -86.95, -39.87, 2.98, 86400, 86400, 0, 0), -- Lorgus Jett
-(@CGUID+215, 12902, 48, -622.355, -10.3501, -22.777, 4.90438, 86400, 86400, 0, 0); -- Lorgus Jett
+(@CGUID+213, 12902, 48, -455.844, -40.2594, -32.3325, 2.68781, 86400, 86400, 0, 0), -- Lorgus Jett
+(@CGUID+214, 12902, 48, -475.542, -87.0594, -40.0059, 2.96706, 86400, 86400, 0, 0), -- Lorgus Jett
+(@CGUID+215, 12902, 48, -622.355, -10.3501, -22.777, 4.90438, 86400, 86400, 0, 0), -- Lorgus Jett
+(@CGUID+216, 12902, 48, -764.025, 4.23592, -28.7869, 6.12611, 86400, 86400, 0, 0); -- Lorgus Jett
 
 -- ===========
 -- GAMEOBJECTS

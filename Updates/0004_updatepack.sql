@@ -8490,72 +8490,73 @@ INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orien
 
 UPDATE creature_template SET StaticFlags1=StaticFlags1|0x80000000, StaticFlags3=StaticFlags3&~(0x00000400|0x00000800) WHERE StaticFlags3&(0x00000400|0x00000800);
 
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Shadowfang Keep - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=33;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Wailing Caverns - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=43;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Blackfathom deeps - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=48;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Uldaman - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=70;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Gnomeregan - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=90;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Sunken Temple - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=109;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Scarlet Monastery - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=189;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Zul''Farrak - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=209;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Blackrock Spire - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=229;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Blackrock Depths - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=230;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Onyxia''s Lair - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=249;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Caverns of Time - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=269;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Scholomance - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=289;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Zul''gurub - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=309;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Stratholme - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=329;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Maraudon - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=349;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Molten Core - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=409;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Dire Maul - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=429;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Blackwing Lair - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=469;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Shadowfang Keep - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=33;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Wailing Caverns - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=43;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Blackfathom deeps - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=48;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Uldaman - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=70;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Gnomeregan - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=90;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Sunken Temple - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=109;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Scarlet Monastery - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=189;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Zul''Farrak - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=209;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Blackrock Spire - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=229;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Blackrock Depths - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=230;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Onyxia''s Lair - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=249;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Caverns of Time - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=269;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Scholomance - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=289;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Zul''gurub - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=309;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Stratholme - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=329;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Maraudon - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=349;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Molten Core - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=409;
+DELETE FROM worldstate_name WHERE Id IN(4676);
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Dire Maul - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=429;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Blackwing Lair - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=469;
 DELETE FROM worldstate_name WHERE Id IN(4823);
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Temple of Ahn''Qiraj - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=531;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Karazahn - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=532;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Naxxramas - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=533;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Battle for Mount Hyjal - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=534;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Shattered Halls - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=540;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Blood Furnace - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=542;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Steamvault - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=545;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Underbog - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=546;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Slave Pens - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=547;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Serpentshrine Cavern - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=548;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Eye - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=550;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Arcatraz - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=552;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Botanica - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=553;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Mechanar - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=554;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Shadow Labyrinth - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=555;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Sethekk Halls - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=556;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Mana-Tombs - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=557;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Auchenai Crypts - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=558;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Escape From Durnholde - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=560;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Black Temple - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=564;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Zul''Aman - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=568;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Utgarde Keep - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=574;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Utgarde Pinnacle - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=575;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Nexus - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=576;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Oculus - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=578;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Sunwell Plateau - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=580;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Magisters Terrace - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=585;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Culling of Stratholme - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=595;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Halls of Stone - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=599;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Drak''Tharon Keep - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=600;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Azjol-Nerub - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=601;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Halls of Lightning - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=602;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Ulduar - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=603;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Gun''drak', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=604;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Violet Hold - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=608;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Obsidian Sanctum - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=615;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Eye of Eternity - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=616;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Ahn''kahet: The Old Kingdom', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=619;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Vault of Archavon - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=624;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Icecrown Citadel - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=631;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Forge of Souls - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=632;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Trial of the Crusader - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=649;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Trial of the Champion - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=650;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Pit of Saron - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=658;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Halls of Reflection - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=668;
-INSERT INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Ruby Sanctum - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=724;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Temple of Ahn''Qiraj - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=531;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Karazahn - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=532;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Naxxramas - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=533;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Battle for Mount Hyjal - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=534;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Shattered Halls - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=540;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Blood Furnace - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=542;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Steamvault - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=545;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Underbog - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=546;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Slave Pens - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=547;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Serpentshrine Cavern - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=548;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Eye - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=550;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Arcatraz - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=552;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Botanica - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=553;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Mechanar - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=554;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Shadow Labyrinth - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=555;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Sethekk Halls - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=556;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Mana-Tombs - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=557;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Auchenai Crypts - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=558;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Escape From Durnholde - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=560;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Black Temple - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=564;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Zul''Aman - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=568;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Utgarde Keep - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=574;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Utgarde Pinnacle - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=575;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Nexus - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=576;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Oculus - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=578;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Sunwell Plateau - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=580;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Magisters Terrace - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=585;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Culling of Stratholme - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=595;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Halls of Stone - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=599;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Drak''Tharon Keep - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=600;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Azjol-Nerub - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=601;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Halls of Lightning - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=602;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Ulduar - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=603;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Gun''drak', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=604;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Violet Hold - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=608;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Obsidian Sanctum - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=615;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Eye of Eternity - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=616;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Ahn''kahet: The Old Kingdom', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=619;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Vault of Archavon - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=624;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Icecrown Citadel - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=631;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Forge of Souls - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=632;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Trial of the Crusader - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=649;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Trial of the Champion - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=650;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Pit of Saron - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=658;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('Halls of Reflection - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=668;
+REPLACE INTO worldstate_name(Id,Name) SELECT CompleteWorldStateID, CONCAT('The Ruby Sanctum - ', EncounterName) FROM instance_dungeon_encounters a WHERE CompleteWorldStateID>0 AND NOT EXISTS(SELECT b.CompleteWorldStateID FROM instance_dungeon_encounters b WHERE a.Id!=b.Id AND a.CompleteWorldStateID= b.CompleteWorldStateID AND a.Difficulty<b.Difficulty) AND MapId=724;
 
 SET @SGUID := 352;
 DELETE FROM `creature` WHERE `id` IN (5984,5988);
@@ -17214,49 +17215,46 @@ DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` wher
 DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (20290));
 DELETE FROM `creature` WHERE `id` IN (20290);
 INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
-(62782, 20290, 530, 1, 1, -232.206, 6466.26, -0.278613, 0.777807, 300, 300, 5, 1),
-(62794, 20290, 530, 1, 1, -154.111, 6376.03, -0.755271, 2.55342, 300, 300, 5, 1),
-(62796, 20290, 530, 1, 1, -178.216, 6390.65, 0.86008, 1.65491, 300, 300, 5, 1),
-(62813, 20290, 530, 1, 1, -83.4408, 6387.81, -0.862951, 4.17969, 300, 300, 5, 1),
-(62816, 20290, 530, 1, 1, -103.79, 6348.69, 2.60425, 3.19633, 300, 300, 5, 1),
-(62818, 20290, 530, 1, 1, -102.428, 6408.82, 5.92301, 2.75927, 300, 300, 5, 1),
-(62819, 20290, 530, 1, 1, -57.9373, 6412.23, 5.40697, 1.87556, 300, 300, 5, 1),
-(62825, 20290, 530, 1, 1, -19.1908, 6442.52, -0.05731, 3.50409, 300, 300, 5, 1),
-(18670, 20290, 530, 1, 1, -65.5415, 6517.99, 5.40517, 3.39408, 300, 300, 5, 1),
-(18935, 20290, 530, 1, 1, -14.7724, 6480.81, 4.904, 2.39075, 300, 300, 5, 1),
-(18937, 20290, 530, 1, 1, -32.0699, 6522.96, 0.21646, 0.396896, 300, 300, 5, 1),
-(20694, 20290, 530, 1, 1, -56.9423, 6558.39, -3.60951, 3.44404, 300, 300, 5, 1),
-(20905, 20290, 530, 1, 1, -16.8008, 6586.29, -0.535019, 3.06834, 300, 300, 5, 1),
-(20966, 20290, 530, 1, 1, -83.2591, 6549.65, -2.9716, 5.05249, 300, 300, 5, 1),
-(21311, 20290, 530, 1, 1, -159.189, 6507.1, 7.03071, 0.651077, 300, 300, 5, 1),
-(21382, 20290, 530, 1, 1, -110.37, 6559.98, -8.7739, 0.25011, 300, 300, 5, 1),
-(21513, 20290, 530, 1, 1, -190.78, 6478.6, -9.23664, 6.13121, 300, 300, 5, 1),
-(21514, 20290, 530, 1, 1, -216.868, 6528.88, -21.2461, 1.00826, 300, 300, 5, 1),
-(21709, 20290, 530, 1, 1, -167.728, 6517.44, -26.9271, 3.24445, 300, 300, 5, 1),
-(21715, 20290, 530, 1, 1, -137.461, 6573.73, -23.0423, 0.413864, 300, 300, 5, 1),
-(39722, 20290, 530, 1, 1, -217.201, 6563.34, -6.74847, 1.87432, 300, 300, 5, 1),
-(41520, 20290, 530, 1, 1, -179.045, 6554.44, -26.7192, 3.15622, 300, 300, 5, 1),
-(41544, 20290, 530, 1, 1, -282.881, 6518.09, -3.19221, 5.67046, 300, 300, 5, 1),
-(41554, 20290, 530, 1, 1, -255.649, 6487.46, -2.29405, 1.18847, 300, 300, 5, 1),
-(41599, 20290, 530, 1, 1, -278.077, 6543.93, -1.36819, 5.48121, 300, 300, 5, 1),
-(41645, 20290, 530, 1, 1, -344.065, 6590.37, 5.17625, 2.58527, 300, 300, 5, 1),
-(41647, 20290, 530, 1, 1, -307.194, 6545.22, 2.4193, 3.33018, 300, 300, 5, 1),
-(41660, 20290, 530, 1, 1, -273.004, 6562.75, 6.51428, 4.78078, 300, 300, 5, 1),
-(41668, 20290, 530, 1, 1, -344.51, 6637.53, 7.51439, 2.99569, 300, 300, 5, 1),
-(41672, 20290, 530, 1, 1, -296.266, 6679.86, 7.77864, 5.55607, 300, 300, 5, 1),
-(41674, 20290, 530, 1, 1, -289.733, 6700.89, -1.87424, 3.84267, 300, 300, 5, 1),
-(41686, 20290, 530, 1, 1, -266.563, 6724.25, 5.0026, 2.01449, 300, 300, 5, 1),
-(41733, 20290, 530, 1, 1, -288.465, 6708.42, -0.993145, 4.08698, 300, 300, 5, 1),
-(41754, 20290, 530, 1, 1, -184.649, 6625.93, -20.9569, 1.91019, 300, 300, 5, 1),
-(41769, 20290, 530, 1, 1, -165.442, 6650.11, -15.5606, 0.015624, 300, 300, 5, 1),
-(41776, 20290, 530, 1, 1, -186.854, 6690.46, 7.10815, 4.79448, 300, 300, 5, 1),
-(41790, 20290, 530, 1, 1, -126.208, 6617.95, -26.1449, 3.13967, 300, 300, 5, 1),
-(41809, 20290, 530, 1, 1, -91.2219, 6653.28, -2.76204, 1.80719, 300, 300, 5, 1),
-(41885, 20290, 530, 1, 1, -115.508, 6684.65, -1.15517, 4.52189, 300, 300, 5, 1),
-(41925, 20290, 530, 1, 1, -27.6026, 6617.15, -1.07921, 6.21967, 300, 300, 5, 1),
-(41936, 20290, 530, 1, 1, -145.105, 6710.53, -0.231815, 0.358809, 300, 300, 5, 1),
-(41950, 20290, 530, 1, 1, -183.563, 6740.15, 6.83739, 1.34027, 300, 300, 5, 1),
-(41978, 20290, 530, 1, 1, -227.939, 6753.31, 2.82639, 3.01918, 300, 300, 5, 1);
+(62782, 20290, 530, 1, 1, -344.51, 6637.53, 7.51439, 2.99569, 300, 300, 5, 1),
+(62794, 20290, 530, 1, 1, -344.065, 6590.37, 5.17625, 2.58527, 300, 300, 5, 1),
+(62796, 20290, 530, 1, 1, -307.194, 6545.22, 2.4193, 3.33018, 300, 300, 5, 1),
+(62813, 20290, 530, 1, 1, -296.266, 6679.86, 7.77864, 5.55607, 300, 300, 5, 1),
+(62816, 20290, 530, 1, 1, -282.881, 6518.09, -3.19221, 5.67046, 300, 300, 5, 1),
+(62818, 20290, 530, 1, 1, -278.077, 6543.93, -1.36819, 5.48121, 300, 300, 5, 1),
+(62819, 20290, 530, 1, 1, -273.004, 6562.75, 6.51428, 4.78078, 300, 300, 5, 1),
+(62825, 20290, 530, 1, 1, -266.563, 6724.25, 5.0026, 2.01449, 300, 300, 5, 1),
+(18670, 20290, 530, 1, 1, -255.649, 6487.46, -2.29405, 1.18847, 300, 300, 5, 1),
+(18935, 20290, 530, 1, 1, -232.206, 6466.26, -0.278613, 0.777807, 300, 300, 5, 1),
+(18937, 20290, 530, 1, 1, -227.939, 6753.31, 2.82639, 3.01918, 300, 300, 5, 1),
+(20694, 20290, 530, 1, 1, -217.201, 6563.34, -6.74847, 1.87432, 300, 300, 5, 1),
+(20905, 20290, 530, 1, 1, -216.868, 6528.88, -21.2461, 1.00826, 300, 300, 5, 1),
+(20966, 20290, 530, 1, 1, -190.78, 6478.6, -9.23664, 6.13121, 300, 300, 5, 1),
+(21311, 20290, 530, 1, 1, -184.649, 6625.93, -20.9569, 1.91019, 300, 300, 5, 1),
+(21382, 20290, 530, 1, 1, -183.563, 6740.15, 6.8843, 1.34027, 300, 300, 5, 1),
+(21513, 20290, 530, 1, 1, -179.045, 6554.44, -26.7192, 3.15622, 300, 300, 5, 1),
+(21514, 20290, 530, 1, 1, -178.216, 6390.65, 0.86008, 1.65491, 300, 300, 5, 1),
+(21709, 20290, 530, 1, 1, -167.728, 6517.44, -5.759, 3.24445, 300, 300, 5, 1),
+(21715, 20290, 530, 1, 1, -165.442, 6650.11, -15.5606, 0.015624, 300, 300, 5, 1),
+(39722, 20290, 530, 1, 1, -159.189, 6507.1, 7.03071, 0.651077, 300, 300, 5, 1),
+(41520, 20290, 530, 1, 1, -154.111, 6376.03, -0.755271, 2.55342, 300, 300, 5, 1),
+(41544, 20290, 530, 1, 1, -145.105, 6710.53, -0.231815, 0.358809, 300, 300, 5, 1),
+(41554, 20290, 530, 1, 1, -137.461, 6573.73, -23.0423, 0.413864, 300, 300, 5, 1),
+(41599, 20290, 530, 1, 1, -126.208, 6617.95, -26.1449, 3.13967, 300, 300, 5, 1),
+(41645, 20290, 530, 1, 1, -115.508, 6684.65, -1.15517, 4.52189, 300, 300, 5, 1),
+(41647, 20290, 530, 1, 1, -110.37, 6559.98, -8.7739, 0.25011, 300, 300, 5, 1),
+(41660, 20290, 530, 1, 1, -103.79, 6348.69, 2.60425, 3.19633, 300, 300, 5, 1),
+(41668, 20290, 530, 1, 1, -102.428, 6408.82, 5.92301, 2.75927, 300, 300, 5, 1),
+(41672, 20290, 530, 1, 1, -91.2219, 6653.28, -2.76204, 1.80719, 300, 300, 5, 1),
+(41674, 20290, 530, 1, 1, -83.4408, 6387.81, -0.862951, 4.17969, 300, 300, 5, 1),
+(41686, 20290, 530, 1, 1, -83.2591, 6549.65, 3.9164, 5.05249, 300, 300, 5, 1),
+(41733, 20290, 530, 1, 1, -65.5415, 6517.99, 5.40517, 3.39408, 300, 300, 5, 1),
+(41754, 20290, 530, 1, 1, -57.9373, 6412.23, 5.40697, 1.87556, 300, 300, 5, 1),
+(41769, 20290, 530, 1, 1, -56.9423, 6558.39, -3.60951, 3.44404, 300, 300, 5, 1),
+(41776, 20290, 530, 1, 1, -32.0699, 6522.96, 0.21646, 0.396896, 300, 300, 5, 1),
+(41790, 20290, 530, 1, 1, -27.6026, 6617.15, -1.07921, 6.21967, 300, 300, 5, 1),
+(41809, 20290, 530, 1, 1, -19.1908, 6442.52, -0.05731, 3.50409, 300, 300, 5, 1),
+(41885, 20290, 530, 1, 1, -16.8008, 6586.29, -0.535019, 3.06834, 300, 300, 5, 1),
+(41925, 20290, 530, 1, 1, -14.7724, 6480.81, 4.904, 2.39075, 300, 300, 5, 1);
 
 UPDATE `creature_template` SET `UnitFlags` = '33536' WHERE `Entry` =5088;
 UPDATE `creature` SET `position_x` = '-3717.31', `position_y` = '-4547.4', `orientation` = '0.383972', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =27532;
@@ -18836,15 +18834,15 @@ SET @OGUID := 375;
 DELETE FROM `dbscripts_on_quest_end` WHERE id = '10825';
 INSERT INTO dbscripts_on_quest_end(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
 (10825,0,0,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Tree Warden Chawn - Set Active'),
-(10825,0,1,10,22233,41000,0,0,0,0,8,0,0,0,0,2976.34, 5476.4487, 143.22585, 4.956735,0,0,'Tree Warden Chawn - Spawn Unsuspecting Leafbeard'), -- 19:51:02.309
-(10825,4000,0,10,22232,38000,1,0,0,8,0,0,0,0,0,2978.0886, 5493.5645, 143.23648, 4.5280657,0,0,'Tree Warden Chawn - Spawn Grishna Arakkoa'),  -- 19:51:06.354
-(10825,7000,0,10,22240,34000,0,0,0,8,0,0,0,0,0,2975.7708, 5484.842, 145.37312, 4.7822022,0,0,'Tree Warden Chawn - Spawn Leafbeard Flavor Event Channel Bunny'), -- 19:51:09.582
-(10825,7000,1,10,22246,34000,0,0,0,8,0,0,0,0,0,2975.6836, 5485.0806, 143.31775, 5.3407073,0,0,'Tree Warden Chawn - Spawn Leafbeard Flavor Event Particle Bunny'), -- 19:51:09.582
+(10825,0,1,10,22233,41000,0,0,0,0,8,0,0,0,0,2976.34, 5476.4487, 143.22585, 4.956735,0,0,'Tree Warden Chawn - Spawn Unsuspecting Leafbeard'),
+(10825,4000,0,10,22232,38000,1,0,0,8,0,0,0,0,0,2978.0886, 5493.5645, 143.23648, 4.5280657,0,0,'Tree Warden Chawn - Spawn Grishna Arakkoa'),
+(10825,7000,0,10,22240,34000,0,0,0,8,0,0,0,0,0,2975.7708, 5484.842, 145.37312, 4.7822022,0,0,'Tree Warden Chawn - Spawn Leafbeard Flavor Event Channel Bunny'),
+(10825,7000,1,10,22246,34000,0,0,0,8,0,0,0,0,0,2975.6836, 5485.0806, 143.31775, 5.3407073,0,0,'Tree Warden Chawn - Spawn Leafbeard Flavor Event Particle Bunny'),
 (10825,7000,2,9,@OGUID,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Tree Warden Chawn - Respawn Grishnath Orb'),
 (10825,11000,0,36,0,0,0,22233,10,1,0,0,0,0,0,0,0,0,0,0,0,'Tree Warden Chawn - Face Unsuspecting Leafbeard'),
-(10825,11000,1,0,0,0,0,0,0,0,19934,0,0,0,0,0,0,0,0,0,0,'Tree Warden Chawn - Say Text'), -- 19:51:13.784
-(10825,13000,0,10,22235,23000,1,0,0,8,0,0,0,0,0,2975.679, 5485.071, 143.31743, 4.790736,0,0,'Tree Warden Chawn - Spawn Evil Koi-Koi'), -- 19:51:15.239 
-(10825,34000,0,0,0,0,0,0,0,0,19935,0,0,0,0,0,0,0,0,0,0,'Tree Warden Chawn - Say Text'), -- 19:51:38.317
+(10825,11000,1,0,0,0,0,0,0,0,19934,0,0,0,0,0,0,0,0,0,0,'Tree Warden Chawn - Say Text'),
+(10825,13000,0,10,22235,23000,1,0,0,8,0,0,0,0,0,2975.679, 5485.071, 143.31743, 4.790736,0,0,'Tree Warden Chawn - Spawn Evil Koi-Koi'),
+(10825,34000,0,0,0,0,0,0,0,0,19935,0,0,0,0,0,0,0,0,0,0,'Tree Warden Chawn - Say Text'),
 (10825,34000,1,0,0,0,0,22233,10,7,19958,0,0,0,0,0,0,0,0,0,0,'Unsuspecting Leafbeard - Say EmotedText'),
 (10825,36000,0,36,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Unsuspecting Leafbeard - Reset Facing'),
 (10825,36000,1,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Tree Warden Chawn - Remove Active');
@@ -18870,7 +18868,7 @@ INSERT INTO dbscripts_on_creature_movement(id, delay, priority, command, datalon
 (2223501,2000,0,36,0,0,0,22232,10,0,0,0,0,0,0,0,0,0,0,0,0,'Evil Koi-Koi - Face Grishna Arakkoa');
 UPDATE `creature` SET `position_z` = '143.841', `orientation` = '1.22173', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =60892;
 DELETE FROM gameobject WHERE guid = @OGUID;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES 
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
 (@OGUID, 185185, 530, 1,2975.6748, 5485.0854, 143.23366,1.6929693, 0, 0, 0.7489557, 0.66262007, -10, -10);
 INSERT INTO `spell_script_target` (`entry`, `type`, `targetEntry`) VALUES (38632, 1, 21983),(38632, 1, 22007),(38632, 1, 22233);
 DELETE FROM creature WHERE id = 22233;
@@ -20837,7 +20835,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position
 (45061, 28086, 571, 1, 1, 5016.3, 4076.92, -19.0441, 0.295422, 300, 300, 0, 0),
 (45062, 28086, 571, 1, 1, 5102.55, 4173.97, -74.2918, 5.3058, 300, 300, 0, 0);
 DELETE FROM creature_addon WHERE guid IN (118049,118050,118051,118052,118053,118054,118055,118056);
-INSERT INTO creature_addon (guid, mount, stand_state, sheath_state, pvp_flags, emote, moveflags, auras) VALUES 
+INSERT INTO creature_addon (guid, mount, stand_state, sheath_state, pvp_flags, emote, moveflags, auras) VALUES
 (118049,0,0,0,0,0,0,'29266'), (118050,0,0,0,0,0,0,'29266'), (118051,0,0,0,0,0,0,'29266'), (118052,0,0,0,0,0,0,'29266'),
 (118053,0,0,0,0,0,0,'29266'), (118054,0,0,0,0,0,0,'29266'), (118055,0,0,0,0,0,0,'29266'), (118056,0,0,0,0,0,0,'29266');
 DELETE FROM creature_movement WHERE Id IN (44787,44825,44829,44837);
@@ -21360,7 +21358,7 @@ INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orien
 (45069,8 ,5255.849,4362.517,-98.74365,100,0,0),
 (45069,9 ,5269.49,4327.42,-98.3275   ,100,0,0),
 (45069,10,5289.21,4331.16,-101.741   ,100,0,0),
-(45069,11,5304.441,4340.862,-106.7479,100,0,0), 
+(45069,11,5304.441,4340.862,-106.7479,100,0,0),
 (45069,12,5296.062,4364.173,-106.1307,100,0,0),
 (45069,13,5271.2,4380.41,-96.74683   ,100,0,0),
 (45069,14,5284.727,4395.864,-96.74683,100,0,0),
@@ -21564,7 +21562,7 @@ DELETE FROM `spawn_group` WHERE id = 32572;
 INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (32572, 'Sholazar Basin - Chicken Escapee 28161 x5 - Patrol 1', 0, 0, 0, 0);
 DELETE FROM `spawn_group_spawn` WHERE id = 32572;
 INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES
-(32572, 45092, 0), (32572, 45093, 1), (32572, 45094, 2), (32572, 45090, 3), (32572, 49018, 4); 
+(32572, 45092, 0), (32572, 45093, 1), (32572, 45094, 2), (32572, 45090, 3), (32572, 49018, 4);
 DELETE FROM `spawn_group_formation` WHERE id = 32572;
 INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
 (32572, 0, 2, 0, 32572, 4, 'Sholazar Basin - Sapphire Hive Drone 28085 x3 - Patrol 30');
@@ -22133,7 +22131,7 @@ INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (26000, 130866, 
 DELETE FROM `spell_target_position` WHERE `id` = 29295;
 INSERT INTO `spell_target_position` (`id`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES (29295, 533, 3006.29, -3434.53, 293.882, 1.5708);
 
-UPDATE `creature_template` SET `NpcFlags` = 16385, `CreatureTypeFlags` = `CreatureTypeFlags`|2, `GossipMenuId` = 83, `UnitFlags` = 33536 WHERE `entry` IN (13056, 18153); -- npcflags 16385 tbc+
+UPDATE `creature_template` SET `NpcFlags` = 16385, `CreatureTypeFlags` = `CreatureTypeFlags`|2, `GossipMenuId` = 83, `UnitFlags` = 33536 WHERE `entry` IN (13056, 18153);
 REPLACE INTO `creature_template_addon` (`entry`, `auras`) VALUES (6491, '9036 10848'),(13056, '9036 10848'),(18153, '9036 10848');
 UPDATE `creature_template` SET `EquipmentTemplateId` = 0 WHERE `entry` IN (14490);
 
@@ -22579,5 +22577,1773 @@ INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `C
 (1638001, 'Scourge Invasion - Bone Witch (16380)', 0, 75),
 (1643801, 'Scourge Invasion - Skeletal Trooper', 0, 0),
 (2135001, 'Gruuls''Lair - Gronn Priest', 0, 0);
+
+DELETE FROM spell_bonus_data WHERE entry=58621;
+INSERT INTO spell_bonus_data(entry,ap_bonus,comments) VALUES (58621, 0.08, 'Death Knight - Glyph of Chains of Ice');
+
+DELETE FROM command WHERE name IN('debug dbscript','debug dbscripttargeted','debug dbscriptsourced','debug dbscriptguided');
+INSERT INTO command(name, security, help) VALUES
+('debug dbscript',3,'.debug dbscript\r\n\r\nStarts dbscript type param0 id param1 from player(source) to selected(target)'),
+('debug dbscripttargeted',3,'.debug dbscript\r\n\r\nStarts dbscript type param0 id param1 from selected(source) to param2 dbguid(target creature)'),
+('debug dbscriptsourced',3,'.debug dbscript\r\n\r\nStarts dbscript type param0 id param1 from param2 dbguid(source creature) to selected(target)'),
+('debug dbscriptguided',3,'.debug dbscript\r\n\r\nStarts dbscript type param0 id param1 from param2 dbguid(source creature) to param3 dbguid(target creature)');
+
+UPDATE creature_template SET SpellList = 2293001 WHERE entry=22930;
+DELETE FROM creature_spell_list_entry WHERE Id IN(2293001);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES (2293001, 'MT - Yor', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(2293001);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('2293001', '0', '36405', '0', '721', '101', '0', '100', '1','15000','15000','20000','20000', 'Yor - Stomp - If one target in melee at least'),
+('2293001', '1', '38361', '0', '-1', '101', '0', '100', '1','8000','8000','9000','14000', 'Yor - Double Breath');
+
+DELETE FROM creature_spell_targeting WHERE Id IN(105,106);
+INSERT INTO creature_spell_targeting(Id, Type, Param1, Param2, Param3, UnitCondition, Comments) VALUES
+('105', '1', '0', '0', '2', '-1', 'Attack - random player mana user'),
+('106', '1', '0', '1', '2', '-1', 'Attack - random player non tank mana user');
+UPDATE creature_template SET SpellList = 2303501 WHERE entry=23035;
+DELETE FROM creature_spell_list_entry WHERE Id IN(2303501);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES (2303501, 'SH - Anzu - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(2303501);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('2303501', '0', '40199', '0', '-1', '1', '0', '100', '1','9000','10000','10000','20000', 'Anzu - Flesh Rip on Current'),
+('2303501', '1', '40184', '0', '-1', '0', '0', '100', '1','23000','23000','31000','35000', 'Anzu - Screech'),
+('2303501', '2', '40303', '0', '-1', '105', '0', '100', '1','17000','17000','24000','40000', 'Anzu - Spell Bomb on Random mana user'),
+('2303501', '3', '40321', '0', '-1', '101', '0', '100', '1','5000','5000','21000','21000', 'Anzu - Cyclone on Random non tank'),
+('2303501', '4', '40279', '0', '-1', '101', '0', '100', '1','10000','10000','20000','20000', 'Anzu - Dive on Random non tank');
+
+UPDATE creature_template SET SpellList = 1866701 WHERE entry=18667;
+UPDATE creature_template SET SpellList = 2063701 WHERE entry=20637;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1866701,2063701);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1866701, 'SL - Blackheart the Inciter - Normal', 0, 0),
+(2063701, 'SL - Blackheart the Inciter - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1866701,2063701);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1866701', '0', '33676', '0', '105', '0', '0', '100', '10','18000','24000','52000','60000', 'Blackheart the Inciter - Incite Chaos'),
+('1866701', '1', '33709', '0', '-1', '108', '0', '100', '10','30000','50000','26000','44000', 'Blackheart the Inciter - Charge on Random non tank not in melee'),
+('1866701', '2', '33707', '0', '-1', '0', '0', '100', '5','10000','14000','15000','30000', 'Blackheart the Inciter - War Stomp'),
+('2063701', '0', '33676', '0', '105', '0', '0', '100', '10','12000','17000','52000','60000', 'Blackheart the Inciter - Incite Chaos'),
+('2063701', '1', '33709', '0', '-1', '108', '0', '100', '10','30000','50000','26000','44000', 'Blackheart the Inciter - Charge on Random non tank not in melee'),
+('2063701', '2', '33707', '0', '-1', '0', '0', '100', '5','10000','14000','15000','30000', 'Blackheart the Inciter - War Stomp');
+
+DELETE FROM creature_spell_targeting WHERE Id IN(109,110);
+INSERT INTO creature_spell_targeting(Id, Type, Param1, Param2, Param3, UnitCondition, Comments) VALUES
+('109', '1', '0', '0', '66', '-1', 'Attack - random player in melee'),
+('110', '1', '0', '1', '66', '-1', 'Attack - random player non tank in melee');
+UPDATE creature_template SET SpellList = 1870801 WHERE entry=18708;
+UPDATE creature_template SET SpellList = 2065701 WHERE entry=20657;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1870801,2065701);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1870801, 'SL - Murmur - Normal', 0, 0),
+(2065701, 'SL - Murmur - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1873101,2065701);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1870801', '0', '33923', '0', '-1', '0', '0', '100', '1','31000','38000','31000','38000', 'Murmur - Sonic Boom'),
+('1870801', '1', '33711', '0', '-1', '0', '0', '100', '1','21000','21000','21000','21000', 'Murmur - Murmur''s Touch'),
+('1870801', '2', '33689', '0', '-1', '100', '0', '100', '1','21000','30000','21000','30000', 'Murmur - Magnetic Pull on Random player'),
+('1870801', '3', '33657', '0', '321', '0', '0', '100', '1','5000','12000','5000','12000', 'Murmur - Resonance'),
+('2065701', '0', '38796', '0', '-1', '0', '0', '100', '1','31000','38000','31000','38000', 'Murmur - Sonic Boom'),
+('2065701', '1', '38794', '0', '-1', '0', '0', '100', '1','29000','40000','29000','40000', 'Murmur - Murmur''s Touch'),
+('2065701', '2', '38797', '0', '-1', '109', '0', '100', '1','3000','10000','3000','10000', 'Murmur - Sonic Shock on Random player in melee'),
+('2065701', '3', '33657', '0', '321', '0', '0', '100', '1','5000','12000','5000','12000', 'Murmur - Resonance'),
+('2065701', '4', '39365', '0', '1232', '0', '0', '100', '1','6000','10000','6000','10000', 'Murmur - Thundering Storm');
+
+UPDATE creature_template SET SpellList = 1794101 WHERE entry=17941;
+UPDATE creature_template SET SpellList = 1989301 WHERE entry=19893;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1794101,1989301);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1794101, 'SP - Mennu the Betrayer - Normal', 0, 0),
+(1989301, 'SP - Mennu the Betrayer - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1794101,1989301);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1794101', '0', '31985', '0', '-1', '0', '0', '100', '1','13700','18000','25400','33800', 'Mennu the Betrayer - Tainted Stoneskin Totem'),
+('1794101', '1', '31981', '0', '-1', '0', '0', '100', '1','19200','23300','26200','26200', 'Mennu the Betrayer - Tainted Earthgrab Totem'),
+('1794101', '2', '31991', '0', '-1', '0', '0', '100', '1','20200','30600','26200','26200', 'Mennu the Betrayer - Corrupted Nova Totem'),
+('1794101', '3', '34980', '0', '361', '0', '0', '100', '1','15000','20000','15700','22900', 'Mennu the Betrayer - Mennu''s Healing Ward'),
+('1794101', '4', '35010', '0', '-1', '1', '0', '100', '1','12100','18500','19300','29100', 'Mennu the Betrayer - Lightning Bolt on Current'),
+('1989301', '0', '31985', '0', '-1', '0', '0', '100', '1','13700','18000','25400','33800', 'Mennu the Betrayer - Tainted Stoneskin Totem'),
+('1989301', '1', '31981', '0', '-1', '0', '0', '100', '1','19200','23300','26200','26200', 'Mennu the Betrayer - Tainted Earthgrab Totem'),
+('1989301', '2', '31991', '0', '-1', '0', '0', '100', '1','20200','30600','26200','26200', 'Mennu the Betrayer - Corrupted Nova Totem'),
+('1989301', '3', '34980', '0', '361', '0', '0', '100', '1','15000','20000','15700','22900', 'Mennu the Betrayer - Mennu''s Healing Ward'),
+('1989301', '4', '35010', '0', '-1', '1', '0', '100', '1','12100','18500','19300','29100', 'Mennu the Betrayer - Lightning Bolt on Current');
+
+UPDATE creature_template SET SpellList = 1794201 WHERE entry=17942;
+UPDATE creature_template SET SpellList = 1989401 WHERE entry=19894;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1794201,1989401);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1794201, 'SP - Quagmirran - Normal', 0, 0),
+(1989401, 'SP - Quagmirran - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1794201,1989401);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1794201', '0', '40504', '0', '-1', '1', '0', '100', '1','8000','15000','15000','30000', 'Quagmirran - Cleave on Current'),
+('1794201', '1', '32055', '0', '-1', '1', '0', '100', '1','10000','20000','15000','30000', 'Quagmirran - Uppercut on Current'),
+('1794201', '2', '38153', '0', '-1', '100', '0', '100', '1','15000','18000','40000','50000', 'Quagmirran - Acid Spray on Random Player'),
+('1794201', '3', '34780', '0', '-1', '1', '0', '100', '1','18000','22000','21000','32000', 'Quagmirran - Poison Volley on Current'),
+('1989401', '0', '40504', '0', '-1', '1', '0', '100', '1','8000','15000','15000','30000', 'Quagmirran - Cleave on Current'),
+('1989401', '1', '32055', '0', '-1', '1', '0', '100', '1','10000','20000','15000','30000', 'Quagmirran - Uppercut on Current'),
+('1989401', '2', '38153', '0', '-1', '100', '0', '100', '1','15000','18000','40000','50000', 'Quagmirran - Acid Spray on Random Player'),
+('1989401', '3', '39340', '0', '-1', '1', '0', '100', '1','18000','22000','21000','32000', 'Quagmirran - Poison Volley on Current');
+
+UPDATE creature_template SET SpellList = 1779701 WHERE entry=17797;
+UPDATE creature_template SET SpellList = 2062901 WHERE entry=20629;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1779701,2062901);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1779701, 'SV - Hydromancer Thespia - Normal', 0, 0),
+(2062901, 'SV - Hydromancer Thespia - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1779701,2062901);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1779701', '0', '25033', '0', '-1', '100', '0', '100', '1','15000','15000','30000','30000', 'Hydromancer Thespia - Lightning Cloud on Random Player'),
+('1779701', '1', '31481', '0', '-1', '100', '0', '100', '1','15000','18000','7000','12000', 'Hydromancer Thespia - Lung Burst on Random Player'),
+('1779701', '2', '31718', '0', '-1', '100', '0', '100', '1','20000','25000','10000','10000', 'Hydromancer Thespia - Enveloping Winds on Random Player'),
+('2062901', '0', '25033', '0', '-1', '100', '0', '100', '1','15000','15000','10000','10000', 'Hydromancer Thespia - Lightning Cloud on Random Player'),
+('2062901', '1', '31481', '0', '-1', '100', '0', '100', '1','15000','18000','7000','12000', 'Hydromancer Thespia - Lung Burst on Random Player'),
+('2062901', '2', '31718', '0', '-1', '100', '0', '100', '1','20000','25000','15000','15000', 'Hydromancer Thespia - Enveloping Winds on Random Player');
+
+UPDATE creature_template SET SpellList = 1779601 WHERE entry=17796;
+UPDATE creature_template SET SpellList = 2063001 WHERE entry=20630;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1779601,2063001);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1779601, 'SV - Mekgineer Steamrigger - Normal', 0, 0),
+(2063001, 'SV - Mekgineer Steamrigger - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1779601,2063001);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1779601', '0', '31485', '0', '-1', '0', '0', '100', '1','20000','20000','20000','20000', 'Mekgineer Steamrigger - Super Shrink Ray'),
+('1779601', '1', '31486', '0', '-1', '101', '0', '100', '1','15000','15000','15000','15000', 'Mekgineer Steamrigger - Saw Blade on Random non-tank Player'),
+('1779601', '2', '35107', '0', '-1', '100', '0', '100', '1','10000','10000','10000','10000', 'Mekgineer Steamrigger - Electrified Net'),
+('2063001', '0', '31485', '0', '-1', '0', '0', '100', '1','20000','20000','20000','20000', 'Mekgineer Steamrigger - Super Shrink Ray'),
+('2063001', '1', '31486', '0', '-1', '101', '0', '100', '1','15000','15000','15000','15000', 'Mekgineer Steamrigger - Saw Blade on Random non-tank Player'),
+('2063001', '2', '35107', '0', '-1', '100', '0', '100', '1','10000','10000','10000','10000', 'Mekgineer Steamrigger - Electrified Net'),
+('2063001', '3', '26662', '0', '-1', '0', '0', '100', '100','300000','300000','300000','300000', 'Mekgineer Steamrigger - Berserk');
+
+UPDATE `creature_template` SET `SpellList` = 945101 WHERE `entry` = 9451;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 945101;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(945101, 'Eastern Plaguelands - Scarlet Archmage (9451)', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 945101;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(945101, 1, 15242, 2, -1, 	1,	0, 100, 2, 0, 0, 0, 0, 'Scarlet Archmage - Fireball on Current'),
+(945101, 2, 15244, 0, -1, 	103,0, 100, 3, 6000, 18000,	10000, 20000, 'Scarlet Archmage - Cone of Cold'),
+(945101, 3, 15122, 0, 1221,	102,0, 100, 3, 3000, 12000, 10000, 20000, 'Scarlet Archmage - Counterspell on Random Player Casting'),
+(945101, 4, 18100, 0, -1, 	0, 	0, 100, 1, 0, 0, 0, 0, 'Scarlet Archmage - Frost Armor');
+
+UPDATE creature_template SET SpellList = 1779801 WHERE entry=17798;
+UPDATE creature_template SET SpellList = 2063301 WHERE entry=20633;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1779801,2063301);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1779801, 'SV - Warlord Kalithresh - Normal', 0, 0),
+(2063301, 'SV - Warlord Kalithresh - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1779801,2063301);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1779801', '0', '31534', '0', '-1', '0', '0', '100', '1','15000','20000','24000','35000', 'Warlord Kalithresh - Spell Reflection'),
+('1779801', '1', '39061', '0', '-1', '107', '0', '100', '1','7000','14000','7500','12500', 'Warlord Kalithresh - Impale on Player not in melee'),
+('1779801', '2', '16172', '0', '-1', '1', '0', '100', '1','10000','15000','45000','58000', 'Warlord Kalithresh - Head Crack on Current'),
+('2063301', '0', '31534', '0', '-1', '0', '0', '100', '1','15000','20000','24000','35000', 'Warlord Kalithresh - Spell Reflection'),
+('2063301', '1', '39061', '0', '-1', '107', '0', '100', '1','7000','14000','7500','12500', 'Warlord Kalithresh - Impale on Player not in melee'),
+('2063301', '2', '16172', '0', '-1', '1', '0', '100', '1','10000','15000','45000','58000', 'Warlord Kalithresh - Head Crack on Current');
+
+UPDATE `creature_template` SET `NpcFlags` = 3 WHERE `entry` = 738;
+DELETE FROM `conditions` WHERE `condition_entry` = 997 AND `type` = 4;
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`) VALUES (997, 4, 99, 1);
+UPDATE `quest_template` SET `RequiredCondition` = 997 WHERE `entry` = 215;
+DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN (73801,73807) AND `command` = 29;
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `comments`) VALUES
+(73801, 0, 2, 29, 2, 0, 'Private Thorsen - Remove UNIT_NPC_FLAG_QUESTGIVER'),
+(73807, 1000, 1, 29, 2, 1, 'Private Thorsen - Add UNIT_NPC_FLAG_QUESTGIVER');
+
+UPDATE `creature_template` SET `SpeedWalk` = 1 WHERE `entry` = 584;
+
+UPDATE `spawn_group` SET `name`=(SELECT REPLACE(name,'4095 ',''));
+UPDATE `spawn_group` SET `name`=(SELECT REPLACE(name,'4097',''));
+UPDATE `spawn_group` SET `name`=(SELECT REPLACE(name,'4099 ',''));
+
+UPDATE `spawn_group` SET `name`=(SELECT REPLACE(name,'4093 ',''));
+UPDATE `spawn_group` SET `name`=(SELECT REPLACE(name,'4094 ',''));
+UPDATE `spawn_group` SET `name`=(SELECT REPLACE(name,'4096 ',''));
+
+UPDATE creature_template SET SpellList = 1784801 WHERE entry=17848;
+UPDATE creature_template SET SpellList = 2053501 WHERE entry=20535;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1784801,2053501);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1784801, 'OHF - Lieutenant Drake - Normal', 0, 0),
+(2053501, 'OHF - Lieutenant Drake - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1784801,2053501);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1784801', '0', '33789', '0', '-1', '1', '0', '100', '4','18500','22500','25000','35000', 'Lieutenant Drake - Frightening Shout on Current'),
+('1784801', '1', '31909', '0', '-1', '0', '0', '100', '2', '12300','14500','18100','22900', 'Lieutenant Drake - Whirlwind'),
+('1784801', '2', '31911', '0', '-1', '1', '0', '100', '1', '7400','11900','14900','24800', 'Lieutenant Drake - Mortal Strike on Current'),
+('1784801', '3', '9080', '0', '-1', '100', '0', '100', '1', '6100','7200','6100','22900', 'Lieutenant Drake - Hamstring on Current'),
+('1784801', '4', '33792', '0', '-1', '1', '0', '100', '4', '20500','24100','12100','26600', 'Lieutenant Drake - Exploding Shot on Current');
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('2053501', '0', '33789', '0', '-1', '1', '0', '100', '4','18500','22500','25000','35000', 'Lieutenant Drake - Frightening Shout on Current'),
+('2053501', '1', '31909', '0', '-1', '0', '0', '100', '2', '12300','14500','18100','22900', 'Lieutenant Drake - Whirlwind'),
+('2053501', '2', '31911', '0', '-1', '1', '0', '100', '1', '7400','11900','14900','24800', 'Lieutenant Drake - Mortal Strike on Current'),
+('2053501', '3', '9080', '0', '-1', '100', '0', '100', '1', '6100','7200','6100','22900', 'Lieutenant Drake - Hamstring on Current'),
+('2053501', '4', '33792', '0', '-1', '1', '0', '100', '4', '20500','24100','12100','26600', 'Lieutenant Drake - Exploding Shot on Current');
+
+UPDATE creature_template SET SpellList = 1786201 WHERE entry=17862;
+UPDATE creature_template SET SpellList = 2052101 WHERE entry=20521;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1786201,2052101);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1786201, 'OHF - Captain Skarloc - Normal', 0, 0),
+(2052101, 'OHF - Captain Skarloc - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1786201,2052101);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1786201', '0', '8258', '0', '-1', '0', '0', '100', '50','8000','8000','240000','240000', 'Captain Skarloc - Devotion Aura'),
+('1786201', '1', '31904', '0', '-1', '0', '0', '100', '1','2000','10000','14000','21000', 'Captain Skarloc - Holy Shield'),
+('1786201', '2', '13005', '0', '-1', '1', '0', '100', '1','7100','9200','10000','16000', 'Captain Skarloc - Hammer of Justice on Current'),
+('1786201', '3', '29380', '0', '-1', '3', '0', '100', '10','5000','10000','10000','14000', 'Captain Skarloc - Cleanse on Friendly Dispel'),
+('1786201', '4', '29427', '0', '-1', '204', '0', '100', '10','5000','10000','13300','15700', 'Captain Skarloc - Holy Light on Friendly missing 50% HP'),
+('2052101', '0', '8258', '0', '-1', '0', '0', '100', '50','8000','8000','240000','240000', 'Captain Skarloc - Devotion Aura'),
+('2052101', '1', '31904', '0', '-1', '0', '0', '100', '1','2000','10000','14000','21000', 'Captain Skarloc - Holy Shield'),
+('2052101', '2', '13005', '0', '-1', '1', '0', '100', '1','5100','7200','10000','13000', 'Captain Skarloc - Hammer of Justice on Current'),
+('2052101', '3', '29380', '0', '-1', '3', '0', '100', '10','5000','10000','10000','14000', 'Captain Skarloc - Cleanse on Friendly Dispel'),
+('2052101', '4', '29427', '0', '-1', '204', '0', '100', '10','5000','10000','13300','15700', 'Captain Skarloc - Holy Light on Friendly missing 50% HP'),
+('2052101', '5', '38385', '0', '-1', '0', '0', '100', '10','3000','9000','11000','13000', 'Captain Skarloc - Consecration');
+
+UPDATE creature_template SET SpellList = 1783301 WHERE entry=17833;
+UPDATE creature_template SET SpellList = 2053001 WHERE entry=20530;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1783301,2053001);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1783301, 'OHF - Durnholde Warden - Normal', 0, 0),
+(2053001, 'OHF - Durnholde Warden - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1783301,2053001);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1783301', '0', '15654', '0', '-1', '1', '0', '100', '1','3800','8400','10800','24100', 'Durnholde Warden - Shadow Word: Pain on Current'),
+('1783301', '1', '22884', '0', '-1', '0', '0', '100', '5','18800','33800','30100','48300', 'Durnholde Warden - Psychic Scream'),
+('1783301', '2', '17201', '0', '-1', '3', '0', '100', '5','7000','12000','10000','16000', 'Durnholde Warden - Dispel Magic on Friendly Dispel'),
+('1783301', '3', '15586', '0', '-1', '204', '0', '100', '5','5000','10000','12100','18200', 'Durnholde Warden - Heal on Friendly missing 50%'),
+('2053001', '0', '34941', '0', '-1', '1', '0', '100', '1','3800','8400','10800','24100', 'Durnholde Warden - Shadow Word: Pain on Current'),
+('2053001', '1', '22884', '0', '-1', '0', '0', '100', '5','18800','33800','30100','48300', 'Durnholde Warden - Psychic Scream'),
+('2053001', '2', '17201', '0', '-1', '3', '0', '100', '5','7000','12000','10000','16000', 'Durnholde Warden - Dispel Magic on Friendly Dispel'),
+('2053001', '3', '22883', '0', '-1', '204', '0', '100', '5','5000','10000','12100','18200', 'Durnholde Warden - Heal on Friendly missing 50%');
+
+UPDATE creature_template SET SpellList = 1786001 WHERE entry=17860;
+UPDATE creature_template SET SpellList = 2052901 WHERE entry=20529;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1786001,2052901);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1786001, 'OHF - Durnholde Veteran - Normal', 0, 0),
+(2052901, 'OHF - Durnholde Veteran - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1786001,2052901);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1786001', '0', '15581', '0', '-1', '1', '0', '100', '1','4800','10900','3600','10900', 'Durnholde Veteran - Sinister Strike on Current'),
+('1786001', '1', '15582', '0', '-1', '1', '0', '100', '1','5000','10000','10000','12200', 'Durnholde Veteran - Backstab on Current'),
+('2052901', '0', '15581', '0', '-1', '1', '0', '100', '1','4800','10900','3600','10900', 'Durnholde Veteran - Sinister Strike on Current'),
+('2052901', '1', '15582', '0', '-1', '1', '0', '100', '1','5000','10000','10000','12200', 'Durnholde Veteran - Backstab on Current');
+
+UPDATE creature_template SET SpellList = 1809601 WHERE entry=18096;
+UPDATE creature_template SET SpellList = 2053101 WHERE entry=20531;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1809601,2053101);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1809601, 'OHF - Epoch Hunter - Normal', 0, 0),
+(2053101, 'OHF - Epoch Hunter - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1809601,2053101);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1809601', '0', '31914', '0', '-1', '0', '0', '100', '2','6400','10300','18100','26600', 'Epoch Hunter - Sand Breath'),
+('1809601', '1', '31916', '0', '-1', '101', '0', '100', '5','25000','30000','25000','30000', 'Epoch Hunter - Impending Death on Random non tank'),
+('1809601', '2', '31475', '0', '-1', '0', '0', '100', '2','12400','20300','20500','26600', 'Epoch Hunter - Wing Buffet'),
+('1809601', '3', '33834', '0', '-1', '0', '0', '100', '1','1100','8800','15700','25300', 'Epoch Hunter - Magic Disruption Aura'),
+('2053101', '0', '31914', '0', '-1', '0', '0', '100', '2','6400','10300','18100','26600', 'Epoch Hunter - Sand Breath'),
+('2053101', '1', '31916', '0', '-1', '101', '0', '100', '5','25000','30000','25000','30000', 'Epoch Hunter - Impending Death on Random non tank'),
+('2053101', '2', '31475', '0', '-1', '0', '0', '100', '2','12400','20300','20500','26600', 'Epoch Hunter - Wing Buffet'),
+('2053101', '3', '33834', '0', '-1', '0', '0', '100', '1','1100','8800','15700','25300', 'Epoch Hunter - Magic Disruption Aura');
+
+UPDATE `creature_template` SET `SpellList` = 1554701 WHERE `entry` = 15547;
+UPDATE `creature_template` SET `SpellList` = 1554801 WHERE `entry` = 15548;
+UPDATE `creature_template` SET `SpellList` = 1555101 WHERE `entry` = 15551;
+DELETE FROM `creature_spell_targeting` WHERE `Id` = 111;
+INSERT INTO `creature_spell_targeting` (Id, Type, Param1, Param2, Param3, Comments) VALUES
+(111, 1, 4, 0, 3, "Attack - ATTACKING_TARGET_FARTHEST_AWAY - SELECT_FLAG_IN_LOS & SELECT_FLAG_PLAYER");
+DELETE FROM `creature_spell_list` WHERE `Id` IN (1554701, 1554801, 1555101);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1554701, 1, 29320, 0, 111, 0, 100, 0, 5000, 20000, 30000, 40000, "Spectral Charger - Charge - ATTACKING_TARGET_FARTHEST_AWAY - SELECT_FLAG_IN_LOS & SELECT_FLAG_PLAYER"),
+(1554801, 1, 29323, 0, 2, 0, 100, 0, 6000, 18000, 6000, 18000 , "Spectral Stallion - Cast Absorb Vitality - on self"),
+(1554801, 2, 29577, 0, 1, 0, 100, 0, 6000, 18000, 10000, 20000, "Spectral Stallion - Cast Hoof Strike - on current");
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1555101, 1, 29339, 1, -5320001, 0, 0, 100, 0, 10000, 15000, 20000, 30000, "Spectral Stable Hand - Cast Healing Touch - condition friendly missing 50%"),
+(1555101, 2, 29340, 1, -5320002, 0, 0, 100, 0, 6000, 14000, 10000, 20000, "Spectral Stable Hand - Cast Whip Rage - condition friendly missing buff"),
+(1555101, 3, 18812, 0, -1, 1, 0, 100, 0, 6000, 15000, 10000, 20000, "Spectral Stable Hand - Cast Knockback - on current"),
+(1555101, 4, 6016, 0, -1, 1, 0, 100, 0, 6000, 15000, 45000, 45000, "Spectral Stable Hand - Cast Pierce Armor - on current");
+DELETE FROM `creature_spell_list_entry` WHERE `Id` IN (1554701, 1554801, 1555101);
+INSERT INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1554701, "Karazhan - Spectral Charger", 0, 0), (1554801, "Karazhan - Spectral Stallion", 0, 0), (1555101, "Karazhan - Spectral Stable Hand", 80, 0);
+DELETE FROM `unit_condition` WHERE `Id` IN (-5320001, -5320002);
+INSERT INTO `unit_condition` (Id,Variable_0,Op_0,Value_0,Variable_1,Op_1,Value_1) VALUES (-5320001,75,1,5320001,12,4,50), (-5320002,75,1,5320001,76,2,29340);
+DELETE FROM `combat_condition` WHERE `Id` IN (-5320001, -5320002);
+INSERT INTO `combat_condition` (Id, FriendConditionID_0,FriendConditionOp_0,FriendConditionCount_0) VALUES (-5320001,-5320001,6,1), (-5320002,-5320002,6,1);
+UPDATE `creature_template` SET `StringId1` = 5320001 WHERE `entry` IN (15547, 15548);
+DELETE FROM `string_id` WHERE `Id` = 5320001;
+INSERT INTO `string_id` (Id, Name) VALUES (5320001, 'Karazhan - Spectral Charger 15547 | Spectral Stallion 15548 - UnitCondition - Combat Condition');
+DELETE FROM `spell_script_target` WHERE `entry` IN (29339, 29340);
+INSERT INTO `spell_script_target` (entry, type, targetEntry, inverseEffectMask) VALUES (29339, 5, 5320001, 0), (29340, 5, 5320001, 0);
+
+UPDATE `creature_template` SET `SpellList` = 61901 WHERE `entry` = 619;
+REPLACE INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES (61901, 'Westfall - Defias Conjurer', 0, 75);
+REPLACE INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(61901, 2, 9053, 2, -1, 1, 0, 100, 0, 0, 0, 0, 0, 'Defias Conjurer - Fireball on Current');
+
+UPDATE `creature_template` SET `SpellList` = 944901 WHERE `entry` = 9449;
+REPLACE INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES (944901, 'Eastern Plaguelands - Scarlet Cleric', 0, 75);
+REPLACE INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(944901, 1, 15586, 0, -1, 201, 0, 100, 0, 10000, 20000, 20000, 30000, 'Scarlet Cleric - Heal on Missing 50% including self'),
+(944901, 2, 15587, 2, -1, 1, 0, 100, 0, 6000, 12000, 5000, 20000, 'Scarlet Cleric - Mind Blast on Current');
+
+UPDATE creature_template SET SpellList = 1788101 WHERE entry=17881;
+UPDATE creature_template SET SpellList = 2073701 WHERE entry=20737;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1788101,2073701);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1788101, 'BM - Aeonus - Normal', 0, 0),
+(2073701, 'BM - Aeonus - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1788101,2073701);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1788101', '0', '31473', '0', '-1', '0', '0', '100', '4','15000','30000','15000','25000', 'Aeonus - Sand Breath'),
+('1788101', '1', '31422', '0', '-1', '0', '0', '100', '2','10000','15000','20000','35000', 'Aeonus - Time Stop'),
+('1788101', '2', '40504', '0', '-1', '1', '0', '100', '1','5000','9000','7000','12000', 'Aeonus - Cleave on Current'),
+('1788101', '3', '37605', '0', '-1', '0', '0', '100', '8','30000','45000','20000','35000', 'Aeonus - Frenzy'),
+('2073701', '0', '39049', '0', '-1', '0', '0', '100', '4','15000','30000','15000','25000', 'Aeonus - Sand Breath'),
+('2073701', '1', '31422', '0', '-1', '0', '0', '100', '2','10000','15000','20000','35000', 'Aeonus - Time Stop'),
+('2073701', '2', '40504', '0', '-1', '1', '0', '100', '1','5000','9000','7000','12000', 'Aeonus - Cleave on Current'),
+('2073701', '3', '37605', '0', '-1', '0', '0', '100', '8','30000','45000','20000','35000', 'Aeonus - Frenzy');
+
+UPDATE creature_template SET SpellList = 1787901 WHERE entry=17879;
+UPDATE creature_template SET SpellList = 2073801 WHERE entry=20738;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1787901,2073801);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1787901, 'BM - Chrono Lord Deja - Normal', 0, 0),
+(2073801, 'BM - Chrono Lord Deja - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1787901,2073801);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1787901', '0', '31457', '0', '-1', '1', '0', '100', '1','18000','23000','15000','25000', 'Chrono Lord Deja - Arcane Blast on Current'),
+('1787901', '1', '31472', '0', '-1', '0', '0', '100', '1','20000','30000','20000','30000', 'Chrono Lord Deja - Arcane Discharge'),
+('1787901', '2', '31467', '0', '-1', '0', '0', '100', '1','10000','15000','15000','25000', 'Chrono Lord Deja - Time Lapse'),
+('2073801', '0', '38538', '0', '-1', '1', '0', '100', '1','18000','23000','15000','25000', 'Chrono Lord Deja - Arcane Blast on Current'),
+('2073801', '1', '38539', '0', '-1', '0', '0', '100', '1','20000','30000','20000','30000', 'Chrono Lord Deja - Arcane Discharge'),
+('2073801', '2', '31467', '0', '-1', '0', '0', '100', '1','10000','15000','15000','25000', 'Chrono Lord Deja - Time Lapse'),
+('2073801', '3', '38540', '0', '-1', '0', '0', '100', '1','25000','35000','25000','35000', 'Chrono Lord Deja - Attraction');
+
+UPDATE creature_template SET SpellList = 1788001 WHERE entry=17880;
+UPDATE creature_template SET SpellList = 2074501 WHERE entry=20745;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1788001,2074501);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1788001, 'BM - Temporus - Normal', 0, 0),
+(2074501, 'BM - Temporus - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1788001,2074501);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1788001', '0', '31475', '0', '-1', '0', '0', '100', '5','18000','22000','20000','28000', 'Temporus - Wing Buffet'),
+('1788001', '1', '31464', '0', '-1', '1', '0', '100', '1','3500','7000','4500','7000', 'Temporus - Mortal Wound on Current'),
+('1788001', '2', '31458', '0', '-1', '0', '0', '100', '2','13000','18000','17000','21000', 'Temporus - Hasten'),
+('2074501', '0', '38593', '0', '-1', '0', '0', '100', '5','14000','18000','14000','28000', 'Temporus - Wing Buffet'),
+('2074501', '1', '31464', '0', '-1', '1', '0', '100', '1','3500','7000','4500','7000', 'Temporus - Mortal Wound on Current'),
+('2074501', '2', '31458', '0', '-1', '0', '0', '100', '2','10000','15000','12000','21000', 'Temporus - Hasten'),
+('2074501', '3', '38592', '0', '-1', '0', '0', '100', '10','17000','22000','25000','35000', 'Temporus - Spell Reflection');
+
+UPDATE creature_template SET SpellList = 1837101 WHERE entry=18371;
+UPDATE creature_template SET SpellList = 2031801 WHERE entry=20318;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1837101,2031801);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1837101, 'AC - Shirrak - Normal', 0, 0),
+(2031801, 'AC - Shirrak - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1837101,2031801);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1837101', '0', '32291', '0', '-1', '101', '0', '100', '5','15000','15000','15000','15000', 'Shirrak - Focus Fire on Random non tank'),
+('1837101', '1', '36383', '0', '-1', '0', '0', '100', '1','4000','7000','4000','10000', 'Shirrak - Carnivorous Bite'),
+('1837101', '2', '32265', '0', '-1', '0', '0', '100', '10','20000','24000','25000','38000', 'Shirrak - Attract Magic'),
+('2031801', '0', '32291', '0', '-1', '101', '0', '100', '5','15000','15000','15000','15000', 'Shirrak - Focus Fire on Random non tank'),
+('2031801', '1', '39382', '0', '-1', '0', '0', '100', '1','4000','7000','4000','10000', 'Shirrak - Carnivorous Bite'),
+('2031801', '2', '32265', '0', '-1', '0', '0', '100', '10','20000','24000','25000','38000', 'Shirrak - Attract Magic');
+
+DELETE FROM creature_spell_list_entry WHERE Id IN(1844101,1844102,1844103,1844104,1844105,1844106,1844107,1844108,1844109,1844111);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1844101, 'AC - Stolen Soul - Warrior', 0, 0),
+(1844102, 'AC - Stolen Soul - Paladin', 0, 0),
+(1844103, 'AC - Stolen Soul - Hunter', 0, 0),
+(1844104, 'AC - Stolen Soul - Rogue', 0, 0),
+(1844105, 'AC - Stolen Soul - Priest', 0, 0),
+(1844106, 'AC - Stolen Soul - Death Knight', 0, 0),
+(1844107, 'AC - Stolen Soul - Shaman', 0, 0),
+(1844108, 'AC - Stolen Soul - Mage', 0, 0),
+(1844109, 'AC - Stolen Soul - Warlock', 0, 0),
+(1844111, 'AC - Stolen Soul - Druid', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1844101,1844102,1844103,1844104,1844105,1844106,1844107,1844108,1844109,1844111);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1844101', '0', '37335', '0', '-1', '101', '1', '100', '1','1000','1000','6000','6000', 'Stolen Soul - Mortal Strike on Current'),
+('1844102', '0', '37369', '0', '-1', '101', '1', '100', '1','1000','1000','6000','6000', 'Stolen Soul - Hammer of Justice on Current'),
+('1844103', '0', '37368', '0', '-1', '101', '0', '100', '1','1000','1000','20000','20000', 'Stolen Soul - Freezing Trap'),
+('1844104', '0', '37331', '0', '-1', '101', '1', '100', '1','1000','1000','10000','10000', 'Stolen Soul - Hemorrhage on Current'),
+('1844105', '0', '37330', '0', '-1', '101', '1', '100', '1','1000','1000','5000','5000', 'Stolen Soul - Mind Flay on Current'),
+('1844106', '0', '58339', '0', '-1', '101', '1', '100', '1','1000','1000','10000','10000', 'Stolen Soul - Plague Strike'),
+('1844107', '0', '37332', '0', '-1', '101', '1', '100', '1','1000','1000','8000','8000', 'Stolen Soul - Frost Shock'),
+('1844108', '0', '37329', '0', '-1', '101', '1', '100', '1','1000','1000','5000','5000', 'Stolen Soul - Fireball'),
+('1844109', '0', '37334', '0', '-1', '101', '1', '100', '1','1000','1000','20000','20000', 'Stolen Soul - Curse of Agony'),
+('1844111', '0', '37328', '0', '-1', '101', '1', '100', '1','1000','1000','10000','10000', 'Stolen Soul - Moonfire');
+UPDATE creature_template SET SpellList = 1837301 WHERE entry=18373;
+UPDATE creature_template SET SpellList = 2030601 WHERE entry=20306;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1837301,2030601);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1837301, 'AC - Exarch Maladaar - Normal', 0, 0),
+(2030601, 'AC - Exarch Maladaar - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1837301,2030601);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1837301', '0', '32346', '0', '-1', '101', '0', '100', '5','19000','31000','35000','67000', 'Exarch Maladaar - Stolen Soul on random player'),
+('1837301', '1', '32422', '0', '-1', '101', '0', '100', '1','4000','8000','4000','18000', 'Exarch Maladaar - Ribbon of Souls on random player'),
+('1837301', '2', '32421', '0', '-1', '0', '0', '100', '2','11000','29000','13000','30000', 'Exarch Maladaar - Soul Scream'),
+('2030601', '0', '32346', '0', '-1', '101', '0', '100', '5','19000','31000','35000','67000', 'Exarch Maladaar - Stolen Soul on random player'),
+('2030601', '1', '32422', '0', '-1', '101', '0', '100', '1','4000','8000','4000','18000', 'Exarch Maladaar - Ribbon of Souls on random player'),
+('2030601', '2', '32421', '0', '-1', '0', '0', '100', '2','11000','29000','13000','30000', 'Exarch Maladaar - Soul Scream');
+
+UPDATE creature_template SET SpellList = 1834101 WHERE entry=18341;
+UPDATE creature_template SET SpellList = 2026701 WHERE entry=20267;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1834101,2026701);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1834101, 'MT - Pandemonius - Normal', 0, 0),
+(2026701, 'MT - Pandemonius - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1834101,2026701);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1834101', '0', '32325', '0', '-1', '101', '0', '100', '1','15000','20000','27000','32000', 'Pandemonius - Void Blast on Random'),
+('1834101', '1', '32358', '0', '-1', '0', '0', '100', '1','13000','15000','18000','30000', 'Pandemonius - Dark Shell'),
+('2026701', '0', '38760', '0', '-1', '101', '0', '100', '1','15000','20000','27000','32000', 'Pandemonius - Void Blast on Random'),
+('2026701', '1', '38759', '0', '-1', '0', '0', '100', '1','13000','15000','18000','30000', 'Pandemonius - Dark Shell');
+
+UPDATE creature_template SET SpellList = 1834301 WHERE entry=18343;
+UPDATE creature_template SET SpellList = 2026801 WHERE entry=20268;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1834301,2026801);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1834301, 'MT - Tavarok - Normal', 0, 0),
+(2026801, 'MT - Tavarok - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1834301,2026801);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1834301', '0', '8374', '0', '-1', '0', '0', '100', '1','7400','13800','6800','15500', 'Tavarok - Arcing Smash'),
+('1834301', '1', '33919', '0', '-1', '0', '0', '100', '1','8500','14400','19700','30700', 'Tavarok - Earthquake'),
+('1834301', '2', '32361', '0', '-1', '101', '0', '100', '1','16900','22400','10300','30300', 'Tavarok - Crystal Prison on Random non tank'),
+('2026801', '0', '38761', '0', '-1', '0', '0', '100', '1','5400','9300','7800','13500', 'Tavarok - Arcing Smash'),
+('2026801', '1', '33919', '0', '-1', '0', '0', '100', '1','8500','14400','19700','30700', 'Tavarok - Earthquake'),
+('2026801', '2', '32361', '0', '-1', '101', '0', '100', '1','16900','22400','10300','30300', 'Tavarok - Crystal Prison on Random non tank');
+
+UPDATE creature_template SET SpellList = 1847201 WHERE entry=18472;
+UPDATE creature_template SET SpellList = 2069001 WHERE entry=20690;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1847201,2069001);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1847201, 'SH - Darkweaver Syth - Normal', 0, 0),
+(2069001, 'SH - Darkweaver Syth - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1847201,2069001);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1847201', '0', '15039', '0', '-1', '100', '0', '100', '1','18000','18000','13000','28000', 'Darkweaver Syth - Flame Shock on Random'),
+('1847201', '1', '33534', '0', '-1', '100', '0', '100', '1','19000','19000','13000','28000', 'Darkweaver Syth - Arcane Shock on Random'),
+('1847201', '2', '12548', '0', '-1', '100', '0', '100', '1','18000','18000','13000','28000', 'Darkweaver Syth - Frost Shock on Random'),
+('1847201', '3', '33620', '0', '-1', '100', '0', '100', '1','17000','17000','13000','28000', 'Darkweaver Syth - Shadow Shock on Random'),
+('1847201', '4', '15659', '0', '-1', '100', '0', '100', '1','6000','9000','14000','26000', 'Darkweaver Syth - Chain Lightning on Random'),
+('2069001', '0', '15616', '0', '-1', '100', '0', '100', '1','18000','18000','11000','20000', 'Darkweaver Syth - Flame Shock on Random'),
+('2069001', '1', '38135', '0', '-1', '100', '0', '100', '1','19000','19000','11000','20000', 'Darkweaver Syth - Arcane Shock on Random'),
+('2069001', '2', '21401', '0', '-1', '100', '0', '100', '1','18000','18000','11000','20000', 'Darkweaver Syth - Frost Shock on Random'),
+('2069001', '3', '38136', '0', '-1', '100', '0', '100', '1','17000','17000','11000','20000', 'Darkweaver Syth - Shadow Shock on Random'),
+('2069001', '4', '15305', '0', '-1', '100', '0', '100', '1','6000','9000','13000','19000', 'Darkweaver Syth - Chain Lightning on Random');
+
+UPDATE creature_template SET SpellList = 1873101 WHERE entry=18731;
+UPDATE creature_template SET SpellList = 2063601 WHERE entry=20636;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1873101,2063601);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1873101, 'SL - Ambassador Hellmaw - Normal', 0, 0),
+(2063601, 'SL - Ambassador Hellmaw - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1873101,2063601);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1873101', '0', '33551', '0', '-1', '100', '0', '100', '1','20000','23000','23000','35000', 'Ambassador Hellmaw - Corrosive Acid'),
+('1873101', '1', '33547', '0', '-1', '100', '0', '100', '1','20000','26000','20000','38000', 'Ambassador Hellmaw - Fear'),
+('2063601', '0', '33551', '0', '-1', '100', '0', '100', '1','20000','23000','23000','35000', 'Ambassador Hellmaw - Corrosive Acid'),
+('2063601', '1', '33547', '0', '-1', '100', '0', '100', '1','20000','26000','20000','38000', 'Ambassador Hellmaw - Fear'),
+('2063601', '2', '34970', '0', '-1', '100', '0', '100', '1','180000','180000','180000','180000', 'Ambassador Hellmaw - Enrage');
+
+UPDATE creature_template SET SpellList = 1873201 WHERE entry=18732;
+UPDATE creature_template SET SpellList = 2065301 WHERE entry=20653;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1873201,2065301);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1873201, 'SL - Grandmaster Vorpil - Normal', 0, 0),
+(2065301, 'SL - Grandmaster Vorpil - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1873201,2065301);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1873201', '0', '32963', '0', '-1', '0', '0', '100', '1','13000','19000','10000','26000', 'Grandmaster Vorpil - Shadow Bolt Volley'),
+('1873201', '1', '33563', '0', '-1', '0', '0', '100', '5','38000','44000','36000','44000', 'Grandmaster Vorpil - Draw Shadows'),
+('2065301', '0', '32963', '0', '-1', '0', '0', '100', '1','13000','19000','10000','26000', 'Grandmaster Vorpil - Shadow Bolt Volley'),
+('2065301', '1', '33563', '0', '-1', '0', '0', '100', '5','38000','44000','36000','44000', 'Grandmaster Vorpil - Draw Shadows'),
+('2065301', '2', '38791', '0', '-1', '101', '0', '100', '5','12000','16000','17000','23000', 'Grandmaster Vorpil - Banish on Random');
+
+UPDATE `spell_proc_event` SET `Cooldown` = 120 WHERE `entry` = 22648;
+UPDATE `creature_template` SET `SpellList` = 1430601 WHERE `entry` = 14306;
+REPLACE INTO `creature_template_addon` (`entry`, `auras`) VALUES (14306, '22650');
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 1430601;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(1430601, 'Eskhandar (14306) - s.22649 (Summon Eskhandar)', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 1430601;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+('1430601', '0', '6595', '0', '-1', '1', '0', '50', '1','0','0','10000','20000', 'Eskhandar - Exploit Weakness on Current'),
+('1430601', '1', '3252', '0', '-1', '1', '0', '100', '1','0','6000','12000','18000', 'Eskhandar - Shred on Current');
+REPLACE INTO `creature_template_addon` (`entry`, `auras`) VALUES (13116, '9036 9617');
+REPLACE INTO `creature_template_addon` (`entry`, `auras`) VALUES (13117, '9036 9617');
+
+UPDATE `creature_template` SET `SpellList` = 81501 WHERE `entry` = 815;
+UPDATE `creature_template` SET `SpellList` = 263801 WHERE `entry` = 2638;
+REPLACE INTO `creature_template_addon` (`entry`, `sheath_state`, `auras`) VALUES (815, 1, NULL), (2638, 1, 7131);
+DELETE FROM `creature_template_spells` WHERE `entry` IN (815,2638);
+DELETE FROM `creature_spell_list_entry` WHERE `Id` IN (81501,263801);
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(81501, 'Stranglethorn Vale - Bookie Herod (815)', 0, 75),
+(263801, 'Stranglethorn Vale - Syndicate Spectre (2638)', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 81501;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(81501, 1, 20816, 2, -1, 	1, 	0, 100, 1, 0, 0, 0, 0, 'Stranglethorn Vale - Bookie Herod - Shadow Bolt on Current'),
+(81501, 2, 3722, 0, -1, 0, 0, 100, 3, 3000, 12000, 15000, 30000, 'Stranglethorn Vale - Bookie Herod - Frost Armor'),
+(263801, 1, 20791, 2, -1, 	1, 	0, 100, 1, 0, 0, 0, 0, 'Stranglethorn Vale - Syndicate Spectre - Summon Syndicate Spectre'),
+(263801, 2, 7131, 0, -1, 0, 0, 100, 3, 0, 0, 3600000, 3600000, 'Stranglethorn Vale - Syndicate Spectre - Illusion Passive');
+
+UPDATE `creature_template` SET `SpellList` = 148801 WHERE `entry` = 1488;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 148801;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(148801, 'Stranglethorn Vale - Zanzil Zombie (1488)', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 148801;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(148801, 1, 7102, 0, -1, 1, 0, 100, 1, 6000, 24000, 120000, 240000, 'Zanzil Zombie - Contagion of Rot on Current');
+UPDATE `creature_template` SET `SpellList` = 148901 WHERE `entry` = 1489;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 148901;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(148901, 'Stranglethorn Vale - Zanzil Hunter (1489)', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 148901;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(148901, 1, 10277, 2, -1, 1, 0, 100, 1, 0, 1000, 2000, 4000, 'Zanzil Hunter - Throw on Current');
+UPDATE `creature_template` SET `SpellList` = 149001 WHERE `entry` = 1490;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 149001;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(149001, 'Stranglethorn Vale - Zanzil Witch Doctor (1490)', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 149001;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(149001, 1, 7646, 0, -1, 1, 0, 100, 2, 8000, 40000, 120000, 120000, 'Zanzil Witch Doctor - Curse of Weakness on Current'),
+(149001, 2, 9613, 2, -1, 1, 0, 100, 1, 0, 1000, 0, 0, 'Zanzil Witch Doctor - Shadow Bolt on Current');
+UPDATE `creature_template` SET `SpellList` = 149101 WHERE `entry` = 1491;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 149101;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(149101, 'Stranglethorn Vale - Zanzil Naga (1491)', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 149101;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(149101, 1, 9080, 0, -1, 1, 0, 100, 1, 3000, 30000, 10000, 30000, 'Zanzil Naga - Hamstring on Current'),
+(149101, 2, 12555, 0, 1221, 1, 0, 100, 2, 0, 10000, 6000, 18000, 'Zanzil Naga - Pummel on Current Casting');
+UPDATE `creature_template` SET `SpellList` = 253401 WHERE `entry` = 2534;
+DELETE FROM `creature_template_spells` WHERE `entry` = 2534;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 253401;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(253401, 'Stranglethorn Vale - Zanzil the Outcast (2534)', 0, 75);
+UPDATE `creature_template` SET `InhabitType` = 1 WHERE `entry` = 6388;
+DELETE FROM `creature_spell_list` WHERE `Id` = 253401;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(253401, 1, 8832, 0, -1, 0, 0, 100, 3, 3000, 15000, 20000, 30000, 'Zanzil the Outcast - Ward of Zanzil'),
+(253401, 2, 9532, 2, -1, 1, 0, 100, 1, 0, 1000, 0, 0, 'Zanzil Witch Doctor - Lightning Bolt on Current'),
+(253401, 3, 8264, 0, -1, 0, 0, 100, 2, 7000, 21000, 20000, 30000, 'Zanzil the Outcast - Lava Spout Totem');
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 454301;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(454301, 'Scarlet Monastery - Bloodmage Thalnos (4543)', 0, 75);
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 1637901;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(1637901, 'Scourge Invasion - Spirit of the Damned (16379)', 0, 75);
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 1638001;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(1638001, 'Scourge Invasion - Bone Witch (16380)', 0, 75);
+
+UPDATE `creature_template` SET `MechanicImmuneMask` = 579026803, `SpeedWalk` = 1 WHERE `entry` = 18107;
+UPDATE `creature_template` SET `Faction` = 1693, `MinLevel` = 72, `MaxLevel` = 72, `MechanicImmuneMask` = 579026803, `SpeedWalk` = 1, `DamageMultiplier` = 8.8, `StaticFlags1` = 2147483648 WHERE `entry` = 20182;
+
+UPDATE creature_template SET SpellList = 1680701 WHERE entry=16807;
+UPDATE creature_template SET SpellList = 2056801 WHERE entry=20568;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1680701,2056801);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1680701, 'SHH - Grand Warlock Nethekurse - Normal', 0, 0),
+(2056801, 'SHH - Grand Warlock Nethekurse - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1680701,2056801);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1680701', '0', '30495', '0', '-1', '1', '0', '100', '1','5000','5000','6000','8500', 'Grand Warlock Nethekurse - Shadow Cleave on Current'),
+('1680701', '1', '30496', '0', '-1', '100', '0', '100', '1','8000','8000','7500','15000', 'Grand Warlock Nethekurse - Lesser Shadow Fissure on Random Player'),
+('1680701', '2', '30500', '0', '-1', '100', '0', '100', '1','20000','20000','15000','20000', 'Grand Warlock Nethekurse - Death Coil on Random Player'),
+('1680701', '3', '30502', '0', '872', '0', '0', '100', '1','0','0','0','0', 'Grand Warlock Nethekurse - Dark Spin'),
+('2056801', '0', '35953', '0', '-1', '1', '0', '100', '1','5000','5000','6000','8500', 'Grand Warlock Nethekurse - Shadow Slam on Current'),
+('2056801', '1', '30496', '0', '-1', '100', '0', '100', '1','8000','8000','7500','15000', 'Grand Warlock Nethekurse - Lesser Shadow Fissure on Random Player'),
+('2056801', '2', '30500', '0', '-1', '100', '0', '100', '1','20000','20000','15000','20000', 'Grand Warlock Nethekurse - Death Coil on Random Player'),
+('2056801', '3', '30502', '0', '872', '0', '0', '100', '1','0','0','0','0', 'Grand Warlock Nethekurse - Dark Spin');
+DELETE FROM spell_script_target WHERE entry IN(30745,30741,30735);
+INSERT INTO spell_script_target VALUES (30745, 1, 17083, 0), (30741, 1, 17083, 0), (30735, 1, 17083, 0);
+
+DELETE FROM string_id WHERE Id IN(17611) AND Name = 'SHH_WARCHIEFS_PORTAL';
+INSERT INTO string_id(Id, Name) VALUES (17611, 'SHH_WARCHIEFS_PORTAL');
+UPDATE creature_template SET StringId1=17611 WHERE entry IN(17611);
+
+UPDATE creature_template SET SpellList = 1680901 WHERE entry=16809;
+UPDATE creature_template SET SpellList = 2059601 WHERE entry=20596;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1680901,2059601);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1680901, 'SHH - Warbringer O''mrogg - Normal', 0, 0),
+(2059601, 'SHH - Warbringer O''mrogg - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1680701,2056801);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1680901', '0', '30598', '0', '-1', '0', '0', '100', '1','25000','25000','40000','40000', 'Warbringer O''mrogg - Burning Maul'),
+('1680901', '1', '30618', '0', '-1', '0', '0', '100', '1','30000','30000','25000','40000', 'Warbringer O''mrogg - Beatdown'),
+('1680901', '2', '30584', '0', '-1', '0', '0', '100', '1','8000','8000','15000','35000', 'Warbringer O''mrogg - Fear'),
+('1680901', '3', '30633', '0', '-1', '0', '0', '100', '1','15000','15000','15000','30000', 'Warbringer O''mrogg - Thunderclap'),
+('2059601', '0', '36056', '0', '-1', '0', '0', '100', '1','25000','25000','40000','40000', 'Warbringer O''mrogg - Burning Maul'),
+('2059601', '1', '30618', '0', '-1', '0', '0', '100', '1','30000','30000','25000','40000', 'Warbringer O''mrogg - Beatdown'),
+('2059601', '2', '30584', '0', '-1', '0', '0', '100', '1','8000','8000','15000','35000', 'Warbringer O''mrogg - Fear'),
+('2059601', '3', '30633', '0', '-1', '0', '0', '100', '1','15000','15000','15000','30000', 'Warbringer O''mrogg - Thunderclap');
+
+UPDATE `creature_template` SET `SpellList` = 993801 WHERE `entry` = 9938;
+DELETE FROM `creature_template_spells` WHERE `entry` = 9938;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 993801;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(993801, 'Blackrock Depths - Magmus (9938)', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 993801;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(993801, 1, 15593, 0, -1, 0, 0, 100, 2, 60000, 120000, 30000, 60000, 'Magmus - War Stomp'),
+(993801, 2, 15668, 0, -1, 1, 0, 100, 1, 6000, 8000, 6000, 12000, 'Magmus - Fiery Burst');
+
+UPDATE creature_template SET SpellList = 2088501 WHERE entry=20885;
+UPDATE creature_template SET SpellList = 2159001 WHERE entry=21590;
+DELETE FROM creature_spell_list_entry WHERE Id IN(2088501,2159001);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(2088501, 'Arcatraz - Dalliah the Doomsayer - Normal', 0, 0),
+(2159001, 'Arcatraz - Dalliah the Doomsayer - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(2088501,2159001);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('2088501', '0', '36173', '0', '-1', '1', '0', '100', '1','4000','7000','14000','19000', 'Dalliah the Doomsayer - Gift of the Doomsayer on Current'),
+('2088501', '1', '36142', '0', '-1', '0', '0', '100', '1','15000','15000','25000','30000', 'Dalliah the Doomsayer - Whirlwind'),
+('2159001', '0', '39009', '0', '-1', '1', '0', '100', '1','4000','7000','14000','19000', 'Dalliah the Doomsayer - Gift of the Doomsayer on Current'),
+('2159001', '1', '36142', '0', '-1', '0', '0', '100', '1','15000','15000','25000','30000', 'Dalliah the Doomsayer - Whirlwind'),
+('2159001', '2', '39016', '0', '-1', '100', '0', '100', '1','9000','13000','13000','17000', 'Dalliah the Doomsayer - Shadow Wave on Random Player');
+
+DELETE FROM creature_spell_list WHERE Id IN (1650701, 2059301);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1650701, 1, 31553, 0, 1, 0, 100, 0, 5000, 20000, 6000, 20000, "Shattered Hand Sentry (Normal) - Hamstring - on Current"),
+(1650701, 2, 22911, 0, 102, 0, 100, 0, 6000, 10000, 10000, 30000, "Shattered Hand Sentry (Normal) - Charge - on random Casting"),
+(2059301, 1, 31553, 0, 1, 0, 100, 0, 5000, 20000, 6000, 20000, "Shattered Hand Sentry (Heroic) - Hamstring - on Current"),
+(2059301, 2, 37511, 0, 102, 0, 100, 0, 6000, 10000, 10000, 30000, "Shattered Hand Sentry (Heroic) - Charge - on random Casting");
+DELETE FROM creature_spell_list_entry WHERE Id IN (1650701, 2059301);
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1650701, "Shattered Halls - Shattered Hand Sentry - Normal", 0, 0),
+(2059301, "Shattered Halls - Shattered Hand Sentry - Heroic", 0, 0);
+UPDATE `creature_template` SET SpellList=1650701 WHERE entry = 16507;
+UPDATE `creature_template` SET SpellList=2059301 WHERE entry = 20593;
+DELETE FROM creature_spell_list WHERE Id IN (1652301, 2059101);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1652301, 1, 30470, 0, 2, 0, 100, 0, 3000, 16000, 21000, 35000, "Shattered Hand Savage (Normal) - Slice and Dice - on Self"),
+(2059101, 1, 30470, 0, 2, 0, 100, 0, 3000, 16000, 21000, 35000, "Shattered Hand Savage (Heroic) - Slice and Dice - on Self");
+DELETE FROM creature_spell_list_entry WHERE Id IN (1652301, 2059101);
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1652301, "Shattered Halls - Shattered Hand Savage - Normal", 0, 0),
+(2059101, "Shattered Halls - Shattered Hand Savage - Heroic", 0, 0);
+UPDATE `creature_template` SET SpellList=1652301 WHERE entry = 16523;
+UPDATE `creature_template` SET SpellList=2059101 WHERE entry = 20591;
+DELETE FROM creature_spell_list WHERE Id IN (1659301, 2058201);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1659301, 1, 36020, 0, 120, 0, 100, 0, 16000, 25000, 16000, 25000, "Shattered Hand Brawler (Normal) - Curse of Shattered Hand - ATTACKING_TARGET_TOPAGGRO - SELECT_FLAG_NOT_AURA"),
+(1659301, 2, 36033, 0, 102, 0, 100, 0, 2500, 15000, 6000, 20000, "Shattered Hand Brawler (Normal) - Kick - on random Casting"),
+(2058201, 1, 36020, 0, 120, 0, 100, 0, 16000, 25000, 16000, 25000, "Shattered Hand Brawler (Heroic) - Curse of Shattered Hand - ATTACKING_TARGET_TOPAGGRO - SELECT_FLAG_NOT_AURA"),
+(2058201, 2, 36033, 0, 102, 0, 100, 0, 2500, 15000, 6000, 20000, "Shattered Hand Brawler (Heroic) - Kick - on random Casting");
+DELETE FROM creature_spell_list_entry WHERE Id IN (1659301, 2058201);
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1659301, "Shattered Halls - Shattered Hand Brawler - Normal", 0, 0),
+(2058201, "Shattered Halls - Shattered Hand Brawler - Heroic", 0, 0);
+UPDATE `creature_template` SET SpellList=1659301 WHERE entry = 16593;
+UPDATE `creature_template` SET SpellList=2058201 WHERE entry = 20582;
+DELETE FROM creature_spell_list WHERE Id IN (1659401, 2057601);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1659401, 1, 15585, 0, 201, 0, 100, 0, 16000, 25000, 16000, 25000, "Shadowmoon Acolyte (Normal) - Prayer of Healing - Missing 50% including self"),
+(1659401, 2, 35944, 0, 202, 0, 100, 0, 10000, 20000, 11000, 26000, "Shadowmoon Acolyte (Normal) - Power Word: Shield - Missing 90% including self"),
+(1659401, 3, 31516, 2, 1, 0, 100, 0, 2500, 5000, 2500, 5000, "Shadowmoon Acolyte (Normal) - Mind Blast - on Current"),
+(2057601, 1, 35943, 0, 201, 0, 100, 0, 16000, 25000, 16000, 25000, "Shadowmoon Acolyte (Normal) - Prayer of Healing - Missing 50% including self"),
+(2057601, 2, 36052, 0, 202, 0, 100, 0, 10000, 20000, 11000, 26000, "Shadowmoon Acolyte (Normal) - Power Word: Shield - Missing 90% including self"),
+(2057601, 3, 15587, 2, 1, 0, 100, 0, 2500, 5000, 2500, 5000, "Shadowmoon Acolyte (Normal) - Mind Blast - on Current");
+DELETE FROM creature_spell_list_entry WHERE Id IN (1659401, 2057601);
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1659401, "Shattered Halls - Shadowmoon Acolyte - Normal", 0, 80),
+(2057601, "Shattered Halls - Shadowmoon Acolyte - Heroic", 0, 80);
+UPDATE `creature_template` SET SpellList=1659401 WHERE entry = 16594;
+UPDATE `creature_template` SET SpellList=2057601 WHERE entry = 20576;
+DELETE FROM creature_spell_list WHERE Id IN (1669901, 2059001);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1669901, 1, 30471, 0, 1, 0, 100, 0, 10000, 22000, 15000, 28000, "Shattered Hand Reaver (Normal) - Uppercut - on Current"),
+(1669901, 2, 15496, 0, 1, 0, 100, 0, 6000, 21000, 6000, 21000, "Shattered Hand Reaver (Normal) - Cleave - on Current"),
+(2059001, 1, 30471, 0, 1, 0, 100, 0, 10000, 22000, 15000, 28000, "Shattered Hand Reaver (Normal) - Uppercut - on Current"),
+(2059001, 2, 15496, 0, 1, 0, 100, 0, 6000, 21000, 6000, 21000, "Shattered Hand Reaver (Normal) - Cleave - on Current");
+DELETE FROM creature_spell_list_entry WHERE Id IN (1669901, 2059001);
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1669901, "Shattered Halls - Shattered Hand Reaver  - Normal", 0, 0),
+(2059001, "Shattered Halls - Shattered Hand Reaver  - Heroic", 0, 0);
+UPDATE `creature_template` SET SpellList=1669901 WHERE entry = 16699;
+UPDATE `creature_template` SET SpellList=2059001 WHERE entry = 20590;
+DELETE FROM creature_spell_list WHERE Id IN (1742001, 2058701);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(1742001, 1, 30474, 0, 1, 0, 100, 0, 6000, 19000, 16000, 30000, "Shattered Hand Heathen (Normal) - Bloodthirst - on Current"),
+(2058701, 2, 35949, 0, 1, 0, 100, 0, 6000, 19000, 16000, 30000, "Shattered Hand Heathen  (Normal) - Bloodthirst - on Current");
+DELETE FROM creature_spell_list_entry WHERE Id IN (1742001, 2058701);
+REPLACE INTO `creature_spell_list_entry` (Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1742001, "Shattered Halls - Shattered Hand Heathen  - Normal", 0, 0),
+(2058701, "Shattered Halls - Shattered Hand Heathen  - Heroic", 0, 0);
+UPDATE `creature_template` SET SpellList=1742001 WHERE entry = 17420;
+UPDATE `creature_template` SET SpellList=2058701 WHERE entry = 20587;
+
+UPDATE creature_template SET SpellList = 2087001 WHERE entry=20870;
+UPDATE creature_template SET SpellList = 2162601 WHERE entry=21626;
+DELETE FROM creature_spell_list_entry WHERE Id IN(2087001,2162601);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(2087001, 'Arcatraz - Zereketh the Unbound - Normal', 0, 0),
+(2162601, 'Arcatraz - Zereketh the Unbound - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(2087001,2162601);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('2087001', '0', '36119', '0', '-1', '100', '0', '100', '1','9000','15000','13000','17000', 'Zereketh the Unbound - Void Zone on Random Player'),
+('2087001', '1', '36123', '0', '-1', '121', '0', '100', '1','14000','21000','14000','21000', 'Zereketh the Unbound - Seed of Corruption on Random Player aura not present'),
+('2087001', '2', '36127', '0', '-1', '0', '0', '100', '1','15000','21000','35000','45000', 'Zereketh the Unbound - Shadow Nova'),
+('2162601', '0', '36119', '0', '-1', '100', '0', '100', '1','9000','15000','13000','17000', 'Zereketh the Unbound - Void Zone on Random Player'),
+('2162601', '1', '39367', '0', '-1', '121', '0', '100', '1','12000','18000','12000','18000', 'Zereketh the Unbound - Seed of Corruption on Random Player aura not present'),
+('2162601', '2', '39005', '0', '-1', '0', '0', '100', '1','15000','23000','30000','40000', 'Zereketh the Unbound - Shadow Nova');
+
+UPDATE `creature_template` SET `SpeedWalk`= 8 / 7 WHERE `entry`='13539';
+UPDATE `creature_template` SET `SpeedWalk`= 8 / 7 WHERE `entry`='13542';
+UPDATE `creature_template` SET `SpeedWalk`= 8 / 7 WHERE `entry`='13548';
+UPDATE `creature_template` SET `SpeedWalk`= 8 / 7 WHERE `entry`='14021';
+UPDATE `creature_template` SET `SpeedWalk`= 8 / 7 WHERE `entry`='14533';
+UPDATE `creature_template` SET `SpeedRun`= 15 / 7 WHERE `entry`='14988';
+UPDATE `creature_template` SET `SpeedWalk`='1.2', `SpeedRun`= 3 / 7 WHERE `entry`='15224';
+UPDATE `creature_template` SET `SpeedRun`= 10 / 7 WHERE `entry`='16124';
+UPDATE `creature_template` SET `SpeedRun`= 6 / 7 WHERE `entry`='16129';
+
+SET @PATH := 1421;
+UPDATE `creature` SET `spawntimesecsmin`='30', `spawntimesecsmax`='40', `position_x`='-11330.128', `position_y`='-201.70247', `position_z`='75.3551' WHERE `id` = '1421';
+DELETE FROM creature_movement_template WHERE `Entry` = @PATH;
+INSERT INTO `creature_movement_template` (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`) VALUES
+(@PATH,0,1,-11332.41,-202.57655,75.27844,100, 0),
+(@PATH,0,2,-11332.354,-207.86171,75.4801,100, 0),
+(@PATH,0,3,-11329.404,-210.93268,75.854614,100, 0),
+(@PATH,0,4,-11325.882,-214.05154,76.310425,100, 0),
+(@PATH,0,5,-11326.426,-220.31602,76.13684,100, 0),
+(@PATH,0,6,-11331.428,-224.11876,75.2301,100, 15000),
+(@PATH,0,7,-11330.593,-229.14502,75.061646,100, 0),
+(@PATH,0,8,-11329.63,-232.61719,74.89221,100, 0),
+(@PATH,0,9,-11329.29,-236.28912,74.812546,100, 0),
+(@PATH,0,10,-11330.215,-240.38336,74.337204,100, 0),
+(@PATH,0,11,-11328.289,-244.47841,74.35039,100, 0),
+(@PATH,0,12,-11330.688,-248.137,73.26103,100, 30000),
+(@PATH,0,13,-11328.444,-239.69011,74.69609,100, 0),
+(@PATH,0,14,-11327.524,-235.55914,74.91753,100, 0),
+(@PATH,0,15,-11326.942,-230.3699,75.30945,100, 0),
+(@PATH,0,16,-11330.103,-226.33957,75.2301,100, 0),
+(@PATH,0,17,-11330.271,-222.37321,75.2301,100, 0),
+(@PATH,0,18,-11328.002,-216.52393,76.18225,100, 0),
+(@PATH,0,19,-11330.451,-207.0886,75.4801,100, 0),
+(@PATH,0,20,-11332.41,-202.57655,75.27844,100, 0),
+(@PATH,0,21,-11330.128,-201.70247,75.3551,100, 12000);
+INSERT INTO `creature_movement_template` (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(@PATH,1,1,-11315.612,-197.70877,76.311745,100, 0, 0),
+(@PATH,1,2,-11313.796,-194.019,76.59934,100, 6000, 142100),
+(@PATH,1,3,-11325.414,-200.42009,75.6178,100, 0, 0),
+(@PATH,1,4,-11343.164,-212.33643,75.29683,100, 0, 0),
+(@PATH,1,5,-11359.65,-209.66531,75.29683,100, 0, 0),
+(@PATH,1,6,-11374.819,-216.3622,75.34232,100, 0, 0),
+(@PATH,1,7,-11383.107,-231.53195,71.442665,100, 0, 0),
+(@PATH,1,8,-11383.049,-246.53125,65.809425,100, 0, 0),
+(@PATH,1,9,-11391.146,-276.89496,59.325535,100, 0, 0),
+(@PATH,1,10,-11390.09,-287.58762,59.22373,100, 0, 0),
+(@PATH,1,11,-11384.697,-308.23578,63.358273,100, 0, 0),
+(@PATH,1,12,-11382.183,-317.46582,65.11658,100, 0, 0),
+(@PATH,1,13,-11379.763,-328.08258,65.40881,100, 0, 0),
+(@PATH,1,14,-11372.397,-344.2346,65.67435,100, 2000, 142101),
+(@PATH,1,15,-11366.07,-364.66504,66.08626,100, 0, 0),
+(@PATH,1,16,-11358.83,-375.84946,65.32926,100, 0, 0),
+(@PATH,1,17,-11350.435,-381.47113,65.6547,100, 0, 0),
+(@PATH,1,18,-11308.213,-370.0369,65.413025,100, 0, 0),
+(@PATH,1,19,-11299.191,-369.09235,65.643585,100, 30000, 0),
+(@PATH,1,20,-11271.992,-368.16895,61.901157,100, 0, 0),
+(@PATH,1,21,-11255.041,-371.03772,58.591084,100, 10000, 142102);
+DELETE FROM dbscripts_on_quest_end WHERE id = '330';
+INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `x`, `y`, `z`, `comments`) VALUES
+('330', '0', '0', '21', '1', '0', '0', '1421', '75', '0', '0', '0', '0', '0', 'Patrol Schedules - Privat Merle - Set ActiveState'),
+('330', '0', '1', '25', '1', '0', '0', '1421', '75', '0', '0', '0', '0', '0', 'Patrol Schedules - Privat Merle - Set Run'),
+('330', '0', '2', '20', '2', '1', '1', '1421', '75', '0', '0', '0', '0', '0', 'Patrol Schedules - Privat Merle - Start Waypoint Path 1');
+DELETE FROM `dbscripts_on_creature_movement` WHERE id IN (142100, 142101, 142102, 60401);
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `dataint`, `dataint2`,`x`, `y`, `z`, `comments`) VALUES
+('142100', '1000', '0', '36', '0', '0', '0','0', '0', '0', '0', '0','0','Patrol Schedules - Privat Merle - Face Player'),
+('142100', '1000', '1', '0', '0', '0', '0','0', '229', '0', '0', '0','0','Patrol Schedules - Privat Merle - Say Text'),
+('142100', '2000', '2', '22', '99', '0', '0','0', '0', '0', '0', '0','0','Patrol Schedules - Privat Merle - Change Faction'),
+('142101', '0', '0', '53', '0', '0', '0','0', '6506', '1', '0', '0','0','Patrol Schedules - Privat Merle - Spawn Plague Spreader'),
+('142102', '2000', '0', '18', '0', '0', '0','0', '0', '0', '0', '0','0','Patrol Schedules - Privat Merle - Despawn'),
+('60401', '0', '0', '53', '0', '0', '0','0', '6506', '0', '0', '0','0','Patrol Schedules - Plaque Spreader - Change WorldState'),
+('60401', '0', '3', '18', '0', '0', '0','0', '0', '0', '0', '0','0','Patrol Schedules - Plaque Spreader - Despawn Self'),
+('60401', '0', '1', '18', '0', '0', '604','10', '0', '0', '0', '0','0','Patrol Schedules - Plaque Spreader - Despawn Friend'),
+('60401', '0', '2', '18', '0', '0', '604','10', '0', '0', '0', '0','0','Patrol Schedules - Plaque Spreader - Despawn Friend');
+DELETE FROM `creature` WHERE `id` = 604 AND `guid` IN (45105, 45106, 45107);
+INSERT INTO `creature` (`guid`, `id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawndist`, `MovementType`) VALUES
+('45105', '604', '-11256.541', '-358.52567', '59.071896', '3.82457280158996582', '0', '0'),
+('45106', '604', '-11250.679', '-356.77237', '56.685455', '6.282236576080322265', '0', '0'),
+('45107', '604', '-11251.144', '-354.77817', '57.42874', '0.214641839265823364', '0', '0');
+DELETE FROM `creature_spawn_data_template` WHERE `Entry` = '60401';
+INSERT INTO `creature_spawn_data_template` (`Entry`, `Faction`, `Name`) VALUES ('60401', '43', 'Plaque Spreader (604) - Faction');
+DELETE FROM `creature_spawn_data` WHERE `Guid` IN (45105, 45106, 45107);
+INSERT INTO `creature_spawn_data` (`Guid`, `Id`) VALUES ('45105', '60401'), ('45106', '60401'), ('45107', '60401');
+DELETE FROM `spawn_group` WHERE `Id` = '19018';
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES ('19018', 'Duskwood - Plague Spreader (3) (q.330)', '0', '0', '998', '8');
+DELETE FROM `spawn_group_formation` WHERE `Id` = '19018';
+INSERT INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+('19018', '1', '5', '0', '19018', '2', 'Duskwood - Plague Spreader (3) (q.330)');
+DELETE FROM `spawn_group_spawn` WHERE `Id` = '19018';
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES ('19018', '45105', '0'), ('19018', '45106', '1'), ('19018', '45107', '2');
+DELETE FROM `worldstate_name` WHERE `Id` = '6506';
+INSERT INTO `worldstate_name` (`Id`, `Name`) VALUES ('6506', 'Quest ID 330 - Plague Spreader Spawn');
+DELETE FROM `conditions` WHERE `condition_entry` = '998';
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES
+('998', '42', '6506', '0', '1', '0', '0', 'Quest ID 330 - Plague Spreader Spawn');
+DELETE FROM `waypoint_path` WHERE `PathId` = 19018;
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `WaitTime`, `ScriptId`) VALUES
+('19018','1','-11270.975','-364.99533','61.834743', '0', '0'),
+('19018','2','-11282.513','-366.25824','63.389675', '0', '0'),
+('19018','3','-11291.812','-366.56598','64.210236', '2000', '0'),
+('19018','4','-11290.514','-366.52344','64.17557', '0', '0'),
+('19018','5','-11272.343','-366.87717','62.105503', '0', '0'),
+('19018','6','-11262.049','-365.63098','60.135162', '0', '0'),
+('19018','7','-11250.061','-358.7902','56.24234', '1000', '60401');
+DELETE FROM `waypoint_path_name` WHERE `PathId` = 19018 AND `Name` = 'Duskwood - Plague Spreader (q.330)';
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES ('19018', 'Duskwood - Plague Spreader (q.330)');
+UPDATE `creature_template` SET `DamageMultiplier` = 1.20 WHERE `entry` = 1421;
+
+UPDATE `quest_template` SET `CompleteScript`='0' WHERE `entry`='63';
+DELETE FROM dbscripts_on_quest_end WHERE id = '63';
+UPDATE `quest_template` SET `StartScript`='96' WHERE `entry`='96';
+DELETE FROM dbscripts_on_quest_start WHERE id = '96';
+INSERT INTO dbscripts_on_quest_start(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(96,20000,0,45,589501,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Minor Manifestation of Water - Start Relay Script');
+UPDATE `quest_template` SET `StartScript`='100' WHERE `entry`='100';
+DELETE FROM dbscripts_on_quest_start WHERE id = '100';
+INSERT INTO dbscripts_on_quest_start(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(100,0,0,45,700701,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Start Relay Script');
+DELETE FROM dbscripts_on_quest_end WHERE id = '1103';
+INSERT INTO dbscripts_on_quest_end(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(1103,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Remove Standstate'),
+(1103,0,0,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Set Active Object'),
+(1103,1000,0,0,0,0,0,0,0,0,3069,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Say Text'),
+(1103,4000,0,20,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Change Movement');
+DELETE FROM dbscripts_on_relay WHERE id IN (589501, 700701, 589701);
+INSERT INTO dbscripts_on_relay(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(589501,0,3,29,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Minor Manifestation of Water - Remove NPC Flags'),
+(589501,0,2,20,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Minor Manifestation of Water - Start Movement'),
+(589501,0,1,35,5,0,0,6748,50,512,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Minor Manifestation of Water - Send AI Event'),
+(700701,0,1,35,5,50,0,5897,50,512,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Corrupt Water Spirit of Water - Send AI Event'),
+(700701,1000,0,9,1023,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Respawn Gameobject'),
+(700701,12000,0,9,15338,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Respawn Gameobject'),
+(700701,13000,0,31,5895,15,0,0,0,8,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Check for spawn'),
+(700701,15000,0,10,5895,0,1,0,0,8,0,0,0,0,0,417.04,1822.66,12.61,1.483,0,0,'Call of Water - Spawn Minor Manifestation of Water'),
+(700701,19000,0,10,6748,0,6,0,0,8,0,0,0,0,0,393.13,1860.64,11.22,5.577,0,0,'Call of Water - Spawn Water Spirit - Path 6'),
+(700701,19000,0,10,6748,0,7,0,0,8,0,0,0,0,0,405.81,1843.58,12.54,6.161,0,0,'Call of Water - Spawn Water Spirit - Path 7'),
+(700701,19000,0,10,6748,0,10,0,0,8,0,0,0,0,0,424.75,1840.46,12.25,2.945,0,0,'Call of Water - Spawn Water Spirit - Path 10'),
+(700701,20000,0,10,6748,0,4,0,0,8,0,0,0,0,0,404.85,1863.62,11.20,5.135,0,0,'Call of Water - Spawn Water Spirit - Path 4'),
+(700701,20000,0,10,6748,0,9,0,0,8,0,0,0,0,0,424.45,1818.22,10.46,1.964,0,0,'Call of Water - Spawn Water Spirit - Path 9'),
+(700701,22000,0,10,6748,0,3,0,0,8,0,0,0,0,0,431.41,1849.24,11.39,3.516,0,0,'Call of Water - Spawn Water Spirit - Path 3'),
+(700701,22000,0,10,6748,0,8,0,0,8,0,0,0,0,0,400.15,1827.50,10.46,0.813,0,0,'Call of Water - Spawn Water Spirit - Path 8'),
+(700701,22000,0,10,6748,0,11,0,0,8,0,0,0,0,0,413.20,1831.29,10.46,1.468,0,0,'Call of Water - Spawn Water Spirit - Path 11'),
+(700701,24000,0,10,6748,0,2,0,0,8,0,0,0,0,0,439.28,1837.30,12.42,2.934,0,0,'Call of Water - Spawn Water Spirit - Path 2'),
+(700701,24000,0,10,6748,0,5,0,0,8,0,0,0,0,0,418.96,1854.28,10.97,4.339,0,0,'Call of Water - Spawn Water Spirit - Path 5'),
+(700701,25000,0,10,6748,0,12,0,0,8,0,0,0,0,0,434.02,1862.14,10.89,3.925,0,0,'Call of Water - Spawn Water Spirit - Path 12'),
+(700701,25000,0,10,6748,0,1,0,0,8,0,0,0,0,0,392.31,1847.33,12.36,6.068,0,0,'Call of Water - Spawn Water Spirit - Path 1'),
+(589701,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Corrupt Water Spirit - Stop Movement'),
+(589701,0,1,28,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Corrupt Water Spirit - Set Standstate 7'),
+(589701,7000,0,18,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Corrupt Water Spirit - Despawn');
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (589500, 674800, 700700, 700701);
+INSERT INTO dbscripts_on_creature_movement(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(589500,0,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Minor Manifestation of Water - Pause Movement'),
+(589500,300000,0,20,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Minor Manifestation of Water - Change Movement after 5 minutes'),
+(674800,0,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Water Spirit - Pause Movement'),
+(674801,0,0,18,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Water Spirit - Despawn'),
+(700700,0,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Pause Movement'),
+(700700,0,1,0,0,0,0,0,0,0,3070,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Say Text'),
+(700700,3000,0,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Face Player'),
+(700700,3000,1,15,9735,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Cast Sapta Sight on Player'),
+(700700,6000,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Unpause Movement'),
+(700701,0,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Pause Movement'),
+(700701,0,1,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Face Player'),
+(700701,100,2,1,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Emote Kneel'),
+(700701,5000,0,0,0,0,0,0,0,0,3072,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Say Text'),
+(700701,6000,0,45,700701,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Start Relay Script'),
+(700701,15000,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Unpause Movement'),
+(700702,0,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Pause Movement'),
+(700702,16000,0,0,0,0,0,0,0,0,3073,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Say Text'),
+(700702,16000,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Unpause Movement'),
+(700703,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Remove Movement'),
+(700703,0,1,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Remove Active Object'),
+(700703,4000,0,28,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Call of Water - Tiev Mordune - Set Stanstate');
+DELETE FROM `spell_script_target` WHERE entry = 9735;
+INSERT INTO `spell_script_target` (`entry`, `targetEntry`) VALUES ('9735', '113791');
+INSERT INTO `creature_template_addon` (`entry`, `mount`, `stand_state`, `sheath_state`, `pvp_flags`, `emote`, `moveflags`, `auras`) VALUES (5895, 0, 0, 0, 0, 0, 0, '8203');
+UPDATE `creature_template_addon` SET `auras`='8203' WHERE (`entry`='5897');
+UPDATE `creature` SET `spawntimesecsmin`='450', `spawntimesecsmax`='450' WHERE (`id`='5897');
+UPDATE `creature` SET `spawndist`='3', `MovementType`='1' WHERE (`id`='5897');
+DELETE FROM creature_template_addon WHERE entry = 6748;
+INSERT INTO `creature_template_addon` (`entry`, `auras`) VALUES ('6748', '8203');
+UPDATE `creature_template` SET `Faction`='35', `UnitFlags`='33555200', `MovementType`='2'  WHERE (`Entry`='6748');
+UPDATE `creature` SET `position_x`='418.87442', `position_y`='1831.7448', `position_z`='10.740808', `orientation`='1.29154360294342',  `MovementType`='2' WHERE (`guid`='4240');
+SET @PATH := 7007;
+DELETE FROM creature_movement_template WHERE `Entry` = @PATH;
+INSERT INTO `creature_movement_template` (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`, `Comment`) VALUES
+(@PATH,0,1,431.49332,1869.7583,10.962283,100,100,700700,'Tiev Mordune Script 0'),
+(@PATH,0,2,433.68994,1865.9907,10.562694,100,0,0,'Tiev Mordune'),
+(@PATH,0,3,435.59,1863.40,10.60,100,0,0,'Tiev Mordune CUSTOM Pathfinding Issue'),
+(@PATH,0,4,419.18393,1849.8658,11.653746,100,0,0,'Tiev Mordune'),
+(@PATH,0,5,419.10806,1845.3435,11.937315,100,100,700701,'Tiev Mordune Script 1'),
+(@PATH,0,6,418.88077,1834.5356,10.5857525,100,0,0,'Tiev Mordune'),
+(@PATH,0,7,416.7359,1827.0114,11.646935,100,100,700702,'Tiev Mordune Script 2'),
+(@PATH,0,8,424.09283,1833.2285,9.805505,100,0,0,'Tiev Mordune'),
+(@PATH,0,9,435.79385,1853.7615,10.922435,100,0,0,'Tiev Mordune'),
+(@PATH,0,10,434.79166,1868.6956,10.229746,100,0,0,'Tiev Mordune'),
+(@PATH,0,11,430.83606,1880.6953,15.179446,100,0,0,'Tiev Mordune'),
+(@PATH,0,12,430.38467,1881.858,15.423465,100,0,0,'Tiev Mordune'),
+(@PATH,0,13,430.38467,1881.858,15.423465,5.131,5000,700703,'Tiev Mordune Script 3');
+SET @PATH := 5894;
+DELETE FROM creature_movement_template WHERE `Entry` = @PATH;
+INSERT INTO `creature_movement_template` (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(@PATH,0,1,418.87442,1831.7448,10.740808,1.29154360294342041, 15000, 0),
+(@PATH,0,2,411.1008,1830.1821,10.487756,100, 0, 0),
+(@PATH,0,3,405.4809,1825.3516,10.487756,100, 0, 0),
+(@PATH,0,4,405.21533,1819.3403,10.434289,100, 0, 0),
+(@PATH,0,5,413.8386,1811.1016,10.659387,100, 0, 0),
+(@PATH,0,6,422.24197,1812.2107,10.667932,100, 0, 0),
+(@PATH,0,7,426.7163,1816.2659,10.487756,100, 0, 0),
+(@PATH,0,8,429.11118,1821.2192,10.487756,100, 0, 0),
+(@PATH,0,9,427.67056,1827.4037,10.487756,100, 0, 0),
+(@PATH,0,10,420.71713,1831.9974,10.759118,100, 1000, 0),
+(@PATH,0,11,418.87442,1831.7448,10.740808,100, 1000, 0),
+(@PATH,0,12,418.87442,1831.7448,10.740808,1.29154360294342041,47000, 0),
+(@PATH,0,13,425.76688,1830.2009,10.612145,100, 0, 0),
+(@PATH,0,14,428.9062,1822.8967,10.487756,100, 0, 0),
+(@PATH,0,15,426.91602,1815.8613,10.487756,100, 0, 0),
+(@PATH,0,16,420.52893,1811.664,11.1521845,100, 0, 0),
+(@PATH,0,17,411.95572,1812.0321,11.103478,100, 0, 0),
+(@PATH,0,18,405.62247,1817.4442,10.174523,100, 0, 0),
+(@PATH,0,19,404.27496,1823.1691,10.487756,100, 0, 0),
+(@PATH,0,20,407.25537,1828.4978,10.487756,100, 0, 0),
+(@PATH,0,21,412.9241,1831.525,10.487756,100, 0, 0),
+(@PATH,0,22,417.86905,1833.245,10.560876,100, 0, 0),
+(@PATH,0,23,418.87442,1831.7448,10.740808,100, 0, 0),
+(@PATH,0,24,418.87442,1831.7448,10.740808,1.29154360294342041,2000, 0),
+(@PATH,0,25,417.94888,1841.0326,11.753721,100, 0, 0),
+(@PATH,0,26,412.83752,1840.493,12.289122,100, 0, 0),
+(@PATH,0,27,406.2172,1836.3334,12.8357525,100, 0, 0),
+(@PATH,0,28,394.71332,1846.7622,12.228581,100, 0, 0),
+(@PATH,0,29,399.55655,1860.3184,11.46491,100, 0, 0),
+(@PATH,0,30,410.5286,1863.5994,10.558653,100, 0, 0),
+(@PATH,0,31,420.33704,1853.7542,11.200865,100, 0, 0),
+(@PATH,0,32,429.42557,1847.4866,11.689024,100, 0, 0),
+(@PATH,0,33,440.58447,1847.8099,11.269969,100, 0, 0),
+(@PATH,0,34,443.78656,1843.0039,12.289866,100, 0, 0),
+(@PATH,0,35,440.0046,1835.2489,12.419017,100, 0, 0),
+(@PATH,0,36,433.30914,1829.9442,12.131921,100, 0, 0),
+(@PATH,0,37,428.29428,1837.9879,12.414732,100, 0, 0),
+(@PATH,0,38,421.72055,1840.7006,12.101133,100, 100, 5),
+(@PATH,0,39,418.87442,1831.7448,10.740808,100, 100, 6),
+(@PATH,0,40,418.87442,1831.7448,10.740808,1.29154360294342041, 25000, 0);
+SET @PATH := 5895;
+DELETE FROM creature_movement_template WHERE `Entry` = @PATH;
+INSERT INTO `creature_movement_template` (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(@PATH,1,1,421.8788,1840.3544,12.0527935,100,100,589500),
+(@PATH,2,1,421.8788,1840.3544,12.0527935,100,0,0),
+(@PATH,2,2,431.01562,1847.8055,11.612364,100,0,0),
+(@PATH,2,3,454.36328,1883.919,5.442026,100,0,0),
+(@PATH,2,4,459.39835,1923.7932,-10.240311,100,1000,674801);
+SET @PATH := 6748;
+DELETE FROM creature_movement_template WHERE `Entry` = @PATH;
+INSERT INTO `creature_movement_template` (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(@PATH,1,1,392.31,1847.33,12.36,6.068,100,674800),
+(@PATH,1,2,392.31,1847.33,12.36,6.068,3000,0),
+(@PATH,1,3,406.45312,1853.0293,11.4607525,100, 0, 0),
+(@PATH,1,4,426.0931,1853.4049,11.238218,100, 0, 0),
+(@PATH,1,5,439.47028,1859.5836,10.419017,100, 0, 0),
+(@PATH,1,6,452.2871,1873.2698,8.482309,100, 0, 0),
+(@PATH,1,7,469.80817,1890.7695,1.4991376,100, 1000, 674801),
+(@PATH,2,1,439.28,1837.30,12.42,2.934,100,674800),
+(@PATH,2,2,439.28,1837.30,12.42,2.934,5000,0),
+(@PATH,2,3,439.02524,1844.5131,11.919017,100, 0, 0),
+(@PATH,2,4,439.42584,1860.4017,10.526927,100, 0, 0),
+(@PATH,2,5,443.2843,1880.2444,5.9984226,100, 0, 0),
+(@PATH,2,6,442.6797,1877.0859,6.942026,100, 1000, 674801),
+(@PATH,3,1,431.41,1849.24,11.39,3.516,100,674800),
+(@PATH,3,2,431.41,1849.24,11.39,3.516,5000,0),
+(@PATH,3,3,438.10107,1862.1263,10.4462385,100, 0, 0),
+(@PATH,3,4,445.3859,1866.9548,9.960947,100, 0, 0),
+(@PATH,3,5,449.72852,1879.206,6.567026,100, 0, 0),
+(@PATH,3,6,446.74728,1892.3281,1.0941257,100, 0, 0),
+(@PATH,3,7,443.83682,1903.1873,-5.6569366,100, 1000, 674801),
+(@PATH,4,1,404.85,1863.62,11.20,5.135,100,674800),
+(@PATH,4,2,404.85,1863.62,11.20,5.135,500,0),
+(@PATH,4,3,410.91525,1860.8453,10.843443,100, 0, 0),
+(@PATH,4,4,427.12457,1856.0109,10.926939,100, 0, 0),
+(@PATH,4,5,437.1794,1860.1814,10.519969,100, 0, 0),
+(@PATH,4,6,457.08438,1888.1526,4.269785,100, 0, 0),
+(@PATH,4,7,464.85547,1909.8047,-5.720413,100, 1000, 674801),
+(@PATH,5,1,418.96,1854.28,10.97,4.339,100,674800),
+(@PATH,5,2,418.96,1854.28,10.97,4.339,3000,0),
+(@PATH,5,3,430.84006,1853.1951,11.028135,100, 0, 0),
+(@PATH,5,4,437.45844,1860.4113,10.4864,100, 0, 0),
+(@PATH,5,5,444.05286,1873.4497,8.562632,100, 0, 0),
+(@PATH,5,6,448.75015,1888.2692,3.3022556,100, 0, 0),
+(@PATH,5,7,457.16418,1900.19,-1.3889923,100, 1000, 674801),
+(@PATH,6,1,393.13,1860.64,11.22,5.577,100,674800),
+(@PATH,6,2,393.13,1860.64,11.22,5.577,5000,0),
+(@PATH,6,3,407.33914,1859.3123,11.392515,100, 0, 0),
+(@PATH,6,4,429.232,1856.2153,10.9607525,100, 0, 0),
+(@PATH,6,5,443.2384,1870.1517,9.710215,100, 0, 0),
+(@PATH,6,6,463.67264,1896.4757,0.32032204,100, 1000, 674801),
+(@PATH,7,1,405.81,1843.58,12.54,6.161,100,674800),
+(@PATH,7,2,405.81,1843.58,12.54,6.161,10000,0),
+(@PATH,7,3,425.22348,1816.2814,10.487756,100, 0, 0),
+(@PATH,7,4,430.78104,1820.6372,10.487756,100, 0, 0),
+(@PATH,7,5,439.31754,1825.1202,12.664169,100, 0, 0),
+(@PATH,7,6,441.66635,1835.1333,12.419017,100, 0, 0),
+(@PATH,7,7,444.533,1842.4141,12.521068,100, 0, 0),
+(@PATH,7,8,449.82465,1849.613,11.037059,100, 0, 0),
+(@PATH,7,9,446.33344,1861.1415,10.195994,100, 0, 0),
+(@PATH,7,10,469.31055,1891.5924,1.3225019,100, 1000, 674801),
+(@PATH,8,1,400.15,1827.50,10.46,0.813,100,674800),
+(@PATH,8,2,400.15,1827.50,10.46,0.813,10000,0),
+(@PATH,8,3,428.5726,1819.7274,10.487756,100, 0, 0),
+(@PATH,8,4,427.20813,1827.1571,10.487756,100, 0, 0),
+(@PATH,8,5,432.24295,1836.5192,12.405577,100, 0, 0),
+(@PATH,8,6,438.77335,1843.1816,12.084422,100, 0, 0),
+(@PATH,8,7,436.4252,1853.4467,10.884349,100, 0, 0),
+(@PATH,8,8,434.67307,1868.783,10.27186,100, 0, 0),
+(@PATH,8,9,439.33084,1876.4147,8.145517,100, 0, 0),
+(@PATH,8,10,444.48453,1893.4553,0.009897232,100, 0, 0),
+(@PATH,8,11,440.0733,1901.166,-5.9965363,100, 1000, 674801),
+(@PATH,9,1,424.45,1818.22,10.46,1.964,100,674800),
+(@PATH,9,2,424.45,1818.22,10.46,1.964,11000,0),
+(@PATH,9,3,428.00943,1825.4735,10.487756,100, 0, 0),
+(@PATH,9,4,425.67725,1830.5055,10.480554,100, 0, 0),
+(@PATH,9,5,428.95306,1840.714,12.4607525,100, 0, 0),
+(@PATH,9,6,436.45667,1845.7812,11.806468,100, 0, 0),
+(@PATH,9,7,437.6485,1854.5172,10.588695,100, 0, 0),
+(@PATH,9,8,449.22168,1880.1298,6.3767185,100, 0, 0),
+(@PATH,9,9,448.36328,1878.207,6.817026,100, 1000, 674801),
+(@PATH,10,1,424.75,1840.46,12.25,2.945,100,674800),
+(@PATH,10,2,424.75,1840.46,12.25,2.945,11000,0),
+(@PATH,10,3,435.19205,1825.6515,12.399033,100, 0, 0),
+(@PATH,10,4,442.65442,1836.267,12.600047,100, 0, 0),
+(@PATH,10,5,445.90778,1853.7994,10.150584,100, 0, 0),
+(@PATH,10,6,445.82993,1865.9453,10.130931,100, 0, 0),
+(@PATH,10,7,458.66364,1884.7913,5.2171726,100, 0, 0),
+(@PATH,10,8,470.88943,1897.9523,-1.1516192,100, 1000, 674801),
+(@PATH,11,1,413.20,1831.29,10.46,1.468,100,674800),
+(@PATH,11,2,413.20,1831.29,10.46,1.468,11000,0),
+(@PATH,11,3,428.40353,1829.527,10.391686,100, 0, 0),
+(@PATH,11,4,432.89297,1843.0895,12.342833,100, 0, 0),
+(@PATH,11,5,430.71457,1858.4186,10.9607525,100, 0, 0),
+(@PATH,11,6,439.50668,1870.2897,9.891489,100, 0, 0),
+(@PATH,11,7,451.3856,1891.964,2.2780857,100, 0, 0),
+(@PATH,11,8,451.89758,1899.8502,-1.6959133,100, 1000, 674801),
+(@PATH,12,1,434.02,1862.14,10.89,3.925,100,674800),
+(@PATH,12,2,434.02,1862.14,10.89,3.925,3000,0),
+(@PATH,12,3,454.813,1891.4397,2.8512058, 100, 1000, 674801);
+
+UPDATE `quest_template` SET `PrevQuestId`='0' WHERE (`entry`='308');
+DELETE FROM conditions WHERE condition_entry = 999;
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `comments`) VALUES ('999', '9', '310', 'Distract Jarven - Quest Bitter Rivals taken');
+UPDATE `quest_template` SET `RequiredCondition`='999' WHERE (`entry`='308');
+DELETE FROM `dbscripts_on_quest_end` WHERE id = '308';
+INSERT INTO dbscripts_on_quest_end(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(308,0,0,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Jarven Thunderbrew - Set Active'),
+(308,0,1,29,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Jarven Thunderbrew - Remove NPC Flags'),
+(308,0,2,20,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Jarven Thunderbrew - Start Movement'),
+(308,0,32,0,0,0,0,0,0,0,127,0,0,0,0,0,0,0,0,0,0,'Jarven Thunderbrew - Say Text');
+UPDATE `quest_template` SET `CompleteScript`='308' WHERE `entry`='308';
+SET @PATH := 1373;
+DELETE FROM creature_movement_template WHERE `Entry` = @PATH;
+INSERT INTO `creature_movement_template` (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`, `Comment`) VALUES
+(@PATH,0,1,-5605.8213,-544.3539,392.55997,100,0,0,''),
+(@PATH,0,2,-5602.8955,-542.2716,392.56,100,0,137300,'Change Gameobject'),
+(@PATH,0,3,-5597.4175,-544.2648,393.47446,100,0,0,''),
+(@PATH,0,4,-5597.6616,-549.1274,395.65552,100,0,0,''),
+(@PATH,0,5,-5606.2666,-549.3079,399.2596,100,0,0,''),
+(@PATH,0,6,-5606.6406,-546.8222,399.2825,100,0,0,''),
+(@PATH,0,7,-5604.7217,-542.8309,399.17358,100,0,0,''),
+(@PATH,0,8,-5600.2764,-541.1395,399.30725,100,0,0,''),
+(@PATH,0,9,-5597.328,-539.017,399.2509,100,0,0,''),
+(@PATH,0,10,-5597.7075,-535.45636,399.16,100,0,0,''),
+(@PATH,0,11,-5597.95,-529.76855,399.65842,100,0,0,''),
+(@PATH,0,12,-5601.2363,-529.56573,399.6584,100,0,0,''),
+(@PATH,0,13,-5602.804,-530.8537,399.6584,100,17000,137301,'Top Event'),
+(@PATH,0,14,-5597.1274,-531.0143,399.65842,100,0,0,''),
+(@PATH,0,15,-5597.4155,-537.65393,399.16,100,0,0,''),
+(@PATH,0,16,-5597.5083,-540.71375,399.18384,100,0,0,''),
+(@PATH,0,17,-5597.852,-542.4621,399.15347,100,0,0,''),
+(@PATH,0,18,-5601.8604,-542.9759,399.23264,100,0,0,''),
+(@PATH,0,19,-5606.3613,-544.98035,399.25223,100,0,0,''),
+(@PATH,0,20,-5605.413,-549.94464,399.2023,100,0,0,''),
+(@PATH,0,21,-5604.0063,-549.7447,398.6631,100,0,0,''),
+(@PATH,0,22,-5597.9478,-549.56366,395.6651,100,0,137302,'Say Text'),
+(@PATH,0,23,-5597.6836,-544.17053,393.40372,100,0,0,''),
+(@PATH,0,24,-5598.1704,-541.6491,392.55997,100,0,0,''),
+(@PATH,0,25,-5604.195,-542.8377,392.56,100,0,0,''),
+(@PATH,0,26,-5605.957,-544.4507,392.55997,100,1000,0,''),
+(@PATH,0,27,-5605.957,-544.4507,392.55997,0.977384388446807861,1000,137303,'');
+UPDATE `gameobject` SET `rotation2` = '0.233445', `rotation3` = '0.97237', `spawntimesecsmin`='62', `spawntimesecsmax`='62' WHERE (`guid`='39466');
+DELETE FROM `dbscripts_on_creature_movement` WHERE id IN(137300, 137301, 137302, 137303);
+INSERT INTO dbscripts_on_creature_movement(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(137300,0,0,9,6011,71,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Jarven Thunderbrew - Respawn Unguarded Thunderbrew Barrel'),
+(137300,1000,1,40,0,0,0,269,10,1,0,0,0,0,0,0,0,0,0,0,0,'Jarven Thunderbrew - Despawn Guarded Thunderbrew Barrel'),
+(137301,1000,1,0,0,0,0,0,0,0,125,0,0,0,0,0,0,0,0,0,0,'Jarven Thunderbrew - Say Text'),
+(137302,1000,1,0,0,0,0,0,0,0,126,0,0,0,0,0,0,0,0,0,0,'Jarven Thunderbrew - Say Text'),
+(137303,0,0,40,0,0,0,270,10,1,0,0,0,0,0,0,0,0,0,0,0,'Jarven Thunderbrew - Despawn Unguarded Thunderbrew Barrel'),
+(137303,0,1,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Jarven Thunderbrew - Remove Active'),
+(137303,0,2,29,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Jarven Thunderbrew - Add NPC Flags'),
+(137303,0,3,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Jarven Thunderbrew - Remove Movement');
+
+SET @PATH := 11626;
+DELETE FROM `dbscripts_on_creature_movement` WHERE id = @PATH*100+4;
+INSERT INTO dbscripts_on_creature_movement(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(@PATH*100+4,4000,0,0,0,0,0,11626,20,0,7333,0,0,0,0,0,0,0,0,0,0,'Rigger Gizelton - Say Text'),
+(@PATH*100+4, 2000, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork - run on'),
+(@PATH*100+4, 2000, 0, 25, 1, 0, 0, 11626, 81367, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger - run on'),
+(@PATH*100+4, 2000, 0, 29, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork remove questgiver/gossip status'),
+(@PATH*100+4, 2000, 0, 29, 3, 0, 0, 11626, 81367, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger remove questgiver/gossip status'),
+(@PATH*100+4, 2000, 0, 25, 1, 0, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - run on'),
+(@PATH*100+4, 2000, 0, 25, 1, 0, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - run on'),
+(@PATH*100+4, 1000, 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork - restore faction'),
+(@PATH*100+4, 1000, 0, 22, 0, 0, 0, 11626, 81367, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger - restore faction'),
+(@PATH*100+4, 1000, 0, 22, 0, 0, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - restore faction'),
+(@PATH*100+4, 1000, 0, 22, 0, 0, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - restore faction');
+SET @PATH := 11625;
+DELETE FROM `dbscripts_on_creature_movement` WHERE id = @PATH*100+4;
+INSERT INTO dbscripts_on_creature_movement(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
+(@PATH*100+4,3000,0,0,0,0,0,0,0,0,7334,0,0,0,0,0,0,0,0,0,0,'Cork Gizelton - Say Text'),
+(@PATH*100+4, 0, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork - run on'),
+(@PATH*100+4, 2000, 0, 25, 1, 0, 0, 11626, 81367, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger - run on'),
+(@PATH*100+4, 2000, 0, 29, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork remove questgiver/gossip status'),
+(@PATH*100+4, 2000, 0, 29, 3, 0, 0, 11626, 81367, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger remove questgiver/gossip status'),
+(@PATH*100+4, 2000, 0, 25, 1, 0, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - run on'),
+(@PATH*100+4, 2000, 0, 25, 1, 0, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - run on'),
+(@PATH*100+4, 2000, 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cork - restore faction'),
+(@PATH*100+4, 2000, 0, 22, 0, 0, 0, 11626, 81367, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rigger - restore faction'),
+(@PATH*100+4, 2000, 0, 22, 0, 0, 0, 11564, 52723, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo1 - restore faction'),
+(@PATH*100+4, 2000, 0, 22, 0, 0, 0, 11564, 52722, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kodo2 - restore faction');
+
+DELETE FROM `dbscripts_on_creature_movement` WHERE id IN (1646801, 1647001);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (1640701, 1641501, 1641502, 1642607, 1642611);
+
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|1048576 WHERE `entry` IN (8675,5979,5981,5982,5983,5984,5985,5988,5990,5991,5992,5993);
+REPLACE INTO `creature_template_addon` (`entry`, `sheath_state`, `auras`) VALUES (5993, 1, '12896'),(5992, 1, '12898 11966');
+UPDATE `creature` SET `spawntimesecsmin` = 300, `spawntimesecsmax` = 300 WHERE `id` IN (8675,5979,5981,5982,5983,5984,5985,5988,5990,5991,5992,5993);
+UPDATE `creature` SET `spawntimesecsmin` = 300, `spawntimesecsmax` = 300 WHERE guid IN (SELECT guid FROM `creature_spawn_entry` WHERE `entry` IN (8675,5979,5981,5982,5983,5984,5985,5988,5990,5991,5992,5993));
+
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (5991,5993,8675));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (5991,5993,8675));
+DELETE FROM `creature` WHERE `guid` IN (SELECT `guid` FROM `creature_spawn_entry` WHERE `entry` IN (5991,5993,8675));
+DELETE FROM `creature` WHERE `id` IN (5991,5993,8675);
+DELETE FROM `creature_spawn_entry` WHERE `entry` IN (5991,5993,8675);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(997, 5991, 0, 1, 1, -11707, -2800.18, 6.92886, 3.65945, 300, 300, 5, 1),
+(1011, 5991, 0, 1, 1, -11669.7, -2818.97, 5.31895, 3.06137, 300, 300, 5, 1),
+(1042, 5991, 0, 1, 1, -11793.8, -2759.39, 9.82908, 2.01823, 300, 300, 5, 1),
+(1069, 5991, 0, 1, 1, -11738.7, -3389.13, 14.4759, 3.72791, 300, 300, 5, 1),
+(1095, 5993, 0, 1, 1, -11693.6, -3036.73, 18.2434, 3.34396, 300, 300, 5, 1),
+(1101, 5993, 0, 1, 1, -11799.3, -2925.06, 12.5663, 5.37737, 300, 300, 10, 1),
+(1104, 5993, 0, 1, 1, -11755.7, -2983.82, 11.8835, 6.28041, 300, 300, 10, 1),
+(1186, 5993, 0, 1, 1, -11810.8, -2938.39, 14.9059, 4.12276, 300, 300, 10, 1),
+(1202, 5993, 0, 1, 1, -11754.7, -2966.49, 8.58804, 1.89598, 300, 300, 10, 1),
+(1218, 5993, 0, 1, 1, -11862, -2996.29, 16.9151, 5.23105, 300, 300, 5, 1),
+(1234, 8675, 0, 1, 1, -11317.8, -2985.12, 5.29086, 1.29389, 300, 300, 5, 1),
+(1238, 8675, 0, 1, 1, -11491.2, -3048.67, 2.53672, 3.40219, 300, 300, 10, 1),
+(1254, 8675, 0, 1, 1, -11373.8, -2739.85, 7.13812, 1.47696, 300, 300, 10, 1),
+(1265, 8675, 0, 1, 1, -11439.4, -2999.53, 3.67968, 1.44547, 300, 300, 10, 1),
+(1271, 8675, 0, 1, 1, -11414.3, -2816.8, -0.151889, 3.20488, 300, 300, 10, 1),
+(1280, 8675, 0, 1, 1, -11494.6, -2964.04, 35.606, 0.95895, 300, 300, 5, 1),
+(1288, 8675, 0, 1, 1, -11413.1, -3019.28, 0.002855, 5.22225, 300, 300, 10, 1),
+(1307, 8675, 0, 1, 1, -11414.5, -2915.38, 3.11745, 3.96471, 300, 300, 10, 1),
+(1328, 8675, 0, 1, 1, -11555.3, -2963.46, 39.3307, 1.97075, 300, 300, 5, 1),
+(1333, 8675, 0, 1, 1, -11519.9, -3005.47, 13.3669, 5.13934, 300, 300, 5, 1);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(1337, 0, 0, 1, -11515.7744140625, -3214.702392578125, 8.199786186218261718, 0.942323446273803710, 300, 300, 45, 1),
+(1345, 0, 0, 1, -11547.8173828125, -3249.014404296875, 6.965761661529541015, 3.893105506896972656, 300, 300, 45, 1),
+(1352, 0, 0, 1, -11582.7783203125, -3281.576416015625, 10.39273834228515625, 3.953731775283813476, 300, 300, 45, 1),
+(1354, 0, 0, 1, -11549.3437500000, -3184.436767578125, 5.096073627471923828, 2.410356760025024414, 300, 300, 45, 1),
+(1363, 0, 0, 1, -11483.1005859375, -3249.328613281250, 16.41819190979003906, 0.558159232139587402, 300, 300, 45, 1),
+(1376, 0, 0, 1, -11415.8564453125, -3248.860351562500, 9.892518043518066406, 0.862841129302978515, 300, 300, 45, 1),
+(5405, 0, 0, 1, -11384.6787109375, -3285.565185546875, 1.739705324172973632, 0.815740704536437988, 300, 300, 45, 1),
+(45109, 0, 0, 1, -11351.5019531250, -3251.598144531250, 9.210183143615722656, 3.532057762145996093, 300, 300, 45, 1),
+(45110, 0, 0, 1, -11382.6630859375, -3216.719726562500, 11.77551269531250000, 5.179092407226562500, 300, 300, 45, 1),
+(45111, 0, 0, 1, -11581.5908203125, -3216.217529296875, 6.155599594116210937, 3.890923261642456054, 300, 300, 45, 1);
+SET @SGUID := 249;
+REPLACE INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`, `StringId`) VALUES
+(@SGUID + 000, 'Blasted Lands - Redstone Crystalhide | Helboar | Felbeast (1) Wandering 000', 0, 0, 0, 0, 0),
+(@SGUID + 001, 'Blasted Lands - Redstone Crystalhide | Helboar | Felbeast (1) Wandering 001', 0, 0, 0, 0, 0),
+(@SGUID + 002, 'Blasted Lands - Redstone Crystalhide | Helboar | Felbeast (1) Wandering 002', 0, 0, 0, 0, 0),
+(@SGUID + 003, 'Blasted Lands - Redstone Crystalhide | Helboar | Felbeast (1) Wandering 003', 0, 0, 0, 0, 0),
+(@SGUID + 004, 'Blasted Lands - Redstone Crystalhide | Helboar | Felbeast (1) Wandering 004', 0, 0, 0, 0, 0),
+(@SGUID + 005, 'Blasted Lands - Redstone Crystalhide | Helboar | Felbeast (1) Wandering 005', 0, 0, 0, 0, 0),
+(@SGUID + 006, 'Blasted Lands - Redstone Crystalhide | Helboar | Felbeast (1) Wandering 006', 0, 0, 0, 0, 0),
+(@SGUID + 007, 'Blasted Lands - Redstone Crystalhide | Helboar | Felbeast (1) Wandering 007', 0, 0, 0, 0, 0),
+(@SGUID + 008, 'Blasted Lands - Redstone Crystalhide | Helboar | Felbeast (1) Wandering 008', 0, 0, 0, 0, 0),
+(@SGUID + 009, 'Blasted Lands - Redstone Crystalhide | Helboar | Felbeast (1) Wandering 009', 0, 0, 0, 0, 0);
+REPLACE INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`, `Chance`) VALUES
+(@SGUID + 000, 1337, 0, 0), (@SGUID + 001, 1345, 0, 0), (@SGUID + 002, 1352, 0, 0), (@SGUID + 003, 1355, 0, 0), (@SGUID + 004, 1363, 0, 0),
+(@SGUID + 005, 1376, 0, 0), (@SGUID + 006, 5405, 0, 0), (@SGUID + 007, 45109, 0, 0), (@SGUID + 008, 45110, 0, 0), (@SGUID + 009, 45111, 0, 0);
+REPLACE INTO `spawn_group_entry` (`Id`, `Entry`, `MinCount`, `MaxCount`, `Chance`) VALUES
+(@SGUID + 000, 5991, 0, 0, 0), (@SGUID + 000, 5993, 0, 0, 0), (@SGUID + 000, 8675, 0, 0, 0),
+(@SGUID + 001, 5991, 0, 0, 0), (@SGUID + 001, 5993, 0, 0, 0), (@SGUID + 001, 8675, 0, 0, 0),
+(@SGUID + 002, 5991, 0, 0, 0), (@SGUID + 002, 5993, 0, 0, 0), (@SGUID + 002, 8675, 0, 0, 0),
+(@SGUID + 003, 5991, 0, 0, 0), (@SGUID + 003, 5993, 0, 0, 0), (@SGUID + 003, 8675, 0, 0, 0),
+(@SGUID + 004, 5991, 0, 0, 0), (@SGUID + 004, 5993, 0, 0, 0), (@SGUID + 004, 8675, 0, 0, 0),
+(@SGUID + 005, 5991, 0, 0, 0), (@SGUID + 005, 5993, 0, 0, 0), (@SGUID + 005, 8675, 0, 0, 0),
+(@SGUID + 006, 5991, 0, 0, 0), (@SGUID + 006, 5993, 0, 0, 0), (@SGUID + 006, 8675, 0, 0, 0),
+(@SGUID + 007, 5991, 0, 0, 0), (@SGUID + 007, 5993, 0, 0, 0), (@SGUID + 007, 8675, 0, 0, 0),
+(@SGUID + 008, 5991, 0, 0, 0), (@SGUID + 008, 5993, 0, 0, 0), (@SGUID + 008, 8675, 0, 0, 0),
+(@SGUID + 009, 5991, 0, 0, 0), (@SGUID + 009, 5993, 0, 0, 0), (@SGUID + 009, 8675, 0, 0, 0);
+
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (5990,5992));
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (5990,5992));
+DELETE FROM `creature` WHERE `guid` IN (SELECT `guid` FROM `creature_spawn_entry` WHERE `entry` IN (5990,5992));
+DELETE FROM `creature` WHERE `id` IN (5990,5992);
+DELETE FROM `creature_spawn_entry` WHERE `entry` IN (5990,5992);
+DELETE FROM `creature` WHERE `guid` BETWEEN @CGUID AND 45130;
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(1378, 0, 0, 1, -11183.5703125000, -3348.032226562500, 8.228083610534667968, 1.326243877410888671, 300, 300, 45, 1),
+(1444, 0, 0, 1, -11186.9052734375, -3282.049804687500, 8.313661575317382812, 2.164485454559326171, 300, 300, 45, 1),
+(1645, 0, 0, 1, -11150.5908203125, -3315.790283203125, 4.748173713684082031, 2.364883899688720703, 300, 300, 45, 1),
+(1395, 0, 0, 1, -11213.4003906250, -3313.360351562500, 8.598316192626953125, 5.308971405029296875, 300, 300, 45, 1),
+(1459, 0, 0, 1, -11247.1171875000, -3289.826904296875, 25.29104232788085937, 5.709574222564697265, 300, 300, 45, 1),
+(1538, 0, 0, 1, -11250.0576171875, -3148.635986328125, 3.736725330352783203, 5.460514545440673828, 300, 300, 45, 1),
+(1550, 0, 0, 1, -11184.6845703125, -3216.660156250000, 9.319871902465820312, 3.200205326080322265, 300, 300, 45, 1),
+(1620, 0, 0, 1, -11217.0703125000, -3182.307861328125, 8.219674110412597656, 1.753100991249084472, 300, 300, 45, 1),
+(45113, 0, 0, 1, -11251.3134765625, -3083.353027343750, 3.612272262573242187, 3.967054367065429687, 300, 300, 45, 1),
+(45122, 0, 0, 1, -11216.6201171875, -3117.091552734375, 4.671710491180419921, 4.392993450164794921, 300, 300, 45, 1),
+(45123, 0, 0, 1, -11282.8662109375, -3115.085205078125, 3.991223335266113281, 0.944668114185333251, 300, 300, 45, 1),
+(45128, 0, 0, 1, -11314.9101562500, -3147.677246093750, 5.831459522247314453, 4.251431465148925781, 300, 300, 45, 1),
+(45130, 0, 0, 1, -11348.6835937500, -3182.680175781250, 10.31614112854003906, 3.896257877349853515, 300, 300, 45, 1);
+SET @SGUID := 268;
+DELETE FROM `spawn_group` WHERE `Id` IN (256,257,280);
+REPLACE INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`, `StringId`) VALUES
+(@SGUID + 000, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 000', 0, 0, 0, 0, 0),
+(@SGUID + 001, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 001', 0, 0, 0, 0, 0),
+(@SGUID + 002, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 002', 0, 0, 0, 0, 0),
+(@SGUID + 003, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 003', 0, 0, 0, 0, 0),
+(@SGUID + 004, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 004', 0, 0, 0, 0, 0),
+(@SGUID + 005, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 005', 0, 0, 0, 0, 0),
+(@SGUID + 006, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 006', 0, 0, 0, 0, 0),
+(@SGUID + 007, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 007', 0, 0, 0, 0, 0),
+(@SGUID + 008, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 008', 0, 0, 0, 0, 0),
+(@SGUID + 009, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 009', 0, 0, 0, 0, 0),
+(@SGUID + 010, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 010', 0, 0, 0, 0, 0),
+(@SGUID + 011, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 011', 0, 0, 0, 0, 0),
+(@SGUID + 012, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 012', 0, 0, 0, 0, 0),
+(256, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 013 (TBC+)', 0, 0, 0, 0, 0),
+(257, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 014 (TBC+)', 0, 0, 0, 0, 0),
+(280, 'Blasted Lands - Redstone Basilisk | Ashmane Boar (1) Wandering 015 (TBC+)', 0, 0, 0, 0, 0);
+REPLACE INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`, `Chance`) VALUES
+(@SGUID + 000, 1378, 0, 0), (@SGUID + 001, 1444, 0, 0), (@SGUID + 002, 1645, 0, 0), (@SGUID + 003, 1395, 0, 0),
+(@SGUID + 004, 1459, 0, 0), (@SGUID + 005, 1538, 0, 0), (@SGUID + 006, 1550, 0, 0), (@SGUID + 007, 1620, 0, 0),
+(@SGUID + 008, 45113, 0, 0), (@SGUID + 009, 45122, 0, 0), (@SGUID + 010, 45123, 0, 0), (@SGUID + 011, 45128, 0, 0),
+(@SGUID + 012, 45130, 0, 0);
+DELETE FROM `spawn_group_entry` WHERE `Id` IN (256,257,280);
+REPLACE INTO `spawn_group_entry` (`Id`, `Entry`, `MinCount`, `MaxCount`, `Chance`) VALUES
+(@SGUID + 000, 5990, 0, 0, 0), (@SGUID + 000, 5992, 0, 0, 0), (@SGUID + 001, 5990, 0, 0, 0), (@SGUID + 001, 5992, 0, 0, 0),
+(@SGUID + 002, 5990, 0, 0, 0), (@SGUID + 002, 5992, 0, 0, 0), (@SGUID + 003, 5990, 0, 0, 0), (@SGUID + 003, 5992, 0, 0, 0),
+(@SGUID + 004, 5990, 0, 0, 0), (@SGUID + 004, 5992, 0, 0, 0), (@SGUID + 005, 5990, 0, 0, 0), (@SGUID + 005, 5992, 0, 0, 0),
+(@SGUID + 006, 5990, 0, 0, 0), (@SGUID + 006, 5992, 0, 0, 0), (@SGUID + 007, 5990, 0, 0, 0), (@SGUID + 007, 5992, 0, 0, 0),
+(@SGUID + 008, 5990, 0, 0, 0), (@SGUID + 008, 5992, 0, 0, 0), (@SGUID + 009, 5990, 0, 0, 0), (@SGUID + 009, 5992, 0, 0, 0),
+(@SGUID + 010, 5990, 0, 0, 0), (@SGUID + 010, 5992, 0, 0, 0), (@SGUID + 011, 5990, 0, 0, 0), (@SGUID + 011, 5992, 0, 0, 0),
+(@SGUID + 012, 5990, 0, 0, 0), (@SGUID + 012, 5992, 0, 0, 0), (256, 5990, 0, 0, 0), (256, 5992, 0, 0, 0),
+(257, 5990, 0, 0, 0), (257, 5992, 0, 0, 0), (280, 5990, 0, 0, 0), (280, 5992, 0, 0, 0);
+
+DELETE FROM `creature` WHERE (`id` = 8299);
+SET @SGUID := 259;
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(53458, 0, 0, 1, -11613.4140625, -3246.4384765625, 9.895672798156738281, 4.661602020263671875, 43200, 86400, 0, 4);
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`, `StringId`) VALUES
+(@SGUID + 000, 'Blasted Lands - Mojo the Twisted (1) Placeholder 000', 0, 1, 0, 0, 0),
+(@SGUID + 001, 'Blasted Lands - Magronos the Unyielding (1) Placeholder 000', 0, 1, 0, 0, 0),
+(@SGUID + 002, 'Blasted Lands - Akubar the Seer (1) Placeholder 000', 0, 1, 0, 0, 0),
+(@SGUID + 003, 'Blasted Lands - Spiteflayer (1) Patrol 000', 0, 1, 0, 0, 0),
+(@SGUID + 004, 'Blasted Lands - Ravage (1) Placeholder 000', 0, 1, 0, 0, 0),
+(@SGUID + 005, 'Blasted Lands - Clack the Reaver (1) Placeholder 000', 0, 1, 0, 0, 0),
+(@SGUID + 006, 'Blasted Lands - Deatheye (1) Placeholder 000', 0, 1, 0, 0, 0),
+(@SGUID + 007, 'Blasted Lands - Grunter (1) Placeholder 000', 0, 1, 0, 0, 0),
+(@SGUID + 008, 'Blasted Lands - Dreadscorn (1) Placeholder 000', 0, 1, 0, 0, 0);
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`, `Chance`) VALUES (@SGUID + 003, 53458, 0, 0);
+INSERT INTO `spawn_group_entry` (`Id`, `Entry`, `MinCount`, `MaxCount`, `Chance`) VALUES (@SGUID + 003, 8299, 0, 0, 0);
+DELETE FROM `creature_movement` WHERE `Id` = 53458;
+INSERT INTO `creature_movement` (`Id`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(53458, 01, -11613.5673828125, -3249.457031250000, 10.52262496948242187, 100, 0, 0),
+(53458, 02, -11586.6298828125, -3255.968261718750, 7.473718166351318359, 100, 0, 0),
+(53458, 03, -11545.4394531250, -3232.966552734375, 6.822238445281982421, 100, 0, 0),
+(53458, 04, -11515.6035156250, -3234.018798828125, 7.503141403198242187, 100, 0, 0),
+(53458, 05, -11482.7412109375, -3234.609130859375, 15.56205844879150390, 100, 0, 0),
+(53458, 06, -11448.4423828125, -3243.542968750000, 12.30460548400878906, 100, 0, 0),
+(53458, 07, -11409.3671875000, -3257.221435546875, 8.255241394042968750, 100, 0, 0),
+(53458, 08, -11381.3095703125, -3259.954101562500, 7.126345634460449218, 100, 0, 0),
+(53458, 09, -11356.5566406250, -3287.013427734375, 8.758649826049804687, 100, 0, 0);
+
+DELETE FROM `gameobject` WHERE (`guid` IN (57915, 57902, 57911, 57903));
+DELETE FROM `pool_gameobject` WHERE (`guid` IN (57915, 57902, 57911, 57903));
+DELETE FROM `pool_template` WHERE `entry` IN (15809, 15810);
+SET @OBJECT_1 = 57902;
+SET @OBJECT_2 = 57903;
+SET @OBJECT_3 = 57911;
+SET @GROUP_ID = 281;
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
+(@OBJECT_1, 0, 0, 1, -10834.8203125000, -2728.318847656250, 7.777578830718994140, 2.094393253326416015, 0, 0, 0.866024971008300781, 0.500000774860382080, 300, 900),
+(@OBJECT_2, 0, 0, 1, -10858.3115234375, -2645.973144531250, 8.745295524597167968, 4.153884887695312500, 0, 0, -0.87461948394775390, 0.484810054302215576, 300, 900),
+(@OBJECT_3, 0, 0, 1, -10886.6464843750, -2665.342529296875, 7.635721206665039062, 3.368495941162109375, 0, 0, -0.99357128143310546, 0.113208353519439697, 300, 900);
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (@GROUP_ID, 'Blasted Lands - Solid Chest (1) Chest 000', 1, 1, 0, 0);
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (@GROUP_ID, @OBJECT_1, -1), (@GROUP_ID, @OBJECT_2, -1), (@GROUP_ID, @OBJECT_3, -1);
+INSERT INTO `spawn_group_entry` (`Id`, `Entry`, `MinCount`, `MaxCount`, `Chance`) VALUES (@GROUP_ID, 153451, 0, 0, 0);
+SET @OBJECT_1 = 57915;
+SET @OBJECT_2 = 376;
+SET @OBJECT_3 = 377;
+SET @GROUP_ID = 282;
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
+(@OBJECT_1, 0, 0, 1, -11227.9257812500, -3480.418212890625, 8.411176681518554687, 5.393068790435791015, 0, 0, -0.43051052093505859, 0.902585566043853759, 300, 900),
+(@OBJECT_2, 0, 0, 1, -11331.9414062500, -3332.497314453125, 8.617773056030273437, 2.548179388046264648, 0, 0, 0.956304550170898437, 0.292372345924377441, 300, 900),
+(@OBJECT_3, 0, 0, 1, -11311.9589843750, -3434.668701171875, 7.467741966247558593, 2.251473426818847656, 0, 0, 0.902585029602050781, 0.430511653423309326, 300, 900);
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (@GROUP_ID, 'Blasted Lands - Solid Chest (1) Chest 001', 1, 1, 0, 0);
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (@GROUP_ID, @OBJECT_1, -1), (@GROUP_ID, @OBJECT_2, -1), (@GROUP_ID, @OBJECT_3, -1);
+INSERT INTO `spawn_group_entry` (`Id`, `Entry`, `MinCount`, `MaxCount`, `Chance`) VALUES (@GROUP_ID, 153451, 0, 0, 0);
+
+UPDATE `creature_template` SET `SpellList` = 350201 WHERE `entry` = 3502;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 3502;
+DELETE FROM `creature_template_spells` WHERE `entry` = 3502;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 350201;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(350201, 'The Barrens - Ratchet Bruiser (3502)', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 350201;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(350201, 1, 12024, 0, -1, 1, 0, 100, 0, 0, 20000, 10000, 35000, 'Ratchet Bruiser - Net on Current'),
+(350201, 2, 23337, 2, -1, 1, 0, 100, 0, 0, 0, 2000, 4000, 'Ratchet Bruiser - Shoot on Current');
+UPDATE `creature_template` SET `SpellList` = 462401 WHERE `entry` = 4624;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 4624;
+DELETE FROM `creature_template_spells` WHERE `entry` = 4624;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 462401;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(462401, 'Stranglethorn Vale - Booty Bay Bruiser (4624)', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 462401;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(462401, 1, 12024, 0, -1, 1, 0, 100, 0, 0, 20000, 10000, 35000, 'Booty Bay Bruiser - Net on Current'),
+(462401, 2, 23337, 2, -1, 1, 0, 100, 0, 0, 0, 2000, 4000, 'Booty Bay Bruiser - Shoot on Current');
+UPDATE `creature_template` SET `SpellList` = 946001 WHERE `entry` = 9460;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 9460;
+DELETE FROM `creature_template_spells` WHERE `entry` = 9460;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 946001;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(946001, 'Tanaris - Gadgetzan Bruiser (9460)', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 946001;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(946001, 1, 12024, 0, -1, 1, 0, 100, 0, 0, 20000, 10000, 35000, 'Gadgetzan Bruiser - Net on Current'),
+(946001, 2, 23337, 2, -1, 1, 0, 100, 0, 0, 0, 2000, 4000, 'Gadgetzan Bruiser - Shoot on Current');
+UPDATE `creature_template` SET `SpellList` = 1119001 WHERE `entry` = 11190;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 11190;
+DELETE FROM `creature_template_spells` WHERE `entry` = 11190;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 1119001;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(1119001, 'Winterspring - Everlook Bruiser (9460)', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 1119001;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(1119001, 1, 12024, 0, -1, 1, 0, 100, 0, 0, 20000, 10000, 35000, 'Everlook Bruiser - Net on Current'),
+(1119001, 2, 23337, 2, -1, 1, 0, 100, 0, 0, 0, 2000, 4000, 'Everlook Bruiser - Shoot on Current');
+UPDATE `creature_template` SET `SpellList` = 1609601, `UnitFlags` = 32768 WHERE `entry` = 16096;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 16096;
+DELETE FROM `creature_template_spells` WHERE `entry` = 16096;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 1609601;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(1609601, 'Steamwheedle Bruiser (16096)', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 1609601;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(1609601, 1, 12024, 0, -1, 1, 0, 100, 0, 0, 20000, 10000, 35000, 'Steamwheedle Bruiser - Net on Current'),
+(1609601, 2, 23337, 2, -1, 1, 0, 100, 0, 0, 0, 2000, 4000, 'Steamwheedle Bruiser - Shoot on Current');
+UPDATE `creature_template` SET `SpellList` = 2048401, `UnitFlags` = 32768, `Faction` = 1857, `SpeedWalk` = 1, `SpeedRun` = 10 / 7 WHERE `entry` = 20484;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 20484;
+DELETE FROM `creature_template_spells` WHERE `entry` = 20484;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 2048401;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(2048401, 'Netherstorm - Area 52 Big Bruiser (20484)', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 2048401;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(2048401, 1, 12024, 0, -1, 1, 0, 100, 0, 0, 20000, 10000, 35000, 'Area 52 Big Bruiser - Net on Current');
+UPDATE `creature_template` SET `SpellList` = 2048501, `Faction` = 1857, `SpeedWalk` = 1, `SpeedRun` = 10 / 7 WHERE `entry` = 20485;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 20485;
+DELETE FROM `creature_template_spells` WHERE `entry` = 20485;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 2048501;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(2048501, 'Netherstorm - Area 52 Bruiser (20485)', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 2048501;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(2048501, 1, 12024, 0, -1, 1, 0, 100, 0, 0, 20000, 10000, 35000, 'Area 52 Bruiser - Net on Current');
+UPDATE `creature_template` SET `SpellList` = 2249401, `Faction` = 1857, `SpeedWalk` = 1, `SpeedRun` = 10 / 7 WHERE `entry` = 22494;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 22494;
+DELETE FROM `creature_template_spells` WHERE `entry` = 22494;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 2249401;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(2249401, 'Netherstorm - Cosmowrench Bruiser (22494)', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 2249401;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(2249401, 1, 12024, 0, -1, 1, 0, 100, 0, 0, 20000, 10000, 35000, 'Cosmowrench Bruiser - Net on Current');
+UPDATE `creature_template` SET `SpellList` = 2363601, `SpeedRun` = 10 / 7 WHERE `entry` = 23636;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 23636;
+DELETE FROM `creature_template_spells` WHERE `entry` = 23636;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 2363601;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(2363601, 'Dustwallow Marsh - Mudsprocket Bruiser (23636)', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 2363601;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(2363601, 1, 12024, 0, -1, 1, 0, 100, 0, 0, 20000, 10000, 35000, 'Mudsprocket Bruiser - Net on Current'),
+(2363601, 2, 23337, 2, -1, 1, 0, 100, 0, 0, 0, 2000, 4000, 'Mudsprocket Bruiser - Shoot on Current');
+UPDATE `creature_template` SET `SpellList` = 2372101, `SpeedRun` = 10 / 7 WHERE `entry` = 23721;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 23721;
+DELETE FROM `creature_template_spells` WHERE `entry` = 23721;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 2372101;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(2372101, 'Concert Bruiser (23721)', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 2372101;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(2372101, 1, 12024, 0, -1, 1, 0, 100, 0, 0, 20000, 10000, 35000, 'Concert Bruiser - Net on Current');
+UPDATE `creature_template` SET `SpellList` = 1518401 WHERE `entry` = 15184;
+DELETE FROM `creature_template_spells` WHERE `entry` = 15184;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 1518401;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(1518401, 'Silithus - Cenarion Hold Infantry (15184)', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 1518401;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(1518401, 1, 19643, 0, -1,	1, 0, 100, 3, 0, 20000, 10000, 20000, 'Cenarion Hold Infantry - Mortal Strike on Current'),
+(1518401, 2, 15618, 0, 1221,1, 0, 100, 4, 5000, 20000, 15000, 20000, 'Cenarion Hold Infantry - Snap Kick on Player Casting'),
+(1518401, 3, 18328, 0, -1,	0, 0, 100, 2, 5000, 20000, 60000, 90000, 'Cenarion Hold Infantry - Incapacitating Shout');
+
+UPDATE `creature_template` SET `SpeedWalk` = '1' WHERE `Entry` IN (672,781,783,1087,1550,1558,1845,2687,4388,8679,12837);
+
+UPDATE creature_template SET SpellList = 2088601 WHERE entry=20886;
+UPDATE creature_template SET SpellList = 2162401 WHERE entry=21624;
+DELETE FROM creature_spell_list_entry WHERE Id IN(2088601,2162401);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(2088601, 'Arcatraz - Wrath-Scryer Soccothrates - Normal', 0, 0),
+(2162401, 'Arcatraz - Wrath-Scryer Soccothrates - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(2088601,2162401);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('2088601', '0', '35759', '0', '-1', '1', '0', '100', '1','10000','13000','35000','45000', 'Wrath-Scryer Soccothrates - Felfire Shock on Current'),
+('2088601', '1', '36512', '0', '-1', '0', '0', '100', '1','22000','25000','30000','35000', 'Wrath-Scryer Soccothrates - Knock Away'),
+('2162401', '0', '39006', '0', '-1', '1', '0', '100', '1','10000','13000','35000','45000', 'Wrath-Scryer Soccothrates - Felfire Shock on Current'),
+('2162401', '1', '36512', '0', '-1', '0', '0', '100', '1','22000','25000','30000','35000', 'Wrath-Scryer Soccothrates - Knock Away');
+
+UPDATE creature_template SET SpellList = 2091201 WHERE entry=20912;
+UPDATE creature_template SET SpellList = 2159901 WHERE entry=21599;
+DELETE FROM creature_spell_list_entry WHERE Id IN(2091201,2159901);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(2091201, 'Arcatraz - Harbinger Skyriss - Normal', 0, 0),
+(2159901, 'Arcatraz - Harbinger Skyriss - Heroic', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(2091201,2159901);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('2091201', '0', '36924', '0', '-1', '101', '0', '100', '1','3000','3000','8000','8000', 'Harbinger Skyriss - Mind Rend on Random non tank'),
+('2091201', '1', '39415', '0', '-1', '101', '0', '100', '1','15000','15000','25000','25000', 'Harbinger Skyriss - Fear on Random non tank'),
+('2091201', '2', '37162', '0', '-1', '101', '0', '100', '1','30000','30000','16000','32000', 'Harbinger Skyriss - Domination on Random non tank'),
+('2159901', '0', '39017', '0', '-1', '101', '0', '100', '1','3000','3000','8000','8000', 'Harbinger Skyriss - Mind Rend on Random non tank'),
+('2159901', '1', '39415', '0', '-1', '101', '0', '100', '1','15000','15000','25000','25000', 'Harbinger Skyriss - Fear on Random non tank'),
+('2159901', '2', '39019', '0', '-1', '101', '0', '100', '1','30000','30000','16000','32000', 'Harbinger Skyriss - Complete Domination on Random non tank'),
+('2159901', '3', '39020', '0', '-1', '106', '0', '100', '1','25000','25000','16000','32000', 'Harbinger Skyriss - Mana Burn on Random non tank mana user');
+
+UPDATE creature_template SET SpellList = 1797501 WHERE entry=17975;
+UPDATE creature_template SET SpellList = 2155801 WHERE entry=21558;
+DELETE FROM creature_spell_list_entry WHERE Id IN(1797501,2155801);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(1797501, 'Botanica - High Botanist Freywinn - Normal', 0, 0),
+(1797502, 'Botanica - High Botanist Freywinn - Normal - Tree Form', 0, 0),
+(2155801, 'Botanica - High Botanist Freywinn - Heroic', 0, 0),
+(2155802, 'Botanica - High Botanist Freywinn - Heroic - Tree Form', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(1797501,1797502,2155801,2155802);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('1797501', '0', '34759', '0', '-1', '0', '0', '100', '1','5000','5000','5000','5000', 'High Botanist Freywinn - Plant White Seedling'),
+('1797501', '1', '34761	', '0', '-1', '0', '0', '100', '1','5000','5000','5000','5000', 'High Botanist Freywinn - Plant Green Seedling'),
+('1797501', '2', '34762', '0', '-1', '0', '0', '100', '1','5000','5000','5000','5000', 'High Botanist Freywinn - Plant Blue Seedling'),
+('1797501', '3', '34763', '0', '-1', '0', '0', '100', '1','5000','5000','5000','5000', 'High Botanist Freywinn - Plant Red Seedling'),
+('1797501', '4', '34551', '0', '-1', '0', '0', '100', '1','30000','30000','75000','75000', 'High Botanist Freywinn - Tree Form'),
+('1797502', '0', '34550', '0', '-1', '0', '0', '100', '1','1000','1000','46000','46000', 'High Botanist Freywinn - Tranquility'),
+('2155801', '0', '34759', '0', '-1', '0', '0', '100', '1','5000','5000','5000','5000', 'High Botanist Freywinn - Plant White Seedling'),
+('2155801', '1', '34761	', '0', '-1', '0', '0', '100', '1','5000','5000','5000','5000', 'High Botanist Freywinn - Plant Green Seedling'),
+('2155801', '2', '34762', '0', '-1', '0', '0', '100', '1','5000','5000','5000','5000', 'High Botanist Freywinn - Plant Blue Seedling'),
+('2155801', '3', '34763', '0', '-1', '0', '0', '100', '1','5000','5000','5000','5000', 'High Botanist Freywinn - Plant Red Seedling'),
+('2155801', '4', '34551', '0', '-1', '0', '0', '100', '1','30000','30000','75000','75000', 'High Botanist Freywinn - Tree Form'),
+('2155802', '0', '34550', '0', '-1', '0', '0', '100', '1','1000','1000','600000','600000', 'High Botanist Freywinn - Tranquility');
+
+UPDATE creature_model_info SET bounding_radius=2,combat_reach=3 WHERE modelid IN(13109,14213,13110,14112,14214);
+UPDATE creature_template SET UnitFlags=32832 WHERE entry IN(17980,21559);
+UPDATE spell_target_position SET target_position_x=-185,target_position_y=376,target_position_z=-15.6,target_orientation=0.506146013736724853 WHERE Id IN(34682);
+UPDATE spell_target_position SET target_position_x=-185,target_position_y=376,target_position_z=-15.6,target_orientation=0.506146013736724853 WHERE Id IN(34681);
+UPDATE spell_target_position SET target_position_x=-185,target_position_y=407,target_position_z=-15.6,target_orientation=6.126110076904296875 WHERE Id IN(34684);
+UPDATE spell_target_position SET target_position_x=-185,target_position_y=407,target_position_z=-15.6,target_orientation=6.126110076904296875 WHERE Id IN(34685);
+UPDATE spell_target_position SET target_orientation=0.017452999949455261 WHERE Id IN(34673);
+
+UPDATE `creature_template` SET `SpellList` = 2309001, `DamageMultiplier` = 2 WHERE `entry` = 23090;
+UPDATE `creature_template_addon` SET `sheath_state` = 1, `auras` = '8279 30991' WHERE `entry` = 23090;
+DELETE FROM `creature_template_spells` WHERE `entry` = 23090;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 2309001;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(2309001, 'Orgrimmar - Troll Roof Stalker (23090)', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 2309001;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(2309001, 1, 40124, 2, -1, 1, 0, 100, 0, 0, 0, 2000, 4000, 'Troll Roof Stalker - Shoot on Current'),
+(2309001, 2, 6533, 0, -1, 1, 0, 100, 0, 0, 20000, 15000, 45000, 'Troll Roof Stalker - Net on Current'),
+(2309001, 3, 9080, 0, -1, 1, 0, 100, 0, 0, 20000, 20000, 40000, 'Troll Roof Stalker - Hamstring on Current');
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` = 12856);
+UPDATE `creature_template` SET `SpellList` = 1285601 WHERE `entry` = 12856;
+UPDATE `creature_template_addon` SET `sheath_state` = 1 WHERE `entry` = 12856;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 1285601;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(1285601, 'Ashenvale - Ashenvale Outrunner (12856)', 0, 75);
+DELETE FROM `creature_spell_list` WHERE `Id` = 1285601;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(1285601, 1, 6660, 2, -1, 1, 0, 100, 0, 0, 0, 2000, 4000, 'Ashenvale Outrunner - Shoot on Current'),
+(1285601, 2, 8646, 0, -1, 1, 0, 100, 0, 20000, 20000, 10000, 20000, 'Ashenvale Outrunner - Snap Kick on Current'),
+(1285601, 3, 18545, 0, -1, 1, 0, 100, 0, 0, 15000, 15000, 30000, 'Ashenvale Outrunner - Scorpid Sting on Current');
+UPDATE `creature_template` SET `SpellList` = 711001 WHERE `entry` = 7110;
+DELETE FROM `creature_template_spells` WHERE `entry` = 7110;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 711001;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(711001, 'Felwood - Jadefire Shadowstalker (7110)', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 711001;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(711001, 1, 13578, 0, -1, 0, 0, 100, 0, 6000, 24000, 20000, 30000, 'Jadefire Shadowstalker - Jadefire');
+
+DELETE FROM `creature_template_spells` WHERE `entry` = 19493;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 1949301;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(1949301, 'Netherstorm - Ekkorash the Inquisitor', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 1949301;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(1949301, 1, 36040, 0, -1, 100, 0, 100, 0, 8000, 11000, 18000, 23000, 'Ekkorash the Inquisitor - Fel Flamestrike on random'),
+(1949301, 2, 11980, 0, -1, 121, 0, 100, 0, 10000, 20000, 14000, 20000, 'Ekkorash the Inquisitor - Curse of Weakness on random player aura not present');
+UPDATE `creature_template` SET `SpellList` = 1949301 WHERE `entry` = 19493;
+
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 1949401;
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(1949401, 'Netherstorm - Ar\'kelos', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` = 1949401;
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(1949401, 1, 11975, 0, -1, 2, 0, 100, 0, 8000, 11000, 12000, 15000, 'Ar\'kelos - Fel Arcane Explosion on self');
+UPDATE `creature_template` SET `SpellList` = 1949401 WHERE `entry` = 19494;
+
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 215;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 579;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 684;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 768;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 938;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 1040;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 1713;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 2242;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 2246;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 2586;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 2588;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 2731;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 2926;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 3763;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 3765;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 3767;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 3770;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 3771;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 4377;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 4411;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 4789;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 4798;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 6035;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 10318;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 11723;
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 11730;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 947;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 2175;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 3279;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 3457;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 3634;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 3655;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 4126;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 4834;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 5615;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 7432;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 8218;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 15101;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766 8601' WHERE `entry` = 7110;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766 3417' WHERE `entry` = 2522;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766 10022' WHERE `entry` = 4850;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 16928;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 18116;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 20714;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 20998;
+UPDATE `creature_template_addon` SET `auras` = '7939 22766' WHERE `entry` = 22206;
+UPDATE `creature_template_addon` SET `auras` = '34712 7939 22766 18950' WHERE `entry` = 20025;
+
+SET @CGUID := 1256;
+SET @SGUID := 264;
+DELETE FROM `creature_movement` WHERE `Id` = @CGUID + 00;
+DELETE FROM `creature` WHERE `guid` = @CGUID + 00;
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(@CGUID + 00, 0, 0, 1, -11521.7470703125, -2770.985595703125, 3.213406324386596679, 0.399071425199508666, 37800, 57600, 00, 4);
+UPDATE `spawn_group` SET `Name` = 'Blasted Lands - Clack the Reaver (1) Rare 000' WHERE (`Id` = @SGUID + 000);
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`, `Chance`) VALUES (@SGUID + 00, @CGUID + 00, 0, 0);
+INSERT INTO `spawn_group_entry` (`Id`, `Entry`, `MinCount`, `MaxCount`, `Chance`) VALUES (@SGUID + 00, 8301, 0, 0, 0);
+INSERT INTO `creature_movement` (`Id`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(@CGUID + 00, 01, -11519.8388671875, -2770.180908203125, 3.301811695098876953, 100, 0, 0),
+(@CGUID + 00, 02, -11490.2314453125, -2786.429443359375, -0.98971033096313476, 100, 0, 0),
+(@CGUID + 00, 03, -11460.0869140625, -2810.835205078125, -1.61365473270416259, 100, 0, 0),
+(@CGUID + 00, 04, -11450.9160156250, -2846.786132812500, 0.141698062419891357, 100, 0, 0),
+(@CGUID + 00, 05, -11426.4121093750, -2879.699218750000, 3.348172903060913085, 100, 0, 0),
+(@CGUID + 00, 06, -11418.5439453125, -2926.678466796875, 3.117449283599853515, 100, 0, 0),
+(@CGUID + 00, 07, -11421.3212890625, -2952.488037109375, 2.229515075683593750, 100, 0, 0),
+(@CGUID + 00, 08, -11420.2851562500, -2993.229736328125, 1.101577281951904296, 100, 0, 0),
+(@CGUID + 00, 09, -11422.8134765625, -3016.357177734375, 0.574937224388122558, 100, 0, 0),
+(@CGUID + 00, 10, -11387.4394531250, -3042.765136718750, -4.21362113952636718, 100, 0, 0),
+(@CGUID + 00, 11, -11380.2050781250, -3084.913330078125, 0.291237831115722656, 100, 0, 0),
+(@CGUID + 00, 12, -11352.2998046875, -3118.329101562500, -1.53136742115020751, 100, 0, 0),
+(@CGUID + 00, 13, -11356.8105468750, -3153.056640625000, 7.429010391235351562, 100, 0, 0),
+(@CGUID + 00, 14, -11355.8076171875, -3185.689697265625, 10.81366443634033203, 100, 0, 0),
+(@CGUID + 00, 15, -11352.8095703125, -3214.422851562500, 10.19730472564697265, 100, 0, 0),
+(@CGUID + 00, 16, -11356.9111328125, -3248.562500000000, 8.821020126342773437, 100, 0, 0),
+(@CGUID + 00, 17, -11371.9863281250, -3273.147949218750, 4.935072422027587890, 100, 0, 0),
+(@CGUID + 00, 18, -11357.3164062500, -3309.518310546875, 8.610475540161132812, 100, 0, 0);
+
+DELETE FROM `creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (6011,6010));
+DELETE FROM `creature_linking` WHERE `master_guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (6011,6010));
+DELETE FROM `creature` WHERE `id` IN (6010,6011);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(954, 6011, 0, 1, 1, -11711.7, -3191.47, 7.27935, 4.5376, 450, 450, 0, 2),
+(976, 6010, 0, 1, 1, -11711.3, -3187.45, 7.69, 3.44728, 450, 450, 0, 0),
+(982, 6011, 0, 1, 1, -11869, -3334.99, 8.08631, 3.75344, 450, 450, 0, 2),
+(1022, 6010, 0, 1, 1, -11867.4, -3336.46, 8.97027, 3.72497, 450, 450, 0, 0),
+(1043, 6011, 0, 1, 1, -11800.8, -3321.41, 4.06468, 0.401556, 450, 450, 0, 2),
+(1050, 6010, 0, 1, 1, -11805.3, -3323.34, 4.7902, 0.401511, 450, 450, 0, 0),
+(48942, 6011, 0, 1, 1, -11709.8, -3244.42, 8.43686, 4.13413, 450, 450, 0, 2),
+(48943, 6010, 0, 1, 1, -11708.7, -3242.73, 8.92269, 4.13392, 450, 450, 0, 0),
+(81180, 6011, 0, 1, 1, -11696.2, -3118.67, 15.0745, 3.79812, 450, 450, 0, 2),
+(81181, 6010, 0, 1, 1, -11694.6, -3119.92, 15.4495, 3.79278, 450, 450, 0, 0);
+INSERT INTO `waypoint_path_name` (`PathId`, `Name`) VALUES
+(11, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 000'),
+(12, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 001'),
+(13, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 002'),
+(14, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 003'),
+(15, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 004');
+INSERT INTO `waypoint_path` (`PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`, `Comment`) VALUES
+(11, 1, -11702.7, -3198.54, 6.13815, 100, 0, 0, NULL),
+(11, 2, -11714.2, -3227.76, 7.42097, 100, 0, 0, NULL),
+(11, 3, -11720.7, -3247.27, 6.71452, 100, 0, 0, NULL),
+(11, 4, -11736.3, -3259.69, 3.54905, 100, 0, 0, NULL),
+(11, 5, -11787.8, -3305.24, 6.42096, 100, 0, 0, NULL),
+(11, 6, -11816.1, -3315.23, 7.21743, 100, 0, 0, NULL),
+(11, 7, -11836.1, -3319.79, 4.44235, 100, 0, 0, NULL),
+(11, 8, -11821.1, -3316.57, 8.00434, 100, 0, 0, NULL),
+(11, 9, -11796, -3308.72, 4.61497, 100, 0, 0, NULL),
+(11, 10, -11774.5, -3298.33, 6.61566, 100, 0, 0, NULL),
+(11, 11, -11739.6, -3263.25, 2.58626, 100, 0, 0, NULL),
+(11, 12, -11726.8, -3254.63, 5.70093, 100, 0, 0, NULL),
+(11, 13, -11715, -3229.81, 7.3399, 100, 0, 0, NULL),
+(11, 14, -11705.7, -3204.77, 6.76301, 100, 0, 0, NULL),
+(11, 15, -11714.7, -3119.52, 9.6553, 100, 0, 0, NULL),
+(11, 16, -11737.6, -3094.55, 10.0939, 100, 0, 0, NULL),
+(11, 17, -11759.4, -3089.36, 7.90247, 100, 0, 0, NULL),
+(11, 18, -11777.3, -3082.01, 3.71249, 100, 0, 0, NULL),
+(11, 19, -11802.8, -3071.57, 6.52768, 100, 0, 0, NULL),
+(11, 20, -11833.5, -3061.21, 5.51503, 100, 0, 0, NULL),
+(11, 21, -11855.2, -3053.98, 10.5513, 100, 0, 0, NULL),
+(11, 22, -11866.7, -3053.56, 13.575, 100, 0, 0, NULL),
+(11, 23, -11878.8, -3067.78, 25.3558, 100, 0, 0, NULL),
+(11, 24, -11885.3, -3081.64, 29.9102, 100, 0, 0, NULL),
+(11, 25, -11898.3, -3091.15, 33.1133, 100, 0, 0, NULL),
+(11, 26, -11891.4, -3087.62, 30.8659, 100, 0, 0, NULL),
+(11, 27, -11880.8, -3071.89, 27.2562, 100, 0, 0, NULL),
+(11, 28, -11873.3, -3056.77, 16.8792, 100, 0, 0, NULL),
+(11, 29, -11864.1, -3053.36, 12.838, 100, 0, 0, NULL),
+(11, 30, -11842.5, -3058.19, 5.18285, 100, 0, 0, NULL),
+(11, 31, -11811.8, -3068.34, 6.53923, 100, 0, 0, NULL),
+(11, 32, -11785.4, -3078.3, 4.92409, 100, 0, 0, NULL),
+(11, 33, -11768.3, -3086.51, 7.10831, 100, 0, 0, NULL),
+(11, 34, -11745.5, -3091.76, 6.49939, 100, 0, 0, NULL),
+(11, 35, -11728.5, -3099.67, 11.1712, 100, 0, 0, NULL),
+(11, 36, -11709.5, -3132.75, 9.94938, 100, 0, 0, NULL),
+(12, 1, -11809, -3326.26, 4.62931, 100, 0, 0, NULL),
+(12, 2, -11790.2, -3319.69, 5.32741, 100, 0, 0, NULL),
+(12, 3, -11726.5, -3266.12, 6.03492, 100, 0, 0, NULL),
+(12, 4, -11714.4, -3240.88, 7.77631, 100, 0, 0, NULL),
+(12, 5, -11699.4, -3207.74, 8.93876, 100, 0, 0, NULL),
+(12, 6, -11703.2, -3130.34, 11.3779, 100, 0, 0, NULL),
+(12, 7, -11726.2, -3094.9, 12.0208, 100, 0, 0, NULL),
+(12, 8, -11740.4, -3088.22, 10.1719, 100, 0, 0, NULL),
+(12, 9, -11756.3, -3077.47, 9.843, 100, 0, 0, NULL),
+(12, 10, -11774.9, -3071.06, 7.84356, 100, 0, 0, NULL),
+(12, 11, -11797.6, -3066.03, 6.62067, 100, 0, 0, NULL),
+(12, 12, -11825.2, -3061.05, 6.05357, 100, 0, 0, NULL),
+(12, 13, -11844.3, -3054.71, 5.89437, 100, 0, 0, NULL),
+(12, 14, -11859, -3044.52, 13.9269, 100, 0, 0, NULL),
+(12, 15, -11881.5, -3056.87, 20.2624, 100, 0, 0, NULL),
+(12, 16, -11903.5, -3069.43, 24.1628, 100, 0, 0, NULL),
+(12, 17, -11889.6, -3061.7, 22.5331, 100, 0, 0, NULL),
+(12, 18, -11863.6, -3044.98, 15.4583, 100, 0, 0, NULL),
+(12, 19, -11851.4, -3050.6, 10.5351, 100, 0, 0, NULL),
+(12, 20, -11834.6, -3058.43, 5.5463, 100, 0, 0, NULL),
+(12, 21, -11806, -3064.4, 6.35987, 100, 0, 0, NULL),
+(12, 22, -11782.9, -3068.96, 6.75974, 100, 0, 0, NULL),
+(12, 23, -11763.9, -3074.23, 9.41394, 100, 0, 0, NULL),
+(12, 24, -11747.3, -3084.53, 9.37471, 100, 0, 0, NULL),
+(12, 25, -11729.9, -3092.47, 11.5539, 100, 0, 0, NULL),
+(12, 26, -11705.5, -3122.84, 12.3253, 100, 0, 0, NULL),
+(12, 27, -11704.3, -3149.17, 9.67389, 100, 0, 0, NULL),
+(12, 28, -11697, -3199.49, 7.62958, 100, 0, 0, NULL),
+(12, 29, -11712.4, -3236.27, 7.80203, 100, 0, 0, NULL),
+(12, 30, -11721.7, -3258.75, 6.91549, 100, 0, 0, NULL),
+(12, 31, -11738.7, -3280.61, 5.20007, 100, 0, 0, NULL),
+(12, 32, -11782.7, -3315.46, 5.6667, 100, 0, 0, NULL),
+(12, 33, -11869, -3334.99, 8.08631, 100, 0, 0, NULL),
+(13, 1, -11747.6, -3321.52, 10.3471, 100, 0, 0, NULL),
+(13, 2, -11762.8, -3325.92, 8.37903, 100, 0, 0, NULL),
+(13, 3, -11772.2, -3332.2, 8.18687, 100, 0, 0, NULL),
+(13, 4, -11792.1, -3335.64, 5.36729, 100, 0, 0, NULL),
+(13, 5, -11780.1, -3334.94, 7.37694, 100, 0, 0, NULL),
+(13, 6, -11769.5, -3329.55, 8.03481, 100, 0, 0, NULL),
+(13, 7, -11755.2, -3324.42, 9.66616, 100, 0, 0, NULL),
+(13, 8, -11714.4, -3294.43, 12.119, 100, 0, 0, NULL),
+(13, 9, -11724.2, -3301.34, 10.9771, 100, 0, 0, NULL),
+(14, 1, -11667.7, -3181.51, 16.5394, 100, 0, 0, NULL),
+(14, 2, -11675.7, -3199.63, 14.4383, 100, 0, 0, NULL),
+(14, 3, -11676.7, -3211.48, 14.7261, 100, 0, 0, NULL),
+(14, 4, -11684.6, -3239.69, 13.2437, 100, 0, 0, NULL),
+(14, 5, -11677.8, -3219.6, 14.8258, 100, 0, 0, NULL),
+(14, 6, -11676.8, -3203.64, 14.3528, 100, 0, 0, NULL),
+(14, 7, -11670, -3189.23, 15.8881, 100, 0, 0, NULL),
+(15, 1, -11748, -3072.61, 12.723, 100, 0, 0, NULL),
+(15, 2, -11768.6, -3062.86, 11.6676, 100, 0, 0, NULL),
+(15, 3, -11784.8, -3051.62, 12.8146, 100, 0, 0, NULL),
+(15, 4, -11804.2, -3045.84, 11.1862, 100, 0, 0, NULL),
+(15, 5, -11792.7, -3047.8, 12.6724, 100, 0, 0, NULL),
+(15, 6, -11772.6, -3060.12, 11.4166, 100, 0, 0, NULL),
+(15, 7, -11755.9, -3071.26, 11.3215, 100, 0, 0, NULL),
+(15, 8, -11744.9, -3071.97, 13.5623, 100, 0, 0, NULL),
+(15, 9, -11733.9, -3075.55, 14.8634, 100, 0, 0, NULL),
+(15, 10, -11717.8, -3079.98, 16.7711, 100, 0, 0, NULL),
+(15, 11, -11725.6, -3078.5, 15.7444, 100, 0, 0, NULL),
+(15, 12, -11740.5, -3072.44, 14.1576, 100, 0, 0, NULL);
+SET @WGUID := 11;
+SET @SGUID := 149;
+REPLACE INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES
+(@SGUID + 000, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 000', 0, 0, 0, 0);
+REPLACE INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`, `Chance`) VALUES (@SGUID + 000, 954, 0, 0), (@SGUID + 000, 976, 1, 0);
+REPLACE INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(@SGUID + 000, 2, 2, 0, @WGUID + 000, 2, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 000');
+REPLACE INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES
+(@SGUID + 001, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 001', 0, 0, 0, 0);
+REPLACE INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`, `Chance`) VALUES (@SGUID + 001, 982, 0, 0), (@SGUID + 001, 1022, 1, 0);
+REPLACE INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(@SGUID + 001, 2, 2, 0, @WGUID + 001, 2, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 001');
+REPLACE INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES
+(@SGUID + 002, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 002', 0, 0, 0, 0);
+REPLACE INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`, `Chance`) VALUES (@SGUID + 002, 1043, 0, 0), (@SGUID + 002, 1050, 1, 0);
+REPLACE INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(@SGUID + 002, 2, 2, 0, @WGUID + 002, 2, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 002');
+REPLACE INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES
+(@SGUID + 003, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 003', 0, 0, 0, 0);
+REPLACE INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`, `Chance`) VALUES (@SGUID + 003, 48942, 0, 0), (@SGUID + 003, 48943, 1, 0);
+REPLACE INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(@SGUID + 003, 2, 2, 0, @WGUID + 003, 2, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 003');
+REPLACE INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES
+(@SGUID + 004, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 004', 0, 0, 0, 0);
+REPLACE INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`, `Chance`) VALUES (@SGUID + 004, 81180, 0, 0), (@SGUID + 004, 81181, 1, 0);
+REPLACE INTO `spawn_group_formation` (`Id`, `FormationType`, `FormationSpread`, `FormationOptions`, `PathId`, `MovementType`, `Comment`) VALUES
+(@SGUID + 004, 2, 2, 0, @WGUID + 004, 2, 'Blasted Lands - Felguard Sentry | Felhound (2) Patrol 004');
+
+UPDATE creature_template SET SpellList=2899900 WHERE entry IN(28999);
+UPDATE creature_template SET SpellList=2899901 WHERE entry IN(28985);
+DELETE FROM creature_template_spells WHERE entry IN(28999);
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
