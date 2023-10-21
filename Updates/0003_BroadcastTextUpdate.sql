@@ -5933,3 +5933,15 @@ UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=11157,EmoteId1=0 WHERE Id
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=11158,EmoteId1=0 WHERE Id IN(20861);
 
 UPDATE broadcast_text SET ChatTypeID=3,SoundEntriesID1=0,EmoteId1=0 WHERE Id IN(20775);
+
+-- 0237_brd_05_aggro_bct.sql TBC
+UPDATE broadcast_text SET ChatTypeID=1 WHERE Id IN(11953,11952);
+
+-- 5135_text.28637.sql
+-- chat type corrected
+UPDATE broadcast_text SET ChatTypeId = 2 WHERE Id IN (28637);
+
+-- 5139_q.8519.sql
+-- texts
+UPDATE broadcast_text SET ChatTypeId = 1 WHERE Id IN (10901,10902,10903);
+UPDATE broadcast_text SET ChatTypeId = 2 WHERE Id IN (10912,10913,10926,10933,10934,10922,10929);
