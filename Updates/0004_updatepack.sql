@@ -28362,28 +28362,183 @@ INSERT INTO conditions(condition_entry, type, value1, value2, value3, value4, fl
 ('5061', '-1', '5031', '5059', '0', '0', '0', ''),
 ('5062', '-1', '5038', '5061', '0', '0', '0', '');
 DELETE FROM gossip_menu_option WHERE menu_id IN(7044,7041,7043);
-INSERT INTO gossip_menu_option(menu_id,id,option_icon,option_text,option_broadcast_text,option_id,action_menu_id,action_script_id,condition_id) VALUES
-(7044,0,0,'I lost a piece of Lord Valthalak''s Amulet!',11776,1,7041,0,5032),
-(7044,1,0,'I''ve misplaced the Brazier of Beckoning!',11784,1,7043,0,5025),
-(7044,2,0,'Bodley, tell me what''s going on.',11915,1,7087,0,2830),
-(7041,1,0,'Yes I checked, I''m missing the left piece!',11780,1,7039,704102,5062),
-(7041,0,0,'Yes I checked, I''m missing the top piece!',11778,1,7038,704101,5058),
-(7041,2,0,'I lost Lord Valthalak''s Amulet!',11773,1,7037,704103,5057),
-(7043,0,0,'Yes, please summon it back!',11786,1,7042,704301,5050),
-(7043,1,0,'Yes, please summon it back!',11786,1,7042,704302,5051),
-(7043,2,0,'Yes, please summon it back!',11786,1,7042,704303,5052),
-(7043,3,0,'Yes, please summon it back!',11786,1,7042,704304,5053),
-(7043,4,0,'Yes, please summon it back!',11786,1,7042,704305,5056);
+INSERT INTO gossip_menu_option(menu_id,id,option_icon,option_text,option_broadcast_text,option_id,npc_option_npcflag,action_menu_id,action_script_id,condition_id) VALUES
+(7044,0,0,'I lost a piece of Lord Valthalak''s Amulet!',11776,1,1,7041,0,5032),
+(7044,1,0,'I''ve misplaced the Brazier of Beckoning!',11784,1,1,7043,0,5025),
+(7044,2,0,'Bodley, tell me what''s going on.',11915,1,1,7087,0,5024),
+(7041,1,0,'Yes I checked, I''m missing the left piece!',11780,1,1,7039,704102,5062),
+(7041,0,0,'Yes I checked, I''m missing the top piece!',11778,1,1,7038,704101,5058),
+(7041,2,0,'I lost Lord Valthalak''s Amulet!',11773,1,1,7037,704103,5057),
+(7043,0,0,'Yes, please summon it back!',11786,1,1,7042,704301,5050),
+(7043,1,0,'Yes, please summon it back!',11786,1,1,7042,704302,5051),
+(7043,2,0,'Yes, please summon it back!',11786,1,1,7042,704303,5052),
+(7043,3,0,'Yes, please summon it back!',11786,1,1,7042,704304,5053),
+(7043,4,0,'Yes, please summon it back!',11786,1,1,7042,704305,5056);
 DELETE FROM dbscripts_on_gossip WHERE Id BETWEEN 704301 AND 704305;
 DELETE FROM dbscripts_on_gossip WHERE Id BETWEEN 704101 AND 704103;
 INSERT INTO dbscripts_on_gossip(id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, datafloat, x, y, z, o, speed, condition_id, comments) VALUES
-('704101', '0', '0', '15', '27542', '0', '0', '0', '0', '4', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Top Piece replacement'),
-('704102', '0', '0', '15', '27544', '0', '0', '0', '0', '4', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Left Piece replacement'),
-('704103', '0', '0', '15', '27537', '0', '0', '0', '0', '4', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Amulet replacement'),
-('704301', '0', '0', '15', '27558', '0', '0', '0', '0', '4', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Brazier (Isalien) replacement'),
-('704302', '0', '0', '15', '27560', '0', '0', '0', '0', '4', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Brazier (Mor Grayhoof) replacement'),
-('704303', '0', '0', '15', '27562', '0', '0', '0', '0', '4', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Brazier (Kormok) replacement'),
-('704304', '0', '0', '15', '27563', '0', '0', '0', '0', '4', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Brazier (Jarien & Sothos) replacement'),
-('704305', '0', '0', '15', '27566', '0', '0', '0', '0', '4', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Brazier (Lord Valthalakk) replacement');
+('704101', '0', '0', '15', '27542', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Top Piece replacement'),
+('704102', '0', '0', '15', '27544', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Left Piece replacement'),
+('704103', '0', '0', '15', '27537', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Amulet replacement'),
+('704301', '0', '0', '15', '27558', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Brazier (Isalien) replacement'),
+('704302', '0', '0', '15', '27560', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Brazier (Mor Grayhoof) replacement'),
+('704303', '0', '0', '15', '27562', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Brazier (Kormok) replacement'),
+('704304', '0', '0', '15', '27563', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Brazier (Jarien & Sothos) replacement'),
+('704305', '0', '0', '15', '27566', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bodley - Brazier (Lord Valthalakk) replacement');
+
+DELETE FROM creature_loot_template WHERE entry IN(9219,11501) AND item IN(21982);
+
+UPDATE creature SET position_x = -6745.7437, position_y = 1592.2943, position_z = 6.9114037, spawndist = 0, movementType = 2 WHERE guid = 131535;
+DELETE FROM creature_movement WHERE Id IN (131535);
+INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orientation, waittime, scriptid) VALUES
+(131535,1 ,-6745.7437,1592.2943,6.9114037,100,0,0),
+(131535,2 ,-6724.8813,1573.1672,5.2336764,100,0,0),
+(131535,3 ,-6711.506,1558.5605,7.250621,100,0,0),
+(131535,4 ,-6699.1855,1555.5695,7.8893967,100,0,0),
+(131535,5 ,-6686.1484,1563.0107,7.642852,100,0,0),
+(131535,6 ,-6690.8955,1585.8013,6.407935,100,0,0),
+(131535,7 ,-6687.703,1600.4492,6.7325954,100,0,0),
+(131535,8 ,-6677.444,1617.37,8.834906,100,0,0),
+(131535,9 ,-6677.697,1644.5408,8.241871,100,0,0),
+(131535,10,-6690.7207,1663.1124,6.3770733,100,0,0),
+(131535,11,-6710.4556,1670.0829,8.317429,100,0,0),
+(131535,12,-6729.592,1670.0498,6.0010977,100,0,0),
+(131535,13,-6747.005,1669.1266,6.980899,100,0,0),
+(131535,14,-6754.4214,1668.3945,6.5931215,100,0,0),
+(131535,15,-6764.1045,1664.135,7.446684,100,0,0),
+(131535,16,-6781.893,1673.9442,6.011373,100,0,0),
+(131535,17,-6796.5493,1681.3445,7.1039286,100,0,0),
+(131535,18,-6804.8477,1668.566,6.3788543,100,0,0),
+(131535,19,-6802.9077,1656.4673,6.3499413,100,0,0),
+(131535,20,-6792.166,1645.6456,6.6694045,100,0,0),
+(131535,21,-6779.1,1646.5426,6.6621294,100,0,0),
+(131535,22,-6768.41,1639.1289,6.5885315,100,0,0),
+(131535,23,-6763.401,1624.6064,6.1400914,100,0,0),
+(131535,24,-6762.7173,1606.8296,6.206584,100,0,0),
+(131535,25,-6763.003,1598.6188,6.907886,100,0,0),
+(131535,26,-6754.623,1591.0848,6.7811575,100,0,0);
+DELETE FROM pool_creature WHERE pool_entry = 321;
+DELETE FROM pool_template WHERE entry = 321;
+DELETE FROM `spawn_group` WHERE id = 19921;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (19921, 'Silithus - Twilight Lord Everun 14479', 0, 1, 0, 0);
+DELETE FROM `spawn_group_spawn` WHERE id = 19921;
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (19921, 131535, -1),(19921, 23595, -1),(19921, 131534, -1);
+
+UPDATE creature SET position_x = -7808.6807, position_y = 1782.676, position_z = -0.1795845, spawndist = 0, MovementType = 4 WHERE id = 14471;
+UPDATE creature_template SET SpeedWalk =(2.5/2.5), SpeedRun =(8/7), MovementType = 4 WHERE Entry = 14471;
+DELETE FROM creature_movement WHERE id IN (23859);
+DELETE FROM creature_movement_template WHERE entry = 14471;
+INSERT INTO creature_movement_template (Entry, Point, PositionX, PositionY, PositionZ, Orientation, WaitTime, ScriptId) VALUES
+(14471,1 ,-7808.6807,1782.676,-0.1795845,100,0,0),
+(14471,2 ,-7839.8535,1778.2094,0.5022687,100,0,0),
+(14471,3 ,-7883.6113,1762.0935,-3.2864003,100,0,0),
+(14471,4 ,-7930.934,1778.1233,1.1210822,100,0,0),
+(14471,5 ,-7924.0034,1796.5565,2.063847,100,0,0),
+(14471,6 ,-7902.0024,1820.533,0.26369655,100,0,0),
+(14471,7 ,-7888.9585,1844.1677,3.8065417,100,0,0),
+(14471,8 ,-7883.973,1880.0094,5.6121874,100,0,0),
+(14471,9 ,-7893.079,1884.7542,5.912327,100,0,0),
+(14471,10,-7879.2227,1930.3613,2.6753588,100,0,0),
+(14471,11,-7888.5435,1931.7075,3.7296126,100,0,0),
+(14471,12,-7923.8345,1934.253,3.5464387,100,0,0),
+(14471,13,-7950.278,1927.2986,3.1359825,100,0,0),
+(14471,14,-7969.762,1885.2539,3.103453,100,0,0),
+(14471,15,-7979.2803,1858.7457,4.582918,100,0,0),
+(14471,16,-7982.03,1828.1604,4.5797524,100,0,0),
+(14471,17,-8001.403,1821.5963,4.722474,100,0,0),
+(14471,18,-8018.4585,1791.7137,2.9931755,100,0,0),
+(14471,19,-8014.0913,1777.8931,1.5459192,100,0,0),
+(14471,20,-8025.347,1748.6543,-1.4082766,100,0,0),
+(14471,21,-8037.1016,1738.6407,-2.103726,100,0,0),
+(14471,22,-8066.3237,1738.685,-1.4640405,100,0,0),
+(14471,23,-8091.646,1728.067,-1.7422059,100,0,0),
+(14471,24,-8084.1094,1715.9835,-1.7078974,100,0,0),
+(14471,25,-8062.1504,1711.7101,0.55378234,100,0,0),
+(14471,26,-8042.761,1700.5609,5.696702,100,0,0),
+(14471,27,-8022.7676,1685.3954,13.072395,100,0,0);
+
+UPDATE creature SET position_x = 4478.5054, position_y = 265.8662, position_z = 82.41908, spawndist = 0, movementType = 4 WHERE guid = 64618;
+DELETE FROM creature_movement WHERE id IN (64618);
+INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orientation, waittime, scriptid) VALUES
+(64618,1 ,4478.5054,265.8662,82.41908,100,0,0),
+(64618,2 ,4496.1533,296.83566,83.432144,100,0,0),
+(64618,3 ,4478.5054,265.8662,82.41908,100,0,0),
+(64618,4 ,4463.374,229.88466,83.28497,100,0,0),
+(64618,5 ,4436.687,209.57976,83.25101,100,0,0),
+(64618,6 ,4406.034,197.52316,79.65813,100,0,0),
+(64618,7 ,4364.0586,208.1945,76.532845,100,0,0),
+(64618,8 ,4322.312,227.96355,72.07809,100,0,0),
+(64618,9 ,4291.1753,247.13309,69.97348,100,0,0),
+(64618,10,4251.971,270.67767,70.67535,100,0,0),
+(64618,11,4224.183,285.02994,67.75998,100,0,0),
+(64618,12,4195.178,293.98303,63.407646,100,0,0),
+(64618,13,4152.527,304.39468,58.843704,100,0,0),
+(64618,14,4119.5366,334.80728,56.88244,100,0,0),
+(64618,15,4085.5032,346.26974,51.31177,100,0,0),
+(64618,16,4053.5447,355.73038,47.286575,100,0,0),
+(64618,17,4008.131,370.97992,41.67613 ,100,0,0),
+(64618,18,3964.7612,385.87885,40.71336,100,0,0),
+(64618,19,3934.0347,393.4042,41.858673,100,0,0),
+(64618,20,3908.7786,378.5007,41.658543,100,0,0),
+(64618,21,3861.9956,376.44797,40.22328,100,0,0),
+(64618,22,3823.092,382.69574,36.3684,100,0,0),
+(64618,23,3785.343,395.7096,37.569168,100,0,0),
+(64618,24,3753.343,405.39145,35.61315,100,0,0),
+(64618,25,3719.327,421.25586,39.42303,100,0,0),
+(64618,26,3691.7373,426.06836,41.84446,100,0,0),
+(64618,27,3656.5117,432.84903,47.363655,100,0,0),
+(64618,28,3612.4956,450.7002,52.036896,100,0,0),
+(64618,29,3592.1233,480.2666,57.947235,100,0,0),
+(64618,30,3574.2688,510.8047,62.532505,100,0,0),
+(64618,31,3551.71,534.91016,65.27272,100,0,0),
+(64618,32,3532.9705,556.6094,66.750534,100,0,0),
+(64618,33,3494.7488,575.33484,70.7746,100,0,0),
+(64618,34,3452.5908,580.9781,73.5528,100,0,0),
+(64618,35,3405.813,583.93396,77.60637,100,0,0),
+(64618,36,3375.6907,608.1081,79.34107,100,0,0),
+(64618,37,3349.8843,624.534,81.31541,100,0,0);
+DELETE FROM pool_creature_template WHERE id = 32400;
+DELETE FROM pool_template WHERE entry = 220;
+DELETE FROM `spawn_group` WHERE id = 31004;
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES (31004,'Dragonblight - Tukemuth 32400',0,1,0,0);
+DELETE FROM `spawn_group_spawn` WHERE id = 31004;
+INSERT IGNORE INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) SELECT 31004, `Guid`, -1 FROM `creature` WHERE id = 32400;
+
+UPDATE npc_vendor SET Slot = 0 WHERE entry = 3368 AND item = 117;
+UPDATE npc_vendor SET Slot = 1 WHERE entry = 3368 AND item = 2287;
+UPDATE npc_vendor SET Slot = 2 WHERE entry = 3368 AND item = 3770;
+UPDATE npc_vendor SET Slot = 3 WHERE entry = 3368 AND item = 3771;
+UPDATE npc_vendor SET Slot = 4 WHERE entry = 3368 AND item = 4599;
+UPDATE npc_vendor SET Slot = 5 WHERE entry = 3368 AND item = 8952;
+UPDATE npc_vendor SET Slot = 6 WHERE entry = 3368 AND item = 27854;
+UPDATE npc_vendor SET Slot = 7 WHERE entry = 3368 AND item = 33454;
+UPDATE npc_vendor SET Slot = 8 WHERE entry = 3368 AND item = 35953;
+
+UPDATE npc_vendor SET Slot = 5 WHERE entry = 2848 AND item = 1710;
+UPDATE npc_vendor SET Slot = 0 WHERE entry = 2848 AND item = 3371;
+UPDATE npc_vendor SET Slot = 1 WHERE entry = 2848 AND item = 3372;
+UPDATE npc_vendor SET Slot = 6 WHERE entry = 2848 AND item = 3827;
+UPDATE npc_vendor SET Slot = 8 WHERE entry = 2848 AND item = 6056;
+UPDATE npc_vendor SET Slot = 7 WHERE entry = 2848 AND item = 6057;
+UPDATE npc_vendor SET Slot = 2 WHERE entry = 2848 AND item = 8925;
+UPDATE npc_vendor SET Slot = 3 WHERE entry = 2848 AND item = 18256;
+UPDATE npc_vendor SET Slot = 4 WHERE entry = 2848 AND item = 40411;
+
+UPDATE `creature_template` SET `NpcFlags` = `NpcFlags`|1, `GossipMenuId` = '7230' WHERE `Entry` IN (16384,16395,16433,16434,16435,16436);
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (7230, 8525, 0, 1323),(7230, 8526, 0, 1324),(7230, 8527, 0, 1325);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(7230, 0, 0, 'Give me one of your magic items.', 12302, 1, 1, -1, 0, 723001, 0, 0, NULL, 0, 1323),
+(7230, 1, 0, 'Give me one of your magic items.', 12302, 1, 1, -1, 0, 723002, 0, 0, NULL, 0, 1324),
+(7230, 2, 0, 'Give me one of your magic items.', 12302, 1, 1, -1, 0, 723003, 0, 0, NULL, 0, 1325);
+DELETE FROM conditions WHERE condition_entry BETWEEN 1323 AND 1325;
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES
+('1323', '12', '98', '0', '0', '0', '0', NULL),
+('1324', '12', '97', '0', '0', '0', '0', NULL),
+('1325', '12', '96', '0', '0', '0', '0', NULL);
+DELETE FROM dbscripts_on_gossip WHERE Id IN (723001,723002,723003);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+('723001', '0', '0', '15', '28321', '0', '0', '0', '0', '6', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Argent Dawn Reward Giver - Cast Spell Create Greater Mark of the Dawn'),
+('723002', '0', '0', '15', '28320', '0', '0', '0', '0', '6', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Argent Dawn Reward Giver - Cast Spell Create Mark of the Dawn'),
+('723003', '0', '0', '15', '28319', '0', '0', '0', '0', '6', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Argent Dawn Reward Giver - Cast Spell Create Lesser Mark of the Dawn');
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
