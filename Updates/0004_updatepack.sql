@@ -27024,7 +27024,7 @@ INSERT INTO dbscripts_on_quest_end (id, delay, priority, command, datalong, data
 UPDATE quest_template SET CompleteScript = 1667 WHERE entry = 1667;
 UPDATE `creature` SET `position_x` = '-9545.33', `position_y` = '-1401.1', `position_z` = '54.1478', `orientation` = '3.14159', `spawntimesecsmin` = '180', `spawntimesecsmax` = '180' WHERE `guid` =4928;
 
-UPDATE creature_template SET ExtraFlags = ExtraFlags|0x01000000, MechanicImmuneMask = MechanicImmuneMask|256 WHERE entry = 2520;
+REPLACE INTO `creature_immunities` (`entry`, `setid`, `type`, `value`) VALUES (2520, 0, 0, 114),(2520, 0, 1, 11),(2520, 0, 4, 4);
 
 DELETE FROM `dbscript_random_templates` WHERE `id`=20333;
 INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
@@ -27039,7 +27039,7 @@ UPDATE creature_template SET Faction = 35, UnitFlags = 256 WHERE entry = 15378;
 UPDATE creature_template SET Faction = 35, UnitFlags = 256 WHERE entry = 15379;
 UPDATE creature_template SET Faction = 35, UnitFlags = 256 WHERE entry = 15380;
 UPDATE creature_template SET Faction = 35, UnitFlags = 256, SpeedWalk = (2.5 / 2.5), SpeedRun = (8 / 7) WHERE entry = 15381;
-UPDATE creature_template SET Faction = 35, UnitFlags = 210 WHERE entry = 15382;
+UPDATE creature_template SET Faction = 35, UnitFlags = 320 WHERE entry = 15382;
 UPDATE creature_template SET Faction = 310, UnitFlags = 256, RegenerateStats = 0, DamageMultiplier = 3.5 WHERE entry = 15414;
 UPDATE creature_template SET Faction = 310, UnitFlags = 256, RegenerateStats = 0, DamageMultiplier = 3.5 WHERE entry = 15421;
 UPDATE creature_template SET Faction = 310, UnitFlags = 256, RegenerateStats = 0, DamageMultiplier = 3.5 WHERE entry = 15422;
@@ -28632,5 +28632,89 @@ INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orien
 (64560,51,3353.7532,343.72574,62.261078,100,0,0),
 (64560,52,3387.1824,354.21378,58.75484,100,0,0),
 (64560,53,3425.6458,382.32477,52.929726,100,0,0);
+
+DELETE FROM dbscripts_on_quest_end WHERE id IN (12547);
+INSERT INTO dbscripts_on_quest_end (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(12547,1,0,21,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'active'),
+(12547,10,0,14,16245,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'remove aura'),
+(12547,10,1,14,25900,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'remove aura'),
+(12547,100,0,0,0,0,0,0,0,0,33004,0,0,0,0,0,0,0,'SaY'),
+(12547,101,0,1,51,0,0,0,0,0,0,0,0,0,0,0,0,0,'emote'),
+(12547,20000,0,15,16245,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'add aura'),
+(12547,20001,1,15,25900,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'add aura'),
+(12547,20100,0,21,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'unactive');
+UPDATE quest_template SET CompleteScript = 12547 WHERE entry = 12547;
+
+UPDATE quest_template SET RequiredCondition = 4098 WHERE entry = 930;
+INSERT INTO conditions (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES
+(4096, 8, 918, 0, 0, 0, 0, 'Quest ID 918 Rewarded'),
+(4097, 8, 919, 0, 0, 0, 0, 'Quest ID 919 Rewarded'),
+(4098, -1, 4097, 4096, 0, 0, 0,'');
+
+DELETE FROM dbscripts_on_relay WHERE id IN (21002) AND delay IN (10,20,30,31,32,33);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(21002,300,31,25077,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25077 - terminate if not found'),
+(21002,400,31,25070,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25077 - terminate if not found'),
+(21002,600,21,1,0,0,25079,100,0x04,0,0,0,0,0,0,0,0,'25079 - Active'),
+(21002,810,21,1,0,0,25077,100,0x04,0,0,0,0,0,0,0,0,'25077 - Active'),
+(21002,820,21,1,0,0,25070,100,0x04,0,0,0,0,0,0,0,0,'25070 - Active'),
+(21002,830,20,2,1,0,25079,100,0x04,0,0,0,0,0,0,0,0,'25079 - Path 1');
+DELETE FROM dbscripts_on_relay WHERE id IN (21006,21007) AND delay IN (10,11);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(21006,500,21,1,0,0,31715,100,0x04,0,0,0,0,0,0,0,0,'31715 - Active'),
+(21006,510,20,2,0,0,31715,100,0x04,0,0,0,0,0,0,0,0,'31715 - waypoints'),
+(21007,500,21,1,0,0,31715,100,0x04,0,0,0,0,0,0,0,0,'31715 - Active'),
+(21007,510,20,2,0,0,31715,100,0x04,0,0,0,0,0,0,0,0,'31715 - waypoints');
+
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (7175, 8455, 0, 4099);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES ('4099', '5', '529', '5', '0', '0', '0', NULL);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(7175, 0, 0, 'I am diseased. Please cure me, medic.', 12154, 1, 1, -1, 0, 717500, 0, 0, NULL, 0, 5060);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`) VALUES
+(5000, 1, 12541, 0, 0, 0, 0),(5026, 1, 16449, 0, 0, 0, 0),(5055, -2, 5000, 5026, 0, 0, 0),(5060, -1, 5055, 4099, 0, 0, 0);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+('717500', '0', '0', '15', '28133', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Argent Medic cure disease');
+DELETE FROM dbscripts_on_gossip WHERE Id IN (51002);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+(51002, 300, 0, 14, 23179, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Remove Taint of Shadow from player'),
+(51002, 500, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Ulathek attack player'),
+(51002, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9735, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Ulathek - Say Text'),
+(51002, 100, 0, 1, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Ulathek - Emote Roar');
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+('550200', '0', '0', '15', '22227', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Raene Wolfrunner - Cast Spell');
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES ('5501', '6554', '0', '0');
+INSERT INTO `npc_text_broadcast_text` (`Id`, `Prob0`, `Prob1`, `Prob2`, `Prob3`, `Prob4`, `Prob5`, `Prob6`, `Prob7`, `BroadcastTextId0`, `BroadcastTextId1`, `BroadcastTextId2`, `BroadcastTextId3`, `BroadcastTextId4`, `BroadcastTextId5`, `BroadcastTextId6`, `BroadcastTextId7`) VALUES
+('6554', '1', '0', '0', '0', '0', '0', '0', '0', '9026', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(5502, 0, 0, 'Raene, I lost Dartol''s Rod of Transformation.', 9025, 1, 1, 5501, 0, 550200, 0, 0, NULL, 0, 5064);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`) VALUES
+(5007, 19, 1045, 0, 0, 0, 0),(5063, 23, 5462, 1, 0, 0, 1),(5064, -1, 5007, 5063, 0, 0, 0);
+DELETE FROM dbscripts_on_gossip WHERE Id IN (1500001);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+(1500001, 100, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Azuregos - Attack Player'),
+(1500001, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11017, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Azuregos - Say Text'),
+(1500001, 0, 1, 22, 14, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Azuregos - Set Faction to Monster');
+UPDATE `gossip_menu` SET `text_id` = '7825' WHERE `entry` =6600 AND `text_id` =68;
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(6600, 0, 0, '<Touch the unstable rift crystal.>', 10900, 1, 0, -1, 0, 660001, 0, 0, NULL, 0, 1928);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+(660001, 1, 0, 6, 409, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1091.89, -466.985, -105.084, 3.14159, 0, 0, 'Unstable Rift Crystal - Teleport Player to Molten Core');
+UPDATE `gossip_menu_option` SET `action_script_id` = '578301' WHERE `menu_id` =5783 AND `id` =0;
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+('578301', '0', '0', '15', '22958', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Highlord Demitrian - Cast Spell Summon Vessel of Rebirth DND');
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (2992, 3675, 0, 0),(2993, 3676, 0, 0);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(2991, 0, 0, 'What are the chances of obtaining such a hide?', 6131, 1, 1, 2992, 0, 0, 0, 0, '', 0, 0),
+(2992, 0, 0, 'So let us pretend I get this hide, what else would you need and what could you actually make?', 6133, 1, 1, 2993, 0, 0, 0, 0, '', 0, 0),
+(2993, 0, 0, 'Ok!', 6135, 1, 1, -1, 0, 299301, 0, 0, '', 0, 0);
+UPDATE `creature` SET `position_x` = '6697.55', `position_y` = '-4647.11', `position_z` = '721.089', `orientation` = '3.12414', `spawntimesecsmin` = '300', `spawntimesecsmax` = '300' WHERE `guid` =81275;
+DELETE FROM dbscripts_on_gossip WHERE Id IN (299301);
+INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+(299301, 500, 0, 1, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Malyfous Darkhammer - Emote'),
+(299301, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 6139, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Malyfous Darkhammer - Talk'),
+(299301, 0, 0, 29, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.118259, 0, 0, 'Malyfous Darkhammer - Remove NPC Flags'),
+(299301, 100, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.118259, 0, 0, 'Malyfous Darkhammer - Set Orientation'),
+(299301, 6000, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.12414, 0, 0, 'Malyfous Darkhammer - Set Orientation'),
+(299301, 6500, 0, 29, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.118259, 0, 0, 'Malyfous Darkhammer - Add NPC Flags');
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
