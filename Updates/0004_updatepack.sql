@@ -28796,8 +28796,8 @@ DELETE FROM dbscripts_on_gossip WHERE Id IN (570400);
 
 UPDATE creature_template SET SpeedWalk = (2.5 / 2.5), SpeedRun = (8 / 7) WHERE Entry = 4855;
 
-DELETE FROM npc_vendor WHERE entry IN (24843,24935,24995,25010,25051,25082);
-UPDATE creature_template SET VendorTemplateId = 10000 WHERE entry IN (24843,24935,24995,25010,25051,25082);
+DELETE FROM npc_vendor WHERE entry IN (24843,24935,24995,25010,25019,25051,25082);
+UPDATE creature_template SET VendorTemplateId = 10000 WHERE entry IN (24843,24935,24995,25010,25019,25051,25082);
 DELETE FROM npc_vendor_template WHERE entry IN (10000);
 INSERT INTO npc_vendor_template (entry, item, maxcount, incrtime, slot, ExtendedCost, condition_id, comments) VALUES
 (10000,7005,0,0,0,0,0,'Skinning Knife'),
