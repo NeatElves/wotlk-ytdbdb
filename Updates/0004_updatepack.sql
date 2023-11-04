@@ -27741,8 +27741,8 @@ DELETE FROM `game_event_creature` WHERE `guid` = 135839 AND `event` = 41;
 DELETE FROM `creature` WHERE `guid` = 135838;
 DELETE FROM `game_event_creature` WHERE `guid` = 135838 AND `event` = 41;
 
-UPDATE `quest_template` SET `SpecialFlags` = 5 WHERE `entry` IN (12286,12331,12332,12333,12334,12335,12336,12337,12338,12339,12340,12341,12342,12343,12344,12345,12346,12347,12348,12349,12350,12351,12352,12353,12354,12355,12356,12357,12358,12359,12360,12361,12362,12363,12364,
-12365,12366,12367,12368,12369,12370,12371,12373,12374,12375,12376,12377,12378,12379,12380,12381,12382,12383,12384,12385,12386,12387,12388,12389,12390,12391,12392,12393,12394,12395,12396,12397,12398,12399,12400,12401,12402,12403,12404,12405,12406,12407,12408,12409,12410);
+#UPDATE `quest_template` SET `SpecialFlags` = 5 WHERE `entry` IN (12286,12331,12332,12333,12334,12335,12336,12337,12338,12339,12340,12341,12342,12343,12344,12345,12346,12347,12348,12349,12350,12351,12352,12353,12354,12355,12356,12357,12358,12359,12360,12361,12362,12363,12364,
+#12365,12366,12367,12368,12369,12370,12371,12373,12374,12375,12376,12377,12378,12379,12380,12381,12382,12383,12384,12385,12386,12387,12388,12389,12390,12391,12392,12393,12394,12395,12396,12397,12398,12399,12400,12401,12402,12403,12404,12405,12406,12407,12408,12409,12410);
 DELETE FROM `gameobject` WHERE `id` IN (190036,190054,190066,190074,190078,190082,190084,190086,190087,190089,190103,190050,190076,190077,
 190079,190080,190083,190085,190088,190067,190068,190072,190073,190075,190090,190091,190096,190097,190098,190099,190101,190109);
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
@@ -29102,5 +29102,76 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 (39097, 181598, 1, -6576.1, 1324.81, 4.78865, 0.645772, 0, 0, 0.317305, 0.948324, 300, 300),
 (39098, 181598, 1, -6566.02, 1214.98, 2.02324, 2.44346, 0, 0, 0.939692, 0.34202, 300, 300),
 (39094, 181598, 1, -6448.94, 1345.23, 3.04718, 2.23402, 0, 0, 0.898793, 0.438373, 300, 300);
+
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 5181 WHERE `Entry` = 13429;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 5181 WHERE `Entry` = 13430;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 5181 WHERE `Entry` = 13432;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 5181 WHERE `Entry` = 13436;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6768 WHERE `Entry` = 13431;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 3663 WHERE `Entry` = 2425;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (3663, 4476, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6591 WHERE `Entry` = 15309;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6592 WHERE `Entry` = 15310;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (6591, 7808, 0, 0),(6591, 7809, 0, 2298),(6592, 7810, 0, 0),(6592, 7811, 0, 2297);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6589 WHERE `Entry` = 15353;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6590 WHERE `Entry` = 15354;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (6589, 7805, 0, 0),(6590, 7806, 0, 0);
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (6593, 7812, 0, 0),(6594, 7813, 0, 0);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(6589, 0, 1, 'What Hallow''s End candy do you have for sale?', 10815, 3, 128, 0, 0, 0, 0, 0, NULL, 0, 0),
+(6589, 1, 0, 'What is there to do on Hallow''s End?', 10816, 1, 1, 6594, 0, 0, 0, 0, NULL, 0, 0),
+(6590, 0, 1, 'What Hallow''s End candy do you have for sale?', 10815, 3, 128, 0, 0, 0, 0, 0, NULL, 0, 0),
+(6590, 1, 0, 'What is there to do on Hallow''s End?', 10816, 1, 1, 6593, 0, 0, 0, 0, NULL, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 7168 WHERE `Entry` = 16226;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (7168, 8438, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6859 WHERE `Entry` = 15634;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (6859, 8164, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6840 WHERE `Entry` = 15797;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6839 WHERE `Entry` = 15798;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6838 WHERE `Entry` = 15799;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (6838, 8145, 0, 0),(6839, 8146, 0, 0),(6840, 8147, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6807 WHERE `Entry` = 15761;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6808 WHERE `Entry` = 15765;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6809 WHERE `Entry` = 15767;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6810 WHERE `Entry` = 15768;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6935 WHERE `Entry` = 15917;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (6935, 8224, 0, 0);
+INSERT INTO `npc_text_broadcast_text` (`Id`, `Prob0`, `Prob1`, `Prob2`, `Prob3`, `Prob4`, `Prob5`, `Prob6`, `Prob7`, `BroadcastTextId0`, `BroadcastTextId1`, `BroadcastTextId2`, `BroadcastTextId3`, `BroadcastTextId4`, `BroadcastTextId5`, `BroadcastTextId6`, `BroadcastTextId7`) VALUES
+('8224', '1', '1', '1', '1', '0', '0', '0', '0', '11685', '11686', '11687', '11688', '0', '0', '0', '0');
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6536 WHERE `Entry` = 15195;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (6536, 7739, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6401 WHERE `Entry` = 15042;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (6401, 7594, 0, 0),(6402, 7598, 0, 0),(6403, 7597, 0, 0),(6404, 7596, 0, 0);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(6401, 0, 0, 'I think I have heard of this magic.', 10465, 1, 1, 6404, 0, 0, 0, 0, NULL, 0, 0),
+(6403, 0, 0, 'What are the components?', 10469, 1, 1, 6402, 0, 0, 0, 0, NULL, 0, 0),
+(6404, 0, 0, 'Arcanum? That sounds very familiar.', 10467, 1, 1, 6403, 0, 0, 0, 0, NULL, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6944 WHERE `Entry` = 11900;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 5863 WHERE `Entry` = 14504;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (5863, 7036, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 5857 WHERE `Entry` = 14494;
+UPDATE `creature` SET `position_x` = '3325.02',`position_y` = '-2996.8',`position_z` = '164.449',`orientation` = '0.01' WHERE `guid` =102416;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (5857, 7029, 0, 0),(5858, 7034, 0, 0),(5859, 7033, 0, 0),(5860, 7032, 0, 0),(5861, 7031, 0, 0),(5862, 7030, 0, 0);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_broadcast_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `box_broadcast_text`, `condition_id`) VALUES
+(5857, 0, 0, 'The Eye led me here, Eris.', 9716, 1, 1, 5862, 0, 0, 0, 0, NULL, 0, 5072),
+(5859, 0, 0, 'So what can I do to help?', 9724, 1, 1, 5858, 0, 0, 0, 0, NULL, 0, 0),
+(5860, 0, 0, 'Those days are over, Eris.', 9722, 1, 1, 5859, 0, 0, 0, 0, NULL, 0, 0),
+(5861, 0, 0, 'I really did not know what to expect, Eris. I will use my powers to assist you if that is what is asked of me.', 9720, 1, 1, 5860, 0, 0, 0, 0, NULL, 0, 0),
+(5862, 0, 0, 'And I was suited to see this?', 9718, 1, 1, 5861, 0, 0, 0, 0, NULL, 0, 0);
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`) VALUES (5072, 22, 7622, 0, 0, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 6595 WHERE `Entry` = 14470;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (6595, 7814, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 2044 WHERE `Entry` = 1749;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (2044, 2693, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 5562 WHERE `Entry` = 13320;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (5562, 6655, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 4309 WHERE `Entry` = 12657;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (4309, 5481, 0, 0);
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 643 WHERE `Entry` = 5502;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 5872 WHERE `Entry` = 14531;
+UPDATE `creature_template` SET NpcFlags = NpcFlags|1, `GossipMenuId` = 5871 WHERE `Entry` = 14536;
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (5871, 7044, 0, 0),(5872, 7045, 0, 0);
+
+DELETE FROM `creature` WHERE `id` = 10988;
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
