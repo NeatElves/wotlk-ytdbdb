@@ -29071,7 +29071,7 @@ INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalon
 (16397,2,31,25078,100,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - search for 25078'),
 (16397,500,20,2,1,0,25078,100,0x04,0,0,0,0,0,0,0,0,'Transports (Ships) - Captain Krick Wrenchnozzle 25078 - Path 1'),
 (16397,1000,16,5154,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - ShipDocked');
-UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (25078,25097);
+UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (25095,25093,25078,25097,25094,25089);
 DELETE FROM gameobject WHERE map = 593;
 
 # NPC event commoner - hardcode in core
@@ -29209,22 +29209,26 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 (21000,20702,20,2,0,0,25100,200,7,0,0,0,0,0,0,0,0,'25100 - waypoints'),
 (21000,21000,45,0,20307,0,25105,200,7,0,0,0,0,0,0,0,0,'25079 - Random Script'),
 (21000,21001,28,0,0,0,25106,200,7,0,0,0,0,0,0,0,0,'25106 - STATE_STAND'),
+(21000,81000,0,0,0,0,25100,100,7,24275,24276,24277,0,0,0,0,0,'25107 - Random Say'),
 (21000,82000,28,3,0,0,25107,200,7,0,0,0,0,0,0,0,0,'25107 - STATE_SLEEP'),
 (21000,82001,28,1,0,0,25106,200,7,0,0,0,0,0,0,0,0,'25107 - STATE_SIT'),
-(21001,600,21,1,0,0,25105,200,7,0,0,0,0,0,0,0,0,'25105 - Active'),
-(21001,601,21,1,0,0,25106,200,7,0,0,0,0,0,0,0,0,'25106 - Active'),
-(21001,602,21,1,0,0,25107,200,7,0,0,0,0,0,0,0,0,'25107 - Active'),
-(21001,603,21,1,0,0,25107,200,7,0,0,0,0,0,0,0,0,'25107 - Active'),
-(21001,604,21,1,0,0,25100,200,7,0,0,0,0,0,0,0,0,'25100 - Active'),
-(21001,605,21,1,0,0,25104,200,7,0,0,0,0,0,0,0,0,'25104 - Active'),
 (21001,700,20,2,0,0,25101,200,7,0,0,0,0,0,0,0,0,'25101 - waypoints'),
 (21001,701,20,2,0,0,25104,200,7,0,0,0,0,0,0,0,0,'25104 - waypoints'),
 (21001,702,20,2,0,0,25100,200,7,0,0,0,0,0,0,0,0,'25100 - waypoints'),
-(21001,800,45,0,20307,0,25105,200,7,0,0,0,0,0,0,0,0,'25079 - Random Script'),
-(21001,801,28,0,0,0,25106,200,7,0,0,0,0,0,0,0,0,'25106 - STATE_STAND'),
+(21001,800,45,0,20307,0,25105,100,7,0,0,0,0,0,0,0,0,'25079 - Random Script'),
+(21001,801,28,0,0,0,25106,100,7,0,0,0,0,0,0,0,0,'25106 - STATE_STAND'),
+(21001,61000,0,0,0,0,25100,100,7,24275,24276,24277,0,0,0,0,0,'25107 - Random Say'),
 (21001,62000,28,3,0,0,25107,100,7,0,0,0,0,0,0,0,0,'25107 - STATE_SLEEP'),
 (21001,62001,28,1,0,0,25106,200,7,0,0,0,0,0,0,0,0,'25107 - STATE_SIT'),
 (21001,65000,0,0,0,0,3150,16859,7|0x10,22073,22074,0,0,0,0,0,0,'3150 - Random Say');
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (2510501,2510502);
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(2510501,3000,0,0,0,0,0,0,0x04,24279,0,0,0,0,0,0,0,'25105 - Say'),
+(2510501,8000,0,0,0,0,0,0,0x04,24280,0,0,0,0,0,0,0,'25105 - Say'),
+(2510501,8001,1,5,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'25105 - Emote'),
+(2510501,9000,28,0,0,0,25107,100,7,0,0,0,0,0,0,0,0,'25107 - STATE_STAND'),
+(2510502,2000,0,0,0,0,0,0,0x04,24281,0,0,0,0,0,0,0,'25105 - Say'),
+(2510502,2001,1,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'25105 - Emote');
 DELETE FROM creature_movement_template WHERE Entry = 25101;
 INSERT INTO creature_movement_template (`Entry`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
 (25101,1 ,6.80231,-10.4635,-17.7181,1.74533,5000,0),
@@ -29310,7 +29314,7 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 (21002,55000,20,2,2,0,25079,100,7,0,0,0,0,0,0,0,0,'25079 - Path 2'),
 (21002,59000,20,2,0,0,25077,100,7,0,0,0,0,0,0,0,0,'25077 - waypoints'),
 (21002,61000,1,396,0,0,25077,100,7,0,0,0,0,0,0,0,0,'25079 - emote'),
-(21002,61100,0,0,0,0,25077,100,7,24237,24238,24239,24240,0,0,0,0,'25079 - Random Say'),
+(21002,61100,0,0,0,0,25077,100,7,24237,24238,24239,24240,0,0,0,0,'25077 - Random Say'),
 (21002,63000,20,2,0,0,25070,100,7,0,0,0,0,0,0,0,0,'25077 - waypoints'),
 (21002,64100,0,0,0,0,25070,100,7,24242,0,0,0,0,0,0,0,'25070 - Say'),
 (21002,68100,0,20306,0,0,25070,100,7,0,0,0,0,0,0,0,0,'25070 - Random Say'),
@@ -29321,7 +29325,7 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 (21003,60100,1,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'9566 - emote'),
 (21003,60900,0,0,0,0,0,0,0x04,22080,0,0,0,0,0,0,0,'9566 - Say'),
 (21003,61000,1,396,0,0,25077,100,7,0,0,0,0,0,0,0,0,'25079 - emote'),
-(21003,61100,0,0,0,0,25077,100,7,24237,24238,24239,24240,0,0,0,0,'25079 - Random Say'),
+(21003,61100,0,0,0,0,25077,100,7,24237,24238,24239,24240,0,0,0,0,'25077 - Random Say'),
 (21003,63000,20,2,0,0,25070,100,7,0,0,0,0,0,0,0,0,'25077 - waypoints'),
 (21003,64100,0,0,0,0,25070,100,7,24242,0,0,0,0,0,0,0,'25070 - Say'),
 (21003,68100,0,20306,0,0,25070,100,7,0,0,0,0,0,0,0,0,'25070 - Random Say'),
@@ -29351,18 +29355,18 @@ INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalo
 (3171501,1,20,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'idle');
 DELETE FROM dbscripts_on_relay WHERE id IN (21006,21007);
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(21006,1,20,2,0,0,31715,30,7,0,0,0,0,0,0,0,0,'31715 - waypoints'),
-(21007,1,20,2,0,0,31715,30,7,0,0,0,0,0,0,0,0,'31715 - waypoints');
+(21006,510,20,2,0,0,31715,100,7,0,0,0,0,0,0,0,0,'31715 - waypoints'),
+(21007,510,20,2,0,0,31715,100,7,0,0,0,0,0,0,0,0,'31715 - waypoints');
 DELETE FROM dbscripts_on_relay WHERE id IN (21008,21009);
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(21008,1,20,2,0,0,31727,100,7,0,0,0,0,0,0,0,0,'31727 - waypoints'),
+(21008,11,20,2,0,0,31727,100,7,0,0,0,0,0,0,0,0,'31727 - waypoints'),
 (21009,11,20,2,0,0,31727,100,7,0,0,0,0,0,0,0,0,'31727 - waypoints');
 UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (31715,31727);
 DELETE FROM dbscripts_on_relay WHERE id IN (21010,21011);
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
-(21010,1,0,0,0,0,34715,100,7,35030,0,0,0,0,0,0,0,'34715 - Say'),
+(21010,11,0,0,0,0,34715,100,7,35030,0,0,0,0,0,0,0,'34715 - Say'),
 (21010,60000,0,0,0,0,34715,100,7,35031,0,0,0,0,0,0,0,'34715 - Say'),
-(21011,1,0,0,0,0,34715,100,7,35032,0,0,0,0,0,0,0,'34715 - Say'),
+(21011,11,0,0,0,0,34715,100,7,35032,0,0,0,0,0,0,0,'34715 - Say'),
 (21011,60000,0,0,0,0,34715,100,7,35033,0,0,0,0,0,0,0,'34715 - Say');
 UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (34715,34717);
 
