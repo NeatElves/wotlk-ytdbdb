@@ -28957,7 +28957,7 @@ INSERT INTO creature_movement_template (`Entry`, `PathId`, `Point`, `PositionX`,
 DELETE FROM dbscripts_on_creature_movement WHERE id IN (2509301);
 INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (2509301,900,31,25095,40,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25093'),
-(2509301,1000,36,0,0,25095,25095,50,1,0,0,0,0,0,0,0,0,'face buddy'),
+(2509301,1000,36,0,0,0,25095,5930005,1|0x10,0,0,0,0,0,0,0,0,'face buddy'),
 (2509301,3000,1,273,0,0,0,0,0x04,6,1,0,0,0,0,0,0,'random emote');
 UPDATE creature SET position_x = -11.879251, position_y = 6.683722, position_z = 6.1819563, orientation = 3.1241393, movementtype = 2, spawndist = 0 WHERE id = 25097;
 UPDATE creature_template SET movementtype = 2 WHERE Entry = 25097;
@@ -29094,7 +29094,7 @@ INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalon
 (16398,1000,16,5154,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - ShipDocked'),
 (16397,1,16,5495,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - BoatDockingWarning'),
 (16397,2,31,25078,100,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - search for 25078'),
-(16397,500,20,2,1,0,25078,100,0x04,0,0,0,0,0,0,0,0,'Transports (Ships) - Captain Krick Wrenchnozzle 25078 - Path 1'),
+(16397,500,20,2,1,0,25078,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Captain Krick Wrenchnozzle 25078 - Path 1'),
 (16397,1000,16,5154,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - ShipDocked');
 UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (25095,25093,25078,25097,25094,25089);
 DELETE FROM gameobject WHERE map = 593;
@@ -29235,35 +29235,34 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 (21000,20300,31,25101,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25101 - terminate if not found'),
 (21000,20400,31,25100,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25100 - terminate if not found'),
 (21000,20500,31,25104,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25104 - terminate if not found'),
-(21000,20700,20,2,0,0,25101,200,7,0,0,0,0,0,0,0,0,'25101 - waypoints'),
-(21000,20701,20,2,0,0,25104,200,7,0,0,0,0,0,0,0,0,'25104 - waypoints'),
-(21000,20702,20,2,0,0,25100,200,7,0,0,0,0,0,0,0,0,'25100 - waypoints'),
-(21000,21000,45,0,20307,0,25105,200,7,0,0,0,0,0,0,0,0,'25079 - Random Script'),
-(21000,21001,28,0,0,0,25106,200,7,0,0,0,0,0,0,0,0,'25106 - STATE_STAND'),
+(21000,20700,20,2,0,0,25101,5900001,7|0x10,0,0,0,0,0,0,0,0,'25101 - waypoints'),
+(21000,20701,20,2,0,0,25104,5900006,7|0x10,0,0,0,0,0,0,0,0,'25104 - waypoints'),
+(21000,20702,20,2,0,0,25100,5900000,7|0x10,0,0,0,0,0,0,0,0,'25100 - waypoints'),
+(21000,21000,45,0,20307,0,25105,5900002,7|0x10,0,0,0,0,0,0,0,0,'25079 - Random Script'),
+(21000,21001,28,0,0,0,25106,5900008,7|0x10,0,0,0,0,0,0,0,0,'25106 - STATE_STAND'),
 (21000,81000,0,0,0,0,25100,200,7,24275,24276,24277,0,0,0,0,0,'25107 - Random Say'),
-(21000,82000,28,3,0,0,25107,200,7,0,0,0,0,0,0,0,0,'25107 - STATE_SLEEP'),
-(21000,82001,28,1,0,0,25106,200,7,0,0,0,0,0,0,0,0,'25107 - STATE_SIT'),
+(21000,82000,28,3,0,0,25107,5900004,7,0,0,0,0,0,0,0,0,'25107 - STATE_SLEEP'),
+(21000,82001,28,1,0,0,25106,5900008,7|0x10,0,0,0,0,0,0,0,0,'25107 - STATE_SIT'),
 (21001,1,31,25105,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25105 - terminate if not found'),
 (21001,100,31,25106,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25106 - terminate if not found'),
 (21001,200,31,25107,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25107 - terminate if not found'),
 (21001,300,31,25101,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25101 - terminate if not found'),
 (21001,400,31,25100,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25100 - terminate if not found'),
 (21001,500,31,25104,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25104 - terminate if not found'),
-(21001,700,20,2,0,0,25101,200,7,0,0,0,0,0,0,0,0,'25101 - waypoints'),
-(21001,701,20,2,0,0,25104,200,7,0,0,0,0,0,0,0,0,'25104 - waypoints'),
-(21001,702,20,2,0,0,25100,200,7,0,0,0,0,0,0,0,0,'25100 - waypoints'),
-(21001,800,45,0,20307,0,25105,100,7,0,0,0,0,0,0,0,0,'25079 - Random Script'),
-(21001,801,28,0,0,0,25106,100,7,0,0,0,0,0,0,0,0,'25106 - STATE_STAND'),
+(21001,700,20,2,0,0,25101,5900001,7|0x10,0,0,0,0,0,0,0,0,'25101 - waypoints'),
+(21001,701,20,2,0,0,25104,5900006,7|0x10,0,0,0,0,0,0,0,0,'25104 - waypoints'),
+(21001,702,20,2,0,0,25100,5900000,7|0x10,0,0,0,0,0,0,0,0,'25100 - waypoints'),
+(21001,800,45,0,20307,0,25105,5900002,7|0x10,0,0,0,0,0,0,0,0,'25079 - Random Script'),
+(21001,801,28,0,0,0,25106,5900008,7|0x10,0,0,0,0,0,0,0,0,'25106 - STATE_STAND'),
 (21001,61000,0,0,0,0,25100,200,7,24275,24276,24277,0,0,0,0,0,'25107 - Random Say'),
-(21001,62000,28,3,0,0,25107,100,7,0,0,0,0,0,0,0,0,'25107 - STATE_SLEEP'),
-(21001,62001,28,1,0,0,25106,200,7,0,0,0,0,0,0,0,0,'25107 - STATE_SIT'),
+(21001,62000,28,3,0,0,25107,5900004,7|0x10,0,0,0,0,0,0,0,0,'25107 - STATE_SLEEP'),
+(21001,62001,28,1,0,0,25106,5900008,7|0x10,0,0,0,0,0,0,0,0,'25107 - STATE_SIT'),
 (21001,65000,0,0,0,0,3150,16859,7|0x10,22073,22074,0,0,0,0,0,0,'3150 - Random Say');
-DELETE FROM dbscripts_on_creature_movement WHERE id IN (2510501,2510502);
 INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (2510501,3000,0,0,0,0,0,0,0x04,24279,0,0,0,0,0,0,0,'25105 - Say'),
 (2510501,8000,0,0,0,0,0,0,0x04,24280,0,0,0,0,0,0,0,'25105 - Say'),
 (2510501,8001,1,5,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'25105 - Emote'),
-(2510501,9000,28,0,0,0,25107,100,7,0,0,0,0,0,0,0,0,'25107 - STATE_STAND'),
+(2510501,9000,28,0,0,0,25107,5900004,7|0x10,0,0,0,0,0,0,0,0,'25107 - STATE_STAND'),
 (2510502,2000,0,0,0,0,0,0,0x04,24281,0,0,0,0,0,0,0,'25105 - Say'),
 (2510502,2001,1,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'25105 - Emote');
 DELETE FROM creature_movement_template WHERE Entry = 25101;
@@ -29350,28 +29349,28 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 (21002,1,31,25079,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25079 - terminate if not found'),
 (21002,300,31,25077,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25077 - terminate if not found'),
 (21002,400,31,25070,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25077 - terminate if not found'),
-(21002,830,20,2,1,0,25079,100,7,0,0,0,0,0,0,0,0,'25079 - Path 1'),
-(21002,55000,20,2,2,0,25079,100,7,0,0,0,0,0,0,0,0,'25079 - Path 2'),
-(21002,59000,20,2,0,0,25077,100,7,0,0,0,0,0,0,0,0,'25077 - waypoints'),
-(21002,61000,1,396,0,0,25077,100,7,0,0,0,0,0,0,0,0,'25079 - emote'),
-(21002,61100,0,0,0,0,25077,100,7,24237,24238,24239,24240,0,0,0,0,'25077 - Random Say'),
-(21002,63000,20,2,0,0,25070,100,7,0,0,0,0,0,0,0,0,'25077 - waypoints'),
-(21002,64100,0,0,0,0,25070,100,7,24242,0,0,0,0,0,0,0,'25070 - Say'),
-(21002,68100,0,20306,0,0,25070,100,7,0,0,0,0,0,0,0,0,'25070 - Random Say'),
+(21002,830,20,2,1,0,25079,5910013,7|0x10,0,0,0,0,0,0,0,0,'25079 - Path 1'),
+(21002,55000,20,2,2,0,25079,5910013,7|0x10,0,0,0,0,0,0,0,0,'25079 - Path 2'),
+(21002,59000,20,2,0,0,25077,5910001,7|0x10,0,0,0,0,0,0,0,0,'25077 - waypoints'),
+(21002,61000,1,396,0,0,25077,5910001,7|0x10,0,0,0,0,0,0,0,0,'25079 - emote'),
+(21002,61100,0,0,0,0,25077,5910001,7|0x10,24237,24238,24239,24240,0,0,0,0,'25077 - Random Say'),
+(21002,63000,20,2,0,0,25070,5910000,7|0x10,0,0,0,0,0,0,0,0,'25077 - waypoints'),
+(21002,64100,0,0,0,0,25070,5910000,7|0x10,24242,0,0,0,0,0,0,0,'25070 - Say'),
+(21002,68100,0,20306,0,0,25070,5910000,7|0x10,0,0,0,0,0,0,0,0,'25070 - Random Say'),
 (21003,1,31,25079,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25079 - terminate if not found'),
 (21003,10,31,25077,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25077 - terminate if not found'),
 (21003,20,31,25070,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25077 - terminate if not found'),
-(21003,44,20,2,1,0,25079,100,7,0,0,0,0,0,0,0,0,'25079 - Path 1'),
-(21003,55000,20,2,2,0,25079,100,7,0,0,0,0,0,0,0,0,'25079 - Path 2'),
-(21003,59000,20,2,0,0,25077,100,7,0,0,0,0,0,0,0,0,'25077 - waypoints'),
+(21003,44,20,2,1,0,25079,5910013,7|0x10,0,0,0,0,0,0,0,0,'25079 - Path 1'),
+(21003,55000,20,2,2,0,25079,5910013,7|0x10,0,0,0,0,0,0,0,0,'25079 - Path 2'),
+(21003,59000,20,2,0,0,25077,5910001,7|0x10,0,0,0,0,0,0,0,0,'25077 - waypoints'),
 (21003,60002,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,1.274,'9566 - move'),
 (21003,60100,1,1,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'9566 - emote'),
 (21003,60900,0,0,0,0,0,0,0x04,22080,0,0,0,0,0,0,0,'9566 - Say'),
-(21003,61000,1,396,0,0,25077,100,7,0,0,0,0,0,0,0,0,'25079 - emote'),
-(21003,61100,0,0,0,0,25077,100,7,24237,24238,24239,24240,0,0,0,0,'25077 - Random Say'),
-(21003,63000,20,2,0,0,25070,100,7,0,0,0,0,0,0,0,0,'25077 - waypoints'),
-(21003,64100,0,0,0,0,25070,100,7,24242,0,0,0,0,0,0,0,'25070 - Say'),
-(21003,68100,0,20306,0,0,25070,100,7,0,0,0,0,0,0,0,0,'25070 - Random Say'),
+(21003,61000,1,396,0,0,25077,5910001,7|0x10,0,0,0,0,0,0,0,0,'25079 - emote'),
+(21003,61100,0,0,0,0,25077,5910001,7|0x10,24237,24238,24239,24240,0,0,0,0,'25077 - Random Say'),
+(21003,63000,20,2,0,0,25070,5910000,7|0x10,0,0,0,0,0,0,0,0,'25077 - waypoints'),
+(21003,64100,0,0,0,0,25070,5910000,7|0x10,24242,0,0,0,0,0,0,0,'25070 - Say'),
+(21003,68100,0,20306,0,0,25070,5910000,7|0x10,0,0,0,0,0,0,0,0,'25070 - Random Say'),
 (21003,70000,3,0,0,0,0,0,0x04,0,0,0,0,0,0,0,4.345870018005371093,'9566 - move');
 UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (25079,25077,25070);
 DELETE FROM dbscripts_on_relay WHERE id IN (21004,21005);
@@ -29380,22 +29379,22 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 (21004,15020,31,25081,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25081 - terminate if not found'),
 (21004,15030,31,24931,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 24931 - terminate if not found'),
 (21004,15040,31,24927,200,0,0,0,0,0,0,0,0,0,0,0,0,'search for 24927 - terminate if not found'),
-(21004,16000,28,0,0,0,25080,200,7,0,0,0,0,0,0,0,0,'25080 - STATE_STAND'),
-(21004,16001,28,0,0,0,25081,200,7,0,0,0,0,0,0,0,0,'25081 - STATE_STAND'),
-(21004,16002,20,2,0,0,24931,200,7,0,0,0,0,0,0,0,0,'24931 - waypoints'),
-(21004,16003,20,2,0,0,24927,200,7,0,0,0,0,0,0,0,0,'25081 - waypoints'),
-(21004,77000,28,1,0,0,25080,200,7,0,0,0,0,0,0,0,0,'25080 - STATE_SIT'),
-(21004,77001,28,1,0,0,25081,200,7,0,0,0,0,0,0,0,0,'25081 - STATE_SIT'),
+(21004,16000,28,0,0,0,25080,5890007,7|0x10,0,0,0,0,0,0,0,0,'25080 - STATE_STAND'),
+(21004,16001,28,0,0,0,25081,5890002,7|0x10,0,0,0,0,0,0,0,0,'25081 - STATE_STAND'),
+(21004,16002,20,2,0,0,24931,5890008,7|0x10,0,0,0,0,0,0,0,0,'24931 - waypoints'),
+(21004,16003,20,2,0,0,24927,5890004,7|0x10,0,0,0,0,0,0,0,0,'25081 - waypoints'),
+(21004,77000,28,1,0,0,25080,5890007,7|0x10,0,0,0,0,0,0,0,0,'25080 - STATE_SIT'),
+(21004,77001,28,1,0,0,25081,5890002,7|0x10,0,0,0,0,0,0,0,0,'25081 - STATE_SIT'),
 (21005,1,31,25080,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25080 - terminate if not found'),
 (21005,20,31,25081,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 25081 - terminate if not found'),
 (21005,30,31,24931,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 24931 - terminate if not found'),
 (21005,40,31,24927,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 24927 - terminate if not found'),
-(21005,1000,28,0,0,0,25080,100,7,0,0,0,0,0,0,0,0,'25080 - STATE_STAND'),
-(21005,1001,28,0,0,0,25081,100,7,0,0,0,0,0,0,0,0,'25081 - STATE_STAND'),
-(21005,1002,20,2,0,0,24931,100,7,0,0,0,0,0,0,0,0,'24931 - waypoints'),
-(21005,1003,20,2,0,0,24927,100,7,0,0,0,0,0,0,0,0,'25081 - waypoints'),
-(21005,62000,28,1,0,0,25080,100,7,0,0,0,0,0,0,0,0,'25080 - STATE_SIT'),
-(21005,62001,28,1,0,0,25081,100,7,0,0,0,0,0,0,0,0,'25081 - STATE_SIT');
+(21005,1000,28,0,0,0,25080,5890007,7|0x10,0,0,0,0,0,0,0,0,'25080 - STATE_STAND'),
+(21005,1001,28,0,0,0,25081,5890002,7|0x10,0,0,0,0,0,0,0,0,'25081 - STATE_STAND'),
+(21005,1002,20,2,0,0,24931,5890008,7|0x10,0,0,0,0,0,0,0,0,'24931 - waypoints'),
+(21005,1003,20,2,0,0,24927,5890004,7|0x10,0,0,0,0,0,0,0,0,'25081 - waypoints'),
+(21005,62000,28,1,0,0,25080,5890007,7|0x10,0,0,0,0,0,0,0,0,'25080 - STATE_SIT'),
+(21005,62001,28,1,0,0,25081,5890002,7|0x10,0,0,0,0,0,0,0,0,'25081 - STATE_SIT');
 UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (25080,25081,24931,24927,24929);
 DELETE FROM creature_movement_template WHERE Entry = 31715;
 INSERT INTO creature_movement_template (`Entry`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
@@ -29407,24 +29406,24 @@ INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalo
 DELETE FROM dbscripts_on_relay WHERE id IN (21006,21007);
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (21006,1,31,31715,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 31715 - terminate if not found'),
-(21006,510,20,2,0,0,31715,100,7,0,0,0,0,0,0,0,0,'31715 - waypoints'),
+(21006,510,20,2,0,0,31715,6100003,7|0x10,0,0,0,0,0,0,0,0,'31715 - waypoints'),
 (21007,1,31,31715,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 31715 - terminate if not found'),
-(21007,510,20,2,0,0,31715,100,7,0,0,0,0,0,0,0,0,'31715 - waypoints');
+(21007,510,20,2,0,0,31715,6100003,7|0x10,0,0,0,0,0,0,0,0,'31715 - waypoints');
 DELETE FROM dbscripts_on_relay WHERE id IN (21008,21009);
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (21008,1,31,31727,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 31727 - terminate if not found'),
-(21008,100,20,2,0,0,31727,100,7,0,0,0,0,0,0,0,0,'31727 - waypoints'),
+(21008,100,20,2,0,0,31727,6130006,7|0x10,0,0,0,0,0,0,0,0,'31727 - waypoints'),
 (21009,1,31,31727,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 31727 - terminate if not found'),
-(21009,100,20,2,0,0,31727,100,7,0,0,0,0,0,0,0,0,'31727 - waypoints');
+(21009,100,20,2,0,0,31727,6130006,7|0x10,0,0,0,0,0,0,0,0,'31727 - waypoints');
 UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (31715,31727);
 DELETE FROM dbscripts_on_relay WHERE id IN (21010,21011);
 INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (21010,1,31,34715,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 34715 - terminate if not found'),
-(21010,100,0,0,0,0,34715,100,7,35030,0,0,0,0,0,0,0,'34715 - Say'),
-(21010,60000,0,0,0,0,34715,100,7,35031,0,0,0,0,0,0,0,'34715 - Say'),
+(21010,100,0,0,0,0,34715,6470007,7|0x10,35030,0,0,0,0,0,0,0,'34715 - Say'),
+(21010,60000,0,0,0,0,34715,6470007,7|0x10,35031,0,0,0,0,0,0,0,'34715 - Say'),
 (21011,1,31,34715,100,0,0,0,0,0,0,0,0,0,0,0,0,'search for 34715 - terminate if not found'),
-(21011,100,0,0,0,0,34715,100,7,35032,0,0,0,0,0,0,0,'34715 - Say'),
-(21011,60000,0,0,0,0,34715,100,7,35033,0,0,0,0,0,0,0,'34715 - Say');
+(21011,100,0,0,0,0,34715,6470007,7|0x10,35032,0,0,0,0,0,0,0,'34715 - Say'),
+(21011,60000,0,0,0,0,34715,6470007,7|0x10,35033,0,0,0,0,0,0,0,'34715 - Say');
 UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (34715,34717);
 
 UPDATE `creature_template_addon` SET `auras` = '10848 17622' WHERE `entry` = 11285;
@@ -29565,14 +29564,14 @@ DELETE FROM dbscripts_on_event WHERE id IN (16401,16402);
 INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (16401,1,16,5495,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - BoatDockingWarning'),
 (16401,1000,16,5154,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - ShipDocked'),
-(16401,2,20,2,1,0,25050,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Captain Galind Windsword 25050 - Path 1'),
-(16401,3,20,2,1,0,25055,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Frostnight 25055 - Path 1'),
-(16401,4,20,2,1,0,25054,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Keenstar 25054 - Path 1'),
+(16401,2,20,2,1,0,25050,5860002,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Captain Galind Windsword 25050 - Path 1'),
+(16401,3,20,2,1,0,25055,5860007,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Frostnight 25055 - Path 1'),
+(16401,4,20,2,1,0,25054,5860006,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Keenstar 25054 - Path 1'),
 (16402,1,16,5495,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - BoatDockingWarning'),
 (16402,1000,16,5154,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - ShipDocked'),
-(16402,2,20,2,2,0,25050,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Captain Galind Windsword 25050 - Path 2'),
-(16402,3,20,2,2,0,25055,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Frostnight 25055 - Path 2'),
-(16402,4,20,2,2,0,25054,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Keenstar 25054 - Path 2');
+(16402,2,20,2,2,0,25050,5860002,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Captain Galind Windsword 25050 - Path 2'),
+(16402,3,20,2,2,0,25055,5860007,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Frostnight 25055 - Path 2'),
+(16402,4,20,2,2,0,25054,5860006,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Keenstar 25054 - Path 2');
 UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (25050,25053,25054,25055,25056);
 UPDATE creature SET position_x = 32.403076, position_y = -0.30078125, position_z = 16.680683, movementtype = 2, spawndist = 0 WHERE id = 24456;
 UPDATE creature_template SET movementtype = 2 WHERE Entry = 24456;
@@ -29755,14 +29754,14 @@ DELETE FROM dbscripts_on_event WHERE id IN (16401,16402);
 INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (16395,1,16,5495,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - BoatDockingWarning'),
 (16395,1000,16,5154,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - ShipDocked'),
-(16395,2,20,2,1,0,24996,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Bladewhisper 24996 - Path 1'),
-(16395,3,20,2,1,0,24997,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Swiftstar 24997 - Path 1'),
-(16395,4,20,2,1,0,25007,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Evenmist 25007 - Path 1'),
+(16395,2,20,2,1,0,24996,5820001,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Bladewhisper 24996 - Path 1'),
+(16395,3,20,2,1,0,24997,5820003,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Swiftstar 24997 - Path 1'),
+(16395,4,20,2,1,0,25007,5820004,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Evenmist 25007 - Path 1'),
 (16396,1,16,5495,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - BoatDockingWarning'),
 (16396,1000,16,5154,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - ShipDocked'),
-(16396,2,20,2,2,0,24996,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Bladewhisper 24996 - Path 2'),
-(16396,3,20,2,2,0,24997,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Swiftstar 24997 - Path 2'),
-(16396,4,20,2,2,0,25007,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Evenmist 25007 - Path 2');
+(16396,2,20,2,2,0,24996,5820001,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Bladewhisper 24996 - Path 2'),
+(16396,3,20,2,2,0,24997,5820003,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Swiftstar 24997 - Path 2'),
+(16396,4,20,2,2,0,25007,5820004,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Evenmist 25007 - Path 2');
 UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (24996,24997);
 DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id IN (24841));
 DELETE FROM creature_template_addon WHERE entry IN (24841);
@@ -30039,7 +30038,8 @@ INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalo
 (2483502,1100,0,0,0,0,0,0,0x04,23943,0,0,0,0,0,0,0,''),
 (2483503,2000,1,22,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'emote'),
 (2483503,2200,0,0,0,0,0,0,0x04,23944,0,0,0,0,0,0,0,''),
-(2483503,5000,20,2,0,0,24833,70,7,0,0,0,0,0,0,0,0,'budy wps');
+(2483503,4700,31,24833,80,0,0,0,0,0,0,0,0,0,0,0,0,'search for 24833'),
+(2483503,5000,20,2,0,0,24833,5840000,7|0x10,0,0,0,0,0,0,0,0,'buddy wps');
 DELETE FROM creature_addon WHERE guid IN (SELECT guid FROM creature WHERE id IN (24837));
 DELETE FROM creature_template_addon WHERE entry IN (24837);
 INSERT INTO creature_template_addon (entry, mount, stand_state, sheath_state, pvp_flags, emote, moveflags, auras) VALUES (24837,0,0,0,0,0,0,NULL);
@@ -30176,10 +30176,10 @@ DELETE FROM dbscripts_on_event WHERE id IN (10301,10302);
 INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (10301,1,16,5495,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - BoatDockingWarning'),
 (10301,1000,16,5154,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - ShipDocked'),
-(10301,2000,20,2,1,0,24839,200,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Sailor Wicks 24839 - Path 1'),
+(10301,2000,20,2,1,0,24839,5840006,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Sailor Wicks 24839 - Path 1'),
 (10302,1,16,5495,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - BoatDockingWarning'),
 (10302,1000,16,5154,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - ShipDocked'),
-(10302,2000,20,2,2,0,24839,200,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Sailor Wicks 24839 - Path 2');
+(10302,2000,20,2,2,0,24839,5840006,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Sailor Wicks 24839 - Path 2');
 UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (24841,24842,24836,24840,24839,24838,24835,24837,24833);
 UPDATE creature SET position_x = -21.659668, position_y = 3.2202148, position_z = 4.3174033, orientation = 0.1396265, movementtype = 0, spawndist = 0 WHERE id = 25024;
 UPDATE creature_template SET movementtype = 0 WHERE Entry = 25024;
@@ -30330,16 +30330,16 @@ DELETE FROM dbscripts_on_event WHERE id IN (16399,16400);
 INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (16399,1,16,5495,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - BoatDockingWarning'),
 (16399,1000,16,5154,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - ShipDocked'),
-(16399,2000,20,2,1,0,25021,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Moonblade 25021 - Path 1'),
-(16399,2001,20,2,1,0,25024,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Softsong 25024 - Path 1'),
-(16399,2002,20,2,1,0,25025,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Captain Idrilae 25025 - Path 1'),
-(16399,2003,20,2,1,0,25022,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Stillwake 25022 - Path 1'),
+(16399,2000,20,2,1,0,25021,5870004,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Moonblade 25021 - Path 1'),
+(16399,2001,20,2,1,0,25024,5870007,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Softsong 25024 - Path 1'),
+(16399,2002,20,2,1,0,25025,5870008,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Captain Idrilae 25025 - Path 1'),
+(16399,2003,20,2,1,0,25022,5870005,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Stillwake 25022 - Path 1'),
 (16400,1,16,5495,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - BoatDockingWarning'),
 (16400,1000,16,5154,16,0,0,0,0,0,0,0,0,0,0,0,0,'Transports (Ships) - Play - ShipDocked'),
-(16400,2000,20,2,2,0,25021,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Moonblade 25021 - Path 2'),
-(16400,2001,20,2,2,0,25024,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Softsong 25024 - Path 2'),
-(16400,2002,20,2,2,0,25025,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Captain Idrilae 25025 - Path 2'),
-(16400,2003,20,2,2,0,25022,100,7,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Everwatch 25023 - Path 2');
+(16400,2000,20,2,2,0,25021,5870004,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Moonblade 25021 - Path 2'),
+(16400,2001,20,2,2,0,25024,5870007,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Softsong 25024 - Path 2'),
+(16400,2002,20,2,2,0,25025,5870008,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Captain Idrilae 25025 - Path 2'),
+(16400,2003,20,2,2,0,25022,5870005,7|0x10,0,0,0,0,0,0,0,0,'Transports (Ships) - Mariner Everwatch 25023 - Path 2');
 UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (25021,25022,25024,25025);
 
 UPDATE creature_template SET EquipmentTemplateId = 963 WHERE Entry = 15184;
@@ -30643,5 +30643,481 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 764 FROM `creature` WHERE `guid` IN (45173);
 REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 765 FROM `creature` WHERE `guid` IN (45173);
 UPDATE `creature` SET `id` = 0 WHERE `guid` IN (45173);
+
+UPDATE `creature_template` SET `DamageSchool`=0 WHERE `entry`=8908;
+
+UPDATE creature_template SET SpeedWalk = 1.2 WHERE entry = 10820;
+
+UPDATE `creature_template` SET `PickpocketLootId` = '0' WHERE `Entry` =6489;
+DELETE FROM `pickpocketing_loot_template` WHERE `entry` = 6489;
+
+UPDATE creature SET position_x = -2.490356, position_y = -2.825684, position_z = 9.374964, orientation = 3.071779, movementtype = 2, spawndist = 0 WHERE id = 31759;
+UPDATE creature SET movementtype = 2, spawndist = 0 WHERE id = 31759;
+UPDATE creature_template SET movementtype = 2 WHERE Entry = 31759;
+DELETE FROM creature_movement_template WHERE Entry = 31759;
+INSERT INTO creature_movement_template (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(31759,0,1,-2.490356,-2.825684,9.374964,3.071779,35000,3175901),
+(31759,0,2,-1.658081,-3.409668,9.377641,100,0,0),
+(31759,0,3,-1.890259,-5.376465,9.378425,100,0,0),
+(31759,0,4,-8.543579,-7.175293,9.448003,100,0,0),
+(31759,0,5,-9.170044,-9.22168,9.445227,100,35000,3175901),
+(31759,0,6,-11.002441,-6.930664,9.534396,100,0,0),
+(31759,0,7,-14.977417,-2.291504,9.7870245,100,0,0),
+(31759,0,8,-14.817749,2.4892578,9.750464,100,0,0),
+(31759,0,9,-11.277954,4.709961,9.584112,100,0,0),
+(31759,0,10,-8.142334,3.1704102,9.440093,100,0,0),
+(31759,0,11,-6.886963,3.130371,9.382437,100,35000,3175901),
+(31759,0,12,-8.180908,3.992676,9.435935,100,0,0),
+(31759,0,13,-7.134033,6.426758,9.418909,100,0,0),
+(31759,0,14,-2.007568,5.943848,9.369967,100,0,0),
+(31759,0,15,-0.341430, 2.771484,9.376765,100,0,0),
+(31759,0,16,-1.004395,-1.508789,9.378045,100,0,0),
+(31759,0,17,-2.490356,-2.825684,9.374964,100,0,0);
+DELETE FROM dbscripts_on_creature_movement WHERE id = 3175901;
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(3175901,1000,1,69,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'emote'),
+(3175901,33000,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'reset emote');
+UPDATE creature SET position_x = -24.40295, position_y = 1.061523, position_z = 11.79708, orientation = 3.001966, movementtype = 2, spawndist = 0 WHERE id = 31760;
+UPDATE creature SET movementtype = 2, spawndist = 0 WHERE id = 31760;
+UPDATE creature_template SET movementtype = 2 WHERE Entry = 31760;
+DELETE FROM creature_movement_template WHERE Entry = 31760;
+INSERT INTO creature_movement_template (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(31760,0,1,-24.40295,1.061523,11.79708,3.001966,35000,3176001),
+(31760,0,2,-24.34155,-1.495605,11.79064,100,0,0),
+(31760,0,3,-24.34155,-1.495605,11.79064,3.228859,35000,3176001),
+(31760,0,4,-24.40295,1.061523,11.79708,100,0,0);
+DELETE FROM dbscripts_on_creature_movement WHERE id = 3176001;
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(3176001,1000,1,69,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'emote'),
+(3176001,33000,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'reset emote');
+UPDATE creature SET position_x = 18.2179, position_y = 4.788574, position_z = 9.845109, orientation = 1.023, movementtype = 2, spawndist = 0 WHERE id = 31761;
+UPDATE creature SET movementtype = 2, spawndist = 0 WHERE id = 31761;
+UPDATE creature_template SET movementtype = 2 WHERE Entry = 31761;
+DELETE FROM creature_movement_template WHERE Entry = 31761;
+INSERT INTO creature_movement_template (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(31761,0,1 ,18.2179,4.788574,9.845109,1.023,15000,3176101),
+(31761,0,2 ,17.14832,3.761719,9.827729,100,0,0),
+(31761,0,3 ,15.19043,-0.3828125,9.831963,100,0,0),
+(31761,0,4 ,12.77795,-4.617188,9.647501,100,0,0),
+(31761,0,5 ,14.17578,-7.425293,9.675255,100,0,0),
+(31761,0,6 ,16.22485,-7.749023,9.737128,100,0,0),
+(31761,0,7 ,16.4986,-7.947021,9.270819,100,0,0),
+(31761,0,8 ,17.77258,-7.644531,9.80452,100,0,0),
+(31761,0,9 ,17.77258,-7.644531,9.80452,0.7504916,15000,3176101),
+(31761,0,10,16.4986,-7.947021,9.270819,100,0,0),
+(31761,0,11,12.12354,-5.75,9.614675,100,0,0),
+(31761,0,12,14.86902,-1.026367,9.805464,100,0,0),
+(31761,0,13,15.189,0.6604372,9.273306,100,0,0),
+(31761,0,14,15.689,1.660437,9.273306,100,0,0),
+(31761,0,15,17.25049,3.98291,9.827415,100,0,0),
+(31761,0,16,17.65341,3.862958,9.334635,100,0,0);
+DELETE FROM dbscripts_on_creature_movement WHERE id = 3176101;
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(3176101,1000,28,8,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'STAND_STATE_KNEEL'),
+(3176101,13000,28,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'STAND_STATE_STAND');
+UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (31759,31760,31761);
+UPDATE creature SET position_x = 0.919363, position_y = 8.75723, position_z = 9.436611, orientation = 1.2566371, movementtype = 2, spawndist = 0 WHERE id = 31791;
+UPDATE creature SET movementtype = 2, spawndist = 0 WHERE id = 31791;
+UPDATE creature_template SET movementtype = 2 WHERE Entry = 31791;
+DELETE FROM creature_movement_template WHERE Entry = 31791;
+INSERT INTO creature_movement_template (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(31791,0,1,0.919363,8.75723,9.436611,1.2566371,35000,3179101),
+(31791,0,2,-4.5058594,6.759033,9.362606,100,0,0),
+(31791,0,3,-11.201172,6.857422,9.561963,100,0,0),
+(31791,0,4,-11.5078125,8.579834,9.557503,100,35000,3179101),
+(31791,0,5,-13.84668,6.2470703,9.663048,100,0,0),
+(31791,0,6,-15.605469,0.62939453,9.827464,100,0,0),
+(31791,0,7,-13.791016,-4.8431396,9.686223,100,0,0),
+(31791,0,8,-11.525391,-6.2677,9.561247,100,0,0),
+(31791,0,9,-11.457031,-9.02002,9.504402,100,35000,3179101),
+(31791,0,10,-9.043945,-7.2437744,9.46423,100,0,0),
+(31791,0,11,-2.6914062,-5.8936768,9.354053,100,0,0),
+(31791,0,12,0.40625,-6.5654297,9.366035,100,0,0),
+(31791,0,13,1.1523438,-8.733276,9.362343,100,35000,3179101);
+DELETE FROM dbscripts_on_creature_movement WHERE id = 3179101;
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(3179101,1000,1,69,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'emote'),
+(3179101,29000,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'reset emote');
+UPDATE creature SET position_x = -2.034421, position_y = -2.630089, position_z = 9.445791, orientation = 3.159046, movementtype = 2, spawndist = 0 WHERE id = 31792;
+UPDATE creature SET movementtype = 2, spawndist = 0 WHERE id = 31792;
+UPDATE creature_template SET movementtype = 2 WHERE Entry = 31792;
+DELETE FROM creature_movement_template WHERE Entry = 31792;
+INSERT INTO creature_movement_template (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(31792,0,1,-2.034421,-2.630089,9.445791,3.159046,40000,3179201),
+(31792,0,2,-1.5722656,-1.4178467,9.37644,100,0,0),
+(31792,0,3,-2.024414,0.09069824,9.374132,100,0,0),
+(31792,0,4,-4.767578,0.10021973,9.366688,100,0,0),
+(31792,0,5,-4.767578,0.10021973,9.366688,4.8345618,40000,3179201),
+(31792,0,6,-4.767578,0.10021973,9.366688,1.60570,33000,3179202),
+(31792,0,7,-3.9606934,0.14746094,9.368841,100,0,0),
+(31792,0,8,-2.0324707,0.061035156,9.374129,100,0,0),
+(31792,0,9,-2.034421,-2.630089,9.445791,100,0,0);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (3179201,3179202);
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(3179201,1000,1,69,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'emote'),
+(3179201,36000,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'reset emote'),
+(3179202,1000,1,69,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'emote'),
+(3179202,30000,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'reset emote');
+UPDATE creature SET position_x = 17.266602, position_y = 3.7319336, position_z = 9.831668, orientation = 0.83775806, movementtype = 2, spawndist = 0 WHERE id = 31793;
+UPDATE creature SET movementtype = 2, spawndist = 0 WHERE id = 31793;
+UPDATE creature_template SET movementtype = 2 WHERE Entry = 31793;
+DELETE FROM creature_movement_template WHERE Entry = 31793;
+INSERT INTO creature_movement_template (`Entry`, `PathId`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(31793,0,1,17.266602,3.7319336,9.831668,0.83775806,25000,3179301),
+(31793,0,2,16.766602,3.0756836,9.828385,100,0,0),
+(31793,0,3,15.944336,0.00012207031,9.870412,100,0,0),
+(31793,0,4,16.199219,-3.0101318,9.802833,100,0,0),
+(31793,0,5,17.145508,-3.921753,9.813026,100,25000,3179301),
+(31793,0,6,16.706055,-3.6723633,9.8040905,100,0,0),
+(31793,0,7,15.845703,1.2147217,9.84006,100,0,0),
+(31793,0,8,17.266602,3.7319336,9.831668,100,0,0);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (3179301);
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(3179301,1000,1,69,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'emote'),
+(3179301,20000,1,0,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'reset emote');
+UPDATE creature_template SET ExtraFlags = ExtraFlags|4096 WHERE entry IN (31791,31792,31793);
+
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=1029;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=4228;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=4229;
+UPDATE `creature_model_info` SET `bounding_radius`=0.85 WHERE `modelid`=4480;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=4672;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=4673;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=4674;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=5827;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=6128;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6194;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=6388;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=6958;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=6960;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6961;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=6962;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=6964;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=6965;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=6966;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=7762;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=7872;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2354 WHERE `modelid`=7874;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=8702;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=9751;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=9752;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=10364;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=10365;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10640;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=10821;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10822;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=10823;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=10857;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=11014;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=11015;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=11016;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=11018;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=11019;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=11020;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=11022;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=11023;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=11026;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=11119;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=11304;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=11325;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=11669;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214 WHERE `modelid`=11672;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=12070;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=12071;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=12072;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=12082;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9747 WHERE `modelid`=12083;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8725 WHERE `modelid`=12084;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=13230;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=13231;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13250;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13251;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13252;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13255;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13256;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13257;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13267;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13268;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13269;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13271;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13272;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13273;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=13287;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=13288;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=13289;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=13291;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=13292;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=13293;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=13295;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=13296;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=13297;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=13302;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9747 WHERE `modelid`=13303;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8725 WHERE `modelid`=13304;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=13307;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9747 WHERE `modelid`=13308;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13352;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13353;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13354;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=13359;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=13360;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=13366;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9747 WHERE `modelid`=13367;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8725 WHERE `modelid`=13368;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13372;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13373;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13374;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=13376;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=13377;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=13378;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13380;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13381;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13382;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=13412;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=13413;
+UPDATE `creature_model_info` SET `bounding_radius`=0.372 WHERE `modelid`=13414;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13533;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13534;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13547;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3519 WHERE `modelid`=13549;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=13550;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=13557;
+UPDATE `creature_model_info` SET `bounding_radius`=0.236 WHERE `modelid`=13559;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=13560;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=13561;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9747 WHERE `modelid`=13565;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8725 WHERE `modelid`=13566;
+UPDATE `creature_model_info` SET `bounding_radius`=0.9747 WHERE `modelid`=13569;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8725 WHERE `modelid`=13570;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13633;
+UPDATE `creature_model_info` SET `bounding_radius`=0.389 WHERE `modelid`=13634;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=13635;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13637;
+UPDATE `creature_model_info` SET `bounding_radius`=0.389 WHERE `modelid`=13638;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=13639;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13641;
+UPDATE `creature_model_info` SET `bounding_radius`=0.389 WHERE `modelid`=13642;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=13643;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=13775;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13790;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13791;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13792;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13804;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13805;
+UPDATE `creature_model_info` SET `bounding_radius`=0.347 WHERE `modelid`=13806;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=13890;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=13894;
+UPDATE `creature_model_info` SET `bounding_radius`=0.2568 WHERE `modelid`=14394;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=15733;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3328 WHERE `modelid`=16161;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=16179;
+UPDATE `creature_model_info` SET `bounding_radius`=0.459 WHERE `modelid`=16180;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=16230;
+UPDATE `creature_model_info` SET `bounding_radius`=0.208 WHERE `modelid`=16232;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=16238;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=16239;
+UPDATE `creature_model_info` SET `bounding_radius`=0.383 WHERE `modelid`=16240;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306 WHERE `modelid`=16609;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=1029;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4228;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4229;
+UPDATE `creature_model_info` SET `combat_reach`=1.0625 WHERE `modelid`=4480;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4672;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4673;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4674;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=5827;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6128;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6194;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6388;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6958;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6960;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6961;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6962;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6964;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6965;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6966;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=7762;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=7872;
+UPDATE `creature_model_info` SET `combat_reach`=1.65 WHERE `modelid`=7874;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=8702;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=9751;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=9752;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10364;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10365;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10640;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10821;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10822;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10823;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10857;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11014;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11015;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11016;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11018;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11019;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11020;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11022;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11023;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11026;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11119;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11304;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11325;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11669;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11672;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=12070;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=12071;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=12072;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=12082;
+UPDATE `creature_model_info` SET `combat_reach`=4.05 WHERE `modelid`=12083;
+UPDATE `creature_model_info` SET `combat_reach`=3.75 WHERE `modelid`=12084;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13230;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13231;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13250;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13251;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13252;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13255;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13256;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13257;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13267;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13268;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13269;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13271;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13272;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13273;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13287;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13288;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13289;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13291;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13292;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13293;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13295;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13296;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13297;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13302;
+UPDATE `creature_model_info` SET `combat_reach`=4.05 WHERE `modelid`=13303;
+UPDATE `creature_model_info` SET `combat_reach`=3.75 WHERE `modelid`=13304;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13307;
+UPDATE `creature_model_info` SET `combat_reach`=4.05 WHERE `modelid`=13308;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13352;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13353;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13354;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13359;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13360;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13366;
+UPDATE `creature_model_info` SET `combat_reach`=4.05 WHERE `modelid`=13367;
+UPDATE `creature_model_info` SET `combat_reach`=3.75 WHERE `modelid`=13368;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13372;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13373;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13374;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13376;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13377;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13378;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13380;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13381;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13382;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13412;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13413;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13414;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13533;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13534;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13547;
+UPDATE `creature_model_info` SET `combat_reach`=1.725 WHERE `modelid`=13549;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13550;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13557;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13559;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13560;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13561;
+UPDATE `creature_model_info` SET `combat_reach`=4.05 WHERE `modelid`=13565;
+UPDATE `creature_model_info` SET `combat_reach`=3.75 WHERE `modelid`=13566;
+UPDATE `creature_model_info` SET `combat_reach`=4.05 WHERE `modelid`=13569;
+UPDATE `creature_model_info` SET `combat_reach`=3.75 WHERE `modelid`=13570;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13633;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13634;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13635;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13637;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13638;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13639;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13641;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13642;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13643;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13775;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13790;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13791;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13792;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13804;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13805;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13806;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13890;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=13894;
+UPDATE `creature_model_info` SET `combat_reach`=1.8 WHERE `modelid`=14394;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=15733;
+UPDATE `creature_model_info` SET `combat_reach`=2.4 WHERE `modelid`=16161;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=16179;
+UPDATE `creature_model_info` SET `combat_reach`=2.25 WHERE `modelid`=16180;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=16230;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=16232;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=16238;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=16239;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=16240;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=16609;
+
+UPDATE `creature_model_info` SET `bounding_radius`=0.4164, `combat_reach`=1.8 WHERE `modelid`=15735;
+UPDATE `creature_model_info` SET `bounding_radius`=0.306, `combat_reach`=1.5 WHERE `modelid`=16023;
+UPDATE `creature_model_info` SET `bounding_radius`=0.459, `combat_reach`=2.25 WHERE `modelid`=15732;
+UPDATE `creature_model_info` SET `bounding_radius`=0.3672, `combat_reach`=1.8 WHERE `modelid`=15737;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214,`combat_reach`=1.5 WHERE `modelid`=1643;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214,`combat_reach`=1.5 WHERE `modelid`=6546;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214,`combat_reach`=1.5 WHERE `modelid`=6548;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214,`combat_reach`=1.5 WHERE `modelid`=7922;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214,`combat_reach`=1.5 WHERE `modelid`=10199;
+UPDATE `creature_model_info` SET `bounding_radius`=0.214,`combat_reach`=1.5 WHERE `modelid`=11671;
+UPDATE `creature_model_info` SET `bounding_radius`=1,`combat_reach`=10 WHERE `modelid`=15412;
+UPDATE `creature_model_info` SET `bounding_radius`=1,`combat_reach`=10 WHERE `modelid`=15413;
+UPDATE `creature_model_info` SET `bounding_radius`=1,`combat_reach`=10 WHERE `modelid`=15414;
+UPDATE `creature_model_info` SET `bounding_radius`=1,`combat_reach`=10 WHERE `modelid`=15500;
+UPDATE `creature_model_info` SET `bounding_radius`=0.8725,`combat_reach`=3.75 WHERE `modelid`=15815;
+
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=317;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=3293;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4244;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4494;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4678;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4680;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4681;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4682;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4691;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=4731;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6547;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6549;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6630;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6631;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=6994;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=7604;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=9149;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=9754;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10379;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10381;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=10382;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11069;
+UPDATE `creature_model_info` SET `combat_reach`=2.5 WHERE `modelid`=11341;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11394;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=11668;
+UPDATE `creature_model_info` SET `combat_reach`=3.75 WHERE `modelid`=14699;
+UPDATE `creature_model_info` SET `combat_reach`=3 WHERE `modelid`=15269;
+UPDATE `creature_model_info` SET `combat_reach`=25 WHERE `modelid`=15555;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=15713;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=15749;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=15816;
+UPDATE `creature_model_info` SET `combat_reach`=4.05 WHERE `modelid`=15817;
+UPDATE `creature_model_info` SET `combat_reach`=1.95 WHERE `modelid`=15974;
+UPDATE `creature_model_info` SET `combat_reach`=1.625 WHERE `modelid`=15975;
+UPDATE `creature_model_info` SET `combat_reach`=4.455 WHERE `modelid`=15976;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=16135;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=16327;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=16328;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=16329;
+UPDATE `creature_model_info` SET `combat_reach`=1.5 WHERE `modelid`=16358;
+UPDATE `creature_model_info` SET `combat_reach`=2.25 WHERE `modelid`=16611;
+UPDATE `creature_model_info` SET `combat_reach`=2.25 WHERE `modelid`=16614;
+
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
