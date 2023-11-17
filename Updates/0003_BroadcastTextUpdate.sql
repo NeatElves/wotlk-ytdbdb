@@ -5945,3 +5945,17 @@ UPDATE broadcast_text SET ChatTypeId = 2 WHERE Id IN (28637);
 -- texts
 UPDATE broadcast_text SET ChatTypeId = 1 WHERE Id IN (10901,10902,10903);
 UPDATE broadcast_text SET ChatTypeId = 2 WHERE Id IN (10912,10913,10926,10933,10934,10922,10929);
+
+-- 5177_XT002_Deconstructor.sql
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15724 WHERE `Id`=33508;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15725 WHERE `Id`=33446;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15726 WHERE `Id`=33448;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15727 WHERE `Id`=33453;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15728 WHERE `Id`=33509;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15729 WHERE `Id`=33510;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15730 WHERE `Id`=33512;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15731 WHERE `Id`=33511;
+UPDATE `broadcast_text` SET `ChatTypeID`=3 WHERE `Id`=33447;
+UPDATE `broadcast_text` SET `ChatTypeID`=3 WHERE `Id`=33856;
+UPDATE `broadcast_text` SET `ChatTypeID`=3 WHERE `Id`=34023;
+UPDATE `broadcast_text` SET `ChatTypeID`=3 WHERE `Id`=33454;
