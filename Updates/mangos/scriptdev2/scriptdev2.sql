@@ -3270,9 +3270,9 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1001271','No!  What have I done?','0','1','0','0','18404','SAY_KAYLAAN_7'),
 ('-1001272','Light grant me strength!','0','1','0','0','18405','SAY_KAYLAAN_8'),
 ('-1001273','Oh, please!  This is sickening; I''m going to have to kill you all myself.','0','1','0','0','18406','SAY_SOCRETHAR_6'),
-('-1001274','Now you''re gonna get it good, $n!','0','0','0','0','1961','dashel stonefist SAY_STONEFIST_1'),
-('-1001275','Okay, okay! Enough fighting. No one else needs to get hurt.','0','0','0','0','1712','dashel stonefist SAY_STONEFIST_2'),
-('-1001276','It''s okay, boys. Back off. You''ve done enough. I''ll meet up with you later.','0','0','0','0','1713','dashel stonefist SAY_STONEFIST_3'),
+('-1001274','Now you''re gonna get it good, $N!','0','0','0','0','1961','dashel stonefist SAY_STONEFIST_1'),
+('-1001275','Okay, okay! Enough fighting. No one else needs to get hurt.','0','0','0','20','1712','dashel stonefist SAY_STONEFIST_2'),
+('-1001276','It''s okay, boys. Back off. You''ve done enough. I''ll meet up with you later.','0','0','0','1','1713','dashel stonefist SAY_STONEFIST_3'),
 ('-1001277','That could have gone better, $n.  Come, I have something for you.','0','4','0','0','19200','Ambassador Sunsorrow - During Lament of the Highborne script'),
 ('-1001278','Who calls me to this world?  The stars are not yet aligned... my powers fail me!  You will pay for this!','0','0','0','1','21639','Terokk SAY_SPAWN'),
 ('-1001279','Show me what you''re made of, $n!','0','6','0','1','21327','Terokk SAY_CHOSEN_ONE'),
@@ -4680,57 +4680,8 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1540206','Gakarah ma!','0','0','0','0','16699','Common Hellfire Orc Text');
 
 -- -1 542 000 BLOOD FURNACE
-INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1542000','Who dares interrupt--What is this; what have you done? You''ll ruin everything!','10164','1','0','0','15130','kelidan SAY_WAKE'),
-('-1542001','You mustn''t let him loose!','10166','1','0','0','17673','kelidan SAY_ADD_AGGRO_1'),
-('-1542002','Ignorant whelps!','10167','1','0','0','17674','kelidan SAY_ADD_AGGRO_2'),
-('-1542003','You fools! He''ll kill us all!','10168','1','0','0','17675','kelidan SAY_ADD_AGGRO_3'),
-('-1542004','Just as you deserve!','10169','1','0','0','17670','kelidan SAY_KILL_1'),
-('-1542005','Your friends will soon be joining you.','10170','1','0','0','17671','kelidan SAY_KILL_2'),
-('-1542006','Closer! Come closer... and burn!','10165','1','0','0','15132','kelidan SAY_NOVA'),
-('-1542007','Good...luck. You''ll need it.','10171','1','0','0','17672','kelidan SAY_DIE'),
-
-('-1542008','Come intruders....','0','1','0','0','14259','broggok SAY_AGGRO'),
-
-('-1542009','My work must not be interrupted!','10286','1','0','0','17679','the_maker SAY_AGGRO_1'),
-('-1542010','Perhaps I can find a use for you...','10287','1','0','0','17680','the_maker SAY_AGGRO_2'),
-('-1542011','Anger...hate... These are tools I can use.','10288','1','0','0','17681','the_maker SAY_AGGRO_3'),
-('-1542012','Let''s see what I can make of you!','10289','1','0','0','17683','the_maker SAY_KILL_1'),
-('-1542013','It is pointless to resist.','10290','1','0','0','17684','the_maker SAY_KILL_2'),
-('-1542014','Stay away from... Me!','10291','1','0','0','17685','the_maker SAY_DIE'),
-
-('-1542015','Kill them!','0','1','0','0','15115','broggok SAY_BROGGOK_INTRO');
 
 -- -1 543 000 HELLFIRE RAMPARTS
-INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1543000','Do you smell that? Fresh meat has somehow breached our citadel. Be wary of any intruders.','0','1','0','0','13999','gargolmar SAY_TAUNT'),
-('-1543001','Heal me! QUICKLY!','10329','1','0','0','17498','gargolmar SAY_HEAL'),
-('-1543002','Back off, pup!','10330','1','0','0','17499','gargolmar SAY_SURGE'),
-('-1543003','What have we here...?','10331','1','0','0','56502','gargolmar SAY_AGGRO_1'),
-('-1543004','Heh... this may hurt a little.','10332','1','0','0','17503','gargolmar SAY_AGGRO_2'),
-('-1543005','I''m gonna enjoy this.','10333','1','0','0','0','gargolmar SAY_AGGRO_3'),
-('-1543006','Say farewell!','10334','1','0','0','17500','gargolmar SAY_KILL_1'),
-('-1543007','Much too easy...','10335','1','0','0','17501','gargolmar SAY_KILL_2'),
-('-1543008','Hahah.. <cough> ..argh!','10336','1','0','0','0','gargolmar SAY_DIE'),
-
-('-1543009','You dare stand against me?!','10280','1','0','0','17634','omor SAY_AGGRO_1'),
-('-1543010','I will not be defeated!','10279','1','0','0','17633','omor SAY_AGGRO_2'),
-('-1543011','Your insolence will be your death.','10281','1','0','0','17635','omor SAY_AGGRO_3'),
-('-1543012','Achor-she-ki! Feast my pet! Eat your fill!','10277','1','0','0','17637','omor SAY_SUMMON'),
-('-1543013','A-Kreesh!','10278','1','0','0','17636','omor SAY_CURSE'),
-('-1543014','Die, weakling!','10282','1','0','0','17631','omor SAY_KILL_1'),
-('-1543015','It is... not over.','10284','1','0','0','17630','omor SAY_DIE'),
-('-1543016','I am victorious!','10283','1','0','0','17632','omor SAY_WIPE'),
-
-('-1543017','You have faced many challenges.... Pity they were all in vain! Soon your people will kneel to MY lord!','10292','1','0','0','13981','vazruden SAY_INTRO'),
-('-1543018','Your time is running out!','10294','1','0','0','17492','vazruden SAY_AGGRO1'),
-('-1543019','You are nothing! I answer a higher call....','10295','1','0','0','17493','vazruden SAY_AGGRO2'),
-('-1543020','The Dark Lord laughs at you!','10296','1','0','0','17494','vazruden SAY_AGGRO3'),
-('-1543021','Is there no one left to test me?','10293','1','0','0','17491','vazruden SAY_TAUNT'),
-('-1543022','It is over. Finished!','10297','1','0','0','17495','vazruden SAY_KILL1'),
-('-1543023','Your days are done!','10298','1','0','0','17496','vazruden SAY_KILL2'),
-('-1543024','My lord will be... the end of you all!','10299','1','0','0','17497','vazruden SAY_DEATH'),
-('-1543025','Nazan descends from the sky.','0','3','0','0','20472','vazruden EMOTE_DESCEND');
 
 -- -1 544 000 MAGTHERIDON'S LAIR
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
@@ -4764,16 +4715,6 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 
 -- -1 548 000 SERPENTSHRINE CAVERN
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1548000','I cannot allow you to interfere!','11289','1','0','0','20231','hydross SAY_AGGRO'),
-('-1548001','Better, much better.','11290','1','0','0','19607','hydross SAY_SWITCH_TO_CLEAN'),
-('-1548002','They have forced me to this...','11291','1','0','0','20235','hydross SAY_CLEAN_SLAY1'),
-('-1548003','I have no choice.','11292','1','0','0','0','hydross SAY_CLEAN_SLAY2'),
-('-1548004','I am... released...','11293','1','0','0','37993','hydross SAY_CLEAN_DEATH'),
-('-1548005','Aaghh, the poison...','11297','1','0','0','19606','hydross SAY_SWITCH_TO_CORRUPT'),
-('-1548006','I will purge you from this place.','11298','1','0','0','20233','hydross SAY_CORRUPT_SLAY1'),
-('-1548007','You are no better than they!','11299','1','0','0','20234','hydross SAY_CORRUPT_SLAY2'),
-('-1548008','You are the disease, not I','11300','1','0','0','20239','hydross SAY_CORRUPT_DEATH'),
-
 ('-1548009','Finally, my banishment ends!','11312','1','0','0','19596','leotheras SAY_AGGRO'),
 ('-1548010','Be gone, trifling elf.  I am in control now!','11304','1','0','0','19595','leotheras SAY_SWITCH_TO_DEMON'),
 ('-1548011','We all have our demons...','11305','1','0','0','19597','leotheras SAY_INNER_DEMONS'),
@@ -4828,59 +4769,6 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1548056','%s takes a deep breath!','0','3','0','0','20774','lurker below EMOTE_DEEP_BREATH');
 
 -- -1 550 000 THE EYE
-INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1550000','Alert! You are marked for extermination.','11213','1','0','0','20906','voidreaver SAY_AGGRO'),
-('-1550001','Extermination, successful.','11215','1','0','0','20908','voidreaver SAY_SLAY1'),
-('-1550002','Imbecile life form, no longer functional.','11216','1','0','0','20909','voidreaver SAY_SLAY2'),
-('-1550003','Threat neutralized.','11217','1','0','0','20910','voidreaver SAY_SLAY3'),
-('-1550004','Systems... shutting... d-o-w-n...','11214','1','0','0','20907','voidreaver SAY_DEATH'),
-('-1550005','Alternative measure commencing...','11218','1','0','0','20911','voidreaver SAY_POUNDING1'),
-('-1550006','Calculating force parameters...','11219','1','0','0','20912','voidreaver SAY_POUNDING2'),
-
-('-1550007','Tal anu''men no sin''dorei!','11134','1','0','0','20849','solarian SAY_AGGRO'),
-('-1550008','Ha ha ha! You are hopelessly outmatched!','11139','1','0','0','56464','solarian SAY_SUMMON1'),
-('-1550009','I will crush your delusions of grandeur!','11140','1','0','0','20855','solarian SAY_SUMMON2'),
-('-1550010','Your soul belongs to the Abyss!','11136','1','0','0','20851','solarian SAY_KILL1'),
-('-1550011','By the blood of the Highborne!','11137','1','0','0','20852','solarian SAY_KILL2'),
-('-1550012','For the Sunwell!','11138','1','0','0','20853','solarian SAY_KILL3'),
-('-1550013','The warmth of the sun... awaits.','11135','1','0','0','20850','solarian SAY_DEATH'),
-('-1550014','Enough of this!  Now I call upon the fury of the cosmos itself.','0','1','0','0','20372','solarian SAY_VOIDA'),
-('-1550015','I become ONE... with the VOID!','0','1','0','0','20373','solarian SAY_VOIDB'),
-
-('-1550016','Energy. Power. My people are addicted to it... a dependence made manifest after the Sunwell was destroyed. Welcome... to the future. A pity you are too late to stop it. No one can stop me now! Selama ashal''anore!','11256','1','0','0','20195','kaelthas SAY_INTRO note: was changed sometime after TBC'),
-('-1550017','Capernian will see to it that your stay here is a short one.','11257','1','0','0','19004','kaelthas SAY_INTRO_CAPERNIAN'),
-('-1550018','Well done, you have proven worthy to test your skills against my master engineer, Telonicus.','11258','1','0','0','19005','kaelthas SAY_INTRO_TELONICUS'),
-('-1550019','Let us see how your nerves hold up against the Darkener, Thaladred!','11259','1','0','0','19006','kaelthas SAY_INTRO_THALADRED'),
-('-1550020','You have persevered against some of my best advisors... but none can withstand the might of the Blood Hammer. Behold, Lord Sanguinar!','11260','1','0','0','19003','kaelthas SAY_INTRO_SANGUINAR'),
-('-1550021','As you see, I have many weapons in my arsenal....','11261','1','0','0','19053','kaelthas SAY_PHASE2_WEAPON'),
-('-1550022','Perhaps I underestimated you. It would be unfair to make you fight all four advisors at once, but... fair treatment was never shown to my people. I''m just returning the favor.','11262','1','0','0','19060','kaelthas SAY_PHASE3_ADVANCE'),
-('-1550023','Alas, sometimes one must take matters into one''s own hands. Balamore shanal!','11263','1','0','0','19195','kaelthas SAY_PHASE4_INTRO2'),
-('-1550024','I have not come this far to be stopped! The future I have planned will not be jeopardized! Now you will taste true power!!','11273','1','0','0','20208','kaelthas SAY_PHASE5_NUTS'),
-('-1550025','You will not prevail.','11270','1','0','0','20204','kaelthas SAY_SLAY1'),
-('-1550026','You gambled...and lost.','11271','1','0','0','20205','kaelthas SAY_SLAY2'),
-('-1550027','This was Child''s play.','11272','1','0','0','20206','kaelthas SAY_SLAY3'),
-('-1550028','Obey me.','11268','1','0','0','20202','kaelthas SAY_MINDCONTROL1'),
-('-1550029','Bow to my will.','11269','1','0','0','18259','kaelthas SAY_MINDCONTROL2'),
-('-1550030','Let us see how you fare when your world is turned upside down.','11264','1','0','0','20198','kaelthas SAY_GRAVITYLAPSE1'),
-('-1550031','Having trouble staying grounded?','11265','1','0','0','20199','kaelthas SAY_GRAVITYLAPSE2'),
-('-1550032','Anar''anel belore!','11267','1','0','0','20201','kaelthas SAY_SUMMON_PHOENIX1'),
-('-1550033','By the power of the sun!','11266','1','0','0','20200','kaelthas SAY_SUMMON_PHOENIX2'),
-('-1550034','For... Quel''...Thalas!','11274','1','0','0','20207','kaelthas SAY_DEATH'),
-
-('-1550035','Prepare yourselves!','11203','1','0','0','20905','thaladred SAY_THALADRED_AGGRO'),
-('-1550036','Forgive me, my prince! I have... failed.','11204','1','0','0','20904','thaladred SAY_THALADRED_DEATH'),
-('-1550037','%s sets eyes on $n!','0','2','0','0','11074','thaladred EMOTE_THALADRED_GAZE'),
-
-('-1550038','Blood for blood!','11152','1','0','0','20859','sanguinar SAY_SANGUINAR_AGGRO'),
-('-1550039','NO! I... will... not...','11153','1','0','0','20858','sanguinar SAY_SANGUINAR_DEATH'),
-
-('-1550040','The sin''dorei reign supreme!','11117','1','0','0','20847','capernian SAY_CAPERNIAN_AGGRO'),
-('-1550041','This is not over!','11118','1','0','0','29826','capernian SAY_CAPERNIAN_DEATH'),
-
-('-1550042','Anar''alah belore!','11157','1','0','0','20860','telonicus SAY_TELONICUS_AGGRO'),
-('-1550043','More perils... await...','11158','1','0','0','20861','telonicus SAY_TELONICUS_DEATH'),
-
-('-1550044','%s begins to cast Pyroblast!','0','3','0','0','20775','kaelthas EMOTE_PYROBLAST');
 
 -- -1 552 000 THE ARCATRAZ
 
@@ -4899,75 +4787,6 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 -- -1 558 000 AUCHENAI CRYPTS
 
 -- -1 560 000 ESCAPE FROM DURNHOLDE (OLD HILLSBRAD)
-INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
-('-1560000','Thrall! You didn''t really think you would escape did you? You and your allies shall answer to Blackmoore - after I''ve had my fun!','10406','0','0','1','15909','skarloc SAY_ENTER'),
-
-('-1560001','My magical power can turn back time to before Thrall''s death, but be careful. My power to manipulate time is limited.','0','0','0','0','16729','image of eronzion SAY_RESET_THRALL'),
-('-1560002','I have set back the flow of time just once more. If you fail to prevent Thrall''s death, then all is lost.','0','0','0','0','16731','image of eronzion SAY_RESET_THRALL_LAST'),
-
-('-1560003','What''s the meaning of this? GUARDS!','0','0','0','0','15891','armorer SAY_CALL_GUARDS'),
-('-1560004','All that you know... will be undone.','0','0','0','0','19537','infinite dragon SAY_INFINITE_AGGRO_1'),
-('-1560005','Let''s go.','0','0','0','0','15894','thrall hillsbrad SAY_TH_ARMORY2'),
-('-1560006','%s startles the horse with a fierce yell!','0','2','0','5','16499','thrall hillsbrad EMOTE_TH_STARTLE_HORSE'),
-('-1560007','I thought I saw something go into the barn.','0','0','0','0','15958','tarren mill lookout SAY_LOOKOUT_BARN_1'),
-('-1560008','I didn''t see anything.','0','0','0','0','15968','tarren mill lookout SAY_PROTECTOR_BARN_2'),
-('-1560009','%s tries to calm the horse down.','0','2','0','0','15970','thrall hillsbrad EMOTE_TH_CALM_HORSE'),
-('-1560010','Something riled that horse. Let''s go!','0','0','0','0','15969','tarren mill lookout SAY_PROTECTOR_BARN_3'),
-('-1560011','Taretha isn''t here. Let''s head into town.','0','0','0','0','15974','thrall hillsbrad SAY_TH_HEAD_TOWN'),
-('-1560012','She''s not here.','0','0','0','0','15975','thrall hillsbrad SAY_TH_CHURCH_ENTER'),
-
-('-1560013','Thrall! Come outside and face your fate!','10418','1','0','0','16016','epoch SAY_ENTER1'),
-('-1560014','Taretha''s life hangs in the balance. Surely you care for her. Surely you wish to save her...','10419','1','0','0','16019','epoch SAY_ENTER2'),
-('-1560015','Ah, there you are. I had hoped to accomplish this with a bit of subtlety, but I suppose direct confrontation was inevitable. Your future, Thrall, must not come to pass and so...you and your troublesome friends must die!','10420','1','0','0','16021','epoch SAY_ENTER3'),
-
-('-1560016','Thrall''s trapped himself in the chapel. He can''t escape now.','0','0','0','0','15976','tarren mill lookout SAY_LOOKOUT_CHURCH'),
-('-1560017','He''s here, stop him!','0','0','0','0','15986','tarren mill lookout SAY_LOOKOUT_INN'),
-('-1560018','We have all the time in the world....','0','0','0','0','19536','infinite dragon SAY_INFINITE_AGGRO_2'),
-('-1560019','You cannot escape us!','0','0','0','0','19538','infinite dragon SAY_INFINITE_AGGRO_3'),
-('-1560020','Do not think you can win!','0','0','0','0','19534','infinite dragon SAY_INFINITE_AGGRO_4'),
-
-('-1560021','REUSE_ME','0','0','0','0','0','REUSE_ME'),
-('-1560022','REUSE_ME','0','0','0','0','0','REUSE_ME'),
-
-('-1560023','Very well then. Let''s go!','10465','0','0','0','17622','thrall hillsbrad SAY_TH_START_EVENT_PART1'),
-('-1560024','As long as we''re going with a new plan, I may aswell pick up a weapon and some armor.','0','0','0','0','15893','thrall hillsbrad SAY_TH_ARMORY'),
-('-1560025','A rider approaches!','10466','0','0','0','15908','thrall hillsbrad SAY_TH_SKARLOC_MEET'),
-('-1560026','I''ll never be chained again!','10467','1','0','0','17623','thrall hillsbrad SAY_TH_SKARLOC_TAUNT'),
-('-1560027','Very well. Tarren Mill lies just west of here. Since time is of the essence...','10468','0','0','0','15916','thrall hillsbrad SAY_TH_START_EVENT_PART2'),
-('-1560028','Let''s ride!','10469','0','0','1','15948','thrall hillsbrad SAY_TH_MOUNTS_UP'),
-('-1560029','Taretha must be in the inn. Let''s go.','0','0','0','0','15977','thrall hillsbrad SAY_TH_CHURCH_END'),
-('-1560030','Taretha! What foul magic is this?','0','0','0','0','15978','thrall hillsbrad SAY_TH_MEET_TARETHA'),
-('-1560031','Who or what was that?','10470','0','0','1','16017','thrall hillsbrad SAY_TH_EPOCH_WONDER'),
-('-1560032','No!','10471','0','0','5','6352','thrall hillsbrad SAY_TH_EPOCH_KILL_TARETHA'),
-('-1560033','Goodbye, Taretha. I will never forget your kindness.','10472','0','0','0','16089','thrall hillsbrad SAY_TH_EVENT_COMPLETE'),
-('-1560034','Things are looking grim...','10458','1','0','0','17610','thrall hillsbrad SAY_TH_RANDOM_LOW_HP1'),
-('-1560035','I will fight to the last!','10459','1','0','0','17611','thrall hillsbrad SAY_TH_RANDOM_LOW_HP2'),
-('-1560036','Taretha....','10460','1','0','0','17612','thrall hillsbrad SAY_TH_RANDOM_DIE1'),
-('-1560037','A good day... to die.','10461','1','0','0','17613','thrall hillsbrad SAY_TH_RANDOM_DIE2'),
-('-1560038','I have earned my freedom!','10448','0','0','0','17600','thrall hillsbrad SAY_TH_RANDOM_AGGRO1'),
-('-1560039','This day is long overdue. Out of my way!','10449','0','0','0','17601','thrall hillsbrad SAY_TH_RANDOM_AGGRO2'),
-('-1560040','I am a slave no longer!','10450','0','0','0','17602','thrall hillsbrad SAY_TH_RANDOM_AGGRO3'),
-('-1560041','Blackmoore has much to answer for!','10451','0','0','0','17603','thrall hillsbrad SAY_TH_RANDOM_AGGRO4'),
-('-1560042','You have forced my hand!','10452','0','0','0','17604','thrall hillsbrad SAY_TH_RANDOM_KILL1'),
-('-1560043','It should not have come to this!','10453','0','0','0','17605','thrall hillsbrad SAY_TH_RANDOM_KILL2'),
-('-1560044','I did not ask for this!','10454','0','0','0','17606','thrall hillsbrad SAY_TH_RANDOM_KILL3'),
-('-1560045','I am truly in your debt, strangers.','10455','0','0','0','17607','thrall hillsbrad SAY_TH_LEAVE_COMBAT1'),
-('-1560046','Thank you, strangers. You have given me hope.','10456','0','0','0','17608','thrall hillsbrad SAY_TH_LEAVE_COMBAT2'),
-('-1560047','I will not waste this chance. I will seek out my destiny.','10457','0','0','0','17609','thrall hillsbrad SAY_TH_LEAVE_COMBAT3'),
-
-('-1560048','I''m free! Thank you all!','0','0','0','0','16082','taretha SAY_TA_FREE'),
-('-1560049','Thrall, you escaped!','0','0','0','0','15979','taretha SAY_TA_ESCAPED'),
-
-('-1560050','That''s enough out of him.','0','0','0','0','15892','thrall hillsbrad SAY_TH_KILL_ARMORER'),
-('-1560051','That spell should wipe their memories of us and what just happened. All they should remember now is what reality would be like without the attempted temporal interference. Well done. Thrall will journey on to find his destiny, and Taretha...','0','0','0','0','16087','erozion SAY_WIPE_MEMORY'),
-('-1560052','Her fate is regrettably unavoidable.','0','0','0','0','16088','erozion SAY_ABOUT_TARETHA'),
-('-1560053','They call you a monster. But they''re the monsters, not you. Farewell Thrall.','0','0','0','0','16090','taretha SAY_TA_FAREWELL'),
-
-('-1560054','I''m glad you''re safe, Taretha. None of this would have been possible without your friends. They made all of this happen.','0','0','0','0','16083','thrall hillsbrad SAY_TR_GLAD_SAFE'),
-('-1560055','Thrall, I''ve never met these people before in my life.','0','0','0','0','16085','taretha SAY_TA_NEVER_MET'),
-('-1560056','Then who are these people?','0','0','0','0','16084','thrall hillsbrad SAY_TR_THEN_WHO'),
-('-1560057','I believe I can explain everything to you two if you give me a moment of your time.','0','0','0','0','16086','erozion SAY_PRE_WIPE'),
-('-1560058','You have done a great thing. Alas, the young warchief''s memory of these events must be as they originally were ... Andormu awaits you in the master''s lair.','0','0','0','0','0','erozion SAY_AFTER_WIPE');
 
 -- -1 564 000 BLACK TEMPLE
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadcast_text_id,comment) VALUES
