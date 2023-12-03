@@ -31937,12 +31937,12 @@ UPDATE npc_vendor SET Slot = 26 WHERE entry IN (14624) AND item = 4599;
 UPDATE npc_vendor SET Slot = 27 WHERE entry IN (14624) AND item = 8952;
 UPDATE npc_vendor SET Slot = 28 WHERE entry IN (14624) AND item = 1179;
 UPDATE npc_vendor SET Slot = 29 WHERE entry IN (14624) AND item = 8766;
-UPDATE npc_vendor SET Slot = 32 WHERE entry IN (19012) AND item = 2880;
-UPDATE npc_vendor SET Slot = 30 WHERE entry IN (19012) AND item = 2901;
-UPDATE npc_vendor SET Slot = 33 WHERE entry IN (19012) AND item = 3466;
-UPDATE npc_vendor SET Slot = 35 WHERE entry IN (19012) AND item = 3857;
-UPDATE npc_vendor SET Slot = 31 WHERE entry IN (19012) AND item = 5956;
-UPDATE npc_vendor SET Slot = 34 WHERE entry IN (19012) AND item = 18567;
+UPDATE npc_vendor SET Slot = 32 WHERE entry IN (14624) AND item = 2880;
+UPDATE npc_vendor SET Slot = 30 WHERE entry IN (14624) AND item = 2901;
+UPDATE npc_vendor SET Slot = 33 WHERE entry IN (14624) AND item = 3466;
+UPDATE npc_vendor SET Slot = 35 WHERE entry IN (14624) AND item = 3857;
+UPDATE npc_vendor SET Slot = 31 WHERE entry IN (14624) AND item = 5956;
+UPDATE npc_vendor SET Slot = 34 WHERE entry IN (14624) AND item = 18567;
 UPDATE npc_vendor SET Slot = 2 WHERE entry IN (15176) AND item = 2880;
 UPDATE npc_vendor SET Slot = 0 WHERE entry IN (15176) AND item = 2901;
 UPDATE npc_vendor SET Slot = 3 WHERE entry IN (15176) AND item = 3466;
@@ -33121,5 +33121,16 @@ DELETE FROM `spawn_group_spawn` WHERE id = 30030;
 INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES (30030, 73654, -1), (30030, 77854, -1), (30030, 77855, -1);
 
 UPDATE dbscripts_on_relay SET datalong = 42278 WHERE id = 20063 AND delay = 10000;
+
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
+(381, 180057, 1, -1275.51, -3012.4, 71.2432, -2.86234, -0.007825, 0.086912, 0.986437, -0.139019, 10, 10);
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
+(399, 180057, 1, 89.9668, -1943.97, 78.7301, 1.6057, 0, 0, 0.687357, 0.726319, 10, 10);
+
+UPDATE `creature_template` SET `Faction` = '14' WHERE `Entry` =23333;
+
+UPDATE dbscripts_on_quest_start SET buddy_entry = 25317, search_radius = 95780, data_flags = 0x10 WHERE id = 11672;
+
+UPDATE `creature_template` SET `SpeedWalk` = 1, `ResistanceArcane` = 0 WHERE `entry` = 14340;
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
