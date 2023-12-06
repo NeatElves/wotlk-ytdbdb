@@ -360,6 +360,7 @@ UPDATE `creature_ai_scripts` SET `creature_id` = '-82026' WHERE `id` =2811307;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-105130' WHERE `id` =2940404;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-105025' WHERE `id` =2943301;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-105019' WHERE `id` =2943302;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-104645' WHERE `id` =2948301;
 
 
 # Finall_Spell_UP
