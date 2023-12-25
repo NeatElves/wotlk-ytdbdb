@@ -137,6 +137,13 @@ DELETE FROM `dbscripts_on_creature_movement` WHERE `Id` = 1714614 AND `priority`
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
 (1714614, 5000, 0, 1, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kil\'Sorrow Spellbinder/Cultist - ONESHOT_SPELLCAST');
 
+# Q 8315 hack
+DELETE FROM `dbscripts_on_event` WHERE `id` = 9208;
+INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(9208, 20000, 10, 14862, 1200000, 0, -7276.38, 852.34, 3.64, 0.5, 'summon Emissary Roman''khan'),
+(9208, 100, 10, 15288, 1200000, 0, -7233.39, 906.415, -1.76649, 1.81259, 'summon Aluntir'),
+(9208, 300, 10, 15286, 1200000, 0, -7212.16, 911.711, -1.76649, 2.58543, 'summon Xil''xix'),
+(9208, 500, 10, 15290, 1200000, 0, -7210.3, 895.014, -1.76649, 0.544185, 'summon Arakis');
 
 # NPC AQ War
 #INSERT INTO game_event_creature SELECT guid, 123 FROM creature WHERE guid IN (27403,27421,27518,27524,27533,27583,27805,27834,27851);
