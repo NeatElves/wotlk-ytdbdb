@@ -5934,7 +5934,7 @@ UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=11158,EmoteId1=0 WHERE Id
 
 UPDATE broadcast_text SET ChatTypeID=3,SoundEntriesID1=0,EmoteId1=0 WHERE Id IN(20775);
 
--- 0237_brd_05_aggro_bct.sql TBC
+-- 5243_TDB-0238_the_challenge.sql
 UPDATE broadcast_text SET ChatTypeID=1 WHERE Id IN(11953,11952);
 
 -- 5135_text.28637.sql
