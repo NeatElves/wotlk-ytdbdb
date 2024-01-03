@@ -31203,15 +31203,15 @@ INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orien
 (64551,42,3330.7014,185.82764,65.42819,100,0,0),
 (64551,43,3293.9453,189.50261,69.64412,100,0,0);
 
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (3333) AND item = 6256;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (3333) AND item = 6365;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (3333) AND item = 6368;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (3333) AND item = 6369;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (3333) AND item = 6529;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (3333) AND item = 6530;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (3333) AND item = 6532;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (3333) AND item = 6533;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (3333) AND item = 17062;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (3333) AND item = 6368;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (3333) AND item = 6369;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (3333) AND item = 17062;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (3333) AND item = 6256;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (3333) AND item = 6365;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (3333) AND item = 6533;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (3333) AND item = 6529;
+UPDATE npc_vendor SET Slot = 8 WHERE entry IN (3333) AND item = 6530;
+UPDATE npc_vendor SET Slot = 9 WHERE entry IN (3333) AND item = 6532;
 
 UPDATE creature_template SET CreatureTypeFlags = 134217728 WHERE entry IN (34955,35008);
 
@@ -31618,184 +31618,184 @@ DELETE FROM dbscripts_on_gossip WHERE id IN (900700);
 INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
 (900700,0,15,44364,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast Rock Falcon Primer');
 
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (3492) AND item = 200;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (3492) AND item = 3597;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (3492) AND item = 201;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (3492) AND item = 202;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (3492) AND item = 3598;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (3492) AND item = 203;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (3492) AND item = 236;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (3492) AND item = 1849;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (3492) AND item = 237;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (3492) AND item = 238;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (3492) AND item = 1850;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (3492) AND item = 239;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (3492) AND item = 4794;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (3492) AND item = 4795;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (3492) AND item = 4796;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (3493) AND item = 285;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (3493) AND item = 1853;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (3493) AND item = 286;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (3493) AND item = 287;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (3493) AND item = 1852;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (3493) AND item = 718;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (3493) AND item = 17188;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (3493) AND item = 2445;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (3493) AND item = 4820;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (3493) AND item = 4821;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (3493) AND item = 4822;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (3493) AND item = 4800;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (3493) AND item = 4816;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (3493) AND item = 4797;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (3493) AND item = 4798;
-UPDATE npc_vendor SET Slot = 15 WHERE entry IN (3493) AND item = 4799;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (3492) AND item = 200;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (3492) AND item = 3597;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (3492) AND item = 201;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (3492) AND item = 202;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (3492) AND item = 3598;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (3492) AND item = 203;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (3492) AND item = 236;
+UPDATE npc_vendor SET Slot = 8 WHERE entry IN (3492) AND item = 1849;
+UPDATE npc_vendor SET Slot = 9 WHERE entry IN (3492) AND item = 237;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (3492) AND item = 238;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (3492) AND item = 1850;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (3492) AND item = 239;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (3492) AND item = 4794;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (3492) AND item = 4795;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (3492) AND item = 4796;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (3493) AND item = 285;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (3493) AND item = 1853;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (3493) AND item = 286;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (3493) AND item = 287;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (3493) AND item = 1852;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (3493) AND item = 718;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (3493) AND item = 17188;
+UPDATE npc_vendor SET Slot = 8 WHERE entry IN (3493) AND item = 2445;
+UPDATE npc_vendor SET Slot = 9 WHERE entry IN (3493) AND item = 4820;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (3493) AND item = 4821;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (3493) AND item = 4822;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (3493) AND item = 4800;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (3493) AND item = 4816;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (3493) AND item = 4797;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (3493) AND item = 4798;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (3493) AND item = 4799;
 
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (6807) AND item = 787;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (6807) AND item = 4592;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (6807) AND item = 4593;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (6807) AND item = 4594;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (6807) AND item = 21552;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (6807) AND item = 8957;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (6807) AND item = 159;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (6807) AND item = 1179;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (6807) AND item = 1205;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (6807) AND item = 1708;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (6807) AND item = 1645;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (6807) AND item = 8766;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (6807) AND item = 787;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (6807) AND item = 4592;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (6807) AND item = 4593;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (6807) AND item = 4594;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (6807) AND item = 21552;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (6807) AND item = 8957;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (6807) AND item = 159;
+UPDATE npc_vendor SET Slot = 8 WHERE entry IN (6807) AND item = 1179;
+UPDATE npc_vendor SET Slot = 9 WHERE entry IN (6807) AND item = 1205;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (6807) AND item = 1708;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (6807) AND item = 1645;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (6807) AND item = 8766;
 
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (2832) AND item = 4600;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (2832) AND item = 4595;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (2832) AND item = 159;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (2832) AND item = 1179;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (2832) AND item = 1205;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (2832) AND item = 1708;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (2832) AND item = 1645;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (2832) AND item = 8766;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (2832) AND item = 2723;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (2832) AND item = 2593;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (2832) AND item = 2596;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (2832) AND item = 2594;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (2832) AND item = 2595;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (2832) AND item = 4540;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (2832) AND item = 4541;
-UPDATE npc_vendor SET Slot = 15 WHERE entry IN (2832) AND item = 4542;
-UPDATE npc_vendor SET Slot = 16 WHERE entry IN (2832) AND item = 4544;
-UPDATE npc_vendor SET Slot = 17 WHERE entry IN (2832) AND item = 4601;
-UPDATE npc_vendor SET Slot = 18 WHERE entry IN (2832) AND item = 8950;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (2832) AND item = 4600;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (2832) AND item = 4595;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (2832) AND item = 159;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (2832) AND item = 1179;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (2832) AND item = 1205;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (2832) AND item = 1708;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (2832) AND item = 1645;
+UPDATE npc_vendor SET Slot = 8 WHERE entry IN (2832) AND item = 8766;
+UPDATE npc_vendor SET Slot = 9 WHERE entry IN (2832) AND item = 2723;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (2832) AND item = 2593;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (2832) AND item = 2596;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (2832) AND item = 2594;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (2832) AND item = 2595;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (2832) AND item = 4540;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (2832) AND item = 4541;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (2832) AND item = 4542;
+UPDATE npc_vendor SET Slot = 17 WHERE entry IN (2832) AND item = 4544;
+UPDATE npc_vendor SET Slot = 18 WHERE entry IN (2832) AND item = 4601;
+UPDATE npc_vendor SET Slot = 19 WHERE entry IN (2832) AND item = 8950;
 
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (2670) AND item = 2320;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (2670) AND item = 2321;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (2670) AND item = 4291;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (2670) AND item = 8343;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (2670) AND item = 14341;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (2670) AND item = 38426;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (2670) AND item = 2324;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (2670) AND item = 2320;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (2670) AND item = 2321;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (2670) AND item = 4291;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (2670) AND item = 8343;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (2670) AND item = 14341;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (2670) AND item = 38426;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (2670) AND item = 2324;
 UPDATE npc_vendor SET Slot = 8 WHERE entry IN (2670) AND item = 6260;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (2670) AND item = 2604;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (2670) AND item = 2605;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (2670) AND item = 4341;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (2670) AND item = 4340;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (2670) AND item = 6261;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (2670) AND item = 2325;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (2670) AND item = 4342;
-UPDATE npc_vendor SET Slot = 15 WHERE entry IN (2670) AND item = 10290;
-UPDATE npc_vendor SET Slot = 16 WHERE entry IN (2670) AND item = 14630;
-UPDATE npc_vendor SET Slot = 17 WHERE entry IN (2670) AND item = 7087;
+UPDATE npc_vendor SET Slot = 9 WHERE entry IN (2670) AND item = 2604;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (2670) AND item = 2605;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (2670) AND item = 4341;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (2670) AND item = 4340;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (2670) AND item = 6261;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (2670) AND item = 2325;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (2670) AND item = 4342;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (2670) AND item = 10290;
+UPDATE npc_vendor SET Slot = 17 WHERE entry IN (2670) AND item = 14630;
+UPDATE npc_vendor SET Slot = 18 WHERE entry IN (2670) AND item = 7087;
 
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (2846) AND item = 7005;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (2846) AND item = 4289;
-UPDATE npc_vendor SET Slot = 2  WHERE entry IN (2846) AND item = 2320;
-UPDATE npc_vendor SET Slot = 3  WHERE entry IN (2846) AND item = 2321;
-UPDATE npc_vendor SET Slot = 4  WHERE entry IN (2846) AND item = 4291;
-UPDATE npc_vendor SET Slot = 5  WHERE entry IN (2846) AND item = 8343;
-UPDATE npc_vendor SET Slot = 6  WHERE entry IN (2846) AND item = 14341;
-UPDATE npc_vendor SET Slot = 7  WHERE entry IN (2846) AND item = 38426;
-UPDATE npc_vendor SET Slot = 8  WHERE entry IN (2846) AND item = 2325;
-UPDATE npc_vendor SET Slot = 9  WHERE entry IN (2846) AND item = 6260;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (2846) AND item = 2604;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (2846) AND item = 2605;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (2846) AND item = 4340;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (2846) AND item = 4341;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (2846) AND item = 6261;
-UPDATE npc_vendor SET Slot = 15 WHERE entry IN (2846) AND item = 4342;
-UPDATE npc_vendor SET Slot = 16 WHERE entry IN (2846) AND item = 10290;
-UPDATE npc_vendor SET Slot = 17 WHERE entry IN (2846) AND item = 5788;
-UPDATE npc_vendor SET Slot = 18 WHERE entry IN (2846) AND item = 5789;
+UPDATE npc_vendor SET Slot = 1  WHERE entry IN (2846) AND item = 7005;
+UPDATE npc_vendor SET Slot = 2  WHERE entry IN (2846) AND item = 4289;
+UPDATE npc_vendor SET Slot = 3  WHERE entry IN (2846) AND item = 2320;
+UPDATE npc_vendor SET Slot = 4  WHERE entry IN (2846) AND item = 2321;
+UPDATE npc_vendor SET Slot = 5  WHERE entry IN (2846) AND item = 4291;
+UPDATE npc_vendor SET Slot = 6  WHERE entry IN (2846) AND item = 8343;
+UPDATE npc_vendor SET Slot = 7  WHERE entry IN (2846) AND item = 14341;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (2846) AND item = 38426;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (2846) AND item = 2325;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (2846) AND item = 6260;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (2846) AND item = 2604;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (2846) AND item = 2605;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (2846) AND item = 4340;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (2846) AND item = 4341;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (2846) AND item = 6261;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (2846) AND item = 4342;
+UPDATE npc_vendor SET Slot = 17 WHERE entry IN (2846) AND item = 10290;
+UPDATE npc_vendor SET Slot = 18 WHERE entry IN (2846) AND item = 5788;
+UPDATE npc_vendor SET Slot = 19 WHERE entry IN (2846) AND item = 5789;
 
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (2849) AND item = 7338;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (2849) AND item = 7339;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (2849) AND item = 7340;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (2849) AND item = 7341;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (2849) AND item = 7342;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (2849) AND item = 7337;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (2849) AND item = 37934;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (2849) AND item = 200;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (2849) AND item = 3597;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (2849) AND item = 201;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (2849) AND item = 202;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (2849) AND item = 3598;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (2849) AND item = 203;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (2849) AND item = 2160;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (2849) AND item = 3591;
-UPDATE npc_vendor SET Slot = 15 WHERE entry IN (2849) AND item = 2159;
-UPDATE npc_vendor SET Slot = 16 WHERE entry IN (2849) AND item = 2156;
-UPDATE npc_vendor SET Slot = 17 WHERE entry IN (2849) AND item = 3592;
-UPDATE npc_vendor SET Slot = 18 WHERE entry IN (2849) AND item = 2158;
-UPDATE npc_vendor SET Slot = 19 WHERE entry IN (2849) AND item = 2429;
-UPDATE npc_vendor SET Slot = 20 WHERE entry IN (2849) AND item = 3593;
-UPDATE npc_vendor SET Slot = 21 WHERE entry IN (2849) AND item = 2431;
-UPDATE npc_vendor SET Slot = 22 WHERE entry IN (2849) AND item = 2432;
-UPDATE npc_vendor SET Slot = 23 WHERE entry IN (2849) AND item = 3594;
-UPDATE npc_vendor SET Slot = 24 WHERE entry IN (2849) AND item = 2434;
-UPDATE npc_vendor SET Slot = 25 WHERE entry IN (2849) AND item = 3889;
-UPDATE npc_vendor SET Slot = 26 WHERE entry IN (2849) AND item = 2435;
-UPDATE npc_vendor SET Slot = 27 WHERE entry IN (2849) AND item = 3587;
-UPDATE npc_vendor SET Slot = 28 WHERE entry IN (2849) AND item = 2437;
-UPDATE npc_vendor SET Slot = 29 WHERE entry IN (2849) AND item = 2438;
-UPDATE npc_vendor SET Slot = 30 WHERE entry IN (2849) AND item = 3588;
-UPDATE npc_vendor SET Slot = 31 WHERE entry IN (2849) AND item = 2440;
-UPDATE npc_vendor SET Slot = 32 WHERE entry IN (2849) AND item = 3892;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (2849) AND item = 7338;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (2849) AND item = 7339;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (2849) AND item = 7340;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (2849) AND item = 7341;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (2849) AND item = 7342;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (2849) AND item = 7337;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (2849) AND item = 37934;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (2849) AND item = 200;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (2849) AND item = 3597;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (2849) AND item = 201;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (2849) AND item = 202;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (2849) AND item = 3598;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (2849) AND item = 203;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (2849) AND item = 2160;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (2849) AND item = 3591;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (2849) AND item = 2159;
+UPDATE npc_vendor SET Slot = 17 WHERE entry IN (2849) AND item = 2156;
+UPDATE npc_vendor SET Slot = 18 WHERE entry IN (2849) AND item = 3592;
+UPDATE npc_vendor SET Slot = 19 WHERE entry IN (2849) AND item = 2158;
+UPDATE npc_vendor SET Slot = 20 WHERE entry IN (2849) AND item = 2429;
+UPDATE npc_vendor SET Slot = 21 WHERE entry IN (2849) AND item = 3593;
+UPDATE npc_vendor SET Slot = 22 WHERE entry IN (2849) AND item = 2431;
+UPDATE npc_vendor SET Slot = 23 WHERE entry IN (2849) AND item = 2432;
+UPDATE npc_vendor SET Slot = 24 WHERE entry IN (2849) AND item = 3594;
+UPDATE npc_vendor SET Slot = 25 WHERE entry IN (2849) AND item = 2434;
+UPDATE npc_vendor SET Slot = 26 WHERE entry IN (2849) AND item = 3889;
+UPDATE npc_vendor SET Slot = 27 WHERE entry IN (2849) AND item = 2435;
+UPDATE npc_vendor SET Slot = 28 WHERE entry IN (2849) AND item = 3587;
+UPDATE npc_vendor SET Slot = 29 WHERE entry IN (2849) AND item = 2437;
+UPDATE npc_vendor SET Slot = 30 WHERE entry IN (2849) AND item = 2438;
+UPDATE npc_vendor SET Slot = 31 WHERE entry IN (2849) AND item = 3588;
+UPDATE npc_vendor SET Slot = 32 WHERE entry IN (2849) AND item = 2440;
+UPDATE npc_vendor SET Slot = 33 WHERE entry IN (2849) AND item = 3892;
 
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (2622) AND item = 6947;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (2622) AND item = 6949;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (2622) AND item = 6950;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (2622) AND item = 8926;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (2622) AND item = 8927;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (2622) AND item = 8928;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (2622) AND item = 21927;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (2622) AND item = 43230;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (2622) AND item = 43231;
-UPDATE npc_vendor SET Slot = 9  WHERE entry IN (2622) AND item = 2892;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (2622) AND item = 2893;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (2622) AND item = 8984;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (2622) AND item = 8985;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (2622) AND item = 20844;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (2622) AND item = 22053;
-UPDATE npc_vendor SET Slot = 15 WHERE entry IN (2622) AND item = 22054;
-UPDATE npc_vendor SET Slot = 16 WHERE entry IN (2622) AND item = 43232;
-UPDATE npc_vendor SET Slot = 17 WHERE entry IN (2622) AND item = 43233;
-UPDATE npc_vendor SET Slot = 18 WHERE entry IN (2622) AND item = 10918;
-UPDATE npc_vendor SET Slot = 19 WHERE entry IN (2622) AND item = 10920;
-UPDATE npc_vendor SET Slot = 20 WHERE entry IN (2622) AND item = 10921;
-UPDATE npc_vendor SET Slot = 21 WHERE entry IN (2622) AND item = 10922;
-UPDATE npc_vendor SET Slot = 22 WHERE entry IN (2622) AND item = 22055;
-UPDATE npc_vendor SET Slot = 23 WHERE entry IN (2622) AND item = 43234;
-UPDATE npc_vendor SET Slot = 24 WHERE entry IN (2622) AND item = 43235;
-UPDATE npc_vendor SET Slot = 25 WHERE entry IN (2622) AND item = 21835;
-UPDATE npc_vendor SET Slot = 26 WHERE entry IN (2622) AND item = 43237;
-UPDATE npc_vendor SET Slot = 27 WHERE entry IN (2622) AND item = 3775;
-UPDATE npc_vendor SET Slot = 28 WHERE entry IN (2622) AND item = 5237;
+UPDATE npc_vendor SET Slot = 1  WHERE entry IN (2622) AND item = 6947;
+UPDATE npc_vendor SET Slot = 2  WHERE entry IN (2622) AND item = 6949;
+UPDATE npc_vendor SET Slot = 3  WHERE entry IN (2622) AND item = 6950;
+UPDATE npc_vendor SET Slot = 4  WHERE entry IN (2622) AND item = 8926;
+UPDATE npc_vendor SET Slot = 5  WHERE entry IN (2622) AND item = 8927;
+UPDATE npc_vendor SET Slot = 6  WHERE entry IN (2622) AND item = 8928;
+UPDATE npc_vendor SET Slot = 7  WHERE entry IN (2622) AND item = 21927;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (2622) AND item = 43230;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (2622) AND item = 43231;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (2622) AND item = 2892;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (2622) AND item = 2893;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (2622) AND item = 8984;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (2622) AND item = 8985;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (2622) AND item = 20844;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (2622) AND item = 22053;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (2622) AND item = 22054;
+UPDATE npc_vendor SET Slot = 17 WHERE entry IN (2622) AND item = 43232;
+UPDATE npc_vendor SET Slot = 18 WHERE entry IN (2622) AND item = 43233;
+UPDATE npc_vendor SET Slot = 19 WHERE entry IN (2622) AND item = 10918;
+UPDATE npc_vendor SET Slot = 20 WHERE entry IN (2622) AND item = 10920;
+UPDATE npc_vendor SET Slot = 21 WHERE entry IN (2622) AND item = 10921;
+UPDATE npc_vendor SET Slot = 22 WHERE entry IN (2622) AND item = 10922;
+UPDATE npc_vendor SET Slot = 23 WHERE entry IN (2622) AND item = 22055;
+UPDATE npc_vendor SET Slot = 24 WHERE entry IN (2622) AND item = 43234;
+UPDATE npc_vendor SET Slot = 25 WHERE entry IN (2622) AND item = 43235;
+UPDATE npc_vendor SET Slot = 26 WHERE entry IN (2622) AND item = 21835;
+UPDATE npc_vendor SET Slot = 27 WHERE entry IN (2622) AND item = 43237;
+UPDATE npc_vendor SET Slot = 28 WHERE entry IN (2622) AND item = 3775;
+UPDATE npc_vendor SET Slot = 29 WHERE entry IN (2622) AND item = 5237;
 
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (2845) AND item = 2417;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (2845) AND item = 2419;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (2845) AND item = 2418;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (2845) AND item = 2420;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (2845) AND item = 2421;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (2845) AND item = 2422;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (2845) AND item = 3891;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (2845) AND item = 17189;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (2845) AND item = 2448;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (2845) AND item = 12257;
+UPDATE npc_vendor SET Slot = 1  WHERE entry IN (2845) AND item = 2417;
+UPDATE npc_vendor SET Slot = 2  WHERE entry IN (2845) AND item = 2419;
+UPDATE npc_vendor SET Slot = 3  WHERE entry IN (2845) AND item = 2418;
+UPDATE npc_vendor SET Slot = 4  WHERE entry IN (2845) AND item = 2420;
+UPDATE npc_vendor SET Slot = 5  WHERE entry IN (2845) AND item = 2421;
+UPDATE npc_vendor SET Slot = 6  WHERE entry IN (2845) AND item = 2422;
+UPDATE npc_vendor SET Slot = 7  WHERE entry IN (2845) AND item = 3891;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (2845) AND item = 17189;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (2845) AND item = 2448;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (2845) AND item = 12257;
 
 UPDATE creature SET position_x = -14415.791, position_y = 518.9218, position_z = 5.1048937, orientation = 3.176499 WHERE guid = 146;
 UPDATE creature SET position_x = -14426.768, position_y = 523.7902, position_z = 5.0751433, orientation = 5.7246799 WHERE guid = 147;
@@ -31879,164 +31879,164 @@ UPDATE gossip_menu SET condition_id = 5077 WHERE entry = 1467 AND text_id = 2136
 DELETE FROM conditions WHERE condition_entry BETWEEN 5074 AND 5077;
 INSERT INTO conditions(condition_entry, type, value1, value2, value3) VALUES (5074,8,648,0,0),(5075,8,836,0,0),(5076,8,2767,0,0),(5077,-2,5076,5075,5074);
 
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (3356,5512) AND item = 2880;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (3356,5512) AND item = 2901;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (3356,5512) AND item = 3466;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (3356,5512) AND item = 3857;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (3356,5512) AND item = 5956;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (3356,5512) AND item = 12162;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (3356,5512) AND item = 18567;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (5411) AND item = 2880;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (5411) AND item = 2901;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (5411) AND item = 3466;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (5411) AND item = 3857;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (5411) AND item = 5956;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (5411) AND item = 6047;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (5411) AND item = 18567;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (8161,8176) AND item = 2880;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (8161,8176) AND item = 2901;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (8161,8176) AND item = 3466;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (8161,8176) AND item = 3857;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (8161,8176) AND item = 5956;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (8161,8176) AND item = 7995;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (8161,8176) AND item = 18567;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (9179) AND item = 2880;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (9179) AND item = 2901;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (9179) AND item = 3466;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (9179) AND item = 3857;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (9179) AND item = 5956;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (9179) AND item = 10858;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (9179) AND item = 18567;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (14624) AND item = 159;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (14624) AND item = 1205;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (14624) AND item = 1708;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (14624) AND item = 1645;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (14624) AND item = 4498;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (14624) AND item = 4497;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (14624) AND item = 2515;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (14624) AND item = 3030;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (14624) AND item = 11285;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (14624) AND item = 28053;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (14624) AND item = 2519;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (14624) AND item = 3033;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (14624) AND item = 11284;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (14624) AND item = 28060;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (14624) AND item = 4470;
-UPDATE npc_vendor SET Slot = 15 WHERE entry IN (14624) AND item = 25873;
-UPDATE npc_vendor SET Slot = 16 WHERE entry IN (14624) AND item = 25875;
-UPDATE npc_vendor SET Slot = 17 WHERE entry IN (14624) AND item = 25876;
-UPDATE npc_vendor SET Slot = 18 WHERE entry IN (14624) AND item = 29013;
-UPDATE npc_vendor SET Slot = 19 WHERE entry IN (14624) AND item = 29009;
-UPDATE npc_vendor SET Slot = 20 WHERE entry IN (14624) AND item = 29010;
-UPDATE npc_vendor SET Slot = 21 WHERE entry IN (14624) AND item = 29014;
-UPDATE npc_vendor SET Slot = 22 WHERE entry IN (14624) AND item = 117;
-UPDATE npc_vendor SET Slot = 23 WHERE entry IN (14624) AND item = 2287;
-UPDATE npc_vendor SET Slot = 24 WHERE entry IN (14624) AND item = 3770;
-UPDATE npc_vendor SET Slot = 25 WHERE entry IN (14624) AND item = 3771;
-UPDATE npc_vendor SET Slot = 26 WHERE entry IN (14624) AND item = 4599;
-UPDATE npc_vendor SET Slot = 27 WHERE entry IN (14624) AND item = 8952;
-UPDATE npc_vendor SET Slot = 28 WHERE entry IN (14624) AND item = 1179;
-UPDATE npc_vendor SET Slot = 29 WHERE entry IN (14624) AND item = 8766;
-UPDATE npc_vendor SET Slot = 32 WHERE entry IN (14624) AND item = 2880;
-UPDATE npc_vendor SET Slot = 30 WHERE entry IN (14624) AND item = 2901;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (3356,5512) AND item = 2901;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (3356,5512) AND item = 5956;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (3356,5512) AND item = 2880;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (3356,5512) AND item = 3466;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (3356,5512) AND item = 18567;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (3356,5512) AND item = 3857;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (3356,5512) AND item = 12162;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (5411) AND item = 2901;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (5411) AND item = 5956;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (5411) AND item = 2880;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (5411) AND item = 3466;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (5411) AND item = 18567;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (5411) AND item = 3857;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (5411) AND item = 6047;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (8161,8176) AND item = 2901;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (8161,8176) AND item = 5956;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (8161,8176) AND item = 2880;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (8161,8176) AND item = 3466;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (8161,8176) AND item = 18567;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (8161,8176) AND item = 3857;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (8161,8176) AND item = 7995;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (9179) AND item = 2901;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (9179) AND item = 5956;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (9179) AND item = 2880;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (9179) AND item = 3466;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (9179) AND item = 18567;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (9179) AND item = 3857;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (9179) AND item = 10858;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (14624) AND item = 159;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (14624) AND item = 1205;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (14624) AND item = 1708;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (14624) AND item = 1645;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (14624) AND item = 4498;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (14624) AND item = 4497;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (14624) AND item = 2515;
+UPDATE npc_vendor SET Slot = 8 WHERE entry IN (14624) AND item = 3030;
+UPDATE npc_vendor SET Slot = 9 WHERE entry IN (14624) AND item = 11285;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (14624) AND item = 28053;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (14624) AND item = 2519;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (14624) AND item = 3033;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (14624) AND item = 11284;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (14624) AND item = 28060;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (14624) AND item = 4470;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (14624) AND item = 25873;
+UPDATE npc_vendor SET Slot = 17 WHERE entry IN (14624) AND item = 25875;
+UPDATE npc_vendor SET Slot = 18 WHERE entry IN (14624) AND item = 25876;
+UPDATE npc_vendor SET Slot = 19 WHERE entry IN (14624) AND item = 29013;
+UPDATE npc_vendor SET Slot = 20 WHERE entry IN (14624) AND item = 29009;
+UPDATE npc_vendor SET Slot = 21 WHERE entry IN (14624) AND item = 29010;
+UPDATE npc_vendor SET Slot = 22 WHERE entry IN (14624) AND item = 29014;
+UPDATE npc_vendor SET Slot = 23 WHERE entry IN (14624) AND item = 117;
+UPDATE npc_vendor SET Slot = 24 WHERE entry IN (14624) AND item = 2287;
+UPDATE npc_vendor SET Slot = 25 WHERE entry IN (14624) AND item = 3770;
+UPDATE npc_vendor SET Slot = 26 WHERE entry IN (14624) AND item = 3771;
+UPDATE npc_vendor SET Slot = 27 WHERE entry IN (14624) AND item = 4599;
+UPDATE npc_vendor SET Slot = 28 WHERE entry IN (14624) AND item = 8952;
+UPDATE npc_vendor SET Slot = 29 WHERE entry IN (14624) AND item = 1179;
+UPDATE npc_vendor SET Slot = 30 WHERE entry IN (14624) AND item = 8766;
+UPDATE npc_vendor SET Slot = 31 WHERE entry IN (14624) AND item = 2880;
+UPDATE npc_vendor SET Slot = 32 WHERE entry IN (14624) AND item = 2901;
 UPDATE npc_vendor SET Slot = 33 WHERE entry IN (14624) AND item = 3466;
-UPDATE npc_vendor SET Slot = 35 WHERE entry IN (14624) AND item = 3857;
-UPDATE npc_vendor SET Slot = 31 WHERE entry IN (14624) AND item = 5956;
-UPDATE npc_vendor SET Slot = 34 WHERE entry IN (14624) AND item = 18567;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (15176) AND item = 2880;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (15176) AND item = 2901;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (15176) AND item = 3466;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (15176) AND item = 3857;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (15176) AND item = 5956;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (15176) AND item = 18567;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (15176) AND item = 22209;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (15176) AND item = 22214;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (15176) AND item = 22766;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (15176) AND item = 22767;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (15176) AND item = 22768;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (16583) AND item = 2880;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (16583) AND item = 2901;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (16583) AND item = 3466;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (16583) AND item = 3857;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (16583) AND item = 5956;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (16583) AND item = 18567;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (16583) AND item = 23638;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (16583) AND item = 25847;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (16670,16713) AND item = 2901;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (16670,16713) AND item = 5956;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (16670,16713) AND item = 2880;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (16670,16713) AND item = 3466;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (16670,16713) AND item = 18567;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (16670,16713) AND item = 3857;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (16670,16713) AND item = 23590;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (16670,16713) AND item = 23591;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (16670,16713) AND item = 23592;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (16670,16713) AND item = 23593;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (19011,19012) AND item = 30777;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (19011,19012) AND item = 30771;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (19011,19012) AND item = 30765;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (19011,19012) AND item = 30775;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (19011,19012) AND item = 30781;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (19011,19012) AND item = 30784;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (19011,19012) AND item = 2901;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (19011,19012) AND item = 5956;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (19011,19012) AND item = 2880;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (19011,19012) AND item = 3466;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (19011,19012) AND item = 18567;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (19011,19012) AND item = 3857;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (19342) AND item = 2880;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (19342) AND item = 2901;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (19342) AND item = 3466;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (19342) AND item = 3857;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (19342) AND item = 5956;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (19342) AND item = 18567;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (19342) AND item = 23594;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (19342) AND item = 23595;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (19342) AND item = 23596;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (19662) AND item = 2880;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (19662) AND item = 2901;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (19662) AND item = 3466;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (19662) AND item = 3857;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (19662) AND item = 5956;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (19662) AND item = 18567;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (19662) AND item = 23590;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (19662) AND item = 23591;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (19662) AND item = 23592;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (19662) AND item = 23593;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (19662) AND item = 25846;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (26934) AND item = 28056;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (26934) AND item = 41586;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (26934) AND item = 28061;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (26934) AND item = 41584;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (26934) AND item = 29014;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (26934) AND item = 29013;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (26934) AND item = 2880;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (26934) AND item = 2901;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (26934) AND item = 3466;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (26934) AND item = 3857;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (26934) AND item = 5956;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (26934) AND item = 18567;
+UPDATE npc_vendor SET Slot = 34 WHERE entry IN (14624) AND item = 3857;
+UPDATE npc_vendor SET Slot = 35 WHERE entry IN (14624) AND item = 5956;
+UPDATE npc_vendor SET Slot = 36 WHERE entry IN (14624) AND item = 18567;
+UPDATE npc_vendor SET Slot = 1  WHERE entry IN (15176) AND item = 2901;
+UPDATE npc_vendor SET Slot = 2  WHERE entry IN (15176) AND item = 5956;
+UPDATE npc_vendor SET Slot = 3  WHERE entry IN (15176) AND item = 2880;
+UPDATE npc_vendor SET Slot = 4  WHERE entry IN (15176) AND item = 3466;
+UPDATE npc_vendor SET Slot = 5  WHERE entry IN (15176) AND item = 18567;
+UPDATE npc_vendor SET Slot = 6  WHERE entry IN (15176) AND item = 3857;
+UPDATE npc_vendor SET Slot = 7  WHERE entry IN (15176) AND item = 22209;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (15176) AND item = 22214;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (15176) AND item = 22766;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (15176) AND item = 22767;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (15176) AND item = 22768;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (16583) AND item = 2901;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (16583) AND item = 5956;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (16583) AND item = 2880;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (16583) AND item = 3466;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (16583) AND item = 18567;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (16583) AND item = 3857;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (16583) AND item = 23638;
+UPDATE npc_vendor SET Slot = 8 WHERE entry IN (16583) AND item = 25847;
+UPDATE npc_vendor SET Slot = 1  WHERE entry IN (16670,16713) AND item = 2901;
+UPDATE npc_vendor SET Slot = 2  WHERE entry IN (16670,16713) AND item = 5956;
+UPDATE npc_vendor SET Slot = 3  WHERE entry IN (16670,16713) AND item = 2880;
+UPDATE npc_vendor SET Slot = 4  WHERE entry IN (16670,16713) AND item = 3466;
+UPDATE npc_vendor SET Slot = 5  WHERE entry IN (16670,16713) AND item = 18567;
+UPDATE npc_vendor SET Slot = 6  WHERE entry IN (16670,16713) AND item = 3857;
+UPDATE npc_vendor SET Slot = 7  WHERE entry IN (16670,16713) AND item = 23590;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (16670,16713) AND item = 23591;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (16670,16713) AND item = 23592;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (16670,16713) AND item = 23593;
+UPDATE npc_vendor SET Slot = 1  WHERE entry IN (19011,19012) AND item = 30777;
+UPDATE npc_vendor SET Slot = 2  WHERE entry IN (19011,19012) AND item = 30771;
+UPDATE npc_vendor SET Slot = 3  WHERE entry IN (19011,19012) AND item = 30765;
+UPDATE npc_vendor SET Slot = 4  WHERE entry IN (19011,19012) AND item = 30775;
+UPDATE npc_vendor SET Slot = 5  WHERE entry IN (19011,19012) AND item = 30781;
+UPDATE npc_vendor SET Slot = 6  WHERE entry IN (19011,19012) AND item = 30784;
+UPDATE npc_vendor SET Slot = 7  WHERE entry IN (19011,19012) AND item = 2901;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (19011,19012) AND item = 5956;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (19011,19012) AND item = 2880;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (19011,19012) AND item = 3466;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (19011,19012) AND item = 18567;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (19011,19012) AND item = 3857;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (19342) AND item = 2901;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (19342) AND item = 5956;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (19342) AND item = 2880;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (19342) AND item = 3466;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (19342) AND item = 18567;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (19342) AND item = 3857;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (19342) AND item = 23594;
+UPDATE npc_vendor SET Slot = 8 WHERE entry IN (19342) AND item = 23595;
+UPDATE npc_vendor SET Slot = 9 WHERE entry IN (19342) AND item = 23596;
+UPDATE npc_vendor SET Slot = 1  WHERE entry IN (19662) AND item = 2901;
+UPDATE npc_vendor SET Slot = 2  WHERE entry IN (19662) AND item = 5956;
+UPDATE npc_vendor SET Slot = 3  WHERE entry IN (19662) AND item = 2880;
+UPDATE npc_vendor SET Slot = 4  WHERE entry IN (19662) AND item = 3466;
+UPDATE npc_vendor SET Slot = 5  WHERE entry IN (19662) AND item = 18567;
+UPDATE npc_vendor SET Slot = 6  WHERE entry IN (19662) AND item = 3857;
+UPDATE npc_vendor SET Slot = 7  WHERE entry IN (19662) AND item = 23590;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (19662) AND item = 23591;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (19662) AND item = 23592;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (19662) AND item = 23593;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (19662) AND item = 25846;
+UPDATE npc_vendor SET Slot = 1  WHERE entry IN (26934) AND item = 28056;
+UPDATE npc_vendor SET Slot = 2  WHERE entry IN (26934) AND item = 41586;
+UPDATE npc_vendor SET Slot = 3  WHERE entry IN (26934) AND item = 28061;
+UPDATE npc_vendor SET Slot = 4  WHERE entry IN (26934) AND item = 41584;
+UPDATE npc_vendor SET Slot = 5  WHERE entry IN (26934) AND item = 29014;
+UPDATE npc_vendor SET Slot = 6  WHERE entry IN (26934) AND item = 29013;
+UPDATE npc_vendor SET Slot = 7  WHERE entry IN (26934) AND item = 2901;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (26934) AND item = 5956;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (26934) AND item = 2880;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (26934) AND item = 3466;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (26934) AND item = 18567;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (26934) AND item = 3857;
 DELETE FROM npc_vendor WHERE entry = 26934 AND item IN (4470,4471);
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (29907) AND item = 2880;
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (29907) AND item = 2901;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (29907) AND item = 3466;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (29907) AND item = 3857;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (29907) AND item = 5956;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (29907) AND item = 18567;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (29907) AND item = 4399;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (29907) AND item = 4400;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (29907) AND item = 40533;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (29907) AND item = 39684;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (29907) AND item = 10648;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (29907) AND item = 10647;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (29907) AND item = 4382;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (29907) AND item = 4363;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (29907) AND item = 4361;
-UPDATE npc_vendor SET Slot = 15 WHERE entry IN (29907) AND item = 4371;
-UPDATE npc_vendor SET Slot = 16 WHERE entry IN (29907) AND item = 4357;
-UPDATE npc_vendor SET Slot = 17 WHERE entry IN (29907) AND item = 4364;
-UPDATE npc_vendor SET Slot = 18 WHERE entry IN (29907) AND item = 4389;
-UPDATE npc_vendor SET Slot = 19 WHERE entry IN (29907) AND item = 4404;
+UPDATE npc_vendor SET Slot = 1  WHERE entry IN (29907) AND item = 2901;
+UPDATE npc_vendor SET Slot = 2  WHERE entry IN (29907) AND item = 5956;
+UPDATE npc_vendor SET Slot = 3  WHERE entry IN (29907) AND item = 2880;
+UPDATE npc_vendor SET Slot = 4  WHERE entry IN (29907) AND item = 3466;
+UPDATE npc_vendor SET Slot = 5  WHERE entry IN (29907) AND item = 18567;
+UPDATE npc_vendor SET Slot = 6  WHERE entry IN (29907) AND item = 3857;
+UPDATE npc_vendor SET Slot = 7  WHERE entry IN (29907) AND item = 4399;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (29907) AND item = 4400;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (29907) AND item = 40533;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (29907) AND item = 39684;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (29907) AND item = 10648;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (29907) AND item = 10647;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (29907) AND item = 4382;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (29907) AND item = 4363;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (29907) AND item = 4361;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (29907) AND item = 4371;
+UPDATE npc_vendor SET Slot = 17 WHERE entry IN (29907) AND item = 4357;
+UPDATE npc_vendor SET Slot = 18 WHERE entry IN (29907) AND item = 4364;
+UPDATE npc_vendor SET Slot = 19 WHERE entry IN (29907) AND item = 4389;
+UPDATE npc_vendor SET Slot = 20 WHERE entry IN (29907) AND item = 4404;
 DELETE FROM npc_vendor WHERE entry IN (
 1690,2844,2847,2999,3343,3477,4257,4259,4597,6300,14737,15400,16376,16823,17245,17655,19056,19520,19530,19879,
 20082,20463,22264,22476,23144,23724,23908,24052,26599,27019,27045,27062,27134,27267,28344,28716,28796,29252,
@@ -32049,9 +32049,9 @@ INSERT INTO `npc_vendor_template` (`entry`, `item`, `maxcount`, `incrtime`, `slo
 (116, 2880, 0, 0, 3, 0, 0, 'Weak Flux'),
 (116, 2901, 0, 0, 1, 0, 0, 'Mining Pick'),
 (116, 3466, 0, 0, 4, 0, 0, 'Strong Flux'),
-(116, 3857, 0, 0, 5, 0, 0, 'Coal'),
+(116, 3857, 0, 0, 6, 0, 0, 'Coal'),
 (116, 5956, 0, 0, 2, 0, 0, 'Blacksmith Hammer'),
-(116, 18567, 0, 0, 6, 0, 0, 'Elemental Flux');
+(116, 18567, 0, 0, 5, 0, 0, 'Elemental Flux');
 
 INSERT INTO `spell_script_target` (`entry`, `type`, `targetEntry`, `inverseEffectMask`) VALUES (32061, 1, 17690, 0),(32061, 1, 17689, 0),(32061, 1, 17696, 0),(32061, 1, 17698, 0);
 
@@ -34850,8 +34850,10 @@ UPDATE creature_template SET CreatureTypeFlags = 134217728 WHERE entry=2836;
 UPDATE creature_template SET CreatureTypeFlags = 134217728 WHERE entry=2843;
 UPDATE creature_template SET CreatureTypeFlags = 134217728 WHERE entry=2837;
 UPDATE creature_template SET CreatureTypeFlags = 134217728 WHERE entry=2851;
+UPDATE creature_template SET CreatureTypeFlags = 134217728 WHERE entry=3179;
 UPDATE creature_template SET CreatureTypeFlags = 134217728 WHERE entry=3399;
-UPDATE creature_template SET CreatureTypeFlags = 134217728 WHERE entry IN (3363);
+UPDATE creature_template SET CreatureTypeFlags = 134217728 WHERE entry=3363;
+UPDATE creature_template SET CreatureTypeFlags = 134217728 WHERE entry=1460;
 UPDATE creature_template SET CreatureTypeFlags = 134217728 WHERE entry=11017;
 UPDATE `npc_text_broadcast_text` SET `Prob0` = '1' WHERE `Id` =1606;
 UPDATE `gossip_menu_option` SET `option_text` = 'I require training  Zamja.' WHERE `menu_id` =4747 AND `id` =0;
@@ -34879,11 +34881,11 @@ INSERT INTO creature_movement (id, point, positionx, positiony, positionz, orien
 (128478,1,-6459.147,-1255.7606,180.67938,100,0,0),
 (128478,2,-6459.147,-1255.7606,180.67938,2.745223,30000,840204),
 (128478,3,-6430.3154,-1267.8264,181.13191,100,0,0),
-(128478,4,-6430.3154,-1267.8264,181.13191,0,40000,840201), 
+(128478,4,-6430.3154,-1267.8264,181.13191,0,40000,840201),
 (128479,1,-6459.248,-1253.2255,180.62862,100,0,0),
 (128479,2,-6459.248,-1253.2255,180.62862,3.61878,40000,840202),
 (128479,3,-6422.5645,-1234.2594,181.08156,100,0,0),
-(128479,4,-6422.5645,-1234.2594,181.08156,3.6186,30000,840204), 
+(128479,4,-6422.5645,-1234.2594,181.08156,3.6186,30000,840204),
 (7559,1,-6432.579,-1215.3142,180.87169,100,0,0),
 (7559,2,-6432.579,-1215.3142,180.87169,1.55334,30000,840203),
 (7559,3,-6459.19,-1250.9569,180.5836,100,0,0),
@@ -34909,22 +34911,22 @@ INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalo
 DELETE FROM creature_spawn_entry WHERE entry = 9318;
 UPDATE creature SET id = 9318 WHERE guid IN (7534,7471,7416,7218,7367,7196,81477,81478,81479,81482,81480,81481,81483);
 
-UPDATE npc_vendor SET Slot = 0 WHERE entry IN (15125) AND item = 3770;
-UPDATE npc_vendor SET Slot = 1 WHERE entry IN (15125) AND item = 3771;
-UPDATE npc_vendor SET Slot = 2 WHERE entry IN (15125) AND item = 4599;
-UPDATE npc_vendor SET Slot = 3 WHERE entry IN (15125) AND item = 8952;
-UPDATE npc_vendor SET Slot = 4 WHERE entry IN (15125) AND item = 4538;
-UPDATE npc_vendor SET Slot = 5 WHERE entry IN (15125) AND item = 4539;
-UPDATE npc_vendor SET Slot = 6 WHERE entry IN (15125) AND item = 4602;
-UPDATE npc_vendor SET Slot = 7 WHERE entry IN (15125) AND item = 8953;
-UPDATE npc_vendor SET Slot = 8 WHERE entry IN (15125) AND item = 4606;
-UPDATE npc_vendor SET Slot = 9 WHERE entry IN (15125) AND item = 4607;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (15125) AND item = 4608;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (15125) AND item = 8948;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (15125) AND item = 1205;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (15125) AND item = 1708;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (15125) AND item = 1645;
-UPDATE npc_vendor SET Slot = 15 WHERE entry IN (15125) AND item = 8766;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (15125) AND item = 3770;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (15125) AND item = 3771;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (15125) AND item = 4599;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (15125) AND item = 8952;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (15125) AND item = 4538;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (15125) AND item = 4539;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (15125) AND item = 4602;
+UPDATE npc_vendor SET Slot = 8 WHERE entry IN (15125) AND item = 8953;
+UPDATE npc_vendor SET Slot = 9 WHERE entry IN (15125) AND item = 4606;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (15125) AND item = 4607;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (15125) AND item = 4608;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (15125) AND item = 8948;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (15125) AND item = 1205;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (15125) AND item = 1708;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (15125) AND item = 1645;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (15125) AND item = 8766;
 
 INSERT INTO `spell_script_target` (`entry`, `type`, `targetEntry`) VALUES (9144, 1, 2287);
 INSERT INTO `spell_script_target` (`entry`, `type`, `targetEntry`) VALUES (8603, 1, 3925);
@@ -35694,7 +35696,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `stand_state`, `sheath_
 UPDATE `gameobject` SET `spawntimesecsmin` = 10, `spawntimesecsmax` = 10 WHERE `id` = 175565;
 UPDATE `gameobject` SET `position_x` = -5587.25,`position_y` = -2736.15,`position_z` = -46.6074,`orientation` = 0.715585,`rotation0` = 0,`rotation1` = 0,`rotation2` = 0.350207,`rotation3` = 0.936672 WHERE `guid` = 55586;
 UPDATE `gameobject` SET `position_x` = -5444.84,`position_y` = -2912.98,`position_z` = -52.0082,`orientation` = 2.23402,`rotation0` = 0,`rotation1` = 0,`rotation2` = 0.898794,`rotation3` = 0.438371 WHERE `guid` = 1697;
-UPDATE `gameobject` SET `position_x` = -5613.02,`position_y` = -2088.85,`position_z` = -63.973,`orientation` = 5.46288,`rotation0` = 0,`rotation1` = 0,`rotation2` = -0.398748,`rotation3` = 0.91706 WHERE `guid` = 5481; 
+UPDATE `gameobject` SET `position_x` = -5613.02,`position_y` = -2088.85,`position_z` = -63.973,`orientation` = 5.46288,`rotation0` = 0,`rotation1` = 0,`rotation2` = -0.398748,`rotation3` = 0.91706 WHERE `guid` = 5481;
 INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES (175565, 1086, 0, 'Thousand Needles - Alien Egg');
 DELETE FROM `pool_gameobject` WHERE `guid` IN (5481,1697,55586);
 
@@ -35911,88 +35913,88 @@ SELECT guid,id FROM creature WHERE id in (11745) union SELECT guid,11747 FROM cr
 SELECT guid,id FROM creature WHERE id in (11747) union SELECT guid,11745 FROM creature WHERE id in (11747);
 UPDATE creature SET id = 0 WHERE id IN (11745,11747);
 
-UPDATE npc_vendor SET Slot = 0  WHERE entry IN (3364) AND item = 2320;
-UPDATE npc_vendor SET Slot = 1  WHERE entry IN (3364) AND item = 2321;
-UPDATE npc_vendor SET Slot = 2  WHERE entry IN (3364) AND item = 4291;
-UPDATE npc_vendor SET Slot = 3  WHERE entry IN (3364) AND item = 8343;
-UPDATE npc_vendor SET Slot = 4  WHERE entry IN (3364) AND item = 14341;
-UPDATE npc_vendor SET Slot = 5  WHERE entry IN (3364) AND item = 38426;
-UPDATE npc_vendor SET Slot = 6  WHERE entry IN (3364) AND item = 2324;
-UPDATE npc_vendor SET Slot = 7  WHERE entry IN (3364) AND item = 2604;
-UPDATE npc_vendor SET Slot = 8  WHERE entry IN (3364) AND item = 6260;
-UPDATE npc_vendor SET Slot = 9  WHERE entry IN (3364) AND item = 2605;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (3364) AND item = 4341;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (3364) AND item = 4340;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (3364) AND item = 6261;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (3364) AND item = 2325;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (3364) AND item = 4342;
-UPDATE npc_vendor SET Slot = 15 WHERE entry IN (3364) AND item = 10290;
-UPDATE npc_vendor SET Slot = 16 WHERE entry IN (3364) AND item = 5772;
-UPDATE npc_vendor SET Slot = 17 WHERE entry IN (3364) AND item = 6270;
-UPDATE npc_vendor SET Slot = 18 WHERE entry IN (3364) AND item = 6274;
-UPDATE npc_vendor SET Slot = 19 WHERE entry IN (3364) AND item = 10314;
-UPDATE npc_vendor SET Slot = 20 WHERE entry IN (3364) AND item = 10317;
+UPDATE npc_vendor SET Slot = 1  WHERE entry IN (3364) AND item = 2320;
+UPDATE npc_vendor SET Slot = 2  WHERE entry IN (3364) AND item = 2321;
+UPDATE npc_vendor SET Slot = 3  WHERE entry IN (3364) AND item = 4291;
+UPDATE npc_vendor SET Slot = 4  WHERE entry IN (3364) AND item = 8343;
+UPDATE npc_vendor SET Slot = 5  WHERE entry IN (3364) AND item = 14341;
+UPDATE npc_vendor SET Slot = 6  WHERE entry IN (3364) AND item = 38426;
+UPDATE npc_vendor SET Slot = 7  WHERE entry IN (3364) AND item = 2324;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (3364) AND item = 2604;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (3364) AND item = 6260;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (3364) AND item = 2605;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (3364) AND item = 4341;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (3364) AND item = 4340;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (3364) AND item = 6261;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (3364) AND item = 2325;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (3364) AND item = 4342;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (3364) AND item = 10290;
+UPDATE npc_vendor SET Slot = 17 WHERE entry IN (3364) AND item = 5772;
+UPDATE npc_vendor SET Slot = 18 WHERE entry IN (3364) AND item = 6270;
+UPDATE npc_vendor SET Slot = 19 WHERE entry IN (3364) AND item = 6274;
+UPDATE npc_vendor SET Slot = 20 WHERE entry IN (3364) AND item = 10314;
+UPDATE npc_vendor SET Slot = 21 WHERE entry IN (3364) AND item = 10317;
 
-UPDATE npc_vendor SET Slot = 0  WHERE entry IN (3366) AND item = 7005;
-UPDATE npc_vendor SET Slot = 1  WHERE entry IN (3366) AND item = 4289;
-UPDATE npc_vendor SET Slot = 2  WHERE entry IN (3366) AND item = 2320;
-UPDATE npc_vendor SET Slot = 3  WHERE entry IN (3366) AND item = 2321;
-UPDATE npc_vendor SET Slot = 4  WHERE entry IN (3366) AND item = 4291;
-UPDATE npc_vendor SET Slot = 5  WHERE entry IN (3366) AND item = 8343;
-UPDATE npc_vendor SET Slot = 6  WHERE entry IN (3366) AND item = 14341;
-UPDATE npc_vendor SET Slot = 7  WHERE entry IN (3366) AND item = 38426;
-UPDATE npc_vendor SET Slot = 8  WHERE entry IN (3366) AND item = 2325;
-UPDATE npc_vendor SET Slot = 9  WHERE entry IN (3366) AND item = 6260;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (3366) AND item = 2604;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (3366) AND item = 2605;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (3366) AND item = 4340;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (3366) AND item = 4341;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (3366) AND item = 6261;
-UPDATE npc_vendor SET Slot = 15 WHERE entry IN (3366) AND item = 4342;
-UPDATE npc_vendor SET Slot = 16 WHERE entry IN (3366) AND item = 10290;
-UPDATE npc_vendor SET Slot = 17 WHERE entry IN (3366) AND item = 18731;
+UPDATE npc_vendor SET Slot = 1  WHERE entry IN (3366) AND item = 7005;
+UPDATE npc_vendor SET Slot = 2  WHERE entry IN (3366) AND item = 4289;
+UPDATE npc_vendor SET Slot = 3  WHERE entry IN (3366) AND item = 2320;
+UPDATE npc_vendor SET Slot = 4  WHERE entry IN (3366) AND item = 2321;
+UPDATE npc_vendor SET Slot = 5  WHERE entry IN (3366) AND item = 4291;
+UPDATE npc_vendor SET Slot = 6  WHERE entry IN (3366) AND item = 8343;
+UPDATE npc_vendor SET Slot = 7  WHERE entry IN (3366) AND item = 14341;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (3366) AND item = 38426;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (3366) AND item = 2325;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (3366) AND item = 6260;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (3366) AND item = 2604;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (3366) AND item = 2605;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (3366) AND item = 4340;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (3366) AND item = 4341;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (3366) AND item = 6261;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (3366) AND item = 4342;
+UPDATE npc_vendor SET Slot = 17 WHERE entry IN (3366) AND item = 10290;
+UPDATE npc_vendor SET Slot = 18 WHERE entry IN (3366) AND item = 18731;
 
-UPDATE npc_vendor SET Slot = 0  WHERE entry IN (3316) AND item = 2160;
-UPDATE npc_vendor SET Slot = 1  WHERE entry IN (3316) AND item = 3591;
-UPDATE npc_vendor SET Slot = 2  WHERE entry IN (3316) AND item = 2159;
-UPDATE npc_vendor SET Slot = 3  WHERE entry IN (3316) AND item = 2156;
-UPDATE npc_vendor SET Slot = 4  WHERE entry IN (3316) AND item = 3592;
-UPDATE npc_vendor SET Slot = 5  WHERE entry IN (3316) AND item = 2158;
-UPDATE npc_vendor SET Slot = 6  WHERE entry IN (3316) AND item = 2141;
-UPDATE npc_vendor SET Slot = 7  WHERE entry IN (3316) AND item = 2142;
-UPDATE npc_vendor SET Slot = 8  WHERE entry IN (3316) AND item = 2146;
-UPDATE npc_vendor SET Slot = 9  WHERE entry IN (3316) AND item = 2143;
-UPDATE npc_vendor SET Slot = 10 WHERE entry IN (3316) AND item = 2144;
-UPDATE npc_vendor SET Slot = 11 WHERE entry IN (3316) AND item = 2145;
-UPDATE npc_vendor SET Slot = 12 WHERE entry IN (3316) AND item = 2429;
-UPDATE npc_vendor SET Slot = 13 WHERE entry IN (3316) AND item = 3593;
-UPDATE npc_vendor SET Slot = 14 WHERE entry IN (3316) AND item = 2431;
-UPDATE npc_vendor SET Slot = 15 WHERE entry IN (3316) AND item = 2432;
-UPDATE npc_vendor SET Slot = 16 WHERE entry IN (3316) AND item = 3594;
-UPDATE npc_vendor SET Slot = 17 WHERE entry IN (3316) AND item = 2434;
-UPDATE npc_vendor SET Slot = 18 WHERE entry IN (3316) AND item = 3889;
-UPDATE npc_vendor SET Slot = 19 WHERE entry IN (3316) AND item = 2463;
-UPDATE npc_vendor SET Slot = 20 WHERE entry IN (3316) AND item = 2464;
-UPDATE npc_vendor SET Slot = 21 WHERE entry IN (3316) AND item = 2465;
-UPDATE npc_vendor SET Slot = 22 WHERE entry IN (3316) AND item = 2467;
-UPDATE npc_vendor SET Slot = 23 WHERE entry IN (3316) AND item = 2468;
-UPDATE npc_vendor SET Slot = 24 WHERE entry IN (3316) AND item = 2469;
-UPDATE npc_vendor SET Slot = 25 WHERE entry IN (3316) AND item = 3890;
-UPDATE npc_vendor SET Slot = 26 WHERE entry IN (3316) AND item = 2435;
-UPDATE npc_vendor SET Slot = 27 WHERE entry IN (3316) AND item = 3587;
-UPDATE npc_vendor SET Slot = 28 WHERE entry IN (3316) AND item = 2437;
-UPDATE npc_vendor SET Slot = 29 WHERE entry IN (3316) AND item = 2438;
-UPDATE npc_vendor SET Slot = 30 WHERE entry IN (3316) AND item = 3588;
-UPDATE npc_vendor SET Slot = 31 WHERE entry IN (3316) AND item = 2440;
-UPDATE npc_vendor SET Slot = 32 WHERE entry IN (3316) AND item = 3892;
-UPDATE npc_vendor SET Slot = 33 WHERE entry IN (3316) AND item = 2470;
-UPDATE npc_vendor SET Slot = 34 WHERE entry IN (3316) AND item = 2471;
-UPDATE npc_vendor SET Slot = 35 WHERE entry IN (3316) AND item = 2472;
-UPDATE npc_vendor SET Slot = 36 WHERE entry IN (3316) AND item = 2473;
-UPDATE npc_vendor SET Slot = 37 WHERE entry IN (3316) AND item = 2474;
-UPDATE npc_vendor SET Slot = 38 WHERE entry IN (3316) AND item = 2475;
-UPDATE npc_vendor SET Slot = 39 WHERE entry IN (3316) AND item = 3893;
-UPDATE npc_vendor SET Slot = 40 WHERE entry IN (3316) AND item = 12256;
+UPDATE npc_vendor SET Slot = 1  WHERE entry IN (3316) AND item = 2160;
+UPDATE npc_vendor SET Slot = 2  WHERE entry IN (3316) AND item = 3591;
+UPDATE npc_vendor SET Slot = 3  WHERE entry IN (3316) AND item = 2159;
+UPDATE npc_vendor SET Slot = 4  WHERE entry IN (3316) AND item = 2156;
+UPDATE npc_vendor SET Slot = 5  WHERE entry IN (3316) AND item = 3592;
+UPDATE npc_vendor SET Slot = 6  WHERE entry IN (3316) AND item = 2158;
+UPDATE npc_vendor SET Slot = 7  WHERE entry IN (3316) AND item = 2141;
+UPDATE npc_vendor SET Slot = 8  WHERE entry IN (3316) AND item = 2142;
+UPDATE npc_vendor SET Slot = 9  WHERE entry IN (3316) AND item = 2146;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (3316) AND item = 2143;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (3316) AND item = 2144;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (3316) AND item = 2145;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (3316) AND item = 2429;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (3316) AND item = 3593;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (3316) AND item = 2431;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (3316) AND item = 2432;
+UPDATE npc_vendor SET Slot = 17 WHERE entry IN (3316) AND item = 3594;
+UPDATE npc_vendor SET Slot = 18 WHERE entry IN (3316) AND item = 2434;
+UPDATE npc_vendor SET Slot = 19 WHERE entry IN (3316) AND item = 3889;
+UPDATE npc_vendor SET Slot = 20 WHERE entry IN (3316) AND item = 2463;
+UPDATE npc_vendor SET Slot = 21 WHERE entry IN (3316) AND item = 2464;
+UPDATE npc_vendor SET Slot = 22 WHERE entry IN (3316) AND item = 2465;
+UPDATE npc_vendor SET Slot = 23 WHERE entry IN (3316) AND item = 2467;
+UPDATE npc_vendor SET Slot = 24 WHERE entry IN (3316) AND item = 2468;
+UPDATE npc_vendor SET Slot = 25 WHERE entry IN (3316) AND item = 2469;
+UPDATE npc_vendor SET Slot = 26 WHERE entry IN (3316) AND item = 3890;
+UPDATE npc_vendor SET Slot = 27 WHERE entry IN (3316) AND item = 2435;
+UPDATE npc_vendor SET Slot = 28 WHERE entry IN (3316) AND item = 3587;
+UPDATE npc_vendor SET Slot = 29 WHERE entry IN (3316) AND item = 2437;
+UPDATE npc_vendor SET Slot = 30 WHERE entry IN (3316) AND item = 2438;
+UPDATE npc_vendor SET Slot = 31 WHERE entry IN (3316) AND item = 3588;
+UPDATE npc_vendor SET Slot = 32 WHERE entry IN (3316) AND item = 2440;
+UPDATE npc_vendor SET Slot = 33 WHERE entry IN (3316) AND item = 3892;
+UPDATE npc_vendor SET Slot = 34 WHERE entry IN (3316) AND item = 2470;
+UPDATE npc_vendor SET Slot = 35 WHERE entry IN (3316) AND item = 2471;
+UPDATE npc_vendor SET Slot = 36 WHERE entry IN (3316) AND item = 2472;
+UPDATE npc_vendor SET Slot = 37 WHERE entry IN (3316) AND item = 2473;
+UPDATE npc_vendor SET Slot = 38 WHERE entry IN (3316) AND item = 2474;
+UPDATE npc_vendor SET Slot = 39 WHERE entry IN (3316) AND item = 2475;
+UPDATE npc_vendor SET Slot = 40 WHERE entry IN (3316) AND item = 3893;
+UPDATE npc_vendor SET Slot = 41 WHERE entry IN (3316) AND item = 12256;
 
 UPDATE creature_spell_list SET TargetId = '105' WHERE Id = '1987501' AND Position = '0' AND SpellId = '29405';
 UPDATE creature_spell_list SET TargetId = '208' WHERE Id = '1987201' AND Position = '1' AND SpellId = '29564';
@@ -36774,9 +36776,6 @@ INSERT INTO `reference_loot_template_names` (`entry`, `name`) VALUES
 
 UPDATE `creature_template` SET `Faction` = '370' WHERE `Entry` IN (15747,15748,15749,15750,15751,15752,15753,15754,15756,15757,15758,15759,15806,15807,15808,
 15809,15810,15811,15812,15813,15814,15815,15816,15817,16609,17451,17470,18479);
-UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`&~1048576 WHERE `Faction` = 370;
-UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`&~1048576 WHERE `entry` IN (15414,15421,15422,15423,15424);
-UPDATE `gameobject_template` SET `ExtraFlags` = `ExtraFlags`&~2 WHERE `entry` = 180524;
 
 REPLACE INTO `creature_loot_template` (`entry`, `item`, `chanceorquestchance`, `groupid`, `mincountorref`, `maxcount`) SELECT `entry`, 4614, 0.05, 0, 1, 1 FROM `creature_template` WHERE `entry` IN (
 3983,3977,3976,3975,7874,3974,7873,7872,7353,7348,7347,7345,7344,7342,7337,7335,7332,7329,7328,7327,7175,2783,7030,2906,6575,6427,5085,4652,4543,4542,6068,5601,5771,5760,5643,6238,5622,5600,5184,5057,
@@ -36801,5 +36800,297 @@ UPDATE `creature_template` SET `CallForHelp` = 5 WHERE `entry` = 12922;
 UPDATE `creature_loot_template` SET `condition_id` = 5078 WHERE `item` = 12558;
 DELETE FROM `conditions` WHERE `condition_entry` = 5078 AND `type` = 8;
 INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `value3`, `value4`, `flags`, `comments`) VALUES (5078, 8, 4741, 0, 0, 0, 0, 'Quest ID 4741 Rewarded');
+
+UPDATE creature_template SET CallForHelp = '6' WHERE entry IN (16523, 16593, 16594, 16700, 17420, 17694);
+UPDATE creature_template SET CallForHelp = '6' WHERE entry IN (20591, 20582, 20576, 20587, 20589, 20577);
+
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '40' WHERE `entry` =33190 AND `item` =45087;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '40' WHERE `entry` =33449 AND `item` =45087;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '40' WHERE `entry` =34175 AND `item` =45087;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '100', `maxcount` = '3' WHERE `entry` =33693 AND `item` =45087;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '60', `maxcount` = '3' WHERE `entry` =33955 AND `item` =45087;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '50', `maxcount` = '3' WHERE `entry` =34003 AND `item` =45087;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '50' WHERE `entry` =33724 AND `item` =45087;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '50' WHERE `entry` =33885 AND `item` =45087;
+UPDATE `creature_template` SET `LootId` = '32857' WHERE `Entry` =32857;
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES
+(32857, 45322, 0, 2, 1, 1, 0, 'Cloak of the Iron Council'),
+(32857, 45324, 0, 1, 1, 1, 0, 'Leggings of Swift Reflexes'),
+(32857, 45329, 0, 2, 1, 1, 0, 'Circlet of True Sight'),
+(32857, 45330, 0, 1, 1, 1, 0, 'Greaves of Iron Intensity'),
+(32857, 45331, 0, 2, 1, 1, 0, 'Rune-Etched Nightblade'),
+(32857, 45332, 0, 1, 1, 1, 0, 'Stormtip'),
+(32857, 45333, 0, 2, 1, 1, 0, 'Belt of the Iron Servant'),
+(32857, 45378, 0, 2, 1, 1, 0, 'Boots of the Petrified Forest'),
+(32857, 45418, 0, 1, 1, 1, 0, 'Lady Maye''s Sapphire Ring'),
+(32857, 45423, 0, 1, 1, 1, 0, 'Runetouch Wristwraps'),
+(32857, 45447, 0, 3, 1, 1, 0, 'Watchful Eye of Fate'),
+(32857, 45448, 0, 3, 1, 1, 0, 'Perilous Bite'),
+(32857, 45449, 0, 3, 1, 1, 0, 'The Masticator'),
+(32857, 45455, 0, 3, 1, 1, 0, 'Belt of the Crystal Tree'),
+(32857, 45456, 0, 3, 1, 1, 0, 'Loop of the Agile'),
+(32857, 47241, 100, 0, 1, 1, 0, 'Emblem of Triumph');
+UPDATE `creature_template` SET `LootId` = '33694' WHERE `Entry` =33694;
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES
+(33694, 45038, 10, 0, 1, 1, 0, 'Fragment of Val''anyr'),
+(33694, 45087, 40, 0, 1, 1, 0, 'Runed Orb'),
+(33694, 45089, 5, 0, -45089, 1, 0, 'TEMP name 45089 reference_loot_template'),
+(33694, 45315, 0, 3, 1, 1, 0, 'Stonerender'),
+(33694, 45319, 0, 2, 1, 1, 0, 'Cloak of the Makers'),
+(33694, 45320, 0, 1, 1, 1, 0, 'Shoulderplates of the Eternal'),
+(33694, 45325, 0, 2, 1, 1, 0, 'Gloves of the Stonereaper'),
+(33694, 45326, 0, 2, 1, 1, 0, 'Platinum Band of the Aesir'),
+(33694, 45327, 0, 3, 1, 1, 0, 'Siren''s Cry'),
+(33694, 45334, 0, 3, 1, 1, 0, 'Unbreakable Chestguard'),
+(33694, 45434, 0, 1, 1, 1, 0, 'Greaves of the Rockmender'),
+(33694, 45435, 0, 3, 1, 1, 0, 'Cowl of the Absolute'),
+(33694, 45436, 0, 1, 1, 1, 0, 'Libram of the Resolute'),
+(33694, 45437, 0, 3, 1, 1, 0, 'Runescribed Blade'),
+(33694, 45438, 0, 2, 1, 1, 0, 'Ring of the Faithful Servant'),
+(33694, 45439, 0, 1, 1, 1, 0, 'Unwavering Stare'),
+(33694, 45440, 0, 1, 1, 1, 0, 'Amice of the Stoic Watch'),
+(33694, 45441, 0, 2, 1, 1, 0, 'Sandals of the Ancient Keeper'),
+(33694, 47241, 100, 0, 1, 1, 0, 'Emblem of Triumph');
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` =1307;
+
+DELETE FROM npc_vendor WHERE entry IN (1448);
+INSERT INTO npc_vendor (entry, item, maxcount, incrtime, slot, ExtendedCost, condition_id, comments) VALUES
+(1448,5956,0,0,1,0,0,'Blacksmith Hammer'),
+(1448,2901,0,0,2,0,0,'Mining Pick'),
+(1448,4399,0,0,3,0,0,'Wooden Stock'),
+(1448,4400,0,0,4,0,0,'Heavy Stock'),
+(1448,40533,0,0,5,0,0,'Walnut Stock'),
+(1448,39684,0,0,6,0,0,'Hair Trigger'),
+(1448,2880,0,0,7,0,0,'Weak Flux'),
+(1448,3466,0,0,8,0,0,'Strong Flux'),
+(1448,10648,0,0,9,0,0,'Common Parchment'),
+(1448,10647,0,0,10,0,0,'Engineer\'s Ink'),
+(1448,4382,1,10800,11,0,0,'Bronze Framework'),
+(1448,4361,2,9000,12,0,0,'Copper Tube'),
+(1448,4371,2,9000,13,0,0,'Bronze Tube'),
+(1448,4363,2,9000,14,0,0,'Copper Modulator'),
+(1448,4357,4,9000,15,0,0,'Rough Blasting Powder'),
+(1448,4364,4,9000,16,0,0,'Coarse Blasting Powder'),
+(1448,4389,1,9000,17,0,0,'Gyrochronatom'),
+(1448,4404,3,9000,18,0,0,'Silver Contact'),
+(1448,159,0,0,19,0,0,'Refreshing Spring Water'),
+(1448,1179,0,0,20,0,0,'Ice Cold Milk'),
+(1448,1205,0,0,21,0,0,'Melon Juice'),
+(1448,4498,0,0,22,0,0,'Brown Leather Satchel'),
+(1448,4497,0,0,23,0,0,'Heavy Brown Bag'),
+(1448,2515,0,0,24,0,0,'Sharp Arrow'),
+(1448,3030,0,0,25,0,0,'Razor Arrow'),
+(1448,2519,0,0,26,0,0,'Heavy Shot'),
+(1448,3033,0,0,27,0,0,'Solid Shot'),
+(1448,25873,0,0,28,0,0,'Keen Throwing Knife'),
+(1448,29009,0,0,29,0,0,'Heavy Throwing Dagger'),
+(1448,29008,0,0,30,0,0,'Sharp Throwing Axe'),
+(1448,25875,0,0,31,0,0,'Deadly Throwing Axe'),
+(1448,20970,1,9000,32,0,0,'Design: Pendant of the Agate Shield');
+
+DELETE FROM `creature_movement` WHERE `Id` = 9980;
+UPDATE creature SET movementtype = 1, spawndist = 1 WHERE id = 3178;
+
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '-25', `maxcount` = '2' WHERE `item` =35229;
+
+UPDATE npc_vendor SET Slot = 1 WHERE entry = 3400 AND item = 159;
+UPDATE npc_vendor SET Slot = 2 WHERE entry = 3400 AND item = 30817;
+UPDATE npc_vendor SET Slot = 3 WHERE entry = 3400 AND item = 2678;
+UPDATE npc_vendor SET Slot = 4 WHERE entry = 3400 AND item = 21099;
+UPDATE npc_vendor SET Slot = 5 WHERE entry = 3400 AND item = 21219;
+UPDATE npc_vendor SET Slot = 1 WHERE entry = 3368 AND item = 117;
+UPDATE npc_vendor SET Slot = 2 WHERE entry = 3368 AND item = 2287;
+UPDATE npc_vendor SET Slot = 3 WHERE entry = 3368 AND item = 3770;
+UPDATE npc_vendor SET Slot = 4 WHERE entry = 3368 AND item = 3771;
+UPDATE npc_vendor SET Slot = 5 WHERE entry = 3368 AND item = 4599;
+UPDATE npc_vendor SET Slot = 6 WHERE entry = 3368 AND item = 8952;
+UPDATE npc_vendor SET Slot = 7 WHERE entry = 3368 AND item = 27854;
+UPDATE npc_vendor SET Slot = 8 WHERE entry = 3368 AND item = 33454;
+UPDATE npc_vendor SET Slot = 9 WHERE entry = 3368 AND item = 35953;
+UPDATE npc_vendor SET Slot = 1 WHERE entry = 2848 AND item = 3371;
+UPDATE npc_vendor SET Slot = 2 WHERE entry = 2848 AND item = 3372;
+UPDATE npc_vendor SET Slot = 3 WHERE entry = 2848 AND item = 8925;
+UPDATE npc_vendor SET Slot = 4 WHERE entry = 2848 AND item = 18256;
+UPDATE npc_vendor SET Slot = 5 WHERE entry = 2848 AND item = 40411;
+UPDATE npc_vendor SET Slot = 6 WHERE entry = 2848 AND item = 1710;
+UPDATE npc_vendor SET Slot = 7 WHERE entry = 2848 AND item = 3827;
+UPDATE npc_vendor SET Slot = 8 WHERE entry = 2848 AND item = 6056;
+UPDATE npc_vendor SET Slot = 9 WHERE entry = 2848 AND item = 6057;
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (24934) AND item = 159;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (24934) AND item = 1179;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (24934) AND item = 1205;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (24934) AND item = 1708;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (24934) AND item = 1645;
+UPDATE npc_vendor SET Slot = 6 WHERE entry IN (24934) AND item = 8766;
+UPDATE npc_vendor SET Slot = 7 WHERE entry IN (24934) AND item = 7228;
+UPDATE npc_vendor SET Slot = 8 WHERE entry IN (24934) AND item = 2070;
+UPDATE npc_vendor SET Slot = 9 WHERE entry IN (24934) AND item = 414;
+UPDATE npc_vendor SET Slot = 10 WHERE entry IN (24934) AND item = 422;
+UPDATE npc_vendor SET Slot = 11 WHERE entry IN (24934) AND item = 1707;
+UPDATE npc_vendor SET Slot = 12 WHERE entry IN (24934) AND item = 3927;
+UPDATE npc_vendor SET Slot = 13 WHERE entry IN (24934) AND item = 8932;
+UPDATE npc_vendor SET Slot = 14 WHERE entry IN (24934) AND item = 4540;
+UPDATE npc_vendor SET Slot = 15 WHERE entry IN (24934) AND item = 4541;
+UPDATE npc_vendor SET Slot = 16 WHERE entry IN (24934) AND item = 4542;
+UPDATE npc_vendor SET Slot = 17 WHERE entry IN (24934) AND item = 4544;
+UPDATE npc_vendor SET Slot = 18 WHERE entry IN (24934) AND item = 4601;
+UPDATE npc_vendor SET Slot = 19 WHERE entry IN (24934) AND item = 8950;
+UPDATE npc_vendor SET Slot = 20 WHERE entry IN (24934) AND item = 4536;
+UPDATE npc_vendor SET Slot = 21 WHERE entry IN (24934) AND item = 4537;
+UPDATE npc_vendor SET Slot = 22 WHERE entry IN (24934) AND item = 4538;
+UPDATE npc_vendor SET Slot = 23 WHERE entry IN (24934) AND item = 4539;
+UPDATE npc_vendor SET Slot = 24 WHERE entry IN (24934) AND item = 4602;
+UPDATE npc_vendor SET Slot = 25 WHERE entry IN (24934) AND item = 8953;
+DELETE FROM `npc_vendor` WHERE entry = 277;
+INSERT INTO `npc_vendor` (`entry`, `item`, `maxcount`, `incrtime`, `slot`, `ExtendedCost`, `condition_id`, `comments`) VALUES
+(277,1941,0,0,1,0,0,'Cask of Merlot'),
+(277,2723,0,0,2,0,0,'Bottle of Pinot Noir'),
+(277,2593,0,0,3,0,0,'Flask of Port'),
+(277,2596,0,0,4,0,0,'Skin of Dwarven Stout'),
+(277,2594,0,0,5,0,0,'Flagon of Mead'),
+(277,2595,0,0,6,0,0,'Jug of Bourbon');
+DELETE FROM `npc_vendor` WHERE entry = 66;
+INSERT INTO `npc_vendor` (`entry`, `item`, `maxcount`, `incrtime`, `slot`, `ExtendedCost`, `condition_id`, `comments`) VALUES
+(66,6270,1,9000,1,0,0,'Pattern: Blue Linen Vest'),
+(66,7005,0,0,2,0,0,'Skinning Knife'),
+(66,2901,0,0,3,0,0,'Mining Pick'),
+(66,5956,0,0,4,0,0,'Blacksmith Hammer'),
+(66,6256,0,0,5,0,0,'Fishing Pole'),
+(66,6217,0,0,6,0,0,'Copper Rod'),
+(66,2678,0,0,7,0,0,'Mild Spices'),
+(66,30817,0,0,8,0,0,'Simple Flour'),
+(66,2320,0,0,9,0,0,'Coarse Thread'),
+(66,2880,0,0,10,0,0,'Weak Flux'),
+(66,3371,0,0,11,0,0,'Empty Vial'),
+(66,4289,0,0,12,0,0,'Salt'),
+(66,6529,0,0,13,0,0,'Shiny Bauble'),
+(66,2604,0,0,14,0,0,'Red Dye'),
+(66,2324,0,0,15,0,0,'Bleach'),
+(66,6260,0,0,16,0,0,'Blue Dye'),
+(66,10648,0,0,17,0,0,'Common Parchment'),
+(66,39354,0,0,18,0,0,'Light Parchment'),
+(66,6325,0,0,19,0,0,'Recipe: Brilliant Smallfish'),
+(66,6328,0,0,20,0,0,'Recipe: Longjaw Mud Snapper');
+UPDATE npc_vendor_template SET Slot = 1  WHERE entry IN (10000) AND item = 7005;
+UPDATE npc_vendor_template SET Slot = 2  WHERE entry IN (10000) AND item = 6256;
+UPDATE npc_vendor_template SET Slot = 3  WHERE entry IN (10000) AND item = 2901;
+UPDATE npc_vendor_template SET Slot = 4  WHERE entry IN (10000) AND item = 5956;
+UPDATE npc_vendor_template SET Slot = 5  WHERE entry IN (10000) AND item = 6217;
+UPDATE npc_vendor_template SET Slot = 6  WHERE entry IN (10000) AND item = 2320;
+UPDATE npc_vendor_template SET Slot = 7  WHERE entry IN (10000) AND item = 2321;
+UPDATE npc_vendor_template SET Slot = 8  WHERE entry IN (10000) AND item = 4291;
+UPDATE npc_vendor_template SET Slot = 9  WHERE entry IN (10000) AND item = 8343;
+UPDATE npc_vendor_template SET Slot = 10 WHERE entry IN (10000) AND item = 14341;
+UPDATE npc_vendor_template SET Slot = 11 WHERE entry IN (10000) AND item = 2678;
+UPDATE npc_vendor_template SET Slot = 12 WHERE entry IN (10000) AND item = 2880;
+UPDATE npc_vendor_template SET Slot = 13 WHERE entry IN (10000) AND item = 3466;
+UPDATE npc_vendor_template SET Slot = 14 WHERE entry IN (10000) AND item = 3857;
+UPDATE npc_vendor_template SET Slot = 15 WHERE entry IN (10000) AND item = 2324;
+UPDATE npc_vendor_template SET Slot = 16 WHERE entry IN (10000) AND item = 2604;
+UPDATE npc_vendor_template SET Slot = 17 WHERE entry IN (10000) AND item = 2325;
+UPDATE npc_vendor_template SET Slot = 18 WHERE entry IN (10000) AND item = 4341;
+UPDATE npc_vendor_template SET Slot = 19 WHERE entry IN (10000) AND item = 4342;
+UPDATE npc_vendor_template SET Slot = 20 WHERE entry IN (10000) AND item = 4340;
+UPDATE npc_vendor_template SET Slot = 21 WHERE entry IN (10000) AND item = 3371;
+UPDATE npc_vendor_template SET Slot = 22 WHERE entry IN (10000) AND item = 3372;
+UPDATE npc_vendor_template SET Slot = 23 WHERE entry IN (10000) AND item = 8925;
+UPDATE npc_vendor_template SET Slot = 24 WHERE entry IN (10000) AND item = 4289;
+UPDATE npc_vendor_template SET Slot = 25 WHERE entry IN (10000) AND item = 4399;
+UPDATE npc_vendor_template SET Slot = 26 WHERE entry IN (10000) AND item = 4400;
+UPDATE npc_vendor_template SET Slot = 27 WHERE entry IN (10000) AND item = 6530;
+UPDATE npc_vendor_template SET Slot = 28 WHERE entry IN (10000) AND item = 6532;
+UPDATE npc_vendor_template SET Slot = 29 WHERE entry IN (10000) AND item = 17034;
+UPDATE npc_vendor_template SET Slot = 30 WHERE entry IN (10000) AND item = 17035;
+UPDATE npc_vendor_template SET Slot = 31 WHERE entry IN (10000) AND item = 17036;
+UPDATE npc_vendor_template SET Slot = 32 WHERE entry IN (10000) AND item = 17037;
+UPDATE npc_vendor_template SET Slot = 33 WHERE entry IN (10000) AND item = 17038;
+UPDATE npc_vendor_template SET Slot = 34 WHERE entry IN (10000) AND item = 22147;
+UPDATE npc_vendor_template SET Slot = 35 WHERE entry IN (10000) AND item = 17031;
+UPDATE npc_vendor_template SET Slot = 36 WHERE entry IN (10000) AND item = 17032;
+UPDATE npc_vendor_template SET Slot = 37 WHERE entry IN (10000) AND item = 17020;
+UPDATE npc_vendor_template SET Slot = 38 WHERE entry IN (10000) AND item = 17030;
+UPDATE npc_vendor_template SET Slot = 39 WHERE entry IN (10000) AND item = 17033;
+UPDATE npc_vendor_template SET Slot = 40 WHERE entry IN (10000) AND item = 17028;
+UPDATE npc_vendor_template SET Slot = 41 WHERE entry IN (10000) AND item = 17029;
+UPDATE npc_vendor_template SET Slot = 42 WHERE entry IN (10000) AND item = 17021;
+UPDATE npc_vendor_template SET Slot = 43 WHERE entry IN (10000) AND item = 17026;
+UPDATE npc_vendor_template SET Slot = 44 WHERE entry IN (10000) AND item = 22148;
+UPDATE npc_vendor_template SET Slot = 45 WHERE entry IN (10000) AND item = 5565;
+UPDATE npc_vendor_template SET Slot = 46 WHERE entry IN (10000) AND item = 16583;
+UPDATE npc_vendor_template SET Slot = 47 WHERE entry IN (10000) AND item = 21177;
+UPDATE npc_vendor_template SET Slot = 48 WHERE entry IN (10000) AND item = 37201;
+UPDATE npc_vendor_template SET Slot = 1  WHERE entry IN (10001) AND item = 4600;
+UPDATE npc_vendor_template SET Slot = 2  WHERE entry IN (10001) AND item = 159;
+UPDATE npc_vendor_template SET Slot = 3  WHERE entry IN (10001) AND item = 1179;
+UPDATE npc_vendor_template SET Slot = 4  WHERE entry IN (10001) AND item = 1205;
+UPDATE npc_vendor_template SET Slot = 5  WHERE entry IN (10001) AND item = 1708;
+UPDATE npc_vendor_template SET Slot = 6  WHERE entry IN (10001) AND item = 1645;
+UPDATE npc_vendor_template SET Slot = 7  WHERE entry IN (10001) AND item = 8766;
+UPDATE npc_vendor_template SET Slot = 8  WHERE entry IN (10001) AND item = 787;
+UPDATE npc_vendor_template SET Slot = 9  WHERE entry IN (10001) AND item = 4592;
+UPDATE npc_vendor_template SET Slot = 10 WHERE entry IN (10001) AND item = 4593;
+UPDATE npc_vendor_template SET Slot = 11 WHERE entry IN (10001) AND item = 4594;
+UPDATE npc_vendor_template SET Slot = 12 WHERE entry IN (10001) AND item = 21552;
+UPDATE npc_vendor_template SET Slot = 13 WHERE entry IN (10001) AND item = 8957;
+UPDATE npc_vendor_template SET Slot = 14 WHERE entry IN (10001) AND item = 4540;
+UPDATE npc_vendor_template SET Slot = 15 WHERE entry IN (10001) AND item = 4541;
+UPDATE npc_vendor_template SET Slot = 16 WHERE entry IN (10001) AND item = 4542;
+UPDATE npc_vendor_template SET Slot = 17 WHERE entry IN (10001) AND item = 4544;
+UPDATE npc_vendor_template SET Slot = 18 WHERE entry IN (10001) AND item = 4601;
+UPDATE npc_vendor_template SET Slot = 19 WHERE entry IN (10001) AND item = 8950;
+UPDATE npc_vendor_template SET Slot = 20 WHERE entry IN (10001) AND item = 30817;
+UPDATE npc_vendor_template SET Slot = 21 WHERE entry IN (10001) AND item = 2678;
+
+DELETE FROM `creature` WHERE `guid` = 127236;
+DELETE FROM `creature` WHERE `guid` = 127237;
+DELETE FROM `creature` WHERE `guid` = 127252;
+DELETE FROM `creature` WHERE `guid` = 127253;
+DELETE FROM `creature` WHERE `guid` = 127241;
+DELETE FROM `creature` WHERE `guid` = 127244;
+DELETE FROM `creature` WHERE `guid` = 127245;
+DELETE FROM `creature` WHERE `guid` = 127246;
+DELETE FROM `creature` WHERE `guid` = 127247;
+DELETE FROM `creature` WHERE `guid` = 127248;
+DELETE FROM `creature` WHERE `guid` = 127249;
+DELETE FROM `creature` WHERE `guid` = 127250;
+DELETE FROM `creature` WHERE `guid` = 79478;
+DELETE FROM `creature` WHERE `guid` = 32514;
+DELETE FROM `creature` WHERE `guid` = 32902;
+DELETE FROM `creature` WHERE `guid` = 32957;
+DELETE FROM `creature` WHERE `guid` = 32963;
+DELETE FROM `creature` WHERE `guid` = 33127;
+DELETE FROM `creature` WHERE `guid` = 33218;
+DELETE FROM `creature` WHERE `guid` = 33333;
+DELETE FROM `creature` WHERE `guid` = 33601;
+
+DELETE FROM `game_event_creature_data` WHERE `guid` IN (32514,32902,32957,32963,33127,33218,33333,33601);
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(32767, 3084, 1, 1, 1, -1289.02, 144.418, 129.776, 5.06145, 300, 300, 0, 0),
+(32943, 3084, 1, 1, 1, -1279.37, 53.5563, 129.235, 0.628319, 300, 300, 0, 0),
+(32956, 3084, 1, 1, 1, -1276.69, 45.7199, 129.036, 0.663225, 300, 300, 0, 0),
+(33020, 3084, 1, 1, 1, -1239.26, -86.0284, 162.974, 0.593412, 300, 300, 0, 0),
+(33114, 3084, 1, 1, 1, -1234.99, -94.8753, 163.526, 0.436332, 300, 300, 0, 0),
+(33234, 3084, 1, 1, 1, -1208.41, 138.046, 134.554, 3.94444, 300, 300, 0, 0),
+(33308, 3084, 1, 1, 1, -1201.92, 130.753, 134.866, 3.7001, 300, 300, 0, 0),
+(33491, 3084, 1, 1, 1, -1183.26, -97.2043, 162.74, 2.14675, 300, 300, 0, 0),
+(33514, 3084, 1, 1, 1, -1177.85, -89.2105, 162.726, 2.54818, 300, 300, 0, 0),
+(33538, 3084, 1, 1, 1, -1128.43, 66.5794, 143.343, 4.38078, 300, 300, 0, 0),
+(33575, 3084, 1, 1, 1, -1118.81, 64.6993, 141.174, 4.43314, 300, 300, 0, 0),
+(33717, 3084, 1, 1, 1, -1112.91, -11.7301, 142.606, 2.04204, 300, 300, 0, 0),
+(33718, 3084, 1, 1, 1, -1103.65, -9.82644, 142.362, 1.85005, 300, 300, 0, 0),
+(33761, 3084, 1, 1, 1, -1069.23, -17.5221, 140.548, 2.61799, 300, 300, 0, 0),
+(33771, 3084, 1, 1, 1, -1066.03, 198.045, 107.664, 4.45059, 300, 300, 0, 0),
+(33836, 3084, 1, 1, 1, -1055, 193.03, 107.73, 3.59538, 300, 300, 0, 0);
+
+UPDATE `quest_template` SET `PrevQuestId` = '0' WHERE `entry` =10356;
+UPDATE `quest_template` SET `PrevQuestId` = '0' WHERE `entry` =10360;
+UPDATE `quest_template` SET `PrevQuestId` = '0' WHERE `entry` =10361;
+UPDATE `quest_template` SET `BreadcrumbForQuestId` = 1963, `NextQuestId` = 0, `NextQuestInChain` = 0, `ExclusiveGroup` = 0 WHERE `entry` = 1859;
+UPDATE `quest_template` SET `PrevQuestId` = 0 WHERE `entry` = 1963;
+UPDATE `pickpocketing_loot_template` SET `ChanceOrQuestChance` = '-50' WHERE `entry` =6497 AND `item` =7231;
+UPDATE `quest_template` SET `BreadcrumbForQuestId` = 14420, `NextQuestInChain` = 0, `ExclusiveGroup` = 0 WHERE `entry` = 1885;
+UPDATE `quest_template` SET `PrevQuestId` = 0 WHERE `entry` = 14420;
+
+REPLACE INTO `game_event_creature_data` (`guid`, `equipment_id, `event`) SELECT `guid`, 92, 29 FROM `creature` WHERE `id` IN (68);
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
