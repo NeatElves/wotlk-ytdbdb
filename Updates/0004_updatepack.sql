@@ -37091,6 +37091,14 @@ UPDATE `pickpocketing_loot_template` SET `ChanceOrQuestChance` = '-50' WHERE `en
 UPDATE `quest_template` SET `BreadcrumbForQuestId` = 14420, `NextQuestInChain` = 0, `ExclusiveGroup` = 0 WHERE `entry` = 1885;
 UPDATE `quest_template` SET `PrevQuestId` = 0 WHERE `entry` = 14420;
 
-REPLACE INTO `game_event_creature_data` (`guid`, `equipment_id, `event`) SELECT `guid`, 92, 29 FROM `creature` WHERE `id` IN (68);
+REPLACE INTO `game_event_creature_data` (`guid`, `equipment_id`, `event`) SELECT `guid`, 92, 29 FROM `creature` WHERE `id` IN (68);
+
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =12849 AND `item` =8283;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =12849 AND `item` =8288;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =12849 AND `item` =8289;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =12849 AND `item` =8303;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =12849 AND `item` =10141;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =34548 AND `item` =22854;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =34548 AND `item` =32227;
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
