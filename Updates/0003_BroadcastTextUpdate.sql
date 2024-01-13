@@ -6336,3 +6336,16 @@ UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=13470; -- We've done it!  
 UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=13476; -- We have one quarter of our needed silithyst! Keep it up!
 UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=13481; -- We have almost all the silithyst we need!  Don't stop now!
 UPDATE `broadcast_text` SET `ChatTypeID`=6 WHERE `Id`=13492; -- Your petty magics are no challenge to the might of the Scourge!
+
+-- 5269_c.33118.sql
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=15564 WHERE Id=34306;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=15566 WHERE Id=34308;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=15567 WHERE Id=34309;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=15568 WHERE Id=34310;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=15565 WHERE Id=34307;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=15569 WHERE Id=34311;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=15570 WHERE Id=34312;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=15571 WHERE Id=33871;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=15572 WHERE Id=34313;
+UPDATE broadcast_text SET ChatTypeID=3 WHERE Id=33465;
+UPDATE broadcast_text SET ChatTypeID=2 WHERE Id=34471;

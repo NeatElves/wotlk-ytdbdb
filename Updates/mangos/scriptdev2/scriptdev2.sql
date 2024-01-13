@@ -4227,14 +4227,6 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1532016','I''ve gone and made a mess.','9315','1','0','0','0','moroes SAY_KILL_3'),
 ('-1532017','How terribly clumsy of me.','9213','1','0','0','15022','moroes SAY_DEATH'),
 
-('-1532018','Your behavior will not be tolerated.','9204','1','0','0','15079','maiden SAY_AGGRO'),
-('-1532019','Ah ah ah...','9207','1','0','0','15082','maiden SAY_SLAY1'),
-('-1532020','This is for the best.','9312','1','0','0','15084','maiden SAY_SLAY2'),
-('-1532021','Impure thoughts lead to profane actions.','9311','1','0','0','15083','maiden SAY_SLAY3'),
-('-1532022','Cast out your corrupt thoughts.','9313','1','0','0','15080','maiden SAY_REPENTANCE1'),
-('-1532023','Your impurity must be cleansed.','9208','1','0','0','13396','maiden SAY_REPENTANCE2'),
-('-1532024','Death comes. Will your conscience be clear?','9206','1','0','0','15081','maiden SAY_DEATH'),
-
 ('-1532025','Oh at last, at last I can go home!','9190','1','0','0','15068','dorothee SAY_DOROTHEE_DEATH'),
 ('-1532026','Don''t let them hurt us Tito! Oh, you won''t, will you?','9191','1','0','0','15066','dorothee SAY_DOROTHEE_SUMMON'),
 ('-1532027','Tito! Oh Tito, no!','9192','1','0','0','15069','dorothee SAY_DOROTHEE_TITO_DEATH'),
@@ -5760,17 +5752,6 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,broadc
 ('-1603024','Such a waste.','15502','1','0','0','34130','stonebark SAY_SLAY_2_STONE'),
 ('-1603025','Matron, flee! They are ruthless....','15503','1','0','0','34132','stonebark SAY_DEATH_STONE'),
 
-('-1603026','Insolent whelps! Your blood will temper the weapons used to reclaim this world!','15564','1','0','0','34306','ignis SAY_AGGRO'),
-('-1603027','Let the inferno consume you!','15567','1','0','0','34309','ignis SAY_SCORCH_1'),
-('-1603028','BURN! Burn in the makers fire!','15568','1','0','0','34310','ignis SAY_SCORCH_2'),
-('-1603029','I will burn away your impurities!','15566','1','0','0','34308','ignis SAY_SLAGPOT'),
-('-1603030','Arise, soldiers of the Iron Crucible! The Makers'' will be done!','15565','1','0','0','34307','ignis SAY_ADDS'),
-('-1603031','More scraps for the scrapheap!','15569','1','0','0','34311','ignis SAY_SLAY_1'),
-('-1603032','Your bones will serve as kindling!','15570','1','0','0','34312','ignis SAY_SLAY_2'),
-('-1603033','Let it be finished!','15571','1','0','0','33871','ignis SAY_BERSERK'),
-('-1603034','I. Have. Failed.','15572','1','0','0','34313','ignis SAY_DEATH'),
-('-1603035','Ignis the Furnace Master begins to cast Flame Jets!','0','3','0','0','0','ignis EMOTE_FLAME_JETS'),
-
 ('-1603036','Welcome, champions! All of our attempts at grounding her have failed. We could use a hand in bring her down with these harpoon guns.','15647','0','0','0','0','razorscale SAY_INTRO_WELCOME'),
 ('-1603037','Give us a moment to prepare to build the turrets.','0','1','0','0','33820','razorscale SAY_INTRO_1'),
 ('-1603038','Be on the lookout! Mole machines will be surfacing soon with those nasty Iron dwarves aboard!','0','1','0','0','33607','razorscale SAY_INTRO_2'),
@@ -7048,7 +7029,11 @@ INSERT INTO gossip_texts (entry,content_default,comment) VALUES
 (-3000112,'I''m ready - let''s get out of here.','injured goblin miner GOSSIP_ITEM_ESCORT_READY'),
 (-3000113,'Go on, you''re free. Get out of here!','saronite mine slave GOSSIP_ITEM_SLAVE_FREE'),
 (-3000114,'I''m ready to start the distillation, uh, Tipsy.','tipsy mcmanus GOSSIP_ITEM_START_DISTILLATION'),
-(-3000115,'Turn the key to start the machine.','threshwackonator  GOSSIP_ITEM_TURN_KEY');
+(-3000115,'Turn the key to start the machine.','threshwackonator  GOSSIP_ITEM_TURN_KEY'),
+(-3000120,'Pardon the intrusion, Lady Prestor, but Highlord Bolvar suggested that I seek your advice.','npc_lady_katrana_prestor GOSSIP_ITEM_KAT_1'),
+(-3000121,'My apologies, Lady Prestor.','npc_lady_katrana_prestor GOSSIP_ITEM_KAT_2'),
+(-3000122,'Begging your pardon','npc_lady_katrana_prestor GOSSIP_ITEM_KAT_3'),
+(-3000123,'Thank you for your time','npc_lady_katrana_prestor GOSSIP_ITEM_KAT_4');
 
 -- -3 033 000 SHADOWFANG KEEP
 INSERT INTO gossip_texts (entry,content_default,comment) VALUES

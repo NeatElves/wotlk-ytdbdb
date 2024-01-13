@@ -2146,6 +2146,8 @@ INSERT INTO spell_template(Id, Category, Dispel, Mechanic, Attributes, Attribute
 -- SPELL_ATTR_SS_IGNORE_EVADE
 -- ==========================
 UPDATE `spell_template` SET `AttributesServerSide` = `AttributesServerSide`|4 WHERE `Id` IN (
+3235, -- Rancid Blood
+3338, -- Rancid Ooze
 3418, -- Improved Blocking
 5667, -- Bogling Passive
 5888, -- Darkshore Frenzy
@@ -2155,6 +2157,7 @@ UPDATE `spell_template` SET `AttributesServerSide` = `AttributesServerSide`|4 WH
 10868, -- Frost Vulnerable
 11011, -- Stone Watcher of Norgannon Passive
 11048, -- Perm. Illusion Bishop Tyriona
+13377, -- Fire Shield
 15978, -- Puncture
 21911, -- Puncture
 24692, -- Hakkar Power
@@ -2299,17 +2302,27 @@ UPDATE `spell_template` SET `AttributesServerSide` = `AttributesServerSide`|0x00
 8852, -- Moss Hide
 11816, -- Land Mine Arming
 11966, -- Fire Shield
+12782, -- Shield Spike
 12896, -- Helboar
 12898, -- Smoke Aura Visual
+13483, -- Wither Touch
 13879, -- Magma Splash
+16331, -- Incorporeal Defense
+16577, -- Disease Cloud
 17205, -- Winterfall Firewater
+17327, -- Spirit Particles
 18163, -- Strength of Arko'narin
 18167, -- Holy Fire
+19817, -- Double Attack
+18951, -- Spirit Particles (green)
 21080, -- Putrid Breath
 23378, -- Magma Splash
-27791, -- Suicide (Suicide)
+21130, -- Grip of Command
+21788, -- Deadly Poison
 21789, -- Hate to Half (Hate to Half)
-28330  -- Flameshocker - Immolate Visual
+27791, -- Suicide (Suicide)
+28330, -- Flameshocker - Immolate Visual
+30079 -- Retching Plague
 );
 
 -- missing trash cleave spell
@@ -2973,6 +2986,7 @@ UPDATE `spell_template` SET `EffectMiscValueB1`=64 WHERE `Id` IN(38107);
 UPDATE `spell_template` SET `AttributesServerSide` = `AttributesServerSide`|0x00000004 WHERE `Id` IN (
 36630, -- Resistances (c.22000)
 37248, -- Power Converters: Electromental Visual
+38471, -- Spore Burst
 43119, -- Cyclone Visual
 43120, -- Cyclone
 43457  -- Ball of Energy
@@ -3517,6 +3531,16 @@ UPDATE spell_template SET EffectSpellClassMask1_1=0x00000000,EffectSpellClassMas
 UPDATE spell_template SET EffectSpellClassMask1_1=8388608 WHERE Id IN(57870);
 -- Glyph of Remove Curse - wrong mask
 UPDATE spell_template SET EffectSpellClassMask1_2=0x01000000 WHERE Id IN(56364);
+-- Glyph of Shadow - condition done with code instead - faulty mask
+UPDATE spell_template SET EffectSpellClassMask1_2=0 WHERE Id IN(55689);
+-- Glyph of Victory Rush - wrong mask
+UPDATE spell_template SET EffectSpellClassMask1_2=0x00000100 WHERE Id IN(58382);
+-- Glyph of Revenge - wrong mask
+UPDATE spell_template SET EffectSpellClassMask1_1=1024 WHERE Id IN(58364);
+-- Glyph of Overpower - wrong mask
+UPDATE spell_template SET EffectSpellClassMask1_1=0 WHERE Id IN(58386);
+-- Glyph of Hamstring - missing mask
+UPDATE spell_template SET EffectSpellClassMask1_1=2 WHERE Id IN(58372);
 
 -- fully custom, modelled after 65220 - glyph of snake trap avoidance
 INSERT INTO spell_template(Id, Category, Dispel, Mechanic, Attributes, AttributesEx, AttributesEx2, AttributesEx3, AttributesEx4, AttributesEx5, AttributesEx6, AttributesEx7, Stances, Stances2, StancesNot, StancesNot2, Targets, TargetCreatureType, RequiresSpellFocus, FacingCasterFlags, CasterAuraState, TargetAuraState, CasterAuraStateNot, TargetAuraStateNot, CasterAuraSpell, TargetAuraSpell, ExcludeCasterAuraSpell, ExcludeTargetAuraSpell, CastingTimeIndex, RecoveryTime, CategoryRecoveryTime, InterruptFlags, AuraInterruptFlags, ChannelInterruptFlags, ProcFlags, ProcChance, ProcCharges, MaxLevel, BaseLevel, SpellLevel, DurationIndex, PowerType, ManaCost, ManaCostPerlevel, ManaPerSecond, ManaPerSecondPerLevel, RangeIndex, Speed, ModalNextSpell, StackAmount, Totem1, Totem2, Reagent1, Reagent2, Reagent3, Reagent4, Reagent5, Reagent6, Reagent7, Reagent8, ReagentCount1, ReagentCount2, ReagentCount3, ReagentCount4, ReagentCount5, ReagentCount6, ReagentCount7, ReagentCount8, EquippedItemClass, EquippedItemSubClassMask, EquippedItemInventoryTypeMask, Effect1, Effect2, Effect3, EffectDieSides1, EffectDieSides2, EffectDieSides3, EffectRealPointsPerLevel1, EffectRealPointsPerLevel2, EffectRealPointsPerLevel3, EffectBasePoints1, EffectBasePoints2, EffectBasePoints3, EffectMechanic1, EffectMechanic2, EffectMechanic3, EffectImplicitTargetA1, EffectImplicitTargetA2, EffectImplicitTargetA3, EffectImplicitTargetB1, EffectImplicitTargetB2, EffectImplicitTargetB3, EffectRadiusIndex1, EffectRadiusIndex2, EffectRadiusIndex3, EffectApplyAuraName1, EffectApplyAuraName2, EffectApplyAuraName3, EffectAmplitude1, EffectAmplitude2, EffectAmplitude3, EffectMultipleValue1, EffectMultipleValue2, EffectMultipleValue3, EffectChainTarget1, EffectChainTarget2, EffectChainTarget3, EffectItemType1, EffectItemType2, EffectItemType3, EffectMiscValue1, EffectMiscValue2, EffectMiscValue3, EffectMiscValueB1, EffectMiscValueB2, EffectMiscValueB3, EffectTriggerSpell1, EffectTriggerSpell2, EffectTriggerSpell3, EffectPointsPerComboPoint1, EffectPointsPerComboPoint2, EffectPointsPerComboPoint3, EffectSpellClassMask1_1, EffectSpellClassMask1_2, EffectSpellClassMask1_3, EffectSpellClassMask2_1, EffectSpellClassMask2_2, EffectSpellClassMask2_3, EffectSpellClassMask3_1, EffectSpellClassMask3_2, EffectSpellClassMask3_3, SpellVisual, SpellVisual2, SpellIconID, ActiveIconID, SpellPriority, SpellName, SpellName2, SpellName3, SpellName4, SpellName5, SpellName6, SpellName7, SpellName8, SpellName9, SpellName10, SpellName11, SpellName12, SpellName13, SpellName14, SpellName15, SpellName16, Rank1, Rank2, Rank3, Rank4, Rank5, Rank6, Rank7, Rank8, Rank9, Rank10, Rank11, Rank12, Rank13, Rank14, Rank15, Rank16, ManaCostPercentage, StartRecoveryCategory, StartRecoveryTime, MaxTargetLevel, SpellFamilyName, SpellFamilyFlags, SpellFamilyFlags2, MaxAffectedTargets, DmgClass, PreventionType, StanceBarOrder, DmgMultiplier1, DmgMultiplier2, DmgMultiplier3, MinFactionId, MinReputation, RequiredAuraVision, TotemCategory1, TotemCategory2, AreaId, SchoolMask, RuneCostID, SpellMissileID, PowerDisplayId, EffectBonusCoefficient1, EffectBonusCoefficient2, EffectBonusCoefficient3, SpellDescriptionVariableID, SpellDifficultyId, IsServerSide, AttributesServerside) VALUES
