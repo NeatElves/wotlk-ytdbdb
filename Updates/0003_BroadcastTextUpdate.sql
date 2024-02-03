@@ -6413,3 +6413,12 @@ UPDATE broadcast_text SET ChatTypeID='1', SoundEntriesID1='10192' WHERE Id = '16
 
 -- Hold them back at all costs!
 UPDATE broadcast_text SET ChatTypeID='1', SoundEntriesID1='10195' WHERE Id = '17462';
+
+-- 0372_mana_tombs.sql TBC
+UPDATE broadcast_text SET EmoteID1=1, EmoteID2=15, EmoteDelay2=3000 WHERE Id IN (17224,17225,17226);
+UPDATE broadcast_text SET EmoteID1=1 WHERE Id BETWEEN 17201 AND 17204;
+UPDATE broadcast_text SET EmoteID1=1 WHERE Id BETWEEN 17193 AND 17200;
+UPDATE broadcast_text SET EmoteID1=1 WHERE Id=17210;
+UPDATE broadcast_text SET EmoteID1=1 WHERE Id BETWEEN 17205 AND 17208;
+UPDATE broadcast_text SET EmoteID1=1 WHERE Id BETWEEN 17215 AND 17218;
+UPDATE broadcast_text SET ChatTypeID=1 WHERE Id=17209;
