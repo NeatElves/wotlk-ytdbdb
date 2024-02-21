@@ -804,16 +804,6 @@ UPDATE broadcast_text SET EmoteID1=1 WHERE Id=22200;
 UPDATE broadcast_text SET EmoteID1=1 WHERE Id=22201;
 UPDATE broadcast_text SET EmoteID1=1 WHERE Id=22202;
 UPDATE broadcast_text SET ChatTypeID=3 WHERE Id=33523;
-UPDATE broadcast_text SET SoundEntriesID1=13536 WHERE Id=30501;
-UPDATE broadcast_text SET SoundEntriesID1=13541 WHERE Id=30506;
-UPDATE broadcast_text SET SoundEntriesID1=13538 WHERE Id=30503;
-UPDATE broadcast_text SET SoundEntriesID1=13534 WHERE Id=30499;
-UPDATE broadcast_text SET SoundEntriesID1=13533 WHERE Id=30498;
-UPDATE broadcast_text SET SoundEntriesID1=13542 WHERE Id=30508;
-UPDATE broadcast_text SET SoundEntriesID1=13539 WHERE Id=30504;
-UPDATE broadcast_text SET SoundEntriesID1=13540 WHERE Id=30505;
-UPDATE broadcast_text SET SoundEntriesID1=13537 WHERE Id=30507;
-UPDATE broadcast_text SET SoundEntriesID1=13535 WHERE Id=30500;
 UPDATE broadcast_text SET ChatTypeID=2 WHERE Id=31588;
 UPDATE broadcast_text SET ChatTypeID=2 WHERE Id=31589;
 UPDATE broadcast_text SET ChatTypeID=2 WHERE Id=31590;
@@ -1322,16 +1312,6 @@ UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=13493 WHERE Id=29574;
 UPDATE broadcast_text SET ChatTypeID=1 WHERE Id=26093;
 UPDATE broadcast_text SET ChatTypeID=1 WHERE Id=26094;
 UPDATE broadcast_text SET ChatTypeID=1 WHERE Id=26095;
-UPDATE broadcast_text SET SoundEntriesID1=13533 WHERE Id=30498;
-UPDATE broadcast_text SET SoundEntriesID1=13534 WHERE Id=30499;
-UPDATE broadcast_text SET SoundEntriesID1=13535 WHERE Id=30500;
-UPDATE broadcast_text SET SoundEntriesID1=13536 WHERE Id=30501;
-UPDATE broadcast_text SET SoundEntriesID1=13537 WHERE Id=30502;
-UPDATE broadcast_text SET SoundEntriesID1=13538 WHERE Id=30503;
-UPDATE broadcast_text SET SoundEntriesID1=13539 WHERE Id=30504;
-UPDATE broadcast_text SET SoundEntriesID1=13540 WHERE Id=30505;
-UPDATE broadcast_text SET SoundEntriesID1=13541 WHERE Id=30506;
-UPDATE broadcast_text SET SoundEntriesID1=13542 WHERE Id=30508;
 UPDATE broadcast_text SET EmoteID1=1 WHERE Id=30491;
 UPDATE broadcast_text SET EmoteID1=1 WHERE Id=30492;
 UPDATE broadcast_text SET EmoteID1=1 WHERE Id=30493;
@@ -6422,3 +6402,17 @@ UPDATE broadcast_text SET EmoteID1=1 WHERE Id=17210;
 UPDATE broadcast_text SET EmoteID1=1 WHERE Id BETWEEN 17205 AND 17208;
 UPDATE broadcast_text SET EmoteID1=1 WHERE Id BETWEEN 17215 AND 17218;
 UPDATE broadcast_text SET ChatTypeID=1 WHERE Id=17209;
+
+-- 5289_Jotunheim_Icecrown.sql
+-- text sounds
+UPDATE broadcast_text SET SoundEntriesID1 = 13533 WHERE id = 30498; -- I will take pleasure in gutting you!
+UPDATE broadcast_text SET SoundEntriesID1 = 13534 WHERE id = 30499; -- I will feed you to the dogs!
+UPDATE broadcast_text SET SoundEntriesID1 = 13535 WHERE id = 30500; -- Your entrails will make a fine necklace.
+UPDATE broadcast_text SET SoundEntriesID1 = 13536 WHERE id = 30501; -- Die, maggot!
+UPDATE broadcast_text SET SoundEntriesID1 = 13537 WHERE id = 30502; -- You come to die!
+UPDATE broadcast_text SET SoundEntriesID1 = 13538 WHERE id = 30503; -- I spit on you!
+UPDATE broadcast_text SET SoundEntriesID1 = 13539 WHERE id = 30504; -- Sniveling pig!
+UPDATE broadcast_text SET SoundEntriesID1 = 13540 WHERE id = 30505; -- Ugglin oo bjorr!
+UPDATE broadcast_text SET SoundEntriesID1 = 13541 WHERE id = 30506; -- Haraak foln!
+UPDATE broadcast_text SET SoundEntriesID1 = 13537 WHERE id = 30507; -- You come to die!
+UPDATE broadcast_text SET SoundEntriesID1 = 13542 WHERE id = 30508; -- I\'ll eat your heart!
