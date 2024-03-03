@@ -520,8 +520,8 @@ UPDATE `mangos_string` SET `content_loc8` = 'Установите для пол�
 UPDATE `mangos_string` SET `content_loc8` = 'Вы установили для поля %s:%u значение с плавающей запятой: %f' WHERE `entry` = 568;
 UPDATE `mangos_string` SET `content_loc8` = 'Получить значение %s uint32: [ПОЛЕ]:%u [ЗНАЧЕНИЕ]:%u' WHERE `entry` = 569;
 UPDATE `mangos_string` SET `content_loc8` = '%s имеет значение uint32: [ПОЛЕ]:%u [ЗНАЧЕНИЕ]:%u' WHERE `entry` = 570;
-UPDATE `mangos_string` SET `content_loc8` = 'Получить значение с плавающей запятой %s:[FIELD]:%u [VALUE]:%f' WHERE `entry` = 571;
-UPDATE `mangos_string` SET `content_loc8` = '%s имеет плавающее значение: [FIELD]:%u [VALUE]:%f' WHERE `entry` = 572;
+UPDATE `mangos_string` SET `content_loc8` = 'Получить значение с плавающей запятой %s:[ПОЛЕ]:%u [ЗНАЧЕНИЕ]:%f' WHERE `entry` = 571;
+UPDATE `mangos_string` SET `content_loc8` = '%s имеет плавающее значение: [ПОЛЕ]:%u [ЗНАЧЕНИЕ]:%f' WHERE `entry` = 572;
 UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 573;
 UPDATE `mangos_string` SET `content_loc8` = 'Измените поле %s uint32:%u для суммирования с:%i = %u (%i)' WHERE `entry` = 575;
 UPDATE `mangos_string` SET `content_loc8` = 'Вы изменяете поле %s uint32:%u для суммирования с:%i = %u (%i)' WHERE `entry` = 576;
@@ -529,8 +529,8 @@ UPDATE `mangos_string` SET `content_loc8` = 'Теперь вы невидимы.
 UPDATE `mangos_string` SET `content_loc8` = 'Теперь вы видны.' WHERE `entry` = 578;
 UPDATE `mangos_string` SET `content_loc8` = 'У выбранного игрока или существа нет жертвы.' WHERE `entry` = 579;
 UPDATE `mangos_string` SET `content_loc8` = 'Вы выучили все стандартные заклинания для расы/класса и выполнили задания, вознаграждаемые заклинаниями.' WHERE `entry` = 580;
-UPDATE `mangos_string` SET `content_loc8` = 'Найдено рядом с игровыми объектами (расстояние %f): %u ' WHERE `entry` = 581;
-UPDATE `mangos_string` SET `content_loc8` = 'SpawnTime: Полный:%s Осталось:%s' WHERE `entry` = 582;
+UPDATE `mangos_string` SET `content_loc8` = 'Найдено рядом игровых объектов (расстояние %f): %u ' WHERE `entry` = 581;
+UPDATE `mangos_string` SET `content_loc8` = 'Время спавна: Полное:%s Осталось:%s' WHERE `entry` = 582;
 UPDATE `mangos_string` SET `content_loc8` = NULL WHERE `entry` = 583;
 UPDATE `mangos_string` SET `content_loc8` = 'Событие не найдено!' WHERE `entry` = 584;
 UPDATE `mangos_string` SET `content_loc8` = 'Событие не существует!' WHERE `entry` = 585;
