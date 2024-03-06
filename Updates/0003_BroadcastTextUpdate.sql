@@ -6416,3 +6416,6 @@ UPDATE broadcast_text SET SoundEntriesID1 = 13540 WHERE id = 30505; -- Ugglin oo
 UPDATE broadcast_text SET SoundEntriesID1 = 13541 WHERE id = 30506; -- Haraak foln!
 UPDATE broadcast_text SET SoundEntriesID1 = 13537 WHERE id = 30507; -- You come to die!
 UPDATE broadcast_text SET SoundEntriesID1 = 13542 WHERE id = 30508; -- I\'ll eat your heart!
+
+-- 5300_Aldurthar_Icecrown.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (32622);

@@ -139,7 +139,7 @@ optimize table skill_fishing_base_level;
 optimize table skinning_loot_template;
 # optimize table spam_records;
 optimize table spell_area;
-optimize table spell_bonus_data;
+# optimize table spell_bonus_data;
 optimize table spell_chain;
 # optimize table spell_cone;
 optimize table spell_elixir;
