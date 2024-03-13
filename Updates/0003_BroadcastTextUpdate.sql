@@ -6419,3 +6419,6 @@ UPDATE broadcast_text SET SoundEntriesID1 = 13542 WHERE id = 30508; -- I\'ll eat
 
 -- 5300_Aldurthar_Icecrown.sql
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (32622);
+
+-- 5313_Scourgeholme_Icecrown.sql
+UPDATE broadcast_text SET ChatTypeID=1 WHERE Id IN (31135,31136,31137,31138,31140,31141);
