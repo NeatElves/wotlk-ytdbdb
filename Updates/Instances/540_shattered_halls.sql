@@ -987,7 +987,7 @@ INSERT INTO `spawn_group_spawn` (`Id`, `Guid`, `SlotId`) VALUES
 (@SGGUID+9, @CGUID+172, -1),
 (@SGGUID+9, @CGUID+173, -1),
 -- Group 3 heroic
-(@SGGUID+10, @CGUID+173, -1),
+(@SGGUID+10, @CGUID+174, -1),
 (@SGGUID+10, @CGUID+175, -1),
 -- Group 4 normal
 (@SGGUID+11, @CGUID+176, -1),
