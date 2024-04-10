@@ -6422,3 +6422,6 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (32622);
 
 -- 5313_Scourgeholme_Icecrown.sql
 UPDATE broadcast_text SET ChatTypeID=1 WHERE Id IN (31135,31136,31137,31138,31140,31141);
+
+-- 5318_Ymirheim_Icecrown.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `id` IN (32090,32091,32092,32094,32516,32517,32518,32519);
