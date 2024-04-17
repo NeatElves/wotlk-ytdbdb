@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14082_01_mangos_spell_template required_14084_01_mangos_charmed_spell_list bit;
