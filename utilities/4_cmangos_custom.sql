@@ -111,7 +111,6 @@ UPDATE gameobject_template SET data2=0 WHERE entry=176211;
 -- Verigan's Fist: must despawn during scripted quest
 UPDATE gameobject_template SET `data3`=0, `data5`=1 WHERE entry=102413;
 
-
 -- Temporary fix data6 for GO 178559 (Larva Spewer) in prevision of coming core update
 UPDATE gameobject_template SET data6=0 WHERE entry=178559;
 
@@ -128,6 +127,7 @@ UPDATE gameobject_template SET data3=1000*6 WHERE entry IN(180619);
 -- -------------------------------
 -- Creature custom changes
 -- -------------------------------
+
 
 -- ============================================================
 -- TBC section
@@ -172,7 +172,6 @@ UPDATE gameobject_template SET displayId = 0 WHERE entry = 184958;
 -- Creature custom changes
 -- -------------------------------
 
-UPDATE creature_template SET `DisplayId2` = 17188 WHERE `entry` = 22332; -- Brood of Neltharaku (19980)
 
 -- -------------------------------
 

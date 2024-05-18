@@ -371,7 +371,7 @@ UPDATE `gossip_menu_option` SET `option_broadcast_text` = 4755 WHERE `menu_id` =
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 4754 WHERE `menu_id` = 1842 AND `id` = 0;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 4759 WHERE `menu_id` = 1843 AND `id` = 0;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 4793 WHERE `menu_id` = 1882 AND `id` = 0;
-UPDATE `gossip_menu_option` SET `option_broadcast_text` = 4851 WHERE `menu_id` = 1922 AND `id` = 0;
+UPDATE `gossip_menu_option` SET `option_broadcast_text` = 4845 WHERE `menu_id` = 1922 AND `id` = 0;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 2952 WHERE `menu_id` = 1942 AND `id` = 0;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 2942 WHERE `menu_id` = 1942 AND `id` = 1;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 2945 WHERE `menu_id` = 1942 AND `id` = 2;
