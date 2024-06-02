@@ -6425,3 +6425,17 @@ UPDATE broadcast_text SET ChatTypeID=1 WHERE Id IN (31135,31136,31137,31138,3114
 
 -- 5318_Ymirheim_Icecrown.sql
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `id` IN (32090,32091,32092,32094,32516,32517,32518,32519);
+
+-- Greatfather Winter's Helper Should Yell
+-- Presents for everyone! Father Winter's put gifts under the tree for all.
+UPDATE `broadcast_text` SET `ChatTypeId`=1 WHERE `Id`=11430;
+
+-- Events list for Xandivious
+-- https://youtu.be/jy67jSDEjgw?si=cwSFlzPW_zack-iF&t=135
+-- https://youtu.be/LrTr4Uj7kls?si=FNhiGerRpJ9x2O7k&t=170
+UPDATE `broadcast_text` SET `ChatTypeId`=1 WHERE `Id`=11268;
+
+UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` = 3741; -- %s points to the west.
+
+-- textemote for Deepmoss Matriarch
+UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` = 1415;
