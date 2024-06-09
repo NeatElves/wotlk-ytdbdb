@@ -5,6 +5,11 @@
 UPDATE `creature_template` SET `ScriptName` = '' WHERE `Entry` =7918;
 UPDATE `creature_template` SET `ScriptName` = '' WHERE `Entry` =7783;
 
+# DB-SCRIPT
+UPDATE gameobject_template SET ScriptName='' WHERE entry=175329;
+UPDATE gameobject_template SET ScriptName='' WHERE entry=175330;
+UPDATE gameobject_template SET ScriptName='' WHERE entry=175331;
+
 # [NPC 7866,7867,7868,7869,7870,7871][Gossip] [SD2 npc_prof_leather]
 UPDATE creature_template SET ScriptName='' WHERE entry IN (7866,7867,7868,7869,7870,7871);
 
