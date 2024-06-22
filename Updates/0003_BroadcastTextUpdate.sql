@@ -6439,3 +6439,6 @@ UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` = 3741; -- %s points to 
 
 -- textemote for Deepmoss Matriarch
 UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` = 1415;
+
+-- Tirion & Darion RP
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `id` IN (31011);
