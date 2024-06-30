@@ -21,15 +21,6 @@ INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalon
 (50001, 500, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - despawn self'),
 (50002, 1000, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'YTDB - despawn self');
 
-# event attack talbuk Nagrand
-DELETE FROM `dbscripts_on_creature_movement` WHERE `id` = 1713001;
-INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
-(1713001, 10000, 0, 26, 0, 0, 0, 18180, 65, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Talbuk Stag - Start Attack on Hemet Nesingwary'),
-(1713001, 0, 0, 20, 1, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Talbuk Stag - Set Random Movement'),
-(1713001, 0, 0, 22, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Talbuk Stag - Set Faction to 14'),
-(1713001, 12000, 0, 26, 0, 0, 0, 18180, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Hemet Nesingwary - Start Attack on Talbuk Stag'),
-(1713001, 12000, 0, 26, 0, 0, 0, 18200, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shado ''Fitz'' Farstrider - Start Attack on Talbuk Stag');
-
 # Manabonk send mail
 DELETE FROM `dbscripts_on_relay` WHERE `id` = 50003;
 INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
