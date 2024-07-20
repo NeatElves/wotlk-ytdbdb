@@ -6442,3 +6442,26 @@ UPDATE `broadcast_text` SET `ChatTypeId` = 2 WHERE `Id` = 1415;
 
 -- Tirion & Darion RP
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `id` IN (31011);
+
+-- Haggle 14041
+UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN (9141);
+
+-- 5355_q.13086.sql
+UPDATE broadcast_text SET ChatTypeId = 1 WHERE Id IN (31338,31350);
+UPDATE broadcast_text SET ChatTypeId = 1, SoundEntriesId1 = 14879 WHERE Id IN (31331);
+UPDATE broadcast_text SET ChatTypeId = 1, SoundEntriesId1 = 14880 WHERE Id IN (31333);
+UPDATE broadcast_text SET ChatTypeId = 1, SoundEntriesId1 = 14881 WHERE Id IN (31334);
+UPDATE broadcast_text SET ChatTypeId = 1, SoundEntriesId1 = 14882 WHERE Id IN (31335);
+UPDATE broadcast_text SET ChatTypeId = 1, SoundEntriesId1 = 14883 WHERE Id IN (31336);
+
+-- 0453_VDB-20210311124530_world.sql
+-- You have been sentenced to death for crimes against the Dark Iron nation!
+UPDATE `broadcast_text` SET `ChatTypeId`=1 WHERE `Id` = 5441;
+-- The Sons of Thaurissan shall watch you perish in the Ring of the Law!
+UPDATE `broadcast_text` SET `ChatTypeId`=1 WHERE `Id` = 5442;
+-- Unleash the fury and let it be done!
+UPDATE `broadcast_text` SET `ChatTypeId`=1 WHERE `Id` = 5443;
+
+-- 5361_q.13141.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 3 WHERE `id` IN (31538,31539);
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `id` IN (31545,31573,29511);

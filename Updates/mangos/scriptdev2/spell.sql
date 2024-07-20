@@ -43,6 +43,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (12948,'spell_hakkar_summoned'),
 (13278,'spell_gdr_channel'),
 (13493,'spell_gdr_periodic'),
+(11403,'spell_dream_vision'),
 (11886,'spell_capture_beast'),
 (11887,'spell_capture_hippogryph'),
 (11888,'spell_capture_faerie_dragon'),
@@ -892,10 +893,18 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (57082,'spell_crystal_spikes'),
 (57083,'spell_crystal_spikes'),
 (57283,'spell_remove_mushroom_power'),
+(57385,'spell_argent_cannon'),
+(57412,'spell_reckoning_bomb'),
+(57413,'spell_fitful_dream'),
+(57415,'spell_the_reckoning'),
 (57418,'spell_to_icecrown_air_ship_h_summon_vehicle'),
 (57473,'spell_arcane_storm'),
 (57491,'spell_flame_tsunami_damage'),
+(57534,'spell_frozen_siegebolt'),
 (57578,'spell_lava_strike'),
+(57650,'spell_frozen_siegebolt'),
+(57666,'spell_frozen_siegebolt'),
+(57667,'spell_frozen_siegebolt'),
 (57669,'spell_replenishment'),
 (58418,'spell_portal_to_capital_city'),
 (58420,'spell_portal_to_capital_city'),
@@ -1396,7 +1405,11 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (48020,'spell_demonic_circle_teleport'),
 (63320,'spell_glyph_of_life_tap'),
 (63310,'spell_glyph_of_shadowflame'),
-(6358,'spell_seduction_succubus');
+(6358,'spell_seduction_succubus'),
+(48181,'spell_haunt'),
+(59161,'spell_haunt'),
+(59163,'spell_haunt'),
+(59164,'spell_haunt');
 
 -- Pet Scaling
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
