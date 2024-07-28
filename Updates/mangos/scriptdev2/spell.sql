@@ -220,6 +220,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (32811,'spell_greater_invisibility_mob'),
 (29339,'spell_healing_touch_horses'),
 (29340,'spell_whip_frenzy_horses'),
+(29521,'spell_dance_vibe'),
 (29969,'spell_summon_blizzard'),
 (29970,'spell_dispel_blizzard'),
 (29979,'spell_massive_magnetic_pull'),
@@ -237,7 +238,6 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (30166,'spell_shadow_grasp_magtheridon'),
 (30410,'spell_shadow_grasp_cube'),
 (30658,'spell_quake_magtheridon'),
-(30571,'spell_quake_magtheridon_knockback'),
 (30425,'spell_portal_attunement'),
 (30469,'spell_nether_beam'),
 (38546,'spell_face_random_target'),
@@ -627,7 +627,8 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (28695,'spell_gameobject_call_for_help_on_usage'), -- Herb Gathering (Master)
 (29354,'spell_gameobject_call_for_help_on_usage'), -- Mining (Master)
 (30434,'spell_gameobject_call_for_help_on_usage'), -- Elemental Seaforium Charge
-(42919,'spell_tricky_treat');
+(42919,'spell_tricky_treat'),
+(34799,'spell_arcane_devastation');
 
 -- Wotlk
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
@@ -893,6 +894,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (57082,'spell_crystal_spikes'),
 (57083,'spell_crystal_spikes'),
 (57283,'spell_remove_mushroom_power'),
+(57346,'spell_ride_vehicle_57346'),
 (57385,'spell_argent_cannon'),
 (57412,'spell_reckoning_bomb'),
 (57413,'spell_fitful_dream'),
