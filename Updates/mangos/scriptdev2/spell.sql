@@ -632,6 +632,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 
 -- Wotlk
 INSERT INTO spell_scripts(Id, ScriptName) VALUES
+(4328,'spell_drag_and_drop_summon_aldurthar_sentry'),
 (16836,'spell_brambles'),
 (16839,'spell_brambles'),
 (16840,'spell_brambles'),
@@ -912,6 +913,7 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (58420,'spell_portal_to_capital_city'),
 (58984,'spell_shadowmeld'),
 (59275,'spell_summon_gauntlet_mobs_periodic_aura'),
+(59303,'spell_summon_frost_wyrm'),
 (59317,'spell_teleporting_dalaran'),
 (59331,'spell_poisoned_spear'),
 (59481,'spell_loatheb_warn'),
@@ -925,10 +927,13 @@ INSERT INTO spell_scripts(Id, ScriptName) VALUES
 (59906,'spell_swift_hand_of_justice'),
 (59915,'spell_discerning_eye_of_the_beast'),
 (60211,'spell_cauterize'),
+(60528,'spell_rod_of_siphoning'),
 (60539,'spell_sapphiron_achievement_check'),
+(60561,'spell_summon_dark_messenger_beam'),
 (60772,'spell_increased_spell_damage_done_dummy'),
 (60775,'spell_increased_spell_damage_done_dummy'),
 (60779,'spell_increased_healing_done_dummy'),
+(60831,'spell_alumeths_remains'),
 (60929,'spell_loatheb_prewarn'),
 (61071,'spell_vortex_aura'),
 (61072,'spell_vortex_aura'),
