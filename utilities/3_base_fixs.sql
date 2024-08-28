@@ -150,6 +150,51 @@ INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalon
 (9208, 300, 10, 15286, 1200000, 0, -7212.16, 911.711, -1.76649, 2.58543, 'summon Xil''xix'),
 (9208, 500, 10, 15290, 1200000, 0, -7210.3, 895.014, -1.76649, 0.544185, 'summon Arakis');
 
+# test tmp event https://www.wowhead.com/wotlk/ru/npc=2434/
+UPDATE `creature_template` SET `ExtraFlags` = '4096', `MovementType` = '2' WHERE `Entry` =2435;
+UPDATE `creature` SET `position_x` = '-740.538', `position_y` = '-525.298', `position_z` = '21.9343', `orientation` = '3.9523', `spawntimesecsmin` = '3600', `spawntimesecsmax` = '3600', `MovementType` = '2' WHERE `guid` =53052;
+UPDATE `creature_ai_scripts` SET `event_param1` = '12000', `event_param2` = '12000' WHERE `id` =243502;
+UPDATE `creature_ai_scripts` SET `event_param1` = '12600', `event_param2` = '12600' WHERE `id` =243503;
+UPDATE `creature_ai_scripts` SET `event_param1` = '13000', `event_param2` = '13000' WHERE `id` =243504;
+DELETE FROM `creature_movement_template` WHERE `entry` = 2435;
+INSERT INTO `creature_movement_template` (`Entry`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `WaitTime`, `ScriptId`) VALUES
+(2435, 1, -745.74, -530.658, 21.0302, 10, 5),
+(2435, 2, -749.623, -536.482, 19.8807, 0, 0),
+(2435, 3, -749.831, -542.323, 19.0502, 0, 0),
+(2435, 4, -751.399, -545.452, 18.7756, 0, 0),
+(2435, 5, -751.399, -545.452, 18.7756, 0, 0),
+(2435, 6, -760.746, -546.233, 18.1427, 0, 0),
+(2435, 7, -771.772, -545.382, 17.7874, 0, 0),
+(2435, 8, -787.449, -540.515, 17.7064, 0, 0),
+(2435, 9, -803.583, -531.155, 15.9356, 0, 0),
+(2435, 10, -815.697, -524.158, 14.4849, 0, 0),
+(2435, 11, -824.224, -522.261, 13.1434, 100, 243511),
+(2435, 12, -840.92, -524.92, 11.2505, 10, 243512),
+(2435, 13, -857.888, -532.908, 9.43952, 0, 0),
+(2435, 14, -870.759, -539.774, 8.12229, 0, 0),
+(2435, 15, -880.055, -540.594, 7.56718, 0, 0),
+(2435, 16, -898.525, -541.205, 6.87974, 0, 0),
+(2435, 17, -901.819, -547.256, 6.87974, 10, 6),
+(2435, 18, -903.291, -555.882, 6.87974, 10, 243518);
+DELETE FROM `dbscripts_on_creature_movement` WHERE `id` BETWEEN 243511 AND 243518;
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+(243511, 0, 0, 0, 0, 0, 0, 0, 0, 0, 620, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'say 1'),
+(243512, 100, 1, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -858.214, -471.187, 13.3554, 0.58591, 0, 0, 'Summon Shadowy Assassin'),
+(243512, 100, 2, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -864.901, -472.452, 13.3564, 0.58591, 0, 0, 'Summon Shadowy Assassin'),
+(243512, 100, 3, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -862.522, -476.413, 13.3564, 0.58591, 0, 0, 'Summon Shadowy Assassin'),
+(243512, 100, 4, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -861.232, -542.347, 9.33058, 0.58591, 0, 0, 'Summon Shadowy Assassin'),
+(243512, 100, 5, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -849.912, -536.618, 10.717, 0.30081, 0, 0, 'Summon Shadowy Assassin'),
+(243512, 100, 6, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -842.906, -536.79, 12.5283, 6.23677, 0, 0, 'Summon Shadowy Assassin'),
+(243512, 100, 7, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -843.281, -526.083, 11.1464, 0.819482, 0, 0, 'Summon Shadowy Assassin'),
+(243512, 100, 8, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -848.99, -517.981, 12.1924, 0.819482, 0, 0, 'Summon Shadowy Assassin'),
+(243512, 100, 9, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -867.763, -516.11, 11.3357, 0.819482, 0, 0, 'Summon Shadowy Assassin'),
+(243512, 100, 10, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -855.221, -518.702, 11.547, 0.819482, 0, 0, 'Summon Shadowy Assassin'),
+(243512, 100, 11, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -879.868, -538.859, 7.67274, 0.819482, 0, 0, 'Summon Shadowy Assassin'),
+(243512, 100, 12, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -877.552, -561.351, 11.0384, 0.819482, 0, 0, 'Summon Shadowy Assassin'),
+(243512, 100, 13, 10, 2434, 30000, 0, 0, 0, 8, 0, 0, 0, 0, 0, -840.952, -505.281, 14.4908, 0.819482, 0, 0, 'Summon Shadowy Assassin'),
+(243518, 0, 1, 0, 0, 0, 0, 0, 0, 0, 10453, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'say die'),
+(243518, 0, 2, 18, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'die');
+
 # NPC AQ War
 #INSERT INTO game_event_creature SELECT guid, 123 FROM creature WHERE guid IN (27403,27421,27518,27524,27533,27583,27805,27834,27851);
 #INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `movementtype`) VALUES

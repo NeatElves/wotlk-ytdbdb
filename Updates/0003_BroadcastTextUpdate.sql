@@ -6465,3 +6465,7 @@ UPDATE `broadcast_text` SET `ChatTypeId`=1 WHERE `Id` = 5443;
 -- 5361_q.13141.sql
 UPDATE `broadcast_text` SET `ChatTypeID` = 3 WHERE `id` IN (31538,31539);
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `id` IN (31545,31573,29511);
+
+-- 0475_slave_pens_misc_fixes.sql
+-- Correct some broadcast_text
+UPDATE broadcast_text SET ChatTypeID = '1' WHERE Id = '15108';
