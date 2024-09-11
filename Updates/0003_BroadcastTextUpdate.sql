@@ -6469,3 +6469,16 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `id` IN (31545,31573,29511);
 -- 0475_slave_pens_misc_fixes.sql
 -- Correct some broadcast_text
 UPDATE broadcast_text SET ChatTypeID = '1' WHERE Id = '15108';
+
+-- 5375_q.13283_13280.sql
+UPDATE `broadcast_text` SET `ChatTypeID`='3' WHERE `Id`='32370';
+
+-- 5378_q.13308.sql
+UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE `Id`='32533';
+
+-- 5385_q.13279_13281_13295_13297.sql
+UPDATE `broadcast_text` SET `ChatTypeID`='3' WHERE `Id` IN (32477,32478,32479,32483,32484,32486,32487,32488);
+
+-- 5392_q.13373_13406_13376.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `id` IN (33048);
+UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `id` IN (33000);
