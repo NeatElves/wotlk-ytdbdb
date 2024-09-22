@@ -1,10 +1,5 @@
 # fix base
 
-# [NPC 7918][Gossip] Stone Watcher of Norgannon [SD2 npc_stone_watcher_of_norgannon]
-# [NPC 7783][Gossip] Loramus Thalipedes [SD2 npc_loramus_thalipedes]
-UPDATE `creature_template` SET `ScriptName` = '' WHERE `Entry` =7918;
-UPDATE `creature_template` SET `ScriptName` = '' WHERE `Entry` =7783;
-
 # DB-SCRIPT
 UPDATE gameobject_template SET ScriptName='' WHERE entry=175329;
 UPDATE gameobject_template SET ScriptName='' WHERE entry=175330;
