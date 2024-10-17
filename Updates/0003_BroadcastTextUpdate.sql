@@ -6482,3 +6482,13 @@ UPDATE `broadcast_text` SET `ChatTypeID`='3' WHERE `Id` IN (32477,32478,32479,32
 -- 5392_q.13373_13406_13376.sql
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `id` IN (33048);
 UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `id` IN (33000);
+
+-- Ulduar: Convert Hodir to BossAI
+UPDATE `broadcast_text` SET `ChatTypeID`=3 WHERE `Id`=33314;
+UPDATE `broadcast_text` SET `ChatTypeID`=3 WHERE `Id`=33313;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15552 WHERE `Id`=34336;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15553 WHERE `Id`=34337;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15554 WHERE `Id`=34338;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15555 WHERE `Id`=34339;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15557 WHERE `Id`=33484;
+UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15558 WHERE `Id`=34340;
