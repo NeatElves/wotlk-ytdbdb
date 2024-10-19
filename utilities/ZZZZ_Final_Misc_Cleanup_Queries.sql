@@ -481,6 +481,18 @@ UPDATE `creature_ai_scripts` SET `creature_id` = '-76019' WHERE `id` =2383708;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-76019' WHERE `id` =2383709;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-110813' WHERE `id` =3229801;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-110826' WHERE `id` =3229802;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-109453' WHERE `id` =2411011;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-109454' WHERE `id` =2411024;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-127130' WHERE `id` =2932907;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-147625' WHERE `id` =2933011;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-56759' WHERE `id` =2933012;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-128152' WHERE `id` =2933810;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-52982' WHERE `id` =2933811;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-87981' WHERE `id` =2988007;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-88233' WHERE `id` =3247201;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-88233' WHERE `id` =3247202;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-88232' WHERE `id` =3247203;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-88232' WHERE `id` =3247204;
 
 
 # Finall_Spell_UP

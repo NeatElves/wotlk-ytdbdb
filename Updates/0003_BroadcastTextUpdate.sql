@@ -6492,3 +6492,53 @@ UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15554 WHERE `Id`=34
 UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15555 WHERE `Id`=34339;
 UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15557 WHERE `Id`=33484;
 UPDATE `broadcast_text` SET `ChatTypeID`=1,`SoundEntriesID1`=15558 WHERE `Id`=34340;
+
+-- 5403_q.12943.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (30711,30713);
+
+-- 5406_q.13042_13059.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (31209,31211,31212,31213,31215,31216,31227);
+UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` IN (31210);
+
+-- 5407_q.13043.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` IN (31120,31132);
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (31134,31173);
+
+-- 5412_q.13121.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 2 WHERE `Id` IN (31477);
+
+-- 5413_q.13133.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 5 WHERE `Id` IN (31523);
+
+-- 5419_q.12815.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 5 WHERE `Id` IN (30115);
+
+-- 5422_q.13137.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (31528,31529,31540,31530,31531,31532,31533,31534);
+
+-- 5423_q.13142.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (31595);
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (31597,31598,31599,31600,31601,31627,31628,31629,31631,31632,31633,31634,31635,31636,31637,31693,31695);
+
+-- 5424_q.13214.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` BETWEEN 31745 AND 31755;
+UPDATE `broadcast_text` SET `ChatTypeID`= 3 WHERE `Id` IN (31756);
+
+-- 5425_q.13215.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (31770,31836,31820);
+UPDATE `broadcast_text` SET `ChatTypeID`= 3 WHERE `Id` IN (32753);
+
+-- 5426_q.13216.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (31892,31882,31883,31921);
+UPDATE `broadcast_text` SET `ChatTypeID`= 3 WHERE `Id` IN (32757);
+
+-- 5427_q.13217.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (31930,31931);
+UPDATE `broadcast_text` SET `ChatTypeID`= 3 WHERE `Id` IN (32758);
+
+-- 5428_q.13218.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (31939,31940,31935,31936);
+
+-- 5429_q.13219.sql
+UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (31951,31956,31957,31972,31945,31946,31948,31955);
+UPDATE `broadcast_text` SET `ChatTypeID`= 3 WHERE `Id` IN (32761);
