@@ -4,7 +4,6 @@
 DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 33174;
 UPDATE `creature_template` SET `AIName` = '', `ScriptName` = 'npc_snowpack_target' WHERE `Entry` = 33174;
 
-
 # DB-SCRIPT
 UPDATE gameobject_template SET ScriptName='' WHERE entry=175329;
 UPDATE gameobject_template SET ScriptName='' WHERE entry=175330;
@@ -121,9 +120,6 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalo
 
 # wotlk ahune only has one version
 UPDATE `creature_template` SET `DifficultyEntry1` = 0 WHERE `entry` IN (25740,25755,25756,25757,25865);
-
-# NPC id=0 not work - start event 29 - crash core
-DELETE FROM `game_event_creature_data` WHERE `guid` in (9661,9674,9687,9701,9726,9732,46575,46592,46704,46737,46809,52392,66114,68382,68394,68395,78932,78933,78934,78935);
 
 # Error Table combat_condition entry ... has invalid worldstate expression 30517. Setting to ....
 DELETE FROM `combat_condition` WHERE `Id` = 4523;
