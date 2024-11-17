@@ -359,6 +359,7 @@ UPDATE creature_template SET ScriptName='npc_shaheen' WHERE entry=19671;
 UPDATE creature_template SET ScriptName='npc_ethereum_prisoner_dungeon' WHERE entry IN(22927);
 UPDATE gameobject_template SET ScriptName='go_stasis_chamber_mana_tombs' WHERE entry IN(185519);
 UPDATE gameobject_template SET ScriptName='go_stasis_chamber_shaffar' WHERE entry IN(185522);
+UPDATE instance_template SET ScriptName='instance_mana_tombs' WHERE map=557;
 
 /* AUCHENAI CRYPTS */
 UPDATE creature_template SET ScriptName='boss_exarch_maladaar' WHERE entry=18373;
@@ -905,6 +906,7 @@ UPDATE creature_template SET ScriptName='npc_kelerun_bloodmourn' WHERE entry=178
 UPDATE gameobject_template SET ScriptName='go_harbinger_second_trial' WHERE entry=182052;
 UPDATE creature_template SET ScriptName='npc_apprentice_mirveda' WHERE entry=15402;
 UPDATE creature_template SET ScriptName='npc_infused_crystal' WHERE entry=16364;
+UPDATE creature_template SET ScriptName='npc_hatchling_movement' WHERE entry IN(21055,21063,21064);
 
 /* FELWOOD */
 UPDATE creature_template SET ScriptName='npc_kitten' WHERE entry=9937;
@@ -1134,6 +1136,7 @@ UPDATE creature_template SET ScriptName='npc_infantry' WHERE entry IN (31701,318
 UPDATE creature_template SET ScriptName='npc_father_kamaros' WHERE entry IN (31279,32800);
 UPDATE creature_template SET ScriptName='npc_saronite_mine_slave' WHERE entry=31397;
 UPDATE creature_template SET ScriptName='npc_grand_admiral_westwind' WHERE entry=29621;
+UPDATE gameobject_template SET ScriptName='go_bloodstained_stone' WHERE entry IN (194023,194024,193980);
 
 /* IRONFORGE */
 
@@ -1479,6 +1482,7 @@ UPDATE gameobject_template SET ScriptName='go_quest_still_at_it_credit' WHERE en
 UPDATE creature_template SET ScriptName='npc_solenor' WHERE entry IN (14530,14536);
 
 /* SILVERMOON */
+UPDATE creature_template SET ScriptName='npc_event_generator_001' WHERE entry IN (2334);
 
 /* SILVERPINE FOREST */
 UPDATE creature_template SET ScriptName='npc_deathstalker_erland' WHERE entry=1978;
@@ -1760,7 +1764,7 @@ UPDATE creature_template SET ScriptName='npc_collapsing_star' WHERE entry=32955;
 UPDATE gameobject_template SET ScriptName='go_celestial_access' WHERE entry IN (194628,194752);
 UPDATE creature_template SET ScriptName='boss_hodir' WHERE entry=32845;
 UPDATE creature_template SET ScriptName='npc_flash_freeze' WHERE entry IN (32926,32938);
-UPDATE creature_template SET ScriptName='npc_icicle_target' WHERE entry=33174;
+UPDATE creature_template SET ScriptName='npc_snowpack_target' WHERE entry=33174;
 UPDATE creature_template SET ScriptName='boss_thorim' WHERE entry=32865;
 UPDATE creature_template SET ScriptName='boss_sif' WHERE entry=33196;
 UPDATE creature_template SET ScriptName='npc_thunder_orb' WHERE entry=33378;

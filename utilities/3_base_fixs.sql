@@ -1,9 +1,5 @@
 # fix base
 
-#tmp Ulduar: Convert Hodir to BossAI
-DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 33174;
-UPDATE `creature_template` SET `AIName` = '', `ScriptName` = 'npc_snowpack_target' WHERE `Entry` = 33174;
-
 # DB-SCRIPT
 UPDATE gameobject_template SET ScriptName='' WHERE entry=175329;
 UPDATE gameobject_template SET ScriptName='' WHERE entry=175330;

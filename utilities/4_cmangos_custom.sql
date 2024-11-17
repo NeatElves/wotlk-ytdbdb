@@ -172,6 +172,12 @@ UPDATE gameobject_template SET displayId = 0 WHERE entry = 184958;
 -- Creature custom changes
 -- -------------------------------
 
+-- Shattered Halls Dummys add not_attackable and imun by npcs flags
+-- Before: update creature_template set UnitFlags = '2304' where entry = 17578;
+UPDATE creature_template SET UnitFlags = UnitFlags|640 WHERE entry = 17578;
+
+-- mmap issues
+UPDATE creature_template SET ExtraFlags = ExtraFlags|16384 WHERE `entry` IN (19608,21554); -- Frayer Wildling (Botanica)
 
 -- -------------------------------
 
