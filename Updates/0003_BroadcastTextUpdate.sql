@@ -6542,3 +6542,6 @@ UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (31939,31940,31935,319
 -- 5429_q.13219.sql
 UPDATE `broadcast_text` SET `ChatTypeID`= 1 WHERE `Id` IN (31951,31956,31957,31972,31945,31946,31948,31955);
 UPDATE `broadcast_text` SET `ChatTypeID`= 3 WHERE `Id` IN (32761);
+
+-- 20241117085946_world.sql
+UPDATE `broadcast_text` SET `EmoteID1` = 1 WHERE `Id` IN (9570, 9571);
