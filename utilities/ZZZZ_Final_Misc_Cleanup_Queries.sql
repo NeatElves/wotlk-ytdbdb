@@ -493,6 +493,10 @@ UPDATE `creature_ai_scripts` SET `creature_id` = '-88233' WHERE `id` =3247201;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-88233' WHERE `id` =3247202;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-88232' WHERE `id` =3247203;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-88232' WHERE `id` =3247204;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-87560' WHERE `id` =3099001;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-128214' WHERE `id` =3224105;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-128215' WHERE `id` =3224106;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-128213' WHERE `id` =3224107;
 
 
 # Finall_Spell_UP

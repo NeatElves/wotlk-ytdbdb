@@ -6545,3 +6545,79 @@ UPDATE `broadcast_text` SET `ChatTypeID`= 3 WHERE `Id` IN (32761);
 
 -- 20241117085946_world.sql
 UPDATE `broadcast_text` SET `EmoteID1` = 1 WHERE `Id` IN (9570, 9571);
+
+-- 5442_auriaya.sql
+UPDATE `broadcast_text` SET `ChatTypeID`=3 WHERE `Id`=34450;
+UPDATE `broadcast_text` SET `ChatTypeID`=3 WHERE `Id`=34162;
+UPDATE `broadcast_text` SET `ChatTypeID`=1, `SoundEntriesID1`=15473 WHERE `Id`=34341;
+UPDATE `broadcast_text` SET `ChatTypeID`=1, `SoundEntriesID1`=15475 WHERE `Id`=34355;
+UPDATE `broadcast_text` SET `ChatTypeID`=1, `SoundEntriesID1`=15474 WHERE `Id`=34354;
+UPDATE `broadcast_text` SET `ChatTypeID`=1, `SoundEntriesID1`=15477 WHERE `Id`=34358;
+
+-- 5448_q.13390_13271.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 4 WHERE `Id` IN (32338);
+
+-- 5452_q.13395_13236.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `Id` IN (32822);
+
+-- 5459_q.13403_13364.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (32694,32687,32698,32708,32710);
+
+-- 5465_q.13143.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (31580);
+
+-- 5467_q.13146_13147_13160.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (32217,32218,32220,32221,32222,32223,32224);
+
+-- 5469_q.13161_13162_13163.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (31866,31867,31868,31872,31835,31852,31853,31855,31860,31861,31863,31864,31862);
+
+-- 5471_q.13164.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (31959,31961,31962,31963,31969,31970,31967,31975,31983,31964,31977,31968,31978);
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (31966);
+
+-- 5472_sartharion.sql
+UPDATE broadcast_text SET ChatTypeId=3 WHERE Id=32554;
+UPDATE broadcast_text SET ChatTypeId=3 WHERE Id=32960;
+UPDATE broadcast_text SET ChatTypeId=3 WHERE Id=31362;
+UPDATE broadcast_text SET ChatTypeId=3 WHERE Id=32959;
+UPDATE broadcast_text SET ChatTypeId=3 WHERE Id=32958;
+
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14097 WHERE Id=31910;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14096 WHERE Id=31909;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14094 WHERE Id=31908;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14102 WHERE Id=31906;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14101 WHERE Id=31905;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14100 WHERE Id=31904;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14099 WHERE Id=31363;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14107 WHERE Id=31341;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14104 WHERE Id=31320;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14105 WHERE Id=31318;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14098 WHERE Id=31907;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14103 WHERE Id=31368;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14093 WHERE Id=31400;
+
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14138 WHERE Id=32007;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14137 WHERE Id=32006;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14139 WHERE Id=32008;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14136 WHERE Id=32005;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14140 WHERE Id=32009;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14135 WHERE Id=32004;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14134 WHERE Id=32003;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14133 WHERE Id=32002;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14127 WHERE Id=31998;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14126 WHERE Id=31997;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14128 WHERE Id=31999;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14125 WHERE Id=31996;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14129 WHERE Id=32000;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14124 WHERE Id=31995;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14123 WHERE Id=31994;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14122 WHERE Id=31993;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14116 WHERE Id=21749;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14115 WHERE Id=31989;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14117 WHERE Id=31991;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14114 WHERE Id=31988;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14118 WHERE Id=31984;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14113 WHERE Id=31987;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14112 WHERE Id=31986;
+UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14111 WHERE Id=31985;

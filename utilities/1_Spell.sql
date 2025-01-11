@@ -41,3 +41,6 @@ INSERT INTO `spell_template` (`Id`, `Dispel`, `Mechanic`, `Attributes`, `Attribu
 
 UPDATE `spell_template` SET `EffectMiscValue1` = 15795 WHERE `id` =34849;
 UPDATE `spell_template` SET `EffectMiscValue1` = 1051 WHERE `Id` =51010;
+
+-- 5442_auriaya.sql
+UPDATE `spell_template` SET `InterruptFlags`=8, `ChannelInterruptFlags`=0 WHERE `Id` IN (64389, 64678);

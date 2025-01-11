@@ -4493,6 +4493,7 @@ UPDATE `gossip_menu_option` SET `option_broadcast_text` = 32447 WHERE `menu_id` 
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 32464 WHERE `menu_id` = 10118 AND `id` = 4;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 32455 WHERE `menu_id` = 10118 AND `id` = 3;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 32468 WHERE `menu_id` = 10118 AND `id` = 5;
+UPDATE `gossip_menu_option` SET `option_broadcast_text` = 32359 WHERE `menu_id` = 10121 AND `id` = 0;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 8097 WHERE `menu_id` = 10122 AND `id` = 0;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 3370 WHERE `menu_id` = 10123 AND `id` = 0;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 32371 WHERE `menu_id` = 10124 AND `id` = 0;
@@ -4555,7 +4556,6 @@ UPDATE `gossip_menu_option` SET `option_broadcast_text` = 3370 WHERE `menu_id` =
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 32798 WHERE `menu_id` = 10189 AND `id` = 0;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 3370 WHERE `menu_id` = 10191 AND `id` = 0;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 32834 WHERE `menu_id` = 10194 AND `id` = 0;
-UPDATE `gossip_menu_option` SET `option_broadcast_text` = 32359 WHERE `menu_id` = 10195 AND `id` = 0;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 36637 WHERE `menu_id` = 10199 AND `id` = 1;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 36637 WHERE `menu_id` = 10199 AND `id` = 2;
 UPDATE `gossip_menu_option` SET `option_broadcast_text` = 32933 WHERE `menu_id` = 10200 AND `id` = 0;
