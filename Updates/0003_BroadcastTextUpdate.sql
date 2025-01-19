@@ -6654,3 +6654,7 @@ UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14515 WHERE Id=31762;
 UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14514 WHERE Id=31761;
 UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14513 WHERE Id=31760;
 UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14512 WHERE Id=31759;
+
+-- 5480_ArgentTournamentGrounds.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (35810,35811,35812,35828,35820);
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (35526);
