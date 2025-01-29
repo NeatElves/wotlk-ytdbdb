@@ -6330,14 +6330,14 @@ UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=15572 WHERE Id=34313;
 UPDATE broadcast_text SET ChatTypeID=3 WHERE Id=33465;
 UPDATE broadcast_text SET ChatTypeID=2 WHERE Id=34471;
 
--- 0346_maiden_of_virtue.sql TBC
+-- 5517_TDB-0346_maiden_of_virtue.sql
 -- Karazhan | Maiden of Virtue bct
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=9204,EmoteId1=0 WHERE Id IN(15079);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=9313,EmoteId1=0 WHERE Id IN(15080);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=9208,EmoteId1=0 WHERE Id IN(13396);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=9206,EmoteId1=0 WHERE Id IN(15081);
 
--- 0364_shattered_halls_bct.sql TBC
+-- 5523_TDB-0364_shattered_halls_bct.sql
 -- Add Sound Entries and correct some broadcast_texts
 -- Figther Down!
 UPDATE broadcast_text SET ChatTypeID='1', SoundEntriesID1='10172' WHERE Id = '16356';
@@ -6658,3 +6658,7 @@ UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14512 WHERE Id=31759;
 -- 5480_ArgentTournamentGrounds.sql
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (35810,35811,35812,35828,35820);
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (35526);
+
+-- 0541_cthun.sql
+UPDATE broadcast_text SET ChatTypeId=2 WHERE Id IN(11476);
+UPDATE broadcast_text SET ChatTypeId=7 WHERE Id IN(11700);

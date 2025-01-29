@@ -536,7 +536,7 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `stand_state`, `sheath
 (10407, 0, 0, 1, 0, 0, '8876 18950'), -- Fleshflayer Ghoul
 (10408, 0, 0, 1, 0, 0, NULL), -- Rockwing Gargoyle
 (10409, 0, 0, 1, 0, 0, NULL), -- Rockwing Screecher
-(10411, 0, 0, 1, 0, 0, '16380'), -- Eye of Naxxramas
+(10411, 0, 0, 1, 0, 0, '8278 8279 16380'), -- Eye of Naxxramas
 (10412, 0, 0, 1, 0, 0, NULL), -- Crypt Crawler
 (10413, 0, 0, 1, 0, 0, '16428'), -- Crypt Beast
 (10414, 0, 0, 1, 0, 0, '8876 16345'), -- Patchwork Horror
@@ -556,6 +556,7 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `stand_state`, `sheath
 (10436, 0, 0, 1, 0, 0, NULL), -- Baroness Anastari
 (10437, 0, 0, 1, 0, 0, NULL), -- Nerub'enkan
 (10438, 0, 0, 1, 0, 0, NULL), -- Maleki the Pallid
+(10439, 0, 0, 1, 0, 0, '15088'), -- Ramstein the Gorger
 (10440, 0, 0, 0, 0, 0, '17467'), -- Baron Rivendare
 (10463, 0, 0, 1, 0, 0, NULL), -- Shrieking Banshee
 (10464, 0, 0, 1, 0, 0, NULL), -- Wailing Banshee
@@ -568,7 +569,7 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `stand_state`, `sheath
 (10917, 0, 0, 1, 0, 0, NULL), -- Aurius
 (10997, 0, 0, 1, 0, 0, NULL), -- Cannon Master Willey
 (11032, 0, 0, 1, 0, 0, NULL), -- Malor the Zealous
-(11043, 0, 0, 1, 0, 0, '8876'), -- Crimson Monk
+(11043, 0, 0, 1, 0, 0, NULL), -- Crimson Monk
 (11082, 0, 0, 1, 0, 0, NULL), -- Stratholme Courier
 (11143, 0, 0, 1, 0, 0, NULL), -- Postmaster Malown
 (14646, 0, 0, 1, 0, 0, NULL), -- Stratholme Trigger

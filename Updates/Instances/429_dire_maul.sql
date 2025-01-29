@@ -6,7 +6,6 @@ DBComment:
 * Resolve 179547 / 179548
 * Fix Whip Lasher 2x-4x, Groups, creature_groups min/max
 * herbs might also have minmax values for spawns
-* Death Lash 13285 - s.22351 instead of s.25640, changed at some point?
 * 14690 movement, spawns at supposedly old position of Magister Kalendris
 EndDBScriptData */
 
@@ -917,7 +916,7 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `stand_state`, `sheath
 (11446, 0, 0, 1, 0, 0, NULL), -- Gordok Spirit
 (11451, 0, 0, 1, 0, 0, NULL), -- Wildspawn Satyr
 (11452, 0, 0, 1, 0, 0, '13299'), -- Wildspawn Rogue
-(11453, 0, 0, 1, 0, 0, NULL), -- Wildspawn Trickster
+(11453, 0, 0, 1, 0, 0, '4086'), -- Wildspawn Trickster
 (11454, 0, 0, 1, 0, 0, NULL), -- Wildspawn Betrayer
 (11455, 0, 0, 1, 0, 0, '22418'), -- Wildspawn Felsworn
 (11456, 0, 0, 1, 0, 0, '7939 22766 8601 18950'), -- Wildspawn Shadowstalker
@@ -940,7 +939,7 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `stand_state`, `sheath
 (11480, 0, 0, 1, 0, 0, NULL), -- Arcane Aberration
 (11483, 0, 0, 1, 0, 0, NULL), -- Mana Remnant
 (11484, 0, 0, 1, 0, 0, NULL), -- Residual Monstrosity
-(11486, 0, 0, 1, 0, 0, '8876'), -- Prince Tortheldrin
+(11486, 0, 0, 1, 0, 0, NULL), -- Prince Tortheldrin
 (11487, 0, 8, 1, 0, 0, '21157'), -- Magister Kalendris
 (11488, 0, 0, 1, 0, 0, NULL), -- Illyanna Ravenoak
 (11489, 0, 0, 1, 0, 0, NULL), -- Tendris Warpwood
@@ -957,7 +956,7 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `stand_state`, `sheath
 (13197, 0, 0, 1, 0, 0, NULL), -- Fel Lash
 (13276, 0, 0, 1, 0, 0, NULL), -- Wildspawn Imp
 (13280, 0, 0, 1, 0, 0, NULL), -- Hydrospawn
-(13285, 0, 0, 1, 0, 0, '8876 16428 25640'), -- Death Lash
+(13285, 0, 0, 1, 0, 0, '8876 16428 22351'), -- Death Lash
 (13916, 0, 0, 1, 0, 1024, NULL), -- Dire Maul Crystal Totem
 (14303, 0, 0, 1, 0, 0, '22696'), -- Petrified Guardian
 (14308, 0, 0, 1, 0, 0, NULL), -- Ferra
