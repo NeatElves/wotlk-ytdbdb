@@ -75,3 +75,9 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 
 # 5442_auriaya.sql
 UPDATE `creature_ai_scripts` SET `event_param1`=100,`event_param2`=1000 WHERE `id` IN (3401404, 3401405);
+
+INSERT INTO `creature_ai_summons`(`id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`comment`) VALUES
+(101,-1252.25,1480.16,68.6433,2.57844,10000,'Map 543 - Shattered Hand Warhound 17280'),
+(102,-1254.02,1475.32,68.6572,2.35442,10000,'Map 543 - Shattered Hand Warhound 17280'),
+(103,-1256.66,1470.34,68.6661,1.8788,10000,'Map 543 - Shattered Hand Warhound 17280'),
+(104,-1241.57,1466.78,68.5736,2.4672,10000,'Map 543 - Shattered Hand Warhound 17280');
