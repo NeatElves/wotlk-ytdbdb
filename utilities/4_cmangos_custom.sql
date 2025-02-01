@@ -111,6 +111,7 @@ UPDATE gameobject_template SET data2=0 WHERE entry=176211;
 -- Verigan's Fist: must despawn during scripted quest
 UPDATE gameobject_template SET `data3`=0, `data5`=1 WHERE entry=102413;
 
+
 -- Temporary fix data6 for GO 178559 (Larva Spewer) in prevision of coming core update
 UPDATE gameobject_template SET data6=0 WHERE entry=178559;
 
@@ -170,6 +171,7 @@ UPDATE gameobject_template SET displayId = 0 WHERE entry = 184958;
 -- -------------------------------
 -- Creature custom changes
 -- -------------------------------
+
 
 -- Shattered Halls Dummys add not_attackable and imun by npcs flags
 -- Before: update creature_template set UnitFlags = '2304' where entry = 17578;

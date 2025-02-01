@@ -5388,7 +5388,7 @@ UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10527 WHERE Id IN(17871);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10528 WHERE Id IN(17872);
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=10529 WHERE Id IN(17873);
 
--- 05022_TDB_0085_sl_murmur.sql
+-- 5538a_TDB-0085_sl_murmur.sql
 UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN(18799);
 
 -- 4823_q.8731_8507.sql
@@ -6394,7 +6394,7 @@ UPDATE broadcast_text SET ChatTypeID='1', SoundEntriesID1='10192' WHERE Id = '16
 -- Hold them back at all costs!
 UPDATE broadcast_text SET ChatTypeID='1', SoundEntriesID1='10195' WHERE Id = '17462';
 
--- 0372_mana_tombs.sql TBC
+-- 5531_TDB-0372_mana_tombs.sql
 UPDATE broadcast_text SET EmoteID1=1, EmoteID2=15, EmoteDelay2=3000 WHERE Id IN (17224,17225,17226);
 UPDATE broadcast_text SET EmoteID1=1 WHERE Id BETWEEN 17201 AND 17204;
 UPDATE broadcast_text SET EmoteID1=1 WHERE Id BETWEEN 17193 AND 17200;
@@ -6662,3 +6662,43 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (35526);
 -- 0541_cthun.sql
 UPDATE broadcast_text SET ChatTypeId=2 WHERE Id IN(11476);
 UPDATE broadcast_text SET ChatTypeId=7 WHERE Id IN(11700);
+
+-- 5536_TDB-0375_old_hillsbrad.sql
+-- add emotes for texts used by Chef Jessen 20378
+UPDATE broadcast_text SET EmoteID1=5 WHERE Id=18140;
+UPDATE broadcast_text SET EmoteID1=22 WHERE Id IN (18141,18143);
+UPDATE broadcast_text SET EmoteID1=25 WHERE Id=18142;
+UPDATE broadcast_text SET EmoteID1=15 WHERE Id=18144;
+-- add emotes/types for texts used during Southshore Inn RP
+UPDATE broadcast_text SET EmoteID1=1 WHERE Id IN (18084,18085,18087,18088,18091,18093,18096,18099,18100,18101,18103,18107,18110,18121,18125,18129);
+UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN (18086,18090,18092,18102,18106,18113,18127);
+UPDATE broadcast_text SET EmoteID1=274 WHERE Id=18089;
+UPDATE broadcast_text SET EmoteID1=6 WHERE Id IN (18094,18095,18108);
+UPDATE broadcast_text SET EmoteID1=25, ChatTypeID=2 WHERE Id IN (18097,18124);
+UPDATE broadcast_text SET EmoteID1=25 WHERE Id IN (18098,18109,18117,18126);
+UPDATE broadcast_text SET EmoteID1=5 WHERE Id IN (18104,18112,18118,18122,18123);
+UPDATE broadcast_text SET EmoteID1=66 WHERE Id=18130;
+-- texts for Frances Lin <Barmaid>
+UPDATE broadcast_text SET EmoteID1=1 WHERE Id IN (18157,18158,18159);
+-- texts for Hillsbrad Citizen
+UPDATE broadcast_text SET EmoteID1=1 WHERE Id BETWEEN 18201 AND 18209;
+-- Sally Whitemane, Renault Mograine, and Little Jimmy Vishas
+UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN (18022,18024,18028);
+-- Captain Edward Hanes, Captain Sanders
+UPDATE broadcast_text SET EmoteID1=1 WHERE Id IN (18064,18065,18066,18070,18074,18077,18078,18079,18081,18082,18083);
+UPDATE broadcast_text SET EmoteID1=5 WHERE Id IN (18067,18072,18073);
+UPDATE broadcast_text SET EmoteID1=273 WHERE Id=18068;
+UPDATE broadcast_text SET EmoteID1=25 WHERE Id IN (18069,18071);
+UPDATE broadcast_text SET EmoteID1=6 WHERE Id=18075;
+UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN (18076,18080);
+-- Caretaker Smithers
+UPDATE broadcast_text SET ChatTypeID=2 WHERE Id IN (17997,17998,17999,18011);
+UPDATE broadcast_text SET EmoteID1=1 WHERE Id IN (18009,18012);
+
+-- 5539_TDB-0380_gurok_the_usurper.sql
+-- Text should get yelled
+UPDATE broadcast_text SET ChatTypeID = '1' WHERE Id = '14865';
+
+-- 5548c_TDB-0394_bota_cleanup.sql
+-- Text should be TextEmote
+UPDATE broadcast_text SET ChatTypeID = '2' WHERE Id = '16944';
