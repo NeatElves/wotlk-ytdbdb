@@ -6454,7 +6454,7 @@ UPDATE broadcast_text SET ChatTypeId = 1, SoundEntriesId1 = 14881 WHERE Id IN (3
 UPDATE broadcast_text SET ChatTypeId = 1, SoundEntriesId1 = 14882 WHERE Id IN (31335);
 UPDATE broadcast_text SET ChatTypeId = 1, SoundEntriesId1 = 14883 WHERE Id IN (31336);
 
--- 0453_VDB-20210311124530_world.sql
+-- 5581_VDB-20210311124530_world.sql
 -- You have been sentenced to death for crimes against the Dark Iron nation!
 UPDATE `broadcast_text` SET `ChatTypeId`=1 WHERE `Id` = 5441;
 -- The Sons of Thaurissan shall watch you perish in the Ring of the Law!
