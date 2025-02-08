@@ -151,13 +151,15 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `stand_state`, `sheath
 (7011, 0, 0, 1, 0, 0, '7165'), -- Earthen Rocksmasher
 (7012, 0, 0, 1, 0, 0, NULL), -- Earthen Sculptor
 (7022, 0, 0, 1, 0, 0, NULL), -- Venomlash Scorpid
-(7023, 0, 0, 1, 0, 0, NULL), -- Obsidian Sentinel
+(7023, 0, 0, 1, 0, 0, '9941'), -- Obsidian Sentinel
 (7030, 0, 0, 1, 0, 0, NULL), -- Shadowforge Geologist
 (7076, 0, 0, 1, 0, 0, '10255'), -- Earthen Guardian
 (7077, 0, 0, 1, 0, 0, '10255'), -- Earthen Hallshaper
 (7078, 0, 0, 1, 0, 0, '7276'), -- Cleft Scorpid
+(7172, 0, 0, 1, 0, 0, '11011'), -- Lore Keeper of Norgannon
 (7175, 0, 0, 1, 0, 0, NULL), -- Stonevault Ambusher
 (7206, 0, 0, 1, 0, 0, NULL), -- Ancient Stone Keeper
+(7209, 0, 0, 1, 0, 0, '10074'), -- Obsidian Shard
 (7226, 0, 0, 1, 0, 0, '10092'), -- Sand Storm
 (7290, 0, 0, 1, 0, 0, NULL), -- Shadowforge Sharpshooter
 (7291, 0, 0, 1, 0, 0, NULL), -- Galgann Firehammer
@@ -166,7 +168,7 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `stand_state`, `sheath
 (7321, 0, 0, 1, 0, 0, NULL), -- Stonevault Flameweaver
 (7396, 0, 0, 1, 0, 0, '7165'), -- Earthen Stonebreaker
 (7397, 0, 0, 1, 0, 0, NULL), -- Earthen Stonecarver
-(7405, 0, 0, 1, 0, 0, '3616'), -- Deadly Cleft Scorpid
+(7405, 0, 0, 1, 0, 0, '7276'), -- Deadly Cleft Scorpid
 (10120, 0, 0, 1, 0, 0, '10255'), -- Vault Warder
 (11073, 0, 0, 1, 0, 0, NULL); -- Annora
 
