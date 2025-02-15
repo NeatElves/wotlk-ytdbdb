@@ -6659,7 +6659,7 @@ UPDATE broadcast_text SET ChatTypeId=1,SoundEntriesID1=14512 WHERE Id=31759;
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (35810,35811,35812,35828,35820);
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (35526);
 
--- 0541_cthun.sql
+-- 5663_TDB-0541_cthun.sql
 UPDATE broadcast_text SET ChatTypeId=2 WHERE Id IN(11476);
 UPDATE broadcast_text SET ChatTypeId=7 WHERE Id IN(11700);
 
@@ -6721,3 +6721,6 @@ UPDATE `broadcast_text` SET `ChatTypeID`='6', `SoundEntriesID1`='10249' WHERE (`
 UPDATE `broadcast_text` SET `ChatTypeID`='6', `SoundEntriesID1`='10250' WHERE (`Id`='17342');
 UPDATE `broadcast_text` SET `ChatTypeID`='6', `SoundEntriesID1`='10251' WHERE (`Id`='17343');
 UPDATE `broadcast_text` SET `ChatTypeID`='6', `SoundEntriesID1`='10252' WHERE (`Id`='17344');
+
+-- 5656_TDB-0534_general_rajaxx.sql
+UPDATE broadcast_text SET SoundEntriesId1=8604,ChatTypeID=1 WHERE Id IN(11433);
