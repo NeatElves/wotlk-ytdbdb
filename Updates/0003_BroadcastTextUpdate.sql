@@ -6314,6 +6314,10 @@ UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=13178; -- This constant, a
 UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=13469; -- Victory for the Horde!
 UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=13470; -- We've done it!  Victory to the Alliance!
 UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=13476; -- We have one quarter of our needed silithyst! Keep it up!
+UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=13477;
+UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=13478;
+UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=13479;
+UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=13480;
 UPDATE `broadcast_text` SET `ChatTypeID`=1 WHERE `Id`=13481; -- We have almost all the silithyst we need!  Don't stop now!
 UPDATE `broadcast_text` SET `ChatTypeID`=6 WHERE `Id`=13492; -- Your petty magics are no challenge to the might of the Scourge!
 
@@ -6724,3 +6728,115 @@ UPDATE `broadcast_text` SET `ChatTypeID`='6', `SoundEntriesID1`='10252' WHERE (`
 
 -- 5656_TDB-0534_general_rajaxx.sql
 UPDATE broadcast_text SET SoundEntriesId1=8604,ChatTypeID=1 WHERE Id IN(11433);
+
+-- 20250310183859_world.sql
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8286, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9667;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8287, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9668;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8275, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9961;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8276, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9962;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8277, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9963;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8281, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9886;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8282, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9887;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8283, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9888;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8285, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9965;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8284, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9964;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8279, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9794;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4903;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4904;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=5, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4905;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4906;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=5, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4907;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4908;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=5, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4909;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4911;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=11, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4912;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4928;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4929;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=27, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4930;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=4927;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8035, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=7612;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8039, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=7566;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=8037, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9425;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8038, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=7561;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8040, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=7657;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8043, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=7636;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8041, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=7661;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8044, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=7662;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8049, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=8572;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8050, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=8573;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8047, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=9427;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8051, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=7626;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8045, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=7685;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8414, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10447;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8417, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10027;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8422, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10452;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8413, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10446;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8423, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10459;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8421, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10026;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=7550;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=7551;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=3, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=7552;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=6433;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=18, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=6456;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=25, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=6457;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=4, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=6461;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=22, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=6463;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=18, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=6468;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=3921;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=3917;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=3922;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10909;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=22, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10911;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10914;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10908;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=22, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10903;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10904;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=22, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10901;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10907;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=22, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10902;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=22, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10915;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=25, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10916;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10923;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10924;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10925;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10927;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10928;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10931;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=1, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10932;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=25, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=10933;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8646, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11442;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8647, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11443;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8648, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11444;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8625, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11452;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=8636, `EmoteID1`=0, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11454;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=93, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11612;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=93, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11622;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=93, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11624;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=93, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11625;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=93, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11626;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=93, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11627;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=93, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11628;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=93, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11629;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=93, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11630;
+UPDATE `broadcast_text` SET `SoundEntriesID1`=0, `EmoteID1`=93, `EmoteID2`=0, `EmoteID3`=0 WHERE `Id`=11631;
+
+-- 20250312171132_world.sql
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8896 WHERE `Id` = 13014;
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8286 WHERE `Id` = 9967;
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8287 WHERE `Id` = 9968;
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8278 WHERE `Id` = 9591;
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8615 WHERE `Id` = 11445;
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8622 WHERE `Id` = 11447;
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8635 WHERE `Id` = 11455;
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8598 WHERE `Id` = 11449;
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8602 WHERE `Id` = 11450;
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8594 WHERE `Id` = 11451;
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8046 WHERE `Id` = 9426;
+UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 8573;
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8416 WHERE `Id` = 10461;
+UPDATE `broadcast_text` SET `SoundEntriesID1` = 8412 WHERE `Id` = 10450;
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` = 11191;
+UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 6442;
+UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 13162;
+UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 6504;
+UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 6530;
