@@ -19,10 +19,8 @@ INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `priority`, `command`,
 
 # 230_blackrock_depths.sql
 SET @OGUID := 2300000; -- gameobjects
+# ID TMP GO not use
 DELETE FROM `gameobject` WHERE `guid` = @OGUID+457;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
-(@OGUID+800, 190395, 230, 1, 1, 891.688, -175.735, -43.925, 1.21, 0, 0, 0.886709, -0.462328, -180, -180),
-(@OGUID+801, 190394, 230, 1, 1, 891.688, -175.735, -43.925, 1.21, 0, 0, 0.886709, -0.462328, -180, -180);
 
 # 309_zulgurub.sql
 # condition ID YTDB
@@ -32,13 +30,6 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `priority`, `command`
 (180327, 5000, 0, 10, 15083, 259200, 0, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, 3692, 'Zul''Gurub - Brazier of Madness - Edge of Madness (Hazza''rah)'),
 (180327, 5000, 0, 10, 15084, 259200, 0, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, 3693, 'Zul''Gurub - Brazier of Madness - Edge of Madness (Renataki)'),
 (180327, 5000, 0, 10, 15085, 259200, 0, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, 3694, 'Zul''Gurub - Brazier of Madness - Edge of Madness (Wushoolay)');
-
-# 531_temple_of_ahnqiraj.sql
-# condition ID YTDB
-SET @GROUP_ID := 5310000;
-UPDATE `spawn_group` SET `WorldState` = 12010 WHERE `Id` =@GROUP_ID+14;
-DELETE FROM conditions WHERE condition_entry=12010 AND type=42;
-INSERT INTO conditions(condition_entry,type,value1,value2,value3) VALUES (12010, 42, 71101, 0, 1);
 
 # 556_sethekk_halls.sql
 # Gossip ID YTDB
@@ -51,13 +42,10 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalo
 (786801, 1000, 0, 0, 0, 0, 18956, @CGUID+88, 16, 16049, 0, 0, 0, 0, 0, 0, 0, 'Sethekk Halls - Lakka - Say'),
 (786801, 1000, 8, 18956, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sethekk Halls - Lakka - Kill Credit');
 
-# 557_mana_tombs.sql
-SET @CGUID := 5570000; -- creatures
-UPDATE `creature` SET `spawndist` = 0, `MovementType` = 2 WHERE `guid` = @CGUID+173;
-
 # 560_old_hillsbrad_foothills.sql
+# id 180570 GO use in seasonal quest 8409
 SET @OGUID := 5600000; -- gameobjects
-DELETE FROM `gameobject` WHERE `guid` = @OGUID+186;
+UPDATE `gameobject` SET `id` = 180575 WHERE `guid` = @OGUID+186;
 
 # 568_zulaman.sql
 # Event data YTDB

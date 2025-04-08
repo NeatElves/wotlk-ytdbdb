@@ -1,6 +1,6 @@
 # fix base
 
-# DB-SCRIPT in base [go_furbolg_food]
+# DB-SCRIPT in base dbscripts_on_go_template_use [go_furbolg_food]
 UPDATE gameobject_template SET ScriptName='' WHERE entry=175329;
 UPDATE gameobject_template SET ScriptName='' WHERE entry=175330;
 UPDATE gameobject_template SET ScriptName='' WHERE entry=175331;
@@ -23,7 +23,7 @@ INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalon
 INSERT INTO `mail_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) VALUES (264, 44817, 100, 0, 1, 1, 0, '');
 
 # https://github.com/cmangos/mangos-wotlk/blob/master/src/game/Spells/SpellEffects.cpp#L11458
-# Spells in core do not take reagents from the player
+# Spells in core do not take reagents from the player (08.03.2025 - core not work)
 DELETE FROM dbscripts_on_gossip WHERE id IN (654001,654002,654003,654004,654000,654201,654202,654203,654204,654200,654301,654302,654303,654304,654300);
 INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
 (654303, 0, 0, 15, 24791, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'greater wind stone - air'),
@@ -135,12 +135,22 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `comman
 (1714614, 5000, 0, 1, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Kil\'Sorrow Spellbinder/Cultist - ONESHOT_SPELLCAST');
 
 # Q 8315 hack
+DELETE FROM `dbscripts_on_creature_death` WHERE `id` IN (15286,15288,15290);
+INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+(15288, 1000, 0, 18, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'despawn'),
+(15286, 1000, 0, 18, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'despawn'),
+(15290, 1000, 0, 18, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'despawn');
 DELETE FROM `dbscripts_on_event` WHERE `id` = 9208;
-INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(9208, 20000, 10, 14862, 1200000, 0, -7276.38, 852.34, 3.64, 0.5, 'summon Emissary Roman''khan'),
-(9208, 100, 10, 15288, 1200000, 0, -7233.39, 906.415, -1.76649, 1.81259, 'summon Aluntir'),
-(9208, 300, 10, 15286, 1200000, 0, -7212.16, 911.711, -1.76649, 2.58543, 'summon Xil''xix'),
-(9208, 500, 10, 15290, 1200000, 0, -7210.3, 895.014, -1.76649, 0.544185, 'summon Arakis');
+INSERT INTO `dbscripts_on_event` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+(9208, 20000, 0, 10, 14862, 1200000, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7307.85, 838.671, 1.64449, 0.750492, 0, 0, 'summon Emissary Roman''khan'),
+(9208, 20010, 0, 0, 0, 0, 0, 14862, 500, 7, 10888, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Talk Emissary Roman''khan'),
+(9208, 20015, 0, 3, 0, 0, 2, 14862, 500, 7, 0, 0, 0, 0, 0, -7214.39, 911.366, -1.76575, 4.19105, 0, 0, 'move'),
+(9208, 100, 0, 10, 15288, 1200000, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7223.8, 820.815, 4.89979, 0.0872665, 0, 0, 'summon Aluntir'),
+(9208, 300, 0, 10, 15286, 1200000, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7258.49, 828.158, 3.21053, 4.29351, 0, 0, 'summon Xil''xix'),
+(9208, 500, 0, 10, 15290, 1200000, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7268.27, 878.263, 1.88339, 1.85005, 0, 0, 'summon Arakis'),
+(9208, 150, 0, 3, 0, 0, 2, 15288, 100, 0, 0, 0, 0, 0, 0, -7214.39, 911.366, -1.76575, 4.19105, 0, 0, 'move'),
+(9208, 350, 0, 3, 0, 0, 2, 15286, 100, 0, 0, 0, 0, 0, 0, -7214.39, 911.366, -1.76575, 4.19105, 0, 0, 'move'),
+(9208, 550, 0, 3, 0, 0, 2, 15290, 100, 0, 0, 0, 0, 0, 0, -7214.39, 911.366, -1.76575, 4.19105, 0, 0, 'move');
 
 # test tmp event https://www.wowhead.com/wotlk/ru/npc=2434/
 UPDATE `creature_template` SET `ExtraFlags` = '4096', `MovementType` = '2' WHERE `Entry` =2435;
@@ -188,121 +198,121 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `comman
 (243518, 0, 2, 18, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'die');
 
 # test systen groupid item Weapon+Armor for Blue & Green quality
-#UPDATE `creature_loot_template` SET `groupid` = '7' WHERE `item` IN (SELECT `entry` FROM `item_template` WHERE `Quality` =3 AND `class` IN (2,4) AND `item` NOT IN (22712,37799));
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 1203;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 1973;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 2564;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 5266;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 5267;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 6660;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 7734;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 9402;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 11302;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 13001;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 13003;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 13004;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 13036;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =8443 AND `item` =10838;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8443 AND `item` =10842;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8443 AND `item` =10843;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =8443 AND `item` =10844;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8443 AND `item` =10845;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8443 AND `item` =10846;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =7358 AND `item` =10761;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =7358 AND `item` =10762;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =7358 AND `item` =10763;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '25' WHERE `entry` =7358 AND `item` =10764;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '25' WHERE `entry` =7358 AND `item` =10765;
-#
-#UPDATE `creature_loot_template` SET `groupid` = '6' WHERE `item` IN (SELECT `entry` FROM `item_template` WHERE `Quality` =2 AND `class` IN (2,4) AND `item` NOT IN (3985,4949,17922,18450,18674,18677));
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1608;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1639;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1994;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 3208;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 4046;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 7517;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 8106;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 8246;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 727;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 2075;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 2140;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 3283;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 789;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 790;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 2072;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 2078;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 2079;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 2981;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 2982;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 2988;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 3048;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 3057;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 3058;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `item` = 8269;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `item` = 8283;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `item` = 8284;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `item` = 8288;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `item` = 8289;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `item` = 8292;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `item` = 8303;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `item` = 10135;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `item` = 10141;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `item` = 10246;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 863;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 864;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 1207;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 1608;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 1613;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 1990;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 1994;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 4044;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 4046;
-#UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 4047;
-#
-#UPDATE `item_loot_template` SET `groupid` = '7' WHERE `item` IN (SELECT `entry` FROM `item_template` WHERE `Quality` =3 AND `class` IN (2,4));
-#UPDATE `item_loot_template` SET `groupid` = '6' WHERE `item` IN (SELECT `entry` FROM `item_template` WHERE `Quality` =2 AND `class` IN (2,4) AND `item` NOT IN (10780,10781,10782));
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '15' WHERE `entry` =43622 AND `item` =35979;
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '15' WHERE `entry` =43622 AND `item` =35987;
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '15' WHERE `entry` =43622 AND `item` =35995;
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `entry` =43622 AND `item` =37754;
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `entry` =43622 AND `item` =37755;
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `entry` =43622 AND `item` =37756;
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1608;
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1639;
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1994;
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 3208;
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 4046;
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 7517;
-#UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 8106;
-#
-#UPDATE `gameobject_loot_template` SET `groupid` = '6' WHERE `item` IN (SELECT `entry` FROM `item_template` WHERE `Quality` =2 AND `class` IN (2,4) AND `item` NOT IN (18475,18476));
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1613;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1625;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 866;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 8288;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 8246;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 4044;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 4046;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 4047;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 8292;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 8289;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 8284;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 8269;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 8251;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 8245;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1990;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 2077;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 2080;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 2819;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 3042;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 3186;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 865;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 864;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 4716;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 3197;
-#UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 8254;
-#
-#UPDATE `gameobject_loot_template` SET `groupid` = '7' WHERE `item` IN (SELECT `entry` FROM `item_template` WHERE `Quality` =3 AND `class` IN (2,4) AND `item` NOT IN (18495,18499,18500));
+UPDATE `creature_loot_template` SET `groupid` = '7' WHERE `item` IN (SELECT `entry` FROM `item_template` WHERE `Quality` =3 AND `class` IN (2,4) AND `item` NOT IN (22712,37799));
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 1203;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 1973;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 2564;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 5266;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 5267;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 6660;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 7734;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 9402;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 11302;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 13001;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 13003;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 13004;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0.5' WHERE `item` = 13036;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =8443 AND `item` =10838;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8443 AND `item` =10842;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8443 AND `item` =10843;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `entry` =8443 AND `item` =10844;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8443 AND `item` =10845;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =8443 AND `item` =10846;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =7358 AND `item` =10761;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =7358 AND `item` =10762;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '0' WHERE `entry` =7358 AND `item` =10763;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '20' WHERE `entry` =7358 AND `item` =10764;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '20' WHERE `entry` =7358 AND `item` =10765;
+
+UPDATE `creature_loot_template` SET `groupid` = '6' WHERE `item` IN (SELECT `entry` FROM `item_template` WHERE `Quality` =2 AND `class` IN (2,4) AND `item` NOT IN (3985,4949,17922,18450,18674,18677));
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 1608;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 1639;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 1994;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 3208;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 4046;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 7517;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 8106;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 8246;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 727;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 2075;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 2140;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 3283;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 789;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 790;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 2072;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 2078;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 2079;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 2981;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 2982;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 2988;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 3048;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 3057;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 3058;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 8269;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 8283;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 8284;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 8288;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 8289;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 8292;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 8303;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 10135;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '5' WHERE `item` = 10141;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 10246;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 863;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 864;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1207;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1608;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1613;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1990;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 1994;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 4044;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 4046;
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance` = '2' WHERE `item` = 4047;
+
+UPDATE `item_loot_template` SET `groupid` = '7' WHERE `item` IN (SELECT `entry` FROM `item_template` WHERE `Quality` =3 AND `class` IN (2,4));
+UPDATE `item_loot_template` SET `groupid` = '6' WHERE `item` IN (SELECT `entry` FROM `item_template` WHERE `Quality` =2 AND `class` IN (2,4) AND `item` NOT IN (10780,10781,10782));
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =43622 AND `item` =35979;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =43622 AND `item` =35987;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '10' WHERE `entry` =43622 AND `item` =35995;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `entry` =43622 AND `item` =37754;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `entry` =43622 AND `item` =37755;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `entry` =43622 AND `item` =37756;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 1608;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 1639;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 1994;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 3208;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 4046;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 7517;
+UPDATE `item_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 8106;
+
+UPDATE `gameobject_loot_template` SET `groupid` = '6' WHERE `item` IN (SELECT `entry` FROM `item_template` WHERE `Quality` =2 AND `class` IN (2,4) AND `item` NOT IN (18475,18476));
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 1613;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 1625;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 866;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 8288;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 8246;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 4044;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 4046;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 4047;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 8292;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 8289;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 8284;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 8269;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 8251;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 8245;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 1990;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 2077;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 2080;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 2819;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 3042;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 3186;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 865;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 864;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 4716;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 3197;
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = '1' WHERE `item` = 8254;
+
+UPDATE `gameobject_loot_template` SET `groupid` = '7' WHERE `item` IN (SELECT `entry` FROM `item_template` WHERE `Quality` =3 AND `class` IN (2,4) AND `item` NOT IN (18495,18499,18500));
 
 
 # NPC AQ War
