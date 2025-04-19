@@ -6840,3 +6840,6 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 6442;
 UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 13162;
 UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 6504;
 UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 6530;
+
+-- 0562_sully_balloo_letter.sql
+UPDATE broadcast_text SET ChatTypeID = 2 WHERE Id = 792;
