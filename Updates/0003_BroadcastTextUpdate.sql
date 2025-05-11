@@ -6843,3 +6843,9 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 6530;
 
 -- 0562_sully_balloo_letter.sql
 UPDATE broadcast_text SET ChatTypeID = 2 WHERE Id = 792;
+
+-- 0568_pearl-diving.sql
+UPDATE broadcast_text SET ChatTypeID = '2' WHERE Id IN (1021);
+
+-- 0573_vorsha_the_lasher_escort.sql
+UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='8567');
