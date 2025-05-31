@@ -6849,3 +6849,6 @@ UPDATE broadcast_text SET ChatTypeID = '2' WHERE Id IN (1021);
 
 -- 0573_vorsha_the_lasher_escort.sql
 UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='8567');
+
+-- 0588_WDB-5484_Asric_Jadaar_RP.sql
+UPDATE broadcast_text SET `ChatTypeID` = 2 WHERE `Id` IN (23435,23321,23323);
