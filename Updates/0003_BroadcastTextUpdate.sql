@@ -6841,14 +6841,17 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 13162;
 UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 6504;
 UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 6530;
 
--- 0562_sully_balloo_letter.sql
+-- TDB-0562_sully_balloo_letter.sql
 UPDATE broadcast_text SET ChatTypeID = 2 WHERE Id = 792;
 
--- 0568_pearl-diving.sql
+-- TDB-0568_pearl-diving.sql
 UPDATE broadcast_text SET ChatTypeID = '2' WHERE Id IN (1021);
 
--- 0573_vorsha_the_lasher_escort.sql
+-- TDB-0573_vorsha_the_lasher_escort.sql
 UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='8567');
 
--- 0588_WDB-5484_Asric_Jadaar_RP.sql
+-- TDB-0588_WDB-5484_Asric_Jadaar_RP.sql
 UPDATE broadcast_text SET `ChatTypeID` = 2 WHERE `Id` IN (23435,23321,23323);
+
+-- TDB-0597_rfk.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` = 6180; -- Who's next?
