@@ -49,10 +49,10 @@ UPDATE `npc_vendor` ct JOIN `item_template` it ON it.entry = ct.item SET ct.comm
 UPDATE conditions SET comments=NULL;
 -- CONDITION_NONE
 UPDATE conditions SET comments=CONCAT('Player Has Aura: ',value1, ', EffectIndex: ',value2) WHERE type=1 AND flags=0 AND comments IS NULL; -- CONDITION_AURA
-UPDATE conditions SET comments=CONCAT('NOT Player Has Aura: ',value1, ', EffectIndex: ',value2) WHERE type=1 AND flags=1 AND comments IS NULL; -- CONDITION_AURA &FLAG_REVERSE_RESULT
-UPDATE conditions SET comments=CONCAT('Source of Condition Has Aura: ',value1, ', EffectIndex: ',value2) WHERE type=1 AND flags=2 AND comments IS NULL; -- CONDITION_AURA &FLAG_SWAP_TARGETS
+UPDATE conditions SET comments=CONCAT('NOT Player Has Aura: ',value1, ', EffectIndex: ',value2) WHERE type=1 AND flags=1 AND comments IS NULL; -- CONDITION_NO_AURA
+UPDATE conditions SET comments=CONCAT('Source of Condition Has Aura: ',value1, ', EffectIndex: ',value2) WHERE type=1 AND flags=2 AND comments IS NULL; -- CONDITION_SOURCE_AURA
 UPDATE conditions SET comments=CONCAT('Player Has ',value2,' or more of Item ID ',value1,' in Inventory') WHERE type=2 AND flags=0 AND comments IS NULL; -- CONDITION_ITEM
-UPDATE conditions SET comments=CONCAT('Player Has Less Than ',value2,' of Item ID ',value1,' in Inventory') WHERE type=2 AND flags=1 AND comments IS NULL; -- CONDITION_ITEM &FLAG_REVERSE_RESULT
+UPDATE conditions SET comments=CONCAT('Player Has Less Than ',value2,' of Item ID ',value1,' in Inventory') WHERE type=2 AND flags=1 AND comments IS NULL; -- CONDITION_NOITEM
 UPDATE conditions SET comments=CONCAT('Player Has Item ID ',value1,' Equipped') WHERE type=3 AND comments IS NULL; -- CONDITION_ITEM_EQUIPPED
 UPDATE conditions SET comments=CONCAT('Is In Area ID: ',value1) WHERE type=4 AND value2=0 AND comments IS NULL; -- CONDITION_AREAID
 UPDATE conditions SET comments=CONCAT('NOT In Area ID: ',value1) WHERE type=4 AND value2=1 AND comments IS NULL; -- CONDITION_AREAID
@@ -73,8 +73,8 @@ UPDATE conditions SET comments=CONCAT('Quest ID ',value1,' Taken') WHERE type=9 
 UPDATE conditions SET comments=CONCAT('Quest ID ',value1,' Taken AND NOT Completed') WHERE type=9 AND value2=1 AND comments IS NULL; -- CONDITION_QUESTTAKEN
 UPDATE conditions SET comments=CONCAT('Quest ID ',value1,' Taken AND Completed') WHERE type=9 AND value2=2 AND comments IS NULL; -- CONDITION_QUESTTAKEN
 UPDATE conditions SET comments=CONCAT('Player has any Argent Dawn Commission Aura Active (17670,23930,24198,29112,29113)') WHERE type=10 AND comments IS NULL; -- CONDITION_AD_COMMISSION_AURA
-UPDATE conditions SET comments=CONCAT('Event ID ',value1, ' Active') WHERE type=12 AND flags=0 AND comments IS NULL; -- CONDITION_ACTIVE_GAME_EVENT
-UPDATE conditions SET comments=CONCAT('Game Event ',value1,' NOT Active') WHERE type=12 AND flags=1 AND comments IS NULL; -- CONDITION_ACTIVE_GAME_EVENT &FLAG_REVERSE_RESULT
+UPDATE conditions SET comments=CONCAT('Event ID ',value1, ' Active') WHERE type=12 AND flags=0 AND comments IS NULL; -- CONDITION_ACTIVE_EVENT
+UPDATE conditions SET comments=CONCAT('Game Event ',value1,' NOT Active') WHERE type=12 AND flags=1 AND comments IS NULL; -- CONDITION_NOT_ACTIVE_GAME_EVENT
 UPDATE conditions SET comments=CONCAT('Area Flag ',value1, ' Present in Current Area') WHERE type=13 AND value1 !=0 AND value2=0 AND comments IS NULL; -- CONDITION_AREA_FLAG
 UPDATE conditions SET comments=CONCAT('Area Flag ',value2, ' NOT Present in Current Area') WHERE type=13 AND value1 =0 AND value2 !=0 AND comments IS NULL; -- CONDITION_AREA_FLAG
 UPDATE conditions SET comments=CONCAT('Area Flag ',value1, ' Present in Current Area AND Area Flag ',value2,' NOT Present in Current Area') WHERE type=13 AND value1 !=0 AND value2 !=0 AND comments IS NULL; -- CONDITION_AREA_FLAG
@@ -88,10 +88,10 @@ UPDATE conditions SET comments=CONCAT('Player Has Learned Spell: ',value1) WHERE
 UPDATE conditions SET comments=CONCAT('NOT Player Has Learned Spell: ',value1) WHERE type=17 AND value2=1 AND comments IS NULL; -- CONDITION_SPELL
 UPDATE conditions SET comments=CONCAT('ScriptDev: InstanceConditionID Value: ',value1) WHERE type=18 AND comments IS NULL; -- CONDITION_INSTANCE_SCRIPT
 UPDATE conditions SET comments=CONCAT('Quest ID ',value1,' Available') WHERE type=19 AND comments IS NULL; -- CONDITION_QUESTAVAILABLE
-UPDATE conditions SET comments=CONCAT('Player has achievement ID: ',value1) WHERE type=20 AND value2=0 AND comments IS NULL; -- CONDITION_ACHIEVEMENT
-UPDATE conditions SET comments=CONCAT('Player has no achievement ID: ',value1) WHERE type=20 AND value2=1 AND comments IS NULL; -- CONDITION_ACHIEVEMENT
-UPDATE conditions SET comments=CONCAT('Account has achievement ID: ',value1) WHERE type=21 AND value2=0 AND comments IS NULL;-- CONDITION_ACHIEVEMENT_REALM
-UPDATE conditions SET comments=CONCAT('Account has no achievement ID: ',value1) WHERE type=21 AND value2=1 AND comments IS NULL;-- CONDITION_ACHIEVEMENT_REALM
+UPDATE conditions SET comments=CONCAT('Achievement ',value1,' Earned') WHERE type=20 AND value2=0 AND comments IS NULL; -- CONDITION_ACHIEVEMENT_EARNED
+UPDATE conditions SET comments=CONCAT('Achievement ',value1,' NOT Earned') WHERE type=20 AND value2 !=0 AND comments IS NULL; -- CONDITION_ACHIEVEMENT_NOT_EARNED
+UPDATE conditions SET comments=CONCAT('Account achievement ',value1,' Earned') WHERE type=21 AND value2=0 AND comments IS NULL;-- CONDITION_ACHIEVEMENT_REALM_EARNED
+UPDATE conditions SET comments=CONCAT('Account achievement ',value1' NOT Earned') WHERE type=21 AND value2 !=0 AND comments IS NULL;-- CONDITION_ACHIEVEMENT_REALM_NOT_EARNED
 UPDATE conditions SET comments=CONCAT('Quest ID ',value1,' NOT Taken AND NOT Rewarded') WHERE type=22 AND comments IS NULL; -- CONDITION_QUEST_NONE
 UPDATE conditions SET comments=CONCAT('Player Has ',value2,' or more of Item ID ',value1,' in Inventory/Bank') WHERE type=23 AND flags=0 AND comments IS NULL; -- CONDITION_ITEM_WITH_BANK
 UPDATE conditions SET comments=CONCAT('Player Has Less Than ',value2,' of Item ID ',value1,' in Inventory/Bank') WHERE type=23 AND flags=1 AND comments IS NULL; -- CONDITION_ITEM_WITH_BANK &FLAG_REVERSE_RESULT
@@ -117,9 +117,9 @@ UPDATE conditions SET comments=CONCAT('Source of Condition''s Last Waypoint >= '
 UPDATE conditions SET comments=CONCAT('Player Gender: Male') WHERE type=35 AND value1=0 AND flags=0 AND comments IS NULL; -- CONDITION_GENDER
 UPDATE conditions SET comments=CONCAT('Player Gender: Female') WHERE type=35 AND value1=1 AND flags=0 AND comments IS NULL; -- CONDITION_GENDER
 UPDATE conditions SET comments=CONCAT('Player Gender: None') WHERE type=35 AND value1=2 AND flags=0 AND comments IS NULL; -- CONDITION_GENDER
-UPDATE conditions SET comments=CONCAT('NPC Gender: Male') WHERE type=35 AND value1=0 AND flags=2 AND comments IS NULL; -- CONDITION_GENDER &FLAG_SWAP_TARGETS
-UPDATE conditions SET comments=CONCAT('NPC Gender: Female') WHERE type=35 AND value1=1 AND flags=2 AND comments IS NULL; -- CONDITION_GENDER &FLAG_SWAP_TARGETS
-UPDATE conditions SET comments=CONCAT('NPC Gender: None') WHERE type=35 AND value1=2 AND flags=2 AND comments IS NULL; -- CONDITION_GENDER &FLAG_SWAP_TARGETS
+UPDATE conditions SET comments=CONCAT('NPC Gender: Male') WHERE type=35 AND value1=0 AND flags=2 AND comments IS NULL; -- CONDITION_GENDER
+UPDATE conditions SET comments=CONCAT('NPC Gender: Female') WHERE type=35 AND value1=1 AND flags=2 AND comments IS NULL; -- CONDITION_GENDER
+UPDATE conditions SET comments=CONCAT('NPC Gender: None') WHERE type=35 AND value1=2 AND flags=2 AND comments IS NULL; -- CONDITION_GENDER
 UPDATE conditions SET comments=CONCAT('Player is Dead') WHERE type=36 AND value1=0 AND value2=0 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
 UPDATE conditions SET comments=CONCAT('All Players in Group are Dead') WHERE type=36 AND value1=1 AND value2=0 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
 UPDATE conditions SET comments=CONCAT('All Players in Instance are Dead') WHERE type=36 AND value1=2 AND value2=0 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
@@ -127,7 +127,7 @@ UPDATE conditions SET comments=CONCAT('Player is Dead OR NOT Within ',value2,'y 
 UPDATE conditions SET comments=CONCAT('All Players in Group are Dead OR NOT Within ',value2,'y of Source') WHERE type=36 AND value1=1 AND value2 !=0 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
 UPDATE conditions SET comments=CONCAT('All Players in Instance are Dead OR NOT Within ',value2,'y of Source') WHERE type=36 AND value1=2 AND value2 !=0 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
 UPDATE conditions SET comments=CONCAT('Creature Source is Dead') WHERE type=36 AND value1=3 AND comments IS NULL; -- CONDITION_DEAD_OR_AWAY
-UPDATE conditions SET comments=CONCAT('Creature of Entry ',value1,' Found Alive Within ',value2,'y of Source') WHERE type=37 AND flags=0 AND comments IS NULL;
+UPDATE conditions SET comments=CONCAT('Creature of Entry ',value1,' Found Alive Within ',value2,'y of Source') WHERE type=37 AND flags=0 AND comments IS NULL; -- CONDITION_CREATURE_IN_RANGE
 UPDATE conditions SET comments=CONCAT('Creature of Entry ',value1,' No Found Alive Within ',value2,'y of Source') WHERE type=37 AND flags=1 AND comments IS NULL;
 
 # небольшой хак, просто текст в 500 знаков уже не вмещается(
