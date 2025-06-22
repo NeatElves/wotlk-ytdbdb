@@ -90,8 +90,8 @@ UPDATE conditions SET comments=CONCAT('ScriptDev: InstanceConditionID Value: ',v
 UPDATE conditions SET comments=CONCAT('Quest ID ',value1,' Available') WHERE type=19 AND comments IS NULL; -- CONDITION_QUESTAVAILABLE
 UPDATE conditions SET comments=CONCAT('Achievement ',value1,' Earned') WHERE type=20 AND value2=0 AND comments IS NULL; -- CONDITION_ACHIEVEMENT_EARNED
 UPDATE conditions SET comments=CONCAT('Achievement ',value1,' NOT Earned') WHERE type=20 AND value2 !=0 AND comments IS NULL; -- CONDITION_ACHIEVEMENT_NOT_EARNED
-UPDATE conditions SET comments=CONCAT('Account achievement ',value1,' Earned') WHERE type=21 AND value2=0 AND comments IS NULL;-- CONDITION_ACHIEVEMENT_REALM_EARNED
-UPDATE conditions SET comments=CONCAT('Account achievement ',value1' NOT Earned') WHERE type=21 AND value2 !=0 AND comments IS NULL;-- CONDITION_ACHIEVEMENT_REALM_NOT_EARNED
+UPDATE conditions SET comments=CONCAT('Account achievement ',value1,' Earned') WHERE type=21 AND value2=0 AND comments IS NULL; -- CONDITION_ACHIEVEMENT_REALM_EARNED
+UPDATE conditions SET comments=CONCAT('Account achievement ',value1,' NOT Earned') WHERE type=21 AND value2 !=0 AND comments IS NULL; -- CONDITION_ACHIEVEMENT_REALM_NOT_EARNED
 UPDATE conditions SET comments=CONCAT('Quest ID ',value1,' NOT Taken AND NOT Rewarded') WHERE type=22 AND comments IS NULL; -- CONDITION_QUEST_NONE
 UPDATE conditions SET comments=CONCAT('Player Has ',value2,' or more of Item ID ',value1,' in Inventory/Bank') WHERE type=23 AND flags=0 AND comments IS NULL; -- CONDITION_ITEM_WITH_BANK
 UPDATE conditions SET comments=CONCAT('Player Has Less Than ',value2,' of Item ID ',value1,' in Inventory/Bank') WHERE type=23 AND flags=1 AND comments IS NULL; -- CONDITION_ITEM_WITH_BANK &FLAG_REVERSE_RESULT

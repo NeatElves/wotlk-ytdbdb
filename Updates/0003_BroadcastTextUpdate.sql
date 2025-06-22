@@ -6855,3 +6855,9 @@ UPDATE broadcast_text SET `ChatTypeID` = 2 WHERE `Id` IN (23435,23321,23323);
 
 -- TDB-0597_rfk.sql
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` = 6180; -- Who's next?
+
+-- 5693_Argent_Tournament_Mounts_Vehicles.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `Id` IN (33855);
+UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `Id` IN (34032);
+UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `Id` IN (34035);
+UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `Id` IN (34034);

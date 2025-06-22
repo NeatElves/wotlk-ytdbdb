@@ -1,5 +1,8 @@
 # fix base
 
+# add for argent_tournament
+INSERT INTO `scripted_areatrigger` (`entry`, `ScriptName`) VALUES ('5500', 'at_black_knight_grave');
+
 # DB-SCRIPT in base dbscripts_on_go_template_use [go_furbolg_food]
 UPDATE gameobject_template SET ScriptName='' WHERE entry=175329;
 UPDATE gameobject_template SET ScriptName='' WHERE entry=175330;
