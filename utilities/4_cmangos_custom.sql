@@ -84,7 +84,7 @@ UPDATE gameobject_template SET data8=3602 WHERE entry IN (152620, 152621, 152622
 -- Link Crate with Holes, Snufflenose Command Stick and Snufflenose Owner's Manual GOs to quest 1221 so they are usable by players on the quest
 UPDATE gameobject_template SET data8=1221 WHERE entry IN (68865, 21530, 21277);
 
--- Thaurissan Relic classic-db (and classic sniff) value 3702 - the quest which involves actually using this object is 3701
+-- Thaurissan Relic - original tbc-db value 0, classic-db (and classic sniff) value 3702 - the quest which involves actually using this object is 3701
 UPDATE gameobject_template SET data1=3701 WHERE entry=153556;
 
 -- Make object 181444 (Kel'Thuzad Trigger) despawnable on usage
@@ -111,8 +111,12 @@ UPDATE gameobject_template SET data2=0 WHERE entry=176211;
 -- Verigan's Fist: must despawn during scripted quest
 UPDATE gameobject_template SET `data3`=0, `data5`=1 WHERE entry=102413;
 
+
 -- Temporary fix data6 for GO 178559 (Larva Spewer) in prevision of coming core update
 UPDATE gameobject_template SET data6=0 WHERE entry=178559;
+
+-- Drek'Thar's Scrolls 179004 - seemingly never used
+UPDATE `gameobject_template` SET `data1` = 0 WHERE `entry` = 179004;
 
 -- Inconspicuous Landmark 142189 - consumable, despawn on s.11462 expire
 UPDATE `gameobject_template` SET `data5` = 1 WHERE `entry` = 142189; -- 19660800 / 65536 = 300sec
@@ -195,10 +199,15 @@ UPDATE `creature_template` SET `name` = 'Redeemed Spirit of Earth' WHERE `entry`
 
 -- Dance Vibe spell should not stack
 UPDATE `spell_template` SET `StackAmount`='1' WHERE (`Id`='29521');
+-- Incapacitate Maloric - available only from behind target
+UPDATE spell_template SET Attributes = Attributes|0x04000000 WHERE id = 63124;
 
 -- ============================================================
 -- WoTLK section
 -- ============================================================
+
+-- Shield Level 1 2 3 - spam preventing fix
+UPDATE spell_template SET EffectTriggerSpell1 = 63104 WHERE id IN (63130,63131,63132);
 
 -- -------------------------------
 -- Gameobject custom changes

@@ -6861,3 +6861,10 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `Id` IN (33855);
 UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `Id` IN (34032);
 UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `Id` IN (34035);
 UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `Id` IN (34034);
+
+-- 5697_TheCourtOfBones_Phase_256.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `Id` IN (34237);
+
+-- 5703_Argent_BlackKnight_questline.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (33803);
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (34169,34185);
