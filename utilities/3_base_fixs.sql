@@ -1,17 +1,17 @@
 # fix base
 
 # DB-SCRIPT in base dbscripts_on_go_template_use [go_furbolg_food]
-UPDATE gameobject_template SET ScriptName='' WHERE entry=175329;
-UPDATE gameobject_template SET ScriptName='' WHERE entry=175330;
-UPDATE gameobject_template SET ScriptName='' WHERE entry=175331;
-DELETE FROM `dbscripts_on_go_template_use` WHERE `id` IN (175331,175329,175330);
-INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `comments`) VALUES
-(175329, 0, 0, 10, 2168, 300000, 'Blackwood Grain Store - Summon Creature'),
-(175329, 30000, 0, 31, 2168, 50, 'Blackwood Grain Store - Spam Prevention'),
-(175330, 0, 0, 10, 2168, 300000, 'Blackwood Nut Store - Summon Creature'),
-(175330, 30000, 0, 31, 2168, 50, 'Blackwood Nut Store - Spam Prevention'),
-(175331, 0, 0, 10, 2168, 300000, 'Blackwood Fruit Store - Summon Creature'),
-(175331, 30000, 0, 31, 2168, 50, 'Blackwood Nut Store - Spam Prevention');
+#UPDATE gameobject_template SET ScriptName='' WHERE entry=175329;
+#UPDATE gameobject_template SET ScriptName='' WHERE entry=175330;
+#UPDATE gameobject_template SET ScriptName='' WHERE entry=175331;
+#DELETE FROM `dbscripts_on_go_template_use` WHERE `id` IN (175331,175329,175330);
+#INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `comments`) VALUES
+#(175329, 0, 0, 10, 2168, 300000, 'Blackwood Grain Store - Summon Creature'),
+#(175329, 30000, 0, 31, 2168, 50, 'Blackwood Grain Store - Spam Prevention'),
+#(175330, 0, 0, 10, 2168, 300000, 'Blackwood Nut Store - Summon Creature'),
+#(175330, 30000, 0, 31, 2168, 50, 'Blackwood Nut Store - Spam Prevention'),
+#(175331, 0, 0, 10, 2168, 300000, 'Blackwood Fruit Store - Summon Creature'),
+#(175331, 30000, 0, 31, 2168, 50, 'Blackwood Nut Store - Spam Prevention');
 
 # [NPC 7866,7867,7868,7869,7870,7871][Gossip] [SD2 npc_prof_leather]
 UPDATE creature_template SET ScriptName='' WHERE entry IN (7866,7867,7868,7869,7870,7871);

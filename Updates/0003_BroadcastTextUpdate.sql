@@ -6844,16 +6844,16 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 6 WHERE `Id` = 6530;
 -- TDB-0562_sully_balloo_letter.sql
 UPDATE broadcast_text SET ChatTypeID = 2 WHERE Id = 792;
 
--- TDB-0568_pearl-diving.sql
+-- 5719_TDB-0568_pearl-diving.sql
 UPDATE broadcast_text SET ChatTypeID = '2' WHERE Id IN (1021);
 
--- TDB-0573_vorsha_the_lasher_escort.sql
+-- 5724_TDB-0573_vorsha_the_lasher_escort.sql
 UPDATE `broadcast_text` SET `ChatTypeID`='2' WHERE (`Id`='8567');
 
 -- TDB-0588_WDB-5484_Asric_Jadaar_RP.sql
 UPDATE broadcast_text SET `ChatTypeID` = 2 WHERE `Id` IN (23435,23321,23323);
 
--- TDB-0597_rfk.sql
+-- 5734_TDB-0597_rfk.sql
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` = 6180; -- Who's next?
 
 -- 5693_Argent_Tournament_Mounts_Vehicles.sql
@@ -6868,3 +6868,9 @@ UPDATE `broadcast_text` SET `ChatTypeID` = 5 WHERE `Id` IN (34237);
 -- 5703_Argent_BlackKnight_questline.sql
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (33803);
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (34169,34185);
+
+-- 5723_TDB-0572_the_absentminded_prospector.sql
+UPDATE broadcast_text SET ChatTypeID = '2' WHERE Id IN (932, 937);
+
+-- 5650a_TDB-0528_netherstorm_south_east_island.sql
+UPDATE broadcast_text SET ChatTypeID = 2 WHERE Id= 17849;
