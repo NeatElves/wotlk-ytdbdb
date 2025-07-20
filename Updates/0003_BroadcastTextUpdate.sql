@@ -6874,3 +6874,6 @@ UPDATE broadcast_text SET ChatTypeID = '2' WHERE Id IN (932, 937);
 
 -- 5650a_TDB-0528_netherstorm_south_east_island.sql
 UPDATE broadcast_text SET ChatTypeID = 2 WHERE Id= 17849;
+
+-- TDB-0612_c.14324_equip.sql
+UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` = 11435;
