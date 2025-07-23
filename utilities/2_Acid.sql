@@ -41,5 +41,3 @@ UPDATE `creature_template` SET `AIName` = 'EventAI' WHERE `Entry` = 33169;
 DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 33169;
 INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
 (3316901, 33169, 29, 0, 100, 1024, 3500, 3500, 0, 0, 0, 0, 11, 62453, 15, 0, 11, 62236, 15, 2, 0, 0, 0, 0, 'YTDB(UDBDB tmp) - Time = 4 seconds - Self: Cast Icicle (62453) on none, Self: Cast Icicle (62236) on none with flags TRIGGERED, ');
-
-UPDATE `creature_ai_scripts` SET `event_param1` = '15000', `event_param2` = '30000', `event_param3` = '15000', `event_param4` = '30000' WHERE `id` =1212803;
