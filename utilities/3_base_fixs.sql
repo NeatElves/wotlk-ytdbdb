@@ -16,6 +16,15 @@
 # [NPC 7866,7867,7868,7869,7870,7871][Gossip] [SD2 npc_prof_leather]
 UPDATE creature_template SET ScriptName='' WHERE entry IN (7866,7867,7868,7869,7870,7871);
 
+# cosmetic update quest 11232
+#UPDATE `spell_script_target` SET `entry` = '43079' WHERE `entry` =43078 AND `type` =1 AND `targetEntry` =23972;
+#UPDATE `creature_ai_scripts` SET `action2_param1` = '20155' WHERE `id` =2397201;
+#UPDATE `creature_ai_scripts` SET `event_param1` = '43079' WHERE `id` =2397202;
+#DELETE FROM dbscripts_on_relay WHERE id IN (20155);
+#INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+#(20155,2,31,23805,201,0,0,0,0,0,0,0,0,0,0,0,0,''),
+#(20155,3,15,43079,0,0,23805,200,3,0,0,0,0,0,0,0,0,'');
+
 # Quest 13011
 DELETE FROM `dbscripts_on_relay` WHERE `id` = 50001;
 DELETE FROM `dbscripts_on_relay` WHERE `id` = 50002;
