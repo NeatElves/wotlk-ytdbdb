@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14089_01_mangos_reputation_spillover required_14090_01_mangos_spawn_zone bit;
