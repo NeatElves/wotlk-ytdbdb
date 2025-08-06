@@ -6877,3 +6877,6 @@ UPDATE broadcast_text SET ChatTypeID = 2 WHERE Id= 17849;
 
 -- TDB-0612_c.14324_equip.sql
 UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` = 11435;
+
+-- 5770_q.10277.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 4 WHERE `Id` IN (17656,17657,17658,17668,17667,17659,17660,17661,17663,17664,17669,17662,17665,17666);
