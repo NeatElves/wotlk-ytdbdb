@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14086_01_mangos_displayid_probability required_14088_01_mangos_spawn_group_squad bit;

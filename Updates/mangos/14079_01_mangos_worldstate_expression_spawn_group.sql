@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14078_01_mangos_visibility required_14079_01_mangos_worldstate_expression_spawn_group bit;

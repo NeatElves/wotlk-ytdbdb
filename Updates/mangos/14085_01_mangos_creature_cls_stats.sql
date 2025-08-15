@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14084_01_mangos_charmed_spell_list required_14085_01_mangos_creature_cls_stats bit;

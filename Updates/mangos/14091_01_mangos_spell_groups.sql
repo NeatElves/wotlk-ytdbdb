@@ -1,1 +1,0 @@
-ALTER TABLE db_version CHANGE COLUMN required_14090_01_mangos_spawn_zone required_14091_01_mangos_spell_groups bit;

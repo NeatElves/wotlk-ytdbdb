@@ -21,6 +21,7 @@ INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `priority`, `command`,
 SET @OGUID := 2300000; -- gameobjects
 # ID TMP GO not use
 DELETE FROM `gameobject` WHERE `guid` = @OGUID+457;
+DELETE FROM `gameobject_addon` WHERE `guid` = @OGUID+457;
 
 # 309_zulgurub.sql
 # condition ID YTDB
