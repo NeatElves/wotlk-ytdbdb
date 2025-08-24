@@ -1,4 +1,18 @@
 # fix base
+
+# not string in creature_spell_list
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 58305;
+UPDATE `creature_template` SET `CharmedSpellList` = '0' WHERE `Entry` =583;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 1606001;
+UPDATE `creature_template` SET `SpellList` = '0' WHERE `Entry` =16060;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 1861401;
+UPDATE `creature_template` SET `SpellList` = '0' WHERE `Entry` =18614;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 1989101;
+UPDATE `creature_template` SET `SpellList` = '0' WHERE `Entry` =19891;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` = 2025701;
+UPDATE `creature_template` SET `SpellList` = '0' WHERE `Entry` =20257;
+
+# sd2 removed
 UPDATE gameobject_template SET ScriptName='' WHERE entry IN (181616,186949);
 
 # DB-SCRIPT in base dbscripts_on_go_template_use [go_furbolg_food]
