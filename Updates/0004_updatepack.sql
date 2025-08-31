@@ -552,6 +552,18 @@ INSERT INTO conditions (condition_entry, `type`, value1, value2, value3, flags, 
 DELETE FROM worldstate_name WHERE Id=19890;
 INSERT INTO worldstate_name(Id, Name) VALUES (19890,'Stonetalon Mountains - q.1090 - Wave 3 - Windshear Stonecutter x3 & Windshear Overlord');
 
+UPDATE `gameobject` SET `spawntimesecsmin` = '-62' WHERE `guid` =8217;
+
+UPDATE gameobject_template SET faction = 114, data2 = 10 WHERE entry = 103661;
+DELETE FROM dbscripts_on_go_template_use WHERE id IN (174764,103661,103662);
+INSERT INTO dbscripts_on_go_template_use (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(103661,0,9,8218,600,0,0,0,0,0,0,0,0,0,0,0,0,'respawn object');
+UPDATE spell_target_position SET target_position_x = -1350.83, target_position_y = -2740.16, target_position_z = 61.5, target_orientation = 6.1817 WHERE id = 9055;
+
+UPDATE `creature_template` SET `NpcFlags` = 2, `GossipMenuId` = 0 WHERE `Entry` =6294;
+DELETE FROM `questgiver_greeting` WHERE `Entry` = 6294;
+INSERT INTO `questgiver_greeting` (`Entry`, `Type`, `EmoteId`, `EmoteDelay`, `Text`) VALUES (6294, 0, 0, 0, 'Greetings, $n.');
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
 SET sql_safe_updates=1;
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
