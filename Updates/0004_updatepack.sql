@@ -564,6 +564,141 @@ UPDATE `creature_template` SET `NpcFlags` = 2, `GossipMenuId` = 0 WHERE `Entry` 
 DELETE FROM `questgiver_greeting` WHERE `Entry` = 6294;
 INSERT INTO `questgiver_greeting` (`Entry`, `Type`, `EmoteId`, `EmoteDelay`, `Text`) VALUES (6294, 0, 0, 0, 'Greetings, $n.');
 
+DELETE FROM `creature_template_spells` WHERE `entry` = 18847;
+DELETE FROM `creature_spell_list_entry` WHERE `Id` IN (1884701, 1884702);
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(1884701, 'Gruul\'s Lair - Wild Fel Stalkers', 0, 0),
+(1884702, 'Gruul\'s Lair - Wild Fel Stalkers - Charmed', 0, 0);
+DELETE FROM `creature_spell_list` WHERE `Id` IN (1884701, 1884702);
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(1884701, 1, 33086, 0, -1, 1, 0, 100, 0, 4000, 8000, 5000, 12000, 'Wild Fel Stalkers  - Wild Bite - current'),
+(1884702, 1, 33086, 0, -1, 1, 0, 100, 0, 5000, 5000, 5000, 5000, 'Wild Fel Stalkers  - Wild Bite - current'),
+(1884702, 2, 33091, 0, -1, 2, 0, 100, 0, 10000, 10000, 10000, 10000, 'Wild Fel Stalkers  - Determination - self'),
+(1884702, 3, 33096, 0, -1, 1, 0, 100, 0, 20000, 20000, 20000, 20000, 'Wild Fel Stalkers  - Threaten - current');
+UPDATE creature_template SET `SpellList` = 1884701, CharmedSpellList = 1884702 WHERE entry = 18847;
+
+UPDATE creature_template SET MeleeBaseAttackTime = 1500 WHERE entry = 18806;
+UPDATE creature_model_info SET bounding_radius = 0.766, combat_reach = 3 WHERE modelid IN (19050, 19051, 19052);
+UPDATE creature_template SET MaxLevel = 70 WHERE entry = 18925;
+UPDATE creature_model_info SET bounding_radius = 0.47875, combat_reach = 1.875 WHERE modelid IN (19048, 19049);
+UPDATE creature_template SET SpeedWalk = 3/2.5, SpeedRun = 10/7 WHERE entry = 19622;
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 10/7 WHERE entry = 20031;
+UPDATE creature_model_info SET bounding_radius = 0.6128, combat_reach = 2.4 WHERE modelid IN (19386, 19387);
+UPDATE creature_template SET SpeedWalk = 2.5/2.5, SpeedRun = 10/7 WHERE entry = 20032;
+UPDATE creature_model_info SET bounding_radius = 0.68939996, combat_reach = 2.6999998 WHERE modelid IN (21000, 19388);
+UPDATE creature_template SET SpeedWalk = 2.5/2.5, SpeedRun = 10/7 WHERE entry = 20033;
+UPDATE creature_model_info SET bounding_radius = 0.6128, combat_reach = 2.4 WHERE modelid IN (19390, 19391);
+UPDATE creature_template SET SpeedWalk = 2.5/2.5, SpeedRun = 10/7 WHERE entry = 20034;
+UPDATE creature_model_info SET bounding_radius = 0.68939996, combat_reach = 2.6999998 WHERE modelid IN (19392, 19393);
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 10/7 WHERE entry = 20035;
+UPDATE creature_model_info SET bounding_radius = 0.766, combat_reach = 3 WHERE modelid IN (19397, 20978);
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 10/7 WHERE entry = 20036;
+UPDATE creature_model_info SET bounding_radius = 0.57449996, combat_reach = 2.25 WHERE modelid IN (19394, 21001);
+UPDATE creature_template SET SpeedWalk = 4/2.5 WHERE entry = 20037;
+UPDATE creature_model_info SET bounding_radius = 0.766, combat_reach = 3 WHERE modelid IN (19398, 19399);
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 12/7 WHERE entry = 20038;
+UPDATE creature_model_info SET bounding_radius = 0.3, combat_reach = 1.5 WHERE modelid = 19298;
+UPDATE creature_template SET SpeedWalk = 2.5/2.5, SpeedRun = 12/7, MeleeBaseAttackTime = 2000 WHERE entry = 20039;
+UPDATE creature_model_info SET bounding_radius = 0.75, combat_reach = 3.75 WHERE modelid = 19299;
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 12/7 WHERE entry = 20040;
+UPDATE creature_model_info SET bounding_radius = 1.5, combat_reach = 9 WHERE modelid = 19410;
+UPDATE creature_template SET SpeedRun = 12/7 WHERE entry = 20041;
+UPDATE creature_model_info SET bounding_radius = 1.25, combat_reach = 7.5 WHERE modelid = 19300;
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 10/7 WHERE entry = 20042;
+UPDATE creature_model_info SET bounding_radius = 0.57449996, combat_reach = 2.25 WHERE modelid = 19412;
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 10/7 WHERE entry = 20043;
+UPDATE creature_model_info SET bounding_radius = 0.57449996, combat_reach = 2.25 WHERE modelid IN (19470, 19471);
+UPDATE creature_model_info SET bounding_radius = 0.57449996, combat_reach = 2.25 WHERE modelid IN (19472, 19473);
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 10/7 WHERE entry = 20045;
+UPDATE creature_model_info SET bounding_radius = 0.766, combat_reach = 3 WHERE modelid IN (19474, 19475);
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 10/7 WHERE entry = 20046;
+UPDATE creature_model_info SET bounding_radius = 0.766, combat_reach = 3 WHERE modelid IN (19423, 19424);
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 12/7 WHERE entry = 20047;
+UPDATE creature_model_info SET bounding_radius = 0.57449996, combat_reach = 2.25 WHERE modelid IN (19499, 19500);
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 12/7 WHERE entry = 20048;
+UPDATE creature_model_info SET bounding_radius = 0.68939996, combat_reach = 2.6999998 WHERE modelid IN (19505, 19506);
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 12/7 WHERE entry = 20049;
+UPDATE creature_model_info SET bounding_radius = 0.68939996, combat_reach = 2.6999998 WHERE modelid IN (19503, 19504);
+UPDATE creature_template SET SpeedWalk = 4/2.5, SpeedRun = 12/7 WHERE entry = 20050;
+UPDATE creature_model_info SET bounding_radius = 0.766, combat_reach = 3 WHERE modelid IN (19507, 19508);
+UPDATE creature_template SET SpeedWalk = 2.36110997200012207/2.5, SpeedRun = 10/7 WHERE entry = 20052;
+UPDATE creature_model_info SET bounding_radius = 0.75, combat_reach = 1.5 WHERE modelid = 19254;
+
+UPDATE `questgiver_greeting` SET `Text` = 'Greetings, $n.' WHERE `Entry` =4201 AND `Type` =0;
+UPDATE `questgiver_greeting` SET `Text` = 'Greetings, $n.' WHERE `Entry` =7877 AND `Type` =0;
+INSERT INTO `questgiver_greeting` (`Entry`, `Type`, `Text`, `EmoteId`, `EmoteDelay`) VALUES (17433, 0, ' Greetings, $n.', 0, 0);
+
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(53231, 6129, 1, 1, 1, '2472.88989257812500000000', '-5280.81982421875000000000', '124.68599700927734000000', '2.39109992980957030000', 600, 600, 0, 0),
+(53230, 6129, 1, 1, 1, '2502.58007812500000000000', '-5426.75976562500000000000', '133.15400695800780000000', '0.82679498195648190000', 600, 600, 5, 1),
+(53232, 6129, 1, 1, 1, '2570.62988281250000000000', '-5480.27001953125000000000', '122.17299652099610000000', '1.64926004409790040000', 600, 600, 0, 0),
+(53558, 6129, 1, 1, 1, '2756.67993164062500000000', '-5395.00976562500000000000', '116.27700042724610000000', '1.50213003158569340000', 600, 600, 0, 0),
+(52812, 6129, 1, 1, 1, '2809.28002929687500000000', '-5441.52001953125000000000', '98.77829742431640000000', '0.01431099977344274500', 600, 600, 5, 1);
+
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(52656, 1048, 0, 1, 1, '-3913.05004882812500000000', '-4014.33007812500000000000', '167.19500732421875000000', '0.86983299255371090000', 600, 600, 10, 1),
+(52657, 1048, 0, 1, 1, '-3563.04003906250000000000', '-3990.05004882812500000000', '108.92199707031250000000', '3.42683005332946780000', 600, 600, 0, 0),
+(52655, 1048, 0, 1, 1, '-3611.20996093750000000000', '-3955.03002929687500000000', '109.97699737548828000000', '4.34545993804931600000', 600, 600, 0, 0),
+(52658, 1048, 0, 1, 1, '-3843.86010742187500000000', '-4014.65991210937500000000', '159.22599792480470000000', '0.48371699452400210000', 600, 600, 5, 1),
+(52810, 1048, 0, 1, 1, '-3595.12988281250000000000', '-3984.95996093750000000000', '108.99199676513672000000', '0.18292400240898132000', 600, 600, 5, 1),
+(52808, 1048, 0, 1, 1, '-3919.92993164062500000000', '-4085.11010742187500000000', '172.07000732421875000000', '2.91741991043090800000', 600, 600, 10, 1),
+(52807, 1048, 0, 1, 1, '-3882.30004882812500000000', '-4050.13989257812500000000', '164.13499450683594000000', '6.17650985717773400000', 600, 600, 10, 1);
+
+DELETE FROM creature_addon WHERE guid IN(SELECT guid FROM creature WHERE id IN (628,744,745,746));
+DELETE FROM creature_movement WHERE id IN(SELECT guid FROM creature WHERE id IN (628,744,745,746));
+DELETE FROM game_event_creature WHERE guid IN(SELECT guid FROM creature WHERE id IN (628,744,745,746));
+DELETE FROM game_event_creature_data WHERE guid IN(SELECT guid FROM creature WHERE id IN (628,744,745,746));
+DELETE FROM creature_battleground WHERE guid IN(SELECT guid FROM creature WHERE id IN (628,744,745,746));
+DELETE FROM creature_linking WHERE guid IN(SELECT guid FROM creature WHERE id IN (628,744,745,746));
+DELETE FROM creature WHERE id IN (628,744,745,746);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(2183, 628, 0, 1, '-10775.70019531250000000000', '-768.61297607421880000000', '43.13909912109375000000', '5.03353977203369100000', 300, 300, 10, 1),
+(2197, 628, 0, 1, '-10756.90039062500000000000', '-779.05902099609380000000', '42.91059875488281000000', '3.30835008621215800000', 300, 300, 10, 1),
+(2238, 628, 0, 1, '-10316.00000000000000000000', '-1012.53997802734380000000', '45.46569824218750000000', '0.73479998111724850000', 300, 300, 10, 1),
+(2248, 628, 0, 1, '-10288.90039062500000000000', '-984.75402832031250000000', '49.36249923706055000000', '1.42586004734039300000', 300, 300, 10, 1),
+(2312, 628, 0, 1, '-10178.29980468750000000000', '-898.20800781250000000000', '36.60279846191406000000', '5.21741008758544900000', 300, 300, 10, 1),
+(2331, 628, 0, 1, '-10853.50000000000000000000', '-590.73297119140620000000', '36.95869827270508000000', '4.35315990447998050000', 300, 300, 5, 1),
+(2367, 628, 0, 1, '-10217.00000000000000000000', '-887.59002685546880000000', '38.00880050659180000000', '1.55127000808715820000', 300, 300, 10, 1),
+(2435, 628, 0, 1, '-10233.79980468750000000000', '-951.25299072265620000000', '38.12099838256836000000', '6.25780010223388700000', 300, 300, 10, 1),
+(3087, 628, 0, 1, '-10354.09960937500000000000', '-1056.07995605468750000000', '50.43470001220703000000', '4.31340980529785200000', 300, 300, 5, 1),
+(3283, 628, 0, 1, '-10824.50000000000000000000', '-477.64199829101560000000', '42.60430145263672000000', '0.09233999997377396000', 300, 300, 5, 1);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(2515, 744, 0, 1, 1, '-10672.90039062500000000000', '-3979.62011718750000000000', '22.27569961547851600000', '2.86865997314453120000', 300, 300, 5, 1),
+(2653, 744, 0, 1, 1, '-10701.29980468750000000000', '-4001.62988281250000000000', '24.04560089111328000000', '0.45315799117088320000', 300, 300, 5, 1),
+(3084, 744, 0, 1, 1, '-10222.29980468750000000000', '-3612.62011718750000000000', '23.67589950561523400000', '1.42941999435424800000', 300, 300, 5, 1),
+(3267, 744, 0, 1, 1, '-10263.50000000000000000000', '-3702.66992187500000000000', '23.74909973144531200000', '0.91116601228713990000', 300, 300, 10, 1),
+(3269, 744, 0, 1, 1, '-10220.59960937500000000000', '-3683.91992187500000000000', '21.89069938659668000000', '2.79204010963439940000', 300, 300, 10, 1),
+(3287, 744, 0, 1, 1, '-10193.59960937500000000000', '-3640.94995117187500000000', '21.62409973144531200000', '2.98575997352600100000', 300, 300, 5, 1),
+(3299, 744, 0, 1, 1, '-10258.79980468750000000000', '-3649.61010742187500000000', '22.77680015563965000000', '0.13097800314426422000', 300, 300, 5, 1),
+(3398, 744, 0, 1, 1, '-10282.40039062500000000000', '-3615.47998046875000000000', '22.87120056152343800000', '3.35018992424011230000', 300, 300, 10, 1),
+(3403, 744, 0, 1, 1, '-10519.40039062500000000000', '-4051.83007812500000000000', '23.19790077209472700000', '3.03115010261535640000', 300, 300, 5, 1);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(2393, 745, 0, 1, 1, '-10663.79980468750000000000', '-4011.41992187500000000000', '22.10149955749511700000', '4.87706995010376000000', 300, 300, 5, 1),
+(2538, 745, 0, 1, 1, '-10619.29980468750000000000', '-3990.60009765625000000000', '22.11260032653808600000', '5.48121023178100600000', 300, 300, 5, 1),
+(2652, 745, 0, 1, 1, '-10337.40039062500000000000', '-3979.19995117187500000000', '17.40169906616211000000', '3.45280003547668460000', 300, 300, 10, 1),
+(2723, 745, 0, 1, 1, '-10645.29980468750000000000', '-3956.20996093750000000000', '23.38389968872070300000', '5.54162979125976600000', 300, 300, 5, 1),
+(2852, 745, 0, 1, 1, '-10302.09960937500000000000', '-3646.92993164062500000000', '23.99460029602050800000', '1.05818998813629150000', 300, 300, 10, 1),
+(2883, 745, 0, 1, 1, '-10245.70019531250000000000', '-3587.08007812500000000000', '22.12719917297363300000', '0.97844499349594120000', 300, 300, 10, 1),
+(3009, 745, 0, 1, 1, '-10249.40039062500000000000', '-3950.69995117187500000000', '22.29269981384277300000', '0.46539300680160520000', 300, 300, 10, 1),
+(3074, 745, 0, 1, 1, '-10214.70019531250000000000', '-3909.62011718750000000000', '23.14130020141601600000', '3.71203994750976560000', 300, 300, 5, 1),
+(3118, 745, 0, 1, 1, '-10268.59960937500000000000', '-4079.64990234375000000000', '22.56060028076172000000', '2.86865997314453120000', 300, 300, 5, 1),
+(3135, 745, 0, 1, 1, '-10247.40039062500000000000', '-4106.50000000000000000000', '22.52750015258789000000', '4.03642988204956050000', 300, 300, 5, 1),
+(3140, 745, 0, 1, 1, '-10314.00000000000000000000', '-4235.93017578125000000000', '23.37409973144531200000', '1.07875001430511470000', 300, 300, 5, 1),
+(3201, 745, 0, 1, 1, '-10413.40039062500000000000', '-4086.94995117187500000000', '23.40200042724609400000', '6.04863023757934600000', 300, 300, 5, 1),
+(3286, 745, 0, 1, 1, '-10414.29980468750000000000', '-4148.39990234375000000000', '22.03569984436035000000', '0.09760600328445435000', 300, 300, 5, 1);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(9860, 746, 0, 1, 1, '-10321.90039062500000000000', '-4196.70019531250000000000', '22.88960075378418000000', '1.38413000106811520000', 300, 300, 5, 1),
+(9885, 746, 0, 1, 1, '-10316.00000000000000000000', '-4061.42993164062500000000', '22.01530075073242200000', '6.10832977294921900000', 300, 300, 5, 1),
+(9930, 746, 0, 1, 1, '-10294.40039062500000000000', '-4218.54980468750000000000', '23.83259963989257800000', '1.94441998004913330000', 300, 300, 5, 1),
+(9964, 746, 0, 1, 1, '-10352.29980468750000000000', '-4217.22021484375000000000', '23.27809906005859400000', '1.78910005092620850000', 300, 300, 5, 1),
+(10029, 746, 0, 1, 1, '-10382.20019531250000000000', '-4181.81005859375000000000', '23.99740028381347700000', '1.60064995288848880000', 300, 300, 5, 1),
+(10060, 746, 0, 1, 1, '-10461.20019531250000000000', '-4022.35009765625000000000', '21.99909973144531200000', '0.68549698591232300000', 300, 300, 5, 1);
+
+UPDATE `creature_template` SET `PickpocketLootId` = '0' WHERE `Entry` IN (412,22304);
+DELETE FROM `pickpocketing_loot_template` WHERE `entry` IN (412,22304);
+
+UPDATE `creature_template` SET `Faction` = '93' WHERE `Entry` =412;
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
 SET sql_safe_updates=1;
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
