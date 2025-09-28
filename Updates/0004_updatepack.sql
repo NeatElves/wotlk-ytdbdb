@@ -694,10 +694,581 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position
 (10029, 746, 0, 1, 1, '-10382.20019531250000000000', '-4181.81005859375000000000', '23.99740028381347700000', '1.60064995288848880000', 300, 300, 5, 1),
 (10060, 746, 0, 1, 1, '-10461.20019531250000000000', '-4022.35009765625000000000', '21.99909973144531200000', '0.68549698591232300000', 300, 300, 5, 1);
 
-UPDATE `creature_template` SET `PickpocketLootId` = '0' WHERE `Entry` IN (412,22304);
+UPDATE `creature_template` SET `PickpocketLootId` = '0' WHERE `Entry` IN (412,22304,30793);
 DELETE FROM `pickpocketing_loot_template` WHERE `entry` IN (412,22304);
 
 UPDATE `creature_template` SET `Faction` = '93' WHERE `Entry` =412;
+
+UPDATE `creature_template` SET `CharmedSpellList`='1939905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19399';
+UPDATE `creature_template` SET `CharmedSpellList`='2123305', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21233';
+UPDATE `creature_template` SET `CharmedSpellList`='1697505', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16975';
+UPDATE `creature_template` SET `CharmedSpellList`='1697405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16974';
+UPDATE `creature_template` SET `CharmedSpellList`='1897405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18974';
+UPDATE `creature_template` SET `CharmedSpellList`='1705805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='17058';
+UPDATE `creature_template` SET `CharmedSpellList`='1919205', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19192';
+UPDATE `creature_template` SET `CharmedSpellList`='1695105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16951';
+UPDATE `creature_template` SET `CharmedSpellList`='1897605', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18976';
+UPDATE `creature_template` SET `CharmedSpellList`='1940805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19408';
+UPDATE `creature_template` SET `CharmedSpellList`='1882705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18827';
+UPDATE `creature_template` SET `CharmedSpellList`='1929805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19298';
+UPDATE `creature_template` SET `CharmedSpellList`='1695405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16954';
+UPDATE `creature_template` SET `CharmedSpellList`='1694605', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16946';
+UPDATE `creature_template` SET `CharmedSpellList`='2079805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20798';
+UPDATE `creature_template` SET `CharmedSpellList`='1696005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16960';
+UPDATE `creature_template` SET `CharmedSpellList`='1694705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16947';
+UPDATE `creature_template` SET `CharmedSpellList`='1943405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19434';
+UPDATE `creature_template` SET `CharmedSpellList`='1913605', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19136';
+UPDATE `creature_template` SET `CharmedSpellList`='1926105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19261';
+UPDATE `creature_template` SET `CharmedSpellList`='1701405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='17014';
+UPDATE `creature_template` SET `CharmedSpellList`='1952705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19527';
+UPDATE `creature_template` SET `CharmedSpellList`='1695005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16950';
+UPDATE `creature_template` SET `CharmedSpellList`='1919005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19190';
+UPDATE `creature_template` SET `CharmedSpellList`='1898105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18981';
+UPDATE `creature_template` SET `CharmedSpellList`='1897505', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18975';
+UPDATE `creature_template` SET `CharmedSpellList`='1897705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18977';
+UPDATE `creature_template` SET `CharmedSpellList`='1933505', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19335';
+UPDATE `creature_template` SET `CharmedSpellList`='1695905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16959';
+UPDATE `creature_template` SET `CharmedSpellList`='1929905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19299';
+UPDATE `creature_template` SET `CharmedSpellList`='1856705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18567';
+UPDATE `creature_template` SET `CharmedSpellList`='1715105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='17151';
+UPDATE `creature_template` SET `CharmedSpellList`='1694505', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16945';
+UPDATE `creature_template` SET `CharmedSpellList`='1715205', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='17152';
+UPDATE `creature_template` SET `CharmedSpellList`='1866005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18660';
+UPDATE `creature_template` SET `CharmedSpellList`='1866105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18661';
+UPDATE `creature_template` SET `CharmedSpellList`='1798105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='17981';
+UPDATE `creature_template` SET `CharmedSpellList`='1997905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19979';
+UPDATE `creature_template` SET `CharmedSpellList`='1997805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19978';
+UPDATE `creature_template` SET `CharmedSpellList`='1998005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19980';
+UPDATE `creature_template` SET `CharmedSpellList`='2151605', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21516';
+UPDATE `creature_template` SET `CharmedSpellList`='2151905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21519';
+UPDATE `creature_template` SET `CharmedSpellList`='1996305', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19963';
+UPDATE `creature_template` SET `CharmedSpellList`='1996005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19960';
+UPDATE `creature_template` SET `CharmedSpellList`='1996105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19961';
+UPDATE `creature_template` SET `CharmedSpellList`='1695205', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16952';
+UPDATE `creature_template` SET `CharmedSpellList`='2102105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21021';
+UPDATE `creature_template` SET `CharmedSpellList`='2219505', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='22195';
+UPDATE `creature_template` SET `CharmedSpellList`='2229105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='22291';
+UPDATE `creature_template` SET `CharmedSpellList`='2055705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20557';
+UPDATE `creature_template` SET `CharmedSpellList`='2338605', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='23386';
+UPDATE `creature_template` SET `CharmedSpellList`='1997305', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19973';
+UPDATE `creature_template` SET `CharmedSpellList`='2220405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='22204';
+UPDATE `creature_template_addon` SET `auras` = NULL WHERE `entry` = 22204;
+UPDATE `creature_template` SET `CharmedSpellList`='1886905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18869';
+UPDATE `creature_template` SET `CharmedSpellList`='1887005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18870';
+UPDATE `creature_template` SET `CharmedSpellList`='2039405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20394';
+UPDATE `creature_template` SET `CharmedSpellList`='2014105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20141';
+UPDATE `creature_template` SET `CharmedSpellList`='1885905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18859';
+UPDATE `creature_template` SET `CharmedSpellList`='2092805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20928';
+UPDATE `creature_template` SET `CharmedSpellList`='2080105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20801';
+UPDATE `creature_template` SET `CharmedSpellList`='1885805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18858';
+UPDATE `creature_template` SET `CharmedSpellList`='1694305', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16943';
+UPDATE `creature_template` SET `CharmedSpellList`='2080005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20800';
+UPDATE `creature_template` SET `CharmedSpellList`='1694905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16949';
+UPDATE `creature_template` SET `CharmedSpellList`='2192305', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21923';
+UPDATE `creature_template` SET `CharmedSpellList`='2093005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20930';
+UPDATE `creature_template` SET `CharmedSpellList`='2092905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20929';
+UPDATE `creature_template` SET `CharmedSpellList`='2068505', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20685';
+UPDATE `creature_template` SET `CharmedSpellList`='2080305', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20803';
+UPDATE `creature_template` SET `CharmedSpellList`='2032605', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20326';
+UPDATE `creature_template` SET `CharmedSpellList`='2028505', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20285';
+UPDATE `creature_template` SET `CharmedSpellList`='1886005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18860';
+UPDATE `creature_template` SET `CharmedSpellList`='1973805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19738';
+UPDATE `creature_template` SET `CharmedSpellList`='1694405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16944';
+UPDATE `creature_template` SET `CharmedSpellList`='1694805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16948';
+UPDATE `creature_template` SET `CharmedSpellList`='2040305', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20403';
+UPDATE `creature_template` SET `CharmedSpellList`='2040205', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20402';
+UPDATE `creature_template` SET `CharmedSpellList`='2039905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20399';
+UPDATE `creature_template` SET `CharmedSpellList`='2040405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20404';
+UPDATE `creature_template` SET `CharmedSpellList`='2021505', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20215';
+UPDATE `creature_template` SET `CharmedSpellList`='1985305', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19853';
+UPDATE `creature_template` SET `CharmedSpellList`='1985205', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19852';
+UPDATE `creature_template` SET `CharmedSpellList`='2196105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21961';
+UPDATE `creature_template` SET `CharmedSpellList`='2196005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21960';
+UPDATE `creature_template` SET `CharmedSpellList`='2182705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21827';
+UPDATE `creature_template` SET `CharmedSpellList`='1974405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19744';
+UPDATE `creature_template` SET `CharmedSpellList`='2152005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21520';
+UPDATE `creature_template` SET `CharmedSpellList`='1980105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19801';
+UPDATE `creature_template` SET `CharmedSpellList`='2180805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21808';
+UPDATE `creature_template` SET `CharmedSpellList`='2285805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='22858';
+UPDATE `creature_template` SET `CharmedSpellList`='2285705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='22857';
+UPDATE `creature_template` SET `CharmedSpellList`='2285905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='22859';
+UPDATE `creature_template` SET `CharmedSpellList`='2130905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21309';
+UPDATE `creature_template` SET `CharmedSpellList`='1979905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19799';
+UPDATE `creature_template` SET `CharmedSpellList`='1980005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19800';
+UPDATE `creature_template` SET `CharmedSpellList`='2165605', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21656';
+UPDATE `creature_template` SET `CharmedSpellList`='2133705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21337';
+UPDATE `creature_template` SET `CharmedSpellList`='1980205', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19802';
+UPDATE `creature_template` SET `CharmedSpellList`='2141905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21419';
+UPDATE `creature_template` SET `CharmedSpellList`='2068305', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='20683';
+UPDATE `creature_template` SET `CharmedSpellList`='2149905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21499';
+UPDATE `creature_template` SET `CharmedSpellList`='2131405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='21314';
+UPDATE `creature_template` SET `CharmedSpellList`='1975505', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19755';
+UPDATE `creature_template` SET `CharmedSpellList`='1974005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19740';
+DELETE FROM creature_template_spells WHERE `entry` IN (19399,21233,16975,16974,18974,17058,19192,16951,18976,19408,18827,19298,16954,16946,20798,16960,16947,19434,19136,19261,
+17014,19527,16950,19190,18981,18975,18977,19335,16959,19299,18567,17151,16945,17152,18660,18661,17981,19979,19978,19980,21516,21519,19963,19960,19961,16952,21021,22195,22291,
+20557,23386,19973,22204,18869,18870,20394,20141,18859,20928,20801,18858,16943,20800,16949,21923,20930,20929,20685,20803,20326,20285,18860,19738,16944,16948,20403,20402,20399,
+20404,20215,19853,19852,21961,21960,21827,19744,21520,19801,21808,22858,22857,22859,21309,19799,19800,21656,21337,19802,21419,20683,21499,21314,19755,19740);
+DELETE FROM creature_cooldowns WHERE `entry` IN (19399,21233,16975,16974,18974,17058,19192,16951,18976,19408,18827,19298,16954,16946,20798,16960,16947,19434,19136,19261,
+17014,19527,16950,19190,18981,18975,18977,19335,16959,19299,18567,17151,16945,17152,18660,18661,17981,19979,19978,19980,21516,21519,19963,19960,19961,16952,21021,22195,22291,
+20557,23386,19973,22204,18869,18870,20394,20141,18859,20928,20801,18858,16943,20800,16949,21923,20930,20929,20685,20803,20326,20285,18860,19738,16944,16948,20403,20402,20399,
+20404,20215,19853,19852,21961,21960,21827,19744,21520,19801,21808,22858,22857,22859,21309,19799,19800,21656,21337,19802,21419,20683,21499,21314,19755,19740);
+DELETE FROM `creature_spell_list_entry` WHERE `Id` IN (1939905,2123305,1697505,1697405,1897405,1705805,1919205,1695105,1897605,1940805,1882705,1929805,1695405,1694605,2079805,1696005,
+1694705,1943405,1913605,1926105,1701405,1952705,1695005,1919005,1898105,1897505,1897705,1933505,1695905,1929905,1856705,1715105,1694505,1715205,1866005,1866105,1798105,1997905,1997805,
+1998005,2151605,2151905,1996305,1996005,1996105,1695205,2102105,2219505,2229105,2055705,2338605,1997305,2220405,1886905,1887005,2039405,2014105,1885905,2092805,2080105,1885805,1694305,
+2080005,1694905,2192305,2093005,2092905,2068505,2080305,2032605,2028505,1886005,1973805,1694405,1694805,2040305,2040205,2039905,2040405,2021505,1985305,1985205,2196105,2196005,2182705,
+1974405,2152005,1980105,2180805,2285805,2285705,2285905,2130905,1979905,1980005,2165605,2133705,1980205,2141905,2068305,2149905,2131405,1975505,1974005);
+DELETE FROM `creature_spell_list` WHERE `Id` IN (1939905,2123305,1697505,1697405,1897405,1705805,1919205,1695105,1897605,1940805,1882705,1929805,1695405,1694605,2079805,1696005,
+1694705,1943405,1913605,1926105,1701405,1952705,1695005,1919005,1898105,1897505,1897705,1933505,1695905,1929905,1856705,1715105,1694505,1715205,1866005,1866105,1798105,1997905,1997805,
+1998005,2151605,2151905,1996305,1996005,1996105,1695205,2102105,2219505,2229105,2055705,2338605,1997305,2220405,1886905,1887005,2039405,2014105,1885905,2092805,2080105,1885805,1694305,
+2080005,1694905,2192305,2093005,2092905,2068505,2080305,2032605,2028505,1886005,1973805,1694405,1694805,2040305,2040205,2039905,2040405,2021505,1985305,1985205,2196105,2196005,2182705,
+1974405,2152005,1980105,2180805,2285805,2285705,2285905,2130905,1979905,1980005,2165605,2133705,1980205,2141905,2068305,2149905,2131405,1975505,1974005);
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(1939905, 'TBC - Fel Cannon', 0, 0),
+(2123305, 'TBC - Legion Fel Cannon', 0, 0),
+(1697505, 'TBC - Uncontrolled Voidwalker', 0, 0),
+(1697405, 'TBC - Rogue Voidwalker', 0, 0),
+(1897405, 'TBC - Z''kral', 0, 0),
+(1705805, 'TBC - Illidari Taskmaster', 0, 0),
+(1919205, 'TBC - Mistress of Doom', 0, 0),
+(1695105, 'TBC - Terrorfiend', 0, 0),
+(1897605, 'TBC - Urga''zz', 0, 0),
+(1940805, 'TBC - Maiden of Pain', 0, 0),
+(1882705, 'TBC - Gan''arg Sapper', 0, 0),
+(1929805, 'TBC - Warbringer Arix''Amal', 0, 0),
+(1695405, 'TBC - Forge Camp Legionnaire', 0, 0),
+(1694605, 'TBC - Mo''arg Forgefiend', 0, 0),
+(2079805, 'TBC - Razorsaw', 0, 0),
+(1696005, 'TBC - Sister of Grief', 0, 0),
+(1694705, 'TBC - Gan''arg Servant', 0, 0),
+(1943405, 'TBC - Dreadcaller', 0, 0),
+(1913605, 'TBC - Flamewaker Imp', 0, 0),
+(1926105, 'TBC - Infernal Warbringer', 0, 0),
+(1701405, 'TBC - Collapsing Voidwalker', 0, 0),
+(1952705, 'TBC - Vacillating Voidcaller', 0, 0),
+(1695005, 'TBC - Netherhound', 0, 0),
+(1919005, 'TBC - Fel Handler', 0, 0),
+(1898105, 'TBC - Doomwhisperer', 0, 0),
+(1897505, 'TBC - Wrathguard', 0, 0),
+(1897705, 'TBC - Felguard Destroyer', 0, 0),
+(1933505, 'TBC - Subjugator Yalqiz', 0, 0),
+(1695905, 'TBC - Dread Tactician', 0, 0),
+(1929905, 'TBC - Deathwhisperer', 0, 0),
+(1856705, 'TBC - Mo''arg Master Planner', 0, 0),
+(1715105, 'TBC - Gan''arg Tinkerer', 0, 0),
+(1694505, 'TBC - Mo''arg Engineer', 0, 0),
+(1715205, 'TBC - Felguard Legionnaire', 0, 0),
+(1866005, 'TBC - Subjugator Vaz''shir', 0, 0),
+(1866105, 'TBC - Terrorguard', 0, 0),
+(1798105, 'TBC - Voidspawn', 0, 0),
+(1997905, 'TBC - Deathforge Technician', 0, 0),
+(1997805, 'TBC - Deathforge Over-Smith', 0, 0),
+(1998005, 'TBC - Void Terror', 0, 0),
+(2151605, 'TBC - Death''s Watch', 0, 0),
+(2151905, 'TBC - Death''s Might', 0, 0),
+(1996305, 'TBC - Doomcryer', 0, 0),
+(1996005, 'TBC - Doomforge Engineer', 0, 0),
+(1996105, 'TBC - Doomforge Attendant', 0, 0),
+(1695205, 'TBC - Anger Guard', 0, 0),
+(2102105, 'TBC - Scorch Imp', 0, 0),
+(2219505, 'TBC - Wrath Speaker', 0, 0),
+(2229105, 'TBC - Furnace Guard', 0, 0),
+(2055705, 'TBC - Wrath Hound', 0, 0),
+(2338605, 'TBC - Gan''arg Analyzer', 0, 0),
+(1997305, 'TBC - Abyssal Flamebringer', 0, 0),
+(2220405, 'TBC - Fear Fiend', 0, 0),
+(1886905, 'TBC - Unstable Voidwraith', 0, 0),
+(1887005, 'TBC - Voidshrieker', 0, 0),
+(2039405, 'TBC - Eye of Culuthas', 0, 0),
+(2014105, 'TBC - Hound of Culuthas', 0, 0),
+(1885905, 'TBC - Wrath Priestess', 0, 0),
+(2092805, 'TBC - Ironspine Forgelord', 0, 0),
+(2080105, 'TBC - Silroth', 0, 0),
+(1885805, 'TBC - Wrathbringer', 0, 0),
+(1694305, 'TBC - Cyber-Rage Forgelord', 0, 0),
+(2080005, 'TBC - Forgemaster Morug', 0, 0),
+(1694905, 'TBC - Gan''arg Mekgineer', 0, 0),
+(2192305, 'TBC - Terrorguard Protector', 0, 0),
+(2093005, 'TBC - Hatecryer', 0, 0),
+(2092905, 'TBC - Wrath Lord', 0, 0),
+(2068505, 'TBC - Overseer Azarad', 0, 0),
+(2080305, 'TBC - Overmaster Grindgarr', 0, 0),
+(2032605, 'TBC - Mo''arg Warp-Master', 0, 0),
+(2028505, 'TBC - Gan''arg Warp-Tinker', 0, 0),
+(1886005, 'TBC - Daughter of Destiny', 0, 0),
+(1973805, 'TBC - Doomclaw', 0, 0),
+(1694405, 'TBC - Mo''arg Doomsmith', 0, 0),
+(1694805, 'TBC - Gan''arg Engineer', 0, 0),
+(2040305, 'TBC - Legion Destroyer', 0, 0),
+(2040205, 'TBC - Legion Shocktrooper', 0, 0),
+(2039905, 'TBC - Terror Imp', 0, 0),
+(2040405, 'TBC - Warp-Gate Engineer', 0, 0),
+(2021505, 'TBC - Pentatharon', 0, 0),
+(1985305, 'TBC - Felblade Doomguard', 0, 0),
+(1985205, 'TBC - Artifact Seeker', 0, 0),
+(2196105, 'TBC - Cataclysm Overseer', 0, 0),
+(2196005, 'TBC - Gan''arg Technician', 0, 0),
+(2182705, 'TBC - Zandras', 0, 0),
+(1974405, 'TBC - Dreadwarden', 0, 0),
+(2152005, 'TBC - Illidari Jailor', 0, 0),
+(1980105, 'TBC - Illidari Agonizer', 0, 0),
+(2180805, 'TBC - Illidari Overseer', 0, 0),
+(2285805, 'TBC - Shadowhoof Assassin', 0, 0),
+(2285705, 'TBC - Illidari Ravager', 0, 0),
+(2285905, 'TBC - Shadowhoof Summoner', 0, 0),
+(2130905, 'TBC - Painmistress Gabrissa', 0, 0),
+(1979905, 'TBC - Illidari Dreadbringer', 0, 0),
+(1980005, 'TBC - Illidari Painlasher', 0, 0),
+(2165605, 'TBC - Illidari Satyr', 0, 0),
+(2133705, 'TBC - Illidari Shadowstalker', 0, 0),
+(1980205, 'TBC - Illidari Shocktrooper', 0, 0),
+(2141905, 'TBC - Infernal Attacker', 0, 0),
+(2068305, 'TBC - Prophetess Cavrylin', 0, 0),
+(2149905, 'TBC - Overseer Ripsaw', 0, 0),
+(2131405, 'TBC - Terrormaster', 0, 0),
+(1975505, 'TBC - Mo''arg Weaponsmith', 0, 0),
+(1974005, 'TBC - Wrathwalker', 0, 0);
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(1939905, 3, 36238, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Fel Cannon - Fel Cannon Blast'),
+(1939905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Fel Cannon - Attack'),
+(2123305, 3, 36238, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Legion Fel Cannon - Fel Cannon Blast'),
+(2123305, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Legion Fel Cannon - Attack'),
+(1697505, 5, 33916, 0, -1, 0, 0, 100, 1, 0, 0, 25000, 25000, 'Uncontrolled Voidwalker - Void Drain'),
+(1697505, 4, 33914, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Uncontrolled Voidwalker - Shadowstrike'),
+(1697505, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Uncontrolled Voidwalker - Attack'),
+(1697405, 4, 33914, 0, -1, 0, 0, 100, 1, 0, 0, 9000, 9000, 'Rogue Voidwalker - Shadowstrike'),
+(1697405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Rogue Voidwalker - Attack'),
+(1897405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Z''kral - Attack'),
+(1705805, 3, 16244, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Taskmaster - Demoralizing Shout'),
+(1705805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Taskmaster - Attack'),
+(1919205, 3, 34017, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Mistress of Doom - Rain of Chaos'),
+(1919205, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Mistress of Doom - Attack'),
+(1695105, 4, 37488, 0, -1, 0, 0, 100, 1, 0, 0, 12000, 12000, 'Terrorfiend - Fel Flames'),
+(1695105, 3, 45, 0, -1, 0, 0, 100, 1, 0, 0, 20000, 20000, 'Terrorfiend - War Stomp'),
+(1695105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Terrorfiend - Attack'),
+(1897605, 4, 32004, 0, -1, 0, 0, 100, 1, 0, 0, 9000, 9000, 'Urga''zz - Drill'),
+(1897605, 3, 34095, 0, -1, 0, 0, 100, 1, 0, 0, 40000, 40000, 'Urga''zz - Throw Proximity Bomb'),
+(1897605, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Urga''zz - Attack'),
+(1940805, 4, 34086, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Maiden of Pain - Whipped Frenzy'),
+(1940805, 3, 15968, 0, -1, 0, 0, 100, 1, 0, 0, 4114, 5970, 'Maiden of Pain - Lash of Pain'),
+(1940805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Maiden of Pain - Attack'),
+(1882705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Gan''arg Sapper - Attack'),
+(1929805, 5, 32009, 0, -1, 0, 0, 100, 1, 0, 0, 14000, 14000, 'Warbringer Arix''Amal - Cutdown'),
+(1929805, 3, 15496, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Warbringer Arix''Amal - Cleave'),
+(1929805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Warbringer Arix''Amal - Attack'),
+(1695405, 5, 32737, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Forge Camp Legionnaire - Weapon Chain'),
+(1695405, 4, 15496, 0, -1, 0, 0, 100, 1, 0, 0, 12000, 12000, 'Forge Camp Legionnaire - Cleave'),
+(1695405, 3, 32736, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Forge Camp Legionnaire - Mortal Strike'),
+(1695405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Forge Camp Legionnaire - Attack'),
+(1694605, 3, 32735, 0, -1, 0, 0, 100, 1, 0, 0, 20000, 20000, 'Mo''arg Forgefiend - Saw Blade'),
+(1694605, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Mo''arg Forgefiend - Attack'),
+(2079805, 3, 32735, 0, -1, 0, 0, 100, 1, 0, 0, 20000, 20000, 'Razorsaw - Saw Blade'),
+(2079805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Razorsaw - Attack'),
+(1696005, 4, 30850, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Sister of Grief - Seduction'),
+(1696005, 3, 21987, 0, -1, 0, 0, 100, 1, 0, 0, 12017, 18580, 'Sister of Grief - Lash of Pain'),
+(1696005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Sister of Grief - Attack'),
+(1694705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Gan''arg Servant - Attack'),
+(1943405, 5, 32666, 0, -1, 0, 0, 100, 1, 0, 0, 3000, 3000, 'Dreadcaller - Shadow Bolt'),
+(1943405, 4, 11443, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Dreadcaller - Cripple'),
+(1943405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Dreadcaller - Attack'),
+(1913605, 3, 9053, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Flamewaker Imp - Fireball'),
+(1913605, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Flamewaker Imp - Attack'),
+(1926105, 3, 12743, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Infernal Warbringer - Immolation'),
+(1926105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Infernal Warbringer - Attack'),
+(1701405, 3, 34259, 0, -1, 0, 0, 100, 1, 0, 0, 25058, 29459, 'Collapsing Voidwalker - Fear'),
+(1701405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Collapsing Voidwalker - Attack'),
+(1952705, 4, 34344, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Vacillating Voidcaller - Shadow Bolt'),
+(1952705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Vacillating Voidcaller - Attack'),
+(1695005, 3, 11981, 0, -1, 0, 0, 100, 1, 0, 0, 6000, 6000, 'Netherhound - Mana Burn'),
+(1695005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Netherhound - Attack'),
+(1919005, 3, 32736, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Fel Handler - Mortal Strike'),
+(1919005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Fel Handler - Attack'),
+(1898105, 3, 33969, 0, -1, 0, 0, 100, 1, 0, 0, 6000, 6000, 'Doomwhisperer - Draining Bolt'),
+(1898105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Doomwhisperer - Attack'),
+(1897505, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Wrathguard - Attack'),
+(1897705, 6, 33971, 0, -1, 0, 0, 100, 1, 0, 0, 30737, 59746, 'Felguard Destroyer - Sweeping Charge'),
+(1897705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Felguard Destroyer - Attack'),
+(1933505, 4, 32026, 0, -1, 0, 0, 100, 1, 0, 0, 10000, 10000, 'Subjugator Yalqiz - Pain Spike'),
+(1933505, 3, 32000, 0, -1, 0, 0, 100, 1, 0, 0, 6000, 6000, 'Subjugator Yalqiz - Mind Sear'),
+(1933505, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Subjugator Yalqiz - Attack'),
+(1695905, 5, 33679, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Dread Tactician - Inferno'),
+(1695905, 4, 33678, 0, -1, 0, 0, 100, 1, 0, 0, 20000, 20000, 'Dread Tactician - Carrion Swarm'),
+(1695905, 3, 12098, 0, -1, 0, 0, 100, 1, 0, 0, 10000, 10000, 'Dread Tactician - Sleep'),
+(1695905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Dread Tactician - Attack'),
+(1929905, 5, 32417, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Deathwhisperer - Mind Flay'),
+(1929905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Deathwhisperer - Attack'),
+(1856705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Mo''arg Master Planner - Attack'),
+(1715105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Gan''arg Tinkerer - Attack'),
+(1694505, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Mo''arg Engineer - Attack'),
+(1715205, 5, 32009, 0, -1, 0, 0, 100, 1, 0, 0, 14000, 14000, 'Felguard Legionnaire - Cutdown'),
+(1715205, 3, 15496, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Felguard Legionnaire - Cleave'),
+(1715205, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Felguard Legionnaire - Attack'),
+(1866005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Subjugator Vaz''shir - Attack'),
+(1866105, 5, 11876, 0, -1, 0, 0, 100, 1, 0, 0, 16000, 16000, 'Terrorguard - War Stomp'),
+(1866105, 4, 11443, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Terrorguard - Cripple'),
+(1866105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Terrorguard - Attack'),
+(1798105, 4, 32026, 0, -1, 0, 0, 100, 1, 0, 0, 10000, 10000, 'Voidspawn - Pain Spike'),
+(1798105, 3, 36447, 0, -1, 0, 0, 100, 1, 0, 0, 6000, 6000, 'Voidspawn - Mind Sear'),
+(1798105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Voidspawn - Attack'),
+(1997905, 4, 36825, 0, -1, 0, 0, 100, 1, 0, 0, 10374, 11816, 'Deathforge Technician - Drain Life'),
+(1997905, 3, 36250, 0, -1, 0, 0, 100, 1, 0, 0, 12000, 12000, 'Deathforge Technician - Steal Armor'),
+(1997905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Deathforge Technician - Attack'),
+(1997805, 3, 36486, 0, -1, 0, 0, 100, 1, 0, 0, 25366, 33628, 'Deathforge Over-Smith - Slime Spray'),
+(1997805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Deathforge Over-Smith - Attack'),
+(1998005, 4, 36406, 0, -1, 0, 0, 100, 1, 0, 0, 10460, 11903, 'Void Terror - Double Breath'),
+(1998005, 3, 36405, 0, -1, 0, 0, 100, 1, 0, 0, 8005, 13594, 'Void Terror - Stomp'),
+(1998005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Void Terror - Attack'),
+(2151605, 4, 37621, 0, -1, 0, 0, 100, 1, 0, 0, 10000, 10000, 'Death''s Watch - Mind Flay'),
+(2151605, 3, 36398, 0, -1, 0, 0, 100, 1, 0, 0, 8002, 11987, 'Death''s Watch - Tongue Lash'),
+(2151605, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Death''s Watch - Attack'),
+(2151905, 4, 32736, 0, -1, 0, 0, 100, 1, 0, 0, 16693, 23664, 'Death''s Might - Mortal Strike'),
+(2151905, 3, 15496, 0, -1, 0, 0, 100, 1, 0, 0, 6071, 7828, 'Death''s Might - Cleave'),
+(2151905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Death''s Might - Attack'),
+(1996305, 5, 37629, 0, -1, 0, 0, 100, 1, 0, 0, 10000, 10000, 'Doomcryer - Melt Flesh'),
+(1996305, 3, 34017, 0, -1, 0, 0, 100, 1, 0, 0, 10082, 18610, 'Doomcryer - Rain of Chaos'),
+(1996305, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Doomcryer - Attack'),
+(1996005, 4, 36253, 0, -1, 0, 0, 100, 1, 0, 0, 25338, 29564, 'Doomforge Engineer - Chemical Flames'),
+(1996005, 3, 36251, 0, -1, 0, 0, 100, 1, 0, 0, 15857, 19799, 'Doomforge Engineer - Hammer Slam'),
+(1996005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Doomforge Engineer - Attack'),
+(1996105, 4, 36846, 0, -1, 0, 0, 100, 1, 0, 0, 16183, 19956, 'Doomforge Attendant - Mana Bomb'),
+(1996105, 3, 36208, 0, -1, 0, 0, 100, 1, 0, 0, 8539, 14908, 'Doomforge Attendant - Steal Weapon'),
+(1996105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Doomforge Attendant - Attack'),
+(1695205, 4, 22911, 0, -1, 0, 0, 100, 1, 0, 0, 25349, 34575, 'Anger Guard - Charge'),
+(1695205, 3, 15496, 0, -1, 0, 0, 100, 1, 0, 0, 5000, 5000, 'Anger Guard - Cleave'),
+(1695205, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Anger Guard - Attack'),
+(2102105, 4, 37844, 0, -1, 0, 0, 100, 1, 0, 0, 120000, 120000, 'Scorch Imp - Fire Ward'),
+(2102105, 3, 9053, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Scorch Imp - Fireball'),
+(2102105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Scorch Imp - Attack'),
+(2219505, 4, 11980, 0, -1, 0, 0, 100, 1, 0, 0, 25000, 25000, 'Wrath Speaker - Curse of Weakness'),
+(2219505, 3, 34017, 0, -1, 0, 0, 100, 1, 0, 0, 13000, 13000, 'Wrath Speaker - Rain of Chaos'),
+(2219505, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Wrath Speaker - Attack'),
+(2229105, 3, 32736, 0, -1, 0, 0, 100, 1, 0, 0, 15108, 24448, 'Furnace Guard - Mortal Strike'),
+(2229105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Furnace Guard - Attack'),
+(2055705, 4, 36406, 0, -1, 0, 0, 100, 1, 0, 0, 10407, 13253, 'Wrath Hound - Double Breath'),
+(2055705, 3, 22911, 0, -1, 0, 0, 100, 1, 0, 0, 25068, 29755, 'Wrath Hound - Charge'),
+(2055705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Wrath Hound - Attack'),
+(2338605, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Gan''arg Analyzer - Attack'),
+(1997305, 4, 37633, 0, -1, 0, 0, 100, 1, 0, 0, 10862, 18910, 'Abyssal Flamebringer - Abyssal Strike'),
+(1997305, 3, 12743, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Abyssal Flamebringer - Immolation'),
+(1997305, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Abyssal Flamebringer - Attack'),
+(2220405, 4, 34259, 0, -1, 0, 0, 100, 1, 0, 0, 25041, 34279, 'Fear Fiend - Fear'),
+(2220405, 3, 36248, 0, -1, 0, 0, 100, 1, 0, 0, 10138, 11913, 'Fear Fiend - Fel Flames'),
+(2220405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Fear Fiend - Attack'),
+(1886905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Unstable Voidwraith - Attack'),
+(1887005, 4, 34344, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Voidshrieker - Shadow Bolt'),
+(1887005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Voidshrieker - Attack'),
+(2039405, 4, 36414, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Eye of Culuthas - Focused Bursts'),
+(2039405, 3, 36398, 0, -1, 0, 0, 100, 1, 0, 0, 6516, 11320, 'Eye of Culuthas - Tongue Lash'),
+(2039405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Eye of Culuthas - Attack'),
+(2014105, 4, 36406, 0, -1, 0, 0, 100, 1, 0, 0, 4007, 8843, 'Hound of Culuthas - Double Breath'),
+(2014105, 3, 36405, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Hound of Culuthas - Stomp'),
+(2014105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Hound of Culuthas - Attack'),
+(1885905, 3, 34017, 0, -1, 0, 0, 100, 1, 0, 0, 10055, 18038, 'Wrath Priestess - Rain of Chaos'),
+(1885905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Wrath Priestess - Attack'),
+(2092805, 4, 38920, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Ironspine Forgelord - Detonate Teleporter'),
+(2092805, 3, 36251, 0, -1, 0, 0, 100, 1, 0, 0, 5167, 9651, 'Ironspine Forgelord - Hammer Slam'),
+(2092805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Ironspine Forgelord - Attack'),
+(2080105, 4, 36253, 0, -1, 0, 0, 100, 1, 0, 0, 9099, 11981, 'Silroth - Chemical Flames'),
+(2080105, 3, 36252, 0, -1, 0, 0, 100, 1, 0, 0, 10000, 10000, 'Silroth - Felforge Flames'),
+(2080105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Silroth - Attack'),
+(1885805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Wrathbringer - Attack'),
+(1694305, 4, 38920, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Cyber-Rage Forgelord - Detonate Teleporter'),
+(1694305, 3, 36255, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Cyber-Rage Forgelord - Chaos Nova'),
+(1694305, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Cyber-Rage Forgelord - Attack'),
+(2080005, 4, 36228, 0, -1, 0, 0, 100, 1, 0, 0, 9075, 11970, 'Forgemaster Morug - Chainsaw Blade'),
+(2080005, 3, 34261, 0, -1, 0, 0, 100, 1, 0, 0, 16347, 19925, 'Forgemaster Morug - Slime Spray'),
+(2080005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Forgemaster Morug - Attack'),
+(1694905, 4, 36825, 0, -1, 0, 0, 100, 1, 0, 0, 15298, 19779, 'Gan''arg Mekgineer - Drain Life'),
+(1694905, 3, 36208, 0, -1, 0, 0, 100, 1, 0, 0, 18000, 18000, 'Gan''arg Mekgineer - Steal Weapon'),
+(1694905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Gan''arg Mekgineer - Attack'),
+(2192305, 4, 37488, 0, -1, 0, 0, 100, 1, 0, 0, 14000, 14000, 'Terrorguard Protector - Fel Flames'),
+(2192305, 3, 15496, 0, -1, 0, 0, 100, 1, 0, 0, 16000, 16000, 'Terrorguard Protector - Cleave'),
+(2192305, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Terrorguard Protector - Attack'),
+(2093005, 4, 36541, 0, -1, 0, 0, 100, 1, 0, 0, 25000, 25000, 'Hatecryer - Curse of Burning Shadows'),
+(2093005, 3, 34017, 0, -1, 0, 0, 100, 1, 0, 0, 13000, 13000, 'Hatecryer - Rain of Chaos'),
+(2093005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Hatecryer - Attack'),
+(2092905, 5, 15496, 0, -1, 0, 0, 100, 1, 0, 0, 8185, 9880, 'Wrath Lord - Cleave'),
+(2092905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Wrath Lord - Attack'),
+(2068505, 5, 35491, 0, -1, 0, 0, 100, 1, 0, 0, 18000, 18000, 'Overseer Azarad - Furious Rage'),
+(2068505, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Overseer Azarad - Attack'),
+(2080305, 5, 36487, 0, -1, 0, 0, 100, 1, 0, 0, 12000, 12000, 'Overmaster Grindgarr - Fel Flames'),
+(2080305, 4, 35238, 0, -1, 0, 0, 100, 1, 0, 0, 12000, 12000, 'Overmaster Grindgarr - War Stomp'),
+(2080305, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Overmaster Grindgarr - Attack'),
+(2032605, 3, 36486, 0, -1, 0, 0, 100, 1, 0, 0, 15050, 19991, 'Mo''arg Warp-Master - Slime Spray'),
+(2032605, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Mo''arg Warp-Master - Attack'),
+(2028505, 4, 36846, 0, -1, 0, 0, 100, 1, 0, 0, 20000, 20000, 'Gan''arg Warp-Tinker - Mana Bomb'),
+(2028505, 3, 36208, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Gan''arg Warp-Tinker - Steal Weapon'),
+(2028505, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Gan''arg Warp-Tinker - Attack'),
+(1886005, 5, 36844, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Daughter of Destiny - Curse of Horrors'),
+(1886005, 4, 36225, 0, -1, 0, 0, 100, 1, 0, 0, 15213, 19879, 'Daughter of Destiny - Chaos Nova'),
+(1886005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Daughter of Destiny - Attack'),
+(1973805, 4, 36205, 0, -1, 0, 0, 100, 1, 0, 0, 15568, 17919, 'Doomclaw - Claw Swipe'),
+(1973805, 3, 34261, 0, -1, 0, 0, 100, 1, 0, 0, 16388, 24864, 'Doomclaw - Slime Spray'),
+(1973805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Doomclaw - Attack'),
+(1694405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Mo''arg Doomsmith - Attack'),
+(1694805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Gan''arg Engineer - Attack'),
+(2040305, 4, 11428, 0, -1, 0, 0, 100, 1, 0, 0, 15925, 19048, 'Legion Destroyer - Knockdown'),
+(2040305, 3, 13737, 0, -1, 0, 0, 100, 1, 0, 0, 10357, 14469, 'Legion Destroyer - Mortal Strike'),
+(2040305, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Legion Destroyer - Attack'),
+(2040205, 3, 35144, 0, -1, 0, 0, 100, 1, 0, 0, 12508, 14840, 'Legion Shocktrooper - Vicious Rend'),
+(2040205, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Legion Shocktrooper - Attack'),
+(2039905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Terror Imp - Attack'),
+(2040405, 3, 35147, 0, -1, 0, 0, 100, 1, 0, 0, 10015, 14185, 'Warp-Gate Engineer - Sundering Swipe'),
+(2040405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Warp-Gate Engineer - Attack'),
+(2021505, 4, 20663, 0, -1, 0, 0, 100, 1, 0, 0, 25000, 25000, 'Pentatharon - Sleep'),
+(2021505, 3, 36039, 0, -1, 0, 0, 100, 1, 0, 0, 25000, 25000, 'Pentatharon - Carrion Swarm'),
+(2021505, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Pentatharon - Attack'),
+(1985305, 4, 32736, 0, -1, 0, 0, 100, 1, 0, 0, 20000, 20000, 'Felblade Doomguard - Mortal Strike'),
+(1985305, 3, 35238, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Felblade Doomguard - War Stomp'),
+(1985305, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Felblade Doomguard - Attack'),
+(1985205, 4, 30849, 0, -1, 0, 0, 100, 1, 0, 0, 19000, 19000, 'Artifact Seeker - Spell Lock'),
+(1985205, 3, 11981, 0, -1, 0, 0, 50, 1, 0, 0, 15000, 15000, 'Artifact Seeker - Mana Burn'),
+(1985205, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Artifact Seeker - Attack'),
+(2196105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Cataclysm Overseer - Attack'),
+(2196005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Gan''arg Technician - Attack'),
+(2182705, 3, 38051, 0, -1, 0, 0, 100, 1, 0, 0, 14470, 14718, 'Zandras - Fel Shackles'),
+(2182705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Zandras - Attack'),
+(1974405, 4, 11443, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Dreadwarden - Cripple'),
+(1974405, 3, 32736, 0, -1, 0, 0, 100, 1, 0, 0, 9767, 11561, 'Dreadwarden - Mortal Strike'),
+(1974405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Dreadwarden - Attack'),
+(2152005, 3, 38051, 0, -1, 0, 0, 100, 1, 0, 0, 12024, 15523, 'Illidari Jailor - Fel Shackles'),
+(2152005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Jailor - Attack'),
+(1980105, 3, 36227, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Agonizer - Firebolt'),
+(1980105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Agonizer - Attack'),
+(2180805, 5, 11977, 0, -1, 0, 0, 100, 1, 0, 0, 20000, 20000, 'Illidari Overseer - Rend'),
+(2180805, 4, 32736, 0, -1, 0, 0, 100, 1, 0, 0, 18000, 18000, 'Illidari Overseer - Mortal Strike'),
+(2180805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Overseer - Attack'),
+(2285805, 4, 37577, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Shadowhoof Assassin - Debilitating Strike'),
+(2285805, 3, 14873, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Shadowhoof Assassin - Sinister Strike'),
+(2285805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shadowhoof Assassin - Attack'),
+(2285705, 5, 32009, 0, -1, 0, 0, 100, 1, 0, 0, 14000, 14000, 'Illidari Ravager - Cutdown'),
+(2285705, 4, 16244, 0, -1, 0, 0, 100, 1, 0, 0, 4135, 5875, 'Illidari Ravager - Demoralizing Shout'),
+(2285705, 3, 15496, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Illidari Ravager - Cleave'),
+(2285705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Ravager - Attack'),
+(2285905, 4, 13338, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Shadowhoof Summoner - Curse of Tongues'),
+(2285905, 3, 9613, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shadowhoof Summoner - Shadow Bolt'),
+(2285905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shadowhoof Summoner - Attack'),
+(2130905, 4, 38048, 0, -1, 0, 0, 100, 1, 0, 0, 4314, 5938, 'Painmistress Gabrissa - Curse of Pain'),
+(2130905, 3, 38169, 0, -1, 0, 0, 100, 1, 0, 0, 10279, 14671, 'Painmistress Gabrissa - Subservience'),
+(2130905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Painmistress Gabrissa - Attack'),
+(1979905, 5, 38166, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Illidari Dreadbringer - Frenzy'),
+(1979905, 4, 38167, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Illidari Dreadbringer - Curse of Blood'),
+(1979905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Dreadbringer - Attack'),
+(1980005, 3, 15968, 0, -1, 0, 0, 100, 1, 0, 0, 4304, 7695, 'Illidari Painlasher - Lash of Pain'),
+(1980005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Painlasher - Attack'),
+(2165605, 3, 38048, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Illidari Satyr - Curse of Pain'),
+(2165605, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Satyr - Attack'),
+(2133705, 4, 7159, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Shadowstalker - Backstab'),
+(2133705, 3, 5916, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Shadowstalker - Shadowstalker Stealth'),
+(2133705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Shadowstalker - Attack'),
+(1980205, 4, 15496, 0, -1, 0, 0, 100, 1, 0, 0, 6011, 9624, 'Illidari Shocktrooper - Cleave'),
+(1980205, 3, 22120, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Illidari Shocktrooper - Charge'),
+(1980205, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Illidari Shocktrooper - Attack'),
+(2141905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Infernal Attacker - Attack'),
+(2068305, 5, 37997, 0, -1, 0, 0, 100, 1, 0, 0, 16000, 16000, 'Prophetess Cavrylin - Chaos Nova'),
+(2068305, 4, 37629, 0, -1, 0, 0, 100, 1, 0, 0, 16000, 16000, 'Prophetess Cavrylin - Melt Flesh'),
+(2068305, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Prophetess Cavrylin - Attack'),
+(2149905, 4, 32735, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Overseer Ripsaw - Saw Blade'),
+(2149905, 3, 35321, 0, -1, 0, 0, 100, 1, 0, 0, 16000, 16000, 'Overseer Ripsaw - Gushing Wound'),
+(2149905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Overseer Ripsaw - Attack'),
+(2131405, 4, 15496, 0, -1, 0, 0, 100, 1, 0, 0, 8327, 11997, 'Terrormaster - Cleave'),
+(2131405, 3, 38154, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Terrormaster - Fear'),
+(2131405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Terrormaster - Attack'),
+(1975505, 4, 36253, 0, -1, 0, 0, 100, 1, 0, 0, 25543, 29928, 'Mo''arg Weaponsmith - Chemical Flames'),
+(1975505, 3, 37580, 0, -1, 0, 0, 100, 1, 0, 0, 20000, 20000, 'Mo''arg Weaponsmith - Drill Armor'),
+(1975505, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Mo''arg Weaponsmith - Attack'),
+(1974005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Wrathwalker - Attack');
+
+-- 14093_01_mangos_vehicle_ridespell.sql
+ALTER TABLE `vehicle_accessory` ADD COLUMN `RideSpellId` INT(10) UNSIGNED AFTER `accessory_entry`;
+
+DELETE FROM creature_addon WHERE guid IN(SELECT guid FROM creature WHERE id IN (8539,8598));
+DELETE FROM creature_movement WHERE id IN(SELECT guid FROM creature WHERE id IN (8539,8598));
+DELETE FROM game_event_creature WHERE guid IN(SELECT guid FROM creature WHERE id IN (8539,8598));
+DELETE FROM game_event_creature_data WHERE guid IN(SELECT guid FROM creature WHERE id IN (8539,8598));
+DELETE FROM creature_battleground WHERE guid IN(SELECT guid FROM creature WHERE id IN (8539,8598));
+DELETE FROM creature_linking WHERE guid IN(SELECT guid FROM creature WHERE id IN (8539,8598));
+DELETE FROM creature WHERE id IN (8539,8598);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(16982, 8539, 0, 1, 1, '3021.48999023437500000000', '-4952.02978515625000000000', '102.37400054931640000000', '1.82161998748779300000', 300, 300, 0, 0),
+(17539, 8539, 0, 1, 1, '3019.37988281250000000000', '-4949.81005859375000000000', '102.36399841308594000000', '1.09933996200561520000', 300, 300, 0, 0),
+(17625, 8539, 0, 1, 1, '3014.82006835937500000000', '-4915.39013671875000000000', '102.68299865722656000000', '3.66300010681152340000', 300, 300, 5, 1),
+(17694, 8539, 0, 1, 1, '3036.84008789062500000000', '-4914.10009765625000000000', '102.49299621582031000000', '2.99845004081726070000', 300, 300, 5, 1),
+(17719, 8539, 0, 1, 1, '2535.59008789062500000000', '-3768.37011718750000000000', '178.14300537109375000000', '4.65412998199462900000', 300, 300, 5, 1),
+(17808, 8539, 0, 1, 1, '2648.13989257812500000000', '-5405.00976562500000000000', '160.28799438476562000000', '5.22498989105224600000', 300, 300, 10, 1),
+(17948, 8539, 0, 1, 1, '2247.45996093750000000000', '-3525.35009765625000000000', '139.52900695800780000000', '5.35159015655517600000', 300, 300, 5, 1);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(17952, 8598, 0, 1, 1, '2947.36010742187500000000', '-4713.27001953125000000000', '99.39669799804688000000', '5.81954002380371100000', 300, 300, 5, 1),
+(18088, 8598, 0, 1, 1, '2812.67993164062500000000', '-4154.12011718750000000000', '91.73269653320312000000', '1.86825001239776610000', 300, 300, 10, 1),
+(18185, 8598, 0, 1, 1, '3036.12011718750000000000', '-4515.49023437500000000000', '106.12699890136719000000', '2.62245011329650900000', 300, 300, 3, 1),
+(18193, 8598, 0, 1, 1, '2948.31005859375000000000', '-4606.64990234375000000000', '77.05539703369140000000', '4.65277004241943400000', 300, 300, 10, 1),
+(18199, 8598, 0, 1, 1, '2724.94995117187500000000', '-4609.68017578125000000000', '90.65519714355469000000', '6.05052995681762700000', 300, 300, 10, 1),
+(18216, 8598, 0, 1, 1, '2951.29003906250000000000', '-4249.62011718750000000000', '93.28720092773438000000', '6.11484003067016600000', 300, 300, 10, 1),
+(18243, 8598, 0, 1, 1, '3029.93994140625000000000', '-4047.73999023437500000000', '101.63300323486328000000', '2.51079010963439940000', 300, 300, 10, 1),
+(18366, 8598, 0, 1, 1, '2850.64990234375000000000', '-4576.72998046875000000000', '102.11100006103516000000', '5.15879011154174800000', 300, 300, 5, 1),
+(18398, 8598, 0, 1, 1, '2685.36010742187500000000', '-3530.78002929687500000000', '123.39600372314453000000', '3.87310004234313960000', 300, 300, 3, 1),
+(18616, 8598, 0, 1, 1, '3131.89990234375000000000', '-2981.90991210937500000000', '125.18000030517578000000', '3.52677989006042500000', 300, 300, 10, 1),
+(18619, 8598, 0, 1, 1, '2645.62011718750000000000', '-4911.10009765625000000000', '83.04489898681640000000', '5.62736988067626950000', 300, 300, 10, 1),
+(18743, 8598, 0, 1, 1, '2956.50000000000000000000', '-4549.27001953125000000000', '77.37439727783203000000', '0.50558102130889890000', 300, 300, 10, 1),
+(18829, 8598, 0, 1, 1, '3131.58007812500000000000', '-2944.64990234375000000000', '121.03800201416016000000', '1.13334000110626220000', 300, 300, 10, 1),
+(18862, 8598, 0, 1, 1, '2880.98999023437500000000', '-4168.58984375000000000000', '95.99410247802734000000', '1.05648994445800780000', 300, 300, 10, 1),
+(17875, 8598, 0, 1, 1, '2846.03002929687500000000', '-4061.91992187500000000000', '101.84300231933594000000', '4.63816022872924800000', 300, 300, 10, 1),
+(18026, 8598, 0, 1, 1, '2831.01000976562500000000', '-3978.62988281250000000000', '102.85600280761719000000', '0.23243199288845062000', 300, 300, 10, 1),
+(18061, 8598, 0, 1, 1, '2718.10009765625000000000', '-3391.75000000000000000000', '96.72180175781250000000', '0.22460199892520905000', 300, 300, 10, 1),
+(18208, 8598, 0, 1, 1, '3163.13989257812500000000', '-2970.81005859375000000000', '126.10299682617188000000', '0.01792000047862529800', 300, 300, 10, 1),
+(18256, 8598, 0, 1, 1, '2785.62988281250000000000', '-4221.00976562500000000000', '90.21420288085938000000', '1.18356001377105710000', 300, 300, 10, 1),
+(18284, 8598, 0, 1, 1, '2795.58007812500000000000', '-4023.45996093750000000000', '99.44889831542969000000', '3.16504001617431640000', 300, 300, 10, 1),
+(18335, 8598, 0, 1, 1, '2713.14990234375000000000', '-4876.47021484375000000000', '88.45539855957031000000', '4.63411998748779300000', 300, 300, 10, 1),
+(18432, 8598, 0, 1, 1, '2805.79003906250000000000', '-4229.25000000000000000000', '89.68260192871094000000', '0.24474200606346130000', 300, 300, 10, 1),
+(18440, 8598, 0, 1, 1, '2682.85009765625000000000', '-4917.16015625000000000000', '85.05139923095703000000', '2.92504000663757320000', 300, 300, 10, 1),
+(18444, 8598, 0, 1, 1, '2877.34008789062500000000', '-4647.06982421875000000000', '86.35910034179688000000', '1.61871004104614260000', 300, 300, 10, 1),
+(18510, 8598, 0, 1, 1, '2922.69995117187500000000', '-4781.81982421875000000000', '97.53929901123047000000', '2.21350002288818360000', 300, 300, 10, 1),
+(18701, 8598, 0, 1, 1, '3048.31005859375000000000', '-4387.00000000000000000000', '104.83100128173828000000', '4.12627983093261700000', 300, 300, 10, 1),
+(18755, 8598, 0, 1, 1, '2989.16992187500000000000', '-4183.97021484375000000000', '94.79740142822266000000', '1.14821004867553700000', 300, 300, 10, 1),
+(10038, 8598, 0, 1, 1, '2820.47998046875000000000', '-4986.62011718750000000000', '100.93199920654297000000', '5.69517993927001950000', 300, 300, 10, 1),
+(10073, 8598, 0, 1, 1, '2792.32006835937500000000', '-4192.91992187500000000000', '91.22209930419922000000', '0.15101499855518340000', 300, 300, 10, 1),
+(10079, 8598, 0, 1, 1, '2754.28002929687500000000', '-3557.57006835937500000000', '103.63800048828125000000', '5.82390022277832000000', 300, 300, 10, 1),
+(10081, 8598, 0, 1, 1, '3213.52001953125000000000', '-2958.26000976562500000000', '126.24299621582031000000', '5.71795988082885700000', 300, 300, 10, 1),
+(10089, 8598, 0, 1, 1, '2777.16992187500000000000', '-4268.04003906250000000000', '90.36840057373047000000', '0.99253898859024050000', 300, 300, 5, 1),
+(10097, 8598, 0, 1, 1, '3065.60009765625000000000', '-4361.91992187500000000000', '108.22200012207031000000', '0.32823801040649414000', 300, 300, 10, 1),
+(10114, 8598, 0, 1, 1, '3250.43994140625000000000', '-4425.31005859375000000000', '109.81900024414062000000', '0.08112400025129318000', 300, 300, 10, 1),
+(10115, 8598, 0, 1, 1, '3079.13989257812500000000', '-4637.29003906250000000000', '119.76000213623047000000', '4.58126020431518550000', 300, 300, 5, 1),
+(10923, 8598, 0, 1, 1, '2903.81005859375000000000', '-4436.70996093750000000000', '92.42630004882812000000', '6.09639978408813500000', 300, 300, 10, 1),
+(10936, 8598, 0, 1, 1, '2921.13989257812500000000', '-4743.68994140625000000000', '92.99700164794922000000', '4.11653995513916000000', 300, 300, 10, 1),
+(10940, 8598, 0, 1, 1, '3066.33007812500000000000', '-4487.64013671875000000000', '112.66300201416016000000', '3.23348999023437500000', 300, 300, 10, 1),
+(11418, 8598, 0, 1, 1, '3020.79003906250000000000', '-4600.43994140625000000000', '110.05000305175781000000', '4.49488019943237300000', 300, 300, 0, 0),
+(19027, 8598, 0, 1, 1, '2731.87988281250000000000', '-4987.47998046875000000000', '90.78160095214844000000', '6.24762010574340800000', 300, 300, 5, 1),
+(21870, 8598, 0, 1, 1, '2823.27001953125000000000', '-4660.47998046875000000000', '88.88339996337890000000', '1.85889005661010740000', 300, 300, 3, 1),
+(21871, 8598, 0, 1, 1, '2753.91992187500000000000', '-5004.60986328125000000000', '90.78029632568360000000', '4.59385013580322300000', 300, 300, 5, 1),
+(21888, 8598, 0, 1, 1, '2649.26000976562500000000', '-4720.56005859375000000000', '85.62789916992188000000', '4.19541978836059600000', 300, 300, 10, 1),
+(21891, 8598, 0, 1, 1, '2987.60009765625000000000', '-4329.43994140625000000000', '80.70700073242188000000', '0.74188697338104250000', 300, 300, 10, 1),
+(21897, 8598, 0, 1, 1, '2612.65991210937500000000', '-4879.85986328125000000000', '79.77359771728516000000', '2.26003003120422360000', 300, 300, 0, 0),
+(23856, 8598, 0, 1, 1, '3011.42993164062500000000', '-4749.04980468750000000000', '94.18560028076172000000', '4.31246995925903300000', 300, 300, 10, 1),
+(23961, 8598, 0, 1, 1, '2859.64990234375000000000', '-3904.61010742187500000000', '105.81300354003906000000', '3.50504994392395000000', 300, 300, 10, 1),
+(24323, 8598, 0, 1, 1, '2812.70996093750000000000', '-4862.33007812500000000000', '96.27629852294922000000', '2.89401006698608400000', 300, 300, 5, 1),
+(24483, 8598, 0, 1, 1, '2864.91992187500000000000', '-4848.75976562500000000000', '99.23249816894531000000', '0.26060199737548830000', 300, 300, 10, 1),
+(24548, 8598, 0, 1, 1, '2797.81005859375000000000', '-3971.18994140625000000000', '100.41999816894531000000', '3.48218989372253400000', 300, 300, 10, 1),
+(24561, 8598, 0, 1, 1, '3030.31005859375000000000', '-4202.47998046875000000000', '95.93969726562500000000', '5.81516981124877900000', 300, 300, 10, 1),
+(24860, 8598, 0, 1, 1, '3008.72998046875000000000', '-4108.14013671875000000000', '96.59110260009766000000', '3.90629005432128900000', 300, 300, 10, 1),
+(33882, 8598, 0, 1, 1, '2915.00000000000000000000', '-3111.76000976562500000000', '111.33999633789062000000', '2.50863003730773930000', 300, 300, 10, 1),
+(38807, 8598, 0, 1, 1, '2748.46997070312500000000', '-3435.04003906250000000000', '96.06250000000000000000', '1.97948002815246580000', 300, 300, 10, 1),
+(38967, 8598, 0, 1, 1, '3278.86010742187500000000', '-4428.35986328125000000000', '114.31300354003906000000', '1.95130002498626700000', 300, 300, 10, 1),
+(41720, 8598, 0, 1, 1, '2520.91992187500000000000', '-4889.79003906250000000000', '77.99019622802734000000', '5.69155979156494100000', 300, 300, 10, 1),
+(41749, 8598, 0, 1, 1, '2888.09008789062500000000', '-3069.75000000000000000000', '105.63400268554688000000', '1.75841999053955080000', 300, 300, 10, 1),
+(42025, 8598, 0, 1, 1, '2851.23999023437500000000', '-3105.83007812500000000000', '104.79900360107422000000', '4.19809007644653300000', 300, 300, 10, 1),
+(42464, 8598, 0, 1, 1, '2662.97998046875000000000', '-4678.62011718750000000000', '80.19090270996094000000', '5.68139982223510700000', 300, 300, 10, 1),
+(44881, 8598, 0, 1, 1, '2848.62988281250000000000', '-3389.39990234375000000000', '96.26509857177734000000', '4.63621997833251950000', 300, 300, 10, 1),
+(44894, 8598, 0, 1, 1, '2775.93994140625000000000', '-4094.97998046875000000000', '98.53009796142578000000', '4.12542009353637700000', 300, 300, 10, 1),
+(44917, 8598, 0, 1, 1, '2611.90991210937500000000', '-4366.74023437500000000000', '79.31549835205078000000', '2.39969992637634280000', 300, 300, 5, 1),
+(44925, 8598, 0, 1, 1, '2781.70996093750000000000', '-3925.91992187500000000000', '101.73999786376953000000', '1.33898997306823730000', 300, 300, 5, 1),
+(44944, 8598, 0, 1, 1, '3169.47998046875000000000', '-4605.87011718750000000000', '105.27600097656250000000', '5.28631019592285200000', 300, 300, 10, 1),
+(45337, 8598, 0, 1, 1, '2753.38989257812500000000', '-4128.72021484375000000000', '95.81020355224610000000', '4.65959978103637700000', 300, 300, 10, 1),
+(45355, 8598, 0, 1, 1, '2687.34008789062500000000', '-4209.31982421875000000000', '89.36479949951172000000', '1.59715998172760000000', 300, 300, 5, 1),
+(45360, 8598, 0, 1, 1, '2751.72998046875000000000', '-3530.90991210937500000000', '105.89099884033203000000', '1.69515001773834230000', 300, 300, 10, 1),
+(45361, 8598, 0, 1, 1, '2725.87988281250000000000', '-4142.16015625000000000000', '92.54869842529297000000', '5.05515003204345700000', 300, 300, 10, 1),
+(45384, 8598, 0, 1, 1, '3033.04003906250000000000', '-4320.52978515625000000000', '99.45520019531250000000', '0.47734498977661133000', 300, 300, 10, 1),
+(45392, 8598, 0, 1, 1, '3107.22998046875000000000', '-2975.52001953125000000000', '123.21499633789062000000', '3.14130997657775900000', 300, 300, 10, 1),
+(45394, 8598, 0, 1, 1, '2567.69995117187500000000', '-4599.89013671875000000000', '80.96499633789062000000', '5.94877004623413100000', 300, 300, 10, 1),
+(45410, 8598, 0, 1, 1, '2561.76000976562500000000', '-4630.81005859375000000000', '79.54360198974610000000', '5.82172012329101600000', 300, 300, 10, 1);
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
 SET sql_safe_updates=1;

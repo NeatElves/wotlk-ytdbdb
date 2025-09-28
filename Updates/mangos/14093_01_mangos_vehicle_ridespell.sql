@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14092_01_mangos_proc_cooldown required_14093_01_mangos_vehicle_ridespell bit;
