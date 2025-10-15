@@ -143,3 +143,9 @@ UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=8802, EmoteID1=0 WHERE I
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=8865, EmoteID1=0 WHERE Id=13084;
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=8866, EmoteID1=0 WHERE Id=13085;
 UPDATE broadcast_text SET ChatTypeID=1, SoundEntriesID1=8864, EmoteID1=0 WHERE Id=13083;
+
+-- 20251012011416_world.sql
+UPDATE `broadcast_text` SET `EmoteID1` = '1' WHERE `Id` =920;
+
+-- 5784_q.12819.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (30201);
