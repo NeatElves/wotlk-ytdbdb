@@ -149,3 +149,20 @@ UPDATE `broadcast_text` SET `EmoteID1` = '1' WHERE `Id` =920;
 
 -- 5784_q.12819.sql
 UPDATE `broadcast_text` SET `ChatTypeID` = 2 WHERE `Id` IN (30201);
+
+-- 5792_q.12823.sql
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (30593);
+
+-- 0639_priest_mc_hellfire.sql
+-- yell instead of say
+UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN (
+'16472', -- Work these Broken wretches to the bones, Illidari!  If there's anything of value in this forsaken place we shall find it!
+'16474', -- Keep a close eye on this Broken scum!  Far too many have escaped from us!
+'16475', -- We will find what the Master is looking for!  Failure is not an option! - already present
+'16476'); -- Do not allow these wretches a moment of rest!  If there's an Ata'mal crystal here then we shall find it!
+UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN (
+23984, -- Unparalleled power... I... crave... more!
+23985, -- Fel energy... courses through my veins!
+23986, -- Your life force is my nourishment, demon... Kil'jaeden's gift to us!
+23987, -- I will soon be stronger than any elf!  I will serve at Kil'jaeden's side!
+23988); -- More... more... MORE!!!

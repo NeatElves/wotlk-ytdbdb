@@ -691,6 +691,7 @@ UPDATE `creature_ai_scripts` SET `creature_id` = '-104917' WHERE `id` =2946607;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-104918' WHERE `id` =2946608;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-104919' WHERE `id` =2946609;
 UPDATE `creature_ai_scripts` SET `creature_id` = '-104920' WHERE `id` =2946610;
+UPDATE `creature_ai_scripts` SET `creature_id` = '-18803' WHERE `id` =2999902;
 
 
 # Finall_Spell_UP

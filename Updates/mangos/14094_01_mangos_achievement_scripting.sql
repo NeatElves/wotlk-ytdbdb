@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14093_01_mangos_vehicle_ridespell required_14094_01_mangos_achievement_scripting bit;

@@ -2560,6 +2560,352 @@ UPDATE `creature` SET `position_x` = '6330.47021484375000000000',`position_y` = 
 UPDATE `creature` SET `position_x` = '6328.02978515625000000000',`position_y` = '-1719.89001464843750000000',`position_z` = '455.83999633789060000000',`orientation` = '3.10668992996215800000' WHERE `guid` = 131552;
 UPDATE `creature` SET `position_x` = '6327.54980468750000000000',`position_y` = '-1706.28002929687500000000',`position_z` = '455.58999633789060000000',`orientation` = '3.10668992996215800000' WHERE `guid` = 131553;
 
+UPDATE creature_template_addon SET auras = NULL WHERE Entry = 29434;
+DELETE FROM dbscripts_on_relay WHERE id IN (20006);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20006,1,15,51329,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast 51329');
+DELETE FROM creature_spawn_data_template WHERE entry = 20083;
+INSERT INTO creature_spawn_data_template (Entry, NpcFlags, UnitFlags, Faction, ModelId, EquipmentId, CurHealth, CurMana, SpawnFlags, RelayId, StringId, Name) VALUES (20083,-1,-1,0,0,-1,0,0,0,20006,0,'-RelayId 20083');
+DELETE FROM creature_spawn_data WHERE guid IN (105017,105018,111574);
+INSERT INTO creature_spawn_data(Guid,Id) VALUES (105017,20083),(105018,20083),(111574,20083);
+
+DELETE FROM `creature` WHERE `guid` = 75229;
+DELETE FROM dbscripts_on_event WHERE id IN (19455);
+INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(19455,1,31,29626,50,0,0,0,0x008,0,0,0,0,0,0,0,0,'search for 29626 - terminate if alive'),
+(19455,2000,10,29626,300000,0,0,0,0x008,0,0,0,0,6447.5728,-1728.7552,480.7186,5.77704,'summon 29626');
+UPDATE creature_template SET Faction = 16, EquipmentTemplateId = 4242, MovementType = 2 WHERE entry = 29626;
+DELETE FROM creature_movement_template WHERE Entry = 29626;
+INSERT INTO creature_movement_template (`Entry`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(29626,1,6470.204,-1743.3411,486.80005,100,0,0),
+(29626,2,6488.025,-1747.5215,488.09357,100,0,0),
+(29626,3,6503.44,-1748.83,490.644,6.09453,1000,3);
+DELETE FROM dbscripts_on_spell WHERE id IN (55693);
+INSERT INTO dbscripts_on_spell (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(55693,1,14,55486,0,0,0,0,0,0,0,0,0,0,0,0,0,'remove aura');
+
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 5469 FROM `creature` WHERE `id` IN (5469);
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 5470 FROM `creature` WHERE `id` IN (5469);
+UPDATE `creature` SET `id` = 0 WHERE `id` IN (5469);
+
+UPDATE `creature_template_addon` SET `auras` = '17327' WHERE `entry` =14306;
+UPDATE `quest_template` SET `RequiredSkillValue` = 30 WHERE `entry`= 1579;
+
+UPDATE `questgiver_greeting` SET `Text` = ' Greetings, $n.' WHERE `Entry` =26245 AND `Type` =0;
+
+UPDATE `creature_template` SET `SkinningLootId` = '0' WHERE `Entry` =5347;
+DELETE FROM `skinning_loot_template` WHERE `entry` = 5347;
+
+DELETE FROM creature_addon WHERE guid IN(SELECT guid FROM creature WHERE id IN (4396,4397));
+DELETE FROM creature_movement WHERE id IN(SELECT guid FROM creature WHERE id IN (4396,4397));
+DELETE FROM game_event_creature WHERE guid IN(SELECT guid FROM creature WHERE id IN (4396,4397));
+DELETE FROM game_event_creature_data WHERE guid IN(SELECT guid FROM creature WHERE id IN (4396,4397));
+DELETE FROM creature_battleground WHERE guid IN(SELECT guid FROM creature WHERE id IN (4396,4397));
+DELETE FROM creature_linking WHERE guid IN(SELECT guid FROM creature WHERE id IN (4396,4397));
+DELETE FROM creature WHERE id IN (4396,4397);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(27521, 4397, 1, 1, 1, '-2583.58007812500000000000', '-4250.02978515625000000000', '-15.01599979400634800000', '3.71820998191833500000', 300, 300, 10, 1),
+(27545, 4397, 1, 1, 1, '-2229.13989257812500000000', '-4257.64990234375000000000', '-2.75096011161804200000', '4.47013998031616200000', 300, 300, 10, 1),
+(27575, 4397, 1, 1, 1, '-2350.68994140625000000000', '-3918.57006835937500000000', '-10.49310016632080000000', '1.36135005950927730000', 300, 300, 5, 1),
+(27693, 4397, 1, 1, 1, '-2347.97998046875000000000', '-4352.45996093750000000000', '-9.77159023284912100000', '6.05243015289306600000', 300, 300, 10, 1),
+(27796, 4397, 1, 1, 1, '-2219.35009765625000000000', '-4282.37011718750000000000', '-1.43956005573272700000', '5.37317991256713900000', 300, 300, 10, 1),
+(27838, 4397, 1, 1, 1, '-2256.25000000000000000000', '-4014.98999023437500000000', '-3.75096988677978500000', '3.30449008941650400000', 300, 300, 10, 1),
+(27841, 4397, 1, 1, 1, '-2284.86010742187500000000', '-4366.16015625000000000000', '-2.28357005119323730000', '2.33410000801086430000', 300, 300, 10, 1),
+(27921, 4397, 1, 1, 1, '-3016.43994140625000000000', '-4445.97998046875000000000', '-8.99090957641601600000', '1.69226002693176270000', 300, 300, 5, 1),
+(28022, 4397, 1, 1, 1, '-3103.45996093750000000000', '-4432.14013671875000000000', '-11.64599990844726600000', '5.43159008026123050000', 300, 300, 5, 1),
+(28037, 4397, 1, 1, 1, '-3089.07006835937500000000', '-4346.27001953125000000000', '0.07921700179576874000', '4.77615976333618200000', 300, 300, 5, 1),
+(28103, 4397, 1, 1, 1, '-2735.72998046875000000000', '-4351.64990234375000000000', '-15.56359958648681600000', '2.61759996414184570000', 300, 300, 10, 1),
+(28119, 4397, 1, 1, 1, '-2336.94995117187500000000', '-4137.20996093750000000000', '6.25018978118896500000', '2.77779006958007800000', 300, 300, 10, 1),
+(28209, 4397, 1, 1, 1, '-3082.21997070312500000000', '-4289.35009765625000000000', '-10.46059989929199200000', '5.47370004653930700000', 300, 300, 5, 1),
+(28231, 4397, 1, 1, 1, '-3035.87011718750000000000', '-4250.79980468750000000000', '-11.22459983825683600000', '1.06386005878448490000', 300, 300, 5, 1),
+(28244, 4397, 1, 1, 1, '-2306.12011718750000000000', '-3993.46997070312500000000', '-5.77331018447876000000', '5.32905006408691400000', 300, 300, 10, 1),
+(28307, 4397, 1, 1, 1, '-2270.36010742187500000000', '-4079.07006835937500000000', '-1.63274002075195310000', '0.29604700207710266000', 300, 300, 10, 1),
+(28309, 4397, 1, 1, 1, '-2301.14990234375000000000', '-4223.16015625000000000000', '-0.95972102880477900000', '3.55826997756958000000', 300, 300, 10, 1),
+(28482, 4397, 1, 1, 1, '-3020.84008789062500000000', '-4221.62011718750000000000', '-1.40882003307342530000', '1.81036996841430660000', 300, 300, 5, 1),
+(28536, 4397, 1, 1, 1, '-2689.53002929687500000000', '-4354.99023437500000000000', '-4.46757984161376950000', '2.01777005195617680000', 300, 300, 10, 1),
+(28645, 4397, 1, 1, 1, '-2589.67993164062500000000', '-3904.41992187500000000000', '-6.61262989044189450000', '2.95493006706237800000', 300, 300, 10, 1),
+(28884, 4397, 1, 1, 1, '-2542.60009765625000000000', '-3873.36010742187500000000', '-18.93120002746582000000', '3.36004996299743650000', 300, 300, 10, 1),
+(28931, 4397, 1, 1, 1, '-2495.73999023437500000000', '-3864.21997070312500000000', '-4.23470020294189450000', '5.24007987976074200000', 300, 300, 10, 1),
+(29212, 4397, 1, 1, 1, '-2355.96997070312500000000', '-3953.89990234375000000000', '-7.05755996704101600000', '4.45338010787963900000', 300, 300, 10, 1),
+(29302, 4397, 1, 1, 1, '-2431.33007812500000000000', '-3823.39990234375000000000', '-2.85297989845275900000', '0.71350002288818360000', 300, 300, 10, 1),
+(29438, 4397, 1, 1, 1, '-2616.03002929687500000000', '-4297.74023437500000000000', '0.52637302875518800000', '6.01916980743408200000', 300, 300, 10, 1),
+(29580, 4397, 1, 1, 1, '-2386.14990234375000000000', '-4241.20019531250000000000', '-7.77776002883911100000', '4.72245979309082000000', 300, 300, 10, 1),
+(29614, 4397, 1, 1, 1, '-2420.32006835937500000000', '-4182.31005859375000000000', '-2.66915988922119140000', '5.47555017471313500000', 300, 300, 10, 1),
+(29680, 4397, 1, 1, 1, '-2352.36010742187500000000', '-4237.45996093750000000000', '-1.65652000904083250000', '4.52482986450195300000', 300, 300, 10, 1),
+(29690, 4397, 1, 1, 1, '-2299.93994140625000000000', '-4183.81005859375000000000', '-11.56820011138916000000', '0.02891599945724010500', 300, 300, 10, 1),
+(29850, 4397, 1, 1, 1, '-2298.66992187500000000000', '-4173.81005859375000000000', '-6.40215015411376950000', '5.58312988281250000000', 300, 300, 10, 1),
+(29915, 4397, 1, 1, 1, '-2472.23999023437500000000', '-3845.67993164062500000000', '0.14824199676513672000', '3.49053001403808600000', 300, 300, 10, 1),
+(29946, 4397, 1, 1, 1, '-2485.43994140625000000000', '-3826.87011718750000000000', '3.50751996040344240000', '3.87585997581481930000', 300, 300, 10, 1),
+(30074, 4397, 1, 1, 1, '-2741.82006835937500000000', '-4313.89013671875000000000', '-1.09315001964569100000', '2.21468997001647950000', 300, 300, 10, 1),
+(30125, 4397, 1, 1, 1, '-2826.00000000000000000000', '-4203.77978515625000000000', '3.74610996246337900000', '2.05190992355346700000', 300, 300, 10, 1),
+(30158, 4397, 1, 1, 1, '-2760.18994140625000000000', '-4239.89013671875000000000', '-3.52308011054992680000', '1.35642004013061520000', 300, 300, 10, 1),
+(30167, 4397, 1, 1, 1, '-2611.71997070312500000000', '-4144.60009765625000000000', '-3.58852005004882800000', '0.54594999551773070000', 300, 300, 10, 1),
+(30251, 4397, 1, 1, 1, '-2685.87988281250000000000', '-4136.02978515625000000000', '1.91364002227783200000', '1.37224996089935300000', 300, 300, 10, 1),
+(30263, 4397, 1, 1, 1, '-2548.80004882812500000000', '-4106.47998046875000000000', '-1.64918005466461180000', '5.44902992248535200000', 300, 300, 10, 1),
+(32586, 4397, 1, 1, 1, '-2574.19995117187500000000', '-4108.00976562500000000000', '-2.03114008903503400000', '4.46939992904663100000', 300, 300, 10, 1),
+(32597, 4397, 1, 1, 1, '-3421.50000000000000000000', '-4373.35986328125000000000', '1.53496003150939940000', '5.02974987030029300000', 300, 300, 10, 1),
+(32616, 4397, 1, 1, 1, '-3509.95996093750000000000', '-4388.95996093750000000000', '-3.77503991127014160000', '1.18230998516082760000', 300, 300, 10, 1),
+(32634, 4397, 1, 1, 1, '-3462.64990234375000000000', '-4376.41015625000000000000', '0.64256197214126590000', '2.15193009376525900000', 300, 300, 10, 1),
+(32635, 4397, 1, 1, 1, '-3369.65991210937500000000', '-4310.66015625000000000000', '0.67915099859237670000', '0.61033201217651370000', 300, 300, 10, 1),
+(32680, 4397, 1, 1, 1, '-3283.42993164062500000000', '-4285.41015625000000000000', '1.81793999671936040000', '1.55127000808715820000', 300, 300, 10, 1),
+(32831, 4397, 1, 1, 1, '-3346.66992187500000000000', '-4293.95996093750000000000', '0.90440100431442260000', '5.05949020385742200000', 300, 300, 10, 1),
+(32947, 4397, 1, 1, 1, '-3087.64990234375000000000', '-4214.54980468750000000000', '0.75863897800445560000', '2.84157991409301760000', 300, 300, 10, 1);
+
+UPDATE `creature_template` SET `MinLevel` = 70, `MaxLevel` = 70, `Faction`= 58 WHERE `entry` = 27936;
+
+UPDATE `creature_template` SET `CharmedSpellList`='2491805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='24918';
+UPDATE `creature_template` SET `CharmedSpellList`='1693705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16937';
+UPDATE `creature_template` SET `CharmedSpellList`='1693805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16938';
+UPDATE `creature_template` SET `CharmedSpellList`='1708405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='17084';
+UPDATE `creature_template` SET `CharmedSpellList`='1696605', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16966';
+UPDATE `creature_template` SET `CharmedSpellList`='1696705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16967';
+UPDATE `creature_template` SET `CharmedSpellList`='1692805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16928';
+UPDATE `creature_template` SET `CharmedSpellList`='1705705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='17057';
+UPDATE `creature_template` SET `CharmedSpellList`='1692705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16927';
+UPDATE `creature_template` SET `CharmedSpellList`='1692905', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16929';
+UPDATE `creature_template` SET `CharmedSpellList`='1926305', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19263';
+UPDATE `creature_template` SET `CharmedSpellList`='1696405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16964';
+UPDATE `creature_template` SET `CharmedSpellList`='1687305', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16873';
+UPDATE `creature_template` SET `CharmedSpellList`='1944205', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19442';
+UPDATE `creature_template` SET `CharmedSpellList`='1942405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19424';
+UPDATE `creature_template` SET `CharmedSpellList`='1687105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16871';
+UPDATE `creature_template` SET `CharmedSpellList`='1945705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19457';
+UPDATE `creature_template` SET `CharmedSpellList`='1942205', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19422';
+UPDATE `creature_template` SET `CharmedSpellList`='1690705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16907';
+UPDATE `creature_template` SET `CharmedSpellList`='1687605', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16876';
+UPDATE `creature_template` SET `CharmedSpellList`='1692505', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16925';
+UPDATE `creature_template` SET `CharmedSpellList`='1895205', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='18952';
+UPDATE `creature_template` SET `CharmedSpellList`='1970105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19701';
+UPDATE `creature_template` SET `CharmedSpellList`='1941005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19410';
+UPDATE `creature_template` SET `CharmedSpellList`='1687005', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16870';
+UPDATE `creature_template` SET `CharmedSpellList`='1941105', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19411';
+UPDATE `creature_template` SET `CharmedSpellList`='1686705', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16867';
+UPDATE `creature_template` SET `CharmedSpellList`='1687805', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='16878';
+UPDATE `creature_template` SET `CharmedSpellList`='1941305', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19413';
+UPDATE `creature_template` SET `CharmedSpellList`='1941505', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19415';
+UPDATE `creature_template` SET `CharmedSpellList`='1941405', `MechanicImmuneMask` = `MechanicImmuneMask`&~1 WHERE `entry`='19414';
+UPDATE `creature_template_addon` SET `auras` = '36725 36727' WHERE `entry` = 21365;
+DELETE FROM creature_template_spells WHERE `entry` IN (24918,16937,16938,17084,16966,16967,16928,17057,16927,16929,19263,16964,16873,19442,19424,16871,19457,19422,16907,16876,16925,18952,19701,19410,16870,19411,16867,16878,19413,19415,19414);
+DELETE FROM creature_cooldowns WHERE `entry` IN (24918,16937,16938,17084,16966,16967,16928,17057,16927,16929,19263,16964,16873,19442,19424,16871,19457,19422,16907,16876,16925,18952,19701,19410,16870,19411,16867,16878,19413,19415,19414);
+DELETE FROM `creature_spell_list_entry` WHERE `Id` IN (2491805,1693705,1693805,1708405,1696605,1696705,1692805,1705705,1692705,1692905,1926305,1696405,1687305,1944205,1942405,1687105,1945705,1942205,1690705,1687605,1692505,1895205,1970105,1941005,1687005,1941105,1686705,1687805,1941305,1941505,1941405);
+DELETE FROM `creature_spell_list` WHERE `Id` IN (2491805,1693705,1693805,1708405,1696605,1696705,1692805,1705705,1692705,1692905,1926305,1696405,1687305,1944205,1942405,1687105,1945705,1942205,1690705,1687605,1692505,1895205,1970105,1941005,1687005,1941105,1686705,1687805,1941305,1941505,1941405);
+INSERT INTO `creature_spell_list_entry` (`Id`, `Name`, `ChanceSupportAction`, `ChanceRangedAttack`) VALUES
+(2491805, 'TBC - Felblood Initiate', 0, 0),
+(1693705, 'TBC - Dreghood Geomancer', 0, 0),
+(1693805, 'TBC - Dreghood Brute', 0, 0),
+(1708405, 'TBC - Avruu', 0, 0),
+(1696605, 'TBC - Haal''eshi Windwalker', 0, 0),
+(1696705, 'TBC - Haal''eshi Talonguard', 0, 0),
+(1692805, 'TBC - Stonescythe Ambusher', 0, 0),
+(1705705, 'TBC - Blacktalon the Savage', 0, 0),
+(1692705, 'TBC - Stonescythe Whelp', 0, 0),
+(1692905, 'TBC - Stonescythe Alpha', 0, 0),
+(1926305, 'TBC - Warboss Nekrogg', 0, 0),
+(1696405, 'TBC - Warlord Morkh', 0, 0),
+(1687305, 'TBC - Bleeding Hollow Dark Shaman', 0, 0),
+(1944205, 'TBC - Worg Master Kruush', 0, 0),
+(1942405, 'TBC - Bleeding Hollow Tormentor', 0, 0),
+(1687105, 'TBC - Bleeding Hollow Grunt', 0, 0),
+(1945705, 'TBC - Grillok "Darkeye"', 0, 0),
+(1942205, 'TBC - Bleeding Hollow Necrolyte', 0, 0),
+(1690705, 'TBC - Bleeding Hollow Peon', 0, 0),
+(1687605, 'TBC - Bonechewer Mutant', 0, 0),
+(1692505, 'TBC - Bonechewer Raider', 0, 0),
+(1895205, 'TBC - Bonechewer Scavenger', 0, 0),
+(1970105, 'TBC - Bonechewer Evoker', 0, 0),
+(1941005, 'TBC - Shattered Hand Neophyte', 0, 0),
+(1687005, 'TBC - Shattered Hand Captain', 0, 0),
+(1941105, 'TBC - Shattered Hand Warlock', 0, 0),
+(1686705, 'TBC - Shattered Hand Grunt', 0, 0),
+(1687805, 'TBC - Shattered Hand Berserker', 0, 0),
+(1941305, 'TBC - Shattered Hand Mage', 0, 0),
+(1941505, 'TBC - Shattered Hand Acolyte', 0, 0),
+(1941405, 'TBC - Shattered Hand Guard', 0, 0);
+INSERT INTO `creature_spell_list` (`Id`, `Position`, `SpellId`, `Flags`, `CombatCondition`, `TargetId`, `ScriptId`, `Availability`, `Probability`, `InitialMin`, `InitialMax`, `RepeatMin`, `RepeatMax`, `Comments`) VALUES
+(2491805, 3, 35871, 0, -1, 0, 0, 100, 1, 0, 0, 19000, 19000, 'Felblood Initiate - Spellbreaker'),
+(2491805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Felblood Initiate - Attack'),
+(1693705, 4, 32734, 0, -1, 0, 0, 100, 1, 0, 0, 20000, 20000, 'Dreghood Geomancer - Earth Shield'),
+(1693705, 3, 34083, 0, -1, 0, 0, 100, 1, 0, 0, 6000, 6557, 'Dreghood Geomancer - Fireball'),
+(1693705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Dreghood Geomancer - Attack'),
+(1693805, 3, 31553, 0, -1, 0, 0, 100, 1, 0, 0, 10000, 10000, 'Dreghood Brute - Hamstring'),
+(1693805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Dreghood Brute - Attack'),
+(1708405, 4, 34112, 0, -1, 0, 0, 100, 1, 0, 0, 25000, 25000, 'Avruu - Judgement of Darkness'),
+(1708405, 3, 16588, 0, -1, 0, 0, 100, 1, 0, 0, 25000, 25000, 'Avruu - Dark Mending'),
+(1708405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Avruu - Attack'),
+(1696605, 4, 32717, 0, -1, 0, 0, 100, 1, 0, 0, 16000, 16000, 'Haal''eshi Windwalker - Hurricane'),
+(1696605, 3, 9532, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Haal''eshi Windwalker - Lightning Bolt'),
+(1696605, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Haal''eshi Windwalker - Attack'),
+(1696705, 4, 32720, 0, -1, 0, 0, 100, 1, 0, 0, 12000, 12000, 'Haal''eshi Talonguard - Sprint'),
+(1696705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Haal''eshi Talonguard - Attack'),
+(1692805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Stonescythe Ambusher - Attack'),
+(1705705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Blacktalon the Savage - Attack'),
+(1692705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Stonescythe Whelp - Attack'),
+(1692905, 4, 33911, 0, -1, 0, 0, 100, 1, 0, 0, 10000, 10000, 'Stonescythe Alpha - Tear Armor'),
+(1692905, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Stonescythe Alpha - Attack'),
+(1926305, 5, 34113, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Warboss Nekrogg - Bonechewer Bite'),
+(1926305, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Warboss Nekrogg - Attack'),
+(1696405, 4, 11978, 0, -1, 0, 0, 100, 1, 0, 0, 16000, 16000, 'Warlord Morkh - Kick'),
+(1696405, 3, 34080, 0, -1, 0, 0, 100, 1, 0, 0, 20000, 20000, 'Warlord Morkh - Riposte Stance'),
+(1696405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Warlord Morkh - Attack'),
+(1687305, 6, 6742, 0, -1, 0, 0, 100, 1, 0, 0, 60000, 60000, 'Bleeding Hollow Dark Shaman - Bloodlust'),
+(1687305, 5, 12550, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Bleeding Hollow Dark Shaman - Lightning Shield'),
+(1687305, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Bleeding Hollow Dark Shaman - Attack'),
+(1944205, 3, 30478, 0, -1, 0, 0, 100, 1, 0, 0, 20000, 20000, 'Worg Master Kruush - Hemorrhage'),
+(1944205, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Worg Master Kruush - Attack'),
+(1942405, 3, 33976, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Bleeding Hollow Tormentor - Mend Pet'),
+(1942405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Bleeding Hollow Tormentor - Attack'),
+(1687105, 3, 11976, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Bleeding Hollow Grunt - Strike'),
+(1687105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Bleeding Hollow Grunt - Attack'),
+(1945705, 4, 12058, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Grillok "Darkeye" - Chain Lightning'),
+(1945705, 3, 12550, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Grillok "Darkeye" - Lightning Shield'),
+(1945705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Grillok "Darkeye" - Attack'),
+(1942205, 6, 34073, 0, -1, 0, 0, 100, 1, 0, 0, 45000, 45000, 'Bleeding Hollow Necrolyte - Curse of the Bleeding Hollow'),
+(1942205, 5, 34019, 0, -1, 0, 0, 100, 1, 0, 0, 60000, 60000, 'Bleeding Hollow Necrolyte - Raise Dead'),
+(1942205, 3, 9053, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Bleeding Hollow Necrolyte - Fireball'),
+(1942205, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Bleeding Hollow Necrolyte - Attack'),
+(1690705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Bleeding Hollow Peon - Attack'),
+(1687605, 3, 34113, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Bonechewer Mutant - Bonechewer Bite'),
+(1687605, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Bonechewer Mutant - Attack'),
+(1692505, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Bonechewer Raider - Attack'),
+(1895205, 4, 34113, 0, -1, 0, 0, 100, 1, 0, 0, 60000, 60000, 'Bonechewer Scavenger - Bonechewer Bite'),
+(1895205, 3, 13398, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Bonechewer Scavenger - Throw Wrench'),
+(1895205, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Bonechewer Scavenger - Attack'),
+(1970105, 3, 9053, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Bonechewer Evoker - Fireball'),
+(1970105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Bonechewer Evoker - Attack'),
+(1941005, 5, 6742, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Shattered Hand Neophyte - Bloodlust'),
+(1941005, 4, 11639, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Shattered Hand Neophyte - Shadow Word: Pain'),
+(1941005, 3, 11640, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Shattered Hand Neophyte - Renew'),
+(1941005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shattered Hand Neophyte - Attack'),
+(1687005, 3, 15496, 0, -1, 0, 0, 100, 1, 0, 0, 8000, 8000, 'Shattered Hand Captain - Cleave'),
+(1687005, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shattered Hand Captain - Attack'),
+(1941105, 5, 13787, 0, -1, 0, 0, 100, 1, 0, 0, 30000, 30000, 'Shattered Hand Warlock - Demon Armor'),
+(1941105, 4, 11962, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Shattered Hand Warlock - Immolate'),
+(1941105, 3, 9613, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shattered Hand Warlock - Shadow Bolt'),
+(1941105, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shattered Hand Warlock - Attack'),
+(1686705, 4, 11978, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Shattered Hand Grunt - Kick'),
+(1686705, 3, 11976, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Shattered Hand Grunt - Strike'),
+(1686705, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shattered Hand Grunt - Attack'),
+(1687805, 4, 35570, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Shattered Hand Berserker - Charge'),
+(1687805, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shattered Hand Berserker - Attack'),
+(1941305, 4, 11831, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Shattered Hand Mage - Frost Nova'),
+(1941305, 3, 14034, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shattered Hand Mage - Fireball'),
+(1941305, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shattered Hand Mage - Attack'),
+(1941505, 5, 13864, 0, -1, 0, 0, 100, 1, 0, 0, 60000, 60000, 'Shattered Hand Acolyte - Power Word: Fortitude'),
+(1941505, 4, 16568, 0, -1, 0, 0, 100, 1, 0, 0, 5000, 5000, 'Shattered Hand Acolyte - Mind Flay'),
+(1941505, 3, 11642, 0, -1, 0, 0, 100, 1, 0, 0, 16000, 16000, 'Shattered Hand Acolyte - Heal'),
+(1941505, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shattered Hand Acolyte - Attack'),
+(1941405, 4, 33960, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Shattered Hand Guard - Counterstrike'),
+(1941405, 3, 11976, 0, -1, 0, 0, 100, 1, 0, 0, 15000, 15000, 'Shattered Hand Guard - Strike'),
+(1941405, 0, 2, 0, -1, 0, 0, 100, 1, 0, 0, 0, 0, 'Shattered Hand Guard - Attack');
+DELETE FROM `spell_script_target` WHERE `entry` = 34076;
+INSERT INTO `spell_script_target` (`entry`, `type`, `targetEntry`, `inverseEffectMask`) VALUES (34076, 1, 19458, 0), (34076, 1, 19459, 0);
+UPDATE `creature` SET `position_x` = -1050.32,  `position_y` = 2000.24,  `position_z` = 67.3604,  `orientation` = 5.79449 WHERE `guid` = 58995 AND `id` = 19458;
+UPDATE `creature` SET `position_x` = -1054,  `position_y` = 1996,  `position_z` = 67.5833,  `orientation` = 2.61799 WHERE `guid` = 59002 AND `id` = 19459;
+UPDATE `creature_template_addon` SET `auras` = '19483' WHERE `entry` = 20160;
+UPDATE `creature_template_addon` SET `auras` = '19483' WHERE `entry` = 23044;
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(54549, 17058, 530, 1, '-618.79602050781250000000', '4781.77978515625000000000', '40.62950134277344000000', '3.42085003852844240000', 300, 300, 2, 1),
+(54550, 17058, 530, 1, '-495.82598876953125000000', '4770.00976562500000000000', '28.03260040283203000000', '0.52114301919937130000', 300, 300, 2, 1),
+(54577, 16938, 530, 1, '-622.02600097656250000000', '4786.60009765625000000000', '39.55730056762695000000', '3.17650008201599100000', 300, 300, 0, 0),
+(54578, 16938, 530, 1, '-621.14202880859380000000', '4777.87011718750000000000', '40.76390075683594000000', '2.84489011764526370000', 300, 300, 0, 0);
+DELETE FROM `creature_linking` WHERE `master_guid` IN (54549,54550);
+INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES (54577, 54549, 3),(54578, 54549, 3),(60150, 54550, 3),(60152, 54550, 3),(60153, 54550, 3);
+UPDATE `creature_template` SET `CorpseDecay` = 3 WHERE `entry` = 19419;
+UPDATE `creature_template` SET `CorpseDecay` = 3 WHERE `entry` = 19420;
+DELETE FROM `dbscripts_on_event` WHERE `id` = 14379 AND `command` = 31;
+INSERT INTO `dbscripts_on_event` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `datafloat`, `x`, `y`, `z`, `o`, `speed`, `condition_id`, `comments`) VALUES
+(14379, 1000, 0, 31, 22374, 100, 0, 0, 0, 8, 0, 0, 0, 0, 0, -248.426, 3032.92, -65.5993, 1.309, 0, 0, 'check for 22374 - terminate if alive');
+UPDATE `creature_template` SET `SchoolImmuneMask` = 4, `MechanicImmuneMask` = `MechanicImmuneMask`|(16+8388608) WHERE `entry` = 19261;
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`&~1024 WHERE `entry` = 18950;
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|1048576, `CorpseDecay` = 10 WHERE `entry` IN (18948,18949,18950,18965,18966,18969,18970,18971,18972,18986);
+
+DELETE FROM dbscripts_on_gossip WHERE id IN (991701,991700);
+INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(991701,0,15,58061,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast 58061 on Player'),
+(991700,0,15,58062,0,0,0,0,0,0,0,0,0,0,0,0,0,'cast 58062 on Player');
+DELETE FROM spell_target_position WHERE Id IN(56859,56899);
+INSERT INTO spell_target_position VALUES
+(56859,571,6147.5205,-1069.0864,402.67035,100),
+(56899,571,6147.5205,-1069.0864,402.67035,100);
+UPDATE creature_template SET UnitFlags = 512, StaticFlags2 = 1024, InhabitType = 3, MovementTemplateId = 144, VehicleTemplateId = 240, MovementType = 0 WHERE entry = 30477;
+DELETE FROM creature_movement_template WHERE Entry = 30477;
+INSERT INTO creature_movement_template (`Entry`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(30477,1,6147.5205,-1069.0864,402.67035,100,0,0),
+(30477,2,6148.49,-1069.33,402.67035,100,0,0),
+(30477,3,6164.999,-1064.5122,422.1189,100,0,0),
+(30477,4,6204.096,-998.4872,457.5628,100,0,0),
+(30477,5,6289.5728,-952.1809,504.6187,100,0,0),
+(30477,6,6307.7876,-872.7999,541.7296,100,0,0),
+(30477,7,6370.5815,-821.95074,653.868,100,0,0),
+(30477,8,6413.268,-660.4708,808.39526,100,0,0),
+(30477,9,6554.8135,-550.3772,1018.1122,100,0,0),
+(30477,10,6633.2646,-419.31586,1173.9137,100,0,0),
+(30477,11,6760.5034,-364.46646,1277.7195,100,0,0),
+(30477,12,6807.88,-427.51944,1399.109,100,0,0),
+(30477,13,6808.07,-471.4465,1419.2474,100,0,0),
+(30477,14,6775.634,-529.2309,1394.3866,100,0,0),
+(30477,15,6720.6445,-535.55286,1328.0541,100,0,0),
+(30477,16,6660.3096,-486.86514,1238.5532,100,0,0),
+(30477,17,6658.9365,-417.84094,1186.1096,100,0,0),
+(30477,18,6680.4897,-329.30872,1098.6091,100,0,0),
+(30477,19,6683.783,-220.34538,972.72034,100,0,0),
+(30477,20,6663.772,-192.12614,962.2485,100,100,3048701),
+(30477,21,6654.82,-180.16895,958.13165,100,0,0),
+(30477,22,6631.4673,-171.33052,966.46326,100,0,0),
+(30477,23,6598.2227,-162.36642,984.2227,100,0,0),
+(30477,24,6566.6704,-155.20769,992.0551,100,0,0),
+(30477,25,6529.6514,-154.93631,992.0551,100,0,0),
+(30477,26,6454.4165,-152.13107,962.305,100,100,1);
+UPDATE creature_template SET UnitFlags = 512, StaticFlags2 = 1024, InhabitType = 3, MovementTemplateId = 144, VehicleTemplateId = 240, MovementType = 0 WHERE entry = 30487;
+DELETE FROM creature_movement_template WHERE Entry = 30487;
+INSERT INTO creature_movement_template (`Entry`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(30487,1,6169.229,-1069.619,420.69446,100,0,0),
+(30487,2,6232.725,-1031.5977,505.7779,100,0,0),
+(30487,3,6339.224,-1035.0797,575.3331,100,0,0),
+(30487,4,6431.492,-987.6745,694.8887,100,0,0),
+(30487,5,6632.437,-925.97394,896.1384,100,0,0),
+(30487,6,6822.084,-755.521,1171.1941,100,0,0),
+(30487,7,7090.693,-619.48737,1455.6394,100,0,0),
+(30487,8,7260.7495,-282.75003,1513.3616,100,0,0),
+(30487,9,7552.5024,-334.65088,1657.6676,100,0,0),
+(30487,10,7692.3013,-509.42502,1536.5002,100,0,0),
+(30487,11,7799.192,-636.3267,1252.2778,100,0,0),
+(30487,12,7841.5547,-726.5501,1193.9164,100,0,0),
+(30487,13,7844.731,-775.36127,1185.8333,100,100,3048701),
+(30487,14,7842.4487,-815.5735,1186.3956,100,0,0),
+(30487,15,7838.703,-859.95715,1173.1735,100,0,0),
+(30487,16,7865.014,-911.2181,1163.9792,100,0,0),
+(30487,17,7856.225,-951.6568,1151.5625,100,100,1);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (3048701);
+INSERT INTO dbscripts_on_creature_movement (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(3048701,0,1,14,46598,0,0,0,0,0x004,0,0,0,0,0,0,0,0,''),
+(3048701,0,2,15,42895,0,0,0,0,0,0,0,0,0,0,0,0,0,'');
+
+UPDATE `creature_template` SET `SkinningLootId` = '0' WHERE `Entry` =14344;
+UPDATE `creature_template` SET `SkinningLootId` = '0' WHERE `Entry` =14476;
+DELETE FROM `skinning_loot_template` WHERE `entry` = 14344;
+DELETE FROM `skinning_loot_template` WHERE `entry` = 14476;
+UPDATE `quest_template` SET `OfferRewardText` = 'So you have put together a deck of Beasts. Your gesture of returning it to us will create a tie between you and the Darkmoon that will not soon be forgotten. Allow me to present you with one of the greater darkmoon cards as a small token of our appreciation.' WHERE `entry` = 7907;
+INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(9929, 11884, 1, -6342.67, -660.912, -179.83, 3.59357, 300, 300, 15, 1);
+UPDATE `creature` SET `MovementType` = 2 WHERE `guid` = 9991;
+DELETE FROM dbscripts_on_creature_movement WHERE id = 148401;
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `condition_id`, `comments`) VALUES
+(148401, 1, 0, 0, 0, 0, 0, 0, 394, 395, 396, 0, 0, 0, 0, 0, 0, 'Derina Rumdnul - Talk');
+DELETE FROM creature_movement_template WHERE Entry = 1484;
+INSERT INTO creature_movement_template (`Entry`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(1484, 1, -3743.43, -886.878, 11.0101, 100, 360000, 0),
+(1484, 2, -3742.26, -876.78, 9.90981, 100, 0, 0),
+(1484, 3, -3741.16, -871.94, 9.90022, 100, 8000, 148401);
+
+INSERT INTO `questgiver_greeting` (`Entry`, `Type`, `Text`, `EmoteId`, `EmoteDelay`) VALUES (18891, 0, ' Greetings, $n.', 0, 0);
+INSERT INTO `questgiver_greeting` (`Entry`, `Type`, `Text`, `EmoteId`, `EmoteDelay`) VALUES (7583, 0, ' Greetings, $n.', 0, 0);
+INSERT INTO `questgiver_greeting` (`Entry`, `Type`, `Text`, `EmoteId`, `EmoteDelay`) VALUES (32799, 0, ' Greetings, $n.', 0, 0);
+
+-- 14094_01_mangos_achievement_scripting.sql
+ALTER TABLE achievement_criteria_requirement ADD COLUMN ScriptName char(64) DEFAULT NULL;
+UPDATE achievement_criteria_requirement SET type=27 WHERE type=11;
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
 SET sql_safe_updates=1;
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
