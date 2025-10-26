@@ -2906,6 +2906,64 @@ INSERT INTO `questgiver_greeting` (`Entry`, `Type`, `Text`, `EmoteId`, `EmoteDel
 ALTER TABLE achievement_criteria_requirement ADD COLUMN ScriptName char(64) DEFAULT NULL;
 UPDATE achievement_criteria_requirement SET type=27 WHERE type=11;
 
+DELETE FROM achievement_criteria_requirement WHERE criteria_id=6800;
+INSERT INTO achievement_criteria_requirement VALUES
+('6800', '6', '3057', '0', NULL),
+('6800', '11', '0', '0', 'criterion_sickly_gazelle');
+
+UPDATE creature SET position_x = 6672.174, position_y = -195.8767, position_z = 952.1977, orientation = 5.427974, spawndist = 0, MovementType = 0 WHERE id = 29996;
+UPDATE `creature` SET `phaseMask` = '1' WHERE `guid` =98594;
+DELETE FROM creature_addon WHERE guid IN(SELECT guid FROM creature WHERE id IN (30013));
+DELETE FROM creature_movement WHERE id IN(SELECT guid FROM creature WHERE id IN (30013));
+DELETE FROM game_event_creature WHERE guid IN(SELECT guid FROM creature WHERE id IN (30013));
+DELETE FROM game_event_creature_data WHERE guid IN(SELECT guid FROM creature WHERE id IN (30013));
+DELETE FROM creature_battleground WHERE guid IN(SELECT guid FROM creature WHERE id IN (30013));
+DELETE FROM creature_linking WHERE guid IN(SELECT guid FROM creature WHERE id IN (30013));
+DELETE FROM creature WHERE id IN (30013);
+INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(68000, 30013, 571, 1, 1, '6599.46300000000000000000', '-285.60940000000000000000', '984.09180000000000000000', '0.55850540000000000000', 300, 300, 0, 0),
+(68003, 30013, 571, 1, 1, '6580.96300000000000000000', '-341.59580000000000000000', '1025.59000000000000000000', '0.00000000000000000000', 300, 300, 0, 3),
+(68002, 30013, 571, 1, 1, '6558.54400000000000000000', '-152.02570000000000000000', '1054.93300000000000000000', '0.00000000000000000000', 300, 300, 0, 3),
+(68001, 30013, 571, 1, 1, '6630.09800000000000000000', '-152.59615000000000000000', '999.09650000000000000000', '0.00000000000000000000', 300, 300, 0, 3);
+DELETE FROM vehicle_accessory WHERE vehicle_entry IN (29730,30013);
+INSERT INTO vehicle_accessory (vehicle_entry, seat, accessory_entry, RideSpellId, comment) VALUES (30013,0,29730,43671,'Frostborn Stormrider 29730 on Stormcrest Eagle 30013');
+DELETE FROM creature_movement WHERE id IN (68001,68002,68003);
+INSERT INTO creature_movement (`id`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(68001,1,6630.098,-152.59615,999.0965,100,0,0),
+(68001,2,6663.148,-136.39362,999.0965,100,0,0),
+(68001,3,6705.553,-94.23096,999.0965,100,0,0),
+(68001,4,6728.8955,43.04465,999.0965,100,0,0),
+(68001,5,6628.838,175.64328,999.0965,100,0,0),
+(68001,6,6520.2456,148.97638,999.0965,100,0,0),
+(68001,7,6386.1724,-22.666178,999.0965,100,0,0),
+(68001,8,6253.4634,-195.81392,999.0965,100,0,0),
+(68001,9,6330.9097,-276.6109,999.0965,100,0,0),
+(68001,10,6537.496,-198.99007,999.0965,100,0,0),
+(68002,1,6558.544,-152.0257,1054.933,100,0,0),
+(68002,2,6609.241,-127.7897,1055.322,100,0,0),
+(68002,3,6701.458,-107.1807,1059.877,100,0,0),
+(68002,4,6774.843,-197.2011,1078.129,100,0,0),
+(68002,5,6777.308,-292.3615,1095.376,100,0,0),
+(68002,6,6703.971,-329.4862,1100.933,100,0,0),
+(68002,7,6606.578,-326.3456,1091.265,100,0,0),
+(68002,8,6552.779,-289.719,1077.712,100,0,0),
+(68002,9,6536.85,-189.0296,1059.237,100,0,0),
+(68003,1,6580.963,-341.5958,1025.59,100,0,0),
+(68003,2,6595.587,-274.2542,1025.59,100,0,0),
+(68003,3,6603.651,-214.6846,1025.59,100,0,0),
+(68003,4,6598.268,-139.6636,1025.59,100,0,0),
+(68003,5,6583.247,-70.264,1025.59,100,0,0),
+(68003,6,6517.861,-27.37788,1025.59,100,0,0),
+(68003,7,6334.042,-80.26796,1025.59,100,0,0),
+(68003,8,6302.791,-214.7384,1025.59,100,0,0),
+(68003,9,6306.531,-372.1047,1025.59,100,0,0),
+(68003,10,6347.108,-523.2972,1025.59,100,0,0),
+(68003,11,6469.087,-575.7284,1025.59,100,0,0),
+(68003,12,6543.881,-476.6713,1025.59,100,0,0);
+DELETE FROM creature_spawn_data WHERE guid IN (68001,68002,68003);
+INSERT INTO creature_spawn_data(Guid,Id) VALUES (68001,1),(68002,1),(68003,1);
+UPDATE `creature_template_addon` SET `stand_state` = '7', `auras` = NULL WHERE `entry` =29996;
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
 SET sql_safe_updates=1;
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
