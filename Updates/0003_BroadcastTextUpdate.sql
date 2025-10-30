@@ -166,3 +166,11 @@ UPDATE `broadcast_text` SET `ChatTypeId` = 1 WHERE `Id` IN (
 23986, -- Your life force is my nourishment, demon... Kil'jaeden's gift to us!
 23987, -- I will soon be stronger than any elf!  I will serve at Kil'jaeden's side!
 23988); -- More... more... MORE!!!
+
+-- 20251026102326_world.sql
+-- These texts are yelled.
+UPDATE `broadcast_text` SET `ChatTypeId`=1 WHERE `Id` IN (11527, 11528, 11541, 11540);
+
+-- 5800_q.12907.sql
+-- q.12907 'Examples to be Made'
+UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (30802);
