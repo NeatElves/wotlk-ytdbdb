@@ -3053,6 +3053,15 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 (21238,4000,1,233,0,0,0,0,0x004,0,0,0,0,0,0,0,0,'emote'),
 (21238,10000,18,0,0,0,0,0,0x004,0,0,0,0,0,0,0,0,'despawn self');
 
+UPDATE creature_template SET StaticFlags2 = 0x00000400 WHERE Entry IN (28851);
+DELETE FROM dbscripts_on_relay WHERE id IN (20155);
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(20155,0,20,1,10,0,0,0,0x04,1,0,0,0,0,0,0,0,'Part of Enraged Mammoth 28851 EAI: Set RandomMovement + RUN');
+
+UPDATE creature_template SET UnitFlags = 512 WHERE entry = 26291;
+
+UPDATE creature_template SET DisplayIdProbability1 = 50, DisplayIdProbability2 = 50 WHERE entry = 29427;
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
 SET sql_safe_updates=1;
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
