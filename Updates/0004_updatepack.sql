@@ -2911,6 +2911,20 @@ INSERT INTO achievement_criteria_requirement VALUES
 ('6800', '6', '3057', '0', NULL),
 ('6800', '11', '0', '0', 'criterion_sickly_gazelle');
 
+-- implement diff vs TC
+
+INSERT INTO worldstate_name VALUES
+(4010,'WoW 4th anniversary'),
+(4425,'WoW 5th anniversary');
+
+INSERT INTO achievement_criteria_requirement(criteria_id,type,value1) VALUES
+(9058,26,4010),
+(12562,26,4425);
+
+-- also has an item level req despite not being in text
+DELETE FROM achievement_criteria_requirement WHERE criteria_id IN(4768,4769,4770,4771,4772,4773,4774,4775,4776,4777,4778,4779,4780,4781,4782,4783,4784,4785,4786,6140,6141,6142) AND type=27;
+UPDATE achievement_criteria_requirement SET value1=213 WHERE criteria_id IN(4768,4769,4770,4771,4772,4773,4774,4775,4776,4777,4778,4779,4780,4781,4782,4783,4784,4785,4786,6140,6141,6142) AND type=19;
+
 UPDATE creature SET position_x = 6672.174, position_y = -195.8767, position_z = 952.1977, orientation = 5.427974, spawndist = 0, MovementType = 0 WHERE id = 29996;
 UPDATE `creature` SET `phaseMask` = '1' WHERE `guid` =98594;
 DELETE FROM creature_addon WHERE guid IN(SELECT guid FROM creature WHERE id IN (30013));
@@ -3061,6 +3075,17 @@ INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalon
 UPDATE creature_template SET UnitFlags = 512 WHERE entry = 26291;
 
 UPDATE creature_template SET DisplayIdProbability1 = 50, DisplayIdProbability2 = 50 WHERE entry = 29427;
+
+UPDATE quest_template SET ReqSpellCast2 = 0 WHERE entry IN (10564,10598);
+UPDATE creature SET spawntimesecsmin = 45, spawntimesecsmax = 45 WHERE id = 21512;
+DELETE FROM dbscripts_on_event WHERE id IN (13874);
+INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(13874,1,31,21512,20,0,0,0,0,0,0,0,0,0,0,0,0,'search for 21512'),
+(13874,100,15,37134,32,0,21512,10,1,0,0,0,0,0,0,0,0,'force buddy to cast 37134'),
+(13874,1000,8,21512,0,0,0,0,0x004,0,0,0,0,0,0,0,0,'kill credit'),
+(13874,1100,18,0,0,0,21512,20,7,0,0,0,0,0,0,0,0,'desp buddy');
+
+DELETE FROM dbscripts_on_creature_movement WHERE id = 2130202 AND delay IN (5000,6000);
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
 SET sql_safe_updates=1;
