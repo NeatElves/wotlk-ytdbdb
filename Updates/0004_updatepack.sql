@@ -3087,6 +3087,73 @@ INSERT INTO dbscripts_on_event (id, delay, command, datalong, datalong2, datalon
 
 DELETE FROM dbscripts_on_creature_movement WHERE id = 2130202 AND delay IN (5000,6000);
 
+# 14095_01_mangos_dbscript_breaking_change.sql
+-- move datalong2 to joint speed field
+UPDATE dbscripts_on_event SET speed=datalong2/100, datalong2=0 WHERE datalong2>0 AND command=3;
+UPDATE `dbscripts_on_creature_death` SET speed=datalong2/100, datalong2=0 WHERE datalong2>0 AND command=3;
+UPDATE `dbscripts_on_creature_movement` SET speed=datalong2/100, datalong2=0 WHERE datalong2>0 AND command=3;
+UPDATE `dbscripts_on_go_template_use` SET speed=datalong2/100, datalong2=0 WHERE datalong2>0 AND command=3;
+UPDATE `dbscripts_on_go_use` SET speed=datalong2/100, datalong2=0 WHERE datalong2>0 AND command=3;
+UPDATE `dbscripts_on_gossip` SET speed=datalong2/100, datalong2=0 WHERE datalong2>0 AND command=3;
+UPDATE `dbscripts_on_quest_end` SET speed=datalong2/100, datalong2=0 WHERE datalong2>0 AND command=3;
+UPDATE `dbscripts_on_quest_start` SET speed=datalong2/100, datalong2=0 WHERE datalong2>0 AND command=3;
+UPDATE `dbscripts_on_relay` SET speed=datalong2/100, datalong2=0 WHERE datalong2>0 AND command=3;
+UPDATE `dbscripts_on_spell` SET speed=datalong2/100, datalong2=0 WHERE datalong2>0 AND command=3;
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 2939;
+INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(2939, 0, 0, 21, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Daryn Lightwind - Set Activeobject'),
+(2939, 0, 1, 36, 0, 0, 0, 142958, 30, 1025, 0, 0, 0, 0, 0, 0, 0, 0, 'Daryn Lightwind - Face Feralas: A History Object'),
+(2939, 0, 2, 1, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Daryn Lightwind - Emote OneShotPoint'),
+(2939, 0, 3, 0, 0, 0, 0, 0, 0, 0, 4042, 0, 0, 0, 0, 0, 0, 0, 'Daryn Lightwind - Say Text'),
+(2939, 0, 4, 0, 0, 0, 0, 0, 0, 0, 4043, 0, 0, 0, 0, 0, 0, 0, 'Daryn Lightwind - Say Emoted Text'),
+(2939, 3000, 0, 36, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Daryn Lightwind - Reset Facing'),
+(2939, 3000, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Daryn Lightwind - Remove Activeobject');
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 2943;
+INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(2943, 0, 0, 21, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Troyas Moonbreeze - Set Activeobject'),
+(2943, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4476.618, 3230.472, 13.844942, 0, 'Troyas Moonbreeze - Move Point'),
+(2943, 0, 2, 29, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Troyas Moonbreeze - Remove NpcFlags'),
+(2943, 0, 3, 0, 0, 0, 0, 0, 0, 0, 4039, 0, 0, 0, 0, 0, 0, 0, 'Troyas Moonbreeze - Say Text'),
+(2943, 3000, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.235987, 'Troyas Moonbreeze - Change Orientation'),
+(2943, 3000, 1, 0, 0, 0, 0, 0, 0, 0, 4040, 0, 0, 0, 0, 0, 0, 0, 'Troyas Moonbreeze - Say Text'),
+(2943, 6000, 0, 0, 0, 0, 0, 0, 0, 0, 4041, 0, 0, 0, 0, 0, 0, 0, 'Troyas Moonbreeze - Say Text'),
+(2943, 9000, 0, 3, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Troyas Moonbreeze - Move to SpawnPosition'),
+(2943, 11000, 0, 29, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Troyas Moonbreeze - Add NpcFlags'),
+(2943, 11000, 1, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Troyas Moonbreeze - Remove Activeobject');
+UPDATE creature SET position_x = -4474.757, position_y = 3233.0852, position_z = 13.812845, orientation = 0.994837 WHERE guid = 26554 AND id = 7764;
+
+DELETE FROM dbscripts_on_quest_end WHERE id = 5158;
+INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(5158, 0, 0, 21, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Islen Waterseer - Set Activeobject'),
+(5158, 0, 1, 20, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Islen Waterseer - Start Waypoints'),
+(5158, 0, 2, 29, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Islen Waterseer - Remove NpcFlags');
+DELETE FROM creature_movement_template WHERE Entry = 5901;
+INSERT INTO creature_movement_template (Entry, Point, PositionX, PositionY, PositionZ, Orientation, WaitTime, ScriptId) VALUES
+(5901, 1, -1342.7025, -4054.716, 3.77029, 100, 0, 0),
+(5901, 2, -1344.1324, -4065.494, -0.67480236, 100, 29000, 590101),
+(5901, 3, -1342.6777, -4054.6719, 3.7845263, 100, 0, 0),
+(5901, 4, -1343.9987, -4047.967, 5.8027434, 100, 0, 0),
+(5901, 5, -1345.1189, -4047.6067, 5.9310274, 4.345870, 1000, 590102);
+DELETE FROM dbscripts_on_creature_movement WHERE id BETWEEN 590101 AND 590103;
+INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(590101, 1000, 0, 28, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Islen Waterseer - State Kneel'),
+(590101, 1000, 1, 0, 0, 0, 0, 0, 0, 0, 6586, 0, 0, 0, 0, 0, 0, 0, 'Islen Waterseer - Say Text'),
+(590101, 5000, 0, 9, 931, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Islen Waterseer - Respawn Water Manifestation Effect Object'),
+(590101, 11000, 0, 10, 11256, 15000, 0, 0, 0, 0, 0, 0, 0, 0, -1344.7212, -4071.927, -0.8289547, 1.50098, 'Islen Waterseer - Spawn Manifestation of Water'),
+(590101, 16000, 0, 0, 0, 0, 0, 11256, 20, 7, 6607, 0, 0, 0, 0, 0, 0, 0, 'Manifestation of Water - Say Text'),
+(590101, 19000, 0, 15, 18113, 0, 0, 11256, 20, 7, 0, 0, 0, 0, 0, 0, 0, 0, 'Manifestation of Water - Cast Spell'),
+(590101, 25000, 1, 0, 0, 0, 0, 0, 0, 0, 6599, 0, 0, 0, 0, 0, 0, 0, 'Islen Waterseer - Say Text'),
+(590101, 28000, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Islen Waterseer - State Stand'),
+(590102, 0, 0, 29, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Islen Waterseer - Add NpcFlags'),
+(590102, 0, 1, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Islen Waterseer - Idle'),
+(590102, 0, 2, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Islen Waterseer - Remove Activeobject');
+UPDATE creature SET position_x = -1345.1189, position_y = -4047.6067, position_z = 5.8841805, orientation = 4.345870018005371093 WHERE guid = 32712 AND id = 5901;
+DELETE FROM `gameobject` WHERE `guid` = 931;
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
+(931, 106528, 1, 1, -1344.8529052734375, -4072.302978515625, -0.92216300964355468, 4.468043327331542968, 0, 0, -0.7880105972290039, 0.615661680698394775, -10, -10);
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
 SET sql_safe_updates=1;
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -174,3 +174,9 @@ UPDATE `broadcast_text` SET `ChatTypeId`=1 WHERE `Id` IN (11527, 11528, 11541, 1
 -- 5800_q.12907.sql
 -- q.12907 'Examples to be Made'
 UPDATE `broadcast_text` SET `ChatTypeID` = 1 WHERE `Id` IN (30802);
+
+-- TDB 0645_quest_in_search_of_knowledge.sql
+UPDATE broadcast_text SET ChatTypeID = 2 WHERE Id = 4043;
+
+-- TDB 0646_quest_return_to_troyas.sql
+UPDATE broadcast_text SET ChatTypeID = 2 WHERE Id = 4040;

@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14094_01_mangos_achievement_scripting required_14095_01_mangos_dbscript_breaking_change bit;
