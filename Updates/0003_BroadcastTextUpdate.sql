@@ -180,3 +180,29 @@ UPDATE broadcast_text SET ChatTypeID = 2 WHERE Id = 4043;
 
 -- TDB 0646_quest_return_to_troyas.sql
 UPDATE broadcast_text SET ChatTypeID = 2 WHERE Id = 4040;
+
+-- 5807_nexus.sql
+UPDATE broadcast_text SET SoundEntriesID1=13454, ChatTypeID=1 WHERE Id IN(29621);
+UPDATE broadcast_text SET SoundEntriesID1=13453, ChatTypeID=1 WHERE Id IN(29620);
+UPDATE broadcast_text SET SoundEntriesID1=13452, ChatTypeID=1 WHERE Id IN(29619);
+UPDATE broadcast_text SET SoundEntriesID1=13451, ChatTypeID=1 WHERE Id IN(29618);
+UPDATE broadcast_text SET SoundEntriesID1=13450, ChatTypeID=1 WHERE Id IN(26176);
+
+UPDATE broadcast_text SET ChatTypeID=3,SoundEntriesID1=0 WHERE Id=27363;
+UPDATE broadcast_text SET ChatTypeID=3,SoundEntriesID1=0 WHERE Id=27362;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13330 WHERE Id=29608;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13332 WHERE Id=29610;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13331 WHERE Id=29609;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13329 WHERE Id=29607;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13328 WHERE Id=29605;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13187 WHERE Id=23157;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13274 WHERE Id=29603;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13189 WHERE Id=29602;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13188 WHERE Id=29601;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13186 WHERE Id=29599;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13320 WHERE Id=29598;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13324 WHERE Id=29597;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13323 WHERE Id=29596;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13322 WHERE Id=29595;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13321 WHERE Id=29594;
+UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13319 WHERE Id=29593;

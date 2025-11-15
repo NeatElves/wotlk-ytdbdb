@@ -3154,6 +3154,238 @@ DELETE FROM `gameobject` WHERE `guid` = 931;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`) VALUES
 (931, 106528, 1, 1, -1344.8529052734375, -4072.302978515625, -0.92216300964355468, 4.468043327331542968, 0, 0, -0.7880105972290039, 0.615661680698394775, -10, -10);
 
+DELETE FROM `creature_template_spells` WHERE `entry` = 26723;
+DELETE FROM `creature_template_spells` WHERE `entry` = 30540;
+UPDATE creature_template SET SpellList = 2672301 WHERE entry=26723;
+UPDATE creature_template SET SpellList = 3054001 WHERE entry=30540;
+DELETE FROM creature_spell_list_entry WHERE Id IN(2672301,3054001);
+INSERT INTO creature_spell_list_entry(Id, Name, ChanceSupportAction, ChanceRangedAttack) VALUES
+(2672301, 'Nexus - Keristrasza', 0, 0),
+(3054001, 'Nexus - Keristrasza HC', 0, 0);
+DELETE FROM creature_spell_list WHERE Id IN(2672301);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('2672301', '0', '50155', '0', '-1', '0', '0', '100', '1','10000','10000','10000','10000', 'Keristrasza - Tail Sweep'),
+('2672301', '1', '48096', '0', '-1', '0', '0', '100', '1','15000','15000','15000','15000', 'Keristrasza - Crystalfire Breath'),
+('2672301', '2', '50997', '0', '-1', '101', '0', '100', '1','18000','18000','25000','25000', 'Keristrasza - Crystal Chains'),
+('2672301', '3', '8599', '0', '1201', '0', '0', '100', '1','0','0','120000','120000', 'Keristrasza - Enrage below 25%');
+DELETE FROM creature_spell_list WHERE Id IN(3054001);
+INSERT INTO creature_spell_list(Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+('3054001', '0', '50155', '0', '-1', '0', '0', '100', '1','10000','10000','10000','10000', 'Keristrasza HC - Tail Sweep'),
+('3054001', '1', '57091', '0', '-1', '0', '0', '100', '1','15000','15000','15000','15000', 'Keristrasza HC - Crystalfire Breath'),
+('3054001', '2', '48179', '0', '-1', '0', '0', '100', '1','18000','18000','25000','25000', 'Keristrasza HC - Crystallize'),
+('3054001', '3', '8599', '0', '1201', '0', '0', '100', '1','0','0','120000','120000', 'Keristrasza HC - Enrage below 25%');
+DELETE FROM `creature_template_spells` WHERE `entry` = 26763;
+DELETE FROM `creature_template_spells` WHERE `entry` = 30829;
+UPDATE `creature_template` SET `SpellList`=2676301 WHERE `entry` IN (26763);
+UPDATE `creature_template` SET `SpellList`=3052901 WHERE `entry` IN (30529);
+DELETE FROM `creature_spell_list` WHERE `Id` IN (2676301);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(2676301, 0, 47751, 0, -1, 100, 0, 100, 1, 3000, 3000, 8000, 10000, 'Anomalus - Spark');
+DELETE FROM `creature_spell_list` WHERE `Id` IN (3052901);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(3052901, 0, 57062, 0, -1, 100, 0, 100, 1, 10000, 10000, 8000, 10000, 'Anomalus - Spark');
+DELETE FROM `creature_spell_list_entry` WHERE `Id` IN (2676301,3052901);
+INSERT INTO `creature_spell_list_entry` VALUES
+(2676301, 'Nexus - Anomalus', 0, 0),
+(3052901, 'Nexus - Anomalus HC', 0, 0);
+DELETE FROM `creature_template_spells` WHERE `entry` = 26731;
+DELETE FROM `creature_template_spells` WHERE `entry` = 30510;
+UPDATE `creature_template` SET `SpellList`=2673101 WHERE `entry` IN (26731);
+UPDATE `creature_template` SET `SpellList`=3051001 WHERE `entry` IN (30510);
+DELETE FROM `creature_spell_list` WHERE `Id` IN (2673101);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(2673101, 0, 47773, 0, -1, 1, 0, 100, 1, 1000, 1000, 2000, 2000, 'Grand Magus Telestra - Firebomb'),
+(2673101, 1, 47772, 0, -1, 0, 0, 100, 1, 15000, 15000, 10000, 15000, 'Grand Magus Telestra - Ice Nova'),
+(2673101, 2, 47756, 0, -1, 0, 0, 100, 1, 10000, 10000, 10000, 15000, 'Grand Magus Telestra - Gravity Well');
+DELETE FROM `creature_spell_list` WHERE `Id` IN (3051001);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(3051001, 0, 56934, 0, -1, 1, 0, 100, 1, 1000, 1000, 2000, 2000, 'Grand Magus Telestra HC - Firebomb'),
+(3051001, 1, 56935, 0, -1, 0, 0, 100, 1, 15000, 15000, 10000, 15000, 'Grand Magus Telestra HC - Ice Nova'),
+(3051001, 2, 47756, 0, -1, 0, 0, 100, 1, 10000, 10000, 10000, 15000, 'Grand Magus Telestra HC - Gravity Well');
+DELETE FROM `creature_spell_list_entry` WHERE `Id` IN (2673101,3051001);
+INSERT INTO `creature_spell_list_entry` VALUES
+(2673101, 'Nexus - Grand Magus Telestra', 0, 0),
+(3051001, 'Nexus - Grand Magus Telestra HC', 0, 0);
+DELETE FROM `creature_template_spells` WHERE `entry` = 26794;
+DELETE FROM `creature_template_spells` WHERE `entry` = 30532;
+UPDATE `creature_template` SET `SpellList`=2679401 WHERE `entry` IN (26794);
+UPDATE `creature_template` SET `SpellList`=3053201 WHERE `entry` IN (30532);
+DELETE FROM `creature_spell_list` WHERE `Id` IN (2679401);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(2679401, 0, 48016, 0, -1, 0, 0, 100, 1, 10000, 10000, 10000, 10000, 'Ormorok the Tree-Shaper - Trample'),
+(2679401, 1, 47981, 0, -1, 0, 0, 100, 1, 25000, 25000, 30000, 30000, 'Ormorok the Tree-Shaper - Spell Reflection'),
+(2679401, 2, 47958, 0, -1, 0, 0, 100, 1, 10000, 15000, 30000, 30000, 'Ormorok the Tree-Shaper - Crystal Spikes'),
+(2679401, 3, 48017, 0, 1201, 0, 0, 100, 1, 0, 0, 360000, 360000, 'Ormorok the Tree-Shaper - Frenzy below 25%');
+DELETE FROM `creature_spell_list` WHERE `Id` IN (3053201);
+INSERT INTO `creature_spell_list` (Id, Position, SpellId, Flags, CombatCondition, TargetId, ScriptId, Availability, Probability, InitialMin, InitialMax, RepeatMin, RepeatMax, Comments) VALUES
+(3053201, 0, 57066, 0, -1, 0, 0, 100, 1, 10000, 10000, 10000, 10000, 'Ormorok the Tree-Shaper HC - Trample'),
+(3053201, 1, 47981, 0, -1, 0, 0, 100, 1, 25000, 25000, 30000, 30000, 'Ormorok the Tree-Shaper HC - Spell Reflection'),
+(3053201, 2, 57082, 0, -1, 0, 0, 100, 1, 10000, 15000, 30000, 30000, 'Ormorok the Tree-Shaper HC - Crystal Spikes 1'),
+(3053201, 3, 57083, 0, -1, 0, 0, 100, 1, 10000, 15000, 30000, 30000, 'Ormorok the Tree-Shaper HC - Crystal Spikes 2'),
+(3053201, 4, 61564, 0, -1, 0, 0, 100, 101, 12000, 12000, 15000, 20000, 'Ormorok the Tree-Shaper HC - Summon Crystalline Tangler'),
+(3053201, 5, 57086, 0, 1201, 0, 0, 100, 1, 0, 0, 360000, 360000, 'Ormorok the Tree-Shaper HC - Frenzy below 25%');
+DELETE FROM `creature_spell_list_entry` WHERE `Id` IN (2679401,3053201);
+INSERT INTO `creature_spell_list_entry` VALUES
+(2679401, 'Nexus - Ormorok the Tree-Shaper', 0, 0),
+(3053201, 'Nexus - Ormorok the Tree-Shaper HC', 0, 0);
+
+UPDATE creature_template SET ExtraFlags=ExtraFlags|32 WHERE entry IN (795,796);
+UPDATE creature_template SET ExtraFlags=ExtraFlags|32 WHERE entry IN (797);
+UPDATE creature SET position_x = -9425.55, position_y = 129.192, position_z = 59.7319, spawndist = 0, MovementType = 4 WHERE guid = 5189;
+DELETE FROM creature_movement WHERE id = 5189;
+DELETE FROM creature_movement_template WHERE Entry = 797;
+INSERT INTO creature_movement_template (`Entry`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(797,1,-9425.55,129.192,59.7319,100,5000,79701),
+(797,2,-9425.55,129.192,59.7319,100,1,5),
+(797,3,-9435.16,135.157,58.4082,100,0,0),
+(797,4,-9444.9,135.829,58.4839,100,0,0),
+(797,5,-9457.16,126.087,59.1066,100,0,0),
+(797,6,-9465.78,113.601,57.9173,100,0,0),
+(797,7,-9460.58,94.2335,58.354,100,1,5),
+(797,8,-9460.58,94.2335,58.354,100,5000,79702);
+DELETE FROM dbscripts_on_creature_movement WHERE id BETWEEN 79701 AND 79702;
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(79701,1,20,1,5,55000,0,0,12,0,0,0,0,0,0,0,0,'Change Movement To 1 - Random 5yards (55secs TEMP) (around current location)'),
+(79702,1,20,1,2,55000,0,0,12,0,0,0,0,0,0,0,0,'Change Movement To 1 - Random 2yards (55secs TEMP) (around current location)');
+
+INSERT INTO creature (guid, id, map, spawnMask, phaseMask,  position_x ,position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) VALUES
+(113008,26293,571,1,1,4672.657,393.8198,112.2072,0,300,300,0,4);
+UPDATE creature SET position_x = 4551.98, position_y = 215.4912, position_z = 95.74336, spawndist = 0, MovementType = 2 WHERE guid = 141320;
+UPDATE creature SET position_x = 4753.813, position_y = 234.1614, position_z = 126.0414, spawndist = 0, MovementType = 2 WHERE guid = 113880;
+UPDATE creature SET position_x = 4825.67, position_y = 324.5453, position_z = 160.1038, spawndist = 0, MovementType = 2 WHERE guid = 113879;
+UPDATE creature SET position_x = 4681.139, position_y = 300.6354, position_z = 113.3539, spawndist = 0, MovementType = 2 WHERE guid = 141321;
+UPDATE creature SET position_x = 4686.325, position_y = 338.1416, position_z = 116.9954, spawndist = 0, MovementType = 2 WHERE guid = 113883;
+UPDATE creature SET position_x = 4640.673, position_y = 328.539, position_z = 105.2835, spawndist = 0, MovementType = 2 WHERE guid = 113884;
+UPDATE creature SET position_x = 4779.098, position_y = 297.2358, position_z = 137.2824, spawndist = 0, MovementType = 2 WHERE guid = 113882;
+UPDATE creature SET position_x = 5058.429, position_y = 206.3277, position_z = 249.7782, spawndist = 0, MovementType = 4 WHERE guid = 141319;
+UPDATE creature SET position_x = 5055.045, position_y = 139.6142, position_z = 276.8205, spawndist = 0, MovementType = 4 WHERE guid = 113885;
+DELETE FROM creature_movement WHERE id IN (141320,113880,113879,141321,113883,113884,113882,141319,113008,113885);
+INSERT INTO creature_movement (`id`, `Point`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `WaitTime`, `ScriptId`) VALUES
+(113008,1,4672.657,393.8198,112.2072,100,500,0),
+(113008,2,4707.695,396.9076,119.9605,100,0,0),
+(113008,3,4739.726,432.9391,130.256,100,0,0),
+(113008,4,4730.956,477.8813,124.8587,100,0,0),
+(113008,5,4677.77,444.6309,114.4135,100,0,0),
+(113008,6,4640.598,432.901,105.5852,100,500,0),
+(141320,1,4551.98,215.4912,95.74336,100,0,0),
+(141320,2,4564.006,228.91,95.49336,100,0,0),
+(141320,3,4564.006,228.91,95.49336,1.500983,9000,2629301),
+(141320,4,4573.006,220.0332,96.72356,100,0,0),
+(141320,5,4573.171,220.2546,97.20419,100,0,0),
+(141320,6,4589.067,228.786,96.47356,100,0,0),
+(141320,7,4615.465,261.0309,94.82931,100,0,0),
+(141320,8,4636.027,301.9741,102.4085,100,0,0),
+(141320,9,4603.763,290.1123,93.9283,100,0,0),
+(141320,10,4574.47,274.9004,93.24241,100,0,0),
+(141320,11,4552.107,260.2597,91.77345,5.637414,9000,2629301),
+(141320,12,4534.746,253.0895,91.27345,100,0,0),
+(141320,13,4502.472,234.7762,86.74639,100,0,0),
+(141320,14,4501.733,212.5776,89.34038,100,0,0),
+(141320,15,4526.968,201.9344,93.21538,100,0,0),
+(113880,1,4753.813,234.1614,126.0414,100,0,0),
+(113880,2,4771.302,210.2443,131.0062,100,0,0),
+(113880,3,4802.921,228.155,143.312,100,0,0),
+(113880,4,4809.422,248.1289,147.3849,100,0,0),
+(113880,5,4779.721,270.1699,137.1574,100,0,0),
+(113879,1,4825.67,324.5453,160.1038,100,0,0),
+(113879,2,4851.781,303.4244,166.6624,100,0,0),
+(113879,3,4856.436,264.5413,165.5944,100,0,0),
+(113879,4,4827.652,246.9235,153.1806,100,0,0),
+(113879,5,4803.962,238.6995,144.6349,100,0,0),
+(113879,6,4802.288,268.3306,142.4454,100,0,0),
+(113879,7,4808.596,302.4093,147.4788,100,0,0),
+(141321,1,4681.139,300.6354,113.3539,100,0,0),
+(141321,2,4665.576,283.5841,110.158,100,0,0),
+(141321,3,4686.585,266.3725,113.4216,100,0,0),
+(141321,4,4709.606,265.855,117.6157,100,0,0),
+(141321,5,4734.266,275.6094,123.8196,100,0,0),
+(141321,6,4719.605,302.1789,122.1742,100,0,0),
+(113883,1,4686.325,338.1416,116.9954,100,0,0),
+(113883,2,4700.168,367.0156,118.5855,100,0,0),
+(113883,3,4731.135,364.8878,126.2894,100,0,0),
+(113883,4,4743.483,343.251,129.0478,100,0,0),
+(113883,5,4713.793,315.9503,120.7992,100,0,0),
+(113884,1,4640.673,328.539,105.2835,100,0,0),
+(113884,2,4609.159,351.7017,100.6553,100,0,0),
+(113884,3,4634.438,365.8136,104.5118,100,0,0),
+(113884,4,4665.654,366.5009,111.6368,100,0,0),
+(113884,5,4670.336,327.8531,112.1039,100,0,0),
+(113882,1,4779.098,297.2358,137.2824,100,0,0),
+(113882,2,4760.896,311.8137,133.0404,100,0,0),
+(113882,3,4759.921,339.2756,134.6728,100,0,0),
+(113882,4,4772.551,371.2912,143.0261,100,0,0),
+(113882,5,4792.757,362.1816,148.8787,100,0,0),
+(113882,6,4800.978,333.6336,149.4259,100,0,0),
+(113882,7,4797.58,301.9738,143.6316,100,0,0),
+(141319,1,5058.429,206.3277,249.7782,100,500,0),
+(141319,2,5029.033,213.1479,231.4316,100,0,0),
+(141319,3,5004.937,184.9382,222.3331,100,0,0),
+(141319,4,4976.969,156.3438,208.5263,100,0,0),
+(141319,5,4986.922,125.3837,226.118,100,0,0),
+(141319,6,4970.494,94.65679,225.8947,100,500,0),
+(113885,1,5055.045,139.6142,276.8205,100,500,0),
+(113885,2,5081.063,147.6691,282.5188,100,0,0),
+(113885,3,5068.632,175.3769,265.6738,100,0,0),
+(113885,4,5069.962,201.2773,256.3029,100,0,0),
+(113885,5,5074.871,247.0161,245.2171,100,0,0),
+(113885,6,5090.377,235.034,254.2602,100,0,0),
+(113885,7,5100.774,225.5985,260.8587,100,0,0),
+(113885,8,5114.256,215.3546,268.6538,100,0,0),
+(113885,9,5127.932,199.872,278.5071,100,500,0);
+DELETE FROM dbscripts_on_creature_movement WHERE id IN (2629301);
+INSERT INTO dbscripts_on_creature_movement (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(2629301,1,1,27,0,0,0,0,0x004,0,0,0,0,0,0,0,0,'emote'),
+(2629301,2000,1,35,0,0,0,0,0x004,0,0,0,0,0,0,0,0,'emote'),
+(2629301,6000,1,35,0,0,0,0,0x004,0,0,0,0,0,0,0,0,'emote');
+
+UPDATE npc_vendor SET Slot = 1 WHERE entry IN (30006) AND item = 41752;
+UPDATE npc_vendor SET Slot = 2 WHERE entry IN (30006) AND item = 43601;
+UPDATE npc_vendor SET Slot = 3 WHERE entry IN (30006) AND item = 43600;
+UPDATE npc_vendor SET Slot = 4 WHERE entry IN (30006) AND item = 41754;
+UPDATE npc_vendor SET Slot = 5 WHERE entry IN (30006) AND item = 41746;
+DELETE FROM `npc_vendor` WHERE `entry` = 30006 AND `item` = 41750;
+DELETE FROM creature_addon WHERE guid IN(SELECT guid FROM creature WHERE id = 29366);
+DELETE FROM creature_template_addon WHERE entry IN (29366);
+INSERT INTO creature_template_addon (entry, mount, stand_state, sheath_state, pvp_flags, emote, moveflags, auras) VALUES (29366,0,0,1,0,333,0,NULL);
+DELETE FROM dbscripts_on_relay WHERE id = 21239;
+INSERT INTO dbscripts_on_relay (id, delay, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
+(21239,0,31,29366,10,0,0,0,0,0,0,0,0,0,0,0,0,'Part of Brunnhildar Challenger 29366 EAI: search for other 29366'),
+(21239,100,15,54350,10,0,29366,7,1,42880,0,0,0,0,0,0,0,'Part of Brunnhildar Challenger 29366 EAI: cast 54350 or 42880');
+UPDATE creature_template SET Faction = 190, EquipmentTemplateId = 853, MovementType = 0 WHERE entry = 29352;
+UPDATE creature SET position_x = 6988.93, position_y = -1772.276, position_z = 821.2866, orientation = 0.6632251, spawndist = 0, MovementType = 0 WHERE id = 29352;
+REPLACE INTO creature (guid, id, map, spawnMask, phaseMask,  position_x ,position_y, position_z, orientation, spawntimesecsmin, spawntimesecsmax, spawndist, MovementType) VALUES
+(104539,24921,571,1,1,6978.066,-1758.641,843.5354,5.77704,300,300,0,0),
+(104537,24921,571,1,1,6965.647,-1771.673,847.8055,4.206244,300,300,0,0),
+(104535,24921,571,1,1,6975.437,-1758.712,857.4982,3.438299,300,300,0,0),
+(104533,24921,571,1,1,6974.799,-1757.917,830.0308,2.86234,300,300,0,0),
+(104531,24921,571,1,1,6968.664,-1777.927,823.5007,1.256637,300,300,0,0),
+(104530,24921,571,1,1,6980.637,-1792.216,823.8326,4.852015,300,300,0,0),
+(104542,24921,571,1,1,6957.292,-1783.241,827.5192,0.7504916,300,300,0,0),
+(104541,24921,571,1,1,6965.891,-1793.281,827.8773,4.869469,300,300,0,0),
+(104540,24921,571,1,1,6974.529,-1802.879,827.0444,0.6806784,300,300,0,0),
+(104538,24921,571,1,1,6995.144,-1790.065,843.1974,3.543018,300,300,0,0),
+(104536,24921,571,1,1,6981.651,-1800.913,845.5903,1.22173,300,300,0,0),
+(104532,24921,571,1,1,6995.818,-1791.559,857.4828,5.585053,300,300,0,0),
+(104534,24921,571,1,1,6995.823,-1793.111,829.9551,5.427974,300,300,0,0);
+DELETE FROM creature_addon WHERE guid IN (85741,85742,86611);
+DELETE FROM creature_movement WHERE Id IN (85741,85742,86611);
+DELETE FROM game_event_creature WHERE guid IN (85741,85742,86611);
+DELETE FROM game_event_creature_data WHERE guid IN (85741,85742,86611);
+DELETE FROM creature_battleground WHERE guid IN (85741,85742,86611);
+DELETE FROM creature_linking WHERE guid IN (85741,85742,86611) OR master_guid IN (85741,85742,86611);
+DELETE FROM creature WHERE guid IN (85741,85742,86611);
+UPDATE creature SET position_x = 6950.735352, position_y = -1672.326660, position_z = 810.819763 WHERE guid = 85739;
+UPDATE creature SET spawntimesecsmin = 30, spawntimesecsmax = 30, spawndist = 10, MovementType = 1 WHERE id = 30174;
+UPDATE creature_template SET Faction = 2128, UnitFlags = 33555200 WHERE entry = 30175;
+UPDATE creature_template SET Faction = 2128, UnitFlags = 0 WHERE entry = 30174;
+
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(104462, 29549, 571, 1, 1, '6851.25976562500000000000', '-1667.46997070312500000000', '822.69500732421880000000', '5.77704000473022500000', 300, 300, 0, 0),
+(104463, 29549, 571, 1, 1, '6856.22021484375000000000', '-1659.57995605468750000000', '822.34301757812500000000', '5.95157003402710000000', 300, 300, 0, 0),
+(104464, 29549, 571, 1, 1, '6834.97998046875000000000', '-1684.06005859375000000000', '822.17498779296880000000', '5.86430978775024400000', 300, 300, 0, 0),
+(104058, 29549, 571, 1, 1, '6841.85009765625000000000', '-1678.05004882812500000000', '823.34698486328120000000', '5.49778985977172850000', 300, 300, 0, 0),
+(104089, 29549, 571, 1, 1, '6818.22998046875000000000', '-1689.68994140625000000000', '821.33398437500000000000', '5.44542980194091800000', 300, 300, 0, 0);
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
 SET sql_safe_updates=1;
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
