@@ -1,0 +1,1 @@
+ALTER TABLE db_version CHANGE COLUMN required_14095_01_mangos_dbscript_breaking_change required_14096_01_mangos_closing_text bit;
