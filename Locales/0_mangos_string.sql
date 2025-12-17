@@ -391,7 +391,7 @@ UPDATE `mangos_string` SET `content_loc8` = ' ''%s'' не найден' WHERE `e
 UPDATE `mangos_string` SET `content_loc8` = 'Недопустимый идентификатор элемента: %u' WHERE `entry` = 435;
 UPDATE `mangos_string` SET `content_loc8` = 'Ничего не найдено!' WHERE `entry` = 436;
 UPDATE `mangos_string` SET `content_loc8` = 'Недопустимый идентификатор игрового объекта: %u' WHERE `entry` = 437;
-UPDATE `mangos_string` SET `content_loc8` = 'Найдено предметов %u: %u ( инвентарь %u почта %u аукцион %u гильдия %u)' WHERE `entry` = 438;
+UPDATE `mangos_string` SET `content_loc8` = 'Найдено предметов %u: %u (инвентарь %u почта %u аукцион %u гильдия %u)' WHERE `entry` = 438;
 UPDATE `mangos_string` SET `content_loc8` = 'Найдено игровых объектов %u: %u ' WHERE `entry` = 439;
 UPDATE `mangos_string` SET `content_loc8` = 'Недопустимый идентификатор существа: %u' WHERE `entry` = 440;
 UPDATE `mangos_string` SET `content_loc8` = 'Найдено существ %u: %u ' WHERE `entry` = 441;

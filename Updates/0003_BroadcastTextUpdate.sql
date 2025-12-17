@@ -206,3 +206,9 @@ UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13323 WHERE Id=29596;
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13322 WHERE Id=29595;
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13321 WHERE Id=29594;
 UPDATE broadcast_text SET ChatTypeID=1,SoundEntriesID1=13319 WHERE Id=29593;
+
+-- 5831_q.12856.sql
+UPDATE broadcast_text SET ChatTypeID = 3 WHERE Id= 32956;
+
+-- TBC 0678_levixus_the_soul_caller.sql
+UPDATE broadcast_text SET ChatTypeID = 2 WHERE Id = 17328; -- %s rummages through the bones.
