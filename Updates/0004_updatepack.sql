@@ -6049,6 +6049,108 @@ UPDATE `dbscripts_on_creature_movement` SET search_radius=7879 WHERE buddy_entry
 UPDATE `dbscripts_on_creature_movement` SET search_radius=7874 WHERE buddy_entry=10804;
 UPDATE `dbscripts_on_creature_movement` SET search_radius=7877 WHERE buddy_entry=10805;
 
+SET @GUID := 63106;
+UPDATE `creature` SET `spawndist`=0, `movementtype`=4 WHERE `guid`=@GUID;
+DELETE FROM `creature_movement` WHERE `id`=@GUID;
+INSERT INTO `creature_movement` (`id`,`point`,`positionx`,`positiony`,`positionz`,`orientation`,`waittime`,`scriptid`) VALUES
+(@GUID, 1, 805.797, 7933.779, 23.49600, 100, 0, 0),
+(@GUID, 2, 838.348, 7922.768, 22.14445, 100, 0, 0),
+(@GUID, 3, 857.5333, 7925.284, 23.77494, 100, 0, 0),
+(@GUID, 4, 867.3912, 7935.482, 22.34954, 100, 0, 0),
+(@GUID, 5, 865.9066, 7951.682, 23.37043, 100, 0, 0),
+(@GUID, 6, 844.1472, 7971.989, 23.49796, 100, 0, 0);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 63310;
+REPLACE INTO `creature_spawn_entry` VALUES (63310, 2914),(63310,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64270;
+REPLACE INTO `creature_spawn_entry` VALUES (64270, 2914),(64270,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64430;
+REPLACE INTO `creature_spawn_entry` VALUES (64430, 2914),(64430,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 63318;
+REPLACE INTO `creature_spawn_entry` VALUES (63318, 2914),(63318,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64336;
+REPLACE INTO `creature_spawn_entry` VALUES (64336, 2914),(64336,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64339;
+REPLACE INTO `creature_spawn_entry` VALUES (64339, 2914),(64339,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64665;
+REPLACE INTO `creature_spawn_entry` VALUES (64665, 2914),(64665,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64928;
+REPLACE INTO `creature_spawn_entry` VALUES (64928, 2914),(64928,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64352;
+REPLACE INTO `creature_spawn_entry` VALUES (64352, 2914),(64352,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 63574;
+REPLACE INTO `creature_spawn_entry` VALUES (63574, 2914),(63574,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 63548;
+REPLACE INTO `creature_spawn_entry` VALUES (63548, 2914),(63548,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64362;
+REPLACE INTO `creature_spawn_entry` VALUES (64362, 2914),(64362,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 62456;
+REPLACE INTO `creature_spawn_entry` VALUES (62456, 2914),(62456,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64907;
+REPLACE INTO `creature_spawn_entry` VALUES (64907, 2914),(64907,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 62490;
+REPLACE INTO `creature_spawn_entry` VALUES (62490, 2914),(62490,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64801;
+REPLACE INTO `creature_spawn_entry` VALUES (64801, 2914),(64801,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64847;
+REPLACE INTO `creature_spawn_entry` VALUES (64847, 2914),(64847,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 62481;
+REPLACE INTO `creature_spawn_entry` VALUES (62481, 2914),(62481,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64870;
+REPLACE INTO `creature_spawn_entry` VALUES (64870, 2914),(64870,13321);
+REPLACE INTO `creature_addon` (`guid`, `auras`) VALUES (54608, '31261'),(54683, '31261'),(54684, '31261'),(54687, '31261'),(58688, '31261');
+REPLACE INTO `creature_spawn_data` (`guid`, `id`) VALUES (54608, 21),(54683, 21),(54684, 21),(54687, 21),(58688, 21);
+INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(18638, 2914, 530, 492.259, 8732.17, 17.938, 0.220362, 300, 300, 10, 1);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 64327;
+REPLACE INTO `creature_spawn_entry` VALUES (64327, 2914),(64327,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 63560;
+REPLACE INTO `creature_spawn_entry` VALUES (63560, 2914),(63560,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 62428;
+REPLACE INTO `creature_spawn_entry` VALUES (62428, 2914),(62428,13321);
+UPDATE `creature` SET `id` = 0 WHERE `guid` = 18638;
+REPLACE INTO `creature_spawn_entry` VALUES (18638, 2914),(18638,13321);
+SET @CGUID := 57255;
+INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `MovementType`) VALUES
+(@CGUID := @CGUID + 1, 20295, 530, 405.853, 8330.88, 24.1586, 1.02234, 300, 300, 3, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 423.349, 8376.36, 21.3135, 1.56494, 300, 300, 3, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 376.876, 8361.79, 18.3949, 3.64367, 300, 300, 3, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 238.294, 8328.31, 3.15396, 0.388483, 300, 300, 10, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 263.595, 8299.92, 0.897993, 0.529575, 300, 300, 10, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 284.673, 8284.6, -2.2176, 1.62554, 300, 300, 10, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 322.454, 8334.4, -18.6314, 2.14185, 300, 300, 10, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 321.628, 8291.99, -3.05169, 3.28561, 300, 300, 10, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 330.8, 8425.77, -8.78665, 3.69005, 300, 300, 10, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 379.894, 8287.56, 3.30369, 5.38011, 300, 300, 10, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 429.107, 8448.66, -18.7946, 2.1848, 300, 300, 10, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 463.829, 8530.92, -1.09782, 2.29497, 300, 300, 10, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 529.147, 8567.88, 0.262845, 0.805287, 300, 300, 10, 1),
+(@CGUID := @CGUID + 1, 20295, 530, 461.218, 8396.12, 9.17568, 0.760541, 300, 300, 10, 1);
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 3 WHERE `creature_id` = 18122;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 5 WHERE `creature_id` = 18086;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 5 WHERE `creature_id` = 19947;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 5 WHERE `creature_id` = 19946;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 5 WHERE `creature_id` = 18087;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 5 WHERE `creature_id` = 20089;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 5 WHERE `creature_id` = 18089;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 5 WHERE `creature_id` = 20088;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 5 WHERE `creature_id` = 18088;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 5 WHERE `creature_id` = 18340;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 3 WHERE `creature_id` = 18123;
+REPLACE INTO `creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `MaxStanding1`, `RewOnKillRepValue1`) VALUES (20477, 942, 5, 7);
+REPLACE INTO `creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `MaxStanding1`, `RewOnKillRepValue1`) VALUES (18044, 942, 3, 10);
+REPLACE INTO `creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `MaxStanding1`, `RewOnKillRepValue1`) VALUES (18046, 942, 3, 10);
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 15 WHERE `creature_id` = 19519;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 15 WHERE `creature_id` = 19402;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 15 WHERE `creature_id` = 19734;
+UPDATE `creature_onkill_reputation` SET `RewOnKillRepValue1` = 15 WHERE `creature_id` = 18127;
+REPLACE INTO `creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `MaxStanding1`, `RewOnKillRepValue1`) VALUES (20324, 970, 2, 15);
+REPLACE INTO `creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `MaxStanding1`, `RewOnKillRepValue1`) VALUES (18136, 970, 7, 15);
+REPLACE INTO `creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `MaxStanding1`, `RewOnKillRepValue1`) VALUES (18137, 970, 7, 15);
+REPLACE INTO `creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `MaxStanding1`, `RewOnKillRepValue1`) VALUES (18282, 970, 7, 15);
+REPLACE INTO `creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `MaxStanding1`, `RewOnKillRepValue1`) VALUES (20479, 970, 5, 15);
+REPLACE INTO `creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES
+(18124, 970, 0, 5, 0, 15, 0, 0, 0, 0), (18125, 970, 0, 5, 0, 15, 0, 0, 0, 0);
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
 SET sql_safe_updates=1;
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
