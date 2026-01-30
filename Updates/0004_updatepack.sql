@@ -8510,6 +8510,16 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (59803, 12856, 1, 1, '1972.43000000000000000000', '-2243.35000000000000000000', '100.27890000000000000000', '0.00000000000000000000', 300, 300, 5, 1),
 (59828, 12856, 1, 1, '2074.37000000000000000000', '-2692.65000000000000000000', '104.12500000000000000000', '0.00000000000000000000', 300, 300, 5, 1);
 
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 4802 FROM `creature` WHERE `id` IN (4802,48034802,4803);
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 4803 FROM `creature` WHERE `id` IN (4802,4803);
+UPDATE creature SET `id` = 0, `spawntimesecsmin` = 300, `spawntimesecsmax` = 300 WHERE `id` IN (4802,4803);
+
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 4788 FROM `creature` WHERE `id` IN (4788,4789);
+REPLACE INTO `creature_spawn_entry` (`guid`, `entry`) SELECT `guid`, 4789 FROM `creature` WHERE `id` IN (4788,4789);
+UPDATE creature SET `id` = 0, `spawntimesecsmin` = 300, `spawntimesecsmax` = 300 WHERE `id` IN (4788,4789);
+
+UPDATE `creature_template` SET `ExtraFlags` = `ExtraFlags`|1048576 WHERE `entry` IN (3712,3715,3789,3791,3797,3811,3815,3821,3834,3919,3924,3925,4788,4789,4802,4803,11656,11681,11682,11683,12896,12897,3812,3814);
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
 SET sql_safe_updates=1;
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------
